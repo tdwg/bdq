@@ -15,6 +15,6 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 - ### [Task Group 1](https://tdwg.github.io/bdq/tg1/)
 
-- ### [Task Group 2](https://tdwg.github.io/bdq/tg2/)
+- ### [Task Group 2](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
 - ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
