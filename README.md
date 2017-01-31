@@ -1,4 +1,4 @@
-# Biodiversity Data Quality (BDQ) Interest Group
+# [Biodiversity Data Quality (BDQ) Interest Group](https://tdwg.github.io/bdq/)
 
 ## Rationale
 
@@ -6,12 +6,15 @@ The goal of this Interest Group is to discuss, determine, formalize and standard
 
 ## How to contribute
 
-_Depending on where group interaction takes place (GitHub, mailing list), provide some guidance on how interested parties can follow group activities (e.g. watch this repository, join mailing list) and how they can contribute._
+You can use the [GitHub issues](https://github.com/tdwg/bdq/issues) to contribute with amendment or starting relevant discussion topics.
+Conventionaly, title of issues should start with "[IG]" for issue related to the BDQ Interest Group, "[TG1]" for issues related to the Task Group 1, "[TG2]" for issues related to the Task Group 2 and "[TG3]" for issues related to the Task Group 3.
+
+A mailing list resource will be provided soon. Meanwhile, click in "Watch" and select "Watching" to be notified of all conversations.
 
 ## Task Groups
 
-- ### [Task Group 1](tg1/)
+- ### [Task Group 1](https://tdwg.github.io/bdq/tg1/)
 
-- ### [Task Group 2](tg2/)
+- ### [Task Group 2](https://tdwg.github.io/bdq/tg2/)
 
-- ### [Task Group 3](tg3/)
+- ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
