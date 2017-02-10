@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>BDQ Conceptual Framework</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">		
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- <link rel="stylesheet" type="text/css" href="css/print/pdf.css"> -->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!-- <style type="text/css">
+			strong {
+				color:#e7ad52;
+			}
+		</style> -->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-menu-title="Title">
+					<h2>Introducing a<br>Conceptual Framework on<br>Biodiversity Data Quality (DQ)</h2>
+					<h4 style="margin-bottom: 0px;">TDWG/GBIF Biodiversity Data Quality Interest Group</h4>
+					<h4>Task Group 1</h4>
+					<p>
+						<small>Created by <a href="allan.kv@gmail.com">Allan Koch Veiga</a></small>
+						<small>and <a href="saraiva@usp.br">Antonio Mauro Saraiva</a></small>
+					</p>
+				</section>
+				<!-- MAIN TARGET -->
+				<section data-menu-title="Main target">
+					<h3>The Framework Main Targets:</h3>
+					<br>
+					<h4>To enable the <a href="#/2" class="navigate-foward">ASSESSMENT</a> of fitness for use of biodiversity data.
+					</h4>
+					<blockquote>
+						Enable data users to judge the <strong>status of quality</strong> of data and their fitness for use in specific contexts.
+					</blockquote>		
+					<br>
+					<h4>To enable the <a href="#/3" class="navigate-foward">MANAGEMENT</a> of fitness for use of biodiversity data.</h4>
+					<blockquote>
+						Enable data custodians and publishers to improve the <strong>status of quality</strong> of data using quality control and quality assurance approaches.
+					</blockquote>
+				</section>
+				<!-- ASSESSMENT AND MANAGEMENT -->
+				<section>
+					<section data-menu-title="DQ Assessment">
+						<h3>DQ ASSESSMENT</h3>
+						<h4>To judge the status of quality in a specific use case context</h4>						
+						<img src="img/assessment_1.png">						
+						<p><i>Are these data fit for use in a <strong>National Species Checklist</strong> context?</i></p>					
+					</section>
+					<section data-menu-title="Example">
+						<h3>DQ ASSESSMENT</h3>
+						<h4>To judge the status of quality in a specific use case context</h4>						
+						<img src="img/assessment_2.png">					
+						<p><i>Are these data fit for use in a <strong>Niche Modeling</strong> context?</i></p>
+					</section>
+				</section>
+				<section >
+					<section data-menu-title="DQ Management - DQ Control">
+						<h3>DQ MANAGEMENT</h3>
+						<h4>To improve the status of quality</h4>						
+						<img src="img/control.png">					
+						<p>DQ Control Approach</p>
+					</section>
+					<section data-menu-title="DQ Assurance">
+						<h3>DQ MANAGEMENT</h3>
+						<h4>To improve the status of quality</h4>						
+						<img src="img/assurance.png">											
+						<p>DQ Assurance Approach</p>
+					</section>
+				</section>
+				<!-- MAIN COMPONENTS -->				
+				<section>
+					<section data-menu-title="Framework components">
+						<h2>FRAMEWORK COMPONENTS:</h2>					
+						<h3>1. DQ NEEDS</h3>					
+						<p>
+							Define the <strong>meaning of DQ in a given context</strong> according to data user's perspectives.
+						</p>	
+						<h3>2. DQ SOLUTIONS</h3>
+						<p>
+							Define the methods and mechanisms to <strong>meet DQ Needs</strong>.
+						</p>	
+						<h3>3. DQ REPORTS</h4>
+						<p>
+							Define the <strong>status of quality of a data resource</strong> according to a given DQ Needs.
+						</p>	
+					</section>
+					<section style="padding: 0px;margin:0px;" data-menu-title="The Framework in Biodiversity Informatics Context">
+						<img style="width: 100%" src="img/scenario.png">
+					</section>
+					<section style="padding: 0px;margin:0px;" data-menu-title="The Framework in Biodiversity Informatics Context">
+						<img style="padding: 0px;margin:0px; width: 100%" src="img/framework.png">
+					</section>
+				</section>
+
+				<!-- DQ NEEDS -->				
+				<section data-menu-title="DQ Needs components">
+					<h3>1. DQ NEEDS COMPONENTS:</h3>		
+					<div style="text-align: left; ">										
+						<p>
+							<strong>1. Use Case:</strong>							
+								A data use <b>context</b>.							
+						</p>	
+						<p>
+							<strong>2. Valuable Information Elements:</strong>
+							A set of <b>information</b> valuable in the Use Case context.
+						</p>
+						<p>
+							<strong>3. DQ Measurement Policy:</strong>
+							A set of DQ Dimenions to <b>measure the status of quality</b> in the Use Case context.
+						</p>
+						<p>
+							<strong>4. DQ Validation Policy:</strong>
+							A set of DQ Criteria to <b>validate if the status of quality is suitable</b> in the Use Case context.
+						</p>
+						<p>
+							<strong>5. DQ Improvement Policy:</strong>
+							A set of DQ Enhancements to <b>improve the status of quality</b> in the Use Case context.
+						</p>	
+					</div>					
+				</section>					
+				<!-- DQ SOLUTIONS -->	
+				<section data-menu-title="DQ Solutions components">
+					<h3>2. DQ SOLUTIONS COMPONENTS:</h3>											
+					<div style="text-align: left; ">	
+						<p>
+							<strong>1. DQ Measurement Method  (Specification):</strong> A manner of proceeding, especially an orderly, logical, or systematic way of instruction for <br><b>DQ measurement</b> regarding a <b>DQ Dimension definition</b>.
+						</p>	
+						<p>
+							<strong>2. DQ Validation Method  (Specification):</strong> A manner of proceeding, especially an orderly, logical, or systematic way of instruction for <br><b>DQ validation</b> regarding a <b>DQ Criterion statement</b>.
+						</p>
+						<p>
+							<strong>3. DQ Improvement Method  (Specification):</strong> A manner of proceeding, especially an orderly, logical, or systematic way of instruction for <br><b>DQ improvement</b> regarding a <b>DQ Enhacement description</b>.
+						</p>
+						<p>
+							<strong>4. Mechanism:</strong> An actor (software, hardware or person) that <b>implements and executes</b> DQ methods.
+						</p>
+					</div>					
+				</section>					
+				<!-- DQ REPORT -->				
+				<section data-menu-title="DQ Reports components">
+					<h3>3. DQ REPORTS COMPONENTS:</h3>	
+					<div style="text-align: left; ">	
+						<p>
+							<strong>1. Data Resource:</strong> A <b>Single Record</b> or <b>Dataset</b>.
+						</p>	
+						<p>
+							<strong>2. DQ Measures:</strong> A set of relevant <b>DQ Measures assertions</b> assigned to a Data Resource.
+						</p>
+						<p>
+							<strong>3. DQ Validations:</strong> A set of relevant <b>DQ Validations assertions</b> assigned to a Data Resource.
+						</p>
+						<p>
+							<strong>4. DQ Improvements:</strong> A set of relevant <b>DQ Improvements assertions</b> assigned to a Data Resource.
+						</p>
+					</div>					
+				</section>	
+				<!-- NEEDS - SOLUTIONS - REPORT -->				
+				<section data-menu-title="Needs | Solutions | Reports">
+					<img style="margin:0px" src="/img/profile_report.png">				
+				</section>	
+				<!-- DQ PROFILE -->
+				<section data-menu-title="DQ PROFILE">
+					<h1>How to define a DQ Profile?</h1>
+					<!-- <strong>DQ Profile Builder    >>> </strong> -->
+				</section>	
+				<section data-menu-title="1. Use Case">
+					<h3  style="color: #eee8d5;">1. Define a <strong>Use Case</strong></h3>
+					<div style="display:inline-block; min-width:2.2cm; height:3.8cm; align: center;vertical-align: middle;">
+						<p>Use case name: <input type="text" placeholder="e.g. Distribution Modeling" style="vertical-align: middle;" id="use_case_name" >
+						</input> 
+						<!-- <img width="24" style="border:0; background: #002b36; vertical-align: middle;" title="A data use CONTEXT" src="/img/help.png">  -->
+						</p> 						
+						<textarea cols="80" rows="3" id="use_case_description" placeholder="Description..."></textarea>						
+					</div>
+					<blockquote id="defined_use_case">						
+					</blockquote>
+				</section>	
+				<section data-menu-title="2. Valuable Information Elements">
+					<h3 style="color: #eee8d5;">2. Define a set of valuable <strong>Information Elements (IE)</strong></h3>
+					<p>
+						IE: 
+						<input type="text" placeholder="e.g. Coordinates" style="vertical-align: middle;" id="ie_name" >
+						</input> 
+						<!-- <img width="24" style="border:0; background: #002b36; vertical-align: middle;" title="A data use CONTEXT" src="/img/help.png">  -->
+						</p> 						
+						<textarea cols="80" rows="3" id="ie_description" placeholder="Description..."></textarea>	
+						<br>
+						<button id="ie_button" style="vertical-align: middle;">Add</button>					
+					<blockquote id="defined_ie">						
+					</blockquote>
+					<!-- <div id="itens_ie">					  
+					</div> -->
+				</section>	
+				<section>
+				 	<h2>3. Define a set of Contextualized DQ Dimensions</h2>
+				 	<p>						
+						<select style="vertical-align: middle;" id="available_dimensions">						
+						</select>
+						 of 
+						<select style="vertical-align: middle;" id="valuable_ie">						
+						</select> 
+						of 
+						<select style="vertical-align: middle;" id="available_resource_type">	
+							<option value="Single Record">Single Record</option>
+							<option value="Dataset">Dataset</option>
+						</select> 									
+					</p>
+					<blockquote id="dimension_definition">						
+					</blockquote>					
+						Contextualized Dimension: 	<br>					
+						<textarea cols="80" rows="3" id="dimension_description" placeholder="Description..."></textarea>								<br>		
+					<button id="dimension_button" style="vertical-align: middle;">Add</button>										
+					<blockquote id="defined_dimension">						
+					</blockquote>
+				</section>				
+				<section>					
+					<h2>4. Define a set of Contextualized DQ Criteria</h2>					
+					<div id="criterion_content">						
+						<i>First, define a Contextualized DQ Dimension.</i>
+					</div>
+				</section>
+				<section>					
+					<h2>5. Define a set of DQ Enhancements</h2>					
+					<div id="enhancement_content">
+						<i>First, define a DQ Dimension.</i>
+					</div>
+				</section>
+				<section>
+					<h2 name="profile_title">Defined DQ Profile</h2>
+					<blockquote style="text-align: left; padding-left:20px;overflow: scroll; height: 500px;" name="profile">	
+						<h3 style=" margin: 15px 0 0 0; color: #eee8d5">Use Case:</h3>
+						<div style="padding-left: 25px" id="profile_use_case_definition">
+							<i>No Use Case defined.</i>
+						</div>
+						<h3 style="margin: 15px 0 0 0; color: #eee8d5">Valuable Information Elements:</h3>
+						<div style="padding-left: 25px" id="vie_content">
+							<i>No Valuable Information Element defined.</i>
+						</div>
+						<h3 style="margin: 15px 0 0 0; color: #eee8d5">DQ Measurement Policy:</h3>
+						<div style="padding-left: 25px" id="measurement_policy_content">
+							<i>No DQ Dimension defined.</i>			
+						</div>
+						<h3 style="margin: 15px 0 0 0; color: #eee8d5">DQ Validation Policy:</h3>
+						<div style="padding-left: 25px" id="validation_policy_content">
+							<i>No DQ Criterion defined.</i>					
+						</div>
+						<h3 style="margin: 15px 0 0 0; color: #eee8d5">DQ Improvement Policy:</h3>
+						<div style="padding-left: 25px" id="improvement_policy_content">
+							<i>No DQ Enhancement defined.</i>
+						</div>
+					</blockquote>									
+				</section>
+				
+				<!-- <section>
+					<section>					
+						(1/4)<h2 name="profile_title">Defined DQ Profile</h2>
+						<blockquote name="profile_use_case_definition"></blockquote>
+						<h3>Valuable Information Elements</h3>
+						<div id="vie_content">
+							<i>No Valuable Information Element defined.</i>
+						</div>
+					</section>
+					<section>					
+						(2/4)<h2 name="profile_title">Defined DQ Profile</h2>	
+						<blockquote name="profile_use_case_definition"></blockquote>					
+						<h3>DQ Measurement Policy</h3>
+						<div id="measurement_policy_content">
+							<i>No DQ Dimension defined.</i>			
+						</div>
+					</section>
+					<section>					
+						(3/4)<h2 name="profile_title">Defined DQ Profile</h2>	
+						<blockquote name="profile_use_case_definition"></blockquote>											
+						<h3>DQ Validation Policy</h3>
+						<div id="validation_policy_content">
+							<i>No DQ Criterion defined.</i>					
+						</div>
+					</section>
+					<section>					
+						(4/4)<h2 name="profile_title">Defined DQ Profile</h2>	
+						<blockquote name="profile_use_case_definition"></blockquote>											
+						<h3>DQ Improvement Policy</h3>
+						<div id="improvement_policy_content">
+							<i>No DQ Enhancement defined.</i>
+						</div>
+					</section>
+				</section> -->
+
+
+				<!-- <section data-menu-title="4. Contextualized Criteria">
+					<h3>4. Select a set of Contextualized Criteria</h3>
+					<div id="criterion_content"></div>
+				</section>
+				<section data-menu-title="5. Contextualized Enhancements">
+					<h3>5. Select a set of Contextualized Enhancements</h3>
+					<div id="enhancement_content"></div>
+				</section>	 -->
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/framework.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="plugin/print-pdf/print-pdf.js"></script>		
+		<script>							
+			var framework = new ConceptualFramework();				
+			// RESORUCE TYPE
+			// framework.addAvailableConcept("resourceType","dataset","Dataset", "Dataset or subset");
+			// framework.addAvailableConcept("resourceType","record","Single Record", "Single record");
+			// USE CASE
+			// framework.addAvailableConcept("useCase","sdm","Species Distribution Modelling", "Species distribution modeling uses, encopassing niche modeling and ...");
+			// framework.addAvailableConcept("useCase","sc","Brazillian National Checklist of Species", "Official species checklist of Brazil");
+			// INFORMATION ELEMENT
+			// framework.addAvailableConcept("ie","coord","Coordinates","Latitude, Longitude, Geodetic Datum and Coordinates Uncertainty in Meters");
+			// framework.addAvailableConcept("ie","sciName","Scientific Name", "Complete scientific name");
+			// framework.addAvailableConcept("ie","date","Event Date", "Date and time whether event occur");
+			// framework.addAvailableConcept("ie","country","Country", "Country name and country code where the event occur");
+			// FUNDAMENTAL DIMENSIONS
+			framework.addAvailableConcept("dimension","Completeness","Completeness", "<strong>Definition</strong>: Measure the extent to which every meaningful and necessary data are present and sufficient for use in a specific Use Case.<br><strong>Guideline</strong>: Is all the requisite information available? Are relevant data values missing, or in an unusable state, such as \"NULL\" or \"UNKNOWN\" or any predefined placeholders (e.g. N/A, the value 0 or -1 for numbers)? For a dataset the number or proportion of records in the database that have some specific information.");
+			framework.addAvailableConcept("dimension","Resolution","Resolution", "<strong>Definition</strong>: Refer to the data have sufficient detail information. Measure the granularity of the data. Smallest measurable increment.<br><strong>Guideline</strong>: Could refer to the spatial resolution of the grids used in collecting observational records (e.g, 100m grids); the temporal resolution -  whether the data is to the day, or just the month or year; or the taxonomic resolution - whether the data is identified to species level only, or to infraspecific level.");
+			framework.addAvailableConcept("dimension","Consistency","Consistency", "<strong>Definition</strong>: Agreement among related elements in the data.<br><strong>Guideline</strong>: Do distinct data instances provide conflicting information about the same underlying data object? Are values consistent across data sets? Are interdependent attributes in agreement?");
+			framework.addAvailableConcept("dimension","Conformance","Conformance", "<strong>Definition</strong>: Conforms to a format, a standard, a controlled vocabulary or to the nature of the information.<br><strong>Guideline</strong>: Are there expectations that data values conform to a specified standard, format or controlled vocabulary? Should the data conform to rules related to the  nature of the data, such as limits, ranges or any other prescribed rule inherent to the real-world which the data is supposed to represent?");
+			// ENHANCEMENT TYPE
+			framework.addAvailableConcept("enhancementType","correct","Correction", "Eliminate error.");
+			framework.addAvailableConcept("enhancementType","prevention","Prevention", "Prevent error.");		
+			framework.addAvailableConcept("enhancementType","recommend","Recommendation", "Recommend error correction.");		
+
+			// SETUP
+			framework.setupUseCase("use_case_name","use_case_description","defined_use_case");	
+			framework.setupIE("ie_name","ie_description","ie_button","defined_ie");								
+			framework.setupContextualizedDimension("available_dimensions","valuable_ie","available_resource_type","dimension_definition","dimension_description","defined_dimension","dimension_button");
+			framework.setupContextualizedCriterion("criterion_content");
+			framework.setupContextualizedEnhancement("enhancement_content");
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				menu: {
+			        // Specifies which side of the presentation the menu will 
+			        // be shown. Use 'left' or 'right'.
+			        side: 'left',
+
+			        // Add slide numbers to the titles in the slide list.
+			        // Use 'true' or format string (same as reveal.js slide numbers)
+			        numbers: false,
+
+			        // Specifies which slide elements will be used for generating
+			        // the slide titles in the menu. The default selects the first
+			        // heading element found in the slide, but you can specify any
+			        // valid css selector and the text from the first matching
+			        // element will be used.
+			        // Note: that a section data-menu-title attribute or an element
+			        // with a menu-title class will take precedence over this option
+			        titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+			        // Hide slides from the menu that do not have a title.
+			        // Set to 'true' to only list slides with titles.
+			        hideMissingTitles: false,
+
+			        // Add markers to the slide titles to indicate the 
+			        // progress through the presentation
+			        markers: true,
+
+			        // Specify custom panels to be included in the menu, by
+			        // providing an array of objects with 'title', 'icon'
+			        // properties, and either a 'src' or 'content' property.
+			        custom: false,
+			        themes: false,
+
+			        // Specifies the themes that will be available in the themes
+			        // menu panel. Set to 'false' to hide themes panel.
+			        // themes: [
+			        //     { name: 'Black', theme: 'css/theme/black.css' },
+			        //     { name: 'White', theme: 'css/theme/white.css' },
+			        //     { name: 'League', theme: 'css/theme/league.css' },
+			        //     { name: 'Sky', theme: 'css/theme/sky.css' },
+			        //     { name: 'Beige', theme: 'css/theme/beige.css' },
+			        //     { name: 'Simple', theme: 'css/theme/simple.css' },
+			        //     { name: 'Serif', theme: 'css/theme/serif.css' },
+			        //     { name: 'Blood', theme: 'css/theme/blood.css' },
+			        //     { name: 'Night', theme: 'css/theme/night.css' },
+			        //     { name: 'Moon', theme: 'css/theme/moon.css' },
+			        //     { name: 'Solarized', theme: 'css/theme/solarized.css' }
+			        // ],
+
+			        // Specifies if the transitions menu panel will be shown.
+			        transitions: false,
+
+			        // Adds a menu button to the slides to open the menu panel.
+			        // Set to 'false' to hide the button.
+			        openButton: true,
+
+			        // If 'true' allows the slide number in the presentation to
+			        // open the menu panel. The reveal.js slideNumber option must 
+			        // be displayed for this to take effect
+			        openSlideNumber: true,
+
+			        // If true allows the user to open and navigate the menu using
+			        // the keyboard. Standard keyboard interaction with reveal
+			        // will be disabled while the menu is open.
+			        keyboard: false
+			    },
+			    // textToSpeechURL: 'http://api.voicerss.org/?key=f4421fc0862541b2ab0e73286d31e87c&hl=en-gb&c=ogg&src=',
+				history: true,
+				audioPrefix: 'audio/',        // audio files are stored in the "audio" folder
+			    audioSuffix: '.wav',          // audio files have the ".ogg" ending
+			    // audioDefaultDuration: 5, // default duration if no audio is available
+			    audioPlayerOpacity: 0.05,     // opacity value of audio player if unfocused				
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },					
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/print-pdf/print-pdf.js' },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },              
+    			    { src: 'plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+    			    { src: 'plugin/menu/menu.js' }
+				],
+			    keyboard: { 
+			        82: function() { Recorder.toggleRecording(); }, // press 'r' to start/stop recording
+			        90: function() { Recorder.downloadZip(); },  // press 'z' to download zip containing audio files
+			        77: null
+
+			    }
+			});
+		</script>
+	</body>
+</html>

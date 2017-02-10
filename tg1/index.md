@@ -1,3 +1,3 @@
 ## Welcome to TG1 Pages
 
-You can use the [GitHub issues](https://github.com/tdwg/bdq/issues) to contribute with amendment or starting relevant discussion topics.
+Most content of TG1 will be published [here](https://tdwg-bdq-tg1.firebaseapp.com).
