@@ -60,7 +60,7 @@
                             <section id="overview-section" class="doc-section">
                                 <h2 class="section-title">Overview</h2>
                                 <div class="section-block">
-                                    <p>This content present a brief practical introduction on the conceptual framework for the Biodiversity Informatics community. To clarify how each stakeholder can take advantage of the conceptual framework, we organize the content according to four main stakeholders: 
+                                    <p>This page presents a brief practical introduction on the conceptual framework for the Biodiversity Informatics community. To clarify how each stakeholder can take advantage of the conceptual framework, we organize the content according to <b>four main stakeholders</b>: 
                                     </p>
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -93,12 +93,63 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h6>Data Holder</h6>
                                             <ul class="list">
-        										<li><strong>Who:</strong> institution or person that holdes, manage and curate biodiversity-related data.</li>
+        										<li><strong>Who:</strong> institution or person that holds, manage and curate biodiversity-related data.</li>
         										<li><strong>Interest:</strong> improving the quality and the fitness for use of data with efficience.</li>        										
         									</ul>
                                         </div>
                                     </div>
-                                    <!--<a href="http://themes.3rdwavemedia.com" class="btn btn-green" target="_blank"><i class="fa fa-download"></i> Download PrettyDocs</a>-->
+                                    <div id="the-framework-overview"  class="section-block">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <h3>The Framework</h3>
+                                            <p>The original version of the framework, as presented on this thesis (<a href="assets/files/thesis_akv.pdf">link</a>), is highly comprehensive and formal, with 29 interrelated concepts.</p>
+                                            <p>On this page you will find a lite version of the framework according to a practical perspective. In this context, the framework will be approched according to three main components: <b>DQ Profile</b>, <b>DQ Solutions</b> and <b>DQ Report</b>.</p>
+                                            
+                                            <div class="callout-block callout-info">
+                                                <div class="icon-holder">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </div><!--//icon-holder-->
+                                                <div class="content">
+                                                    <h4 class="callout-title">DQ Profile</h4>
+                                                    <p>Define a structure to describe the meaning of data <b>fitness for use</b> in a given context.</p>
+                                                </div><!--//content-->
+                                            </div>                                                                                    
+
+                                            <p>
+                                                A DQ Profile describes DQ needs requirements for a given context/scope. 
+                                                In order to implement and apply such requirements on data, it is necessary to use set of DQ Solutions, that involves methods and mechanisms applied to meet DQ Profiles requirements.
+                                            </p>
+
+                                            <div class="callout-block callout-info">
+                                                <div class="icon-holder">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </div><!--//icon-holder-->
+                                                <div class="content">
+                                                    <h4 class="callout-title">DQ Solutions</h4>
+                                                    <p>Define a structure to describe <b>methods</b> (technical specifications) and <b>mechanisms</b> (tools that act on data) in order meet the DQ Profile requirements.</p>
+                                                </div><!--//content-->
+                                            </div>                                                                                    
+                                            <p>
+                                                DQ Solutions operate on Data Resources (both single records as multi records) and generates DQ Assertions assigned to each Data Resource. 
+                                                A set of selected DQ Assertions represents a DQ Report.
+                                            </p>
+                                            <div class="callout-block callout-info">
+                                                <div class="icon-holder">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </div><!--//icon-holder-->
+                                                <div class="content">
+                                                    <h4 class="callout-title">DQ Report</h4>
+                                                    <p>Define a set of selected DQ Assertions according to a DQ Profile requirements assigened to a Data Resources .</p>
+                                                </div><!--//content-->
+                                            </div>                                                                                    
+                                            <p>
+                                                With a DQ Report assigned to a Data Resource, data users, holders, aggragators and constodians are enable to assess the quality of the Data Resource according to the related DQ Profile and improve it.  
+                                            </p>
+                                            <img width="100%" src="assets/images/start/structure.png" alt="Framework overview">
+                                            
+                                            
+
+                                        </div>
+                                    </div>
                                 </div>
                             </section><!--//doc-section-->
                             <section id="dq-profiler-section" class="doc-section">
@@ -215,7 +266,12 @@
                     <div class="doc-sidebar hidden-xs">
                         <nav id="doc-nav">
                             <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
-                                <li><a class="scrollto" href="#overview-section">Overview</a></li>
+                                <li>
+                                    <a class="scrollto" href="#overview-section">Overview</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#the-framework-overview">The Framework</a></li>
+                                    </ul>
+                                </li>                                
                                 <li>
                                     <a class="scrollto" href="#dq-profiler-section">DQ Profiler</a>
                                     <ul class="nav doc-sub-menu">
