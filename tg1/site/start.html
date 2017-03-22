@@ -60,77 +60,88 @@
                             <section id="overview-section" class="doc-section">
                                 <h2 class="section-title">Overview</h2>
                                 <div class="section-block">
-                                    <p>This page presents a brief practical introduction on the conceptual framework for the Biodiversity Informatics community. To clarify how each stakeholder can take advantage of the conceptual framework, we organize the content according to <b>four main stakeholders</b>: 
+                                    <p>                                         
+                                        This page presents a brief practical introduction on how to tackle Data Quality (DQ) on the light of the conceptual framework ont the Biodiversity Informatics context, specially, but not exclusive, in the TDWG and GBIF community context. 
+                                        Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders.
+                                        To contextualize how those different stakeholders can take advantage of the conceptual framework, we selected <b>four stakeholders</b> to describe their role in DQ context:
                                     </p>
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6>DQ Profiler</h6>
+                                            <h6>DQ Profilers</h6>
                                             <ul class="list">
-        										<li><strong>Who:</strong> experts on DQ and/or as specific domain that uses biodiversity-related data.</li>
-        										<li><strong>Interest:</strong> formalizing the way DQ is handling in a specifi domain.</li>        										
+        										<li><strong>Who:</strong> are experts on DQ and/or a specific domain/context that uses/handle biodiversity-related data.</li>
+        										<li><strong>Interest:</strong> formalizing and sharing the way DQ is handled in a specific domain/context.</li>        										
         									</ul>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6>Developer</h6>
+                                            <h6>Developers</h6>
                                             <ul class="list">
-        										<li><strong>Who:</strong> experts on to develop technical solutions for DQ.</li>
-        										<li><strong>Interest:</strong> formalizing techniques and tools used for DQ and generate standardized ouputs.</li>        										
+        										<li><strong>Who:</strong> are experts on the development of technical solutions for DQ.</li>
+        										<li><strong>Interest:</strong> formalizing and sharing techniques and tools used for DQ and generating standardized and comparable outputs.</li>        										
         									</ul>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6>Data User</h6>
+                                            <h6>Data Users</h6>
                                             <ul class="list">
-        										<li><strong>Who:</strong> experts on a specific domain which uses biodiversity-related data.</li>
-        										<li><strong>Interest:</strong> assessing the quality of data and their fitness for use.</li>        										
+        										<li><strong>Who:</strong> are experts on a specific domain, which uses biodiversity-related data.</li>
+        										<li><strong>Interest:</strong> efficiently assessing the quality of data and ensure their fitness for use.</li>        										
         									</ul>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6>Data Holder</h6>
+                                            <h6>Data Holders</h6>
                                             <ul class="list">
-        										<li><strong>Who:</strong> institution or person that holds, manage and curate biodiversity-related data.</li>
-        										<li><strong>Interest:</strong> improving the quality and the fitness for use of data with efficience.</li>        										
+        										<li><strong>Who:</strong> are institutions or people that hold, manage and curate biodiversity-related data.</li>
+        										<li><strong>Interest:</strong> efficiently improving the quality of data and their fitness for use.</li>
         									</ul>
                                         </div>
                                     </div>
                                     <div id="the-framework-overview"  class="section-block">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h3>The Framework</h3>
-                                            <p>The original version of the framework, as presented on this thesis (<a href="assets/files/thesis_akv.pdf">link</a>), is highly comprehensive and formal, with 29 interrelated concepts.</p>
-                                            <p>On this page you will find a lite version of the framework according to a practical perspective. In this context, the framework will be approched according to three main components: <b>DQ Profile</b>, <b>DQ Solutions</b> and <b>DQ Report</b>.</p>
-                                            
+                                            <p>
+                                                The original version of the framework can be found in <a href="assets/files/thesis_akv.pdf">[Veiga 2017]</a>, which is highly comprehensive and formal, composed by 29 interrelated concepts.                                                
+                                            </p>                                                            
+                                            <p>
+                                                In this page we present a lite view of the framework according to a practical perspective. 
+                                                In this context, the framework will be approached according to <b>three main components</b>: DQ Profile, DQ Solutions and DQ Report.
+                                            </p>                
+                                            <img width="100%" src="assets/images/start/structure.png" alt="Framework overview">                                                        
+                                            <p>
+                                                DQ Profile defines a structure to describe the meaning of data fitness for use in a given context. 
+                                                A DQ Profile describes DQ needs requirements for a given context/scope. 
+                                                In order to implement and apply such requirements on data, it is necessary to use a set of DQ Solutions that involve methods and mechanisms applied to meet DQ Profiles requirements.
+                                            </p>
                                             <div class="callout-block callout-info">
                                                 <div class="icon-holder">
                                                     <i class="fa fa-info-circle"></i>
                                                 </div><!--//icon-holder-->
                                                 <div class="content">
                                                     <h4 class="callout-title">DQ Profile</h4>
-                                                    <p>Define a structure to describe the meaning of data <b>fitness for use</b> in a given context.</p>
+                                                    <p>Definition of DQ and data fitness for use in a given context.</p>
                                                 </div><!--//content-->
                                             </div>                                                                                    
-
                                             <p>
-                                                A DQ Profile describes DQ needs requirements for a given context/scope. 
-                                                In order to implement and apply such requirements on data, it is necessary to use set of DQ Solutions, that involves methods and mechanisms applied to meet DQ Profiles requirements.
+                                                DQ Solutions define a structure to describe methods (technical specifications) and mechanisms (tools that act on data) in order meet the DQ Profile requirements. 
+                                                DQ Solutions operate on Data Resources (both single records and multi records) and generate DQ Assertions assigned to each Data Resource. A set of selected DQ Assertions represents a DQ Report.                                                 
                                             </p>
-
                                             <div class="callout-block callout-info">
                                                 <div class="icon-holder">
                                                     <i class="fa fa-info-circle"></i>
                                                 </div><!--//icon-holder-->
                                                 <div class="content">
                                                     <h4 class="callout-title">DQ Solutions</h4>
-                                                    <p>Define a structure to describe <b>methods</b> (technical specifications) and <b>mechanisms</b> (tools that act on data) in order meet the DQ Profile requirements.</p>
+                                                    <p>Set of methods (technical specifications) and mechanisms (tools that act on data) in order meet the DQ Profile requirements.</p>
                                                 </div><!--//content-->
                                             </div>                                                                                    
                                             <p>
-                                                DQ Solutions operate on Data Resources (both single records as multi records) and generates DQ Assertions assigned to each Data Resource. 
-                                                A set of selected DQ Assertions represents a DQ Report.
+                                                A DQ Report defines a set of selected DQ Assertions assigned to a Data Resources according to a DQ Profile requirements.
+                                                With a DQ Report assigned to a Data Resource, data users, holders, aggregators and custodians are enabled to assess and improve the quality of the Data Resource according to the related DQ Profile definition.
                                             </p>
                                             <div class="callout-block callout-info">
                                                 <div class="icon-holder">
@@ -138,16 +149,9 @@
                                                 </div><!--//icon-holder-->
                                                 <div class="content">
                                                     <h4 class="callout-title">DQ Report</h4>
-                                                    <p>Define a set of selected DQ Assertions according to a DQ Profile requirements assigened to a Data Resources .</p>
+                                                    <p>Set of selected DQ Assertions assigned to a Data Resources according to a DQ Profile requirements.</p>
                                                 </div><!--//content-->
-                                            </div>                                                                                    
-                                            <p>
-                                                With a DQ Report assigned to a Data Resource, data users, holders, aggragators and constodians are enable to assess the quality of the Data Resource according to the related DQ Profile and improve it.  
-                                            </p>
-                                            <img width="100%" src="assets/images/start/structure.png" alt="Framework overview">
-                                            
-                                            
-
+                                            </div>                                                                                                                                
                                         </div>
                                     </div>
                                 </div>
@@ -165,17 +169,40 @@
                                 </div>
                                 <div id="overview-dq-profiler"  class="section-block">
                                     <h3 class="block-title">Overview</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-                                    </p>                                    
+                                    <p>
+                                        Due to the idiosyncratic nature of the concept of “quality”, it is essential to understand what "data fitness for use" means according to the data user/handler’s perspective in order to enable the DQ assessment and management.
+                                    </p>
+                                    <p>
+                                        In this context, defining “data fitness for use” involves to define three elements: <b>use</b>, <b>data</b> and <b>fitness</b>. 
+                                        Accordingly, DQ Profile encompasses these elements by five main components: 
+                                        <h6>Use:</h6>
+                                        <ol class="list">
+        										<li><b>Use Case:</b> represents the a context/scope delimitation for a DQ Profile.</li>        										
+        								</ol>
+                                        <h6>Data:</h6>
+                                        <ol start="2" class="list">
+        										<li><b>Information Element (IE):</b> elements in data that represents an event (e.g. occurrence, taxon identification), an object (e.g. preserved specimen, living specimen, leaf, seed), an abstract data concept (e.g. GUID (Global Unique Identifier), scientifi name), or any entity of the real world (e.g. person, institution, location, etc), and has some importance in a data use context.</li>
+        								</ol>
+                                        <h6>Fitness:</h6>
+                                        <ol start="3" class="list">
+        										<li><b>DQ Measurement Policy:</b> soon...</li>
+                                                <li><b>DQ Validation Policy:</b> soon...</li>
+                                                <li><b>DQ Improvement Policy:</b> soon...</li>                                                
+        								</ol>                                        
+                                    </p>
+                                    <p>
+                                        In this context we propose a method to define a DQ Profile composed by five steps: (1) Define a Use Case; (2) Define the valuable IE in the context of the Use Case; (3) Define a DQ Measurement Policy in the Use Case context; (4) Define a DQ Validation Policy in the Use Case context and; (5) Define a DQ Improvement Policy in the Use Case context. Next, we present a brief description of each step. 
+                                    </p>
+
                                 </div><!--//section-block-->
                                 <div id="howto-dq-profiler"  class="section-block">
                                     <h3 class="block-title">Defining a basic DQ Profile</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="examples-dq-profiler"  class="section-block">
                                     <h3 class="block-title">Examples</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -193,17 +220,17 @@
                                 </div>
                                 <div id="overview-developer"  class="section-block">
                                     <h3 class="block-title">Overview</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="howto-developer"  class="section-block">
                                     <h3 class="block-title">Describing DQ Solutions</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="examples-developer"  class="section-block">
                                     <h3 class="block-title">Examples</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>
                                 </div><!--//section-block-->                                
                             </section><!--//doc-section-->
@@ -220,17 +247,17 @@
                                 </div>
                                 <div id="overview-data-user"  class="section-block">
                                     <h3 class="block-title">Overview</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="howto-data-user"  class="section-block">
                                     <h3 class="block-title">Assessing DQ</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="examples-data-user"  class="section-block">
                                     <h3 class="block-title">Examples</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -247,17 +274,17 @@
                                 </div>
                                 <div id="overview-data-holder"  class="section-block">
                                     <h3 class="block-title">Overview</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="howto-data-holder"  class="section-block">
                                     <h3 class="block-title">Improving DQ</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                    <p>Soon.
                                     </p>                                    
                                 </div><!--//section-block-->
                                 <div id="examples-data-holder"  class="section-block">
                                     <h3 class="block-title">Examples</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    <p>Soon.
                                     </p>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->                            
