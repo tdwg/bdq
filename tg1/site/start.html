@@ -25,8 +25,7 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
+    <![endif]-->    
 </head> 
 
 <body class="body-green">
@@ -157,16 +156,7 @@
                                 </div>
                             </section><!--//doc-section-->
                             <section id="dq-profiler-section" class="doc-section">
-                                <h2 class="section-title">DQ Profiler</h2>
-                                <div class="callout-block callout-warning">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-bug"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Soon</h4>
-                                            <p>Content under development. Subscribe GitHub to be informed on updates.</p>
-                                        </div><!--//content-->
-                                </div>
+                                <h2 class="section-title">DQ Profiler</h2>                                
                                 <div id="overview-dq-profiler"  class="section-block">
                                     <h3 class="block-title">Overview</h3>
                                     <p>
@@ -192,13 +182,14 @@
                                     </p>
                                     <p>
                                         In this context we propose a method to define a DQ Profile composed by five steps: (1) Define a Use Case; (2) Define the valuable IE in the context of the Use Case; (3) Define a DQ Measurement Policy in the Use Case context; (4) Define a DQ Validation Policy in the Use Case context and; (5) Define a DQ Improvement Policy in the Use Case context. Next, we present a brief description of each step. 
-                                    </p>
-
+                                    </p>                                
                                 </div><!--//section-block-->
                                 <div id="howto-dq-profiler"  class="section-block">
-                                    <h3 class="block-title">Defining a basic DQ Profile</h3>
-                                    <p>Soon.
-                                    </p>                                    
+                                    <h3 class="block-title">Defining a basic DQ Profile</h3>                                    
+                                    
+                                    <p>This is an interactive tool for building a DQ Profile following 5 steps. </p>
+                                    <div id="dq-profile-builder"></div>
+
                                 </div><!--//section-block-->
                                 <div id="examples-dq-profiler"  class="section-block">
                                     <h3 class="block-title">Examples</h3>
@@ -383,7 +374,11 @@
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
     <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    
+    <script>        
+        $(document).ready(function(){
+            $("#dq-profile-builder").load("dq-profile-builder.html");
+        });
+    </script>    
 </body>
 </html> 
 
