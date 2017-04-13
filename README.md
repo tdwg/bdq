@@ -19,4 +19,4 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 - ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
 
-- ### [Proposed Task Group 4](https://tdwg.github.io/bdq/tg4/)
+- ### [Proposed Task Group 4]
