@@ -1,0 +1,273 @@
+<script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<!--<link rel="stylesheet" href="/ffub/DQProfile/main.scss">-->
+
+<!-- Compiled and minified CSS -->
+  
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">-->
+  
+
+  <!-- Compiled and minified JavaScript -->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>-->
+          
+
+<dom-module id="ffub-dq-profiler">  
+  <template>       
+      <!-- USE CASE -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        1. Define a <b>Context</b>  <i>(Use Case)</i>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form role="form">
+                                    <p class="help-block">Context for where data are handled.</p>                                
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input id="i-use-case-name" class="form-control" placeholder='E.g. "Species Distribution Modeling", "Species Checklist", "My Bee Collection", "Fundamental uses of occurrences", "GBIF".'>
+                                    </div>                                                                                    
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea placeholder="Description for the Use Case" id="i-use-case-description" class="form-control" rows="3"></textarea>
+                                    </div>                                                  
+                                </form>
+                            </div>                    
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <!-- VIE -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        2. Define important <b>Information</b> in your context  <i>(Information Elements - IE)</i>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input id="i-ie-name" class="form-control" placeholder='E.g. "Coordinates", "Taxon name", "Location", "Event date", "Event time".'>
+                                    </div>                                                                                    
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea placeholder="Description for the IE" id="i-ie-description" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Darwin Core related terms</label>
+                                        <input id="i-ie-dwc" class="form-control" placeholder='E.g. "decimalLatitude, decimalLongitude, geodeticDatum", "scientificName, scientificNameAuthorship".'>                                  
+                                    </div>                                                                                    
+                                    <div class="form-group" style="text-align: right">                            
+                                        <button onclick="addIE()" type="button" class="btn btn-success btn-circle btn-lg"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <hr>
+                                    <div id="vie-created" class="list-group">
+                                        
+                                    </div>
+                                </form>
+                            </div>                    
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <!--MEASUREMENT-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        3. Define a <b>Data Quality Policy</b> 
+                    </div>
+                    <div class="panel-body">                
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>3.1. Define the Resource Type. Which kind of data do you want to measure?</label>
+                                        <select id="selected-drt" class="form-control">
+                                            <option>Select a Resource Type...</option>
+                                            <option>Record</option>
+                                            <option>Multi-Record (dataset/subset)</option>                                    
+                                        </select>                                
+                                    </div>
+                                    <div class="form-group">
+                                        <label>3.2. Define the Information Element (IE). Which IE do you wanto to measure?</label>
+                                        <select id="selected-ie" class="form-control">
+                                            <option>Select an IE...</option>
+                                        </select>                                
+                                    </div>
+                                    <div class="form-group">
+                                        <label>3.3. Define the DQ Dimension. Which aspect of quality do you want to measure?</label>
+                                        <select id="selected-dimension" class="form-control">
+                                            <option>Select a DQ Dimension...</option>
+                                            <option value="Completeness">Completeness</option>
+                                            <option value="Consistency">Consistency</option>
+                                            <option value="Conformance">Conformance</option>
+                                            <option value="Precision">Precision</option>
+                                            <option value="Accuracy">Accuracy</option>
+                                            <option value="Uniqueness">Uniqueness</option>
+                                        </select>                                
+                                    </div>
+                                    <div class="form-group">
+                                        <label>3.4. What means and how do you think this aspect (DQ Dimension) should be measured in the context of the IE and Resource Type?</label>
+                                        <textarea placeholder="Description for the IE" id="i-cdimension-description" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group" style="text-align: right">                            
+                                        <button onclick="addCDimension()" type="button" class="btn btn-success btn-circle btn-lg"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <hr>
+                                    <div id="dq-measurement-policy-created" class="list-group">
+                                        
+                                    </div>
+                                </form>
+                            </div>                    
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <!--VALIDATION-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        4. Define a set of <b>DQ Criteria to validate</b> the quality of each valuable IE in the Use Case context
+                    </div>
+                    <div class="panel-body">                
+                        <div id="dq-validation-policy-created" class="list-group">
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <!--IMPROVEMENT-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        5. Define a set of <b>DQ Enhancements to improve</b> the quality of each valuable IE in the Use Case context
+                    </div>
+                    <div class="panel-body">                
+                        <p>Soon</p>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+
+        <!-- DQ PROFILE -->
+        <div class="section-block">
+            <div class="jumbotron text-center">
+                <h1 id="l-use-case-name"></h1>
+                <p id="l-use-case-description"></p>
+                <div class="author-profile text-center"></div>
+                <!--VIE-->
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <b>Valuable Information Elements (IE)</b>
+                        </div>                
+                        <div class="panel-body">
+                                <div id="vie-content" class="list-group"></div>                            
+                        </div>                                    
+                    </div>
+                </div>
+                <!--MEASUREMENT-->
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <b>DQ Measurement Policy</b>
+                        </div>                
+                        <div class="panel-body">
+                                <div id="dq-measurement-policy-content" class="list-group"></div>                            
+                        </div>                                    
+                    </div>
+                </div>
+                <!--VALIDATION-->
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <b>DQ Validation Policy</b>
+                        </div>                
+                        <div class="panel-body">
+                                <div id="dq-validation-policy-content" class="list-group"></div>                            
+                        </div>                                    
+                    </div>
+                </div>
+                <!--IMPROVEMENT-->
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <b>DQ Improvement Policy</b>
+                        </div>                
+                        <div class="panel-body">
+                                <div id="dq-improvement-policy-content" class="list-group"></div>                            
+                        </div>                                    
+                    </div>
+                </div>
+                
+                <div class="list list-inline center-block">
+                    <a class="btn btn-cta btn-default" href="javascript:save()" target="_blank"><i class="fa fa-save"></i> Save</a>
+                </div>
+            </div>
+        </div>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "ffub-dq-profile",    
+    properties:{
+        id: String,
+        profile: Object,
+        selected: {
+              type: Number,
+              value: 0
+            }
+    },
+    ready: function(){
+        var self = this;
+        self.load(self.id);
+    },
+    load: function(id){   
+        var self = this;        
+        self.id = id;        
+        $.getJSON( "/api/DQProfiles/"+self.id, function( data ) {
+            self.profile = data;
+            console.log(self.profile);
+        });         
+    },
+    handleResponse: function(data) {
+        console.log(data.detail.response);
+    }
+  });
+
+</script>
+
+

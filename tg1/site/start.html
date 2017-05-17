@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <script async src="//genius.codes"></script>
+    
     
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
@@ -104,7 +107,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h3>The Framework</h3>
                                             <p>
-                                                The original version of the framework can be found in <a href="assets/files/thesis_akv.pdf">[Veiga 2017]</a>, which is highly comprehensive and formal, composed by 29 interrelated concepts.                                                
+                                                The original version of the framework can be found in <a href="http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248">[Veiga 2017]</a>, which is highly comprehensive and formal, composed by 29 interrelated concepts.                                                
                                             </p>                                                            
                                             <p>
                                                 In this page we present a lite view of the framework according to a practical perspective. 
@@ -187,7 +190,7 @@
                                 <div id="howto-dq-profiler"  class="section-block">
                                     <h3 class="block-title">Defining a basic DQ Profile</h3>                                    
                                     
-                                    <p>This is an interactive tool for building a DQ Profile following 5 steps. </p>
+                                    <p>This is an interactive tool for building a DQ Profile following 4 main steps. </p>
                                     <div id="dq-profile-builder"></div>
 
                                 </div><!--//section-block-->
@@ -368,15 +371,21 @@
     
      
     <!-- Main Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <!--<script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
     <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+
     <script>        
         $(document).ready(function(){
-            $("#dq-profile-builder").load("dq-profile-builder.html");
+            $.widget.bridge('uitooltip', $.ui.tooltip);
+            $("#dq-profile-builder").load("dq-profile-builder.html");           
         });
     </script>    
 </body>
