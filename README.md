@@ -13,7 +13,7 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 ## Task Groups
 
-- ### [Task Group 1](https://tdwg.github.io/bdq/tg1/site/public)
+- ### [Task Group 1](https://tdwg.github.io/bdq/tg1/site)
 
 - ### [Task Group 2](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
