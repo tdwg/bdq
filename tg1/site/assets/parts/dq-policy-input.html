@@ -3,14 +3,26 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <strong>3.1. COMPLETENESS</strong>
+                <strong>3.1. COMPLETENESS</strong>  <i title='<div class="section-block">
+                                    <h3 class="question">Completeness</h3>
+                                    <div class="answer">
+                                        <p><b>Definition</b>: Measure the extent to which every meaningful and necessary data are present and sufficient for use in a specific Use Case.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p><b>Guideline</b>: Is all the requisite information available? Are relevant data values missing, or in an unusable state, such as "NULL" or "UNKNOWN" or any predefined placeholders (e.g. N/A, the value 0 or -1 for numbers)? For a dataset the number or proportion of records in the database that have some specific information.</p>
+                                    </div>
+                                    <div class="answer"><p><b>Examples</b>:</p>
+                                        <p style="margin-left:15px"><b>Completeness of Coordinates (Coordinates - Single Record)</b> - The presence of Decimal Latitude, Decimal Longitude, Geodetic Datum and Coordinates Uncertainty in Meters.</p>
+                                        <p style="margin-left:15px"><b>Completeness of Event Date (Event Date - Dataset)</b> - The proportion of records in dataset that have a value defined for the dwc:eventDate field that is different to the placeholder "0000-00-00".</p>
+                                        </div>
+                                </div><!--//section-block-->   ' class="icon fa fa-question-circle" style="color:cornflowerblue;margin-left:10px"></i>
             </div>
             <div class="panel-body">                
                 <div class="row">
                     <div class="col-lg-12">                                    
                         <form role="form">                                         
                             <div class="form-group">
-                                <label>3.1.1 Do you think that <span name="ie"></span> of <span name="resourceType"></span> should be complete?</label>
+                                <label >3.1.1 Do you think <span name="ie"></span> </span> should be complete?</label>
                                 <select id="selected-completeness" class="form-control">
                                     <option>No</option>                                    
                                     <option>Yes</option>                                    
@@ -18,15 +30,15 @@
                             </div>
                             <div id="defining-completeness">
                                 <div class="form-group">                                            
-                                    <label>3.1.2 How complete do you think the <span name="ie"></span> of <span name="resourceType"></span> should be?</label>
+                                    <label>3.1.2 How complete do you think <span name="ie"></span> </span> should be?</label>
                                     <input id="criterion" class="form-control" type="text" placeholder="e.g. complete, partial complete, not complete, >50%, 7, highly, totaly, etc"/>                                            
                                 </div>                                                     
                                 <div class="form-group">                                            
-                                    <label>3.1.2 How would you define the degrees (numerical/categorical) of completeness for <span name="ie"></span> in <span name="resourceType"></span>?</label>
+                                    <label>3.1.2 How would you define the degrees (numerical/categorical) of completeness for <span name="ie"></span></span>?</label>
                                     <textarea id="dimension" class="form-control" type="text" placeholder="e.g. complete: all field supplied; not complete: at least one field not supplied"/>
                                 </div>                                                     
                                 <div class="form-group">                                            
-                                    <label>3.1.3 What it could be done to improve the completeness of <span name="ie"></span> in <span name="resourceType"></span>?</label>
+                                    <label>3.1.3 What do you think could be done to improve the completeness of <span name="ie"></span>?</label>
                                     <textarea id="enhancement" class="form-control" type="text" placeholder="e.g. supplied values based on related values"/>                                            
                                 </div>                                                     
                             </div>                            
@@ -37,7 +49,19 @@
             </div>
 
             <div class="panel-heading">                
-                <strong>3.2. CONFORMANCE</strong>
+                <strong>3.2. CONFORMANCE</strong>  <i title='<div class="section-block">
+                                    <h3 class="question">Conformance</h3>
+                                    <div class="answer">
+                                        <p><b>Definition</b>: Conforms to a format, syntax, type, range, standard or to the own nature of the information element.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p><b>Guideline</b>: Are there expectations that data values conform to a specified standard, format or controlled vocabulary? Should the data conform to rules related to the  nature of the data, such as limits, ranges or any other prescribed rule inherent to the real-world which the data is supposed to represent?</p>
+                                    </div>
+                                    <div class="answer"><p><b>Examples</b>:</p>
+                                        <p style="margin-left:15px"><b>Event Date Conformity with ISO 8601 (Event date - Single Record)</b> - Measure the compliance of the Event Date with ISO 8601.</p>
+                                        <p style="margin-left:15px"><b>Coordinates Conformity (Coordinates - Single Record)</b> - Decimal Latitude value is between [-90, 90] inclusive and Decimal Longitude value is between [-180, 180] inclusive.</p>
+                                        </div>
+                                </div><!--//section-block-->  ' class="icon fa fa-question-circle" style="color:cornflowerblue;margin-left:10px"></i>
             </div>
             <div class="panel-body">                
                 <div class="row">
@@ -71,7 +95,19 @@
             </div>
 
             <div class="panel-heading">                
-                <strong>3.3. CONSISTENCY</strong>
+                <strong>3.3. CONSISTENCY</strong>  <i title='<div class="section-block">
+                                    <h3 class="question">Consistency</h3>
+                                    <div class="answer">
+                                        <p><b>Definition</b>: Agreement among related information elements in the data.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p><b>Guideline</b>: Do distinct data instances provide conflicting information about the same underlying data object? Are values consistent across data sets? Are interdependent attributes in agreement?</p>
+                                    </div>
+                                    <div class="answer"><p><b>Examples</b>:</p>
+                                        <p style="margin-left:15px"><b>Event Date Consistency (Event Date - Single Record)</b> - The consistency of the dwc:eventDate value with the related atomic field (dwc:year, dwc:month and dwc:day).</p>
+                                        <p style="margin-left:15px"><b>Georeference Consistency (Georeference - Single Record)</b> - The coordinates are consistent with the locality description, including State, Country, etc.</p>
+                                        </div>
+                                </div><!--//section-block-->     ' class="icon fa fa-question-circle" style="color:cornflowerblue;margin-left:10px"></i>
             </div>
             <div class="panel-body">                
                 <div class="row">
@@ -105,7 +141,21 @@
             </div>
 
             <div class="panel-heading">                
-                <strong>3.4. ACCURACY</strong>
+                <strong>3.4. ACCURACY</strong>  <i title='<div class="section-block">
+                                    <h3 class="question">Accuracy</h3>
+                                    <div class="answer">
+                                        <p><b>Definition</b>: Measured by how the data values agree with an identified source of truth. The degree to which data correctly describes the truth (object, event or any abstract or real "thing").</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p><b>Guideline</b>: The degree to which the data mirrors the characteristics of the real world object or objects it represents. Ideally the "real world" truth is established through primary research. However, as this is often not practical, it is common to use 3rd party reference data from sources which are deemed trustworthy and of the same chronology.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p><b>Source</b>: https://github.com/eBay/griffin/blob/master/griffin-doc/userguide.md</p>
+                                    </div>
+                                    <div class="answer"><p><b>Examples</b>:</p>
+                                        <p style="margin-left:15px"><b>Scientific Name Accuracy (Scientific Name - Single Record)</b> - Measured by the number of matches of the data value against a set of nomenclatural authorities sources (source of "truth").</p>
+                                        </div>
+                                </div><!--//section-block-->' class="icon fa fa-question-circle" style="color:cornflowerblue;margin-left:10px"></i>
             </div>
             <div class="panel-body">                
                 <div class="row">

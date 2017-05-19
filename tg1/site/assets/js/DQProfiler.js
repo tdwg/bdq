@@ -1,13 +1,17 @@
 class DQProfiler {  
-    constructor() {
+    constructor() {        
         var self = this;
         this.useCase = {};
         this.vie = [];
         this.dqMeasurementPolicy = {};
         this.dqValidationPolicy = {};
         this.dqImprovementPolicy = {};
-        $("#i-use-case-name").keyup(self.setUseCaseName);                    
-        $("#i-use-case-description").keyup(self.setUseCaseDesc);
+        $("#i-use-case-name").keyup(function(){
+            self.setUseCaseName();
+        });                    
+        $("#i-use-case-description").keyup(function(){
+            self.setUseCaseDesc();
+        });
         if (localStorage && localStorage.profile) {
             var profile = JSON.parse(localStorage.profile);            
             this.useCase = profile.useCase;
@@ -49,7 +53,9 @@ class DQProfiler {
         else alert("Sorry, this resource doen't work in your Internet browser.");  
     }
     setUseCaseName(){
-        this.useCase.name = $("#i-use-case-name").val();
+        
+        this.useCase = this.useCase?this.useCase:{};
+        this.useCase.name = $("#i-use-case-name").val();        
         this.updateProfile();
     }
     setUseCaseDesc(){
