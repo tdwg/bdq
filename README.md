@@ -19,4 +19,6 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 - ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
 
-- ### [Proposed Task Group 4]
+- ### [Proposed Task Group 4 (Vocabularies)]
+
+- ### [Proposed Task Group 5 (Invasive Organism Observation Information)]
