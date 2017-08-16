@@ -36,8 +36,8 @@ The group has been working for over a year to evaluate the tests that have been 
 <li>Vertnet</li>
   </ul>
   
-and to refine thse and new tests to produce a core suite of tests and assertions that can be found at <a href="https://docs.google.com/spreadsheets/d/1uwnUtcMSe88AytUt_mSepeLTz54tMvV9llO2pBnObhE/edit#gid=1444049182</a>. In the process, we have come up with a standard suite of descriptors for each of the tests.
+and to refine thse and new tests to produce a core suite of tests and assertions that can be found at https://docs.google.com/spreadsheets/d/1uwnUtcMSe88AytUt_mSepeLTz54tMvV9llO2pBnObhE. In the process, we have come up with a standard suite of descriptors for each of the tests.
   
-A suite of test code and test data is in development and should be available by the end of 2017.
+A suite of test code and test data for each test is in development by iDigBio and should be available by the end of 2017.
   
   
