@@ -23,3 +23,18 @@ Contact the Convener
 
 <h2>History/Context</h2>
 The Task Group was established in 2014 as a Task Group of the TDWG Data Quality Interest Group viz, Task Group 2: Tools, Services and Workflows. The new name and charter better reflects the work and goals of the Task Group as tests and assertions are more stable and longer lasting than the tools which will link to the relevant tests and workflows that will also depend on them. Services seems better placed with the TDWG Biodiversity Services and Clients IG.
+
+<h2>Outcomes</h2>
+The group has been working for over a year to evaluate the tests that have been run by-
+<ul>The Atlas of Living Australia (ALA)</<ul>
+<ul>The Gblobal Biodiversity Information Facility (GBIF)</ul>
+<ul>IDigBio</ul>
+<ul>Ocean Biogeographic Information Facility (OBIS)</ul>
+<ul>Centro de Referência em Informação Ambiental (CRIA )<\ul>
+<ul>Biodiersity Information Serving Our Nation(BISON)</ul>
+<ul>Vertnet</ul>
+  
+<p>and to refine thse and new tests to produce a core suite of tests and assertions that can be found at <a href="https://docs.google.com/spreadsheets/d/1uwnUtcMSe88AytUt_mSepeLTz54tMvV9llO2pBnObhE/edit#gid=1444049182</a>. In the process, we have come up with a standard suite of descriptors for each of the tests.</p>
+<p>A suite of test code and test data is in development and shoul dbe available by the end of 2017.</p>
+  
+  
