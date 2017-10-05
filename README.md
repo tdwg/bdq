@@ -13,11 +13,11 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 ## Task Groups
 
-- ### [Task Group 1](https://tdwg.github.io/bdq/tg1/site)
+- ### [Task Group 1](https://tdwg.github.io/bdq/tg1/site) BDQ Framework
 
-- ### [Task Group 2](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
+- ### [Task Group 2](https://github.com/tdwg/bdq/blob/master/tg2/README.md) Data Quality Tests and Assertions
 
-- ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
+- ### [Task Group 3](https://tdwg.github.io/bdq/tg3/) Use Cases
 
 - ### [Proposed Task Group 4 (Vocabularies)]
 
