@@ -13,12 +13,10 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 ## Task Groups
 
-- ### [Task Group 1](https://tdwg.github.io/bdq/tg1/site)
+- ### [Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
 
-- ### [Task Group 2](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
+- ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
-- ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
+- ### [Task Group 3 (Use Case Library)](https://tdwg.github.io/bdq/tg3/)
 
 - ### [Proposed Task Group 4 (Vocabularies)]
-
-- ### [Proposed Task Group 5 (Invasive Organism Observation Information)]
