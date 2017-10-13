@@ -29,10 +29,10 @@ The group has been working for over a year to evaluate the tests that have been 
 <ul>
 <li>The Atlas of Living Australia (ALA)</<li>
 <li>The Gblobal Biodiversity Information Facility (GBIF)</li>
-<li>IDigBio</li>
+<li>iDigBio</li>
 <li>Ocean Biogeographic Information Facility (OBIS)</li>
 <li>Centro de Referência em Informação Ambiental (CRIA)</li>
-<li>Biodiersity Information Serving Our Nation(BISON)</li>
+<li>Biodiversity Information Serving Our Nation (BISON)</li>
 <li>Vertnet</li>
   </ul>
   
