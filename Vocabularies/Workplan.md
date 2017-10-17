@@ -1,4 +1,6 @@
 # TG4 - Workplan
+*In this page you will find the detailed goals and expected outcomes for the Vocabularies Group, as well as the steps we plan to follow to achieve them.*
+
 # Goals, outputs and outcomes
 **1. Preparation of a Scoping Document.** Expected *by Apr 2018.* The document will include the following topics:
   - Determining what types of vocabularies would be needed for TDWG – consistent with the various ISO Standards on Vocabularies (i.e., do we require vocabularies, dictionaries of terms, controlled vocabularies, thesauri, ontologies, etc.), and whether vocabularies should be mono-lingual or multi-lingual.
