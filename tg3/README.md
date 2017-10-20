@@ -1,5 +1,7 @@
 ## TG3: Data Quality Use Case Library
 
+-    [Use Case Library] (https://docs.google.com/spreadsheets/d/1JeyFYhnRO5Thgt9Yag15S8DslFM_9rsIpzmTXrLys1s/edit#gid=1280762480)
+
 ### Motivation
 
 Other than data availability, 'Data Quality' is probably the most significant issue for users of biodiversity data and this is specially so for the research community.
