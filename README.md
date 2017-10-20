@@ -17,6 +17,6 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 - ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
-- ### [Task Group 3 (Use Case Library)](https://github.com/tdwg/bdq/blob/master/tg3/READ.me)
+- ### [Task Group 3 (Use Case Library)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
 
 - ### [Proposed Task Group 4 (Vocabularies)]
