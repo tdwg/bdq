@@ -13,7 +13,7 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 ## Documentation
 
-All Interest Group and Task Group documents are linked on the [Interest Group's Wiki.](https://github.com/tdwg/bdq/wiki)
+All Interest Group and Task Group documents are linked on the [**Interest Group's Wiki**.](https://github.com/tdwg/bdq/wiki)
 
 ## Task Groups
 
