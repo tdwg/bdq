@@ -11,6 +11,10 @@ Conventionaly, title of issues should start with "[IG]" for issue related to the
 
 A mailing list resource will be provided soon. Meanwhile, click in "Watch" and select "Watching" to be notified of all conversations.
 
+## Documentation
+
+All Interest Group and Task Group documents are linked on the [Interest Group's Wiki.](https://github.com/tdwg/bdq/wiki)
+
 ## Task Groups
 
 - ### [Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
