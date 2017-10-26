@@ -9,7 +9,7 @@ The goal of this Interest Group is to discuss, determine, formalize and standard
 You can use the [GitHub issues](https://github.com/tdwg/bdq/issues) to contribute with amendment or starting relevant discussion topics.
 Conventionaly, title of issues should start with "[IG]" for issue related to the BDQ Interest Group, "[TG1]" for issues related to the Task Group 1, "[TG2]" for issues related to the Task Group 2 and "[TG3]" for issues related to the Task Group 3.
 
-A mailing list resource will be provided soon. Meanwhile, click in "Watch" and select "Watching" to be notified of all conversations.
+You can join the group's mailing list at http://lists.tdwg.org/mailman/listinfo/tdwg-bdq. To be involved and receive notification via the GitHub. click "Watch" (above) and select "Watching" to be notified of all conversations.
 
 ## Documentation
 
