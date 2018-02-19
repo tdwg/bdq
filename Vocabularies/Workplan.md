@@ -8,7 +8,7 @@
   
 **2. Development of a common repository for TDWG vocabularies-of-values.** GitHub will be the first option but other alternatives will be explored to provide a user-friendly platform for gathering and developing vocabularies. GitHub repository will be functional *by Feb 2018*. Exploration of alternative platform is expected *through 2018 and up to Jul 2019*.
 
-**3. Development of a standard format for the building of TDWG vocabularies.** Such format will be based primarily on the TDWG Standards Documentation Specification. Expected *by Aug 2018*, to be presented at TDWG/SPNCH 2018.
+**3. Development of a current best practice for the building of TDWG vocabularies.** Such format will be based primarily on the TDWG Standards Documentation Specification. Expected *by Aug 2018*, to be presented at TDWG/SPNCH 2018.
 
 **4. Building of at least one exemplary vocabulary** under the standard format developed in item 3. Expected *by Aug 2018*, to be presented at TDWG/SPNCH 2018.
 
@@ -27,8 +27,8 @@ that will be available through the GitHub repository *by Apr 2019*.
 - Discussion and general work will be performed via periodic meetings that will be held remotely and in person in appropriate venues (e.g., TDWG 2018, 2019, DQIG meetings).
 - All activities will be tracked in the common repository in GitHub (item 2), which will be created either as an independent repository or under the existing Interest Group repository (https://github.com/tdwg/bdq), as a first activity. All materials produced will be available in that repository as well.
 ## Specifics
-- The scoping document, the standard format for building vocabularies-of-values, the exemplary vocabulary and the list of vocabularies needed,(items 1, 3, 4 and 8) will be created by the members of the TG, using either GitHub directly or other platforms such as Google Documents for early stages.
-- The scoping document, the standard format and the exemplary vocabulary (items 1, 3 and 4) will be presented at TDWG/SPNCH 2018 Meeting. This will be a special opportunity to integrate the initiative with the broader community and to identify and engage with individuals and domain-specific groups that might be interested in the construction of the vocabularies.
+- The scoping document, the current best practice for building vocabularies-of-values, the exemplary vocabulary and the list of vocabularies needed,(items 1, 3, 4 and 8) will be created by the members of the TG, using either GitHub directly or other platforms such as Google Documents for early stages.
+- The scoping document, the current best practice and the exemplary vocabulary (items 1, 3 and 4) will be presented at TDWG/SPNCH 2018 Meeting. This will be a special opportunity to integrate the initiative with the broader community and to identify and engage with individuals and domain-specific groups that might be interested in the construction of the vocabularies.
 - We will explore the possibility of creating a user-friendly repository (item 2) for building and storing TDWG vocabularies. We will also evaluate the cost-benefits and provide a report/proposal for the construction of a platform.
 - The gathering of existing vocabularies (item 5) will be based on a preliminary list made by the convener and already available at https://docs.google.com/spreadsheets/d/1SDbtZxEzg0t10OSNDPJN0XSye6mMOTTCIBH3xh-HUYA/edit#gid=0. A more extensive search will be conducted and key stakeholders (e.g., aggregators, database management systems, data providers from natural history collections) will be personally contacted via email and invited to share vocabularies in use.
 - As before, domain-specific groups will be identified and contacted via email and personally in appropriate meetings (e.g., TDWG/SPNCH 2018) (item 6).
