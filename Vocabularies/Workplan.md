@@ -2,24 +2,23 @@
 *In this page you will find the detailed goals and expected outcomes for the Vocabularies Group, as well as the steps we plan to follow to achieve them.*
 
 # Goals, outputs and outcomes
-**1. Preparation of a Scoping Document.** Expected *by Apr 2018.* The document will include the following topics:
+**1. Preparation of a Scoping Document.** The document will include the following topics:
   - Determining what types of vocabularies would be needed for TDWG – consistent with the various ISO Standards on Vocabularies (i.e., do we require vocabularies, dictionaries of terms, controlled vocabularies, thesauri, ontologies, etc.), and whether vocabularies should be mono-lingual or multi-lingual.
   - Determining a strategy for organizing the construction of vocabularies, considering: A) structuring of work within TDWG, with the following options: 1) the creation of a separate Interest group; 2) the creation of several Task Groups within the Data Quality Interest Group, or associated to other TDWG Interest Groups; B) Domain specific needs and practices.
   
-**2. Development of a common repository for TDWG vocabularies-of-values.** GitHub will be the first option but other alternatives will be explored to provide a user-friendly platform for gathering and developing vocabularies. GitHub repository will be functional *by Feb 2018*. Exploration of alternative platform is expected *through 2018 and up to Jul 2019*.
+**2. Development of a common repository for TDWG vocabularies-of-values.** GitHub will be the first option but other alternatives will be explored to provide a user-friendly platform for gathering and developing vocabularies. Exploration of alternative platform is expected.
 
-**3. Development of a current best practice for the building of TDWG vocabularies.** Such format will be based primarily on the TDWG Standards Documentation Specification. Expected *by Aug 2018*, to be presented at TDWG/SPNCH 2018.
+**3. Development of a current best practice for the building of TDWG vocabularies.** Such format will be based primarily on the TDWG Standards Documentation Specification.
 
-**4. Building of at least one exemplary vocabulary** under the standard format developed in item 3. Expected *by Aug 2018*, to be presented at TDWG/SPNCH 2018.
+**4. Building of at least one exemplary vocabulary** under the standard format developed in item 3.
 
-**5. Collection and assessment of already existing vocabularies** across the community that can be used as are, or that can be modified for TDWG purposes. The list of such vocabularies will be made available through the common repository *by Mar 2019*.
+**5. Collection and assessment of already existing vocabularies** across the community that can be used as are, or that can be modified for TDWG purposes. The list of such vocabularies will be made available through the common repository.
 
-**6. Identification of domain-specific groups** that may be involved in the preparation of vocabularies and creation of a list of contacts 
-that will be available through the GitHub repository *by Apr 2019*.
+**6. Identification of domain-specific groups** that may be involved in the preparation of vocabularies and creation of a list of contacts that will be available through the GitHub repository.
 
-**7. In-depth evaluation of the current state** of data that is shared through aggregators in relation to the use of controlled values for each Darwin Core term. A report is planned to present at TDWG 2019 Annual Meeting *(by Jun 2019)*.
+**7. In-depth evaluation of the current state** of data that is shared through aggregators in relation to the use of controlled values for each Darwin Core term. A report will be built.
 
-**8. Preparation of a list of vocabularies needed** for terms of the Darwin Core standard based on the previous report. The list would be presented at TDWG 2019 Annual Meeting *(by Jul 2019)*.
+**8. Preparation of a list of vocabularies needed** for terms of the Darwin Core standard based on the previous report.
 
 # Strategy 
 ## General
@@ -34,7 +33,7 @@ that will be available through the GitHub repository *by Apr 2019*.
 - As before, domain-specific groups will be identified and contacted via email and personally in appropriate meetings (e.g., TDWG/SPNCH 2018) (item 6).
 - If further in-person interaction is needed among the members of the TG and/or with other members of the community or domain-specific groups, we will seek funding opportunities through different agencies outside TDWG.
 - Evaluation of the current state of data (item 7) will be carried out mainly by the convener based on previous research conducted on data from GBIF, iDigBio and VertNet, already available through a data directory in the Darwin Core Questions & Answers GitHub site (https://github.com/tdwg/dwc-qa/tree/master/data). 
-## Timeline
+## Timeline (tentative)
 ![](https://drive.google.com/uc?export=download&id=0B4sIKK7qrRVITFhGb3I0Qld5Q28)
 
 # Resources
