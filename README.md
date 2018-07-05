@@ -7,7 +7,7 @@ The goal of this Interest Group is to discuss, determine, formalize and standard
 ## How to contribute
 
 You can use the [GitHub issues](https://github.com/tdwg/bdq/issues) to contribute with amendment or starting relevant discussion topics.
-Conventionaly, title of issues should start with "[IG]" for issue related to the BDQ Interest Group, "[TG1]" for issues related to the Task Group 1, "[TG2]" for issues related to the Task Group 2 and "[TG3]" for issues related to the Task Group 3.
+Conventionaly, title of issues should start with "[IG]" for issue related to the BDQ Interest Group, "[TG1]" for issues related to the Task Group 1, "[TG2]" for issues related to the Task Group 2, "[TG3]" for issues related to the Task Group 3 and "[TG4]" for issues related to the Task Group 4
 
 A mailing list resource will be provided soon. Meanwhile, click in "Watch" and select "Watching" to be notified of all conversations.
 
@@ -19,4 +19,4 @@ A mailing list resource will be provided soon. Meanwhile, click in "Watch" and s
 
 - ### [Task Group 3](https://tdwg.github.io/bdq/tg3/)
 
-- ### [Proposed Task Group 4](https://tdwg.github.io/bdq/tg4/)
+- ### [Task Group 4](https://github.com/tdwg/bdq/tree/master/Vocabularies)
