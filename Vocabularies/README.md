@@ -5,7 +5,7 @@
 
 2. Development of a common repository for TDWG vocabularies-of-values. 
 
-3. Development of a standard format for the building of TDWG vocabularies.
+3. Development of a current best practice for building of TDWG vocabularies.
 
 4. Building of at least one exemplary vocabulary.
 
