@@ -1,4 +1,6 @@
 <h1>TG2: Data Quality Tests and Assertions</h1>
+
+Link to tests: https://github.com/tdwg/bdq/projects/2
 <h2>Motivation</h2>
 Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is specially so for the research community.
 This Task Group is reviewing practical aspects relating to ‘data quality’ with a goal to provide Best Current Practice at the key interface between data users and data providers: tests and their resulting assertions.
