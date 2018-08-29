@@ -1,9 +1,10 @@
 <h1>TG2: Data Quality Tests and Assertions</h1>
 
-##Charter 
+## Charter 
 -    [Task Group 2 - Biodiversity Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/)
 
-Link to tests: https://github.com/tdwg/bdq/projects/2
+## Link to tests: 
+-    https://github.com/tdwg/bdq/projects/2
 
 
 <h2>Outcomes</h2>
