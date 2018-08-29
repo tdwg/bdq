@@ -1,4 +1,4 @@
-<h1>Welcome to the Data Quality Tests and Assertions Task Group</h1>
+<h1>Welcome to the Tests and Assertions Task Group</h1>
 
 ## Charter 
 -    [Task Group 2 - Biodiversity Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/)
