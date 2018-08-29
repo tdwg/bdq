@@ -1,4 +1,4 @@
-## TG3: Data Quality Use Case Library
+## Welcome to the Data Quality Use Case Library Task Group
 
 ### Charter 
 -    [Task Group 3 - Biodiversity Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)-
