@@ -21,6 +21,6 @@ All Interest Group and Task Group documents are linked on the [**Interest Group'
 
 - ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
-- ### [Task Group 3 (Use Case Library)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
+- ### [Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
 
 - ### [Task Group 4 (Vocabularies of values)](https://github.com/tdwg/bdq/tree/master/Vocabularies)
