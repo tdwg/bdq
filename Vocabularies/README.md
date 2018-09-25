@@ -1,4 +1,5 @@
 # Welcome to the Vocabularies Group
+(Oficially the **Best practices for development of vocabularies of values** Task Group)
 
 # Our goals, in short:
 1. Preparation of a [Scoping Document](https://docs.google.com/document/d/1WXHpnXrNxDiaOI6LgypCJavj4iC6qB1VLGXDSBF8RnM/edit?usp=sharing).     . . . :wrench: *In progress* :bug:
