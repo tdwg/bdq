@@ -1,25 +1,33 @@
-<h1>Welcome to the Vocabularies of Values Task Group</h1>
+# Welcome to the Vocabularies Group
+(Oficially the **Best practices for development of vocabularies of values** Task Group)
 
-## Charter 
--    [Task Group 4 - Best practices for development of vocabularies of values ("Vocabularies")](https://www.tdwg.org/community/bdq/tg-4/)
+# Our goals, in short:
+1. Preparation of a [Scoping Document](https://docs.google.com/document/d/1WXHpnXrNxDiaOI6LgypCJavj4iC6qB1VLGXDSBF8RnM/edit?usp=sharing).     . . . :wrench: *In progress* :bug:
 
+2. Development of a common repository for TDWG vocabularies-of-values. 
 
-<h2>Goals, outputs and outcomes</h2>
-Goals, outputs and outcomes
+3. Development of a current best practice for building of TDWG vocabularies.
 
-1. **Preparation of a Scoping Document**. The document will include the following topics: - Determining what types of vocabularies would be needed for TDWG – consistent with the various ISO Standards on Vocabularies (i.e., do we require vocabularies, dictionaries of terms, controlled vocabularies, thesauri, ontologies, etc.), and whether vocabularies should be mono-lingual or multi-lingual. - Determining a strategy for organizing the construction of vocabularies, considering: A) structuring of work within TDWG, with the following options: 1) the creation of a separate Interest group; 2) the creation of several Task Groups within the Data Quality Interest Group, or associated to other TDWG Interest Groups; B) Domain specific needs and practices.
+4. Building of at least one exemplary vocabulary.
 
-2. **Development of a common repository for TDWG vocabularies-of-values**. GitHub will be the first option but other alternatives will be explored to provide a user-friendly platform for gathering and developing vocabularies. Exploration of alternative platform is expected.
+5. Collection and assessment of already [existing vocabularies](https://docs.google.com/spreadsheets/d/1SDbtZxEzg0t10OSNDPJN0XSye6mMOTTCIBH3xh-HUYA/edit?usp=sharing) across the community.     . . . :wrench: *In progress* :bug:
 
-3. **Development of a current best practice for the building of TDWG vocabularies**. Such format will be based primarily on the TDWG Standards Documentation Specification.
+6. Identification of domain-specific groups that may be involved in the preparation of vocabularies.
 
-4. **Building of at least one exemplary vocabulary** under the standard format developed in item 3.
+7. In-depth evaluation of the current state of data shared through aggregators in relation to the use of controlled values.     . . . :wrench: *In progress* :bug:
 
-5. **Collection and assessment of already existing vocabularies** across the community that can be used as are, or that can be modified for TDWG purposes. The list of such vocabularies will be made available through the common repository.
+8. Preparation of a list of vocabularies needed for terms of the Darwin Core standard.
 
-6. **Identification of domain-specific groups** that may be involved in the preparation of vocabularies and creation of a list of contacts that will be available through the GitHub repository.
+For more details, you can refer to: https://github.com/tdwg/bdq/blob/master/Vocabularies/Workplan.md
 
-7. **In-depth evaluation of the current state** of data that is shared through aggregators in relation to the use of controlled values for each Darwin Core term. A report will be built.
+# How you can contribute
+:small_orange_diamond: Review the [Scoping Document](https://docs.google.com/document/d/1WXHpnXrNxDiaOI6LgypCJavj4iC6qB1VLGXDSBF8RnM/edit?usp=sharing). Please contribute your knowledge, feel free to post comments on that document providing your insights.
 
-8. **Preparation of a list of vocabularies needed** for terms of the Darwin Core standard based on the previous report.  
-  
+:small_orange_diamond: Add to the list of [existing vocabularies](https://docs.google.com/spreadsheets/d/1SDbtZxEzg0t10OSNDPJN0XSye6mMOTTCIBH3xh-HUYA/edit?usp=sharing) any vocabulary that you may know exists.
+
+:small_orange_diamond: If you want to but are not yet a member of the Task Group, send us an email, we will welcome you in the discussions.
+
+# Motivation
+Biodiversity data are increasingly being shared from myriad sources. While the Darwin Core standard defines a set of terms under which data are organized and shared, it does not refer to the actual values used to describe the content of each field. More often than not, distinct sources utilize diverse criteria to populate the fields. While this has allowed data publication broadly, when it comes to data usage, it becomes apparent that such heterogeneity hinders discoverability and use of the data. One way to reduce this variability and improve data use is to provide standardized vocabularies for the community to use. Vocabularies exist for some terms, but are constrained to specific groups or disciplines. Furthermore, there is no standard format defined for the creation of biodiversity data vocabularies for the values captured under Darwin Core terms (hereafter vocabularies-of-values), and no recommended environment in which to do so. This TG aims to create such a framework under the TDWG umbrella, with the ultimate objective of building a corpus of vocabularies of standard values for terms. We identify four target audiences who could potentially benefit from the outcomes of this TG: 1) Data producers (i.e., data collectors) who could capture data using the controlled vocabularies through pick lists and could impart valuable information more efficiently; 2) Data custodians (e.g., staff in museum collections) who could manage, provide and use data more efficiently; 3) Data aggregators who could use the vocabularies to provide infrastructure for data filtering; 4) Data users for whom more effective filtering would represent improvement in data fitness for use.
+Currently, other initiatives concerning biodiversity data vocabularies-of-values are scattered, and no other TDWG task group is addressing the issue of the structure of such standards. As this TG is directly related with data quality and use, the Data Quality Interest Group seems the appropriate environment for this work.
+ 
