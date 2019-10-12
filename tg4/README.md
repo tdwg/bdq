@@ -16,9 +16,9 @@
 
 7. In-depth evaluation of the current state of data shared through aggregators in relation to the use of controlled values.     . . . :wrench: *In progress* :bug:
 
-8. Preparation of a list of vocabularies needed for terms of the Darwin Core standard.
+8. Preparation of a [list of vocabularies needed](https://github.com/tdwg/bdq/wiki/Vocabularies-needed-for-Darwin-Core-terms) for terms of the Darwin Core standard.
 
-For more details, you can refer to: https://github.com/tdwg/bdq/blob/master/Vocabularies/Workplan.md
+For more details, you can refer to the [Workplan](https://github.com/tdwg/bdq/blob/master/Vocabularies/Workplan.md).
 
 # How you can contribute
 :small_orange_diamond: Review the [Scoping Document](https://docs.google.com/document/d/1WXHpnXrNxDiaOI6LgypCJavj4iC6qB1VLGXDSBF8RnM/edit?usp=sharing). Please contribute your knowledge, feel free to post comments on that document providing your insights.
