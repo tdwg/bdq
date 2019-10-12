@@ -23,4 +23,4 @@ All Interest Group and Task Group documents are linked on the [**Interest Group'
 
 - ### [Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
 
-- ### [Task Group 4 (Best Practices for Development of Vocabularies of Value)](https://github.com/tdwg/bdq/tree/master/Vocabularies)
+- ### [Task Group 4 (Best Practices for Development of Vocabularies of Value)](https://github.com/tdwg/bdq/tree/master/TG4)
