@@ -21,7 +21,6 @@
 For more details, you can refer to the [Workplan](https://github.com/tdwg/bdq/blob/master/Vocabularies/Workplan.md).
 
 # How you can contribute
-:small_orange_diamond: Review the [Scoping Document](https://docs.google.com/document/d/1WXHpnXrNxDiaOI6LgypCJavj4iC6qB1VLGXDSBF8RnM/edit?usp=sharing). Please contribute your knowledge, feel free to post comments on that document providing your insights.
 
 :small_orange_diamond: Add to the list of [existing vocabularies](https://docs.google.com/spreadsheets/d/1SDbtZxEzg0t10OSNDPJN0XSye6mMOTTCIBH3xh-HUYA/edit?usp=sharing) any vocabulary that you may know exists.
 
