@@ -2,7 +2,7 @@
 (Oficially the **Best practices for development of vocabularies of values** Task Group)
 
 # Our goals, in short:
-1. Preparation of a [Scoping Document](https://docs.google.com/document/d/1WXHpnXrNxDiaOI6LgypCJavj4iC6qB1VLGXDSBF8RnM/edit?usp=sharing).     . . . :wrench: *In progress* :bug:
+1. Preparation of a [Scoping Document](https://github.com/tdwg/bdq/blob/master/tg4/Scoping%20Document.md).
 
 2. Development of a common repository for TDWG vocabularies-of-values. 
 
