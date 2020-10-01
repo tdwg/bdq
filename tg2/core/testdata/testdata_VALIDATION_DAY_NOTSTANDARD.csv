@@ -5,6 +5,8 @@
 " 1","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 1 is a valid value for dwc:day.]"
 "0","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
 "1st","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
+"01","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 1 is a valid value for dwc:day.]"
+"02","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 2 is a valid value for dwc:day.]"
 "-1","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
 "1.1","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
 "1.01","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"

@@ -1,6 +1,7 @@
 "dwc:maximumDepthInMeters","bdq:minimumValidDepthInMeters","bdq:maximumValidDepthInMeters","Response.Status","Response.Result","Response.Comment"
 100,0,11000,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 100 is in the range 0 to 11000 inclusive]"
 100,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 100 is in the default range 0 to 11000 inclusive]"
+0100,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 100 is in the default range 0 to 11000 inclusive]"
 200000,,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. 200000 is outside the default range 0 to 11000 inclusive]"
 0.4,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 0.4 is in the default range 0 to 11000 inclusive]"
 0,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 0 is in the default range 0 to 11000 inclusive]"
