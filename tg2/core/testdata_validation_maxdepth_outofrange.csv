@@ -15,7 +15,7 @@
 115.2,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 115.2 is in the range 0 to 11000]"
 "1828.8   ",,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. provided value is in range 0 to 11000 (Note: leading and trailing spaces must be trimmed before test)]"
 "  1828.8 ",,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. provided value is in range 0 to 11000 (Note: leading and trailing spaces must be trimmed before test)]"
-"-354","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g., the value is a negative number and is therefore outside the permissible range]"
+"-354",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g., the value is a negative number and is therefore outside the permissible range]"
 "1,828.8",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. comma not recognized as a place separator, provided value must be a number **NeedsDiscussion**]"
 "1 828.8",,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. space recognized as a place separator, provided value is in range 0 to 11000 **NeedsDiscussion**]"
 "115,2",,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 115,2 is in the range 0 to 11000 where both . and , are recognized as decimal separators **Needs Discussion**]"
