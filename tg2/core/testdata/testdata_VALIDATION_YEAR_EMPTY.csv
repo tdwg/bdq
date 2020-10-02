@@ -11,4 +11,4 @@
 ,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty]"
 " ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of whitespace]"
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists of only whitespace]"
-"	","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of whitespace only whitespace]"
+"	","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of whitespace]"
