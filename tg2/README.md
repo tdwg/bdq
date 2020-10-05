@@ -6,6 +6,9 @@
 ## Link to tests: 
 -    https://github.com/tdwg/bdq/projects/2
 
+## Link to testdata:
+-    https://github.com/tdwg/bdq/tree/master/tg2/core/testdata
+
 
 <h2>Outcomes</h2>
 The group has been working for over a year to evaluate the tests that have been run by-
