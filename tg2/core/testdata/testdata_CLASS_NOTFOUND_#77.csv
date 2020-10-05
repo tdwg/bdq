@@ -1,13 +1,17 @@
-﻿dwc:class,bdq:sourceAuthority,bdq:sourceAuthority response,Response:Status,Response:Result,Response:Comment,Explanation
-,,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. a value must be provided to be validated]",Class is EMPTY or missing
-Null,Default Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",
-Insecta,Default Source Authority,Insecta,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
-Insecta,Parameterized  Source Authority,Insecta,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the Parameterized Source Authority]",
-Insetca,Default Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",This may be fixed using fuzzy matching at the AMENDMENT stage
-Insetca,Parameterized  Source Authority,Insecta,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the Parameterized Source Authority]",
-Magnoliopsida,Default Source Authority,Magnoliopsida,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
-Magnoliopsida,Parameterized  Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the Parameterized Source Authority]",Parameterized Source Authority has Dicotyledonae instead of Magnoliopsida
-Magnoliophyta,Default Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",Magnoliophyta is a Phylum - not a Class
-Dicot,Default Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",
-Dicotyledoneae,Default Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",Parameterized Source Authority has Dicotyledonae instead of Magnoliopsida
-Dicotyledoneae,Parameterized Source Authority,Dicotyledoneae,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the Parameterized Source Authority]",
+"dwc:class","bdq:sourceAuthority","bdq:sourceAuthority response","Response:Status","Response:Result","Response:Comment","Explanation"
+,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Class is EMPTY or missing"
+"Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",
+"Insecta",,"Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
+"Insecta","Parameterized  Source Authority","Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the Parameterized Source Authority]",
+"Insetca",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]","This may be fixed using fuzzy matching at the AMENDMENT stage"
+"Insetca","Parameterized  Source Authority","Insecta","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the Parameterized Source Authority]",
+"Magnoliopsida",,"Magnoliopsida","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
+"Magnoliopsida","Parameterized  Source Authority",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the Parameterized Source Authority]","Parameterized Source Authority has Dicotyledonae instead of Magnoliopsida"
+"Magnoliophyta",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]","Magnoliophyta is a Phylum - not a Class"
+"Dicot",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",
+"Dicotyledoneae",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]","Parameterized Source Authority has Dicotyledonae instead of Magnoliopsida"
+"Dicotyledoneae","Parameterized Source Authority","Dicotyledoneae","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the Parameterized Source Authority]",
+" Insecta",,"Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
+" Insecta ",,"Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
+"Insecta ",,"Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
+"dwc:class",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
