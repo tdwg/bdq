@@ -2,8 +2,7 @@
 ,,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. a value must be provided to be validated]",Family is EMPTY or missing
 Null,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
 Agaricaceae,,Agaricaceae,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Family in the bdq:sourceAuthority]",
-Agaricaceae,Parameterized  Source Authority,Agaricaceae,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Family in the Parameterized Source Authority]",
-Agaricacae,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",This may be fixed using fuzzy matching at the AMENDMENT stage
+Agaricaceae,Parameterized  Source Authority,Agaricaceae,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has Family in the bdq:sourceAuthority]",This may be fixed using fuzzy matching at the AMENDMENT stage
 Agaricacae,Parameterized  Source Authority,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the Parameterized Source Authority]",
 Macropodidae,,Macropodidae,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Family in the bdq:sourceAuthority]",
 kangaroos,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the Parameterized Source Authority]",
