@@ -8,4 +8,3 @@ animals,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. th
 Fungi,,Fungi,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Kingdom in the bdq:sourceAuthority]",
 fungus,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Kingdom in the bdq:sourceAuthority]",
 dwc:kingdom,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
-,,,,,,
