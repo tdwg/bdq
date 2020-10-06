@@ -1,0 +1,7 @@
+﻿dwc:taxonID,Response:Status,Response:Result,Response:Comment,Explanation
+,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:taxonID is EMPTY]",
+null ,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonID is not EMPTY]",
+123,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonID is not EMPTY]",
+8fa58e08-08de-4ac1-b69c-1235340b7001,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonID is not EMPTY]",
+https://www.gbif.org/species/212,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonID is not EMPTY]",
+dwc:taxonID,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonID is not EMPTY]",
