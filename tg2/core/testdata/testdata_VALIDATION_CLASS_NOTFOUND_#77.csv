@@ -1,5 +1,6 @@
 "dwc:class","bdq:sourceAuthority","bdq:sourceAuthority response","Response:Status","Response:Result","Response:Comment","Explanation"
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Class is EMPTY or missing"
+"  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Class has black spaces"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Class in the bdq:sourceAuthority]",
 "Insecta",,"Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the bdq:sourceAuthority]",
 "Insecta","Parameterized  Source Authority","Insecta","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Class in the Parameterized Source Authority]",
