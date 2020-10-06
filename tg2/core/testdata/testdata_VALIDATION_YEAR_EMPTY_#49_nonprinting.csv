@@ -1,0 +1,4 @@
+"dwc:year","Response.Status","Response.Result","Response.Comment"
+" ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of non-printing characters (u0020)]"
+"","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of non-printing characters (u0000)]"
+"","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of non-printing characters (u0007)]"
