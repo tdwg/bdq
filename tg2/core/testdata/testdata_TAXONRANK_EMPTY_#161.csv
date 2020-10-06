@@ -1,0 +1,10 @@
+﻿dwc:taxonRANK,Response:Status,Response:Result,Response:Comment,Explanation
+,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRANK is EMPTY]",
+null ,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+ssp.,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+subsp. ,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+cultivar,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+rubbish,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+12345,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+?,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+dwc:taxonRank,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
