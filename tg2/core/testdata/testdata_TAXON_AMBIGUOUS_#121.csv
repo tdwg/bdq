@@ -1,0 +1,6 @@
+﻿dwc:taxonID,bdq:sourceAuthority,bdq:sourceAuthority response,response:Status,response:Result,response:Comment,Explanation
+,,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. a value must be provided to be validated]",
+54367,,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. the taxonID does not include the resolving authority]","?????  Need some examples of how one includes the resolving authority in TaxonID. See Darwin Core where example given of ""32567"" is OK?????"
+8fa58e08-08de-4ac1-b69c-1235340b7001,,,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",Is this including a source authority?
+https://www.gbif.org/species/212,,Aves,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the taxonID is valid and includes the resolving authority]",
+dwc:taxonID,,,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
