@@ -1,0 +1,8 @@
+﻿dcterms:license,Response.Status,Response.Result,Response.Comment
+CC BY,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dcterms:license = ""CC BY"" matches term in bdq:sourceAuthority"
+GPL,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dcterms:license = ""GPL"" does not match terms in the bdq:sourceAuthority"
+anyOldTerm,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dcterms:license = ""anyOldTerm"" does not match terms in the bdq:sourceAuthority"
+…,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dcterms:license = ""..."" does not match terms in the bdq:sourceAuthority"
+[bdq:sourceAuthority not available],EXTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. bdq:sourceAuthority not available"
+[whitespace],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dcterms:license is EMPTY"
+[non-printing characters],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dcterms:license is EMPTY"
