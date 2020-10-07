@@ -6,3 +6,4 @@
 "  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY","field just includes white space"
 ,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY",
 "[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY",
+"bdq:annotation","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""..."" is NOTEMPTY",
