@@ -1,4 +1,4 @@
-﻿"dwc:kingdom","bdq:sourceAuthority","bdq:sourceAuthority response","Response.Status","Response.Result","Response.Comment","Explanation"
+﻿"dwc:kingdom","bdq:sourceAuthority","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus is EMPTY or missing"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]",
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus is composed of just white space"
