@@ -1,0 +1,7 @@
+﻿dwc:occurrenceID,Response.Status,Response.Result,Response.Comment
+http://arctos.database.museum/guid/MSB:Mamm:233627,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceID = ""http://arctos.database.museum/guid/MSB:Mamm:233627"" means the field is NOT_EMPTY"
+000866d2-c177-4648-a200-ead4007051b9,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceID = ""000866d2-c177-4648-a200-ead4007051b9"" means the field is NOT_EMPTY"
+anyOldTerm,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceID = ""anyOldTerm"" means the field is NOT_EMPTY"
+…,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceID = ""..."" means the field is NOT_EMPTY"
+[whitespace],RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceID is EMPTY"
+[non-printing characters],RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceID is EMPTY"
