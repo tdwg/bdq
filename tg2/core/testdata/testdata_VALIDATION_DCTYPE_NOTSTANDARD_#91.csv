@@ -1,0 +1,8 @@
+﻿dc:type,Response.Status,Response.Result,Response.Comment
+Event,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dc:type = ""Event"" matches term in DCMI Vocabulary"
+StillerImage,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dc:type = ""StillerImage"" does not match terms in DCMI Vocabulary"
+anyOldTerm,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dc:type = ""anyOldTerm"" does not match terms in DCMI Vocabulary"
+…,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dc:type = ""..."" does not match terms in DCMI Vocabulary"
+[bdq:sourceAuthority not available],EXTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. bdq:sourceAuthority not available"
+[whitespace],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dc:type is EMPTY"
+[non-printing characters],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dc:type is EMPTY"
