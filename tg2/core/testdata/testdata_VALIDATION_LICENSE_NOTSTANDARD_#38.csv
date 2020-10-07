@@ -1,4 +1,4 @@
-﻿"dcterms:license",bdq:soureAuthority response","Response.Status","Response.Result","Response.Comment","Explanation"
+﻿"dcterms:license","bdq:soureAuthority response","Response.Status","Response.Result","Response.Comment","Explanation"
 "CC BY","CC BY","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""CC BY"" matches term in bdq:sourceAuthority]",
 "GPL",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""GPL"" does not match terms in the bdq:sourceAuthority]",
 "anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""anyOldTerm"" does not match terms in the bdq:sourceAuthority]",
