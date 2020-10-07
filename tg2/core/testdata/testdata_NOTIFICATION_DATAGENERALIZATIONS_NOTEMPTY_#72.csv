@@ -1,4 +1,4 @@
-﻿"dwc:dataGeneralizations","Response.Status","Response.Result","Response.Comment","Explanation"
+:﻿"dwc:dataGeneralizations","Response.Status","Response.Result","Response.Comment","Explanation"
 placed on quarter degree grid,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""placed on quarter degree grid"" is NOTEMPTY",
 blah,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""blah"" does is NOTEMPTY",
 anyOldTerm,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""anyOldTerm"" is NOTEMPTY",
@@ -6,4 +6,4 @@ anyOldTerm,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:data
 "  ",RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY",Filed includes just white space
 ,RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY",
 [non-printing characters],RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY",
-"dwc:dataGeneralization",RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""..."" is NOTEMPTY",
+"dwc:dataGeneralization",RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""..dwc:dataGeneralization"" is NOTEMPTY",
