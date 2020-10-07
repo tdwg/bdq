@@ -5,5 +5,5 @@
 "…","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""..."" is NOTEMPTY]",
 "  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY]","field just includes white space"
 ,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY or Missing]",
-"[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY]",
+"[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY]","TEMPORARY place holder - need to add examples of some non-printing characters"
 "bdq:annotation","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""..."" is NOTEMPTY]",
