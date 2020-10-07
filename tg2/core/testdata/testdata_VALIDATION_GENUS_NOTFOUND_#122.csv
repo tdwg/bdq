@@ -1,4 +1,4 @@
-﻿"dwc:genus","bdq:sourceAuthority","bdq:sourceAuthority response","Response:Status","Response:Result","Response:Comment","Explanation"
+﻿"dwc:genus","bdq:sourceAuthority","bdq:sourceAuthority response","Response.Status","Response.Result","Response.Comment","Explanation"
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus is EMPTY or missing"
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus has just blank spaces"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]",
@@ -10,3 +10,4 @@
 "skink",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]",
 "Lizard","Parameterized Source Authority",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the Parameterized Source Authority]",
 "dwc:genus",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
+"Egernia",,,"EXTERNAL_PREREQUITES_NOT_MET",,"[any human readable explanation, e.g. the bdq:sourceAuthority was unavaialble or unreachable]",
