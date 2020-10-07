@@ -1,8 +1,8 @@
-﻿dwc:basisOfRecord,Response.Status,Response.Result,Response.Comment
-PreservedSpecimen,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:basisOfRecord = ""PreservedSpecimen"" means the field is NOT_EMPTY"
-PreservedSpec,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:basisOfRecord = ""PreservedSpec"" means the field is NOT_EMPTY"
-anyOldTerm,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:basisOfRecord = ""anyOldTerm"" means the field is NOT_EMPTY"
-"…",RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:basisOfRecord = ""..."" means the field is NOT_EMPTY"
-[whitespace],RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY"
-[non-printing characters],RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY"
-[no dwc:basisOfRecord specified],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dwc:basisOfRecord term is not available to validate"
+﻿"dwc:basisOfRecord","Response.Status","Response.Result","Response.Comment","Explanation"
+"PreservedSpecimen","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""PreservedSpecimen"" means the field is NOT_EMPTY]",
+"PreservedSpec","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""PreservedSpec"" means the field is NOT_EMPTY]",
+"anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""anyOldTerm"" means the field is NOT_EMPTY]",
+"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""..."" means the field is NOT_EMPTY]",
+"  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY]""Field just contains white space"
+"[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY]",
+"[no dwc:basisOfRecord specified]","INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:basisOfRecord term is not available to validate]""no dwc:basisOfRecord specified"
