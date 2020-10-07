@@ -3,6 +3,6 @@
 "blah","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""blah"" does is NOTEMPTY",
 "anyOldTerm","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""anyOldTerm"" is NOTEMPTY",
 "…","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""..."" is NOTEMPTY",
-"  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY", "field just includes white space"
+"  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY","field just includes white space"
 ,,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY",
 "[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. bdq:annotation is EMPTY",
