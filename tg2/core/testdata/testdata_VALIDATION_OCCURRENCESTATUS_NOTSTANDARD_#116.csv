@@ -5,5 +5,5 @@
 "…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""..."" does not conform to a term in bdq:sourceAuthority]",
 ,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY or missing]","Field is empty or moissing"
 "  ",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","Filed composed of just white space"
-"[non-printing characters]",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","TEMPORARY Placeholder - need to add example of non-p[rinting characters"
+"[non-printing characters]",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","TEMPORARY Placeholder - need to add examples of non-printing characters"
 "present",,"EXTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. bdq:sourceAuthority not available or unreachable]",
