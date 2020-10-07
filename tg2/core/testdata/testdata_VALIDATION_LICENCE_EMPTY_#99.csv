@@ -1,4 +1,4 @@
-﻿"dcterms:license","Response.Status","Response.Result","Response.Comment",Explanation"
+﻿"dcterms:license","Response.Status","Response.Result","Response.Comment","Explanation"
 "CC0 1.0","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""CC 0 1.0"" means the field is NOT_EMPTY]",
 "corrosive commons","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""corrosive commons"" means the field is NOT_EMPTY]",
 "anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""anyOldTerm"" means the field is NOT_EMPTY]",
