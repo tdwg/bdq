@@ -1,4 +1,4 @@
-﻿"dc:type","Response:Status","Response:Result","Response:Comment","Explanation"
+﻿"dc:type","Response.Status","Response.Result","Response.Comment","Explanation"
 "StillImage","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""StillImage"" means the field is NOT_EMPTY]",
 "StillerImage","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""StillerImage"" means the field is NOT_EMPTY]",
 "anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""anyOldTerm"" means the field is NOT_EMPTY]",
