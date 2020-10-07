@@ -4,5 +4,5 @@
 "anyOldTerm","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:establishmentMeans = ""anyOldTerm"" is NOTEMPTY",
 "…","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:establishmentMeans = ""..."" is NOTEMPTY",
 "  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:establishmentMeans is EMPTY","Field just contains whitespace"
-,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:establishmentMeans is EMPTY or Missing",
+,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:establishmentMeans is EMPTY or Missing]",
 "[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:establishmentMeans is EMPTY","Field contains non-printing characters"
