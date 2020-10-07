@@ -5,4 +5,4 @@
 "…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""..."" means the field is NOT_EMPTY]",
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY]","Field just contains white space"
 "[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY]",
-,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY or Missing]","
+,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY or Missing]","
