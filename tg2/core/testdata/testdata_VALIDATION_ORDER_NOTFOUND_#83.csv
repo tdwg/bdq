@@ -6,4 +6,4 @@
 "Nymphalidae",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Order in the bdq:sourceAuthority]","Nymphalidae is a family, not an order"
 "butterflies",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Order in the bdq:sourceAuthority]",
 "dwc:order",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
-Lepidoptera,,,"EXTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. the bdq:sourceAuthority was not available or unreachable]",
+"Lepidoptera",,,"EXTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. the bdq:sourceAuthority was not available or unreachable]",
