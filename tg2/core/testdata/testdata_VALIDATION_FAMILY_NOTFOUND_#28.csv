@@ -1,4 +1,4 @@
-﻿"dwc:family","bdq:sourceAuthority","bdq:sourceAuthority response","Response:Status","Response:Result","Response:Comment","Explanation"
+﻿"dwc:family","bdq:sourceAuthority","bdq:sourceAuthority response","Response.Status","Response.Result","Response.Comment","Explanation"
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Family is EMPTY or missing"
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Blank spaces present"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
@@ -9,3 +9,4 @@
 "kangaroos",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the Parameterized Source Authority]",
 "Macropods","Parameterized Source Authority",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the Parameterized Source Authority]",
 "dwc:family",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
+"Agaricaceae",,,"EXTERNAL_PREREQUITES_NOT_MET",,"[any human readable explanation, e.g. the bdq:sourceAuthority was unavailable or unreachable]",
