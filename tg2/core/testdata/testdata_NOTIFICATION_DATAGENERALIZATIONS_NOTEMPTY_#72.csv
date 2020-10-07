@@ -4,6 +4,6 @@ blah,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGenera
 anyOldTerm,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""anyOldTerm"" is NOTEMPTY]",
 …,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""..."" is NOTEMPTY]",
 "  ",RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]",Filed includes just white space
-,RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]",
+,RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY or Missing]",
 [non-printing characters],RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]",
 "dwc:dataGeneralizations",RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""dwc:dataGeneralizations"" is NOTEMPTY]",
