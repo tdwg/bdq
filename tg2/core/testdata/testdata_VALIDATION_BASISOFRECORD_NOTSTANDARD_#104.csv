@@ -1,4 +1,4 @@
-﻿"dwc:basisOfRecord","bdq:sourceAuthority.response""Response.Status","Response.Result","Response.Comment","Explanation"
+﻿"dwc:basisOfRecord","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
 "present","present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""present"" matches term in dwc vocabulary]","In this case bdq:sourceAuthority= dwc vocabulary"
 "Presence",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""Presence"" does not match terms in dwc vocabulary]","In this case bdq:sourceAuthority= dwc vocabulary"
 "anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""anyOldTerm"" does not match terms in dwc vocabulary]","In this case bdq:sourceAuthority= dwc vocabulary"
