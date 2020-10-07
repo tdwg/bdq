@@ -1,0 +1,8 @@
+﻿dwc:occurrenceStatus,Response.Status,Response.Result,Response.Comment
+present,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceStatus = ""present"" conforms to a term in bdq:sourceAuthority"
+presence,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceStatus = ""presence"" does not conform to a term in bdq:sourceAuthority"
+anyOldTerm,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceStatus = ""anyOldTerm"" does not conform to  a term in bdq:sourceAuthority"
+…,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:occurrenceStatus = ""..."" does not conform to a term in bdq:sourceAuthority"
+[bdq:sourceAuthority not available],EXTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. bdq:sourceAuthority not available"
+[whitespace],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY"
+[non-printing characters],INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY"
