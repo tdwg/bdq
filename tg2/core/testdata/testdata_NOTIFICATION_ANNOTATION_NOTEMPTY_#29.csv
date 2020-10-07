@@ -1,5 +1,5 @@
 "bdq:annotation","Response.Status","Response.Result","Response.Comment"
-"dwc:locality does not match dwc:decimalLatitude","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = dwc:locality does not match dwc:decimalLatitude is NOTEMPTY"
+"dwc:locality does not match dwc:decimalLatitude","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = "dwc:locality does not match dwc:decimalLatitude" is NOTEMPTY"
 "blah","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""blah"" does is NOTEMPTY"
 "anyOldTerm","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""anyOldTerm"" is NOTEMPTY"
 "…","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. bdq:annotation = ""..."" is NOTEMPTY"
