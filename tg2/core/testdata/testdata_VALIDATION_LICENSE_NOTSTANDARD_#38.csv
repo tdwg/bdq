@@ -4,6 +4,6 @@
 "anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""anyOldTerm"" does not match terms in the bdq:sourceAuthority]",
 "…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license = ""..."" does not match terms in the bdq:sourceAuthority]",
 ,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dcterms:license is EMPTY]",
-"  ","INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dcterms:license is EMPTY]","Field comprised of just white space"
+"  ",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dcterms:license is EMPTY]","Field comprised of just white space"
 "[non-printing characters]","INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dcterms:license is EMPTY]","TEMPORARY Placeholder - need to add examples of non-printing characters"
 "CC BY",,EXTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. bdq:sourceAuthority was not available or was unreachable]",
