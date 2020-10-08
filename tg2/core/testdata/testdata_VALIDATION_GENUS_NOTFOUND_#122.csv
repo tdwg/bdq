@@ -2,6 +2,7 @@
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus is EMPTY or missing"
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus has just blank spaces"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]",
+"?",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]",
 "Egernia",,"Egernia","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Genus in the bdq:sourceAuthority]",
 "Egernia","Parameterized Source Authority","Egernia","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent at the rank of Genus in the Parameterized Source Authority]",
 "Egernea",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]","This may be fixed using fuzzy matching at the AMENDMENT stage"
