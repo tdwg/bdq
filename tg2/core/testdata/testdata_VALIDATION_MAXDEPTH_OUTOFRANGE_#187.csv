@@ -8,6 +8,7 @@
 11000,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 11000 is in the default range 0 to 11000 inclusive]"
 11000.1,,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. 11000.1 is outside the default range 0 to 11000 inclusive]"
 "thirty",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. provided value must be a number to be validated]"
+"?",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. provided value must be a number to be validated]"
 "maximumDepthInMeters",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. provided value must be a number to be validated]"
 "10 fathoms",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. provided value must be a number to be validated]"
 "10 meters",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. provided value must be a number to be validated]"
