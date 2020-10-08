@@ -1,6 +1,7 @@
-﻿dwc:taxonID,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:parentNameUsageID,dwc:originalNameUsageID,dwc:taxonCenceptID,dwc:scientificName,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dec:family,dwc:genus,dwc:subgenus,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:vernacular name,response:Status,response:Result,response:Comment,Explanation
-,,,,,,,,,,,,,,,,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. no terms exist that identify that an entity exists]",
-123,,,,,,,,,,,,,,,,,,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-,XVD456,,,,,,,,,,,,,,,,,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-,,,,,,Fred,,,,,,,,,,,,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
+﻿"dwc:taxonID","dwc:scientificNameID","dwc:acceptedNameUsageID","dwc:parentNameUsageID","dwc:originalNameUsageID","dwc:taxonCenceptID","dwc:scientificName","dwc:higherClassification","dwc:kingdom","dwc:phylum","dwc:class","dwc:order","dwc:family","dwc:genus","dwc:subgenus","dwc:specificEpithet","dwc:infraspecificEpithet","dwc:vernacularName","response.Status","response.Result","response.Comment","Explanation"
+,,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. no terms exist that identify that an entity exists]","All fields are empty or missing"
+"  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. no terms exist that identify that an entity exists]","All fieldds consist of just white space"
+"123",,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
+,"XVD456",,,,,,,,,,,,,,,,,"UN_HAS_RESULT"COMPLIANT""[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
+,,,,,,"Fred",,,,,,,,,,"RN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
 dwc:taxonID,,,,,,,,,,,,,,,,,,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
