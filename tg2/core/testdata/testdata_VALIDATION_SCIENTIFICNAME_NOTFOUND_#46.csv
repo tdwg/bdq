@@ -1,14 +1,16 @@
-﻿dwc:scientificName,bdq:sourceAuthority,bdq:sourceAuthority response,Response:Status,Response:Result,Response:Comment,Explanation,
-,,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. a value must be provided to be validated]",,
-Null,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",,
-Wallabia bicolor,,"Wallabia bicolor (Desmarest, 1804)",RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",,
-"Wallabia bicolor (Desmarest, 1804)",,"Wallabia bicolor (Desmarest, 1804)",RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",,
-Wallabia,,"Wallabia Trouessart, 1905",RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",,
-Walabia,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",This may be corrected at the AMENDMENT Stage using fuzzy matching?,
-"bicolor (Desmarest, 1804)",,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",,
-Macropodidae,,Macropodidae,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",,
-wallaby,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",,
-Hakea decurrens ssp. physocarpa,,Hakea decurrens subsp. physocarpa W.R.Barker,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",,
-Geranium sp. Pale pink flowers (M.Gray 5847) Vic. Herbarium,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",,
-Geranium sp. Pale pink flowers (M.Gray 5847) Vic. Herbarium,Parameterized Source Authority,Geranium sp. Pale pink flowers (M.Gray 5847) Vic. Herbarium,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the Parameterized Source Authority]",The Australian Plant Census includes undescribed taxa using a formula so that they can be added to legislation etc. ,
-dwc:scientificName,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",,
+﻿"dwc:scientificName","bdq:sourceAuthority","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
+,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Field is empty or missing"
+"  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Field is composed of just white space"
+"Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
+"Wallabia bicolor",,"Wallabia bicolor (Desmarest, 1804)","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
+"Wallabia bicolor (Desmarest, 1804)",,"Wallabia bicolor (Desmarest, 1804)","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
+"Wallabia",,"Wallabia Trouessart, 1905","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
+"Walabia",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]","This may be corrected at the AMENDMENT Stage using fuzzy matching?"
+"bicolor (Desmarest, 1804)",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",
+"Macropodidae",,"Macropodidae","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
+"wallaby",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",
+"Hakea decurrens ssp. physocarpa",,"Hakea decurrens subsp. physocarpa W.R.Barker","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
+"Geranium sp. Pale pink flowers (M.Gray 5847) Vic. Herbarium",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent in the bdq:sourceAuthority]",
+"Geranium sp. Pale pink flowers (M.Gray 5847) Vic. Herbarium","Parameterized Source Authority","Geranium sp. Pale pink flowers (M.Gray 5847) Vic. Herbarium","RUN_HAS_RESULT","NOT_COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent in the Parameterized Source Authority]","The Australian Plant Census includes undescribed taxa using a formula so that they can be added to legislation etc.
+"dwc:scientificName",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value not found in the bdq:sourceAuthority]",
+"Wallabia bicolor",,,"EXTERNAL_PREREQUISITES_NOT_MET",,[any human readable explanation, e.g. the bdq:sourceAuthority was not Available or was unreachable]",
