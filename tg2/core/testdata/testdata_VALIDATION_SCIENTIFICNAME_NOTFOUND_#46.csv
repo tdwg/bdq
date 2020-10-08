@@ -2,6 +2,7 @@
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Field is empty or missing"
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Field is composed of just white space"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
+"?",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
 "Wallabia bicolor",,"Wallabia bicolor (Desmarest, 1804)","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
 "Wallabia bicolor (Desmarest, 1804)",,"Wallabia bicolor (Desmarest, 1804)","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
 "Wallabia",,"Wallabia Trouessart, 1905","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
