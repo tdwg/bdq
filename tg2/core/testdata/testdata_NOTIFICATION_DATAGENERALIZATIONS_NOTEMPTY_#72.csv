@@ -1,9 +1,9 @@
 ﻿"dwc:dataGeneralizations","Response.Status","Response.Result","Response.Comment","Explanation"
-placed on quarter degree grid,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""placed on quarter degree grid"" is NOTEMPTY]",
-blah,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""blah"" does is NOTEMPTY]",
-anyOldTerm,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""anyOldTerm"" is NOTEMPTY]",
-…,RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""..."" is NOTEMPTY]",
-"  ",RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]",Filed includes just white space
-,RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY or Missing]",
-[non-printing characters],RUN_HAS_RESULT,NOT_NOTIFIED,"[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]","TEMPORARY place holder - need to add examples of some non-printing characters"
-"dwc:dataGeneralizations",RUN_HAS_RESULT,NOTIFY,"[any human readable explanation, e.g. dwc:dataGeneralizations = ""dwc:dataGeneralizations"" is NOTEMPTY]",
+"placed on quarter degree grid","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
+"blah","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
+"anyOldTerm","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
+"…","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
+"  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]","Field includes just white space"
+,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY or Missing]","Field is empty or missing"
+"[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]","TEMPORARY place holder - need to add examples of some non-printing characters"
+"dwc:dataGeneralizations","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations = is NOTEMPTY]",
