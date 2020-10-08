@@ -1,8 +1,9 @@
 ﻿"dwc:occurrenceStatus","Response.Status","Response.Result","Response.Comment","Explanation"
-"present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""present"" means the field is NOT_EMPTY]",
-"abs","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""abs"" means the field is NOT_EMPTY]",
-"anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""anyOldTerm"" means the field is NOT_EMPTY]",
-"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""..."" means the field is NOT_EMPTY]",
+"present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is NOT_EMPTY]",
+"abs","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is NOT_EMPTY]",
+"anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is NOT_EMPTY]",
+"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is NOT_EMPTY]",
+"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is NOT_EMPTY]",
 ,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY or missing]","Field is empty or missing"
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","Field composed of just white space"
 "[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","TEMPORARY placeholder - need to add example of non-printing characters"
