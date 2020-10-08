@@ -2,6 +2,6 @@
 ,,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. no terms exist that identify that an entity exists]","All fields are empty or missing"
 "  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. no terms exist that identify that an entity exists]","All fieldds consist of just white space"
 "123",,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-,"XVD456",,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
+,"XVD456",,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
 ,,,,,,"Fred",,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
 "dwc:taxonID",,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
