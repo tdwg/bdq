@@ -7,6 +7,7 @@
 0,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. year contains some value.]"
 "0","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. year contains some value.]"
 " 1900 ","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. year contains some value.]"
+"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. year contains some value.]"
 "","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty]"
 ,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty]"
 " ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of whitespace]"
