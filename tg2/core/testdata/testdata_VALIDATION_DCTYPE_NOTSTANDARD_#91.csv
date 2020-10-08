@@ -1,8 +1,8 @@
 ﻿"dc:type","bdq:sourceAuthority.Response","Response.Status","Response.Result","Response.Comment","Explanation"
-"Event","Event","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""Event"" matches term in DCMI Vocabulary]",
-"StillerImage",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type = ""StillerImage"" does not match terms in DCMI Vocabulary]",
-"anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type = ""anyOldTerm"" does not match terms in DCMI Vocabulary]",
-"…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type = ""..."" does not match terms in DCMI Vocabulary]",
+"Event","Event","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type matches a term in DCMI Vocabulary]",
+"StillerImage",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type does not match terms in DCMI Vocabulary]",
+"anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type does not match terms in DCMI Vocabulary]",
+"…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type does not match terms in DCMI Vocabulary]",
 "?",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type does not match terms in DCMI Vocabulary]",
 ,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dc:type is EMPTY]",
 "  ",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dc:type is EMPTY]","Field composed of just white space"
