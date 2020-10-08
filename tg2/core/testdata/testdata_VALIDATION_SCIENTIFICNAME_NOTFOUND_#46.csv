@@ -1,7 +1,7 @@
 ﻿"dwc:scientificName","bdq:sourceAuthority","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Field is empty or missing"
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Field is composed of just white space"
-"[non printing-character]",,"[any human readable explanation, e.g. a value must be provided to be validated]","TEMPORARY placeholder - need to add examples of non-printing characters"
+"[non printing-character]",,,"[any human readable explanation, e.g. a value must be provided to be validated]","TEMPORARY placeholder - need to add examples of non-printing characters"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
 "?",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
 "Wallabia bicolor",,"Wallabia bicolor (Desmarest, 1804)","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. the value has an equivalent in the bdq:sourceAuthority]",
