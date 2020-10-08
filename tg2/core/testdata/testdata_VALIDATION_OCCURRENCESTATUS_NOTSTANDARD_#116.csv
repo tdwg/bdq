@@ -1,8 +1,9 @@
 ﻿"dwc:occurrenceStatus","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
-"present","present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""present"" conforms to a term in bdq:sourceAuthority]",
-"presence",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""presence"" does not conform to a term in bdq:sourceAuthority]",
-"anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""anyOldTerm"" does not conform to  a term in bdq:sourceAuthority]",
-"…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus = ""..."" does not conform to a term in bdq:sourceAuthority]",
+"present","present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus matches a term in the bdq:sourceAuthority]",
+"presence",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
+"anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
+"…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
+"?",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
 ,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY or missing]","Field is empty or moissing"
 "  ",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","Filed composed of just white space"
 "[non-printing characters]",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dwc:occurrenceStatus is EMPTY]","TEMPORARY Placeholder - need to add examples of non-printing characters"
