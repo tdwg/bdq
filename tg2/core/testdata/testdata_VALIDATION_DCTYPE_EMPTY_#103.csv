@@ -3,6 +3,8 @@
 "StillerImage","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""StillerImage"" means the field is NOT_EMPTY]",
 "anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""anyOldTerm"" means the field is NOT_EMPTY]",
 "…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""..."" means the field is NOT_EMPTY]",
+"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""..."" means the field is NOT_EMPTY]",
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type is EMPTY]","Field just composed of white space"
 ,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dc:type is EMPTY]",
 [non-printing characters],RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dc:type is EMPTY]","TEMPORARY placeholder - need to add examples of non-printing characters"
+"dc:type","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dc:type = ""..."" means the field is NOT_EMPTY]",
