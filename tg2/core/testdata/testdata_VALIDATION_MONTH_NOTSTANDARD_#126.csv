@@ -28,6 +28,7 @@
 "I","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 12 inclusive.]"
 "II","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 12 inclusive.]"
 "IV","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 12 inclusive.]"
+"?","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 12 inclusive.]"
 "2","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 2 is a valid value for dwc:month.]"
 3,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 3 is a valid value for dwc:month.]"
 "4 ","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 4 is a valid value for dwc:month.]"
