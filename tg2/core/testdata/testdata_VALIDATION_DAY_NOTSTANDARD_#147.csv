@@ -22,6 +22,7 @@
 "4294967295","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
 "4294967296","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
 "day","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
+"?","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 31 inclusive.]"
 "2","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 2 is a valid value for dwc:day.]"
 3,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 3 is a valid value for dwc:day.]"
 "4 ","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 4 is a valid value for dwc:day.]"
