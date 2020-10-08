@@ -1,8 +1,10 @@
 ﻿"dwc:basisOfRecord","Response.Status","Response.Result","Response.Comment","Explanation"
-"PreservedSpecimen","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""PreservedSpecimen"" means the field is NOT_EMPTY]",
-"PreservedSpec","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""PreservedSpec"" means the field is NOT_EMPTY]",
-"anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""anyOldTerm"" means the field is NOT_EMPTY]",
-"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord = ""..."" means the field is NOT_EMPTY]",
+"PreservedSpecimen","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is NOTEMPTY]",
+"PreservedSpec","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is NOTEMPTY]",
+"anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is NOTEMPTY]",
+"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is NOTEMPTY]",
+"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is NOTEMPTY]",
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY]","Field just contains white space"
 "[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY]","TEMPORARY place holder - need to add examples of some non-printing characters"
-,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY or Missing]",
+,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is EMPTY or Missing]","Field is empty or missing"
+"dwc:basisOfRecord","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:basisOfRecord is NOTEMPTY]",
