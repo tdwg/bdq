@@ -3,6 +3,7 @@
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is EMPTY]","Field is composed entirely of white space"
 "null","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
 "---","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
 "Hakea decurrens ssp. physocarpa","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
 "Hakea","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
 "Hakea decurrens","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
