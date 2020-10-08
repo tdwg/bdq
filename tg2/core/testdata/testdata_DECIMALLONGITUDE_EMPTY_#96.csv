@@ -1,0 +1,14 @@
+﻿"dwc:decimalLongitude","Response.Status","Response.Result","Response.Comment","Explanation"
+,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:taxonRANK is EMPTY or missing]",
+"  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:taxonRANK is EMPTY]","Field consists of just white space"
+"[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:taxonRANK is EMPTY]","TEMPORARY placeholder - we need to add some examples of non-printing characters"
+"null","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"90","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"365","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"0","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"-15","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"15.222234","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"18°N","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"12345","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
