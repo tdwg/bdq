@@ -1,7 +1,8 @@
 ﻿"dwc:kingdom","bdq:sourceAuthority","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
-,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus is EMPTY or missing"
-"Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Genus in the bdq:sourceAuthority]",
-"  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Genus is composed of just white space"
+,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Kingdom is EMPTY or missing"
+"Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Kingdom in the bdq:sourceAuthority]",
+"?",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Kingdom in the bdq:sourceAuthority]",
+"  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Kingdom is composed of just white space"
 Animalia,,Animalia,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Kingdom in the bdq:sourceAuthority]",
 Metazoa,Parameterized  Source Authority,Metazoa,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. the value has an equivalent at the rank of Kingdom in the Parameterized Source Authority]",
 Metazoa,,,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. the value does not have an equivalent at the rank of Kingdom in the bdq:sourceAuthority]",
