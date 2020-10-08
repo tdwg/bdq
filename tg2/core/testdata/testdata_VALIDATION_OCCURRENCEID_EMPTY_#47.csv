@@ -4,6 +4,6 @@
 "anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID = ""anyOldTerm"" means the field is NOT_EMPTY]",
 "…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID = ""..."" means the field is NOT_EMPTY]",
 "?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID = ""..."" means the field is NOT_EMPTY]",
-,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID is EMPTY]","Field is EMPTY or missing"
+,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID is EMPTY or missing]","Field is EMPTY or missing"
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID is EMPTY]","Field composed of just white space"
 "[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceID is EMPTY]","TEMPORARY placeholder - need to add examples of noin-preinting characters"
