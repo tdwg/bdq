@@ -1,8 +1,10 @@
-﻿dwc:scientificName,Response:Status,Response:Result,Response:Comment,Explanation
-,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is EMPTY]",
-null ,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
-Hakea decurrens ssp. physocarpa,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
-Hakea,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
-Hakea decurrens,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
-Hakea decurrens subsp. physocarpa W.R.Barker,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
-dwc:scientificName,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",This is an odd one but is COMPLIANT because the field is not EMPTY.
+﻿"dwc:scientificName","Response.Status","Response.Result","Response.Comment","Explanation"
+,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is EMPTY]","Field is empty or missing"
+"  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is EMPTY]","Field is composed entirely of white space"
+"null","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"---","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"Hakea decurrens ssp. physocarpa","RUN_HAS_RESULT,COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"Hakea","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"Hakea decurrens","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"Hakea decurrens subsp. physocarpa W.R.Barker","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
+"dwc:scientificName","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:scientificName is not EMPTY]",
