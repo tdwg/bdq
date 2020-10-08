@@ -3,6 +3,7 @@
 "blah","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
 "anyOldTerm","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
 "…","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
+"?","RUN_HAS_RESULT","NOTIFY","[any human readable explanation, e.g. dwc:dataGeneralizations is NOTEMPTY]",
 "  ","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]","Field includes just white space"
 ,"RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY or Missing]","Field is empty or missing"
 "[non-printing characters]","RUN_HAS_RESULT","NOT_NOTIFIED","[any human readable explanation, e.g. dwc:dataGeneralizations is EMPTY]","TEMPORARY place holder - need to add examples of some non-printing characters"
