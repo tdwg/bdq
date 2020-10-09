@@ -1,0 +1,14 @@
+﻿dwc:dgeodeticDatum,Response.Status,Response.Result,Response.Comment,Explanation
+,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRANK is EMPTY or missing]",
+  ,RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRANK is EMPTY]",Field consists of just white space
+[non-printing characters],RUN_HAS_RESULT,NOT_COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRANK is EMPTY]",TEMPORARY placeholder - we need to add some examples of non-printing characters
+null ,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+WGS84,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+epsg6326,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+epsg:6326,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+epsg:4326,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+AGD66,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+Cocos Island 1965,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+GDA2020,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+unknown,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
+?,RUN_HAS_RESULT,COMPLIANT,"[any human readable explanation, e.g. dwc:taxonRank is not EMPTY]",
