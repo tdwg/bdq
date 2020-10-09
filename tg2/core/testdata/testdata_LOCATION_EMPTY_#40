@@ -1,8 +1,1 @@
 ﻿"dwc:locationID","dwc:higherGeographyID","dwc:higherGeography","dwc:continent","dwc:country","dwc:countryCode","dwc:stateProvince","dwc:county","dwc:municipality","dwc:waterBody","dwc:island","dwc:islandGroup","dwc:locality","dwc:verbatimLocality","dwc:decimalLatitude","dwc:decimalLongitude","dwc:verbatimCoordinates","dwc:verbatimLatitude","dwc:verbatimLongitude","dwc:footprintWKT","response.Status","response.Result","response.Comment","Explanation"
-,,,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. no terms exist that identify that an entity exists]","All fields are empty or missing"
-"  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. no terms exist that identify that an entity exists]","All fields consist of just white space"
-"123",,,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-,,"?",,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-,"XVD456",,,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-,,,,,,"Fred",,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
-"dwc:locationID",,,,,,,,,,,,,,,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. at least enough terms exist that identify that an entity exists]",
