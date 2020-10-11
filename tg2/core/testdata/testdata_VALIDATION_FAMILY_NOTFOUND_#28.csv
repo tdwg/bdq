@@ -1,7 +1,7 @@
 ﻿"dwc:family","bdq:sourceAuthority","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
 "Agaricaceae",,,"EXTERNAL_PREREQUITES_NOT_MET",,"[any human readable explanation, e.g. the bdq:sourceAuthority was unavailable or unreachable]",
 ,,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Family is EMPTY or missing"
-"[non-printing characters]",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Placeholder for non-printing characters"
+"[non-printing characters]",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","TEMPORARY placeholder to include examples of some non-printing characters"
 "  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated]","Blank spaces present"
 "Null",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
 "?",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. the value does not have an equivalent at the rank of Family in the bdq:sourceAuthority]",
