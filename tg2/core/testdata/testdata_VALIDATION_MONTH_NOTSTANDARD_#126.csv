@@ -1,6 +1,7 @@
 "dwc:month","Response.Status","Response.Result","Response.Comment"
 "","INTERNAL_PREREQUISITES_NOT_MET","","[any human readable explanation, e.g. provided value for dwc:month is empty, unable to validate.]"
 " ","INTERNAL_PREREQUISITES_NOT_MET","","[any human readable explanation, e.g. provided value for dwc:month is empty, unable to validate.]"
+"[non-printing characters]","INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated. TEMPORARY placeholder to include examples of some non-printing characters]"
 "1","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 1 is a valid value for dwc:month.]"
 " 1","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 1 is a valid value for dwc:month.]"
 "0","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. provided value is not an integer in the range 1 to 12 inclusive.]"
