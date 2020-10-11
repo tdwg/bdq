@@ -21,6 +21,7 @@
 "-100",-1000,1000,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. -100 is within the provided parameter range -1000 to 1000 inclusive, but smaller than 0 and depth values may never be smaller than 0.]"
 "12000",-1000,15000,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 12000 is within the provided parameter range -1000 to 15000 inclusive]"
 "[no depth specified]",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. provided value must be a number to be validated]"
+"[non-printing characters]",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. a value must be provided to be validated. TEMPORARY placeholder to include examples of some non-printing characters]"
 115.2,,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. 115.2 is in the default range 0 to 11000]"
 "1828.8   ",,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. provided value is in range 0 to 11000 (Note: leading and trailing spaces must be trimmed before test)]"
 "  1828.8 ",,,"RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. provided value is in range 0 to 11000 (Note: leading and trailing spaces must be trimmed before test)]"
