@@ -12,4 +12,4 @@
 ,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty]"
 " ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of whitespace]"
 "  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists of only whitespace]"
-"	","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. year is empty, provided value consists only of whitespace]"
+"[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:year is empty. TEMPORARY placeholder - need to add examples of non-printing characters]"
