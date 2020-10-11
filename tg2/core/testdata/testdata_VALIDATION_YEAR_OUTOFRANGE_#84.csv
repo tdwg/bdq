@@ -49,3 +49,4 @@
 "[no date]",,,"INTERNAL_PREREQUISITES_NOT_MET","","[any human readable explanation, e.g. value provided for year is not interpretable as an integer]"
 "?",,,"INTERNAL_PREREQUISITES_NOT_MET","","[any human readable explanation, e.g. value provided for year is not interpretable as an integer]"
 "NULL",,,"INTERNAL_PREREQUISITES_NOT_MET","","[any human readable explanation, e.g. value provided for year is not interpretable as an integer]"
+"[non-printing characters]",,,"INTERNAL_PREREQUISITES_NOT_MET","","[any human readable explanation, e.g. value provided for dwc:year is not interpreatble as an integer. TEMPORARY placeholder - need to add examples of non-printing characters]"
