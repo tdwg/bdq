@@ -1,10 +1,10 @@
-﻿"dcterms:license","bdq:soureAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
-"CC BY","CC BY","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license matches a term in bdq:sourceAuthority]",
-"GPL",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match a term in the bdq:sourceAuthority]",
-"anyOldTerm",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match a term in the bdq:sourceAuthority]",
-"…",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match aterm in the bdq:sourceAuthority]",
-"?",,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match aterm in the bdq:sourceAuthority]",
-,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dcterms:license is EMPTY or missing]",
-"  ",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dcterms:license is EMPTY]","Field comprised of just white space"
+﻿"dcterms:license","bdq:sourceAuthority","bdq:soureAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
+"CC BY","https://creativecommons.org/","CC BY","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license matches a term in bdq:sourceAuthority]",
+"GPL",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match a term in the bdq:sourceAuthority]",
+"anyOldTerm",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match a term in the bdq:sourceAuthority]",
+"…",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match aterm in the bdq:sourceAuthority]",
+"?",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license does not match aterm in the bdq:sourceAuthority]",
+,,,INTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. dcterms:license is EMPTY or missing]",
+"  ",,,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dcterms:license is EMPTY]","Field comprised of just white space"
 "[non-printing characters]",,"INTERNAL_PREREQUISITES_NOT_MET",,"[any human readable explanation, e.g. dcterms:license is EMPTY]","TEMPORARY Placeholder - need to add examples of non-printing characters"
-"CC BY",,EXTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. bdq:sourceAuthority was not available or was unreachable]",
+"CC BY",,,EXTERNAL_PREREQUISITES_NOT_MET,,"[any human readable explanation, e.g. bdq:sourceAuthority was not available or was unreachable]",
