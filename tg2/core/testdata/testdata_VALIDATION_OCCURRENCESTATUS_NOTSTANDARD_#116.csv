@@ -1,5 +1,5 @@
 ﻿"dwc:occurrenceStatus","bdq:sourceAuthority","bdq:sourceAuthority.response","Response.Status","Response.Result","Response.Comment","Explanation"
-"present",,"present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus matches a term in the bdq:sourceAuthority]",
+"present","https://dwc.tdwg.org/terms/#occurrenceStatus","present","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus matches a term in the bdq:sourceAuthority]",
 "presence",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
 "anyOldTerm",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
 "…",,,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority]",
