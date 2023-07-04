@@ -3,5 +3,5 @@
 "Conformance","Conforms to a format, syntax, data type, range, or standard of the Information Element (q.v.).","2023-07-03"
 "Consistency","Agreement among related Information Elements (q.v.) that are present in the data. Note that missing Information Elements do not make a test Inconsistent.","2023-07-03"
 "Likeliness","The likelihood of Darwin Core Term(s) having true or expected values.","2023-07-03"
-"Reliability","Measure of how the data values agree with an identified source of truth. The degree to which data correctly describes the truth (object, event or any abstract or real "thing").","2023-07-03"
+"Reliability","Measure of how the data values agree with an identified source of truth. The degree to which data correctly describes the truth (object, event or any abstract or real 'thing').","2023-07-03"
 "Resolution","Refers to the data having sufficiently detailed information. Measure of the granularity of the data, or the smallest measurable increment.","2023-07-03"
