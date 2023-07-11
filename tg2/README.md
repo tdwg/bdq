@@ -14,7 +14,7 @@
 The group has been working for over a year to evaluate the tests that have been run by-
 <ul>
 <li>The Atlas of Living Australia (ALA)</<li>
-<li>The Gblobal Biodiversity Information Facility (GBIF)</li>
+<li>The Global Biodiversity Information Facility (GBIF)</li>
 <li>iDigBio</li>
 <li>Ocean Biogeographic Information Facility (OBIS)</li>
 <li>Centro de Referência em Informação Ambiental (CRIA)</li>
