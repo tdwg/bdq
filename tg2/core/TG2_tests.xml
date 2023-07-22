@@ -2488,7 +2488,7 @@
 <rdf:Description rdf:about="urn:uuid:ce576729-5221-44fb-886f-61143b48ada2">
 	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"/>
 	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLongitude"/>
-	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimatitude"/>
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLatitude"/>
 	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/geodeticDatum"/>
 	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/InformationElement"/>
 </rdf:Description>
