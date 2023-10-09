@@ -31,7 +31,7 @@ The standard will incorporate (placeholders in the above document) the following
 
 [Combined Framework and Biodiversity Data Quality vocabularies, development of definitions in github issue 152](https://github.com/tdwg/bdq/issues/152)
 
-[Draft export of Framework OWL to CSV, work in progress, definitions to be updated from Vocabularies issue 152](https://github.com/tdwg/bdq/blob/master/tg1/ffdq/frameworkconcepts.csv)
+[Draft export of Framework OWL to CSV, work in progress, definitions to be updated from Vocabularies issue 152](https://github.com/tdwg/bdq/blob/master/tg1/ffdq/frameworkconcepts.csv) and an [OWL representation of the framework](https://github.com/kurator-org/kurator-ffdq/blob/master/competencyquestions/rdf/ffdq.owl) developed in part by Robert A. Morris, definitions to be updated form Vocabularies issue #152
 
 ## Task Groups
 
