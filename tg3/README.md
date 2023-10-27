@@ -1,4 +1,4 @@
-## Welcome to the Data Quality Use Case Library Task Group
+## Closed: Data Quality Use Case Library Task Group
 
 ##NB This Task Group has now been wound up
 
