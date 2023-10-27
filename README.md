@@ -39,6 +39,6 @@ The standard will incorporate (placeholders in the above document) the following
 
 - ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
-- ### [Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
+- ### [CLOSED: Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
 
 - ### [Task Group 4 (Best Practices for Development of Vocabularies of Value)](https://github.com/tdwg/bdq/blob/master/tg4/README.md)
