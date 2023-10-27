@@ -1,11 +1,13 @@
 ## Welcome to the Data Quality Use Case Library Task Group
 
+##NB This Task Group has now been wound up
+
 ### Charter 
 -    [Task Group 3 - Biodiversity Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)-
 
 ### Outcomes
 
-We encourage you to get involved.  Please use the form below to add your Use Cases to the system
+Here is the form for User Stories - No longer in Use.
 -    [TG3 - Biodiversity Data Quality User Stories Form](https://docs.google.com/forms/d/e/1FAIpQLSedRprxR1-qZ9TSOe3tB_81aOfaINE2uBc3kQATKJlgrfwDRg/viewform)
 
 We have received and documented a number of use cases and these can be found in the spreadsheet below
