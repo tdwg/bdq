@@ -35,7 +35,7 @@ The standard will incorporate (placeholders in the above document) the following
 
 ## Task Groups
 
-- ### [Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
+- ### [CLOSED: Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
 
 - ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
