@@ -6,6 +6,9 @@
 ## Link to tests: 
 -    https://github.com/tdwg/bdq/projects/2
 
+## Link to vocabulary: 
+-    https://github.com/tdwg/bdq/issues/152
+
 ## Link to testdata:
 -    https://github.com/tdwg/bdq/tree/master/tg2/core/testdata
 

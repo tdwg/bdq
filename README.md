@@ -15,12 +15,30 @@ You can join the group's mailing list at http://lists.tdwg.org/mailman/listinfo/
 
 All Interest Group and Task Group documents are linked on the [**Interest Group's Wiki**.](https://github.com/tdwg/bdq/wiki)
 
+### Draft Standard Documents
+
+
+
+[Draft of Normative and Informative explanatory text for Standard](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document)
+
+The standard will incorporate (placeholders in the above document) the following:
+
+[Descriptions of the CORE texts, authoriative CSV file](https://raw.githubusercontent.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv), from which a human readable reference guide to the test descriptions will be generated (replacing the markdown tables in the github issues).
+
+[Data for validating implementations of the tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data.csv) and [Data including non-printing characters for validating tests that assess EMPTY](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data_nonprintingchars.csv)
+
+[Rationale management for CORE tests in comments on GitHub issues, one per test](https://github.com/tdwg/bdq/labels/CORE)
+
+[Combined Framework and Biodiversity Data Quality vocabularies, development of definitions in github issue 152](https://github.com/tdwg/bdq/issues/152)
+
+[Draft export of Framework OWL to CSV, work in progress, definitions to be updated from Vocabularies issue 152](https://github.com/tdwg/bdq/blob/master/tg1/ffdq/frameworkconcepts.csv) and an [OWL representation of the framework](https://github.com/kurator-org/kurator-ffdq/blob/master/competencyquestions/rdf/ffdq.owl) developed in part by Robert A. Morris, definitions to be updated form Vocabularies issue #152
+
 ## Task Groups
 
-- ### [Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
+- ### [CLOSED: Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
 
 - ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
 
-- ### [Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
+- ### [CLOSED: Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
 
 - ### [Task Group 4 (Best Practices for Development of Vocabularies of Value)](https://github.com/tdwg/bdq/blob/master/tg4/README.md)
