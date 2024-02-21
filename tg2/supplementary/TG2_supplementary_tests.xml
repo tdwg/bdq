@@ -1,0 +1,2577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdfbeans="http://viceversatech.com/rdfbeans/2.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Implementation">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.solutions.Implementation</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Mechanism">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.Mechanism</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Specification">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.Specification</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1f5f8530-6ea2-4b52-937d-1550aa55a692">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:43abded0-c3bf-44e7-8c1f-c4207608b1fa"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:43abded0-c3bf-44e7-8c1f-c4207608b1fa">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if the value of dwc:individualCount is interpretable an integer; otherwise NOT_COMPLIANT. </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_INDIVIDUALCOUNT_INTEGER</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Mechanism"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified Mechanism</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ActedUpon">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.ActedUpon</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.context.ContextualizedCriterion</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Criterion">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.Criterion</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ResourceType">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.ResourceType</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ValidationMethod">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.solutions.ValidationMethod</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="rt:SingleRecord">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ResourceType"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6dcdc9df-0f92-470f-8b74-e5226061fa8e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: integer</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8b0c1269-4782-47e4-8259-566af1445dd2">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/individualCount"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:93fa5348-66c9-46e9-a86b-ea2da7358866">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e395b068-b1c6-483a-9ed7-610528913ab9"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:43abded0-c3bf-44e7-8c1f-c4207608b1fa"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e395b068-b1c6-483a-9ed7-610528913ab9">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8b0c1269-4782-47e4-8259-566af1445dd2"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6dcdc9df-0f92-470f-8b74-e5226061fa8e"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is dwc:individualCount an Integer ?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is dwc:individualCount an Integer ? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e76c7ec7-c17b-4382-9977-e35f814fd323">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:fffdc42b-b15e-4450-9e6a-f4181a319106"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fffdc42b-b15e-4450-9e6a-f4181a319106">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:pathway is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_PATHWAY_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:00618e29-b207-47f6-93c9-203712e4b97a">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/pathway"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:054b664c-170f-4a54-bfe6-6df1952ea151">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:00618e29-b207-47f6-93c9-203712e4b97a"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d40bedcb-a4a6-4d38-ab69-21ce32da78e4"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:pathway?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:pathway? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:90bdb6a5-d5e3-4992-91b4-72baa0b433a4">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:054b664c-170f-4a54-bfe6-6df1952ea151"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:fffdc42b-b15e-4450-9e6a-f4181a319106"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d40bedcb-a4a6-4d38-ab69-21ce32da78e4">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0fa16c7e-eb9c-4add-9193-aca6087d6636">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:degreeOfEstablishment is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f0a07f4b-9ed5-4edc-9ffc-418feb3b1e88">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0fa16c7e-eb9c-4add-9193-aca6087d6636"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1a0af0de-e6ca-443b-b140-edc660d0aa03">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4adfa073-edc8-4f44-aaeb-cd42677b4824">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:eedea31e-e4d8-4080-a4c1-45771e92fce4"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:1a0af0de-e6ca-443b-b140-edc660d0aa03"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:degreeOfEstablishment?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:degreeOfEstablishment? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:eedea31e-e4d8-4080-a4c1-45771e92fce4">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/degreeOfEstablishment"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f7498b17-bfc0-4a20-a44a-f9f189cf0525">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4adfa073-edc8-4f44-aaeb-cd42677b4824"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0fa16c7e-eb9c-4add-9193-aca6087d6636"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:256e51b3-1e08-4349-bb7e-5186631c3f8e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:country, dwc:decimalLatitude, dwc:decimalLongitude are EMPTY; POTENTIAL_ISSUE if the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:country as represented in the bdq:sourceAuthority; otherwise NOT_ISSUE. bdq:spatialBufferInMeters default = "3000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]} {Country-Centroides [NO API CURRENTLY EXISTS - see under Notes, below]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISSUE_COORDINATES_CENTEROFCOUNTRY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:67355a20-f294-4960-9698-b2025b2e5c5f">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:256e51b3-1e08-4349-bb7e-5186631c3f8e"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Consulted">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.Consulted</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ContextualizedIssue">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.context.ContextualizedIssue</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Issue">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.Issue</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ProblemMethod">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.solutions.ProblemMethod</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:24447f81-78d0-45b5-b5d2-07f9d04a1842">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:dba86cde-1b32-4a30-9d8a-57ce954fe072"/>
+	<hasConsultedInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b62b9533-1561-4ca0-bdbc-d13ba1a98f4c"/>
+	<hasIssue xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bd99e405-50c6-4f68-8f5f-e6e89b6b9d60"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedIssue"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Are the supplied geographic coordinates within a defined buffer of the center of the country ?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Are the supplied geographic coordinates within a defined buffer of the center of the country ? Issue for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b62b9533-1561-4ca0-bdbc-d13ba1a98f4c">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/countryCode"/>
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/geodeticDatum"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Consulted"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b93543b2-2464-4015-9e19-0696040a7b8d">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:256e51b3-1e08-4349-bb7e-5186631c3f8e"/>
+	<issueInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:24447f81-78d0-45b5-b5d2-07f9d04a1842"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ProblemMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bd99e405-50c6-4f68-8f5f-e6e89b6b9d60">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Issue"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: centerofcountry</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dba86cde-1b32-4a30-9d8a-57ce954fe072">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/country"/>
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLatitude"/>
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLongitude"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8b7b4d5d-6cc9-4abc-b239-e208bfd0fc88">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b3471c65-b53e-453b-8282-abfa27bf1805"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b3471c65-b53e-453b-8282-abfa27bf1805">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; AMENDED the value of dwc:typeStatus if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [(https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_TYPESTATUS_STANDARDIZED</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.solutions.AmendmentMethod</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.context.ContextualizedEnhancement</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/bdq/ffdq/Enhancement">
+	<rdfbeans:bindingClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.datakurator.ffdq.model.Enhancement</rdfbeans:bindingClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:323f7f9c-606f-4377-ad9a-3d6a66aa6669">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Enhancement"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standardized</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4c7025a3-033d-461f-9c5c-dcf47bbc7ef1">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/typeStatus"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b868c305-9eb7-4237-b8e3-a2df94c43f75">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4c7025a3-033d-461f-9c5c-dcf47bbc7ef1"/>
+	<hasEnhancement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:323f7f9c-606f-4377-ad9a-3d6a66aa6669"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:typeStatus using bdq:sourceAuthority.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:typeStatus using bdq:sourceAuthority.Amedment for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e7ef70e3-dc78-4465-b29f-e784e341b00b">
+	<enhancementInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b868c305-9eb7-4237-b8e3-a2df94c43f75"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b3471c65-b53e-453b-8282-abfa27bf1805"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:07fed731-5c80-435e-80ea-cf31b858d88e">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:33c45ae1-e2db-462a-a59e-7169bb01c5d6"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:33c45ae1-e2db-462a-a59e-7169bb01c5d6">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is EMPTY; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core sex" {[https://dwc.tdwg.org/list/#dwc_sex]} {dwc:sex vocabulary API [NO CURRENT API EXISTS]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_SEX_STANDARDIZED</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0ffdd231-eb75-4e48-bc64-5e4a6955d571">
+	<enhancementInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:fe8a4f1d-b06d-483d-932d-816e315989b5"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:33c45ae1-e2db-462a-a59e-7169bb01c5d6"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3a086183-fd12-4200-a7c7-6c14f3400502">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Enhancement"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standardized</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f7ebbed1-e157-48f3-8082-6e495180b143">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/sex"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fe8a4f1d-b06d-483d-932d-816e315989b5">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:f7ebbed1-e157-48f3-8082-6e495180b143"/>
+	<hasEnhancement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3a086183-fd12-4200-a7c7-6c14f3400502"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:sex using bdq:sourceAuthority.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:sex using bdq:sourceAuthority.Amedment for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:883500dd-ca2d-4532-a3d6-572d40ed5edb">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:88d8598b-3318-483d-9475-a5acf9887404"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:88d8598b-3318-483d-9475-a5acf9887404">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is EMPTY; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Darwin Core sex" {[https://dwc.tdwg.org/list/#dwc_sex]} {dwc:sex vocabulary API [NO CURRENT API EXISTS]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_SEX_STANDARD</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4d35dc3d-a1e4-4af6-afd3-1f5344dee60a">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/sex"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:672885e4-9c93-4557-b750-c453c49fe988">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c6a1b6b4-2a8a-47e9-af5c-d62d7d4484be"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:88d8598b-3318-483d-9475-a5acf9887404"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9bf04988-1c58-442e-b48a-a5c9645dde3a">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standard</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c6a1b6b4-2a8a-47e9-af5c-d62d7d4484be">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4d35dc3d-a1e4-4af6-afd3-1f5344dee60a"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9bf04988-1c58-442e-b48a-a5c9645dde3a"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:sex occur in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:sex occur in bdq:sourceAuthority? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:10ef7660-3e08-4b74-95d3-66131275cf31">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:reproductiveCondition is EMPTY; AMENDED the value of dwc:reproductiveCondition if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core reproductionCondition" {[https://dwc.tdwg.org/list/#dwc_reproductiveCondition]} {dwc:reproductiveCondition vocabulary API [NO CURRENT API EXISTS]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5aca11fe-5185-41d8-9ec2-4da0944c336d">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:10ef7660-3e08-4b74-95d3-66131275cf31"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0ec97023-9bfc-4d3e-8e76-ff90ebb0effe">
+	<enhancementInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b156fcc6-08d5-47b8-bf5a-6f0b2c08803b"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:10ef7660-3e08-4b74-95d3-66131275cf31"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7f45c273-2b12-4537-8ae2-cae848f9d150">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/reproductiveCondition"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:87361a13-0cbf-49e1-96c8-c80e3a02838d">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Enhancement"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standardized</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b156fcc6-08d5-47b8-bf5a-6f0b2c08803b">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7f45c273-2b12-4537-8ae2-cae848f9d150"/>
+	<hasEnhancement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:87361a13-0cbf-49e1-96c8-c80e3a02838d"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.Amedment for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d5be6d6f-b20f-4f2e-87c3-346960bab00f">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:de576233-b2b4-4aea-8816-dd9293b424bc"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:de576233-b2b4-4aea-8816-dd9293b424bc">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:reproductiveCondition is EMPTY; COMPLIANT if the value of dwc:reproductiveCondition is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Darwin Core reproductionCondition" {[https://dwc.tdwg.org/list/#dwc_reproductiveCondition]} {dwc:reproductiveCondition vocabulary API [NO CURRENT API EXISTS]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_REPRODUCTIVECONDITION_STANDARD</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:046e1dd1-9cab-4b06-bfd6-a9acd3dd7430">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:215c0e06-8550-4e4b-8158-9cf16517e51d"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b1c4bd68-ba7d-4e42-b80d-ef86ec57eedd"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:reproductiveCondition occur in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:reproductiveCondition occur in bdq:sourceAuthority? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:057f5f5a-4c59-45f6-93da-d88fb050506d">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:046e1dd1-9cab-4b06-bfd6-a9acd3dd7430"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:de576233-b2b4-4aea-8816-dd9293b424bc"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:215c0e06-8550-4e4b-8158-9cf16517e51d">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/reproductiveCondition"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b1c4bd68-ba7d-4e42-b80d-ef86ec57eedd">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standard</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:preparations is EMPTY; AMENDED the value of dwc:preparations if at least one item in the list of preparations, comparing and amending item by item in the list, ignoring leading or trailing whitespace in each item,  can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core preparations {[https://dwc.tdwg.org/list/#dwc_preparations]} {dwc:preparations vocabulary API [NO CURRENT API EXISTS]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_PREPARATIONS_STANDARDIZED</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e498f0ab-d4a7-4afc-80a7-c034e3782012">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:162df171-20a6-4ea6-b3f9-4eaf54f2caa8">
+	<enhancementInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:73dbac83-2d16-4876-9977-ca01badb2769"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:73dbac83-2d16-4876-9977-ca01badb2769">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d1bb2f69-d2f8-4199-abc2-748782e47785"/>
+	<hasEnhancement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cc42c460-79cc-4187-a6ea-3478f8aafed5"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.Amedment for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cc42c460-79cc-4187-a6ea-3478f8aafed5">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Enhancement"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standardized</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d1bb2f69-d2f8-4199-abc2-748782e47785">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/preparations"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:718dfc3c-cb52-4fca-b8e2-0e722f375da7">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if dcterms:modified is EMPTY; AMENDED if the value of dcterms:modified was not a properly formatted ISO 8601-1 date/time but was unambiguous, and was altered to be a valid ISO 8601-1 date/time; otherwise NOT_AMENDED </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9d7c9fb0-18d8-423d-b3f7-555653f81c2b">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:718dfc3c-cb52-4fca-b8e2-0e722f375da7"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b3600883-820f-43eb-b1ff-7862596c09c0">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://purl.org/dc/terms/modified"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b6b5f9ce-8754-43c0-bdfb-ca95138c388b">
+	<enhancementInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:ff737e30-751b-4e6f-a709-f8018247fe63"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:718dfc3c-cb52-4fca-b8e2-0e722f375da7"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bfd35d0e-2913-4f43-86b3-c81d6fba8808">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Enhancement"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standardized</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ff737e30-751b-4e6f-a709-f8018247fe63">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b3600883-820f-43eb-b1ff-7862596c09c0"/>
+	<hasEnhancement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bfd35d0e-2913-4f43-86b3-c81d6fba8808"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment of the value of dcterms:modified to a valid ISO date and time.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment of the value of dcterms:modified to a valid ISO date and time.Amedment for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:58707774-b6e0-4af2-a5e8-e449cb61d4d4">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c253f11a-6161-4692-bfce-4328f1961630"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c253f11a-6161-4692-bfce-4328f1961630">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if dcterms:modified is EMPTY; COMPLIANT if the value of dcterms:modified is a valid ISO 8601-1 date; otherwise NOT_COMPLIANT. </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MODIFIED_STANDARD</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:005561fc-035e-46b3-bc71-f93843d9c54f">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://purl.org/dc/terms/modified"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5082bd61-930d-49e7-8d73-7ad1868d9620">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standard</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ae6792c2-1da0-4629-9dbc-5e4ab182b7f9">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:005561fc-035e-46b3-bc71-f93843d9c54f"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5082bd61-930d-49e7-8d73-7ad1868d9620"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dcterms:modified a valid ISO date?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dcterms:modified a valid ISO date? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dd8db9c4-b09e-49be-b96d-26a3255b11fe">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:ae6792c2-1da0-4629-9dbc-5e4ab182b7f9"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c253f11a-6161-4692-bfce-4328f1961630"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:07e79079-42e9-48e9-826e-4874ae34bce3">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:lifeStage is EMPTY; AMENDED the value of dwc:lifeStage if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core lifeStage [https://dwc.tdwg.org/list/#dwc_lifeStage]} {dwc:lifeStage vocabulary API" [https://api.gbif.org/v1/vocabularies/LifeStage/concepts]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_LIFESTAGE_STANDARDIZED</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:85900200-ec37-423a-990e-0dad1d7677f1">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:07e79079-42e9-48e9-826e-4874ae34bce3"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:547f0472-6cf8-424a-b52d-bc35fbf7d2c0">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/lifeStage"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:570d4a15-5f0d-4204-a233-496406b504f3">
+	<enhancementInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7303e50f-d54f-42d5-b308-812e5f2d1e46"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:07e79079-42e9-48e9-826e-4874ae34bce3"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/AmendmentMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7303e50f-d54f-42d5-b308-812e5f2d1e46">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:547f0472-6cf8-424a-b52d-bc35fbf7d2c0"/>
+	<hasEnhancement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:91e4b6c3-c068-433a-806c-e7dc8f5dcc76"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedEnhancement"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:lifeStage using bdq:sourceAuthority.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment to the value of dwc:lifeStage using bdq:sourceAuthority.Amedment for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:91e4b6c3-c068-433a-806c-e7dc8f5dcc76">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Enhancement"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standardized</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:lifeStage is EMPTY; COMPLIANT if the value of dwc:lifeStage is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Darwin Core lifeStage [https://dwc.tdwg.org/list/#dwc_lifeStage]} {dwc:lifeStage vocabulary" [https://api.gbif.org/v1/vocabularies/LifeStage/concepts]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e944c4f2-94f1-4d53-bd63-4b2fff72a756">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:123ca6bc-49d9-4738-a141-fb59ff8b3332">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: standard</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7bacf0e3-5a92-4986-a389-450129ce05c7">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b55856ab-3673-4220-9f1e-51537939483c"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:123ca6bc-49d9-4738-a141-fb59ff8b3332"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:lifeStage occur in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:lifeStage occur in bdq:sourceAuthority? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8fd2cc3e-1cfc-4724-81f6-9b77155a337c">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7bacf0e3-5a92-4986-a389-450129ce05c7"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b55856ab-3673-4220-9f1e-51537939483c">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/lifeStage"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0267c35f-a02b-4dc9-9a01-38797faa6b2b">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:endDayOfYear is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_ENDDAYOFYEAR_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:28cdac41-124a-4adf-b2e9-a2e6fd1b4b53">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0267c35f-a02b-4dc9-9a01-38797faa6b2b"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0cb20217-5ac7-4b92-9b00-03472dc3976c">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a4125e1a-e51d-4c00-8f47-855b0e3b72ff"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d5f3179b-bad9-48b3-87e5-176d5cecf8bb"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:endDayOfYear?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:endDayOfYear? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:48e624f1-030e-4414-9eea-6e9487b51677">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0cb20217-5ac7-4b92-9b00-03472dc3976c"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0267c35f-a02b-4dc9-9a01-38797faa6b2b"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a4125e1a-e51d-4c00-8f47-855b0e3b72ff">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/endDayOfYear"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d5f3179b-bad9-48b3-87e5-176d5cecf8bb">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:167d4346-6fac-40eb-9d2e-30b7683dac04">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:startDayOfYear is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_STARTDAYOFYEAR_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5a8415c6-9453-4696-b3e7-d4f5c1a7e2f9">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:167d4346-6fac-40eb-9d2e-30b7683dac04"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:70cf6d74-ff95-4144-9a0b-3c0f3c401539">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d7897df0-9e6b-4377-8978-3bdf01af7e3c"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b63b05f6-fc95-4197-8dce-0e444592799a"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:startDayOfYear?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:startDayOfYear? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8a4d9344-0f71-4784-b102-e872ec4046bb">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:70cf6d74-ff95-4144-9a0b-3c0f3c401539"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:167d4346-6fac-40eb-9d2e-30b7683dac04"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b63b05f6-fc95-4197-8dce-0e444592799a">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d7897df0-9e6b-4377-8978-3bdf01af7e3c">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/startDayOfYear"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:76067adf-1422-4d03-89e3-9067c3043700">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:sex is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_SEX_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ead8a6c8-89a6-4e71-b340-2065f470937c">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:76067adf-1422-4d03-89e3-9067c3043700"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:043b5c4e-b266-40b4-b496-e25381dc50f8">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:78957ab5-24dd-468e-82f4-b539e94f2ee2">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/sex"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:86d0413a-91d1-4201-a2cc-1de5ded5ad2e">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bda37aa0-433f-431f-8e0c-079ac40f85c0"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:76067adf-1422-4d03-89e3-9067c3043700"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bda37aa0-433f-431f-8e0c-079ac40f85c0">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:78957ab5-24dd-468e-82f4-b539e94f2ee2"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:043b5c4e-b266-40b4-b496-e25381dc50f8"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:sex?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:sex? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3eefe72c-4c7d-4dee-89b6-e9d91d3f1981">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:reproductiveCondition is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4fc919d0-ea7b-42b5-8003-e4ceb78ff3c2">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3eefe72c-4c7d-4dee-89b6-e9d91d3f1981"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4e6b7b33-a1d6-4ff7-9df2-5c67f10491dc">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/reproductiveCondition"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:70cf182c-f62a-45b4-8acb-54d0297ff565">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d02aa793-18ce-4c31-867a-39eed04275fb">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e4d27812-123e-4d4b-9a93-19b1f09e6404"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3eefe72c-4c7d-4dee-89b6-e9d91d3f1981"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e4d27812-123e-4d4b-9a93-19b1f09e6404">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4e6b7b33-a1d6-4ff7-9df2-5c67f10491dc"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:70cf182c-f62a-45b4-8acb-54d0297ff565"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:reproductiveCondition?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:reproductiveCondition? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2952bfc7-a7a7-45b3-8feb-19d384e2032a">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cd281f7e-13b3-43ae-8677-de06ffa70bb4"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cd281f7e-13b3-43ae-8677-de06ffa70bb4">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:relationshipOfResource is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:257d6396-f9d5-4a81-bc59-4f8ce3029b5a">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:ede8820f-10d5-4097-974a-36f7d22b0a49"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cd281f7e-13b3-43ae-8677-de06ffa70bb4"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5d8f8d45-ec2c-43ba-a7da-d4a953bd8118">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:667b0a1c-b896-4a7d-b8e9-58a01cdeaa86">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/relationshipOfResource"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ede8820f-10d5-4097-974a-36f7d22b0a49">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:667b0a1c-b896-4a7d-b8e9-58a01cdeaa86"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5d8f8d45-ec2c-43ba-a7da-d4a953bd8118"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:relationshipOfResource?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:relationshipOfResource? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2aa1b7a0-0473-4a90-bf11-a02137c5c65b">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:preparations is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_PREPARATIONS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f384a4cd-f451-4b22-82c2-8ca14ceea2cb">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2aa1b7a0-0473-4a90-bf11-a02137c5c65b"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:423ac1d8-d35a-49aa-b42a-0f3c3446e600">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/preparations"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:470be7d3-0bda-4f20-ab49-ab66496f76ab">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d21eb450-806a-4bf0-8ec2-b02f38011e48"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2aa1b7a0-0473-4a90-bf11-a02137c5c65b"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bd3ceb3d-05f0-4d27-b3f0-395bfe8e9ab1">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d21eb450-806a-4bf0-8ec2-b02f38011e48">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:423ac1d8-d35a-49aa-b42a-0f3c3446e600"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bd3ceb3d-05f0-4d27-b3f0-395bfe8e9ab1"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:preparations?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:preparations? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:79f6bfee-6bf3-4165-a960-8391f423bdd6">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:87537c73-4f70-4938-8114-7f5b149ed03c"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:87537c73-4f70-4938-8114-7f5b149ed03c">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:municipality is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MUNICIPALITY_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:084569a7-6d08-418f-99de-25285f8704f2">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8d9dbfdf-7281-4e96-8afe-633e32e7ebcd"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3188b767-8de9-41ee-8006-083c4df50e8f"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:municipality?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:municipality? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3188b767-8de9-41ee-8006-083c4df50e8f">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7e164f01-a83a-4b78-a8cf-8a8920a94103">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:084569a7-6d08-418f-99de-25285f8704f2"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:87537c73-4f70-4938-8114-7f5b149ed03c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8d9dbfdf-7281-4e96-8afe-633e32e7ebcd">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:53e02d0c-93bd-444f-aa7f-68832bdd3143">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:georeferenceVerificationStatus is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:96b9eb06-ffa4-4a10-b455-703b0f29da56">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:53e02d0c-93bd-444f-aa7f-68832bdd3143"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:001e7a6d-d839-467f-b9cc-fe31527a6703">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:491bfe02-91ba-4198-9f28-1f2666e9e9f2"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:53e02d0c-93bd-444f-aa7f-68832bdd3143"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3bc57a34-794e-4c63-bdfa-e9da82f9db67">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:491bfe02-91ba-4198-9f28-1f2666e9e9f2">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3bc57a34-794e-4c63-bdfa-e9da82f9db67"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:fd6b2928-96a1-4d93-a8df-6579c77786cc"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferenceVerificationStatus?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferenceVerificationStatus? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fd6b2928-96a1-4d93-a8df-6579c77786cc">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5a3f8967-1055-4c91-a562-8d135b1a2aab">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e1765718-0964-4b40-9451-a66b23ca6268"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e1765718-0964-4b40-9451-a66b23ca6268">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:georeferencedDate is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:49da0c06-519b-4f01-a0a5-27f7f544bc4b">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferencedDate"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b91b182b-fc08-4b9f-a28c-6697071a169d">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:49da0c06-519b-4f01-a0a5-27f7f544bc4b"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e843319b-e32e-4c0b-a117-97bdf26b907b"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferencedDate?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferencedDate? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dd5c9abf-3da3-4328-9941-0246c30c821a">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b91b182b-fc08-4b9f-a28c-6697071a169d"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e1765718-0964-4b40-9451-a66b23ca6268"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e843319b-e32e-4c0b-a117-97bdf26b907b">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:75fa8c27-aff8-45f6-b92a-2140ae8beaf7">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:aaebbde6-a101-4665-ba1e-6d4d8c561a31"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:aaebbde6-a101-4665-ba1e-6d4d8c561a31">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:eventTime is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_EVENTTIME_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0adf10ec-3a9c-42d1-8a46-b080f251b1f7">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8054aecd-ce7c-4e07-819d-2d29bd954ebc"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2bbe36f6-7741-4843-b9c0-9df9fa0520b6"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:eventTime?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:eventTime? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1ef7942d-0f00-4538-9cd4-515b364ad0a1">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0adf10ec-3a9c-42d1-8a46-b080f251b1f7"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:aaebbde6-a101-4665-ba1e-6d4d8c561a31"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2bbe36f6-7741-4843-b9c0-9df9fa0520b6">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8054aecd-ce7c-4e07-819d-2d29bd954ebc">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/eventTime"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:34ce630c-54eb-4c2d-9ad6-d3f8e65771be">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:eb9b70c7-9cf6-42ea-a708-5de527211df4"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:eb9b70c7-9cf6-42ea-a708-5de527211df4">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:vernacularName is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERNACULARNAME_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:171365fb-933a-4262-9b06-76e826fec674">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9201fc9e-1fc0-4d3c-8444-f5af31db6419"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:eb9b70c7-9cf6-42ea-a708-5de527211df4"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7c1933c0-3684-45a9-ad06-e4246e4def31">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/vernacularName"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9201fc9e-1fc0-4d3c-8444-f5af31db6419">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7c1933c0-3684-45a9-ad06-e4246e4def31"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bf980098-8e14-44ea-b5d9-b680449e4268"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:vernacularName?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:vernacularName? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bf980098-8e14-44ea-b5d9-b680449e4268">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:34789308-b69d-4608-932a-4c4bbd013023">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:59d9dc66-8d86-4b8e-8f26-54b542d6c375"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:59d9dc66-8d86-4b8e-8f26-54b542d6c375">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimSRS is not EMPTY or all of dwc:verbatimCoordinates and dwc:verbatimLatitude and dwc:decimalLatitude are EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMSRS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:110c317a-ce78-492a-b471-8b579e78fa1b">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:11999ba9-76dd-4e22-9d95-dd9337178349">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:64d89517-e350-4ece-a3fd-6e9aed591f8a"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:110c317a-ce78-492a-b471-8b579e78fa1b"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimSRS?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimSRS? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:64d89517-e350-4ece-a3fd-6e9aed591f8a">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimSRS"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:685a836a-56f6-47e4-a08a-ebbfe2bb3922">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:11999ba9-76dd-4e22-9d95-dd9337178349"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:59d9dc66-8d86-4b8e-8f26-54b542d6c375"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:614d084c-891d-4cbe-90b6-d14ee264876b">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimLongitude is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2fafe3cf-e6a3-40e3-b267-a11cdab021ff">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:54c0a840-7335-443d-8255-d14d7356ab1f">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:dc25ba15-9255-4e3e-9547-ed3aa8cdf424"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2fafe3cf-e6a3-40e3-b267-a11cdab021ff"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimLongitude?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimLongitude? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dc25ba15-9255-4e3e-9547-ed3aa8cdf424">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimLongitude"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f26dbc3c-1808-40fb-b636-5826d857d430">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:54c0a840-7335-443d-8255-d14d7356ab1f"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimLatitude is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4e92effc-49ef-42f9-aa72-4e887c7242b1">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5692da58-4e81-470d-927d-b203398fa337">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b2a3381f-e9bd-4748-81f6-ca8e9da6afe9"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:82182336-90d6-4a9e-b80f-cb489e0ffe41">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b2a3381f-e9bd-4748-81f6-ca8e9da6afe9">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b73654f4-9ba2-46b5-898b-cc6ba31af10e"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:82182336-90d6-4a9e-b80f-cb489e0ffe41"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimLatitude?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimLatitude? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b73654f4-9ba2-46b5-898b-cc6ba31af10e">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimLatitude"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:537f1e61-17d0-4f53-969a-3d07b067e79a">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimEventDate is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:55836042-4e7b-4d82-934d-1aabf2114164">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9da7f398-9ba4-4e68-8403-2af152a567a7"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6cb4ec06-9ce0-42b4-87f3-38b8a0c125aa">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:95416ea9-6354-447e-9061-c99d0531082c">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimEventDate"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9da7f398-9ba4-4e68-8403-2af152a567a7">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:95416ea9-6354-447e-9061-c99d0531082c"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6cb4ec06-9ce0-42b4-87f3-38b8a0c125aa"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimEventDate?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimEventDate? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9d62af23-b245-4f44-a2a9-811e334eb0c3">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimElevation is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:15c34730-0442-4ad1-8eab-9462d02ee2c6">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimElevation"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:666b176a-7a1f-4d22-a958-236ef48eef43">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:701722c2-d33d-406b-b542-87e887cfa93c"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:701722c2-d33d-406b-b542-87e887cfa93c">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:15c34730-0442-4ad1-8eab-9462d02ee2c6"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c4ed2fb6-64ac-4ca2-9112-aabfda65efa7"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimElevation?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimElevation? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c4ed2fb6-64ac-4ca2-9112-aabfda65efa7">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimDepth is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b0af8d33-9621-4fe1-ba4b-968ebfe145a4">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8343d009-91f6-499d-94d3-f6aa54f8d4f8">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bd3a21bf-eb49-4c64-8a52-a291f0580fa1"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c4de2328-5835-4873-ae83-2ae31fa29014"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimDepth?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimDepth? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:920331f4-784a-4a62-a479-2462e28df50c">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8343d009-91f6-499d-94d3-f6aa54f8d4f8"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bd3a21bf-eb49-4c64-8a52-a291f0580fa1">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimDepth"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c4de2328-5835-4873-ae83-2ae31fa29014">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:13a24b2b-8e3c-423f-bf65-275ccb026006">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:verbatimCoordinates is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:00c60b7e-740c-4936-bc8e-81117fe3e3cf">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8bbec0fb-9ce3-4ecc-8c01-b88e610588e6"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5f580ce9-643d-4e77-9fb4-fba216666a0f"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimCoordinates?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:verbatimCoordinates? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5f580ce9-643d-4e77-9fb4-fba216666a0f">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8bbec0fb-9ce3-4ecc-8c01-b88e610588e6">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimCoordinates"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ab53fd58-9e13-4a52-80fc-3bc9f4b6229b">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:00c60b7e-740c-4936-bc8e-81117fe3e3cf"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a9c0627d-acae-4afe-84a1-9681871aa5ec">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cd7cae15-f255-41a3-b002-c9620c40f620"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cd7cae15-f255-41a3-b002-c9620c40f620">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:typeStatus is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_TYPESTATUS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3b525670-ad17-470b-a664-157f73e68aad">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:490095c3-d960-4de7-a62b-f9b09906737c"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cd7cae15-f255-41a3-b002-c9620c40f620"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:490095c3-d960-4de7-a62b-f9b09906737c">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5a26c9c4-4ec2-4566-b588-d0f57039a3b0"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a150f7df-bb7e-44bf-b769-4bdb25ff3f92"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:typeStatus?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:typeStatus? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5a26c9c4-4ec2-4566-b588-d0f57039a3b0">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/typeStatus"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a150f7df-bb7e-44bf-b769-4bdb25ff3f92">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:307600e3-824c-4d87-8a27-cd25e8c3bf77">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:476d3e8e-e061-414c-b8ef-6d6da8f1ec02"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:476d3e8e-e061-414c-b8ef-6d6da8f1ec02">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:stateProvince is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_STATEPROVINCE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:122c69bc-b4c8-4ac4-a636-f513f0ffa4ea">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/stateProvince"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3818eb2d-a639-4ae2-ab8c-b9e0b61f8455">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:122c69bc-b4c8-4ac4-a636-f513f0ffa4ea"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:59264773-38e2-42cc-9e86-d9a96b4df250"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:stateProvince?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:stateProvince? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:59264773-38e2-42cc-9e86-d9a96b4df250">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fb4f379a-8084-4c2e-aaf7-590cfae197e1">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3818eb2d-a639-4ae2-ab8c-b9e0b61f8455"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:476d3e8e-e061-414c-b8ef-6d6da8f1ec02"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3bd2477c-6497-43b0-94e6-b811eed1b1cb">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:recordNumber is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_RECORDNUMBER_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ca1a10f9-e654-4bf6-8aca-630afacff88c">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3bd2477c-6497-43b0-94e6-b811eed1b1cb"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:38e2c390-c839-4d1a-b6c3-8ea12d5f2c68">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cb8734ec-e5aa-4a21-a7b3-f408109a5daa"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3bd2477c-6497-43b0-94e6-b811eed1b1cb"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4acc30d9-f2ed-460a-a8e5-57e1df1ff139">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a1551bc2-4171-415c-9d8b-ff9c0a22c237">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/recordNumber"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cb8734ec-e5aa-4a21-a7b3-f408109a5daa">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a1551bc2-4171-415c-9d8b-ff9c0a22c237"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4acc30d9-f2ed-460a-a8e5-57e1df1ff139"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:recordNumber?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:recordNumber? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:78a35fc4-e74f-4f71-a4ce-06b40aecad83">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:986ad95d-ffa1-4e3b-a6cb-ed943c87be0d"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:986ad95d-ffa1-4e3b-a6cb-ed943c87be0d">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:recordedBy is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_RECORDEDBY_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:609c29f6-1550-4588-9904-df1c7b43e2f3">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b28d38ed-d983-4095-8b4c-11506b214eff"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:986ad95d-ffa1-4e3b-a6cb-ed943c87be0d"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8a7bdcea-3564-49ce-a2d8-a6847b5b1bc4">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b28d38ed-d983-4095-8b4c-11506b214eff">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b372de23-0d78-476a-acda-8dec5717a6c0"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8a7bdcea-3564-49ce-a2d8-a6847b5b1bc4"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:recordedBy?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:recordedBy? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b372de23-0d78-476a-acda-8dec5717a6c0">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/recordedBy"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:43e4d222-875a-460e-9272-7958820c255e">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:dc2fc946-8114-491b-8a7b-3242a274a221"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dc2fc946-8114-491b-8a7b-3242a274a221">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:month is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MONTH_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7062ddaf-a31e-43dc-9ac0-176154e6745b">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/month"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9acce34c-e90d-4fc0-b12e-90d99916615d">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ae502014-2acf-45af-9e11-69fd094cfc55">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b36a67f6-3c33-447f-9ad7-a2d29cdab449"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:dc2fc946-8114-491b-8a7b-3242a274a221"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b36a67f6-3c33-447f-9ad7-a2d29cdab449">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7062ddaf-a31e-43dc-9ac0-176154e6745b"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9acce34c-e90d-4fc0-b12e-90d99916615d"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:month?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:month? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b8500bf0-273b-45c0-91a5-ebade24f1b04">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:minimumElevation is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MINIMUMELEVATION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c99668d6-931a-4bdc-8096-217c687a3d4d">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b8500bf0-273b-45c0-91a5-ebade24f1b04"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0fcf3c91-4ad1-4226-9901-c3a5b7b4ee63">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1dc8012a-3025-49ff-b5f9-b1998efdae93">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/minimumElevation"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5a435c77-c1d7-47d8-94e8-6372c01bc3fb">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:1dc8012a-3025-49ff-b5f9-b1998efdae93"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0fcf3c91-4ad1-4226-9901-c3a5b7b4ee63"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:minimumElevation?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:minimumElevation? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9f2d7370-4f13-4057-a659-51a80b738852">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5a435c77-c1d7-47d8-94e8-6372c01bc3fb"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b8500bf0-273b-45c0-91a5-ebade24f1b04"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ae2d48a5-764b-4c5f-a858-9347817fabae">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e10777f1-ca8c-4129-ab2a-7c81856a4ba5"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e10777f1-ca8c-4129-ab2a-7c81856a4ba5">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:minimumDepth is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MINIMUMDEPTH_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:12529319-9586-420c-bd9c-1ceb9d520a6a">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3ab62133-351c-4de0-b6c2-80a10df70d33">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/minimumDepth"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:777a526d-e9df-46a8-a099-f0e7b4928e2f">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a41d0a02-1c60-413e-9667-f60cf716d35e"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e10777f1-ca8c-4129-ab2a-7c81856a4ba5"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a41d0a02-1c60-413e-9667-f60cf716d35e">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3ab62133-351c-4de0-b6c2-80a10df70d33"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:12529319-9586-420c-bd9c-1ceb9d520a6a"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:minimumDepth?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:minimumDepth? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2c058db5-1b3c-4a82-879f-48a01f66ff78">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:653d907a-af86-4c1d-9156-0e86f79cbd2a"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:653d907a-af86-4c1d-9156-0e86f79cbd2a">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:maximumElevation is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MAXIMUMELEVATION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:516d9a8b-9b1c-45de-b739-ee5aa525d2d0">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/maximumElevation"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d9bd6b42-22ef-415f-868b-a013dc11f1e4">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:ef30ce14-1a7c-4648-9538-9601858ddb6b"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:653d907a-af86-4c1d-9156-0e86f79cbd2a"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e4232c3d-c075-41cf-b31b-7082c3b3df9a">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ef30ce14-1a7c-4648-9538-9601858ddb6b">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:516d9a8b-9b1c-45de-b739-ee5aa525d2d0"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e4232c3d-c075-41cf-b31b-7082c3b3df9a"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:maximumElevation?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:maximumElevation? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7236d80f-53cc-4871-9359-fbd468808136">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:maximumDepth is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_MAXIMUMDEPTH_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b25ff5d5-33db-42c8-b2ef-14e26be4dc3a">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7236d80f-53cc-4871-9359-fbd468808136"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0dc4a5ea-9345-4302-9a61-94586bbe8c00">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:aa82abd9-5cce-4397-be47-a41ae386d385"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:633d2d74-8521-49c4-bcee-e6c72fc6a2f1"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:maximumDepth?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:maximumDepth? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:633d2d74-8521-49c4-bcee-e6c72fc6a2f1">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a8db31d0-f5c6-4ed6-98a5-da44eecbaced">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0dc4a5ea-9345-4302-9a61-94586bbe8c00"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7236d80f-53cc-4871-9359-fbd468808136"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:aa82abd9-5cce-4397-be47-a41ae386d385">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/maximumDepth"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:32ad4728-52dc-4017-88a4-33258bc2b130">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:83282c46-0bd8-4f6c-a015-40506b0d5dc5"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:83282c46-0bd8-4f6c-a015-40506b0d5dc5">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:locality is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_LOCALITY_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3e1a3648-2fbf-4a1c-b456-167c34a7cd54">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9e029772-8e21-4ec6-a604-7f2be0534e50"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:83282c46-0bd8-4f6c-a015-40506b0d5dc5"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:56bc4fc0-f632-4061-ab12-086483a1fa76">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:895f6eb3-d0f9-464b-9388-3045daf9daab">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9e029772-8e21-4ec6-a604-7f2be0534e50">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:895f6eb3-d0f9-464b-9388-3045daf9daab"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:56bc4fc0-f632-4061-ab12-086483a1fa76"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:locality?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:locality? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:089e2bf8-fe1e-45fc-b966-8788b9c20adf">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:lifeStage is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_LIFESTAGE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:21df0935-0b12-41b2-892b-831180b55f55">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:dc5676bf-5068-4f83-a1c7-6a3d69ad5466"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5f4aa095-e811-47da-a7c4-7f4c1b25b80e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cd2b8bbd-84a2-4b27-a3d9-dc09e3238fca">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/lifeStage"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dc5676bf-5068-4f83-a1c7-6a3d69ad5466">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cd2b8bbd-84a2-4b27-a3d9-dc09e3238fca"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5f4aa095-e811-47da-a7c4-7f4c1b25b80e"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:lifeStage?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:lifeStage? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0b90c114-5ff1-4024-a174-b866b7ca6b81">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:islandGroup is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_ISLANDGROUP_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6028607f-9eda-4c6d-a62f-bacb757448e0">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0b90c114-5ff1-4024-a174-b866b7ca6b81"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3524064a-1aa6-4c87-8698-4d7d9083901e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:397a5071-1f6c-4d0e-b3be-b38731cc8bd4">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:691cd5b0-d839-4d32-a9cc-38cd6b86836a"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3524064a-1aa6-4c87-8698-4d7d9083901e"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:islandGroup?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:islandGroup? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:691cd5b0-d839-4d32-a9cc-38cd6b86836a">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/islandGroup"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f10e3148-73f9-4166-bf4a-eceaba2cda24">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:397a5071-1f6c-4d0e-b3be-b38731cc8bd4"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0b90c114-5ff1-4024-a174-b866b7ca6b81"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:island is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_ISLAND_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6ad9d5fd-a408-4fd5-9d6f-3b4e9a13d03f">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:43142f6c-0681-4f9c-aae6-105c889a0d8b">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b4950add-1a67-47a5-b560-401dd4f25e10"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:f6d9e536-ef22-4c85-b9d6-f535f1f39316"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:island?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:island? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b4950add-1a67-47a5-b560-401dd4f25e10">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/island"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bbc49e27-d63d-4e02-8d6b-d98c3894f2f3">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:43142f6c-0681-4f9c-aae6-105c889a0d8b"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f6d9e536-ef22-4c85-b9d6-f535f1f39316">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:10398e63-fc57-49c5-af48-5b6596c4d674">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:aff0facd-1d2a-40a5-a55a-61f950cd68a0"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:aff0facd-1d2a-40a5-a55a-61f950cd68a0">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:individualCount is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:114a7aff-bedd-4072-9eac-d5ac5a4cb4a6">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/individualCount"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1f73a459-fc17-4635-8097-d50f5bd70710">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bb0f5330-2f42-4eec-ac39-e1d2a112348c">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:114a7aff-bedd-4072-9eac-d5ac5a4cb4a6"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:1f73a459-fc17-4635-8097-d50f5bd70710"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:individualCount?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:individualCount? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ec0f7e9b-07b5-4ff1-90dd-fdc7d68a9f8f">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bb0f5330-2f42-4eec-ac39-e1d2a112348c"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:aff0facd-1d2a-40a5-a55a-61f950cd68a0"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a527a963-0958-4003-a343-76f1c533b864">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cfa2c8fd-e778-4f2b-8c16-2221d46e0006"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cfa2c8fd-e778-4f2b-8c16-2221d46e0006">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:higherGeography is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3367ad8e-5fd3-4426-a05a-06cd31ea1a78">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bf9e9153-f109-44c0-a42d-d6f3d6dfe658"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:ce58ca6f-0ced-442a-8a1a-2aca8935eb67"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:higherGeography?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:higherGeography? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:622754f8-c878-4f89-a165-9444764b9b72">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3367ad8e-5fd3-4426-a05a-06cd31ea1a78"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cfa2c8fd-e778-4f2b-8c16-2221d46e0006"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bf9e9153-f109-44c0-a42d-d6f3d6dfe658">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/higherGeography"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ce58ca6f-0ced-442a-8a1a-2aca8935eb67">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6059b32e-aa24-4d75-abcd-857dff0f6a67">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:72ed16f1-0587-4afd-a9fc-602c2f3f1975"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:72ed16f1-0587-4afd-a9fc-602c2f3f1975">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:higherClassification is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4afc2b3f-3df5-472b-95e1-3c67806c1e51">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/higherClassification"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5a5907c8-c76a-4703-9ef2-5f56f142e736">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e8a21b5a-b72f-4040-a844-07c61061fe8f"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:72ed16f1-0587-4afd-a9fc-602c2f3f1975"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9e0b7b70-1042-4f1a-808e-eeafec523e74">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e8a21b5a-b72f-4040-a844-07c61061fe8f">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4afc2b3f-3df5-472b-95e1-3c67806c1e51"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:9e0b7b70-1042-4f1a-808e-eeafec523e74"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:higherClassification?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:higherClassification? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:21fe55e5-3190-45a4-af17-dd47cf33275e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:georeferenceVerificationStatus is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:96ef51ec-8b28-4b14-862e-18732e913739">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:21fe55e5-3190-45a4-af17-dd47cf33275e"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:19efb7da-b479-4910-a458-c423df3b7f78">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:44928a6c-7438-437c-8486-a7b357a3a627">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cc6aed48-a2d6-4557-9fe4-93f14ca4b419"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:21fe55e5-3190-45a4-af17-dd47cf33275e"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7601f696-fac6-4752-9f0c-97561b2b311b">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cc6aed48-a2d6-4557-9fe4-93f14ca4b419">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7601f696-fac6-4752-9f0c-97561b2b311b"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:19efb7da-b479-4910-a458-c423df3b7f78"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferenceVerificationStatus?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferenceVerificationStatus? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1d70636d-6364-45b4-8da6-e2871112f4ed">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:georeferencedDate is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4f3eaab3-a7f2-4096-b91a-32b7ec61ea89">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bc62d945-f8d0-4074-89c3-5aab22217e44"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7e370f25-7897-4b44-929c-9b03b5f031ec">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8e79d592-ebc1-4ae6-b76e-e149022cd128">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferencedDate"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bc62d945-f8d0-4074-89c3-5aab22217e44">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8e79d592-ebc1-4ae6-b76e-e149022cd128"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7e370f25-7897-4b44-929c-9b03b5f031ec"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferencedDate?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:georeferencedDate? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0a4cf00b-7f45-4ff8-a8cc-f12fa380ad60">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c6b705fc-7cf8-4af1-88ab-7a38d85f7109"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c6b705fc-7cf8-4af1-88ab-7a38d85f7109">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:footprintWKT is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_FOOTPRINTWKT_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1bdd6f4a-82d4-48b4-97e6-95db99b23163">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6b62ca5f-59dc-40e1-9e0c-fce8a6ccc555"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8a29cf7b-bca8-454c-8bff-1596b3a9645f"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:footprintWKT?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:footprintWKT? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6b62ca5f-59dc-40e1-9e0c-fce8a6ccc555">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/footprintWKT"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8a29cf7b-bca8-454c-8bff-1596b3a9645f">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:93cc7288-7904-4e69-8243-b4ab95977e40">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:1bdd6f4a-82d4-48b4-97e6-95db99b23163"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c6b705fc-7cf8-4af1-88ab-7a38d85f7109"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:837fc2d7-5328-4b45-aeba-68b73edfe3c3">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b4c17611-2703-474f-b46a-93b08ecfee16"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b4c17611-2703-474f-b46a-93b08ecfee16">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:disposition is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_DISPOSITION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:43ef760c-ffb4-4a02-b766-9daa8811ea77">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5efc75df-6a87-4719-8313-d9512cb67076">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:43ef760c-ffb4-4a02-b766-9daa8811ea77"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bc5268de-b8fb-49c1-8677-4f3788d7fd94"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:disposition?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:disposition? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:ab33d7c0-db9b-42d4-8102-5e04d3d831a5">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5efc75df-6a87-4719-8313-d9512cb67076"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b4c17611-2703-474f-b46a-93b08ecfee16"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bc5268de-b8fb-49c1-8677-4f3788d7fd94">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:dcbdfac6-4e7a-4dbe-9922-6de3e390e74e">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e17918fc-25ca-4a3a-828b-4502432b98c4"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e17918fc-25ca-4a3a-828b-4502432b98c4">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dcterms:modified is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_DCTERMSMODIFIED_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6f1a9429-4c77-4a3d-a92e-24165f3719fd">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://purl.org/dc/terms/modified"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d07ad6fe-9688-4527-ba6d-bcaec4a793e4">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:eea79759-81e7-49f8-a478-6be9990c01fc">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6f1a9429-4c77-4a3d-a92e-24165f3719fd"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d07ad6fe-9688-4527-ba6d-bcaec4a793e4"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dcterms:modified?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dcterms:modified? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fbcaf2bb-6945-41a2-a93b-f5eeb4cf529c">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:eea79759-81e7-49f8-a478-6be9990c01fc"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e17918fc-25ca-4a3a-828b-4502432b98c4"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:70ef5b40-a88a-442d-af16-653da4090516">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:coordinatePrecision is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_COORDINATEPRECISION_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:10aa8c36-77da-4ddf-bcc7-7ef11c2c5b01">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8c328b7c-bd86-47f3-908b-5d058120eecc">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:bb0432ca-8e1e-4207-8dc2-36bfdcfbd8cc"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:10aa8c36-77da-4ddf-bcc7-7ef11c2c5b01"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:coordinatePrecision?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:coordinatePrecision? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bb0432ca-8e1e-4207-8dc2-36bfdcfbd8cc">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/coordinatePrecision"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d52dbdc2-2274-439d-817a-815556d29ec7">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8c328b7c-bd86-47f3-908b-5d058120eecc"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:181c51da-d5d8-41e9-94f9-1387fa5a5a2b">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if either but not both dwc:continent or dwc:waterBody is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_CONTINENT_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b12c8e3d-fe51-490f-8a83-e8e057ae4c8c">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:181c51da-d5d8-41e9-94f9-1387fa5a5a2b"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:67e911d1-4aa7-46ac-84a4-32b2e2307bb2">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/continent"/>
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/waterbody"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:709074e8-493e-4f54-900b-31be0acfc041">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c20405ca-e32c-4c2e-a2a2-9393aa1cb2d1">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d374cefb-30a2-4f3e-bf2b-24fe56d89a57"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:181c51da-d5d8-41e9-94f9-1387fa5a5a2b"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d374cefb-30a2-4f3e-bf2b-24fe56d89a57">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:67e911d1-4aa7-46ac-84a4-32b2e2307bb2"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:709074e8-493e-4f54-900b-31be0acfc041"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:continent?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:continent? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0a8db51c-46b3-4723-af32-8ad53d8f08a8">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cdb37443-292e-49b6-a012-4718f0d7ba64"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cdb37443-292e-49b6-a012-4718f0d7ba64">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:specificEpithet is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_SPECIFICEPITHET_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3250ee00-4eb0-4da3-b81a-11587611481f">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c3a58bb7-3396-4641-a278-e96f13b5ca59"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cdb37443-292e-49b6-a012-4718f0d7ba64"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4b80a59c-859e-41f8-939c-4cc50ca9af11">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a151b48a-8326-4f92-8dc2-215ae719060c">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/specificEpithet"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c3a58bb7-3396-4641-a278-e96f13b5ca59">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a151b48a-8326-4f92-8dc2-215ae719060c"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4b80a59c-859e-41f8-939c-4cc50ca9af11"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:specificEpithet?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:specificEpithet? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:19bbd107-6b14-4c82-8d3e-f7a2a67df309">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:phylum is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_PHYLUM_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6281aae7-207f-4f1f-a8b3-c704341c81a3">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:19bbd107-6b14-4c82-8d3e-f7a2a67df309"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:04756330-872a-4f82-bb92-73e8b7bd81f0">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:19dddfa7-ec87-4f94-8d45-c06427d89d7a"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a7fc0f54-51f7-47a3-a24f-13d930fbc0c8"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:phylum?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:phylum? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:19dddfa7-ec87-4f94-8d45-c06427d89d7a">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/phylum"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a7fc0f54-51f7-47a3-a24f-13d930fbc0c8">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e95b1f95-d46f-466d-af83-a360b03c6992">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:04756330-872a-4f82-bb92-73e8b7bd81f0"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:19bbd107-6b14-4c82-8d3e-f7a2a67df309"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:50a380ba-b9b8-405c-bbb1-ff905ecd3b5b">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d1c40fc8-d8ad-4148-82e0-b4b7ead70051"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d1c40fc8-d8ad-4148-82e0-b4b7ead70051">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:order is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_ORDER_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:22ec073d-0213-470c-a2d5-dc17164a7d26">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e5e89ca9-e0a5-4f84-91ac-258a24e42d74"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d1c40fc8-d8ad-4148-82e0-b4b7ead70051"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:36b2d1cf-bdd6-490e-9bfa-066ef9c335ec">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e5e89ca9-e0a5-4f84-91ac-258a24e42d74">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:f815eba4-5192-4ee8-836e-9a48e7cfe9cf"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:36b2d1cf-bdd6-490e-9bfa-066ef9c335ec"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:order?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:order? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f815eba4-5192-4ee8-836e-9a48e7cfe9cf">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/order"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5bfa043c-1e19-4224-8d55-b568ced347c2">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:family is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_FAMILY_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b13304f6-dce9-45d8-87b2-3e732ac69e3f">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5bfa043c-1e19-4224-8d55-b568ced347c2"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3ddcacba-d72c-4127-8ac5-eadc2f07763c">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:80aadf4f-592f-406a-84a1-3120a8366a20">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d04c2dce-4c6f-4298-942b-0be1261b8315"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:5bfa043c-1e19-4224-8d55-b568ced347c2"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cf5b54f3-b215-4dc4-adf2-b5c30fc19901">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/family"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d04c2dce-4c6f-4298-942b-0be1261b8315">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cf5b54f3-b215-4dc4-adf2-b5c30fc19901"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:3ddcacba-d72c-4127-8ac5-eadc2f07763c"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:family?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:family? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4af723fe-c106-41cc-8cf1-3408f20a5631">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d02c1ffd-af28-49bd-9c9c-e8e23a8b7258"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d02c1ffd-af28-49bd-9c9c-e8e23a8b7258">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if the value in dwc:taxonRank is higher than genus or if dwc:genus is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_GENUS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0d5829cd-b9f4-42a7-86bf-8dd955eae74c">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/genus"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4560a6f0-05be-424e-a48d-8748489daf12">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:607927ba-0f5c-4d22-bab1-48737172d6bf">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/taxonRank"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Consulted"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8bb43592-ee63-4d68-bbb1-e631c258f4e7">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:cd068a59-ac95-4889-8917-118f95211973"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:d02c1ffd-af28-49bd-9c9c-e8e23a8b7258"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cd068a59-ac95-4889-8917-118f95211973">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0d5829cd-b9f4-42a7-86bf-8dd955eae74c"/>
+	<hasConsultedInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:607927ba-0f5c-4d22-bab1-48737172d6bf"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4560a6f0-05be-424e-a48d-8748489daf12"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:genus?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:genus? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0746ed4a-8048-4720-b411-ab71f58f597a">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b854b179-3572-48b6-aab2-879e3172fd7d"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b854b179-3572-48b6-aab2-879e3172fd7d">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:class is not EMPTY; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_CLASS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:40be7be5-1f81-4cc2-86c5-7e5a63a6efa1">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/class"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a1de6a80-d7cc-491b-93df-17fe311c95d7">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:f5a9b69f-ec17-40fb-be80-f023001dc0b7"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b854b179-3572-48b6-aab2-879e3172fd7d"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c92cb122-c6a2-4f71-885d-f86fe21d6911">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: notempty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f5a9b69f-ec17-40fb-be80-f023001dc0b7">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:40be7be5-1f81-4cc2-86c5-7e5a63a6efa1"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c92cb122-c6a2-4f71-885d-f86fe21d6911"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:class?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:class? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4527c47e-61d9-4abb-af3e-f2999191be17">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:subtribe is EMPTY; COMPLIANT if the value of dwc:subtribe was found as a value at the rank of subtribe by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" [https://doi.org/10.15468/39omei],API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_SUBTRIBE_FOUND</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e2f11ba1-20ef-498f-b573-2d337a001c3d">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4527c47e-61d9-4abb-af3e-f2999191be17"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4e8ef7ef-2cc4-4414-9ac4-aeb05e76f4de">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: found</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:72432577-366a-48f6-a6af-e0f98f879ffe">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:98574dea-1a1f-48e3-9cdc-95701e5dc724"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4527c47e-61d9-4abb-af3e-f2999191be17"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:98574dea-1a1f-48e3-9cdc-95701e5dc724">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:eb379dd8-62c9-4eda-b395-6a9a2fd28539"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:4e8ef7ef-2cc4-4414-9ac4-aeb05e76f4de"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:subtribe occur at rank of Subtribe in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:subtribe occur at rank of Subtribe in bdq:sourceAuthority? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:eb379dd8-62c9-4eda-b395-6a9a2fd28539">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/subtribe"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:81899f5d-7ab1-4ec1-af38-de264f9667a7">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8c15f351-26d5-4edd-b38e-07541dc64fd0"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8c15f351-26d5-4edd-b38e-07541dc64fd0">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:tribe is EMPTY; COMPLIANT if the value of dwc:tribe was found as a value at the rank of tribe by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" [https://doi.org/10.15468/39omei],API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_TRIBE_FOUND</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:6845fd5d-a535-49a9-9faf-802b949fdbf2">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: found</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:87b18aa6-bc26-4958-aa99-dd6f53f0424e">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/tribe"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:891ea2c9-2d3d-43ea-a4c2-1326607fec0e">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b8e78b5b-8b98-4838-99a3-17d93bc3df36"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:8c15f351-26d5-4edd-b38e-07541dc64fd0"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b8e78b5b-8b98-4838-99a3-17d93bc3df36">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:87b18aa6-bc26-4958-aa99-dd6f53f0424e"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:6845fd5d-a535-49a9-9faf-802b949fdbf2"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:tribe occur at rank of Tribe in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:tribe occur at rank of Tribe in bdq:sourceAuthority? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2a45e0e9-446c-429f-992d-c3ec1d29eebb">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:superfamily is EMPTY; COMPLIANT if the value of dwc:superfamily was found as a value at the rank of superfamily by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" [https://doi.org/10.15468/39omei],API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:bb7e545f-d059-4d92-affb-aa520d643b26">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2a45e0e9-446c-429f-992d-c3ec1d29eebb"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0368a6b7-aab5-4870-844e-e762aae584a3">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c07fc8f9-e95e-428d-ad62-d51df2b30c17"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:2a45e0e9-446c-429f-992d-c3ec1d29eebb"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7924a594-a8bb-4f05-b817-1c7b4f0b41da">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/superfamily"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c07fc8f9-e95e-428d-ad62-d51df2b30c17">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:7924a594-a8bb-4f05-b817-1c7b4f0b41da"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:f7ccf39d-e058-4666-9a81-19f16c93835c"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:superfamily occur at rank of Superfamily in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:superfamily occur at rank of Superfamily in bdq:sourceAuthority? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f7ccf39d-e058-4666-9a81-19f16c93835c">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: found</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:4184061f-a3b4-4485-8041-9955ade2d22b">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a82c7e3a-3a50-4438-906c-6d0fefa9e984"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:a82c7e3a-3a50-4438-906c-6d0fefa9e984">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonID is EMPTY; COMPLIANT if (1) taxonID is a validly formed LSID, or (2) taxonID is a validly formed URN with at least NID and NSS present, or (3) taxonID is in the form scope:value, or (4) taxonID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_TAXONID_COMPLETE</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0249b2ec-dc3f-40ec-8940-2dbe84882e49">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:e8766d2b-f1cc-46e6-90a3-ffdd085a4f89"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:b60b8190-2460-4481-b65b-45532745fb58"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:taxonID contain a complete identifier?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does the value of dwc:taxonID contain a complete identifier? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2866b920-a104-4ef0-9e27-5ff3d0f612de">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:0249b2ec-dc3f-40ec-8940-2dbe84882e49"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:a82c7e3a-3a50-4438-906c-6d0fefa9e984"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b60b8190-2460-4481-b65b-45532745fb58">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completeness: complete</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:e8766d2b-f1cc-46e6-90a3-ffdd085a4f89">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:391ca46d-3842-4a18-970c-0434cbc17f07">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if either dwc:dateIdentified or dwc:eventDate are empty or are not interpretable as ISO 8601-1:2019 dates; COMPLIANT if dwc:dateIdentified is equal to or is later than dwc:eventDate; otherwise NOT_COMPLIANT</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3f1669a4-9d0e-4368-9c57-4c5539384991">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:391ca46d-3842-4a18-970c-0434cbc17f07"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:1c1ef577-7fdc-412a-8567-3383a391db5c">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Likelihood: aftereventdate</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:24dc7da3-1f01-4828-8e71-68f4d5f6659b">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:be9b1f46-cff8-49fb-b05f-8e4fdc2a3777"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:391ca46d-3842-4a18-970c-0434cbc17f07"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:421e72dc-1440-46ef-8f24-eccb7e994c67">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/dateIdentified"/>
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/eventDate"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:be9b1f46-cff8-49fb-b05f-8e4fdc2a3777">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:421e72dc-1440-46ef-8f24-eccb7e994c67"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:1c1ef577-7fdc-412a-8567-3383a391db5c"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is the date of identification equal to, or later than the dwc:eventDate?</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is the date of identification equal to, or later than the dwc:eventDate? Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:399ef91d-425c-46f2-a6df-8a0fe4c3e86e">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if dwc:namePublishedInYear is EMPTY;  COMPLIANT if the value of dwc:namePublishedInYear is interpretable as a year between 1753 and the current year, inclusive </rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b1599a70-b7ec-4ce0-a2a9-e2350334f26c">
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:399ef91d-425c-46f2-a6df-8a0fe4c3e86e"/>
+	<implementedBy xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:919e8e12-808c-46ca-81af-d90bdbf5321c"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Implementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:52c93eb2-e25b-4a09-8551-6dc468ceef64">
+	<hasActedUponInformationElement xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:c71205c0-ea98-4be7-8363-9a2cb0db06d4"/>
+	<hasCriterion xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:843688e5-954c-41f8-b427-20780e267cf7"/>
+	<hasResourceType xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="rt:SingleRecord"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ContextualizedCriterion"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The value of dwc:namePublishedInYear is between 1753-01-01 date and the current date, inclusive</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The value of dwc:namePublishedInYear is between 1753-01-01 date and the current date, inclusive Validation for SingleRecord</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:843688e5-954c-41f8-b427-20780e267cf7">
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/Criterion"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conformance: outofrange</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8a10adef-18c6-40ff-9ed5-a103da127408">
+	<criterionInContext xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:52c93eb2-e25b-4a09-8551-6dc468ceef64"/>
+	<hasSpecification xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="urn:uuid:399ef91d-425c-46f2-a6df-8a0fe4c3e86e"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ValidationMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c71205c0-ea98-4be7-8363-9a2cb0db06d4">
+	<composedOf xmlns="http://rs.tdwg.org/bdq/ffdq/" rdf:resource="http://rs.tdwg.org/dwc/terms/namePublishedInYear"/>
+	<rdf:type rdf:resource="http://rs.tdwg.org/bdq/ffdq/ActedUpon"/>
+</rdf:Description>
+
+</rdf:RDF>
