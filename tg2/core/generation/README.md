@@ -11,7 +11,7 @@ Structure follows that of https://github.com/tdwg/dwc/
 │
 ├── vocabulary Generated term history files.
 │   ├── bdq_term_versions.csv
-│   └── ffdq_term_versions.csv
+│   └── bdqffdq_term_versions.csv
 │
 └── README.md  This document
 ```
