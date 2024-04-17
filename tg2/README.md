@@ -14,7 +14,7 @@
 
 
 <h2>Outcomes</h2>
-The group has been working for over a year to evaluate the tests that have been run by-
+The group has been working for over 10 years to generate useful tests and to evaluate the tests that have been run by-
 <ul>
 <li>The Atlas of Living Australia (ALA)</<li>
 <li>The Global Biodiversity Information Facility (GBIF)</li>
@@ -25,8 +25,5 @@ The group has been working for over a year to evaluate the tests that have been 
 <li>Vertnet</li>
   </ul>
   
-and to refine these and new tests to produce a core suite of tests and assertions that can be found at https://docs.google.com/spreadsheets/d/1uwnUtcMSe88AytUt_mSepeLTz54tMvV9llO2pBnObhE. In the process, we have come up with a standard suite of descriptors for each of the tests.
-  
-A suite of test code and test data for each test is in development by iDigBio and hopefully will be be available not long after the core suite of tests are finalised.
-  
+and to refine these and new tests to produce a core suite of tests and assertions that can be found at https://docs.google.com/spreadsheets/d/1uwnUtcMSe88AytUt_mSepeLTz54tMvV9llO2pBnObhE. In the process, we have come up with a standard suite of descriptors for each of the tests, test data and a comprehensive vocabulary.
   
