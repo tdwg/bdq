@@ -15,11 +15,13 @@ import codecs
 from urllib import request
 from jinja2 import FileSystemLoader, Environment
 
-# bdq and ffdq are not yet approved placeholders
+# bdq and bdqffdq are not yet approved placeholders
 NAMESPACES = {
-    'http://rs.tdwg.org/bdq/bdq/' : 'bdq',
-    'http://rs.tdwg.org/bdq/ffdq/' : 'ffdq',
-    'http://rs.tdwg.org/dwc/iri/' : 'dwciri',
-    'http://rs.tdwg.org/dwc/terms/' : 'dwc',
-    'http://purl.org/dc/elements/1.1/' : 'dc',
-    'http://purl.org/dc/terms/' : 'dcterms'}
+    'https://rs.tdwg.org/bdq/terms/' : 'bdq',
+    'https://rs.tdwg.org/bdq/ffdq/' : 'bdqffdq',
+    'https://www.w3.org/TR/annotation-vocab/' : 'oa',
+    'http://www.w3.org/2002/07/owl#' : 'owl',
+    'https://rs.tdwg.org/dwc/iri/' : 'dwciri',
+    'https://rs.tdwg.org/dwc/terms/' : 'dwc',
+    'https://purl.org/dc/elements/1.1/' : 'dc',
+    'https://purl.org/dc/terms/' : 'dcterms'}
