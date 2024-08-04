@@ -12,9 +12,11 @@
 ## Link to testdata:
 -    https://github.com/tdwg/bdq/tree/master/tg2/core/testdata
 
-
+## Link to draft Standard:
+-    https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document
+-    
 <h2>Outcomes</h2>
-The group has been working for over 10 years to generate useful tests and to evaluate the tests that have been run by-
+The group has been working for over 10 years to evaluate and refine'data quality'/'fitness for use' tests that have been run by-
 <ul>
 <li>The Atlas of Living Australia (ALA)</<li>
 <li>The Global Biodiversity Information Facility (GBIF)</li>
@@ -25,5 +27,5 @@ The group has been working for over 10 years to generate useful tests and to eva
 <li>Vertnet</li>
   </ul>
   
-and to refine these and new tests to produce a core suite of tests and assertions that can be found at https://docs.google.com/spreadsheets/d/1uwnUtcMSe88AytUt_mSepeLTz54tMvV9llO2pBnObhE. In the process, we have come up with a standard suite of descriptors for each of the tests, test data and a comprehensive vocabulary.
+and to generate new CORE tests. In the process, we have come up with a standard suite of descriptors/specifications for each of the tests, test data and a comprehensive vocabulary as noted above.
   
