@@ -14,7 +14,7 @@
 
 ## Link to draft Standard:
 -    https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document
--    
+  
 <h2>Outcomes</h2>
 The group has been working for over 10 years to evaluate and refine'data quality'/'fitness for use' tests that have been run by-
 <ul>
