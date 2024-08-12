@@ -4,10 +4,14 @@ Structure follows that of https://github.com/tdwg/dwc/
 
 ```
 ├── build Templates and build scripts
+│   ├── bdq_standard Templates for the standard
+│	│   └── index_template.md
+│   ├── testcsvtodoc.py To generate core_tests.md from csv
 │   └── build.py
 ├── dist Generated csv distribution files for building rdf representations.
 │
 ├── docs Generated human readable documentation.
+│   └── core_tests.md
 │
 ├── vocabulary Generated term history files.
 │   ├── bdq_term_versions.csv
