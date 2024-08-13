@@ -1778,7 +1778,7 @@ https://github.com/kurator-org/kurator-validation/blob/master/packages/kurator_d
 
 ##  Notes
 
-See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of term values.  This test should match despite leading or trailing whitespace or there are leading or trailing non-printing characters.
+See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of term values.  This test should match despite leading or trailing whitespace or there are leading or trailing non-printing characters. @tucotuco: "Of #200 and #201, #201 is the strongest test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the country/stateProvince combo: It would tell you the nature of the problem. Along with #42 (Country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the stateProvince level".
 
 ##  UseCases
 
@@ -1866,7 +1866,7 @@ https://github.com/kurator-org/kurator-validation/blob/master/packages/kurator_d
 
 ##  Notes
 
-See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values.  This test specifically does not consider the content of dwc:higherGeography.
+See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values.  This test specifically does not consider the content of dwc:higherGeography. @tucotuco: "Of #200 and #201, #201 is the strongest test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the country/stateProvince combo: It would tell you the nature of the problem. Along with #42 (Country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the stateProvince level".
 
 ##  UseCases
 
@@ -2500,7 +2500,7 @@ Conformance
 
 ## Examples
 
-dwc:geodeticDatum="6326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in bdq:sourceAuthority"
+dwc:geodeticDatum="epsg:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in bdq:sourceAuthority"
 
 dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"
 
@@ -2520,7 +2520,7 @@ ALA, GBIF
 
 ##  Notes
 
-Darwin Core recommends best practice is to a controlled vocabulary. Chapman and Wieczorek (2020) recommend the use the EPSG code for the Coordinate Reference System as the controlled vocabulary, if known. If the EPSG code is not known, use the value "not recorded".  This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
+Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
 
 ##  UseCases
 
@@ -3639,7 +3639,7 @@ Conformance
 
 ## Examples
 
-dwc:sex="female": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex has an equivalent in the bdq:sourceAuthority"
+dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex has an equivalent in the bdq:sourceAuthority"
 
 dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex does not have an equivalent in the bdq:sourceAuthority"
 
@@ -3673,7 +3673,7 @@ Does the value of dwc:typeStatus occur in bdq:sourceAuthority?
 
 ## Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; COMPLIANT if the value of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [(https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; COMPLIANT if the value of the first word in each \ bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
 
 ## Rationale Management
 
@@ -3685,7 +3685,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 ##  DateLastUpdated
 
-2024-02-09
+2024-08-03
 
 ##  IE Class
 
@@ -3717,7 +3717,7 @@ Conformance
 
 ## Examples
 
-dwc:typeStatus="holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus has an equivalent in the bdq:sourceAuthority"
+dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus has an equivalent in the bdq:sourceAuthority"
 
 dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus does not have an equivalent in the bdq:sourceAuthority"
 
@@ -4156,7 +4156,7 @@ Conformance
 
 ## Examples
 
-dcterms:license="CC BY": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license matches a term in bdq:sourceAuthority"
+dcterms:license="https://creativecommons.org/licenses/by/4.0/":   Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,  Response.comment="dcterms:license matches a term in   bdq:sourceAuthority"
 
 dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdq:sourceAuthority"
 
@@ -7313,7 +7313,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority was not available; INT
 
 ##  DateLastUpdated
 
-2024-07-24
+2024-08-05
 
 ##  IE Class
 
@@ -7361,7 +7361,7 @@ Paul Morris
 
 ##  Notes
 
-Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
+Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts.
 
 ##  UseCases
 
@@ -7375,11 +7375,11 @@ https://rs.tdwg.org/bdq/c5658b83-4471-4f57-9d94-bf7d0a96900c
 
 ## Description
 
-Propose amendments of the values of dwc:minimumDepthInMeters and/or dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.
+Propose amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.
 
 ## Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimDepth is EMPTY or the value is not unambiguously interpretable or dwc:minimumDepthInMeters and dwc:maximumDepthInMeters are not EMPTY; FILLED_IN the value of dwc:minimumDepthInMeters and/or dwc:maximumDepthInMeters if they could be unambiguously determined from dwc:verbatimDepth; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimDepth is EMPTY or the value is not unambiguously interpretable; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they are EMPTY and could be unambiguously determined from dwc:verbatimDepth; otherwise NOT_AMENDED. 
 
 ## Rationale Management
 
@@ -7391,7 +7391,7 @@ c5658b83-4471-4f57-9d94-bf7d0a96900c
 
 ##  DateLastUpdated
 
-2023-09-17
+2024-08-03
 
 ##  IE Class
 
@@ -7423,9 +7423,9 @@ Completeness
 
 ## Examples
 
-dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="11", dwc:verbatimDepth="Min depth 10m": Response.status=FILLED_IN, Response.result=dwc:minimumDepthInMeters="10", Response.comment="dwc:verbatimDepth contains an interpretable value"
+dwc:minimumDepthInMeters="",  dwc:maximumDepthInMeters="", dwc:verbatimDepth="Maximum depth 100m": Response.status=FILLED_IN, Response.result=dwc:maximumDepthInMeters="100", Response.comment="dwc:verbatimDepth contains an interpretable value"
 
-dwc:minimumDepthInMeters="",  dwc:maximumDepthInMeters="11", dwc:verbatimDepth="Max depth 100m": Response.status=NOT_AMENDED, Response.result="", Response.comment="Input and output fields are conflicting"
+dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="", dwc:verbatimDepth="x": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:verbatimDepth does not contain an interpretable value"
 
 
 ##  References
@@ -7435,7 +7435,7 @@ dwc:minimumDepthInMeters="",  dwc:maximumDepthInMeters="11", dwc:verbatimDepth="
 
 ##  Notes
 
-If the dwc:verbatimDepth has a single value rather than a range, the minimum and maximum values should be amended with the same value.
+If dwc:verbatimDepth has a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform fathoms to meters by multiplying by 1.8288 and retaining added significant digits (verbatim depth of 10 fathoms to minimum and maximum depths in meters of 18.288). Implementations should be capable of interpreting verbatim data in at least meters, fathoms, and feet, in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.
 
 ##  UseCases
 
@@ -7449,11 +7449,11 @@ https://rs.tdwg.org/bdq/2d638c8b-4c62-44a0-a14d-fa147bf9823d
 
 ## Description
 
-Propose amendment(s) to the values of dwc:minimumElevationInMeters and/or dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.
+Propose amendment(s) to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.
 
 ## Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimElevation is EMPTY or dwc:minimumElevationInMeters and/or dwc:maximumElevationInMeters are not EMPTY; FILLED_IN the values of dwc:minimumElevationInMeters and/or dwc:maximumElevationInMeters that could be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED" 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimElevation is EMPTY or the value is not unambiguously interpretable; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they are EMPTY and could be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED 
 
 ## Rationale Management
 
@@ -7465,7 +7465,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimElevation is EMPTY or dwc:minimumE
 
 ##  DateLastUpdated
 
-2023-09-18
+2024-08-03
 
 ##  IE Class
 
@@ -7497,7 +7497,7 @@ Completeness
 
 ## Examples
 
-dwc:verbatimElevation="10feet", dwc:minimumElevationInMeters="", dwc:maximumElevationInMeters="": Response.status=FILLED_IN, Response.result=dwc:minimumElevationInMeters="3.048", dwc:maximumElevationInMeters="3.048", Response.comment="dwc:verbatimElevation contains an interpretable value"
+dwc:verbatimElevation="100 feet", dwc:minimumElevationInMeters="", dwc:maximumElevationInMeters="": Response.status=FILLED_IN, Response.result=dwc:minimumElevationInMeters="30.48", dwc:maximumElevationInMeters="", Response.comment="dwc:verbatimElevation contains an interpretable value"
 
 dwc:verbatimElevation="x", dwc:minimumElevationInMeters="", dwc:maximumElevationInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:verbatimElevation contains an uninterpretable value"
 
@@ -7509,7 +7509,7 @@ dwc:verbatimElevation="x", dwc:minimumElevationInMeters="", dwc:maximumElevation
 
 ##  Notes
 
-If the field dwc:verbatimElevation has a single value rather than a range, the minimum and maximum values should be amended with the same value.
+If the dwc:verbatimElevation as a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform yards to meters by multiplying by 0.9144 and retaining added significant digits (verbatim elevation of 10 yards to minimum and maximum depths in meters of 9.144). Implementations should be capable of interpreting verbatim data in at least meters,  yards, feet, and kilometers in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.
 
 ##  UseCases
 
@@ -7571,7 +7571,7 @@ Conformance
 
 ## Examples
 
-dwc:degreeOfEstablishment="caged": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value according to the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="cap.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value according to the bdq:sourceAuthority"
 
 dwc:degreeOfEstablishment="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:degreeOfEstablishment does not contain an interpretable value according to the bdq:sourceAuthority"
 
@@ -7585,6 +7585,10 @@ TG2
 - Darwin Core Maintenance Group (2021). Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (http://rs.tdwg.org/dwc/doc/doe/)
  - Groom et al. (2019). Improving Darwin Core for research and management of alien species (https://doi.org/10.3897/biss.3.38084)
 
+
+##  Notes
+
+For reference, synonyms for values of dwc:degreeOfEstablishment can be found at https://registry.gbif.org/vocabulary/DegreeOfEstablishment/concepts.
 
 ##  UseCases
 
@@ -7646,7 +7650,7 @@ Conformance
 
 ## Examples
 
-dwc:establishmentMeans="indigenous": Response.status=AMENDED, Response.result=dwc:establishmentMeans="native", Response.comment="dwc:establishmentMeans contains an interpretable value according to the bdq:sourceAuthority"
+dwc:establishmentMeans="nat": Response.status=AMENDED, Response.result=dwc:establishmentMeans="native", Response.comment="dwc:establishmentMeans contains an interpretable value according to the bdq:sourceAuthority"
 
 dwc:establishmentMeans="species": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans does not contain an interpretable value according to the bdq:sourceAuthority"
 
@@ -7677,7 +7681,7 @@ Propose an amendment of the value of dwc:occurrenceStatus to the default paramet
 
 ## Specification
 
-FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrence.Status,  dwc:individualCount and dwc:organismQuantity are EMPTY; otherwise NOT_AMENDED dwc:occurrenceStatus default = "present"
+FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrence.Status,  dwc:individualCount and dwc:organismQuantity are EMPTY; otherwise NOT_AMENDED dwc:defaultOoccurrenceStatus default = "present"
 
 ## Rationale Management
 
@@ -7689,7 +7693,7 @@ FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occ
 
 ##  DateLastUpdated
 
-2023-09-18
+2024-07-30
 
 ##  IE Class
 
@@ -7705,7 +7709,7 @@ dwc:individualCount,dwc:organismQuantity
 
 ##  Parameters
 
-dwc:occurrenceStatus
+dwc:defaultOccurrenceStatus
 
 ##  Criterion Label
 
@@ -7867,7 +7871,7 @@ Conformance
 
 ## Examples
 
-dwc:pathway="Stowaway on Truck": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway contains an interpretable value according to the bdq:sourceAuthority"
+dwc:pathway="Stowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway contains an interpretable value according to the bdq:sourceAuthority"
 
 dwc:pathway="weed": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway does not contain an interpretable value according to the bdq:sourceAuthority"
 
@@ -7881,6 +7885,10 @@ TG2
 - Darwin Core Maintenance Group (2021). Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/pw/)
  - Groom et al. (2019). Improving Darwin Core for research and management of alien species (https://doi.org/10.3897/biss.3.38084)
 
+
+##  Notes
+
+For reference, synonyms for values of dwc:pthway can be found at https://registry.gbif.org/vocabulary/Pathway/concepts.
 
 ##  UseCases
 
@@ -7942,7 +7950,7 @@ Conformance
 
 ## Examples
 
-dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="female", Response.comment="dwc:sex contains an interpretable value according to the bdq:sourceAuthority"
+dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex contains an interpretable value according to the bdq:sourceAuthority"
 
 dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex does not contain an interpretable value according to the bdq:sourceAuthority"
 
@@ -7955,6 +7963,10 @@ TG2
 
  - References: GBIF (2013). Darwin Core Vocabulary. Sex GBIF Vocabulary https://rs.gbif.org/vocabulary/gbif/sex.xml
 
+
+##  Notes
+
+For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts
 
 ##  UseCases
 
@@ -7972,7 +7984,7 @@ Propose amendment to the value of dwc:typeStatus using bdq:sourceAuthority.
 
 ## Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; AMENDED the value of dwc:typeStatus if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [(https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; AMENDED the value of the first word in each \ bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
 
 ## Rationale Management
 
@@ -7984,7 +7996,7 @@ b3471c65-b53e-453b-8282-abfa27bf1805
 
 ##  DateLastUpdated
 
-2024-02-09
+2024-08-03
 
 ##  IE Class
 
@@ -8016,7 +8028,7 @@ Conformance
 
 ## Examples
 
-dwc:typeStatus="holo": Response.status=AMENDED, Response.result=dwc:typeStatus="holotype", Response.comment="dwc:typeStatus contains an interpretable value according to the bdq:sourceAuthority"
+dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus contains an interpretable value according to the bdq:sourceAuthority"
 
 dwc:typeStatus="cleptotype": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus does not contain an interpretable value according to the bdq:sourceAuthority"
 
@@ -8032,7 +8044,7 @@ TG2
 
 ##  Notes
 
-Valuable for data quality needs related to voucher specimens in natural science collections.   Almost all occurrence data will have no value in dwc:typeStatus.
+Valuable for data quality needs related to voucher specimens in natural science collections.   Almost all occurrence data will have no value in dwc:typeStatus.  For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts.
 
 ##  UseCases
 
@@ -8241,7 +8253,7 @@ Conformance
 
 ## Examples
 
-dcterms:license="CC0": Response.status=AMENDED, Response.result=dcterms:license="http://creativecommons.org/publicdomain/zero/1.0/legalcode", Response.comment="Input field contains interpretable value"
+dcterms:license="CC0": Response.status=AMENDED, Response.result=dcterms:license="https://creativecommons.org/publicdomain/zero/1.0/legalcode", Response.comment="Input field contains interpretable value"
 
 dcterms:license="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="dcterms:license contains uninterpretable value "X""
 
@@ -8326,7 +8338,7 @@ Conformance
 
 dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Chicoreus palmarosae (Lamarck, 1822)", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="Mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Chicoreus", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="palmarosae", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="(Lamarck, 1822)", dwc:taxonRank="", bdq:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID="urn:lsid:marinespecies.org:taxname:208134", Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship.  Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134"
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."
+dwc:scientificNameID="", dwc:taxonID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."
 
 
 ##  Source
@@ -8501,6 +8513,10 @@ TDWG2018
 
 - GBIF Registry (2023). GBIF Vocabulary: Taxonomic Rank  (https://registry.gbif.org/vocabulary/TaxonRank/concepts)
 
+
+##  Notes
+
+For reference, information about possible values of dwc:taxonRank can be found at https://registry.gbif.org/vocabulary/TaxonRank/concepts
 
 ##  UseCases
 
