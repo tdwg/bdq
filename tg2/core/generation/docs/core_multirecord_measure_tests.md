@@ -26,7 +26,7 @@ These MultiRecord Measures operate on the results of Validations performed on a 
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_STATEPROVINCE_CONSISTENT](#MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_STATEPROVINCE_CONSISTENT), [MULTIRECORD_MEASURE_QA_COORDINATES_STATEPROVINCE_CONSISTENT](#MULTIRECORD_MEASURE_QA_COORDINATES_STATEPROVINCE_CONSISTENT), 
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
-https://rs.tdwg.org/bdq/a537ba9e-1682-44a0-b214-2cb4584bb1d9
+https://rs.tdwg.org/bdq/780480ff-8c4a-4276-aaca-cbd1248de9fa
 
 ## Description
 
@@ -42,7 +42,7 @@ Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response
 
 ##  GUID
 
-a537ba9e-1682-44a0-b214-2cb4584bb1d9
+780480ff-8c4a-4276-aaca-cbd1248de9fa
 
 ##  DateLastUpdated
 
@@ -94,7 +94,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
-https://rs.tdwg.org/bdq/e07f0508-8644-4f71-9700-0186133bc1f8
+https://rs.tdwg.org/bdq/c3e0100f-dfc3-4379-a855-df878eef295e
 
 ## Description
 
@@ -110,7 +110,7 @@ Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Respons
 
 ##  GUID
 
-e07f0508-8644-4f71-9700-0186133bc1f8
+c3e0100f-dfc3-4379-a855-df878eef295e
 
 ##  DateLastUpdated
 
@@ -162,7 +162,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdq/4549d2c0-afe2-4d8e-b861-75d5cd531a80
+https://rs.tdwg.org/bdq/7775309b-5331-4a65-b839-cbe959948d33
 
 ## Description
 
@@ -178,7 +178,7 @@ Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have
 
 ##  GUID
 
-4549d2c0-afe2-4d8e-b861-75d5cd531a80
+7775309b-5331-4a65-b839-cbe959948d33
 
 ##  DateLastUpdated
 
@@ -230,7 +230,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
-https://rs.tdwg.org/bdq/f9fa732b-fc79-4b5f-bfc6-2c04caa08c13
+https://rs.tdwg.org/bdq/c8250600-de61-4047-9d7c-6e06a38c7994
 
 ## Description
 
@@ -246,7 +246,7 @@ Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Re
 
 ##  GUID
 
-f9fa732b-fc79-4b5f-bfc6-2c04caa08c13
+c8250600-de61-4047-9d7c-6e06a38c7994
 
 ##  DateLastUpdated
 
@@ -298,7 +298,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
-https://rs.tdwg.org/bdq/16fbb498-573c-4e44-880b-ba4c7d14c218
+https://rs.tdwg.org/bdq/3f62eaa2-747f-456b-85e6-1a6e74086a18
 
 ## Description
 
@@ -314,7 +314,7 @@ Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have R
 
 ##  GUID
 
-16fbb498-573c-4e44-880b-ba4c7d14c218
+3f62eaa2-747f-456b-85e6-1a6e74086a18
 
 ##  DateLastUpdated
 
@@ -366,7 +366,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
-https://rs.tdwg.org/bdq/8ad2d536-d91d-403d-8419-01d15a3f9534
+https://rs.tdwg.org/bdq/bffd7499-aca3-423f-bb43-f7bdc9260f4f
 
 ## Description
 
@@ -382,7 +382,7 @@ Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have R
 
 ##  GUID
 
-8ad2d536-d91d-403d-8419-01d15a3f9534
+bffd7499-aca3-423f-bb43-f7bdc9260f4f
 
 ##  DateLastUpdated
 
@@ -434,7 +434,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
-https://rs.tdwg.org/bdq/e3a4f3ef-576f-4109-b9cf-5f29abdbef12
+https://rs.tdwg.org/bdq/1919f212-b7db-4b6e-9697-41a715001bd6
 
 ## Description
 
@@ -450,7 +450,7 @@ Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Res
 
 ##  GUID
 
-e3a4f3ef-576f-4109-b9cf-5f29abdbef12
+1919f212-b7db-4b6e-9697-41a715001bd6
 
 ##  DateLastUpdated
 
@@ -502,7 +502,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_TEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdq/324b2798-7957-41a4-9f87-b74c89ca78cf
+https://rs.tdwg.org/bdq/0adce26e-996b-4ee6-b3df-1368103462b3
 
 ## Description
 
@@ -518,7 +518,7 @@ Count the number of VALIDATION_EVENT_TEMPORAL_NOTEMPTY in the MultiRecord that h
 
 ##  GUID
 
-324b2798-7957-41a4-9f87-b74c89ca78cf
+0adce26e-996b-4ee6-b3df-1368103462b3
 
 ##  DateLastUpdated
 
@@ -570,7 +570,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
-https://rs.tdwg.org/bdq/eb9022ec-340d-40b9-9e88-ee67d8637c62
+https://rs.tdwg.org/bdq/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3
 
 ## Description
 
@@ -586,7 +586,7 @@ Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Respo
 
 ##  GUID
 
-eb9022ec-340d-40b9-9e88-ee67d8637c62
+c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3
 
 ##  DateLastUpdated
 
@@ -638,7 +638,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdq/60682697-33f0-44d1-93e9-deefbadbf39b
+https://rs.tdwg.org/bdq/76008c6b-c56a-4233-84e3-8584950037ec
 
 ## Description
 
@@ -654,7 +654,7 @@ Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that ha
 
 ##  GUID
 
-60682697-33f0-44d1-93e9-deefbadbf39b
+76008c6b-c56a-4233-84e3-8584950037ec
 
 ##  DateLastUpdated
 
@@ -706,7 +706,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
-https://rs.tdwg.org/bdq/0aaf9bba-27de-4b70-8778-1211c61a1843
+https://rs.tdwg.org/bdq/aee65eb8-8d1e-4b8f-bd37-5822e29f5734
 
 ## Description
 
@@ -722,7 +722,7 @@ Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Respons
 
 ##  GUID
 
-0aaf9bba-27de-4b70-8778-1211c61a1843
+aee65eb8-8d1e-4b8f-bd37-5822e29f5734
 
 ##  DateLastUpdated
 
@@ -774,7 +774,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
-https://rs.tdwg.org/bdq/75904642-715c-4aa3-b955-bca139d3787b
+https://rs.tdwg.org/bdq/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5
 
 ## Description
 
@@ -790,7 +790,7 @@ Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Respon
 
 ##  GUID
 
-75904642-715c-4aa3-b955-bca139d3787b
+687d3ad1-93a3-4a1f-b69f-da5a1eb761a5
 
 ##  DateLastUpdated
 
@@ -846,11 +846,11 @@ https://rs.tdwg.org/bdq/85dc5d02-9847-420f-a026-6a0e70962d2a
 
 ## Description
 
-Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -914,11 +914,11 @@ https://rs.tdwg.org/bdq/371035f6-42b5-494f-86d9-de2f44a6cdc6
 
 ## Description
 
-Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -982,11 +982,11 @@ https://rs.tdwg.org/bdq/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8
 
 ## Description
 
-Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1054,7 +1054,7 @@ Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1122,7 +1122,7 @@ Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1190,7 +1190,7 @@ Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1258,7 +1258,7 @@ Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1326,7 +1326,7 @@ Measure if all VALIDATION_EVENT_TEMPORAL_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_EVENT_TEMPORAL_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_EVENT_TEMPORAL_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1390,11 +1390,11 @@ https://rs.tdwg.org/bdq/b3c2bb86-e239-4532-ae0c-b121ec1ee025
 
 ## Description
 
-Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1458,11 +1458,11 @@ https://rs.tdwg.org/bdq/8c217eee-9cd0-48c3-aea0-90151c6c5bfd
 
 ## Description
 
-Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1530,7 +1530,7 @@ Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1598,7 +1598,7 @@ Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1658,7 +1658,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
-https://rs.tdwg.org/bdq/2b4283cc-4ac3-4462-b877-6c2878904032
+https://rs.tdwg.org/bdq/c72fda2d-16e1-4ded-91a5-a7094339d603
 
 ## Description
 
@@ -1674,7 +1674,7 @@ Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that ha
 
 ##  GUID
 
-2b4283cc-4ac3-4462-b877-6c2878904032
+c72fda2d-16e1-4ded-91a5-a7094339d603
 
 ##  DateLastUpdated
 
@@ -1726,7 +1726,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
-https://rs.tdwg.org/bdq/edb6ce00-a966-437c-887f-3ebbbf09db4e
+https://rs.tdwg.org/bdq/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9
 
 ## Description
 
@@ -1742,7 +1742,7 @@ Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that h
 
 ##  GUID
 
-edb6ce00-a966-437c-887f-3ebbbf09db4e
+49b787eb-7dce-4ace-97f5-7cbb47cd8cb9
 
 ##  DateLastUpdated
 
@@ -1802,7 +1802,7 @@ Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1870,7 +1870,7 @@ Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -1930,7 +1930,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_COUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdq/c7401c1d-e18c-4075-81d9-25f5bd57da5d
+https://rs.tdwg.org/bdq/c44ce101-fb76-4948-a4f3-14c6dc5fee4a
 
 ## Description
 
@@ -1946,7 +1946,7 @@ Count the number of VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in the MultiRe
 
 ##  GUID
 
-c7401c1d-e18c-4075-81d9-25f5bd57da5d
+c44ce101-fb76-4948-a4f3-14c6dc5fee4a
 
 ##  DateLastUpdated
 
@@ -1998,7 +1998,7 @@ bdq:Spatial-Temporal Patterns
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
-https://rs.tdwg.org/bdq/89e8ece4-332d-4db1-bb11-fdbea32be1aa
+https://rs.tdwg.org/bdq/0e239a55-0f19-4c68-bdbf-20580f27a647
 
 ## Description
 
@@ -2014,7 +2014,7 @@ Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have 
 
 ##  GUID
 
-89e8ece4-332d-4db1-bb11-fdbea32be1aa
+0e239a55-0f19-4c68-bdbf-20580f27a647
 
 ##  DateLastUpdated
 
@@ -2066,7 +2066,7 @@ bdq:Spatial-Temporal Patterns
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_STATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdq/4b5b3b2a-83a5-4297-b030-d7abd9ec7373
+https://rs.tdwg.org/bdq/47d83e78-20fa-4da1-a867-4e93c7161f0d
 
 ## Description
 
@@ -2082,7 +2082,7 @@ Count the number of VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in the Multi
 
 ##  GUID
 
-4b5b3b2a-83a5-4297-b030-d7abd9ec7373
+47d83e78-20fa-4da1-a867-4e93c7161f0d
 
 ##  DateLastUpdated
 
@@ -2130,7 +2130,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_TERRESTRIALMARINE
-https://rs.tdwg.org/bdq/da52cf3f-c709-4219-ad10-5cab1d9f438a
+https://rs.tdwg.org/bdq/10c84d1f-69b9-4321-a5a8-58a582e71fbc
 
 ## Description
 
@@ -2146,7 +2146,7 @@ Count the number of VALIDATION_COORDINATES_TERRESTRIALMARINE in the MultiRecord 
 
 ##  GUID
 
-da52cf3f-c709-4219-ad10-5cab1d9f438a
+10c84d1f-69b9-4321-a5a8-58a582e71fbc
 
 ##  DateLastUpdated
 
@@ -2198,7 +2198,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
-https://rs.tdwg.org/bdq/f60042ab-40dc-4faa-9167-7c8e90b76862
+https://rs.tdwg.org/bdq/2d90d94b-d384-4bac-aa68-c6800d765882
 
 ## Description
 
@@ -2214,7 +2214,7 @@ Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord 
 
 ##  GUID
 
-f60042ab-40dc-4faa-9167-7c8e90b76862
+2d90d94b-d384-4bac-aa68-c6800d765882
 
 ##  DateLastUpdated
 
@@ -2266,7 +2266,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
-https://rs.tdwg.org/bdq/7329735a-9217-4ab0-bf23-cc89d7d682cd
+https://rs.tdwg.org/bdq/d71be8d4-1a04-4816-90c5-49808c823651
 
 ## Description
 
@@ -2282,7 +2282,7 @@ Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have
 
 ##  GUID
 
-7329735a-9217-4ab0-bf23-cc89d7d682cd
+d71be8d4-1a04-4816-90c5-49808c823651
 
 ##  DateLastUpdated
 
@@ -2334,7 +2334,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
-https://rs.tdwg.org/bdq/a0ffc01d-826e-46d1-88bd-f732f4b1712d
+https://rs.tdwg.org/bdq/38966850-3737-4a67-953c-c231469e0489
 
 ## Description
 
@@ -2350,7 +2350,7 @@ Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have
 
 ##  GUID
 
-a0ffc01d-826e-46d1-88bd-f732f4b1712d
+38966850-3737-4a67-953c-c231469e0489
 
 ##  DateLastUpdated
 
@@ -2402,7 +2402,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdq/677af99c-3649-4871-ae51-6a3e513d5b85
+https://rs.tdwg.org/bdq/c31f6820-ef6b-427b-84b7-68545ea64324
 
 ## Description
 
@@ -2418,7 +2418,7 @@ Count the number of VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT in the MultiRecor
 
 ##  GUID
 
-677af99c-3649-4871-ae51-6a3e513d5b85
+c31f6820-ef6b-427b-84b7-68545ea64324
 
 ##  DateLastUpdated
 
@@ -2470,7 +2470,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
-https://rs.tdwg.org/bdq/8f9a1d62-cbe1-4151-8f8f-06d11df18d62
+https://rs.tdwg.org/bdq/8b73f37d-89ed-479a-8389-9e71ad2ac84d
 
 ## Description
 
@@ -2486,7 +2486,7 @@ Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiReco
 
 ##  GUID
 
-8f9a1d62-cbe1-4151-8f8f-06d11df18d62
+8b73f37d-89ed-479a-8389-9e71ad2ac84d
 
 ##  DateLastUpdated
 
@@ -2538,7 +2538,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_COUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdq/fd3da2c7-667d-4e14-8f7e-892b44bc0367
+https://rs.tdwg.org/bdq/d197716f-6556-4010-822c-252479b17c1a
 
 ## Description
 
@@ -2554,7 +2554,7 @@ Count the number of VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in the MultiRecord
 
 ##  GUID
 
-fd3da2c7-667d-4e14-8f7e-892b44bc0367
+d197716f-6556-4010-822c-252479b17c1a
 
 ##  DateLastUpdated
 
@@ -2606,7 +2606,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
-https://rs.tdwg.org/bdq/383fb980-12f3-4d66-8c84-da14da7c68c0
+https://rs.tdwg.org/bdq/f15c38c3-d96d-4e9c-982d-410fb71cf2bc
 
 ## Description
 
@@ -2622,7 +2622,7 @@ Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Respon
 
 ##  GUID
 
-383fb980-12f3-4d66-8c84-da14da7c68c0
+f15c38c3-d96d-4e9c-982d-410fb71cf2bc
 
 ##  DateLastUpdated
 
@@ -2674,7 +2674,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
-https://rs.tdwg.org/bdq/42a535f6-2c78-4247-9ab5-53c304327653
+https://rs.tdwg.org/bdq/6887c881-dc52-409b-8979-9c2f05e55569
 
 ## Description
 
@@ -2690,7 +2690,7 @@ Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Res
 
 ##  GUID
 
-42a535f6-2c78-4247-9ab5-53c304327653
+6887c881-dc52-409b-8979-9c2f05e55569
 
 ##  DateLastUpdated
 
@@ -2742,7 +2742,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
-https://rs.tdwg.org/bdq/eb173d5b-c039-4567-9948-add6304224e7
+https://rs.tdwg.org/bdq/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26
 
 ## Description
 
@@ -2758,7 +2758,7 @@ Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that h
 
 ##  GUID
 
-eb173d5b-c039-4567-9948-add6304224e7
+f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26
 
 ##  DateLastUpdated
 
@@ -2810,7 +2810,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
-https://rs.tdwg.org/bdq/ceca7ac1-b4b9-4b83-b0b8-33e805f9f23d
+https://rs.tdwg.org/bdq/bceae35a-52ab-4968-846f-069ace766513
 
 ## Description
 
@@ -2826,7 +2826,7 @@ Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that 
 
 ##  GUID
 
-ceca7ac1-b4b9-4b83-b0b8-33e805f9f23d
+bceae35a-52ab-4968-846f-069ace766513
 
 ##  DateLastUpdated
 
@@ -2878,7 +2878,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
-https://rs.tdwg.org/bdq/0cb88ddf-a670-4ab4-b435-46e1da281f8f
+https://rs.tdwg.org/bdq/c70c4950-2246-4acc-a59d-81eaa47edf2b
 
 ## Description
 
@@ -2894,7 +2894,7 @@ Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that 
 
 ##  GUID
 
-0cb88ddf-a670-4ab4-b435-46e1da281f8f
+c70c4950-2246-4acc-a59d-81eaa47edf2b
 
 ##  DateLastUpdated
 
@@ -2946,7 +2946,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
-https://rs.tdwg.org/bdq/72cbd18a-cb52-44b0-8db5-d0ac7d6d274b
+https://rs.tdwg.org/bdq/f948a30e-8084-48d5-b1ca-d77c476f181f
 
 ## Description
 
@@ -2962,7 +2962,7 @@ Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that
 
 ##  GUID
 
-72cbd18a-cb52-44b0-8db5-d0ac7d6d274b
+f948a30e-8084-48d5-b1ca-d77c476f181f
 
 ##  DateLastUpdated
 
@@ -3014,7 +3014,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
-https://rs.tdwg.org/bdq/f57655a4-0a24-4b29-a93f-584350e7b44e
+https://rs.tdwg.org/bdq/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f
 
 ## Description
 
@@ -3030,7 +3030,7 @@ Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that ha
 
 ##  GUID
 
-f57655a4-0a24-4b29-a93f-584350e7b44e
+63fbaf3c-3d41-4ab6-bfc0-904f1b26835f
 
 ##  DateLastUpdated
 
@@ -3082,7 +3082,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
-https://rs.tdwg.org/bdq/214c30fc-0d63-48cd-a560-8dc1ec192b40
+https://rs.tdwg.org/bdq/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63
 
 ## Description
 
@@ -3098,7 +3098,7 @@ Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that ha
 
 ##  GUID
 
-214c30fc-0d63-48cd-a560-8dc1ec192b40
+8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63
 
 ##  DateLastUpdated
 
@@ -3150,7 +3150,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
-https://rs.tdwg.org/bdq/a6cb344b-ff8a-493a-9a9c-d35b8e0a88d3
+https://rs.tdwg.org/bdq/bac852b5-1ba6-427b-aa8e-02018e99279c
 
 ## Description
 
@@ -3166,7 +3166,7 @@ Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Re
 
 ##  GUID
 
-a6cb344b-ff8a-493a-9a9c-d35b8e0a88d3
+bac852b5-1ba6-427b-aa8e-02018e99279c
 
 ##  DateLastUpdated
 
@@ -3218,7 +3218,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
-https://rs.tdwg.org/bdq/8ed4bbce-1c7a-473b-b1ac-70673383d2c2
+https://rs.tdwg.org/bdq/3de8af03-05d4-4fd8-8e6d-ba886dc5446f
 
 ## Description
 
@@ -3234,7 +3234,7 @@ Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Res
 
 ##  GUID
 
-8ed4bbce-1c7a-473b-b1ac-70673383d2c2
+3de8af03-05d4-4fd8-8e6d-ba886dc5446f
 
 ##  DateLastUpdated
 
@@ -3286,7 +3286,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
-https://rs.tdwg.org/bdq/973a0099-934c-4053-b1eb-471e5baf2838
+https://rs.tdwg.org/bdq/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5
 
 ## Description
 
@@ -3302,7 +3302,7 @@ Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have
 
 ##  GUID
 
-973a0099-934c-4053-b1eb-471e5baf2838
+6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5
 
 ##  DateLastUpdated
 
@@ -3354,7 +3354,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
-https://rs.tdwg.org/bdq/91682f31-8136-4c96-af67-43e214baa9c1
+https://rs.tdwg.org/bdq/9c66c116-6644-45b4-b4c7-db7a4ee7c500
 
 ## Description
 
@@ -3370,7 +3370,7 @@ Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Res
 
 ##  GUID
 
-91682f31-8136-4c96-af67-43e214baa9c1
+9c66c116-6644-45b4-b4c7-db7a4ee7c500
 
 ##  DateLastUpdated
 
@@ -3422,7 +3422,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
-https://rs.tdwg.org/bdq/4edbe1c3-abc4-46d6-9d4d-4bb236252d97
+https://rs.tdwg.org/bdq/b21256c2-4bb7-4deb-852d-a9eaa05345e7
 
 ## Description
 
@@ -3438,7 +3438,7 @@ Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord tha
 
 ##  GUID
 
-4edbe1c3-abc4-46d6-9d4d-4bb236252d97
+b21256c2-4bb7-4deb-852d-a9eaa05345e7
 
 ##  DateLastUpdated
 
@@ -3490,7 +3490,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
-https://rs.tdwg.org/bdq/5cbaaf4e-6870-4240-b128-a47c69770773
+https://rs.tdwg.org/bdq/071267a0-d993-4961-a3f7-d8210810d167
 
 ## Description
 
@@ -3506,7 +3506,7 @@ Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have
 
 ##  GUID
 
-5cbaaf4e-6870-4240-b128-a47c69770773
+071267a0-d993-4961-a3f7-d8210810d167
 
 ##  DateLastUpdated
 
@@ -3558,7 +3558,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
-https://rs.tdwg.org/bdq/e94539b7-a405-442a-9009-813cf044d711
+https://rs.tdwg.org/bdq/be2eb717-b390-47d1-b7ba-965a1101e215
 
 ## Description
 
@@ -3574,7 +3574,7 @@ Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRe
 
 ##  GUID
 
-e94539b7-a405-442a-9009-813cf044d711
+be2eb717-b390-47d1-b7ba-965a1101e215
 
 ##  DateLastUpdated
 
@@ -3626,7 +3626,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
-https://rs.tdwg.org/bdq/c5aaeada-1856-4c81-ad94-ba52e712f36e
+https://rs.tdwg.org/bdq/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6
 
 ## Description
 
@@ -3642,7 +3642,7 @@ Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have 
 
 ##  GUID
 
-c5aaeada-1856-4c81-ad94-ba52e712f36e
+58fdd5c1-6201-49a1-a7cd-f49c210dc0b6
 
 ##  DateLastUpdated
 
@@ -3698,11 +3698,11 @@ https://rs.tdwg.org/bdq/d105bb0f-ec58-47d3-92f7-7d031f13534f
 
 ## Description
 
-Measure if all VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -3770,7 +3770,7 @@ Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -3834,11 +3834,11 @@ https://rs.tdwg.org/bdq/c87aac27-bee7-45cf-b75c-e5a2d40b28e5
 
 ## Description
 
-Measure if all VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -3898,11 +3898,11 @@ https://rs.tdwg.org/bdq/7e0f4e97-acae-466a-a9bf-c31956a85b4f
 
 ## Description
 
-Measure if all VALIDATION_COORDINATES_TERRESTRIALMARINE in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATES_TERRESTRIALMARINE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_COORDINATES_TERRESTRIALMARINE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COORDINATES_TERRESTRIALMARINE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -3966,11 +3966,11 @@ https://rs.tdwg.org/bdq/d94b0130-7a13-4fa8-955c-eff5c47bd9de
 
 ## Description
 
-Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4038,7 +4038,7 @@ Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4102,11 +4102,11 @@ https://rs.tdwg.org/bdq/fedf27b2-e01d-459f-98fc-7f0f39e3d4be
 
 ## Description
 
-Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4174,7 +4174,7 @@ Measure if all VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT in a record set are CO
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4242,7 +4242,7 @@ Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are C
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4306,11 +4306,11 @@ https://rs.tdwg.org/bdq/73fd9f74-7a81-4938-a51f-935d0786092d
 
 ## Description
 
-Measure if all VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4378,7 +4378,7 @@ Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4446,7 +4446,7 @@ Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4514,7 +4514,7 @@ Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4582,7 +4582,7 @@ Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4650,7 +4650,7 @@ Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4718,7 +4718,7 @@ Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIAN
 
 ## Specification
 
-COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4786,7 +4786,7 @@ Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4854,7 +4854,7 @@ Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4922,7 +4922,7 @@ Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -4986,11 +4986,11 @@ https://rs.tdwg.org/bdq/c73d49d1-06e4-4272-8249-6a26e7f8abca
 
 ## Description
 
-Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5054,11 +5054,11 @@ https://rs.tdwg.org/bdq/7c5a6ba0-399d-4570-878a-4a064e2406fe
 
 ## Description
 
-Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5122,11 +5122,11 @@ https://rs.tdwg.org/bdq/49d756a8-e654-4267-a290-d1def5d2c5f9
 
 ## Description
 
-Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5190,11 +5190,11 @@ https://rs.tdwg.org/bdq/fcabd2c9-392c-4841-a5d7-e2680c9587ab
 
 ## Description
 
-Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT
+Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5258,11 +5258,11 @@ https://rs.tdwg.org/bdq/1ba18c8b-66a6-47d9-a709-404439332dba
 
 ## Description
 
-Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5326,11 +5326,11 @@ https://rs.tdwg.org/bdq/44f00697-ca66-43cf-8f16-646b40c0f514
 
 ## Description
 
-Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT
+Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5394,11 +5394,11 @@ https://rs.tdwg.org/bdq/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194
 
 ## Description
 
-Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -5458,7 +5458,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
-https://rs.tdwg.org/bdq/f0ebf7d3-6ffd-4286-bff3-53977a291110
+https://rs.tdwg.org/bdq/1b8ae68e-63f1-41c0-9025-fbe64db38d64
 
 ## Description
 
@@ -5474,7 +5474,7 @@ Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord
 
 ##  GUID
 
-f0ebf7d3-6ffd-4286-bff3-53977a291110
+1b8ae68e-63f1-41c0-9025-fbe64db38d64
 
 ##  DateLastUpdated
 
@@ -5526,7 +5526,7 @@ bdq:Alien-Species
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
-https://rs.tdwg.org/bdq/051285cd-ff62-4c2e-bf03-fd01a8062dc1
+https://rs.tdwg.org/bdq/130bb875-6b7c-4965-b864-d53f9d05b2cd
 
 ## Description
 
@@ -5542,7 +5542,7 @@ Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord th
 
 ##  GUID
 
-051285cd-ff62-4c2e-bf03-fd01a8062dc1
+130bb875-6b7c-4965-b864-d53f9d05b2cd
 
 ##  DateLastUpdated
 
@@ -5594,7 +5594,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
-https://rs.tdwg.org/bdq/e19d797f-2418-4234-8862-a5ad861d33cc
+https://rs.tdwg.org/bdq/0c9a139e-5d23-44de-a495-14ec08c61a1c
 
 ## Description
 
@@ -5610,7 +5610,7 @@ Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that hav
 
 ##  GUID
 
-e19d797f-2418-4234-8862-a5ad861d33cc
+0c9a139e-5d23-44de-a495-14ec08c61a1c
 
 ##  DateLastUpdated
 
@@ -5662,7 +5662,7 @@ bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
-https://rs.tdwg.org/bdq/f23223aa-f4c5-43ea-bc23-483abdd42747
+https://rs.tdwg.org/bdq/298db0c9-a85a-41ee-b111-d622fd969d71
 
 ## Description
 
@@ -5678,7 +5678,7 @@ Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that
 
 ##  GUID
 
-f23223aa-f4c5-43ea-bc23-483abdd42747
+298db0c9-a85a-41ee-b111-d622fd969d71
 
 ##  DateLastUpdated
 
@@ -5730,7 +5730,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
-https://rs.tdwg.org/bdq/6bb527af-5fe0-46bd-bf13-d1931be258da
+https://rs.tdwg.org/bdq/faca6558-dbff-4d26-a5cb-e11cdf632fe7
 
 ## Description
 
@@ -5746,7 +5746,7 @@ Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that
 
 ##  GUID
 
-6bb527af-5fe0-46bd-bf13-d1931be258da
+faca6558-dbff-4d26-a5cb-e11cdf632fe7
 
 ##  DateLastUpdated
 
@@ -5798,7 +5798,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
-https://rs.tdwg.org/bdq/1e73f164-39d0-43ee-93ed-cc77e4e115e0
+https://rs.tdwg.org/bdq/15e0da1d-1a43-4075-8454-b2e618cdd25b
 
 ## Description
 
@@ -5814,7 +5814,7 @@ Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Res
 
 ##  GUID
 
-1e73f164-39d0-43ee-93ed-cc77e4e115e0
+15e0da1d-1a43-4075-8454-b2e618cdd25b
 
 ##  DateLastUpdated
 
@@ -5866,7 +5866,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
-https://rs.tdwg.org/bdq/40df9845-d780-4316-bdfc-2acbbf793bf5
+https://rs.tdwg.org/bdq/e4d35063-2366-4dda-8eaa-326340361da3
 
 ## Description
 
@@ -5882,7 +5882,7 @@ Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Respons
 
 ##  GUID
 
-40df9845-d780-4316-bdfc-2acbbf793bf5
+e4d35063-2366-4dda-8eaa-326340361da3
 
 ##  DateLastUpdated
 
@@ -5934,7 +5934,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
-https://rs.tdwg.org/bdq/70058cbd-01eb-42ac-a514-e29e3c53204e
+https://rs.tdwg.org/bdq/b5a14d76-292e-499b-b80f-9546243311a0
 
 ## Description
 
@@ -5950,7 +5950,7 @@ Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have 
 
 ##  GUID
 
-70058cbd-01eb-42ac-a514-e29e3c53204e
+b5a14d76-292e-499b-b80f-9546243311a0
 
 ##  DateLastUpdated
 
@@ -6006,11 +6006,11 @@ https://rs.tdwg.org/bdq/ba953672-6526-4375-97e8-b4e9d1a7d3a0
 
 ## Description
 
-Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6074,11 +6074,11 @@ https://rs.tdwg.org/bdq/8dfed701-01a9-415d-a9f8-539280b75975
 
 ## Description
 
-Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6146,7 +6146,7 @@ Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6214,7 +6214,7 @@ Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIAN
 
 ## Specification
 
-COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6282,7 +6282,7 @@ Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIAN
 
 ## Specification
 
-COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6346,11 +6346,11 @@ https://rs.tdwg.org/bdq/ef31ba02-cea7-4d76-990f-99ebbd201fb4
 
 ## Description
 
-Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6414,11 +6414,11 @@ https://rs.tdwg.org/bdq/1b3bbac4-7c00-46d6-8179-1d57c92374ad
 
 ## Description
 
-Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6486,7 +6486,7 @@ Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -6546,7 +6546,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
-https://rs.tdwg.org/bdq/4ebee1b0-f5eb-49aa-a1d5-113972edf572
+https://rs.tdwg.org/bdq/b60c8c58-0137-4b6a-97e9-57d8ca5cf248
 
 ## Description
 
@@ -6562,7 +6562,7 @@ Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that ha
 
 ##  GUID
 
-4ebee1b0-f5eb-49aa-a1d5-113972edf572
+b60c8c58-0137-4b6a-97e9-57d8ca5cf248
 
 ##  DateLastUpdated
 
@@ -6614,7 +6614,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
-https://rs.tdwg.org/bdq/e899411f-9c53-42b9-ae5a-225c6bea268b
+https://rs.tdwg.org/bdq/f5dd74bd-6a22-4792-b675-c7ccf2a2c103
 
 ## Description
 
@@ -6630,7 +6630,7 @@ Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that ha
 
 ##  GUID
 
-e899411f-9c53-42b9-ae5a-225c6bea268b
+f5dd74bd-6a22-4792-b675-c7ccf2a2c103
 
 ##  DateLastUpdated
 
@@ -6682,7 +6682,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
-https://rs.tdwg.org/bdq/aa6c74e9-3b77-4baf-a2da-88b3d0d93337
+https://rs.tdwg.org/bdq/f041ab17-d834-4586-aa6b-090de2e571a8
 
 ## Description
 
@@ -6698,7 +6698,7 @@ Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Resp
 
 ##  GUID
 
-aa6c74e9-3b77-4baf-a2da-88b3d0d93337
+f041ab17-d834-4586-aa6b-090de2e571a8
 
 ##  DateLastUpdated
 
@@ -6750,7 +6750,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
-https://rs.tdwg.org/bdq/044ff100-4677-4512-a044-5c15700cadb0
+https://rs.tdwg.org/bdq/fbe47441-500f-44c7-a1bd-1e872edc5266
 
 ## Description
 
@@ -6766,7 +6766,7 @@ Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Resp
 
 ##  GUID
 
-044ff100-4677-4512-a044-5c15700cadb0
+fbe47441-500f-44c7-a1bd-1e872edc5266
 
 ##  DateLastUpdated
 
@@ -6818,7 +6818,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
-https://rs.tdwg.org/bdq/91be5dde-cc6c-4fa7-8994-dd1753cf0c9f
+https://rs.tdwg.org/bdq/47ee20d9-5087-4f76-a494-6fea05e50b8b
 
 ## Description
 
@@ -6834,7 +6834,7 @@ Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Res
 
 ##  GUID
 
-91be5dde-cc6c-4fa7-8994-dd1753cf0c9f
+47ee20d9-5087-4f76-a494-6fea05e50b8b
 
 ##  DateLastUpdated
 
@@ -6886,7 +6886,7 @@ bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
-https://rs.tdwg.org/bdq/76bea459-dced-4106-93d7-9ed85b1f9801
+https://rs.tdwg.org/bdq/9d5be694-f5da-465d-8c7e-27e6dac69f9f
 
 ## Description
 
@@ -6902,7 +6902,7 @@ Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Res
 
 ##  GUID
 
-76bea459-dced-4106-93d7-9ed85b1f9801
+9d5be694-f5da-465d-8c7e-27e6dac69f9f
 
 ##  DateLastUpdated
 
@@ -6962,7 +6962,7 @@ Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -7030,7 +7030,7 @@ Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -7098,7 +7098,7 @@ Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -7166,7 +7166,7 @@ Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -7234,7 +7234,7 @@ Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -7302,7 +7302,7 @@ Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -7362,7 +7362,7 @@ bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
-https://rs.tdwg.org/bdq/d5f26ac9-ed7a-4de8-8c41-ee0c43d7f328
+https://rs.tdwg.org/bdq/a56fb342-c8ee-4611-8aab-e6c6357e8875
 
 ## Description
 
@@ -7378,7 +7378,7 @@ Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that
 
 ##  GUID
 
-d5f26ac9-ed7a-4de8-8c41-ee0c43d7f328
+a56fb342-c8ee-4611-8aab-e6c6357e8875
 
 ##  DateLastUpdated
 
@@ -7430,7 +7430,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
-https://rs.tdwg.org/bdq/a9008065-59e2-4e56-b854-62826099b1d5
+https://rs.tdwg.org/bdq/7270a362-5f2e-41f0-955a-d7a8eaaf0f17
 
 ## Description
 
@@ -7446,7 +7446,7 @@ Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response
 
 ##  GUID
 
-a9008065-59e2-4e56-b854-62826099b1d5
+7270a362-5f2e-41f0-955a-d7a8eaaf0f17
 
 ##  DateLastUpdated
 
@@ -7498,7 +7498,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
-https://rs.tdwg.org/bdq/d4695a9f-9e4c-4d96-85fc-bcd9b2e619f4
+https://rs.tdwg.org/bdq/97928242-11a9-4ab0-9dd7-3f0465834824
 
 ## Description
 
@@ -7514,7 +7514,7 @@ Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Respons
 
 ##  GUID
 
-d4695a9f-9e4c-4d96-85fc-bcd9b2e619f4
+97928242-11a9-4ab0-9dd7-3f0465834824
 
 ##  DateLastUpdated
 
@@ -7566,7 +7566,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
-https://rs.tdwg.org/bdq/22011c68-1eac-4656-9c15-e6865bd07f68
+https://rs.tdwg.org/bdq/977f7e75-a88e-4e29-a7b1-e8cdd35aa107
 
 ## Description
 
@@ -7582,7 +7582,7 @@ Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response
 
 ##  GUID
 
-22011c68-1eac-4656-9c15-e6865bd07f68
+977f7e75-a88e-4e29-a7b1-e8cdd35aa107
 
 ##  DateLastUpdated
 
@@ -7634,7 +7634,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
-https://rs.tdwg.org/bdq/1dca77b4-2b58-41dd-8cdd-2e7221e3f2bf
+https://rs.tdwg.org/bdq/012eade5-fc64-458a-a13a-a614491bf4e0
 
 ## Description
 
@@ -7650,7 +7650,7 @@ Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Respon
 
 ##  GUID
 
-1dca77b4-2b58-41dd-8cdd-2e7221e3f2bf
+012eade5-fc64-458a-a13a-a614491bf4e0
 
 ##  DateLastUpdated
 
@@ -7702,7 +7702,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
-https://rs.tdwg.org/bdq/2367390e-15d8-4299-9f70-cf98e0e16de8
+https://rs.tdwg.org/bdq/342bd81c-e2b7-41d8-b32b-013992d19f99
 
 ## Description
 
@@ -7718,7 +7718,7 @@ Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Res
 
 ##  GUID
 
-2367390e-15d8-4299-9f70-cf98e0e16de8
+342bd81c-e2b7-41d8-b32b-013992d19f99
 
 ##  DateLastUpdated
 
@@ -7770,7 +7770,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
-https://rs.tdwg.org/bdq/735ba2a9-4548-4b82-acfa-4d329e328172
+https://rs.tdwg.org/bdq/36ea0a78-a079-4014-aca3-2f2b3b11e822
 
 ## Description
 
@@ -7786,7 +7786,7 @@ Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord t
 
 ##  GUID
 
-735ba2a9-4548-4b82-acfa-4d329e328172
+36ea0a78-a079-4014-aca3-2f2b3b11e822
 
 ##  DateLastUpdated
 
@@ -7838,7 +7838,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
-https://rs.tdwg.org/bdq/093210c4-e166-4bc0-bd3e-39dbe8839dca
+https://rs.tdwg.org/bdq/f4fa449c-4b74-4dcf-b4cf-0b73e1496375
 
 ## Description
 
@@ -7854,7 +7854,7 @@ Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response
 
 ##  GUID
 
-093210c4-e166-4bc0-bd3e-39dbe8839dca
+f4fa449c-4b74-4dcf-b4cf-0b73e1496375
 
 ##  DateLastUpdated
 
@@ -7906,7 +7906,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
-https://rs.tdwg.org/bdq/05ffcbba-449f-4806-bd96-11c9e869513a
+https://rs.tdwg.org/bdq/65e66ca0-e9d1-4411-ad26-bb9c43f32afc
 
 ## Description
 
@@ -7922,7 +7922,7 @@ Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Respons
 
 ##  GUID
 
-05ffcbba-449f-4806-bd96-11c9e869513a
+65e66ca0-e9d1-4411-ad26-bb9c43f32afc
 
 ##  DateLastUpdated
 
@@ -7974,7 +7974,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
-https://rs.tdwg.org/bdq/3bc5afd6-2e93-4f50-aec4-04d9d07290b9
+https://rs.tdwg.org/bdq/7da5428e-87b2-4ec2-be82-05b9398b7577
 
 ## Description
 
@@ -7990,7 +7990,7 @@ Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that hav
 
 ##  GUID
 
-3bc5afd6-2e93-4f50-aec4-04d9d07290b9
+7da5428e-87b2-4ec2-be82-05b9398b7577
 
 ##  DateLastUpdated
 
@@ -8042,7 +8042,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
-https://rs.tdwg.org/bdq/d34b63f8-0f82-4226-acb0-787d479d065e
+https://rs.tdwg.org/bdq/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd
 
 ## Description
 
@@ -8058,7 +8058,7 @@ Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRec
 
 ##  GUID
 
-d34b63f8-0f82-4226-acb0-787d479d065e
+dbf3cece-1d83-426e-a5e0-8158fcf9c0cd
 
 ##  DateLastUpdated
 
@@ -8110,7 +8110,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
-https://rs.tdwg.org/bdq/041322e6-7ce1-4152-95f4-7e4c1abc65aa
+https://rs.tdwg.org/bdq/f174ad13-3c67-49f9-8d8b-aba4e933d6f6
 
 ## Description
 
@@ -8126,7 +8126,7 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that
 
 ##  GUID
 
-041322e6-7ce1-4152-95f4-7e4c1abc65aa
+f174ad13-3c67-49f9-8d8b-aba4e933d6f6
 
 ##  DateLastUpdated
 
@@ -8178,7 +8178,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
-https://rs.tdwg.org/bdq/bd5cdfb3-4470-443e-b6e1-89053577c254
+https://rs.tdwg.org/bdq/a9962d33-ad08-453a-8938-2972425034c2
 
 ## Description
 
@@ -8194,7 +8194,7 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that
 
 ##  GUID
 
-bd5cdfb3-4470-443e-b6e1-89053577c254
+a9962d33-ad08-453a-8938-2972425034c2
 
 ##  DateLastUpdated
 
@@ -8246,7 +8246,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
-https://rs.tdwg.org/bdq/266de80f-0614-4c45-9b46-b88ddc1f97a6
+https://rs.tdwg.org/bdq/4e70b0e4-3fd2-4899-802c-439671374eeb
 
 ## Description
 
@@ -8262,7 +8262,7 @@ Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have
 
 ##  GUID
 
-266de80f-0614-4c45-9b46-b88ddc1f97a6
+4e70b0e4-3fd2-4899-802c-439671374eeb
 
 ##  DateLastUpdated
 
@@ -8314,7 +8314,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
-https://rs.tdwg.org/bdq/93ae4604-f994-4af1-9706-591e57882c9d
+https://rs.tdwg.org/bdq/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2
 
 ## Description
 
@@ -8330,7 +8330,7 @@ Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that h
 
 ##  GUID
 
-93ae4604-f994-4af1-9706-591e57882c9d
+0f8b30e2-59dc-46ba-8b91-62049cd1a4e2
 
 ##  DateLastUpdated
 
@@ -8382,7 +8382,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
-https://rs.tdwg.org/bdq/b13dbb46-8c35-4fbc-b783-f065bebce1e9
+https://rs.tdwg.org/bdq/de661615-b338-4557-af5b-d44a89de40fa
 
 ## Description
 
@@ -8398,7 +8398,7 @@ Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have R
 
 ##  GUID
 
-b13dbb46-8c35-4fbc-b783-f065bebce1e9
+de661615-b338-4557-af5b-d44a89de40fa
 
 ##  DateLastUpdated
 
@@ -8450,7 +8450,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
-https://rs.tdwg.org/bdq/1108cd90-8c35-43b4-859e-ab5c08964b32
+https://rs.tdwg.org/bdq/602bc457-6b1d-4f24-adef-d0d31bcdf2f0
 
 ## Description
 
@@ -8466,7 +8466,7 @@ Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have R
 
 ##  GUID
 
-1108cd90-8c35-43b4-859e-ab5c08964b32
+602bc457-6b1d-4f24-adef-d0d31bcdf2f0
 
 ##  DateLastUpdated
 
@@ -8518,7 +8518,7 @@ bdq:Record-Management, bdq:Taxon-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
-https://rs.tdwg.org/bdq/b4bb96b6-2062-4e71-98e1-fdd83e2a45bc
+https://rs.tdwg.org/bdq/54d290e8-ac48-4f31-8af3-676363573217
 
 ## Description
 
@@ -8534,7 +8534,7 @@ Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Respo
 
 ##  GUID
 
-b4bb96b6-2062-4e71-98e1-fdd83e2a45bc
+54d290e8-ac48-4f31-8af3-676363573217
 
 ##  DateLastUpdated
 
@@ -8586,7 +8586,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
-https://rs.tdwg.org/bdq/e054e6d0-229f-4def-b806-f8cdae7272f6
+https://rs.tdwg.org/bdq/782773c9-7b37-483d-8ce2-c6683ba81882
 
 ## Description
 
@@ -8602,7 +8602,7 @@ Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Re
 
 ##  GUID
 
-e054e6d0-229f-4def-b806-f8cdae7272f6
+782773c9-7b37-483d-8ce2-c6683ba81882
 
 ##  DateLastUpdated
 
@@ -8662,7 +8662,7 @@ Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIAN
 
 ## Specification
 
-COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -8726,11 +8726,11 @@ https://rs.tdwg.org/bdq/21541436-641d-45a9-938c-537484d94eb7
 
 ## Description
 
-Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -8794,11 +8794,11 @@ https://rs.tdwg.org/bdq/a07d7147-2db8-48ce-81b8-e47595ad5f17
 
 ## Description
 
-Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -8862,11 +8862,11 @@ https://rs.tdwg.org/bdq/c5c8db83-3af0-4215-806f-e2f90574b138
 
 ## Description
 
-Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -8934,7 +8934,7 @@ Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9002,7 +9002,7 @@ Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9066,11 +9066,11 @@ https://rs.tdwg.org/bdq/16059801-6adb-4e65-82f4-61eaa70d8df0
 
 ## Description
 
-Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9134,11 +9134,11 @@ https://rs.tdwg.org/bdq/773bb288-fef3-4968-a65a-a69c74d6ecb5
 
 ## Description
 
-Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9202,11 +9202,11 @@ https://rs.tdwg.org/bdq/17364d16-37b7-4ccb-9614-bfb95ff1bca9
 
 ## Description
 
-Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9270,11 +9270,11 @@ https://rs.tdwg.org/bdq/ef05b45b-13b8-4877-9e9d-fa44b332d83c
 
 ## Description
 
-Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUSITES_NOT_MET (indicating some empty value)
 
 ## Specification
 
-COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Respone.status=INTERNAL_PREREQUSITES_NOT_MET, otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9342,7 +9342,7 @@ Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are 
 
 ## Specification
 
-COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9410,7 +9410,7 @@ Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIAN
 
 ## Specification
 
-COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9478,7 +9478,7 @@ Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIAN
 
 ## Specification
 
-COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9546,7 +9546,7 @@ Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9614,7 +9614,7 @@ Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9682,7 +9682,7 @@ Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9750,7 +9750,7 @@ Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9818,7 +9818,7 @@ Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
@@ -9886,7 +9886,7 @@ Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT
 
 ## Specification
 
-COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT, otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 ## Rationale Management
 
