@@ -9,6 +9,8 @@
 import pandas
 import re
 import sys
+with open ("../../../vocabularies/combined_vocabulary.csv") as vocabfile: 
+	vocabDataFrame = pandas.read_csv(vocabfile);
 with open ("../../TG2_multirecord_measure_tests.csv", newline='') as csvfile:
 	sys.stdout = open("../docs/core_multirecord_measure_tests.md","w")
 	rawDataFrame = pandas.read_csv(csvfile)
@@ -33,6 +35,11 @@ with open ("../../TG2_multirecord_measure_tests.csv", newline='') as csvfile:
 		print("")
 		for useCase in usecaseDict.keys(): 
 			print("## ",useCase)
+			print()
+			definitionRow = vocabDataFrame.loc[vocabDataFrame["namespace:Term"]==useCase]
+			definitionCell = definitionRow.iloc[0]["Definition"]
+			print(definitionCell)
+			print()
 			for test in usecaseDict[useCase]:
 				print("[",test,"](#",test,")", sep="", end=", ")
 			print()
