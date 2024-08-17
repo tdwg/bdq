@@ -8009,7 +8009,7 @@ b3471c65-b53e-453b-8282-abfa27bf1805
 
 ##  DateLastUpdated
 
-2024-08-03
+2024-08-16
 
 ##  IE Class
 
@@ -8148,7 +8148,7 @@ Propose amendment to the value of dc:type using the DCMI type vocabulary.
 
 ## Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is EMPTY; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the DCMI Type Vocabulary (see bdq:sourceAuthority); otherwise NOT_AMENDED bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is EMPTY; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
 ## Rationale Management
 
@@ -8160,7 +8160,7 @@ bd385eeb-44a2-464b-a503-7abe407ef904
 
 ##  DateLastUpdated
 
-2024-03-20
+2024-08-16
 
 ##  IE Class
 
