@@ -33,14 +33,20 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 			print("## ",useCase)
 			print()
 			definitionRow = vocabDataFrame.loc[vocabDataFrame["namespace:Term"]==useCase]
-			definitionCell = definitionRow.iloc[0]["Definition"]
-			print(definitionCell)
+			try: 
+				definitionCell = definitionRow.iloc[0]["Definition"]
+				print(definitionCell)
+			except: 
+				print("error extracting definition")
 			print()
 			for test in usecaseDict[useCase]:
 				print("[",test,"](#",test,")", sep="", end=", ")
 			print()
 			print()
+		# TODO: index by information element/information element class
 		for index, row in dataFrame.iterrows():
+			print("## Preferred Label (TODO)")
+			print()
 			print("# ",row['Label'])
 			print("https://rs.tdwg.org/bdq/{}".format(row['GUID']))
 			print()
@@ -63,6 +69,18 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 					pass # skip
 				elif header == "IssueLabels":
 					pass # skip
+				elif header == "Source":
+					pass # skip
+				elif header == "IE class":
+					pass # skip known from information elements
+				elif header == "GUID":
+					pass # skip, shown above
+				elif header == "Link to Specification Source Code":
+					print("## Link to example source code")
+					print()
+					value = row[header]
+					print(value)
+					print()
 				elif header == "Examples":
 					print("## Examples")
 					print()
