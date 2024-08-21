@@ -50,6 +50,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## 2 Use of Terms
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), term IRIs MUST be used as values of `bdqffdq:dataQualityDimension`. Controlled value strings MUST be used as values of `bdqffdq:dataQualityDimension`.
+Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of `bdqffdq:dataQualityDimension`.
 
 ## 3 Term index
