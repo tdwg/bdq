@@ -33,8 +33,8 @@ Proposed attributes of the new test version (Please put actual changes to be imp
 * Date Last Updated (normative):
 * Parameter(s) (normative):
 * Source Authority or Authorities (non normative):
-* References (not normative):
-* Link to Specification Source Code (not informative):
+* References (non normative):
+* Link to Specification Source Code (non informative):
 * Refines (identifier of the broader test this test refines; normative): 
 * Replaces (identifier of the existing test that would be deprecated and replaced by this test; normative): 
 * Usage comments (recommendations regarding content, etc., not normative):
