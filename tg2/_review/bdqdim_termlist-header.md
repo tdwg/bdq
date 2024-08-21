@@ -19,7 +19,7 @@ Part of TDWG Standard
 : <http://www.tdwg.org/standards/[*******]>
 
 This document version
-: <http://rs.tdwg.org/bdq/doc/dim/2024-08-21>
+: <{current_iri}{ratification_date}>
 
 Latest version of document
 : <http://rs.tdwg.org/bdq/doc/dim/>
