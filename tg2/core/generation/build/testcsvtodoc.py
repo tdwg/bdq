@@ -45,9 +45,9 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 			print()
 		# TODO: index by information element/information element class
 		for index, row in dataFrame.iterrows():
-			print("## Preferred Label (TODO)")
+			print("# ",row['prefLabel'])
 			print()
-			print("# ",row['Label'])
+			print("## ",row['Label'])
 			print("https://rs.tdwg.org/bdq/{}".format(row['GUID']))
 			print()
 			print("## Description")
