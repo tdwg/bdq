@@ -19,25 +19,21 @@ Part of TDWG Standard
 : <http://www.tdwg.org/standards/[*******]>
 
 This document version
-: <http://rs.tdwg.org/bdq/doc/em/2024-08-21>
+: <http://rs.tdwg.org/bdq/doc/dim/2024-08-21>
 
 Latest version of document
-: <http://rs.tdwg.org/bdq/doc/em/>
+: <http://rs.tdwg.org/bdq/doc/dim/>
 
 Previous version
-: <http://rs.tdwg.org/dwc/bdq/em/2020-10-13>
+: <http://rs.tdwg.org/dwc/bdq/dim/2020-10-13>
 
-Abstract
-: The BDQ Core term `Dimension` describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate percision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution. 
+**Abstract**: The BDQ Core term `Dimension` describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate precision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution. 
 
-Contributors
-: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Yi Ming Gan
+**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Yi Ming Gan
 
-Creator
-: TDWG Biodiversity Data Quality Interest Group
+**Creator**: TDWG Biodiversity Data Quality Interest Group
 
-Bibliographic citation
-: TDWG Biodiversity Data Qualityy Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/em/2021-09-01>
+**Bibliographic citation**: TDWG Biodiversity Data Qualityy Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/dim/2021-09-01>
 
 
 ## 1 Introduction
@@ -47,7 +43,7 @@ This document includes terms intended to be used as a controlled value for BDQ C
 
 ### 1.1 Status of the content of this document
 
-In Section 4, the values of the `Term IRI`, and `Controlled value` are normative. The values of `Term Name`, `skos:prefLabel` and `Definition` are non-normative. 
+In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. The values of `Term Name` and `skos:prefLabel` are non-normative. 
 
 ### 1.2 RFC 2119 key words
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
