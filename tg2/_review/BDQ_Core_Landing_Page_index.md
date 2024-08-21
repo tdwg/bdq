@@ -2,15 +2,26 @@
 layout: home
 ---
 
-# Darwin Core
+# BDQ Core
 
 {:.lead}
-Darwin Core is a standard maintained by the [Darwin Core Maintenance Interest Group](https://www.tdwg.org/standards/dwc/#maintenance-group">). It includes a glossary of terms (in other contexts these might be called properties, elements, fields, columns, attributes, or concepts) intended to **facilitate the sharing of information about biological diversity** by providing identifiers, labels, and definitions. Darwin Core is primarily based on taxa, their occurrence in nature as documented by observations, specimens, samples, and related information.
+BDQ Core is a standard maintained by the [BDQ Core Maintenance Interest Group](https://www.tdwg.org/standards/bdq/#maintenance-group">). BDQ Core is based on a Data Quality Framework [Framework]. It includes a suite of tests and related vocabularies intended to **facilitate the evaluation of the 'quality' or 'fitness for use' of biodiversity data that uses the [Darwin Core standard] (https://dwc.tdwg.org/)**. BDQ Core is not a specification of the quality to which biodiversity data are expected to conform.
 
 ## Getting started
 
-- [Quick Reference Guide](terms/)
-- Usage guides: how to use Darwin Core as [Simple Darwin Core](simple/), [Text (Darwin Core Archives)](text/), [XML](xml/) or [RDF](rdf/)
-- [GitHub repository](https://github.com/tdwg/dwc): where Darwin Core is maintained
-- [Normative term list](list/): the document containing the full history of normative Darwin Core term definitions
-- [Distribution files](https://github.com/tdwg/dwc/tree/master/dist): convenient files to start using Darwin Core
+- BDQ Core Introduction
+- [Quick Reference Guide](needs link)
+- List Of Tests bdqcore:
+- - Human readable
+  - csv list
+  - rdf/xml list
+- BDQFFDQ Framework bdqffdq
+- - human readable
+  - owl
+- DataQuality Dimension Vocabulary
+- BDQ Vocabulary 
+- Users Guide to BDQ Core Tests [BDQ Core](simple/),
+- Implementors Guide To BDQ Core 
+- [GitHub repository](https://github.com/tdwg/bdq): where BDQ Core is maintained
+- After Ratification: Normative term list: the document containing the full history of normative BDQ Core term definitions
+- [Distribution files](needs link): download files to start using BDQ Core
