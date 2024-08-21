@@ -15,7 +15,7 @@ Data Quality Tests and Assertions (BDQ-Core)
 
 **{Some issues" Upper vs Lower Case for Validations, Amendments etc. and use of Single Record/MultiRecord versus "bdqffdq:SingleRecord" and bdqffdq:MultiRecord is  what we agree on for the vocabulary (AC) - edited 2024-08-20 to make consistent throught document}**
 
-**Abstract (Informative) (Lee)**
+**Abstract (non-normative) (Lee)**
 <!--- Ming: History --->
 There was a recognition at TDWG 2010 that a standard suite of ‘data quality’ tests applied to Darwin Core records (Wieczorek et al. 2012) would have extensive benefits to biodiversity-related data collectors and to subsequent users of those records. The work was made complex due to the lack of controlled vocabularies for a range of Darwin Core terms. This issue led to the establishment of the Data Quality Task Group 4: Best practices for development of vocabularies of values ("Vocabularies").
 
@@ -95,7 +95,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 11 Supplement: Rationale Management Documentation
 ``` 
 
-## 1. Introduction (Informative) (John)
+## 1. Introduction (non-normative) (John)
 
 This document contains ... 
 
@@ -112,9 +112,9 @@ Above all, this document will help data end users to understand the implications
 
 ### 1.2. Status of the content of this document
 
-Section 1 is informative.  Section 2 is informative.  Portions of sections 3-6 are informative, and portions are normative.  These are marked as such.
+Section 1 is non-normative.  Section 2 is non-normative.  Portions of sections 3-6 are non-normative, and portions are normative.  These are marked as such.
 
-<!--- Needs fixing:  we have RFC 2119 keywords present in informative sections --->
+<!--- Needs fixing:  we have RFC 2119 keywords present in non-normative sections --->
 
 ### 1.3 RFC 2119 keywords
 
@@ -136,7 +136,7 @@ The following namespace abbreviations are used in this document:
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-### 1.5 About the tests, their use and specifications (Informative) (Lee)
+### 1.5 About the tests, their use and specifications (non-normative) (Lee)
 
 This standard is a specification of tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record will greatly depend on the use to which it is applied: A record that is unsuitable to be used in one application may be suitable for another application (Belbin et al 2013).
 
@@ -190,7 +190,7 @@ For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure
 
 Validation tests are phrased as positive statements, consistent with the "Fitness for Use Framework".  A Validation tests to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY, is phrased as "Not Empty", and will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE.  The framework allows for tests that are the inverse of Validations, Issues.  Issues are assertions that are stated in a negative sense and which identify problems in data.  We have used these for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. Issues under the framework can logically take three Response.result values NOT_ISSUE, POSSIBLE_ISSUE, and ISSUE.  ISSUE is symmetrical to NOT_COMPLIANT, NOT_ISSUE is approximately symmetrical to COMPLIANT, and POSSIBLE_ISSUE does not have an equivalent Validation Response.result.  We define a small number of Core Issues that can raise a Response.result of POSSIBLE_ISSUE to flag potential problems that require human evaluation. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.   The vast majority of the Core tests are Validations, phrased in the positive sense, intended as a core suite, to identify biodiversity data that are fit for the Core purposes, as identified in the user scenario analyses performed by BDQ Task Group 3.   
 
-### 1.6 Test Descriptors (Informative) 
+### 1.6 Test Descriptors (non-normative) 
 
 <!--- **TODO: What do we call this as "Specification is being used generally and specifically?** --->
 <!--- We can use Descriptor for Specification plus related metadata (the rows in the Markdown tables), Specification for the framework concept. --->
@@ -234,7 +234,7 @@ Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that 
 
 Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values. 
 
-### 1.7 Framework for describing data quality (Paul) (Informative)
+### 1.7 Framework for describing data quality (Paul) (non-normative)
 Included in this standard is a specification for a framework for describing data quality. Each of the tests in this standard has been designed within this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
 The framework data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
@@ -294,21 +294,21 @@ The framework expects that Quality Assurance is provided for through specificati
 For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
 
-## 2. Guidance for Consumers of Data Quality Reports (Informative)
+## 2. Guidance for Consumers of Data Quality Reports (non-normative)
 
-### 2.1 Introduction (Arthur) (Informative)
+### 2.1 Introduction (Arthur) (non-normative)
 An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
 
-### 2.2 Biodiversity Data Quality Tests (Informative)
+### 2.2 Biodiversity Data Quality Tests (non-normative)
 What are the important attributes of data quality for biodiversity data?  How are we proposing to assess data quality in the domain?  What is the scope of the tests?   What is out of scope for the tests.  How did we develop the test specifications? 
 
 We identified four fundamental aspects of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord). A record without a taxonomic name, a location or a date has limited value. Three tests in this standard specifically target records with no name, space or time values.
 
-#### **2.2.2 Tests (Informative)**
+#### **2.2.2 Tests (non-normative)**
 
 The intent of the tests...
 
-#### **2.2.3 Notes on Tests (Informative)**
+#### **2.2.3 Notes on Tests (non-normative)**
 
 * https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
 * https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.xml
@@ -342,7 +342,7 @@ Data Quality Dimensions terms, used as values for the Fitness for Use Framework 
 
 ## 5. Test Specifications (Paul)
 
-### 5.1 Introduction (Informative)
+### 5.1 Introduction (non-normative)
 
 Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv  TODO: Generate human readable test descriptor document, labels here will apply in that document.  
 
@@ -360,11 +360,11 @@ The number is present in the Markdown document as **Rationale Management** linki
 
 **"Label"** [Normative]:"VALIDATION_COUNTRYCODE_STANDARD" A human readable label identifying the test.  The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS.
 
-**"Description"** [Informative]:"Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?" A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment.
+**"Description"** [non-normative]:"Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?" A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment.
 
 **"TestType"** [Normative]:"Validation" The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.
 
-**"Darwin Core Class"** [Informative]:"Location" The Information Element in the original terms of the framework, the general sort of information this test operates on.  
+**"Darwin Core Class"** [non-normative]:"Location" The Information Element in the original terms of the framework, the general sort of information this test operates on.  
 
 **"Information Elements ActedUpon"** [Normative]:"dwc:countryCode" A list of the specific Darwin Core terms that are the focus of the test.
 
@@ -378,23 +378,23 @@ The number is present in the Markdown document as **Rationale Management** linki
 
 **"Dimension"** [Normative]:"Conformance" The [data quality dimension](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) for this test.
 
-**"Criterion Label"** [Informative]:"Conformance: standard" A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext).    
+**"Criterion Label"** [non-normative]:"Conformance: standard" A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext).    
 
 **"Resource Type"** [Normative]:"SingleRecord"  The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. 
 
-**"Source Authority"** [Informative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site.
+**"Source Authority"** [non-normative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {non-normative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site.
 
-**"Example"** [Informative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite.
+**"Example"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite.
 
-**"Source"**:"TG2" [Informative]: The origin of the concept of the test.
+**"Source"**:"TG2" [non-normative]: The origin of the concept of the test.
 
-**"References"** [Informative]:"ISO (n.dat.). ISO 3166 Country Codes (https://www.iso.org/iso-3166-country-codes.html); Wikipedia (2020). ISO 3166-1 alpha-2 (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2); >DataHub (2018). List of all countries with their two digit codes (ISO 3166-1)(https://datahub.io/core/country-list);Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)"
+**"References"** [non-normative]:"ISO (n.dat.). ISO 3166 Country Codes (https://www.iso.org/iso-3166-country-codes.html); Wikipedia (2020). ISO 3166-1 alpha-2 (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2); >DataHub (2018). List of all countries with their two digit codes (ISO 3166-1)(https://datahub.io/core/country-list);Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)"
 
-**"Example Implementations (Mechanisms)"** [Informative]:"FilteredPush/Kurator: geo_ref_qc"  Known Mechanisms with implementations of the test.
+**"Example Implementations (Mechanisms)"** [non-normative]:"FilteredPush/Kurator: geo_ref_qc"  Known Mechanisms with implementations of the test.
 
-**"Link to Specification Source Code"** [Informative]:"https://github.com/FilteredPush/event_date_qc/blob/1abbd3f02eb6c28129764defab78f72156972864/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L489" A link to code that implements the test.
+**"Link to Specification Source Code"** [non-normative]:"https://github.com/FilteredPush/event_date_qc/blob/1abbd3f02eb6c28129764defab78f72156972864/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L489" A link to code that implements the test.
 
-**"Notes"** [Informative]:"Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  Additional, non-normative comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of.
+**"Notes"** [non-normative]:"Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  Additional, non-normative comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of.
 
 <!--- NOTE:  VALIDATION-AMENDMENT-VALIDATION--->
 
@@ -412,7 +412,7 @@ The specification of the tests within the Framework allows the same set of tests
 
 <!--- Ming: Parameterising the tests, repeated in 1.6 --->
 
-**5.1.1 Parameters (Informative)**
+**5.1.1 Parameters (non-normative)**
 
 Some tests have been defined as parameterized. A parameterized test will behave differently on the same data when given different parameter values. Parameterized tests are those for which we saw the high likelihood of different data quality needs within the community of CORE users and CORE needs.
 
@@ -421,7 +421,7 @@ The existence of national requirements for spatial data to be represented with a
 Parameters are not intended to relax the definition of data having quality for CORE needs. The specifications deliberately do not include parameters that would relax tests on secondary terms for downstream research users or tighten them for upstream data capture. Some tests which would serve the needs of users engaged in data capture or preparing data for aggregation, but not of downstream aggregators or research users were considered, but deemed non-CORE and are not specified here. We have similarly resisted the temptation to parameterize tests to meet the needs of different portions of the data life cycle.
 
 
-**5.1.2 Workflows and Sequencing Tests (Informative)**
+**5.1.2 Workflows and Sequencing Tests (non-normative)**
 
 <!--- Ming: What the tests are agnostic of, repeated in 1.6, 5.2.3 --->
 The test descriptions are agnostic to the framework within which the tests are run. The tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular tests are run. An exception is certain of the amendments, where the order of execution can be important.
@@ -627,7 +627,7 @@ bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", d
 
 See Section on Implementation
 
-### 6.4 Examples of the data for validating tests (Informative)
+### 6.4 Examples of the data for validating tests (non-normative)
 
 The validation files contain one column for each of 77 Darwin Core terms that are referenced as an Information Element somewhere in Core, but only terms relevant to the particular validation case for the row are populated, therefore the validation files are sparse.  They contain fragments of Flat Darwin Core records. 
 
@@ -649,7 +649,7 @@ A validation test case for a validation where the input data result in a Respons
 
 "8","8","8","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","COMPLIANT","dwc countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value","","","","","","","","","","","","US","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-### 6.5 Where to get the validation data (Informative)
+### 6.5 Where to get the validation data (non-normative)
 
 The validation data is in two files, one containing normal data values, the other containing validation cases using non-printing characters.
 
@@ -837,7 +837,7 @@ The development of each test, with documentation of why particular decisions wer
 
 ## 1.5 Definition of CORE
 
-'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what times, and a subset of Darwin Core terms that we consider to be critical metadata about occurrence records.
+'CORE' in the context of this standard implies that the tests are non-normative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what times, and a subset of Darwin Core terms that we consider to be critical metadata about occurrence records.
 
 A number of tests were framed, but considered out of scope for CORE data quality needs ('Supplementary' GitHub tag). Implementers are free to implement a subset of the CORE tests or add additional tests when there is a particular data quality needs within their domain. For example, the testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Over the period of this project, many tests were removed from CORE on the basis that they could not be currently implemented in a manner that would result in predictable results. For example, the test VALIDATION_GEOGRAPHY_CONSISTENT was rejected late in the project because of the complexities in matching terms in the geographic names hierarchy, which is less standardized than the taxonomic names hierarchy.
 
@@ -856,7 +856,7 @@ Countries and researchers have changed from the Julian calendar to the Gregorian
 
 In this particular issue, and perhaps in all others where this has come up, I do not see that the uncertainty associated with the date actually has anything to do with what we are testing. This test can't assess if a date is actually within a Gregorian date interval, except in special cases where the Julian and Gregorian calendars coincide, and even that is ignoring all other possible calendars. Instead, it is able to test that a date following the ISO 8601-1 date specification is within a range specified in that context. We can't effectively do anything else because Darwin Core doesn't even provide for stating the original calendar used - it's forcing people to use the Gregorian calendar without describing the responsibility for doing so and the consequences of not doing so. I think the place for awareness of the implications of dates with unknown calendars is in the Darwin Core date terms.]
 
-#### 5.2.2 Example (Informative)
+#### 5.2.2 Example (non-normative)
 
 Given the specification: 
 
@@ -891,7 +891,7 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
     Function isfoundCountryCode(countryCode,sourceAuthority) returns boolean throws NetworkException {...}
 
 
-#### 5.2.4 Guidelines for Implementers (Informative)
+#### 5.2.4 Guidelines for Implementers (non-normative)
 
 **TODO: Mention of the need for local caching of web-site based source authorities.**
 
