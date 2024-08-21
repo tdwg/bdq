@@ -19,7 +19,7 @@ All Interest Group and Task Group documents are linked on the [**Interest Group'
 
 
 
-[Draft of Normative and Informative explanatory text for Standard](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document)
+[OLD BDQ-Core Working Document - no longer maintained](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document)
 
 The standard will incorporate (placeholders in the above document) the following:
 
