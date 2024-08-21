@@ -33,7 +33,7 @@ Latest version of document
 
 **Creator**: TDWG Biodiversity Data Quality Interest Group
 
-**Bibliographic citation**: TDWG Biodiversity Data Qualityy Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
+**Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
 
 
 ## 1 Introduction
