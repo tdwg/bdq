@@ -24,8 +24,8 @@ This document version
 Latest version of document
 : <http://rs.tdwg.org/bdq/doc/dim/>
 
-Previous version
-: <http://rs.tdwg.org/dwc/bdq/dim/2020-10-13>
+{previous_version_slot}
+
 
 **Abstract**: The BDQ Core term `Dimension` describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate precision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution. 
 
