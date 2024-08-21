@@ -10,10 +10,10 @@ Preferred namespace abbreviation
 : bdqdim:
 
 Date version issued
-: 2024-08-21
+: {ratification_date}
 
 Date created
-: 2024-08-21
+: {created_date}
 
 Part of TDWG Standard
 : <http://www.tdwg.org/standards/[*******]>
