@@ -19,7 +19,6 @@ All Interest Group and Task Group documents are linked on the [**Interest Group'
 
 
 
-[Draft of Normative and Informative explanatory text for Standard](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document)
 
 The standard will incorporate (placeholders in the above document) the following:
 
@@ -32,6 +31,8 @@ The standard will incorporate (placeholders in the above document) the following
 [Combined Framework and Biodiversity Data Quality vocabularies, development of definitions in github issue 152](https://github.com/tdwg/bdq/issues/152)
 
 [Draft export of Framework OWL to CSV, work in progress, definitions to be updated from Vocabularies issue 152](https://github.com/tdwg/bdq/blob/master/tg1/ffdq/frameworkconcepts.csv) and an [OWL representation of the framework](https://github.com/kurator-org/kurator-ffdq/blob/master/competencyquestions/rdf/ffdq.owl) developed in part by Robert A. Morris, definitions to be updated form Vocabularies issue #152
+
+[OLD BDQ-Core Working Document - no longer maintained](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document)
 
 ## Task Groups
 
