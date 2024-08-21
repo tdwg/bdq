@@ -34,9 +34,9 @@ Research uses for relationships between organisms where 1) the information eleme
 
 [VALIDATION_BASISOFRECORD_NOTEMPTY](#VALIDATION_BASISOFRECORD_NOTEMPTY), [VALIDATION_BASISOFRECORD_STANDARD](#VALIDATION_BASISOFRECORD_STANDARD), [VALIDATION_DCTYPE_NOTEMPTY](#VALIDATION_DCTYPE_NOTEMPTY), [VALIDATION_DCTYPE_STANDARD](#VALIDATION_DCTYPE_STANDARD), [VALIDATION_DECIMALLATITUDE_INRANGE](#VALIDATION_DECIMALLATITUDE_INRANGE), [VALIDATION_DECIMALLONGITUDE_INRANGE](#VALIDATION_DECIMALLONGITUDE_INRANGE), [VALIDATION_DECIMALLONGITUDE_NOTEMPTY](#VALIDATION_DECIMALLONGITUDE_NOTEMPTY), [VALIDATION_EVENTDATE_NOTEMPTY](#VALIDATION_EVENTDATE_NOTEMPTY), [VALIDATION_EVENTDATE_STANDARD](#VALIDATION_EVENTDATE_STANDARD), [VALIDATION_EVENT_CONSISTENT](#VALIDATION_EVENT_CONSISTENT), [VALIDATION_ESTABLISHMENTMEANS_STANDARD](#VALIDATION_ESTABLISHMENTMEANS_STANDARD), [VALIDATION_OCCURRENCESTATUS_NOTEMPTY](#VALIDATION_OCCURRENCESTATUS_NOTEMPTY), [VALIDATION_OCCURRENCESTATUS_STANDARD](#VALIDATION_OCCURRENCESTATUS_STANDARD), [VALIDATION_PATHWAY_STANDARD](#VALIDATION_PATHWAY_STANDARD), [VALIDATION_TYPESTATUS_STANDARD](#VALIDATION_TYPESTATUS_STANDARD), [VALIDATION_CLASSIFICATION_CONSISTENT](#VALIDATION_CLASSIFICATION_CONSISTENT), [VALIDATION_CLASS_FOUND](#VALIDATION_CLASS_FOUND), [VALIDATION_GENUS_FOUND](#VALIDATION_GENUS_FOUND), [VALIDATION_SCIENTIFICNAME_FOUND](#VALIDATION_SCIENTIFICNAME_FOUND), [VALIDATION_SCIENTIFICNAME_NOTEMPTY](#VALIDATION_SCIENTIFICNAME_NOTEMPTY), [VALIDATION_TAXON_NOTEMPTY](#VALIDATION_TAXON_NOTEMPTY), [VALIDATION_TAXON_UNAMBIGUOUS](#VALIDATION_TAXON_UNAMBIGUOUS), [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY), [ISSUE_ANNOTATION_NOTEMPTY](#ISSUE_ANNOTATION_NOTEMPTY), [AMENDMENT_DCTYPE_STANDARDIZED](#AMENDMENT_DCTYPE_STANDARDIZED), [AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED](#AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED), [AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT](#AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT), [AMENDMENT_OCCURRENCESTATUS_STANDARDIZED](#AMENDMENT_OCCURRENCESTATUS_STANDARDIZED), [AMENDMENT_PATHWAY_STANDARDIZED](#AMENDMENT_PATHWAY_STANDARDIZED), [AMENDMENT_TYPESTATUS_STANDARDIZED](#AMENDMENT_TYPESTATUS_STANDARDIZED), [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID), 
 
-## Preferred Label (TODO)
+#  Validation dwc:basisOfRecord Not Empty
 
-#  VALIDATION_BASISOFRECORD_NOTEMPTY
+##  VALIDATION_BASISOFRECORD_NOTEMPTY
 https://rs.tdwg.org/bdq/ac2b7648-d5f9-48ca-9b07-8ad5879a2536
 
 ## Description
@@ -54,6 +54,10 @@ COMPLIANT if dwc:basisOfRecord is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:basisOfRecord Not Empty
 
 ##  IE Class
 
@@ -97,9 +101,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:basisOfRecord Standard
 
-#  VALIDATION_BASISOFRECORD_STANDARD
+##  VALIDATION_BASISOFRECORD_STANDARD
 https://rs.tdwg.org/bdq/42408a00-bf71-4892-a399-4325e2bc1fb8
 
 ## Description
@@ -117,6 +121,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-07-24
+
+##  prefLabel
+
+Validation dwc:basisOfRecord Standard
 
 ##  IE Class
 
@@ -168,9 +176,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dc:type Not Empty
 
-#  VALIDATION_DCTYPE_NOTEMPTY
+##  VALIDATION_DCTYPE_NOTEMPTY
 https://rs.tdwg.org/bdq/374b091a-fc90-4791-91e5-c1557c649169
 
 ## Description
@@ -188,6 +196,10 @@ COMPLIANT if dc:type is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dc:type Not Empty
 
 ##  IE Class
 
@@ -236,9 +248,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dc:type Standard
 
-#  VALIDATION_DCTYPE_STANDARD
+##  VALIDATION_DCTYPE_STANDARD
 https://rs.tdwg.org/bdq/cdaabb0d-a863-49d0-bc0f-738d771acba5
 
 ## Description
@@ -256,6 +268,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dc:type Standard
 
 ##  IE Class
 
@@ -312,9 +328,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dcterms:license Not Empty
 
-#  VALIDATION_LICENSE_NOTEMPTY
+##  VALIDATION_LICENSE_NOTEMPTY
 https://rs.tdwg.org/bdq/15f78619-811a-4c6f-997a-a4c7888ad849
 
 ## Description
@@ -332,6 +348,10 @@ COMPLIANT if dcterms:license is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dcterms:license Not Empty
 
 ##  IE Class
 
@@ -385,9 +405,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dcterms:license Standard
 
-#  VALIDATION_LICENSE_STANDARD
+##  VALIDATION_LICENSE_STANDARD
 https://rs.tdwg.org/bdq/3136236e-04b6-49ea-8b34-a65f25e3aba1
 
 ## Description
@@ -405,6 +425,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dcterms:license Standard
 
 ##  IE Class
 
@@ -462,9 +486,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation Coordinates dwc:countryCode Consistent
 
-#  VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT
+##  VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT
 https://rs.tdwg.org/bdq/adb27d29-9f0d-4d52-b760-a77ba57a69c9
 
 ## Description
@@ -482,6 +506,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation Coordinates dwc:countryCode Consistent
 
 ##  IE Class
 
@@ -547,9 +575,9 @@ bdq:Spatial-Temporal Patterns
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation Coordinates Not Zero
 
-#  VALIDATION_COORDINATES_NOTZERO
+##  VALIDATION_COORDINATES_NOTZERO
 https://rs.tdwg.org/bdq/1bf0e210-6792-4128-b8cc-ab6828aa4871
 
 ## Description
@@ -567,6 +595,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or is not interpr
 ##  DateLastUpdated
 
 2023-06-20
+
+##  prefLabel
+
+Validation Coordinates Not Zero
 
 ##  IE Class
 
@@ -619,9 +651,9 @@ bdq:Spatial-Temporal Patterns
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation Coordinates dwc:stateProvince Consistent
 
-#  VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT
+##  VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT
 https://rs.tdwg.org/bdq/f18a470b-3fe1-4aae-9c65-a6d3db6b550c
 
 ## Description
@@ -639,6 +671,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-04-16
+
+##  prefLabel
+
+Validation Coordinates dwc:stateProvince Consistent
 
 ##  IE Class
 
@@ -703,9 +739,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation Coordinates Terrestrial Marine
 
-#  VALIDATION_COORDINATES_TERRESTRIALMARINE
+##  VALIDATION_COORDINATES_TERRESTRIALMARINE
 https://rs.tdwg.org/bdq/b9c184ce-a859-410c-9d12-71a338200380
 
 ## Description
@@ -723,6 +759,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand
 ##  DateLastUpdated
 
 2024-08-19
+
+##  prefLabel
+
+Validation Coordinates Terrestrial Marine
 
 ##  IE Class
 
@@ -790,9 +830,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:coordinateUncertaintyInMeters In Range
 
-#  VALIDATION_COORDINATEUNCERTAINTY_INRANGE
+##  VALIDATION_COORDINATEUNCERTAINTY_INRANGE
 https://rs.tdwg.org/bdq/c6adf2ea-3051-4498-97f4-4b2f8a105f57
 
 ## Description
@@ -810,6 +850,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is EMPTY; CO
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:coordinateUncertaintyInMeters In Range
 
 ##  IE Class
 
@@ -863,9 +907,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:countryCode Not Empty
 
-#  VALIDATION_COUNTRYCODE_NOTEMPTY
+##  VALIDATION_COUNTRYCODE_NOTEMPTY
 https://rs.tdwg.org/bdq/853b79a2-b314-44a2-ae46-34a1e7ed85e4
 
 ## Description
@@ -883,6 +927,10 @@ COMPLIANT if dwc:countryCode is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:countryCode Not Empty
 
 ##  IE Class
 
@@ -937,9 +985,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:countryCode Standard
 
-#  VALIDATION_COUNTRYCODE_STANDARD
+##  VALIDATION_COUNTRYCODE_STANDARD
 https://rs.tdwg.org/bdq/0493bcfb-652e-4d17-815b-b0cce0742fbe
 
 ## Description
@@ -957,6 +1005,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if bdq:sourceAuthority is not available; INTERNAL
 ##  DateLastUpdated
 
 2024-04-15
+
+##  prefLabel
+
+Validation dwc:countryCode Standard
 
 ##  IE Class
 
@@ -1013,9 +1065,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:country dwc:stateProvince Unambiguous
 
-#  VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
+##  VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 https://rs.tdwg.org/bdq/d257eb98-27cb-48e5-8d3c-ab9fca4edd11
 
 ## Description
@@ -1033,6 +1085,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:country dwc:stateProvince Unambiguous
 
 ##  IE Class
 
@@ -1095,9 +1151,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:country dwc:countryCode Consistent
 
-#  VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT
+##  VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT
 https://rs.tdwg.org/bdq/b23110e7-1be7-444a-a677-cdee0cf4330c
 
 ## Description
@@ -1115,6 +1171,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:country dwc:countryCode Consistent
 
 ##  IE Class
 
@@ -1170,9 +1230,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:country Found
 
-#  VALIDATION_COUNTRY_FOUND
+##  VALIDATION_COUNTRY_FOUND
 https://rs.tdwg.org/bdq/69b2efdc-6269-45a4-aecb-4cb99c2ae134
 
 ## Description
@@ -1190,6 +1250,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-19
+
+##  prefLabel
+
+Validation dwc:country Found
 
 ##  IE Class
 
@@ -1247,9 +1311,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:country Not Empty
 
-#  VALIDATION_COUNTRY_NOTEMPTY
+##  VALIDATION_COUNTRY_NOTEMPTY
 https://rs.tdwg.org/bdq/6ce2b2b4-6afe-4d13-82a0-390d31ade01c
 
 ## Description
@@ -1267,6 +1331,10 @@ COMPLIANT if dwc:country is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:country Not Empty
 
 ##  IE Class
 
@@ -1323,9 +1391,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:decimalLatitude In Range
 
-#  VALIDATION_DECIMALLATITUDE_INRANGE
+##  VALIDATION_DECIMALLATITUDE_INRANGE
 https://rs.tdwg.org/bdq/b6ecda2a-ce36-437a-b515-3ae94948fe83
 
 ## Description
@@ -1343,6 +1411,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or the value is n
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:decimalLatitude In Range
 
 ##  IE Class
 
@@ -1391,9 +1463,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:decimalLatitude Not Empty
 
-#  VALIDATION_DECIMALLATITUDE_NOTEMPTY
+##  VALIDATION_DECIMALLATITUDE_NOTEMPTY
 https://rs.tdwg.org/bdq/7d2485d5-1ba7-4f25-90cb-f4480ff1a275
 
 ## Description
@@ -1411,6 +1483,10 @@ COMPLIANT if dwc:decimalLatitude is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:decimalLatitude Not Empty
 
 ##  IE Class
 
@@ -1459,9 +1535,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:decimalLongitude In Range
 
-#  VALIDATION_DECIMALLONGITUDE_INRANGE
+##  VALIDATION_DECIMALLONGITUDE_INRANGE
 https://rs.tdwg.org/bdq/0949110d-c06b-450e-9649-7c1374d940d1
 
 ## Description
@@ -1479,6 +1555,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is EMPTY or the value is 
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:decimalLongitude In Range
 
 ##  IE Class
 
@@ -1527,9 +1607,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:decimalLongitude Not Empty
 
-#  VALIDATION_DECIMALLONGITUDE_NOTEMPTY
+##  VALIDATION_DECIMALLONGITUDE_NOTEMPTY
 https://rs.tdwg.org/bdq/9beb9442-d942-4f42-8b6a-fcea01ee086a
 
 ## Description
@@ -1547,6 +1627,10 @@ COMPLIANT if dwc:decimalLongitude is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:decimalLongitude Not Empty
 
 ##  IE Class
 
@@ -1595,9 +1679,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:geodeticDatum Not Empty
 
-#  VALIDATION_GEODETICDATUM_NOTEMPTY
+##  VALIDATION_GEODETICDATUM_NOTEMPTY
 https://rs.tdwg.org/bdq/239ec40e-a729-4a8e-ba69-e0bf03ac1c44
 
 ## Description
@@ -1615,6 +1699,10 @@ COMPLIANT if dwc:geodeticDatum is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:geodeticDatum Not Empty
 
 ##  IE Class
 
@@ -1663,9 +1751,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Vaildation dwc:geodeticDatum Standard
 
-#  VALIDATION_GEODETICDATUM_STANDARD
+##  VALIDATION_GEODETICDATUM_STANDARD
 https://rs.tdwg.org/bdq/7e0c0418-fe16-4a39-98bd-80e19d95b9d1
 
 ## Description
@@ -1683,6 +1771,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Vaildation dwc:geodeticDatum Standard
 
 ##  IE Class
 
@@ -1739,9 +1831,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dcterms:Location Not Empty
 
-#  VALIDATION_LOCATION_NOTEMPTY
+##  VALIDATION_LOCATION_NOTEMPTY
 https://rs.tdwg.org/bdq/58486cb6-1114-4a8a-ba1e-bd89cfe887e9
 
 ## Description
@@ -1759,6 +1851,10 @@ COMPLIANT if at least one term needed to determine the location of the entity ex
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dcterms:Location Not Empty
 
 ##  IE Class
 
@@ -1811,9 +1907,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:maximumDepthInMeters In Range
 
-#  VALIDATION_MAXDEPTH_INRANGE
+##  VALIDATION_MAXDEPTH_INRANGE
 https://rs.tdwg.org/bdq/3f1db29a-bfa5-40db-9fd1-fde020d81939
 
 ## Description
@@ -1831,6 +1927,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is EMPTY or is not in
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:maximumDepthInMeters In Range
 
 ##  IE Class
 
@@ -1888,9 +1988,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:maximumElevationInMeters In Range
 
-#  VALIDATION_MAXELEVATION_INRANGE
+##  VALIDATION_MAXELEVATION_INRANGE
 https://rs.tdwg.org/bdq/c971fe3f-84c1-4636-9f44-b1ec31fd63c7
 
 ## Description
@@ -1908,6 +2008,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is EMPTY or the v
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:maximumElevationInMeters In Range
 
 ##  IE Class
 
@@ -1966,9 +2070,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:minimumDepthInMeters In Range
 
-#  VALIDATION_MINDEPTH_INRANGE
+##  VALIDATION_MINDEPTH_INRANGE
 https://rs.tdwg.org/bdq/04b2c8f3-c71b-4e95-8e43-f70374c5fb92
 
 ## Description
@@ -1986,6 +2090,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is EMPTY, or the valu
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:minimumDepthInMeters In Range
 
 ##  IE Class
 
@@ -2041,9 +2149,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
 
-#  VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
+##  VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
 https://rs.tdwg.org/bdq/8f1e6e58-544b-4365-a569-fb781341644e
 
 ## Description
@@ -2061,6 +2169,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthIn
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
 
 ##  IE Class
 
@@ -2109,9 +2221,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:minimumElevationInMeters In Range
 
-#  VALIDATION_MINELEVATION_INRANGE
+##  VALIDATION_MINELEVATION_INRANGE
 https://rs.tdwg.org/bdq/0bb8297d-8f8a-42d2-80c1-558f29efe798
 
 ## Description
@@ -2129,6 +2241,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is EMPTY or the v
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:minimumElevationInMeters In Range
 
 ##  IE Class
 
@@ -2187,9 +2303,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
 
-#  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
+##  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
 https://rs.tdwg.org/bdq/d708526b-6561-438e-aa1a-82cd80b06396
 
 ## Description
@@ -2207,6 +2323,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElev
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
 
 ##  IE Class
 
@@ -2255,9 +2375,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:stateProvince Found
 
-#  VALIDATION_STATEPROVINCE_FOUND
+##  VALIDATION_STATEPROVINCE_FOUND
 https://rs.tdwg.org/bdq/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a
 
 ## Description
@@ -2275,6 +2395,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:stateProvince Found
 
 ##  IE Class
 
@@ -2332,9 +2456,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:day In Range
 
-#  VALIDATION_DAY_INRANGE
+##  VALIDATION_DAY_INRANGE
 https://rs.tdwg.org/bdq/8d787cb5-73e2-4c39-9cd1-67c7361dc02e
 
 ## Description
@@ -2352,6 +2476,10 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is EMPTY, or (2) dwc:day is not in
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:day In Range
 
 ##  IE Class
 
@@ -2409,9 +2537,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:day Standard
 
-#  VALIDATION_DAY_STANDARD
+##  VALIDATION_DAY_STANDARD
 https://rs.tdwg.org/bdq/47ff73ba-0028-4f79-9ce1-ee7008d66498
 
 ## Description
@@ -2429,6 +2557,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of th
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:day Standard
 
 ##  IE Class
 
@@ -2480,9 +2612,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:endDayOfYear In Range
 
-#  VALIDATION_ENDDAYOFYEAR_INRANGE
+##  VALIDATION_ENDDAYOFYEAR_INRANGE
 https://rs.tdwg.org/bdq/9a39d88c-7eee-46df-b32a-c109f9f81fb8
 
 ## Description
@@ -2500,6 +2632,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is EMPTY or if the value of d
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:endDayOfYear In Range
 
 ##  IE Class
 
@@ -2555,9 +2691,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:eventDate In Range
 
-#  VALIDATION_EVENTDATE_INRANGE
+##  VALIDATION_EVENTDATE_INRANGE
 https://rs.tdwg.org/bdq/3cff4dc4-72e9-4abe-9bf3-8a30f1618432
 
 ## Description
@@ -2575,6 +2711,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:eventDate In Range
 
 ##  IE Class
 
@@ -2636,9 +2776,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:eventDate Not Empty
 
-#  VALIDATION_EVENTDATE_NOTEMPTY
+##  VALIDATION_EVENTDATE_NOTEMPTY
 https://rs.tdwg.org/bdq/f51e15a6-a67d-4729-9c28-3766299d2985
 
 ## Description
@@ -2656,6 +2796,10 @@ COMPLIANT if dwc:eventDate is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:eventDate Not Empty
 
 ##  IE Class
 
@@ -2703,9 +2847,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:eventDate Standard
 
-#  VALIDATION_EVENTDATE_STANDARD
+##  VALIDATION_EVENTDATE_STANDARD
 https://rs.tdwg.org/bdq/4f2bf8fd-fc5c-493f-a44c-e7b16153c803
 
 ## Description
@@ -2723,6 +2867,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; COMPLIANT if the value
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:eventDate Standard
 
 ##  IE Class
 
@@ -2780,9 +2928,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:Event Consistent
 
-#  VALIDATION_EVENT_CONSISTENT
+##  VALIDATION_EVENT_CONSISTENT
 https://rs.tdwg.org/bdq/5618f083-d55a-4ac2-92b5-b9fb227b832f
 
 ## Description
@@ -2800,6 +2948,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY, or all of dwc:year, dw
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:Event Consistent
 
 ##  IE Class
 
@@ -2851,9 +3003,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:Event Temporal Not Empty
 
-#  VALIDATION_EVENT_TEMPORAL_NOTEMPTY
+##  VALIDATION_EVENT_TEMPORAL_NOTEMPTY
 https://rs.tdwg.org/bdq/41267642-60ff-4116-90eb-499fee2cd83f
 
 ## Description
@@ -2871,6 +3023,10 @@ COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfY
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:Event Temporal Not Empty
 
 ##  IE Class
 
@@ -2922,9 +3078,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:month Standard
 
-#  VALIDATION_MONTH_STANDARD
+##  VALIDATION_MONTH_STANDARD
 https://rs.tdwg.org/bdq/01c6dafa-0886-4b7e-9881-2c3018c98bdc
 
 ## Description
@@ -2942,6 +3098,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; COMPLIANT if the value of 
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:month Standard
 
 ##  IE Class
 
@@ -2989,9 +3149,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:startDayOfYear In Range
 
-#  VALIDATION_STARTDAYOFYEAR_INRANGE
+##  VALIDATION_STARTDAYOFYEAR_INRANGE
 https://rs.tdwg.org/bdq/85803c7e-2a5a-42e1-b8d3-299a44cafc46
 
 ## Description
@@ -3009,6 +3169,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is EMPTY or if the value of
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:startDayOfYear In Range
 
 ##  IE Class
 
@@ -3064,9 +3228,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:year In Range
 
-#  VALIDATION_YEAR_INRANGE
+##  VALIDATION_YEAR_INRANGE
 https://rs.tdwg.org/bdq/ad0c8855-de69-4843-a80c-a5387d20fbc8
 
 ## Description
@@ -3084,6 +3248,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:year is not present, or is EMPTY or cannot
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:year In Range
 
 ##  IE Class
 
@@ -3139,9 +3307,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:year Not Empty
 
-#  VALIDATION_YEAR_NOTEMPTY
+##  VALIDATION_YEAR_NOTEMPTY
 https://rs.tdwg.org/bdq/c09ecbf9-34e3-4f3e-b74a-8796af15e59f
 
 ## Description
@@ -3159,6 +3327,10 @@ COMPLIANT if dwc:year is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:year Not Empty
 
 ##  IE Class
 
@@ -3206,9 +3378,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:dateIdentified In Range
 
-#  VALIDATION_DATEIDENTIFIED_INRANGE
+##  VALIDATION_DATEIDENTIFIED_INRANGE
 https://rs.tdwg.org/bdq/dc8aae4b-134f-4d75-8a71-c4186239178e
 
 ## Description
@@ -3226,6 +3398,10 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is EMPTY, or (2) dwc:da
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:dateIdentified In Range
 
 ##  IE Class
 
@@ -3291,9 +3467,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:dateIdentified Standard
 
-#  VALIDATION_DATEIDENTIFIED_STANDARD
+##  VALIDATION_DATEIDENTIFIED_STANDARD
 https://rs.tdwg.org/bdq/66269bdd-9271-4e76-b25c-7ab81eebe1d8
 
 ## Description
@@ -3311,6 +3487,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; COMPLIANT if the 
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:dateIdentified Standard
 
 ##  IE Class
 
@@ -3364,9 +3544,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:degreeofEstablishment Standard
 
-#  VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
+##  VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
 https://rs.tdwg.org/bdq/060e7734-607d-4737-8b2c-bfa17788bf1a
 
 ## Description
@@ -3384,6 +3564,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-02-09
+
+##  prefLabel
+
+Validation dwc:degreeofEstablishment Standard
 
 ##  IE Class
 
@@ -3441,9 +3625,9 @@ bdq:Alien-Species
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:establishmentMeans Standard
 
-#  VALIDATION_ESTABLISHMENTMEANS_STANDARD
+##  VALIDATION_ESTABLISHMENTMEANS_STANDARD
 https://rs.tdwg.org/bdq/4eb48fdf-7299-4d63-9d08-246902e2857f
 
 ## Description
@@ -3461,6 +3645,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-02-08
+
+##  prefLabel
+
+Validation dwc:establishmentMeans Standard
 
 ##  IE Class
 
@@ -3518,9 +3706,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:occurrenceID Not Empty
 
-#  VALIDATION_OCCURRENCEID_NOTEMPTY
+##  VALIDATION_OCCURRENCEID_NOTEMPTY
 https://rs.tdwg.org/bdq/c486546c-e6e5-48a7-b286-eba7f5ca56c4
 
 ## Description
@@ -3538,6 +3726,10 @@ COMPLIANT if dwc:occurrenceID is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:occurrenceID Not Empty
 
 ##  IE Class
 
@@ -3581,9 +3773,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:occurrenceStatus Not Empty
 
-#  VALIDATION_OCCURRENCESTATUS_NOTEMPTY
+##  VALIDATION_OCCURRENCESTATUS_NOTEMPTY
 https://rs.tdwg.org/bdq/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf
 
 ## Description
@@ -3601,6 +3793,10 @@ COMPLIANT if dwc:occurrenceStatus is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:occurrenceStatus Not Empty
 
 ##  IE Class
 
@@ -3644,9 +3840,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:occurrenceStatus Standard
 
-#  VALIDATION_OCCURRENCESTATUS_STANDARD
+##  VALIDATION_OCCURRENCESTATUS_STANDARD
 https://rs.tdwg.org/bdq/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47
 
 ## Description
@@ -3664,6 +3860,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:occurrenceStatus Standard
 
 ##  IE Class
 
@@ -3719,9 +3919,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:pathway Standard
 
-#  VALIDATION_PATHWAY_STANDARD
+##  VALIDATION_PATHWAY_STANDARD
 https://rs.tdwg.org/bdq/5424e933-bee7-4125-839e-d8743ea69f93
 
 ## Description
@@ -3739,6 +3939,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-02-09
+
+##  prefLabel
+
+Validation dwc:pathway Standard
 
 ##  IE Class
 
@@ -3796,9 +4000,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:sex Standard
 
-#  VALIDATION_SEX_STANDARD
+##  VALIDATION_SEX_STANDARD
 https://rs.tdwg.org/bdq/88d8598b-3318-483d-9475-a5acf9887404
 
 ## Description
@@ -3816,6 +4020,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-02-09
+
+##  prefLabel
+
+Validation dwc:sex Standard
 
 ##  IE Class
 
@@ -3872,9 +4080,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:typeStatus Standard
 
-#  VALIDATION_TYPESTATUS_STANDARD
+##  VALIDATION_TYPESTATUS_STANDARD
 https://rs.tdwg.org/bdq/4833a522-12eb-4fe0-b4cf-7f7a337a6048
 
 ## Description
@@ -3892,6 +4100,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-03
+
+##  prefLabel
+
+Validation dwc:typeStatus Standard
 
 ##  IE Class
 
@@ -3948,9 +4160,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation Classification Consistent
 
-#  VALIDATION_CLASSIFICATION_CONSISTENT
+##  VALIDATION_CLASSIFICATION_CONSISTENT
 https://rs.tdwg.org/bdq/2750c040-1d4a-4149-99fe-0512785f2d5f
 
 ## Description
@@ -3968,6 +4180,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation Classification Consistent
 
 ##  IE Class
 
@@ -4024,9 +4240,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:class Found
 
-#  VALIDATION_CLASS_FOUND
+##  VALIDATION_CLASS_FOUND
 https://rs.tdwg.org/bdq/2cd6884e-3d14-4476-94f7-1191cfff309b
 
 ## Description
@@ -4044,6 +4260,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:class Found
 
 ##  IE Class
 
@@ -4100,9 +4320,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:family Found
 
-#  VALIDATION_FAMILY_FOUND
+##  VALIDATION_FAMILY_FOUND
 https://rs.tdwg.org/bdq/3667556d-d8f5-454c-922b-af8af38f613c
 
 ## Description
@@ -4120,6 +4340,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:family Found
 
 ##  IE Class
 
@@ -4176,9 +4400,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:genus Found
 
-#  VALIDATION_GENUS_FOUND
+##  VALIDATION_GENUS_FOUND
 https://rs.tdwg.org/bdq/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec
 
 ## Description
@@ -4196,6 +4420,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:genus Found
 
 ##  IE Class
 
@@ -4252,9 +4480,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:kingdom Found
 
-#  VALIDATION_KINGDOM_FOUND
+##  VALIDATION_KINGDOM_FOUND
 https://rs.tdwg.org/bdq/125b5493-052d-4a0d-a3e1-ed5bf792689e
 
 ## Description
@@ -4272,6 +4500,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:kingdom Found
 
 ##  IE Class
 
@@ -4328,9 +4560,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:kingdom Not Empty
 
-#  VALIDATION_KINGDOM_NOTEMPTY
+##  VALIDATION_KINGDOM_NOTEMPTY
 https://rs.tdwg.org/bdq/36ed36c9-b1a7-40b2-b5e2-0d012e772098
 
 ## Description
@@ -4348,6 +4580,10 @@ COMPLIANT if dwc:kingdom is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2024-01-28
+
+##  prefLabel
+
+Validation dwc:kingdom Not Empty
 
 ##  IE Class
 
@@ -4391,9 +4627,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:namePublishedInYear Not Empty
 
-#  VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY
+##  VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY
 https://rs.tdwg.org/bdq/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70
 
 ## Description
@@ -4411,6 +4647,10 @@ COMPLIANT if dwc:namePublishedInYear is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2024-02-07
+
+##  prefLabel
+
+Validation dwc:namePublishedInYear Not Empty
 
 ##  IE Class
 
@@ -4454,9 +4694,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:order Found
 
-#  VALIDATION_ORDER_FOUND
+##  VALIDATION_ORDER_FOUND
 https://rs.tdwg.org/bdq/81cc974d-43cc-4c0f-a5e0-afa23b455aa3
 
 ## Description
@@ -4474,6 +4714,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:order Found
 
 ##  IE Class
 
@@ -4530,9 +4774,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:phylum Found
 
-#  VALIDATION_PHYLUM_FOUND
+##  VALIDATION_PHYLUM_FOUND
 https://rs.tdwg.org/bdq/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f
 
 ## Description
@@ -4550,6 +4794,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2022-03-25
+
+##  prefLabel
+
+Validation dwc:phylum Found
 
 ##  IE Class
 
@@ -4606,9 +4854,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation Polynomial Consistent
 
-#  VALIDATION_POLYNOMIAL_CONSISTENT
+##  VALIDATION_POLYNOMIAL_CONSISTENT
 https://rs.tdwg.org/bdq/17f03f1f-f74d-40c0-8071-2927cfc9487b
 
 ## Description
@@ -4626,6 +4874,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY, or all of dwc:gen
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation Polynomial Consistent
 
 ##  IE Class
 
@@ -4682,9 +4934,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:scientificNameAuthorship Not Empty
 
-#  VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
+##  VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 https://rs.tdwg.org/bdq/49f1d386-5bed-43ae-bd43-deabf7df64fc
 
 ## Description
@@ -4702,6 +4954,10 @@ COMPLIANT if dwc:scientificNameAuthorship is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2024-02-04
+
+##  prefLabel
+
+Validation dwc:scientificNameAuthorship Not Empty
 
 ##  IE Class
 
@@ -4745,9 +5001,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:scientificNameID Complete
 
-#  VALIDATION_SCIENTIFICNAMEID_COMPLETE
+##  VALIDATION_SCIENTIFICNAMEID_COMPLETE
 https://rs.tdwg.org/bdq/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8
 
 ## Description
@@ -4765,6 +5021,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is EMPTY; COMPLIANT if (1
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:scientificNameID Complete
 
 ##  IE Class
 
@@ -4822,9 +5082,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:scientificNameID Not Empty
 
-#  VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
+##  VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
 https://rs.tdwg.org/bdq/401bf207-9a55-4dff-88a5-abcd58ad97fa
 
 ## Description
@@ -4842,6 +5102,10 @@ COMPLIANT if dwc:scientificNameID is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:scientificNameID Not Empty
 
 ##  IE Class
 
@@ -4890,9 +5154,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:scientificName Found
 
-#  VALIDATION_SCIENTIFICNAME_FOUND
+##  VALIDATION_SCIENTIFICNAME_FOUND
 https://rs.tdwg.org/bdq/3f335517-f442-4b98-b149-1e87ff16de45
 
 ## Description
@@ -4910,6 +5174,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Validation dwc:scientificName Found
 
 ##  IE Class
 
@@ -4970,9 +5238,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:scientificName Not Empty
 
-#  VALIDATION_SCIENTIFICNAME_NOTEMPTY
+##  VALIDATION_SCIENTIFICNAME_NOTEMPTY
 https://rs.tdwg.org/bdq/7c4b9498-a8d9-4ebb-85f1-9f200c788595
 
 ## Description
@@ -4990,6 +5258,10 @@ COMPLIANT if dwc:scientificName is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:scientificName Not Empty
 
 ##  IE Class
 
@@ -5038,9 +5310,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:taxonRank Not Empty
 
-#  VALIDATION_TAXONRANK_NOTEMPTY
+##  VALIDATION_TAXONRANK_NOTEMPTY
 https://rs.tdwg.org/bdq/14da5b87-8304-4b2b-911d-117e3c29e890
 
 ## Description
@@ -5058,6 +5330,10 @@ COMPLIANT if dwc:taxonRank is not EMPTY; otherwise NOT_COMPLIANT
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:taxonRank Not Empty
 
 ##  IE Class
 
@@ -5106,9 +5382,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:taxonRank Standard
 
-#  VALIDATION_TAXONRANK_STANDARD
+##  VALIDATION_TAXONRANK_STANDARD
 https://rs.tdwg.org/bdq/7bdb13a4-8a51-4ee5-be7f-20693fdb183e
 
 ## Description
@@ -5126,6 +5402,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:taxonRank Standard
 
 ##  IE Class
 
@@ -5181,9 +5461,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:Taxon Not Empty
 
-#  VALIDATION_TAXON_NOTEMPTY
+##  VALIDATION_TAXON_NOTEMPTY
 https://rs.tdwg.org/bdq/06851339-843f-4a43-8422-4e61b9a00e75
 
 ## Description
@@ -5201,6 +5481,10 @@ COMPLIANT if at least one term needed to determine the taxon of the entity exist
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:Taxon Not Empty
 
 ##  IE Class
 
@@ -5248,9 +5532,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Validation dwc:Taxon Unambiguous
 
-#  VALIDATION_TAXON_UNAMBIGUOUS
+##  VALIDATION_TAXON_UNAMBIGUOUS
 https://rs.tdwg.org/bdq/4c09f127-737b-4686-82a0-7c8e30841590
 
 ## Description
@@ -5268,6 +5552,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Validation dwc:Taxon Unambiguous
 
 ##  IE Class
 
@@ -5324,9 +5612,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Measure Amendments Proposed
 
-#  MEASURE_AMENDMENTS_PROPOSED
+##  MEASURE_AMENDMENTS_PROPOSED
 https://rs.tdwg.org/bdq/03049fe5-a575-404f-b564-ae63f5a1cf8b
 
 ## Description
@@ -5344,6 +5632,10 @@ The number of tests of output type AMENDMENT that have been run against the reco
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Measure Amendments Proposed
 
 ##  IE Class
 
@@ -5385,9 +5677,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Measure Validation Tests Compliant
 
-#  MEASURE_VALIDATIONTESTS_COMPLIANT
+##  MEASURE_VALIDATIONTESTS_COMPLIANT
 https://rs.tdwg.org/bdq/45fb49eb-4a1b-4b49-876f-15d5034dfc73
 
 ## Description
@@ -5405,6 +5697,10 @@ INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to 
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Measure Validation Tests Compliant
 
 ##  IE Class
 
@@ -5450,9 +5746,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Measure Validation Tests Not Compliant
 
-#  MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
+##  MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
 https://rs.tdwg.org/bdq/453844ae-9df4-439f-8e24-c52498eca84a
 
 ## Description
@@ -5470,6 +5766,10 @@ INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to 
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Measure Validation Tests Not Compliant
 
 ##  IE Class
 
@@ -5515,9 +5815,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Measure Validation Tests Prerequisites Not Met
 
-#  MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
+##  MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
 https://rs.tdwg.org/bdq/49a94636-a562-4e6b-803c-665c80628a3d
 
 ## Description
@@ -5535,6 +5835,10 @@ INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report t
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Measure Validation Tests Prerequisites Not Met
 
 ##  IE Class
 
@@ -5580,9 +5884,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Measure dwc:eventDate Duration In Seconds
 
-#  MEASURE_EVENTDATE_DURATIONINSECONDS
+##  MEASURE_EVENTDATE_DURATIONINSECONDS
 https://rs.tdwg.org/bdq/56b6c695-adf1-418e-95d2-da04cad7be53
 
 ## Description
@@ -5600,6 +5904,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Measure dwc:eventDate Duration In Seconds
 
 ##  IE Class
 
@@ -5657,9 +5965,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Issue dwc:dataGeneralizations Not Empty
 
-#  ISSUE_DATAGENERALIZATIONS_NOTEMPTY
+##  ISSUE_DATAGENERALIZATIONS_NOTEMPTY
 https://rs.tdwg.org/bdq/13d5a10e-188e-40fd-a22c-dbaa87b91df2
 
 ## Description
@@ -5677,6 +5985,10 @@ POTENTIAL_ISSUE if dwc:dataGeneralizations is not EMPTY; otherwise NOT_ISSUE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Issue dwc:dataGeneralizations Not Empty
 
 ##  IE Class
 
@@ -5730,9 +6042,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Issue Coordinates Center Of Country
 
-#  ISSUE_COORDINATES_CENTEROFCOUNTRY
+##  ISSUE_COORDINATES_CENTEROFCOUNTRY
 https://rs.tdwg.org/bdq/256e51b3-1e08-4349-bb7e-5186631c3f8e
 
 ## Description
@@ -5750,6 +6062,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-20
+
+##  prefLabel
+
+Issue Coordinates Center Of Country
 
 ##  IE Class
 
@@ -5806,9 +6122,9 @@ bdq:Spatial-Temporal Patterns
 
 ********************
 
-## Preferred Label (TODO)
+#  Issue dwc:establishmentMeans Not Empty
 
-#  ISSUE_ESTABLISHMENTMEANS_NOTEMPTY
+##  ISSUE_ESTABLISHMENTMEANS_NOTEMPTY
 https://rs.tdwg.org/bdq/acc8dff2-d8d1-483a-946d-65a02a452700
 
 ## Description
@@ -5826,6 +6142,10 @@ POTENTIAL_ISSUE if dwc:establishmentMeans is not EMPTY; otherwise NOT_ISSUE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Issue dwc:establishmentMeans Not Empty
 
 ##  IE Class
 
@@ -5869,9 +6189,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Biotic-Relationships
 
 ********************
 
-## Preferred Label (TODO)
+#  Issue Annotation Not Empty
 
-#  ISSUE_ANNOTATION_NOTEMPTY
+##  ISSUE_ANNOTATION_NOTEMPTY
 https://rs.tdwg.org/bdq/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1
 
 ## Description
@@ -5889,6 +6209,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTI
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Issue Annotation Not Empty
 
 ##  IE Class
 
@@ -5944,9 +6268,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:basisOfRecord Standardized
 
-#  AMENDMENT_BASISOFRECORD_STANDARDIZED
+##  AMENDMENT_BASISOFRECORD_STANDARDIZED
 https://rs.tdwg.org/bdq/07c28ace-561a-476e-a9b9-3d5ad6e35933
 
 ## Description
@@ -5964,6 +6288,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-07-24
+
+##  prefLabel
+
+Amendment dwc:basisOfRecord Standardized
 
 ##  IE Class
 
@@ -6015,9 +6343,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dc:type Standard
 
-#  AMENDMENT_DCTYPE_STANDARDIZED
+##  AMENDMENT_DCTYPE_STANDARDIZED
 https://rs.tdwg.org/bdq/bd385eeb-44a2-464b-a503-7abe407ef904
 
 ## Description
@@ -6035,6 +6363,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-16
+
+##  prefLabel
+
+Amendment dc:type Standard
 
 ##  IE Class
 
@@ -6087,9 +6419,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dcterms:license Standardized
 
-#  AMENDMENT_LICENSE_STANDARDIZED
+##  AMENDMENT_LICENSE_STANDARDIZED
 https://rs.tdwg.org/bdq/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8
 
 ## Description
@@ -6107,6 +6439,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMEN
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Amendment dcterms:license Standardized
 
 ##  IE Class
 
@@ -6164,9 +6500,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment Coordinates From Verbatim
 
-#  AMENDMENT_COORDINATES_FROM_VERBATIM
+##  AMENDMENT_COORDINATES_FROM_VERBATIM
 https://rs.tdwg.org/bdq/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e
 
 ## Description
@@ -6184,6 +6520,10 @@ INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLo
 ##  DateLastUpdated
 
 2024-08-20
+
+##  prefLabel
+
+Amendment Coordinates From Verbatim
 
 ##  IE Class
 
@@ -6240,9 +6580,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment Coordinates Transposed
 
-#  AMENDMENT_COORDINATES_TRANSPOSED
+##  AMENDMENT_COORDINATES_TRANSPOSED
 https://rs.tdwg.org/bdq/f2b4a50a-6b2f-4930-b9df-da87b6a21082
 
 ## Description
@@ -6260,6 +6600,10 @@ INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongi
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Amendment Coordinates Transposed
 
 ##  IE Class
 
@@ -6320,9 +6664,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:countryCode from Coordinates
 
-#  AMENDMENT_COUNTRYCODE_FROM_COORDINATES
+##  AMENDMENT_COUNTRYCODE_FROM_COORDINATES
 https://rs.tdwg.org/bdq/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae
 
 ## Description
@@ -6340,6 +6684,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:countryCode from Coordinates
 
 ##  IE Class
 
@@ -6400,9 +6748,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:countryCode Standard
 
-#  AMENDMENT_COUNTRYCODE_STANDARDIZED
+##  AMENDMENT_COUNTRYCODE_STANDARDIZED
 https://rs.tdwg.org/bdq/fec5ffe6-3958-4312-82d9-ebcca0efb350
 
 ## Description
@@ -6420,6 +6768,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Amendment dwc:countryCode Standard
 
 ##  IE Class
 
@@ -6471,9 +6823,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:geodeticDatum Assumed Default
 
-#  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
+##  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
 https://rs.tdwg.org/bdq/7498ca76-c4d4-42e2-8103-acacccbdffa7
 
 ## Description
@@ -6491,6 +6843,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is not EMPTY; FILLED_IN dwc:
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:geodeticDatum Assumed Default
 
 ##  IE Class
 
@@ -6552,9 +6908,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:geodeticDatum Standardized
 
-#  AMENDMENT_GEODETICDATUM_STANDARDIZED
+##  AMENDMENT_GEODETICDATUM_STANDARDIZED
 https://rs.tdwg.org/bdq/0345b325-836d-4235-96d0-3b5caf150fc0
 
 ## Description
@@ -6572,6 +6928,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority was not available; INT
 ##  DateLastUpdated
 
 2024-08-20
+
+##  prefLabel
+
+Amendment dwc:geodeticDatum Standardized
 
 ##  IE Class
 
@@ -6628,9 +6988,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth
 
-#  AMENDMENT_MINDEPTH-MAXDEPTH_FROM_VERBATIM
+##  AMENDMENT_MINDEPTH-MAXDEPTH_FROM_VERBATIM
 https://rs.tdwg.org/bdq/c5658b83-4471-4f57-9d94-bf7d0a96900c
 
 ## Description
@@ -6648,6 +7008,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimDepth is EMPTY or the value is not
 ##  DateLastUpdated
 
 2024-08-03
+
+##  prefLabel
+
+Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth
 
 ##  IE Class
 
@@ -6704,9 +7068,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation
 
-#  AMENDMENT_MINELEVATION-MAXELEVATION_FROM_VERBATIM
+##  AMENDMENT_MINELEVATION-MAXELEVATION_FROM_VERBATIM
 https://rs.tdwg.org/bdq/2d638c8b-4c62-44a0-a14d-fa147bf9823d
 
 ## Description
@@ -6724,6 +7088,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:verbatimElevation is EMPTY or the value is
 ##  DateLastUpdated
 
 2024-08-03
+
+##  prefLabel
+
+Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation
 
 ##  IE Class
 
@@ -6780,9 +7148,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:day Standardized
 
-#  AMENDMENT_DAY_STANDARDIZED
+##  AMENDMENT_DAY_STANDARDIZED
 https://rs.tdwg.org/bdq/b129fa4d-b25b-43f7-9645-5ed4d44b357b
 
 ## Description
@@ -6800,6 +7168,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; AMENDED the value of dwc:day
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Amendment dwc:day Standardized
 
 ##  IE Class
 
@@ -6851,9 +7223,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:eventDate From dwc:verbatimEventDate
 
-#  AMENDMENT_EVENTDATE_FROM_VERBATIM
+##  AMENDMENT_EVENTDATE_FROM_VERBATIM
 https://rs.tdwg.org/bdq/6d0a0c10-5e4a-4759-b448-88932f399812
 
 ## Description
@@ -6871,6 +7243,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or the value of dwc
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:eventDate From dwc:verbatimEventDate
 
 ##  IE Class
 
@@ -6932,9 +7308,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:eventDate from dwc:year dwc:month dwc:day
 
-#  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
+##  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
 https://rs.tdwg.org/bdq/3892f432-ddd0-4a0a-b713-f2e2ecbd879d
 
 ## Description
@@ -6952,6 +7328,10 @@ INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMP
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:eventDate from dwc:year dwc:month dwc:day
 
 ##  IE Class
 
@@ -7013,9 +7393,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear
 
-#  AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
+##  AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
 https://rs.tdwg.org/bdq/eb0a44fa-241c-4d64-98df-ad4aa837307b
 
 ## Description
@@ -7033,6 +7413,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate was not EMPTY or any of dwc:year
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear
 
 ##  IE Class
 
@@ -7094,9 +7478,9 @@ bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:eventDate Standardized
 
-#  AMENDMENT_EVENTDATE_STANDARDIZED
+##  AMENDMENT_EVENTDATE_STANDARDIZED
 https://rs.tdwg.org/bdq/718dfc3c-cb52-4fca-b8e2-0e722f375da7
 
 ## Description
@@ -7114,6 +7498,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; AMENDED if the value o
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Amendment dwc:eventDate Standardized
 
 ##  IE Class
 
@@ -7171,9 +7559,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:Event from dwc:eventDate
 
-#  AMENDMENT_EVENT_FROM_EVENTDATE
+##  AMENDMENT_EVENT_FROM_EVENTDATE
 https://rs.tdwg.org/bdq/710fe118-17e1-440f-b428-88ba3f547d6d
 
 ## Description
@@ -7191,6 +7579,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or contains an invalid 
 ##  DateLastUpdated
 
 2024-07-23
+
+##  prefLabel
+
+Amendment dwc:Event from dwc:eventDate
 
 ##  IE Class
 
@@ -7253,9 +7645,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:month Standardized
 
-#  AMENDMENT_MONTH_STANDARDIZED
+##  AMENDMENT_MONTH_STANDARDIZED
 https://rs.tdwg.org/bdq/2e371d57-1eb3-4fe3-8a61-dff43ced50cf
 
 ## Description
@@ -7273,6 +7665,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; AMENDED the value of dwc:m
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Amendment dwc:month Standardized
 
 ##  IE Class
 
@@ -7324,9 +7720,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:dateIdentified Standard
 
-#  AMENDMENT_DATEIDENTIFIED_STANDARDIZED
+##  AMENDMENT_DATEIDENTIFIED_STANDARDIZED
 https://rs.tdwg.org/bdq/39bb2280-1215-447b-9221-fd13bc990641
 
 ## Description
@@ -7344,6 +7740,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; AMENDED if the va
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Amendment dwc:dateIdentified Standard
 
 ##  IE Class
 
@@ -7401,9 +7801,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:degreeOfEstablishment Standardized
 
-#  AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED
+##  AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED
 https://rs.tdwg.org/bdq/74ef1034-e289-4596-b5b0-cde73796697d
 
 ## Description
@@ -7421,6 +7821,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-04-16
+
+##  prefLabel
+
+Amendment dwc:degreeOfEstablishment Standardized
 
 ##  IE Class
 
@@ -7478,9 +7882,9 @@ bdq:Alien-Species
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:establishmentMeans Standardized
 
-#  AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
+##  AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
 https://rs.tdwg.org/bdq/15d15927-7a22-43f8-88d6-298f5eb45c4c
 
 ## Description
@@ -7498,6 +7902,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-02-08
+
+##  prefLabel
+
+Amendment dwc:establishmentMeans Standardized
 
 ##  IE Class
 
@@ -7551,9 +7959,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:occurrenceStatus Assumed Default
 
-#  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
+##  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
 https://rs.tdwg.org/bdq/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5
 
 ## Description
@@ -7571,6 +7979,10 @@ FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occ
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:occurrenceStatus Assumed Default
 
 ##  IE Class
 
@@ -7622,9 +8034,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:occurrenceStatus Standardized
 
-#  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
+##  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
 https://rs.tdwg.org/bdq/f8f3a093-042c-47a3-971a-a482aaaf3b75
 
 ## Description
@@ -7642,6 +8054,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-07-26
+
+##  prefLabel
+
+Amendment dwc:occurrenceStatus Standardized
 
 ##  IE Class
 
@@ -7693,9 +8109,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:pathway Standardized
 
-#  AMENDMENT_PATHWAY_STANDARDIZED
+##  AMENDMENT_PATHWAY_STANDARDIZED
 https://rs.tdwg.org/bdq/f9205977-f145-44f5-8cb9-e3e2e35ce908
 
 ## Description
@@ -7713,6 +8129,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-02-09
+
+##  prefLabel
+
+Amendment dwc:pathway Standardized
 
 ##  IE Class
 
@@ -7770,9 +8190,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:sex Standardized
 
-#  AMENDMENT_SEX_STANDARDIZED
+##  AMENDMENT_SEX_STANDARDIZED
 https://rs.tdwg.org/bdq/33c45ae1-e2db-462a-a59e-7169bb01c5d6
 
 ## Description
@@ -7790,6 +8210,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-03-25
+
+##  prefLabel
+
+Amendment dwc:sex Standardized
 
 ##  IE Class
 
@@ -7846,9 +8270,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:typeStatus Standardized
 
-#  AMENDMENT_TYPESTATUS_STANDARDIZED
+##  AMENDMENT_TYPESTATUS_STANDARDIZED
 https://rs.tdwg.org/bdq/b3471c65-b53e-453b-8282-abfa27bf1805
 
 ## Description
@@ -7866,6 +8290,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-16
+
+##  prefLabel
+
+Amendment dwc:typeStatus Standardized
 
 ##  IE Class
 
@@ -7922,9 +8350,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:scientificNameID from dwc:Taxon
 
-#  AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
+##  AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
 https://rs.tdwg.org/bdq/431467d6-9b4b-48fa-a197-cd5379f5e889
 
 ## Description
@@ -7942,6 +8370,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INT
 ##  DateLastUpdated
 
 2023-09-17
+
+##  prefLabel
+
+Amendment dwc:scientificNameID from dwc:Taxon
 
 ##  IE Class
 
@@ -8006,9 +8438,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:scientificName from dwc:scientificNameID
 
-#  AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
+##  AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
 https://rs.tdwg.org/bdq/f01fb3f9-2f7e-418b-9f51-adf50f202aea
 
 ## Description
@@ -8026,6 +8458,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2024-08-18
+
+##  prefLabel
+
+Amendment dwc:scientificName from dwc:scientificNameID
 
 ##  IE Class
 
@@ -8086,9 +8522,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-## Preferred Label (TODO)
+#  Amendment dwc:taxonRank Standardized
 
-#  AMENDMENT_TAXONRANK_STANDARDIZED
+##  AMENDMENT_TAXONRANK_STANDARDIZED
 https://rs.tdwg.org/bdq/e39098df-ef46-464c-9aef-bcdeee2a88cb
 
 ## Description
@@ -8106,6 +8542,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 ##  DateLastUpdated
 
 2023-09-18
+
+##  prefLabel
+
+Amendment dwc:taxonRank Standardized
 
 ##  IE Class
 
