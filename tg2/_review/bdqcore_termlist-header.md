@@ -23,7 +23,7 @@ Latest version
 
 **Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Antonio M Saraiva, Alex Thompson, Miles Nicholls, Emily R Rees, Christian Gendreau, Dmitry Schigel, Yi Ming Gan
 
-**Creator**: TDWG Biodiversity Data Quality Tests and Assertions Task Group
+**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions)
 
 **Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
 
