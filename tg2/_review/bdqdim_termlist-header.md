@@ -1,6 +1,6 @@
-# BDQ Core Dimensions Controlled Vocabulary List of Terms
+# Data Quality Dimension Controlled Vocabulary List of Terms
 
-**Title**: BDQ Core Dimensions Controlled Vocabulary List of Terms
+**Title**: Data Quality Dimension Controlled Vocabulary List of Terms
 
 **Namespace URI**: <http://rs.tdwg.org/bdqdim/values/>
 

@@ -1,6 +1,6 @@
-# BDQ Core Controlled Vocabulary List of Terms
+# Test Specification Vocabulary List of Terms
 
-**Title**: BDQ Core Controlled Vocabulary List of Terms
+**Title**: Test Specification Vocabulary List of Terms
 
 **Date version issued**: {ratification_date}
 

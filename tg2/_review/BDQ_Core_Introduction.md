@@ -34,9 +34,11 @@ BDQ Core Maintenance Group. 2024. BDQ Core Introduction. Biodiversity Informatio
 1.2 Status of the content of this document
 1.3 RFC 2119 keywords
 1.4 Namespace abbreviations
-1.5 BDQ Core Tests and Assertions
-1.6 Test Specifications
-1.7 Framework for describing data quality
+1.5 Vocabularies
+1.5.1 Tests and Assertions Vocabulary
+1.5.2 Test Specification Vocabulary
+1.5.3 Data Quality Dimension Controlled Vocabulary
+1.5.4 Data Quality Framework Vocabulary
 
 2 Guidance for Consumers of Data Quality Reports
 2.1 Introduction
@@ -49,10 +51,6 @@ BDQ Core Maintenance Group. 2024. BDQ Core Introduction. Biodiversity Informatio
 3 A Framework for Data Quality
 3.1 Introduction
 3.2 Framework
-
-4 Vocabularies
-4.1 Introduction
-4.2 Vocabularies
 
 5 Test specifications
 5.1 Introduction
@@ -73,7 +71,7 @@ BDQ Core Maintenance Group. 2024. BDQ Core Introduction. Biodiversity Informatio
 6.6 Implementation
 6.7 Identifying example data
 
-7 Implications for the Darwin Core Standard (John)
+7 Glossary
 
 8 Acknowledgements
 
@@ -81,7 +79,6 @@ BDQ Core Maintenance Group. 2024. BDQ Core Introduction. Biodiversity Informatio
 
 10 References
 
-11 Supplement: Rationale Management Documentation
 ``` 
 
 ## 1. Introduction
@@ -103,7 +100,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 The following namespace abbreviations are used in this document:
 
-**CHECK THIS on final draft**
+**CHECK THIS set on final draft, include only those used in this document**
 
 | **Prefix**   | **Namespace**                                    |
 |--------------|--------------------------------------------------|
@@ -118,7 +115,14 @@ The following namespace abbreviations are used in this document:
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-### 1.5 BDQ Core Tests and Assertions
+
+### 1.5 Vocabularies
+This standard includes four [BDQ vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/BDQ_Core_Vocabulary_Landing_Page_index.md), each of which has its own namespace introduced by this standard. 
+
+#### 1.5.1 List of BDQ Tests and Assertions
+#### 1.5.2 Fitness For Use Framework Ontology
+#### 1.5.3 Test Specification Vocabulary List of Terms
+#### 1.5.4 Data Quality Dimension Controlled Vocabulary List of Terms
 
 This standard is a specification of tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record will greatly depend on the use to which it is applied: A record that is unsuitable to be used in one application may be suitable for another application (Belbin et al 2013).
 
@@ -130,7 +134,9 @@ CORE tests are all defined as single record-level (bdqffdq:SingleRecord) tests, 
 
 Tests may require reference to external data such as standard vocabularies of terms or names. While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests.
 
-We acknowledge the centrality of the work of the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) as to how the test results are reported against records. Test results structured with these three components can be readily wrapped in the body annotation document that follows the W3C Web Annotation Data Model (Sanderson et al. 2017), along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
+(Make sure to establish that the standard does not specify the "format" of the responses (JSON within an Annotation, etc.), but it does specify the required content regardless of serialization format.)
+
+(Make sure this is addressed in this document) We acknowledge the centrality of the work of the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) as to how the test results are reported against records. Test results structured with these three components can be readily wrapped in the body annotation document that follows the W3C Web Annotation Data Model (Sanderson et al. 2017), along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
 #### Definition of EMPTY
 
@@ -742,15 +748,7 @@ Similarly, changes to the test specification 'Information Elements ActedUpon' an
 
 Therefore any changes to test specifications must trigger the need to check the associated test data and examples.
 
-## 7. Implications for the Darwin Core Standard (John)
-
-Early recognition that estimating 'fitness for use'/'quality was made difficult because of the lack of vocabularies...TG4.
-
-Definitions, uses in the wild, and best practices for Taxon class ..ID terms.
-
-[ Mention of issues arising such as use of dwc:country and dwc:countryCode and "High Seas"]
-
-How to identify the High Seas.
+## 7. Glossary
 
 ## 8. Acknowledgements
 Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
@@ -774,7 +772,6 @@ Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbre
 | TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases                                  |
 | TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
 
-
 ## 10. References
 
 * Belbin L, Daly J, Hirsch T, Hobern D, Salle JL (2013) A specialist’s audit of aggregated occurrence records: An ‘aggregator’s’ perspective. ZooKeys 305: 67–76. doi: 10.3897/zookeys.305.5438
@@ -784,149 +781,6 @@ Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbre
 Sanderson et al. (2107) see Section 1.5
 * Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731
 * Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, Robertson T, Vieglais D (2012) Darwin Core: An Evolving Community-Developed Biodiversity Data Standard. PLoS ONE 7(1): e29715. https://doi.org/10.1371/journal.pone.0029715
-
-## 11. Supplement: Rationale Management Documentation
-
-TODO: Add preferred labels for tests using the pattern "Validation Day In Range" and "Validation ScientificNameID Complete".
-
-TODO: Create issue templates for new test and test change request. Include Preferred Label in that template.
-
-The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq github repository. Each issue has table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below:
-
-**Title**: A standardised, human readable name of the test-assertion based roughly on the template OUTPUTTYPE_TERMS_RESPONSE. There are 15 tests that only loosely conform to this template due to the difficulty of rendering them otherwise, for example "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION". <!---Note that there are 15 tests that don't strictly follow this - e.g. #132, #108, #93, #88, #86, #73, #71, #68, #62, #57, #56, #52, #50, #32, #24 - Should we mention the exception types here?--->. These names were considered helpful for human-human communication and to assist with code implementation, maintenance and searches. Example: VALIDATION_BASISOFRECORD_STANDARD.
-
-**GUID**: A globally unique identifier which allows software to uniquely identify each test (and in combination with parameter values, allows for specification of the expectations for the behaviour of a test implementation). Example: 42408a00-bf71-4892-a399-4325e2bc1fb8. 
- 
-**Description**: An English language brief description. Example: Does the value of dwc:basisOfRecord occur in bdq:sourceAuthority? 
-
-**Output Type**: Tests have been classified into four Fitness for Use Framework classes; VALIDATION (validates values in one or more Darwin Core terms),  AMENDMENT (an improvement that will result in a change or addition to at least one Darwin Core term); and MEASURE (returns a numeric value, for the tests described here; all values are in the form of the number of tests that conform to a criterion). Three tests are typed as ISSUE (flag a potential problem). Example: POTENTIAL_ISSUE.
-
-**Darwin Core Class**: The Darwin Core class that contains the Information Elements. Example: dwc:Taxon.
-
-**Information Elements**: The Darwin Core terms that the test takes as input. Example: dwc:basisOfRecord.
-
-**Expected Response**: A concise description of the logic of the test to clarify implementation. The Expected Response takes the form (for a VALIDATION) of: EXTERNAL_PREREQUISITES_NOT_MET if <condition>; INTERNAL_PREREQUESITES_NOT_MET if <condition>; COMPLIANT if <condition>; otherwise NOT_COMPLIANT. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED.
-
-**Data Quality Dimension**: A test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (the extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the information element); "Consistency" (agreement among related information elements in the data); "Likeliness" (low probability that values are real); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data).
-
-**Warning Type**: The nature of the flag associated with the result of the test. Possible values are "Ambiguous", "Amended", "Incomplete", "Inconsistent", "Invalid", "Notification", "Report" and "Unlikely.
-
-**Parameter(s)**: Parameters that modify the behaviour of the test, along with default values or links to source authorities. A parameter value exists only where there are a number of alternate options. For example, "bdq:sourceAuthority default = "GBIF Backbone Taxonomy"" is parameterised as it allows for regional taxonomic authorities whereas "bdq:sourceAuthority is "EPSG:" [https://epsg.io]"" is not parameterised as there is a single source authority. Example: bdq:defaultGeodeticDatum.	
-
-**Source Authority**: A reference to the authority required by the test and a default value. Example: bdq:sourceAuthority default = {Darwin Core} {Basis of record [https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}.   When a test uses more than one sourceAuthority at the same time, these are given separate names, for example,  bdq:taxonIsMarine,bdq:geospatialLand are the two sourceAuthority Parameters for VALIDATION_COORDINATES_TERRESTRIALMARINE.
-
-**Specification Last Updated**: Date of last change to a Normative part of the test, for example to the wording of an Expected Response. Example 2023-06-23.
-
-**Examples**: A ’pass’ and a ‘fail’ example of test data. All examples have been generated from the test data suite. Example: [dwc:basisOfRecord="Taxon": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord matches a standard label of one of the Darwin Core classes"]
-[dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord does not exactly match a standard label of one of the Darwin Core classes"].
-
-**Source**: The origin of the concept of the test. Example: The Atlas of Living Australia.
-
-**References**: One or more publications that relate directly to the test. Example: GBIF Secretariat (2021). GBIF Backbone Taxonomy https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c).
-
-**Example Implementations (Mechanisms)**: A link to one or more agencies that have an implementation of the test. Example: https://github.com/FilteredPush/event_date_qc.
-
-**Link to Specification Source Code**: A link to code that implements the test. Example: https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169.
-
-**Notes**: Additional comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. Example: For TAXONID_FROM_TAXON, “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
-
-## 1.5 Definition of CORE
-
-'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what times, and a subset of Darwin Core terms that we consider to be critical metadata about occurrence records.
-
-A number of tests were framed, but considered out of scope for CORE data quality needs ('Supplementary' GitHub tag). Implementers are free to implement a subset of the CORE tests or add additional tests when there is a particular data quality needs within their domain. For example, the testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Over the period of this project, many tests were removed from CORE on the basis that they could not be currently implemented in a manner that would result in predictable results. For example, the test VALIDATION_GEOGRAPHY_CONSISTENT was rejected late in the project because of the complexities in matching terms in the geographic names hierarchy, which is less standardized than the taxonomic names hierarchy.
-
----
-
-## User guide
-
-#### **2.2.3.1 Event and Calendars**
-
-Different calendars have been used at different times in different places, and the transcription of an
-original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date, and metadata may or not be present to even identify such records.
-
-Countries and researchers have changed from the Julian calendar to the Gregorian calendar at different times. For example, Russia adopted the Gregorian Calendar on 1918-02-14, the British Empire in 1752-09-14, different regions in France between 1582 and 1760, with France also adopting the French Republican Calendar 1793-1805. The difference between the Gregorian and Julian calendar has typically been around 10 days. But, the day that is considered the first day of the year has also changed at different times in different countries, meaning that the difference can be as great as 1 year and 10 days. Given the complexity, and ongoing nature of transitions between calendars, we do not advocate using VALIDATION_EVENTDATE_INRANGE for quality assurance by selecting a transition date and using it as a threshold.
-
-[John’s statement on calendars as a placeholder (https://github.com/tdwg/bdq/issues/76#issuecomment-1591985055): “I don't think we are in any position to posit a date after which the Gregorian calendar assumption is safe. It is still not safe today, it's just that its use for civil purposes has ever fewer exceptions as time goes on (so far). Making a statement about a particular date (other than the date of its origin) for a date of special mention necessarily has discriminatory implications. We do NOT want that.
-
-In this particular issue, and perhaps in all others where this has come up, I do not see that the uncertainty associated with the date actually has anything to do with what we are testing. This test can't assess if a date is actually within a Gregorian date interval, except in special cases where the Julian and Gregorian calendars coincide, and even that is ignoring all other possible calendars. Instead, it is able to test that a date following the ISO 8601-1 date specification is within a range specified in that context. We can't effectively do anything else because Darwin Core doesn't even provide for stating the original calendar used - it's forcing people to use the Gregorian calendar without describing the responsibility for doing so and the consequences of not doing so. I think the place for awareness of the implications of dates with unknown calendars is in the Darwin Core date terms.]
-
-#### 5.2.2 Example (Informative)
-
-Given the specification: 
-
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdq:sourceAuthority; otherwise NOT_COMPLIANT
-
-Pseudocode for an implementation follows the sequence of RESPONSE,critera; of the specification, with external prerequisites being able to be thrown from anywhere within the logic, but handled within the construct that builds a Result object.
-
-    Function validationCountrycodeNotempty(countryCode) returns Result {
-      String sourceAuthority = "ISO 3166-1-alpha-2"
-      Result result = new Result()
-      try { 
-          if (isEmpty(countryCode) { 
-              result.setStatus(INTERNAL_PREREQUISTS_NOT_MET) 
-              result.setComment("provided countryCode is empty."
-          } else {
-              result.setStatus(RUN_HAS_RESULT) 
-              if (isFoundCountryCode(countryCode,sourceAuthority)) { 
-                 result.setValue(COMPLIANT)
-                 result.setComment("provided countryCode ["+countryCode+"] is a known "+sourceAuthority+" countryCode ")
-              } else { 
-                 result.setValue(NOT_COMPLIANT)
-                 result.setComment("provided countryCode ["+countryCode+"] is not a known "+sourceAuthority+" countryCode ")
-              }
-          } 
-      } catch NetworkException {
-          result.setStatus(EXTERNAL_PREREQUISITES_NOT_MET) 
-          result.setComment("Temporary failure looking up countryCode, try later")
-      }
-      return result;
-    }
-
-    Function isfoundCountryCode(countryCode,sourceAuthority) returns boolean throws NetworkException {...}
-
-
-#### 5.2.4 Guidelines for Implementers (Informative)
-
-**TODO: Mention of the need for local caching of web-site based source authorities.**
-
-Implementors should locally cache the results of calls to remote web services, particularly if they operate on a sequence of SingleRecords instead of operating on distinct values of InformationElements.  Data sets typically contain many repeated values, and remote web services should not be subject to repeated requests asking the same question over and over. 
-
-**TODO: Note that implementors do not need to implement web service calls to source authorities that are highly stable (e.g. DCMI type vocabulary #41).
-
-Some source authorities are highly stable small vocabularies.  Implementors may choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a test.  Implementors should monitor for changes to that vocabulary. 
-
-**TODO: The value supplied for the parameter for the test is not an attribute of the data, it is an attribute of the Mechanism (of the system assessing the data quality). If we had included assertions about the validity values of parameters, they should only return external prerequisites not met, as they are assertions about externalities to the data and will change if the same data are run on the same test with a different configuration.**
-
-**If time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms**
-
-**Placeholder for TIME issue**
-
-See: https://xkcd.com/2867/ and  https://www.xkcd.com/1883/
-
-This standard avoids analysis of two time and date issues, time zones, and geographic and temporal variation in the change from Julian to Gregorian calendars.  
-
-Time is treated as out of scope for CORE Use Cases.  This means that some cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced.    
-
-The event_date_qc implementation of AMENDMENT_EVENT_FROM_EVENTDATE contains this commented out block of code, pertinent to time zone issues.   It would popluated eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should but may not have taken account of a local time zone in populating dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear (dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear/dec:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
-
-// Time could also be populated, but it isn't in scope for this issue.
-// Here is a minimal implementation,
-// which illustrates some issues in implementation (using zulu time or not, dealing with time in ranges...)
-if (DateUtils.isEmpty(eventTime)) {
-        if (DateUtils.containsTime(eventDate)) {
-                String newTime = DateUtils.extractZuluTime(eventDate);
-                result.addResult("dwc:eventTime", newTime );
-                result.setResultState(ResultState.FILLED_IN);
-            result.addComment("Added eventTime ["+ newTime +"] from eventDate ["+eventDate+"].");
-        }
-}
-
-In general, assessing whether a date in biodiversity data was Julian or Gregorian is treated here as an intractable problem, and the problem of correctly determining the gregorian value for dwc:eventDates is left in the hands of data providers who may have additional knowledge of collectors and their practices to be able to assess how to interpret verbatim date values found in their historical records.  For consumers, this means that historical dates, even into recent times, may have systematic errors in subsets of the data where the date was julian but has been treated as gregorian.  This can, in some cases, introduce errors on the scale of one year differences between reported and correct eventDate value.     
-
-
-
-
 
 <html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office"

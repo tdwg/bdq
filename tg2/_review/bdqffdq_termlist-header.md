@@ -1,8 +1,8 @@
-# BDQ Conceptual Framework Ontology
+# Fitness For Use Framework Ontology
 
-**Title**: BDQ Conceptual Framework Ontology
+**Title**: Fitness For Use Framework Ontology
 
-**Namespace URI**: http://rs.tdwg.org/bdqffdq/ontology/
+**Namespace URI**: http://rs.tdwg.org/bdqffdq
 
 **Preferred namespace abbreviation**: bdqffdq:
 
