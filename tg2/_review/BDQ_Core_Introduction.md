@@ -109,6 +109,7 @@ The following namespace abbreviations are used in this document:
 |--------------|--------------------------------------------------|
 | bdq          | https://rs.tdwg.org/bdq/terms/                   |
 | bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
 | bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
