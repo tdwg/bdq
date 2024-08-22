@@ -21,7 +21,7 @@ BDQ Core is a standard maintained by the [BDQ Core Maintenance Interest Group](h
 - [DataQuality Dimension Vocabulary](https://github.com/tdwg/bdq/blob/master/tg2/_review/bdqdim_termlist-header.md)
 - [BDQ Vocabulary](https://github.com/tdwg/bdq/blob/master/tg2/_review/bdq_termlist-header.md)
 - Users Guide to BDQ Core Tests [BDQ Core](simple/),
-- Implementors Guide )To BDQ Core 
+- Implementors Guide To BDQ Core 
 - [GitHub repository](https://github.com/tdwg/bdq): where BDQ Core is maintained
 - After Ratification: Normative term list: the document containing the full history of normative BDQ Core term definitions
 - [Distribution files](needs link): download files to start using BDQ Core
