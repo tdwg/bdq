@@ -1,21 +1,16 @@
 # BDQ Core List of Tests
 
-Title
-: BDQ Core List of Tests
+**Title**: BDQ Core List of Tests
 
-Date version issued
-: {ratification_date}
+**Date version issued**: {ratification_date}
 
-Date created
-: {created_date}
+**Date created**: {created_date}
 
-Part of TDWG Standard
-: <{standard_iri}>
+**Part of TDWG Standard**: <{standard_iri}>
 
-This version
-: <{current_iri}{ratification_date}>
-Latest version
-: <{current_iri}>
+**This version**: <{current_iri}{ratification_date}>
+
+**Latest version**: <{current_iri}>
 
 {previous_version_slot}
 
