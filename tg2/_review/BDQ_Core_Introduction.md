@@ -123,19 +123,20 @@ This standard is a specification of tests for the quality of biodiversity data, 
 
 The tests are intended for use in quality control and quality assurance of biodiversity data. They serve to assess the fitness for use of biodiversity occurrence data for uses where key components of Darwin Core encoded records are important for an application.
 
-<!--- Ming: What the tests are agnostic of, repeated in 5.2.3 --->
-The test specifications all assume that data are presented to the tests in structured form, with data elements identifiable as Darwin Core terms (Wieczorek et al. 2012). The tests are agnostic about the form in which the data are stored or transported. The tests are also agnostic about uses for quality assurance, where output data are limited to those for which all Validations are Compliant, or for quality control where the results of Validations, Issues, Measures, and Amendments can be used to improve the quality of the data.
-
-The test specifications are also agnostic about where in the life of biodiversity data they are being used. Implementers may incorporate the tests wherever they may help identify and potentially correct issues. They can be used in association with data capture in the field, in tools for data transcription from paper records, in data processing pipelines for ingestion into a database of records, integrated into collections management systems for managing databases, in data aggregation pipelines, by data aggregators, in tools for managing extended specimen network data, and in data processing pipelines for research on aggregated biodiversity data. [However, the framing of the InformationElements as Darwin Core terms with the CORE Use Case focused on the research needs of downstream users means that competing requirements have led to some different decisions than would have been made if the aim was to solely evaluate data in a database of records and preparing it for aggregation.]   
-
 CORE tests are all defined as single record-level (bdqffdq:SingleRecord) tests, applying to a single observation or event structured under Darwin Core terms (Wieczorek et al 2012). The one exception to this is the test ISSUE_ANNOTATION_NOTEMPTY where this standard encourages the implementation of a standard for annotating occurrence records supported by Darwin Core. This test is an example of what the team calls 'aspirational tests', suggesting that supporting infrastructure seems well-justified. 
 
 Tests may require reference to external data such as standard vocabularies of terms or names. While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests.
 
-In the context of the tests, we expect that the input to tests will be a text serialization of Darwin Core data, such as csv or tab delimited text files. Here, cells contain non-typed data values possibly aggregated from and serialized from multiple sources such as relational databases where Boolean nulls and non-string data types may exist, but the data have been exported into a string serialization that supports neither null nor typed data. 
 
 We acknowledge the centrality of the work of the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) as to how the test results are reported against records. Test results structured with these three components can be readily wrapped in the body annotation document that follows the W3C Web Annotation Data Model (Sanderson et al. 2017), along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
+#### Characteristics? of the tests
+
+The tests are agnostic about the form in which the data are stored or transported. The test specifications all assume that data are presented to the tests in structured form such as csv or tab delimited text files, with data elements identifiable as Darwin Core terms (Wieczorek et al. 2012). Here, cells contain non-typed data values possibly aggregated from and serialized from multiple sources such as relational databases where Boolean nulls and non-string data types may exist, but the data have been exported into a string serialization that supports neither null nor typed data. 
+
+The tests are also agnostic about uses for quality assurance, where output data are limited to those for which all Validations are Compliant, or for quality control where the results of Validations, Issues, Measures, and Amendments can be used to improve the quality of the data.
+
+The test specifications are agnostic about where in the biodiversity data lifecycle they are used. Implementers can incorporate the tests at any stage to help identify and correct issues. The tests can be applied during data capture in the field, transcription from paper records, data ingestion into databases, integration with collections management systems, data aggregation, and research on aggregated biodiversity data. They are designed to run at any point in the data lifecycle, from initial collection or observation to data transcription, database loading, and preparation for or during data aggregation. [However, the framing of the InformationElements as Darwin Core terms with the CORE Use Case focused on the research needs of downstream users means that competing requirements have led to some different decisions than would have been made if the aim was to solely evaluate data in a database of records and preparing it for aggregation.]   
 
 #### Definition of EMPTY
 
@@ -381,10 +382,6 @@ Each concept area within CORE has one or a small set of terms that have the abil
 
 <!--- NOTE: heirarchy of importance of terms e.g. decimalLat/long+datum+uncertanty then country code, then country, --->
 
-<!--- Ming: What the tests are agnostic of, repeated in 1.5 --->
-
-The tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation. 
-
 Amendments propose changes to the data (either in the form of AMENDED, proposing a change to the data, or FILLED_IN proposing a value for an empty term).
 
 The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
@@ -493,7 +490,7 @@ Where implementors add additional tests as part of a test suite compliant with t
 
 <!--- Ming: Execution sequence of the tests, repeated in 1.6, 5.1.2 --->
 
-Implementations MAY run Validations, Measures, and Issues in a pre-Amendment phase, then run Amendments, then re-run the Validations, Measures, and Issues on the data with the proposed changes from the Amendments applied in a post-Amendment phase.   The use of pre-amendment, amendment, and post-amendment phases allows for measurement of how much acceptance of the changes proposed by the amendments would improve the quality of the data for core purposes.  
+Implementations MAY run Validations, Measures, and Issues in a pre-Amendment phase, then run Amendments, then re-run the Validations, Measures, and Issues on the data with the proposed changes from the Amendments applied in a post-Amendment phase. The use of pre-amendment, amendment, and post-amendment phases allows for measurement of how much acceptance of the changes proposed by the amendments would improve the quality of the data for core purposes.  
 
 The standard is agnostic as to how data are presented and piped within some framework to and from test implementations.  An implementation framework MAY present SingleRecords to tests and report results, or an implementation MAY find unique values for InformationElements, execute test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
 
