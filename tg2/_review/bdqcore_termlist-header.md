@@ -1,7 +1,7 @@
-# BDQ Core Controlled Vocabulary List of Terms
+# BDQ Core List of Tests
 
 Title
-: BDQ Core Controlled Vocabulary List of Terms
+: BDQ Core List of Tests
 
 Date version issued
 : {ratification_date}
@@ -14,27 +14,23 @@ Part of TDWG Standard
 
 This version
 : <{current_iri}{ratification_date}>
-
 Latest version
 : <{current_iri}>
 
 {previous_version_slot}
 
-**Abstract**: The BDQ Core list of terms describes terms used by the BDQ data quality tests. It describes terms that have arisen out of the Fitness for Use Framework in the `bdqffdq:` namespace as well as specific terms developed for use in the data quality tests in the `bdq:` namespace.
+**Abstract**: The BDQ Core list of data quality tests.
 
-Contributors
-: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Yi Ming Gan
+**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Antonio M Saraiva, Alex Thompson, Miles Nicholls, Emily R Rees, Christian Gendreau, Dmitry Schigel, Yi Ming Gan
 
-Creator
-: TDWG Biodiversity Data Quality Interest Group
+**Creator**: TDWG Biodiversity Data Quality Tests and Assertions Task Group
 
-Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
+**Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
 
 
 ## 1 Introduction (non-normitive)
 
-This document includes terms that are part of the BDQ Core vocabulary (<http://rs.tdwg.org/version/dwc/{ratification_date}>). The document includes terms in two namespaces that contain the recommended terms: `bdq:` and `bdqffdq:`.
+This document includes the tests that are used to test for biodiversity data quality. The document includes terms in three namespaces that contain the recommended terms: `bdq:`, `bdqffdq:` and bdq:core. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
 For a simplied list of current terms, see the BDQ Core Quick Reference Guide {http://..........}.
 
@@ -55,9 +51,11 @@ The following namespace abbreviations are used in this document:
 | --- | --- |
 | bdq: | http://rs.tdwg.org/bdq/terms/ |
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/ |
+| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/ |
 
 ## 2 Use of Terms
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of the `bdqffdq:` namespace.
 Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled value strings MUST be used as values of the `bdq:` namespace.
+Due to the requirements of [bdq](https://rs.tdwg.org/bdqcore/terms), controlled value strings MUST be used as values of the `bdqcore:` namespace.
 
 ## 3 Term indices
