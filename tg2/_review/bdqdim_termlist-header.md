@@ -1,31 +1,22 @@
 # BDQ Core Dimensions Controlled Vocabulary List of Terms
 
-Title
-: BDQ Core Dimensions Controlled Vocabulary List of Terms
+**Title**: BDQ Core Dimensions Controlled Vocabulary List of Terms
 
-Namespace URI
-: <http://rs.tdwg.org/bdqdim/values/>
+**Namespace URI**: <http://rs.tdwg.org/bdqdim/values/>
 
-Preferred namespace abbreviation
-: bdqdim:
+**Preferred namespace abbreviation**: bdqdim:
 
-Date version issued
-: {ratification_date}
+**Date version issued**: {ratification_date}
 
-Date created
-: {created_date}
+**Date created**: {created_date}
 
-Part of TDWG Standard
-: <http://www.tdwg.org/standards/[*******]>
+**Part of TDWG Standard**: <http://www.tdwg.org/standards/[*******]>
 
-This document version
-: <{current_iri}{ratification_date}>
+**This document version**: <{current_iri}{ratification_date}>
 
-Latest version of document
-: <http://rs.tdwg.org/bdq/doc/dim/>
+**Latest version of document**: <http://rs.tdwg.org/bdq/doc/dim/>
 
 {previous_version_slot}
-
 
 **Abstract**: The BDQ Core term `Dimension` describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate precision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution. 
 
