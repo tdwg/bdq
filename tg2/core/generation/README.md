@@ -19,5 +19,5 @@ Structure follows that of https://github.com/tdwg/dwc/
 │   ├── bdq_term_versions.csv
 │   └── bdqffdq_term_versions.csv
 │
+├── Maintinance.md Suggestions for maintainers
 └── README.md  This document
-```
