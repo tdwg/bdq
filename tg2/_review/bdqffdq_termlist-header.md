@@ -1,20 +1,20 @@
 # BDQ Conceptual Framework Ontology
 
-Title : BDQ Conceptual Framework Ontology
+**Title**: BDQ Conceptual Framework Ontology
 
-Namespace URI : http://rs.tdwg.org/bdqffdq/ontology/
+**Namespace URI**: http://rs.tdwg.org/bdqffdq/ontology/
 
-Preferred namespace abbreviation : bdqffdq:
+**Preferred namespace abbreviation**: bdqffdq:
 
-Date version issued : {ratification_date}
+**Date version issued**: {ratification_date}
 
-Date created : {created_date}
+**Date created**: {created_date}
 
-Part of TDWG Standard : http://www.tdwg.org/standards/[*******]
+**Part of TDWG Standard**: http://www.tdwg.org/standards/[*******]
 
-This document version : <{current_iri}{ratification_date}>
+**This document version**: <{current_iri}{ratification_date}>
 
-Latest version of document : http://rs.tdwg.org/bdq/doc/ffdq/
+**Latest version of document**: http://rs.tdwg.org/bdq/doc/ffdq/
 
 {previous_version_slot}
 
