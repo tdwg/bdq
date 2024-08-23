@@ -49,6 +49,8 @@ The framework organizes data quality concepts into three areas: Needs, Mechanism
 
 The framework defines four descriptors of data quality needs: Amendments, Measures, Validations, and Issues.  
 
+[Diagram of Validation, Amendment, Measure and Issue classes as subtype of Assertion class, with Assertion as a rectangular node, and the other 4 classes below it and linked to it. ](assertions.png "The 4 central assertion types in the framework.")
+
 Amendments propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
 
 Measures measure some specific aspect of data quality.
@@ -60,6 +62,12 @@ Issues are the converse of Validations.  Data lack quality if an issue identifie
 The framework has an abstract concept of Information Elements. To frame tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the information elements in each test.
 
 Formally, in the Data Quality Needs level, the framework starts with a Use Case, a framing of some use to which data may be put.  Use cases are related to the formal description of data quality needs through policies and contexts.  Contexts (ContextualizedCriterion, ContextualizedDimension, ContextualizedEnhancement, ContextualizedIssue) relate the specification of a need, such as a Validation, to the information elements that need to be examined, and to the resource type that is operated on.  Each of the tests described in this standard has a formal specification that includes each of these elements.   A Use Case includes a set of policies, policies relate the use case to contexts, contexts link information elements to needs and to resource types, a need specify what properties data must have to have quality.   
+
+Data quality needs can relate to the data quality of single records (bdqffdq:SingleRecord) or of data sets (bdqffdq:MultiRecord).
+
+
+[Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource Class.")
+
 
 ### 1.1 Status of the content of this document
 In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. 
