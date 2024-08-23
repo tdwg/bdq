@@ -80,9 +80,9 @@ This document contains information that is considered supplemental to the normat
 
 ### 1.1 Audience
 
-Supplemental information is included for anyone seeking further historical context or technical details af components of the BDQ Core standard. This information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to evaluate and/or improve the quality of the biodiversity data of interest to their domain. 
+Supplemental information is included for anyone seeking further historical context or technical details of components of the BDQ Core standard. This information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to evaluate and/or improve the quality of the biodiversity data of interest to their domain. 
 
-This document provides practical information to those who wish to implement BDQ Core. It also provides some guielines based on the knowledge of the authors, for those who may maintain BDQ Core.
+This document provides practical information to those who wish to implement BDQ Core. It also provides some guidelines based on the knowledge of the authors, for those who may maintain BDQ Core.
 
 ### 1.2. Status of the content of this document
 
@@ -99,14 +99,15 @@ The following namespace abbreviations are used in this document:
 | **Prefix**   | **Namespace**                                    |
 |--------------|--------------------------------------------------|
 | bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqffdq      | https://rs.tdwg.org/bdq/ffdq/                    |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
-|--------------|--------------------------------------------------|
 
 ### 1.5 The Concept of "EMPTY" in BDQ Core
 
@@ -248,7 +249,7 @@ When we identified that, within Core data quality needs, different portions of t
 
 Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.
 
-3.7 Test Parameters
+### 3.7 Test Parameters
 
 Some tests have been defined as parameterized. A parameterized test will behave differently on the same data when given different parameter values. Parameterized tests are those for which we saw the high likelihood of different data quality needs within the community of CORE users and CORE needs.
 
@@ -256,7 +257,7 @@ The existence of national requirements for spatial data to be represented with a
 
 Parameters are not intended to relax the definition of data having quality for CORE needs. The specifications deliberately do not include parameters that would relax tests on secondary terms for downstream research users or tighten them for upstream data capture. Some tests which would serve the needs of users engaged in data capture or preparing data for aggregation, but not of downstream aggregators or research users were considered, but deemed non-CORE and are not specified here. We have similarly resisted the temptation to parameterize tests to meet the needs of different portions of the data life cycle.
 
-3.8 Workflows and Sequencing of Tests
+### 3.8 Workflows and Sequencing of Tests
 
 <!--- Ming: What the tests are agnostic of, repeated in 1.6, 5.2.3 --->
 The test descriptions are agnostic to the framework within which the tests are run. The tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular tests are run. An exception is certain of the amendments, where the order of execution can be important.
@@ -617,7 +618,7 @@ Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbre
 | BISON       | Biodiversity Information Serving Our Nation                                                                    |
 | CRIA        | Centro de Referência em Informação Ambiental                                                                   |
 | EPSG        | European Petroleum Survey Group                                                                                |
-| GBIF        | Global Biodiversity Information Facility                                                                      |
+| GBIF        | Global Biodiversity Information Facility                                                                       |
 | iDigBio     | Integrated Digitized BioCollections                                                                            |
 | IRI         | Internationalized Resource Identifier                                                                          |
 | ISO         | International Standards Organization                                                                           |
