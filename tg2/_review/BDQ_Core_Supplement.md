@@ -32,7 +32,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 1.6 Test Specifications
 1.7 Framework for describing data quality
 
-  Guidance for Consumers of Data Quality Reports
+2 Guidance for Consumers of Data Quality Reports
 2.1 Introduction
 2.2 Biodiversity Data Quality Tests
 2.2.1 Introduction
@@ -113,115 +113,31 @@ The following namespace abbreviations are used in this document:
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
+|--------------|--------------------------------------------------|
 
-### 1.5 Annotations
-
-Hile we are agnostic about how reports from BDQ Core can be reported, we acknowledge the work of the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) in recommending how such results from BDQ Core could be reported using W3C Web Annotation Data Model (Sanderson et al. 2017). The results could be structured as components that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
-
-More details??
-
-### "EMPTY" in BDQ Core
+### 1.5 The Concept of "EMPTY" in BDQ Core
 
 An information element containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and may be separately detected. For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that. We considered, and explicitly rejected, treating common string serializations of null such as \N and NULL as empty values. If "\N" is present in a data set, the tests will explicitly treat that value as NOTEMPTY, and then try to evaluate it against whatever other criteria apply. This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
-#### Types of BDQ Core Test
+## 2 Framework for describing data quality
 
-The concept of 'tests' in this standard include Validation, Issue, Amendment and Measure. Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. The Response from a test is an assertion which can form part of a data quality report or be wrapped in an annotation, and MUST include the following three components: 
+[need to migrate from https://raw.githubusercontent.com/kurator-org/kurator-ffdq/master/competencyquestions/rdf/ffdq.owl to tdwg repository]
 
-1. Value is the returned result for the test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
+The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
-2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
+### 2.1 Introduction
 
-3. The Remark supplies human-readable text describing reasons for the test result output.
-
-A Validation evaluates the values in one or more Darwin Core terms for fitness for some particular narrow data quality need.  Validations evaluate values or in some cases, presence or lack of a value. The formal response of VALIDATIONs can take one of four forms. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable, a Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run, a Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation, a Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not. An example VALIDATION is "VALIDATION_COUNTRY FOUND".
-
-ISSUES are a form of warning flag where the test is drawing attention to a non-empty value of a Darwin Core term. For example, ISSUE_ANNOTATION_NOTEMPTY is informing the tester than there is at least one annotation associated with record and this should be evaluated before using the record. Similarly for the other two ISSUE-type tests: ISSUE_DATAGENERALIZATIONS_NOTEMPTY where some form of transformation has occurred, and ISSUE_ESTABLISHMENTMEANS_NOTEMPTY where the value needs to be assessed for utility. ISSUEs are currently outside the Data Quality Fitness for Use Framework. ISSUEs result in a Response.status of "RUN_HAS_RESULT" and a Response.status of "IS_ISSUE", "POTENTIAL_ISSUE" or "NOT_ISSUE".
-
-An AMENDMENT may propose a change or addition to at least one Darwin Core term that is intended to improve one or more components of the quality of the record.  The Response.result from an AMENDMENT MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in these tests.  
-
-A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or INTERNAL_PREREQUISITES_NOTMET.  The principle Measure defined in the core tests is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the VALIDATIONs and AMENDMENTs and in one case provides an indication of the length of the period of the value of dwc:eventDate.
-
-
-
-[!--- we should remove the SingleRecord counting Measures, they don't fit particularly well into the framework, and we don't have either validation data or frameworks for evaluating correct implementation of them.  ---]
-
-A MEASURE applies to a single record (bdqffdq:SingleRecord), but like all other tests, could be accumulated across multiple records (bdqffdq:MultiRecords). MEASUREs within the standard are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS.   
-
-For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.    
-
-Validation tests are phrased as positive statements, consistent with the "Fitness for Use Framework".  A Validation tests to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY, is phrased as "Not Empty", and will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE.  The framework allows for tests that are the inverse of Validations, Issues.  Issues are assertions that are stated in a negative sense and which identify problems in data.  We have used these for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. Issues under the framework can logically take three Response.result values NOT_ISSUE, POSSIBLE_ISSUE, and ISSUE.  ISSUE is symmetrical to NOT_COMPLIANT, NOT_ISSUE is approximately symmetrical to COMPLIANT, and POSSIBLE_ISSUE does not have an equivalent Validation Response.result.  We define a small number of Core Issues that can raise a Response.result of POSSIBLE_ISSUE to flag potential problems that require human evaluation. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.   The vast majority of the Core tests are Validations, phrased in the positive sense, intended as a core suite, to identify biodiversity data that are fit for the Core purposes, as identified in the user scenario analyses performed by BDQ Task Group 3.   
-
-### 1.6 Test Descriptors (Informative) 
-
-<!--- **TODO: What do we call this as "Specification is being used generally and specifically?** --->
-<!--- We can use Descriptor for Specification plus related metadata (the rows in the Markdown tables), Specification for the framework concept. --->
-
-The Test Descriptors are those terms that are necessary to comprehensively describe the test. Some terms, such as the GUID are intended for machine consumption.  Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded. 
-
-The scope of each test is also largely provided by the bdqffdq:Specification. The Darwin Core terms used in the Specification are included in the "Information Elements". The "Specification" also includes references to external (to the Darwin Core standard) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test.
-
-<!--- Ming: Parameterising the tests, repeated in 5.1.1 --->
-When we identified that, within Core data quality needs, different portions of the community have different authorities that they are required to adopt for particular terms, we define Parameters for tests, where the Parameter values allow a particular test to behave differently when given different parameter values.  This allows us to define general tests that provide support for non functional requirements that vary within the community.  For example, for spatial biodiversity data to have quality for use within some countries, there exist country specific requirement for which geodetic datum is to be used.  A test for fitness for use of biodiversity data for core needs that only allowed the use of EPSG:4326 as the sole COMPLIANT value for dwc:geodeticDatum would not meet the non functional requirements for use in some countries, and thus would not meet the Core purposes for this test suite.  Thus, in cases where portions of the community do have clear distinct needs for quality within Core, we provided for the parameterization of tests.   Where there are options available for a resource that supports the test, the test will be designated as "Parameterized" and a default provided, along with a link to an authority if relevant. For example, the "GBIF taxonomic backbone" is suggested as a default for most of the tests related to taxonomic names, but the standard recognizes that other Source Authorities may be required in other circumstances, for example, The World Register of Marine Organisms or a national taxonomic authority.  When a test has a single source authority paramter, bdq:sourceAuthority is used for that parameter, but if a test takes more than one source authority parameter, these are given distinct names, for example, bdq:taxonIsMarine and bdq:geospatialLand are two source authority parameters for the test VALIDATION_COORDINATES_TERRESTRIALMARINE. 
-
-#### Data Quality Dimension 
-
-The scope of the standard is the fundamental information about core tests applied to occurrence type Darwin Core records. These tests evaluate one of Data Quality Dimension of the Fitness for Use Framework (Chapman et al., 2020): Measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved. These dimensions are:
-
-* Completeness: The extent to which data are present and sufficiently comprehensive for use.
-* Conformance: Conforms to a format, syntax, data type, range, or standard of the Information Element.
-* Consistency: Agreement among related Information Elements (q.v.) that are present in the data. Note that missing Information Elements do not make a test Inconsistent.
-* Likeliness: The likelihood of Darwin Core Term(s) having true or expected values.
-* Reliability: Measure of how the data values agree with an identified source of truth. The degree to which data correctly describes the truth (object, event or any abstract or real 'thing').
-* Resolution: Refers to the data having sufficiently detailed information. Measure of the granularity of the data, or the smallest measurable increment.
-
-
-A "Warning Type" for each test was originally envisioned to provide insight into the nature of the issues, but a review the relationship with "Data Quality Dimension" across the tests suggested such a high degree of correlation that "Warning Type" is effectively redundant. See table xx below. **NEEDS UPDATING**
-
-| Data Quality Dimension/Warning Type | Ambiguous | Amended | Incomplete | Inconsistent | Invalid | Issue | Report | Unlikely | Total |
-|-------------------------------------|-----------|---------|------------|--------------|---------|-------|--------|----------|-------|
-| Completeness                        |           |   11    |    19      |              |         |   1   |    2   |          |  33   |
-| Conformance                         |     2     |   13    |            |       3      |    35   |       |        |          |  53   |
-| Consistency                         |           |    1    |            |       5      |         |       |        |          |   6   |
-| Likeliness                          |           |         |            |              |         |       |        |     2    |   2   |
-| Reliability                         |           |         |            |              |         |   1   |    2   |          |   3   |
-| Resolution                          |           |         |            |              |         |   1   |    1   |          |   2   |
-| Total                               |     2     |   25    |    19      |       8      |    35   |   3   |    5   |     2    |  99   |
-
-Caption: Data Quality Dimension vs Warning Type with the number of tests as cell values. 
-
-Each test is defined as a SingleRecord test. No CORE tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord. The framework allows for MultiRecord tests able to identify outliers within a data set, or other tests that look across a MultiRecord to evaluate data quality, but we have not specified any such tests here.
-
-Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that assesses some aspect of data quality. An AMENDMENT may be able to improve the quality of data with respect to that VALIDATION. 
-
-Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values. 
-
-### 1.7 Framework for describing data quality (Paul) (Informative)
 Included in this standard is a specification for a framework for describing data quality. Each of the tests in this standard has been designed within this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
 The framework data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
 
-* Data Quality Control, Data Quality Assurance.
+### 2.2 Data Quality Control, Data Quality Assurance
 
 The framework draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
 
-* Data Quality Needs, Data Quality Mechanisms, Data Quality Reports.
+### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports.
 
 The framework organizes data quality concepts into three areas: Needs, Mechanisms, and Reports.  Data Quality Needs identify a use to which data may be put, and frame a set of requirements that data needs to meet to be fit for that use, and means by which data not fit for that use may be improved.  The tests described in this standard are formal descriptions of data quality needs for CORE purposes.  Data Quality Mechanisms in the framework are formal descriptions of software and other mechanisms that implement tests described in the Needs area.  Data Quality Reports are the results produced by Mechanisms on some set of data.  The tests described in this standard include specifications of assertions to be made in Data Quality Reports.
-
-<!--- Ming: Test types: Validation, Amendment, Measure, Issue, repeated in 1.5 --->
-
-* Horizontal: Needs, Reports, Vertical: Test informal, describes both need and reporting.
-
-The framework defines four descriptors of data quality needs: Amendments, Measures, Validations, and Issues.  
-
-Amendments propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
-
-Measures measure some specific aspect of data quality.
-
-Validations assess compliance with a need.  Data have quality if they are compliant with the requirements of the validation test.
-
-Issues are the converse of Validations.  Data lack quality if an issue identifies a potential problem in the data that would require further human review to identify if the data have quality for some purpose.  
 
 The framework has an abstract concept of Information Elements. To frame tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the information elements in each test.
 
@@ -250,61 +166,103 @@ Example: Formal description of 0493bcfb-652e-4d17-815b-b0cce0742fbe VALIDATION_C
     	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code? Validation for SingleRecord</rdfs:label>
 	</rdf:Description>
 
-<!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, repeated in 5.2.3 --->
 The framework expects that Quality Assurance is provided for through specification of a set of Measures defined to operate on a MultiRecord, and which specify a Response.result of COMPLETE or NOT_COMPLETE.  A MultiRecord Measure may specify that it is COMPLETE if all instances of a SingleRecord Validation are COMPLIANT.  
 
 For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
+## 3 Tests
 
-## 2. Guidance for Consumers of Data Quality Reports (Informative)
+### 3.1 Test Usage
 
-### 2.1 Introduction (Arthur) (Informative)
-An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
+The tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation.
 
-### 2.2 Biodiversity Data Quality Tests (Informative)
-What are the important attributes of data quality for biodiversity data?  How are we proposing to assess data quality in the domain?  What is the scope of the tests?   What is out of scope for the tests.  How did we develop the test specifications? 
+### 3.2 Annotations
+
+We are agnostic about how reports from BDQ Core can be reported, but we acknowledge the work of the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) in recommending how such results from BDQ Core could be reported using W3C Web Annotation Data Model (Sanderson et al. 2017). The results could be structured as components that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
+
+More details??
+
+### 3.3 Tests and Data Dimensions
 
 We identified four fundamental aspects of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord). A record without a taxonomic name, a location or a date has limited value. Three tests in this standard specifically target records with no name, space or time values.
 
-#### **2.2.2 Tests (Informative)**
+#### 3.5 Types of Test
 
-The intent of the tests...
+The concept of 'tests' in this standard include Validation, Issue, Amendment and Measure. Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. The Response from a test is an assertion which can form part of a data quality report or be wrapped in an annotation, and MUST include the following three components: 
 
-#### **2.2.3 Notes on Tests (Informative)**
+1. Value is the returned result for the test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
+
+2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
+
+3. The Remark supplies human-readable text describing reasons for the test result output.
+
+Validation tests are phrased as positive statements, consistent with the Framework.  Validations evaluate values or in some cases, presence or lack of a value to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT. The formal response of VALIDATIONs can take one of four forms. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable (bdq:sourceAuthority), a Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run, a Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation, a Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not. 
+
+Issues are a form of warning flag where the test is drawing attention to potential problem with the value of a Darwin Core term for at least one use case. Issues are currently outside the Data Quality Fitness for Use Framework. Issues result in a Response.status of "RUN_HAS_RESULT" and a Response.status of "POTENTIAL_ISSUE" or "NOT_ISSUE". Human evaluation of potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.  
+
+An Amendment may propose a change to an exisitng Darwin Core value or fill in a missing value. Amendments  is intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  The Framework also supports changes to procedures but we have not framed any such tests in this form.  
+
+A Measure returns a numeric value or INTERNAL_PREREQUISITES_NOT_MET. Most Measures count the number of Validation or Amendment tests that a specifified Response.Result. MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the Validations and Amendments and in one case provides an indication of the length of the period of the value of dwc:eventDate. 
+
+All tests could be accumulated across multiple records (bdqffdq:MultiRecords). For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.    
+
+### 3.6 Test Descriptors
+
+The Test Descriptors are those terms that are necessary to comprehensively describe the test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
+
+**"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb" 
+
+**"Label"** [normative]: A human readable label identifying the test.  The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS.. Example: "VALIDATION_COUNTRYCODE_STANDARD" 
+
+**"Description"** [non-normative]: A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
+
+**"TestType"** [normative]: The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.. Example: "Validation" 
+
+**"Darwin Core Class"** [non-normative]: The Information Element in the original terms of the framework, the general sort of information this test operates on. . Example: "dwc:Location"  
+
+**"Information Elements ActedUpon"** [normative]:A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
+
+**"Information Elements Consulted"** [normative]:"dwc:scientificName" A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon.
+
+**"Specification"** [normative]: The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is EMPTY; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
+
+**"Parameters"** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.. Example: "bdq:taxonIsMarine" 
+
+**"Dimension"** [normative]: The [data quality dimension](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) for this test. Example: "Conformance"
+
+**"Criterion Label"** [non-normative]:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
+
+**"Resource Type"** [normative]: The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. Example: "SingleRecord"   
+
+**"Source Authority"** [normative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}"
+
+**"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
+
+**"References"** [non-normative]: A list of references that will assist in a thorough understanding of the test. Example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
+
+**"Example Implementations (Mechanisms)"** [non-normative]: nown Mechanisms with implementations of the test.
+. Example: "FilteredPush/Kurator: geo_ref_qc"
+
+**"Link to Specification Source Code"** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/
+
+**"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
+
+### 3.7 Domain Scope of Tests
+
+The domain scope of each test is also largely provided by the bdqffdq:Specification. The Darwin Core terms used in the Specification are included in the "Information Elements". The "Specification" also includes references to external (to the Darwin Core standard) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test.
+
+When we identified that, within Core data quality needs, different portions of the community have different authorities that they are required to adopt for particular terms, we define Parameters for tests, where the Parameter values allow a particular test to behave differently when given different parameter values.  This allows us to define general tests that provide support for non functional requirements that vary within the community.  For example, for spatial biodiversity data to have quality for use within some countries, there exist country specific requirement for which geodetic datum is to be used.  A test for fitness for use of biodiversity data for core needs that only allowed the use of EPSG:4326 as the sole COMPLIANT value for dwc:geodeticDatum would not meet the non functional requirements for use in some countries, and thus would not meet the Core purposes for this test suite.  Thus, in cases where portions of the community do have clear distinct needs for quality within Core, we provided for the parameterization of tests.   Where there are options available for a resource that supports the test, the test will be designated as "Parameterized" and a default provided, along with a link to an authority if relevant. For example, the "GBIF taxonomic backbone" is suggested as a default for most of the tests related to taxonomic names, but the standard recognizes that other Source Authorities may be required in other circumstances, for example, The World Register of Marine Organisms or a national taxonomic authority.  When a test has a single source authority paramter, bdq:sourceAuthority is used for that parameter, but if a test takes more than one source authority parameter, these are given distinct names, for example, bdq:taxonIsMarine and bdq:geospatialLand are two source authority parameters for the test VALIDATION_COORDINATES_TERRESTRIALMARINE. 
+
+Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values. 
+
+## 4. Guidance for Consumers of Data Quality Reports
+
+### 4.1 Introduction
+
+An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
 
 * https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
 * https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.xml
-
-## 3. A Framework for Data Quality (Paul)
-
-[need to migrate from https://raw.githubusercontent.com/kurator-org/kurator-ffdq/master/competencyquestions/rdf/ffdq.owl to tdwg repository]
-
-### 3.1 Introduction
-
-### 3.2 Framework (Normative)
-
-[Include generated text]
-
-## 4. Vocabularies (Arthur)
-
-### 4.1 Introduction
-The included vocabulary (see Supplement 2) is of terms used for the Data Quality Tests and Assertions. The definitions are a subset of the definitions from the Fitness for Use Framework (Veiga et al. 2017) as documented in <!---OWL DOCUMENT - Paul --->. The definitions used in the tests conform with the Framework definitions, but may be used in a more restricted way than as laid out there. Where this is the case, it is noted in the comments. A column in the Vocabulary indicates the Context in which the terms are used. All terms that are specific to the Tests have a bdq: namespace prefix, those from the Fitness for Use Framework, a bdqffdq: namespace prefix. A separate column provides the name without the prefix. In the GitHub tables, the terms are given without the name space prefix, and the four Test Types (AMENDMENT, ISSUE, MEASURE and VALIDATION) are given in all upper case, even though they are upper/lower case in the vocabulary (e.f. bdqffdq:Amendment)
-
-**Data Quality Dimensions**
-
-Data Quality Dimensions terms, used as values for the Fitness for Use Framework **Data Quality Dimension** are used in the test descriptions and are defined in a [separate document](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) TODO: Build RDF and human readable documents from that file, include human readable here.
-
-### 4.2 Vocabularies
-1. Framework Glossary - <!---Owl Paul?--->
-2. Vocabulary of the terms used within the Tests and Assertions (Currently at #152) SUPP 2
-3. List of Namespace terms used in the Tests and Assertions (Currently at #205) SUPP
-4. Data Quality Dimension RDF document
-
-[Include generated text]
-
-## 5. Test Specifications (Paul)
-
-### 5.1 Introduction (Informative)
 
 Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv  TODO: Generate human readable test descriptor document, labels here will apply in that document.  
 
@@ -316,65 +274,7 @@ Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
 
 The number is present in the Markdown document as **Rationale Management** linking to https://github.com/tdwg/bdq/issues/{n}.
 
-<!--- Ming: vocabularies --->
-
-**"GUID"** [Normative]:"0493bcfb-652e-4d17-815b-b0cce0742fb" A machine readable unique identifier for the test 
-
-**"Label"** [Normative]:"VALIDATION_COUNTRYCODE_STANDARD" A human readable label identifying the test.  The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS.
-
-**"Description"** [Informative]:"Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?" A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment.
-
-**"TestType"** [Normative]:"Validation" The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.
-
-**"Darwin Core Class"** [Informative]:"Location" The Information Element in the original terms of the framework, the general sort of information this test operates on.  
-
-**"Information Elements ActedUpon"** [Normative]:"dwc:countryCode" A list of the specific Darwin Core terms that are the focus of the test.
-
-**"Information Elements Consulted"** [Normative]:"dwc:scientificName" A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon.
-
-**"Specification"** [Normative],"EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority is ""ISO 3166-1-alpha-2"" [https://restcountries.eu/#api-endpoints-list-of-codes, https://www.iso.org/obp/ui/#search]"  The specification for implementors describing the expected behavior of the test.  
-
-**"DateLastUpdated"** [Normative]:"2022-05-02" The most recent date of update of normative elements of the test specifications or an update to a non-normative section that should trigger a review of the behavior of code by implementors.  
-
-**"Parameters"** [Normative]:"bdq:taxonIsMarine" Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.
-
-**"Dimension"** [Normative]:"Conformance" The [data quality dimension](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) for this test.
-
-**"Criterion Label"** [Informative]:"Conformance: standard" A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext).    
-
-**"Resource Type"** [Normative]:"SingleRecord"  The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. 
-
-**"Source Authority"** [Informative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site.
-
-**"Example"** [Informative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite.
-
-**"Source"**:"TG2" [Informative]: The origin of the concept of the test.
-
-**"References"** [Informative]:"ISO (n.dat.). ISO 3166 Country Codes (https://www.iso.org/iso-3166-country-codes.html); Wikipedia (2020). ISO 3166-1 alpha-2 (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2); >DataHub (2018). List of all countries with their two digit codes (ISO 3166-1)(https://datahub.io/core/country-list);Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)"
-
-**"Example Implementations (Mechanisms)"** [Informative]:"FilteredPush/Kurator: geo_ref_qc"  Known Mechanisms with implementations of the test.
-
-**"Link to Specification Source Code"** [Informative]:"https://github.com/FilteredPush/event_date_qc/blob/1abbd3f02eb6c28129764defab78f72156972864/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L489" A link to code that implements the test.
-
-**"Notes"** [Informative]:"Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  Additional, non-normative comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of.
-
-<!--- NOTE:  VALIDATION-AMENDMENT-VALIDATION--->
-
-Each concept area within CORE has one or a small set of terms that have the ability to carry by themselves the most important information for CORE purposes, and are treated as the targets for data quality improvement (dwc:taxonID, dwc:eventDate, dwc:decimalLatitude, dwc:decimalLongitude, dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters) while other terms support DarwinCore’s mission of permissive sharing of data from different source formats. The by design redundancy of DarwinCore imposes a conflict between the principle of tests standing in isolation with the principle of some terms having priority. This conflict is most evident in the Amendments related to TIME terms, where dwc:day/dwc:month/dwc:year, dwc:startDayOfYear/dwc:endDayOfYear, and dwc:verbatimDate may all carry information relevant to dwc:eventDate, and have the potential to produce conflicting proposals. 
-
-<!--- NOTE: heirarchy of importance of terms e.g. decimalLat/long+datum+uncertanty then country code, then country, --->
-
-<!--- Ming: What the tests are agnostic of, repeated in 1.5 --->
-
-The tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation. 
-
-Amendments propose changes to the data (either in the form of AMENDED, proposing a change to the data, or FILLED_IN proposing a value for an empty term).
-
-The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
-
-<!--- Ming: Parameterising the tests, repeated in 1.6 --->
-
-**5.1.1 Parameters (Informative)**
+**5.1.1 Parameters**
 
 Some tests have been defined as parameterized. A parameterized test will behave differently on the same data when given different parameter values. Parameterized tests are those for which we saw the high likelihood of different data quality needs within the community of CORE users and CORE needs.
 
