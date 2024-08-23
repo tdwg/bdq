@@ -9,7 +9,7 @@
 import pandas
 import re
 import sys
-with open ("../../../vocabularies/combined_vocabulary.csv") as vocabfile: 
+with open ("../../../vocabularies/bdq_vocabulary_terms.csv") as vocabfile: 
 	vocabDataFrame = pandas.read_csv(vocabfile);
 with open ("../../TG2_multirecord_measure_tests.csv", newline='') as csvfile:
 	sys.stdout = open("../docs/core_multirecord_measure_tests.md","w")
