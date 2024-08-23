@@ -25,8 +25,16 @@
 
 
 ## 1 Introduction (non-normitive)
-
+[!--- JRW finished first draft to here ---]
 This document includes terms that are part of the BDQ vocabulary (<http://rs.tdwg.org/version/bdq/{ratification_date}>). For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+
+#### Definition of EMPTY
+
+We need a reusable definition for EMPTY that can apply in any test where the concept is relevant. Here we define EMPTY as an information element that is either not present or does not contain any characters or values other than those in the range U+0000 to U+0020. 
+
+An information element containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and may be separately detected. The phrase "not present" is there to cover cases where a test implementation cannot tell if a particular data set under test includes a particular Darwin Core term. This allows the test implementations to be independent of, and agnostic about frameworks within which the tests are run, the nature of the data. For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that. We considered, and explicitly rejected, treating common string serializations of null such as \N and NULL as empty values. If "\N" is present in a data set, the tests will explicitly treat that value as NOTEMPTY, and then try to evaluate it against whatever other criteria apply. 
+
+This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
 For a simplied list of current terms, see the BDQ Core Quick Reference Guide {http://..........}.
 
