@@ -22,6 +22,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 
 ### Table of Contents ###
 
+```
 1 Introduction
 1.1 Audience
 1.2 Status of the content of this document
@@ -79,7 +80,7 @@ This document contains information that is considered supplemental to the normat
 
 ### 1.1 Audience
 
-Supplemental information is included for anyone seeking further historical context or technical details af components of the BDQ Core standard. This information remains relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to evaluate and/or improve the quality of the biodiversity data of interest to their domain. 
+Supplemental information is included for anyone seeking further historical context or technical details af components of the BDQ Core standard. This information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to evaluate and/or improve the quality of the biodiversity data of interest to their domain. 
 
 This document provides practical information to those who wish to implement BDQ Core. It also provides some guielines based on the knowledge of the authors, for those who may maintain BDQ Core.
 
@@ -109,7 +110,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.5 The Concept of "EMPTY" in BDQ Core
 
-An information element containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and may be separately detected. For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that. We considered, and explicitly rejected, treating common string serializations of null such as \N and NULL as empty values. If "\N" is present in a data set, the tests will explicitly treat that value as NOTEMPTY, and then try to evaluate it against whatever other criteria apply. This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
+An information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and may be separately detected. For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that. We considered, and explicitly rejected, treating common string serializations of null such as \N and NULL as empty values. If "\N" is present in a data set, the tests will explicitly treat that value as NOTEMPTY, and then try to evaluate it against whatever other criteria apply. This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
 ## 2 Framework for describing data quality
 
