@@ -1,6 +1,8 @@
 # Produce markdown document listing tests from 
 # intermediate csv list of MultiRecord measure tests 
 # TG2_multirecord_measure_tests.csv
+#
+# First cut at a list of multirecord measures.
 # 
 # @author Paul J. Morris 
 #

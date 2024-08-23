@@ -1,6 +1,8 @@
 # Produce markdown document listing tests from 
 # intermediate csv list of tests TG2_tests.csv 
 # 
+# First cut at a full list of tests. 
+#
 # @author Paul J. Morris 
 #
 # Assumes run from generation/build directory of tg2 repository.
@@ -48,7 +50,7 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 			print("# ",row['prefLabel'])
 			print()
 			print("## ",row['Label'])
-			print("https://rs.tdwg.org/bdq/{}".format(row['GUID']))
+			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['GUID','DateLastUpdated']))
 			print()
 			print("## Description")
 			print()
@@ -68,8 +70,6 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 				elif header == "IssueState":
 					pass # skip
 				elif header == "IssueLabels":
-					pass # skip
-				elif header == "Source":
 					pass # skip
 				elif header == "IE class":
 					pass # skip known from information elements
