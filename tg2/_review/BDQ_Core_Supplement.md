@@ -28,37 +28,30 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 1.2 Status of the content of this document
 1.3 RFC 2119 keywords
 1.4 Namespace abbreviations
-1.5 About the tests, their use and specifications
-1.6 Test Specifications
-1.7 Framework for describing data quality
+1.5 The Concept of "EMPTY" in BDQ Core
 
-2 Guidance for Consumers of Data Quality Reports
+2 Framework for describing data quality
 2.1 Introduction
-2.2 Biodiversity Data Quality Tests
-2.2.1 Introduction
-2.2.2 Tests
-2.2.3 Notes on tests
-2.2.3.1 Events and Calendars
+2.2 Data Quality Control, Data Quality Assurance
+2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
-3 Guidance for Implementers
+3 Tests
+3.1 Test Usage
+3.2 Annotations
+3.3 Tests and Data Dimensions
+3.4 Type of Tests
+3.5 Test Descriptors
+3.6 Domain Scope of Tests
+3.7 Test Parameters
+3.8 Workflows and Sequencing of Tests
 
-3 A Framework for Data Quality
-3.1 Introduction
-3.2 Framework
-
-4 Vocabularies
+4 Guidance for Consumers of Data Quality Reports
 4.1 Introduction
-4.2 Vocabularies
 
-5 Test specifications
-5.1 Introduction
-5.1.1 Parameters
-5.1.2 Workflows and Sequencing Test
-5.1.3 Amendments where order is important
-5.2 Implementation
-5.3 Extension points
-5.4 Core Test Specifications
-5.5 Multi-Record Measure Specifications
+5 Implementation
+5.1 Reading a Specification
+5.2 Compliant Implementation
+5.3 Extension Points
 
 6 Validating test implementations
 6.1 Introduction
@@ -70,7 +63,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 6.7 Identifying example data
 6.8 Maintenance.....??
 
-7 Implications for the Darwin Core Standard (John)
+7 Implications for the Darwin Core Standard
 
 8 Acknowledgements
 
@@ -81,9 +74,9 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 11 Supplement: Rationale Management Documentation
 ``` 
 
-## 1. Introduction (Informative) (John)
+## 1. Introduction
 
-This document contains information that is considered supplemental to the normative and non-normative BDQ Core information. 
+This document contains information that is considered supplemental to the normative and non-normative BDQ Core documentation. 
 
 ### 1.1 Audience
 
@@ -135,7 +128,7 @@ The framework data quality with respect to some specified use.  It provides a me
 
 The framework draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
 
-### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports.
+### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
 The framework organizes data quality concepts into three areas: Needs, Mechanisms, and Reports.  Data Quality Needs identify a use to which data may be put, and frame a set of requirements that data needs to meet to be fit for that use, and means by which data not fit for that use may be improved.  The tests described in this standard are formal descriptions of data quality needs for CORE purposes.  Data Quality Mechanisms in the framework are formal descriptions of software and other mechanisms that implement tests described in the Needs area.  Data Quality Reports are the results produced by Mechanisms on some set of data.  The tests described in this standard include specifications of assertions to be made in Data Quality Reports.
 
@@ -186,7 +179,7 @@ More details??
 
 We identified four fundamental aspects of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord). A record without a taxonomic name, a location or a date has limited value. Three tests in this standard specifically target records with no name, space or time values.
 
-#### 3.5 Types of Test
+#### 3.4 Types of Test
 
 The concept of 'tests' in this standard include Validation, Issue, Amendment and Measure. Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. The Response from a test is an assertion which can form part of a data quality report or be wrapped in an annotation, and MUST include the following three components: 
 
@@ -206,7 +199,7 @@ A Measure returns a numeric value or INTERNAL_PREREQUISITES_NOT_MET. Most Measur
 
 All tests could be accumulated across multiple records (bdqffdq:MultiRecords). For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.    
 
-### 3.6 Test Descriptors
+### 3.5 Test Descriptors
 
 The Test Descriptors are those terms that are necessary to comprehensively describe the test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
@@ -247,34 +240,15 @@ The Test Descriptors are those terms that are necessary to comprehensively descr
 
 **"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
 
-### 3.7 Domain Scope of Tests
+### 3.6 Domain Scope of Tests
 
 The domain scope of each test is also largely provided by the bdqffdq:Specification. The Darwin Core terms used in the Specification are included in the "Information Elements". The "Specification" also includes references to external (to the Darwin Core standard) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test.
 
 When we identified that, within Core data quality needs, different portions of the community have different authorities that they are required to adopt for particular terms, we define Parameters for tests, where the Parameter values allow a particular test to behave differently when given different parameter values.  This allows us to define general tests that provide support for non functional requirements that vary within the community.  For example, for spatial biodiversity data to have quality for use within some countries, there exist country specific requirement for which geodetic datum is to be used.  A test for fitness for use of biodiversity data for core needs that only allowed the use of EPSG:4326 as the sole COMPLIANT value for dwc:geodeticDatum would not meet the non functional requirements for use in some countries, and thus would not meet the Core purposes for this test suite.  Thus, in cases where portions of the community do have clear distinct needs for quality within Core, we provided for the parameterization of tests.   Where there are options available for a resource that supports the test, the test will be designated as "Parameterized" and a default provided, along with a link to an authority if relevant. For example, the "GBIF taxonomic backbone" is suggested as a default for most of the tests related to taxonomic names, but the standard recognizes that other Source Authorities may be required in other circumstances, for example, The World Register of Marine Organisms or a national taxonomic authority.  When a test has a single source authority paramter, bdq:sourceAuthority is used for that parameter, but if a test takes more than one source authority parameter, these are given distinct names, for example, bdq:taxonIsMarine and bdq:geospatialLand are two source authority parameters for the test VALIDATION_COORDINATES_TERRESTRIALMARINE. 
 
-Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values. 
+Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.
 
-## 4. Guidance for Consumers of Data Quality Reports
-
-### 4.1 Introduction
-
-An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
-
-* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
-* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.xml
-
-Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv  TODO: Generate human readable test descriptor document, labels here will apply in that document.  
-
-**TODO: rs.tdwg.org namespace.**
-
-**TODO:VersionDate** The most recent date of update to any element of a test.
-
-**"#"**:"20" The github.com/tdwg/bdq/issues/{number} where documentation of the rationale management conversations for the development of the tests can be found.  See supplement [Section 10](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document#10-supplement-rationale-management-documentation) for descriptions of the terminology used in the issues (which do not fully conform to the Framework). 
-
-The number is present in the Markdown document as **Rationale Management** linking to https://github.com/tdwg/bdq/issues/{n}.
-
-**5.1.1 Parameters**
+3.7 Test Parameters
 
 Some tests have been defined as parameterized. A parameterized test will behave differently on the same data when given different parameter values. Parameterized tests are those for which we saw the high likelihood of different data quality needs within the community of CORE users and CORE needs.
 
@@ -282,13 +256,13 @@ The existence of national requirements for spatial data to be represented with a
 
 Parameters are not intended to relax the definition of data having quality for CORE needs. The specifications deliberately do not include parameters that would relax tests on secondary terms for downstream research users or tighten them for upstream data capture. Some tests which would serve the needs of users engaged in data capture or preparing data for aggregation, but not of downstream aggregators or research users were considered, but deemed non-CORE and are not specified here. We have similarly resisted the temptation to parameterize tests to meet the needs of different portions of the data life cycle.
 
-
-**5.1.2 Workflows and Sequencing Tests (Informative)**
+3.8 Workflows and Sequencing of Tests
 
 <!--- Ming: What the tests are agnostic of, repeated in 1.6, 5.2.3 --->
 The test descriptions are agnostic to the framework within which the tests are run. The tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular tests are run. An exception is certain of the amendments, where the order of execution can be important.
 
 <!--- Ming: Execution sequence of the tests , repeated in 1.6, but more detail than 1.6 --->
+
 A good practice for executing the tests is to execute all of the validations and measures in a pre-amendment phase, then to execute all of the amendments in an amendment phase, then to execute all of the validations again on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the validations and measures are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for tests is to aggregate the unique values of applicable Information Elements within a bdqffdq:MultiRecord for each Validation or Measure, then to execute the Validation or Measure on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing tests as SQL queries.
 
 Given a hypothetical Event table with fields including a primary key event_id and an integer field day, implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
@@ -318,7 +292,7 @@ SELECT
 FROM event
     WHERE day < 1 or day > 31
 
-**5.1.3. Amendments where order is important (Normative)**
+**Amendments where order is important**
 
 <!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
 
@@ -344,9 +318,30 @@ The following Amendments SHOULD be composed to run in an ordered sequence:
 | second      | AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR    |
 | and finally | AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY                      |
 
-### 5.2 Implementation (Normative)
 
-#### 5.2.1 Reading a Specification (Normative)
+## 4. Guidance for Consumers of Data Quality Reports
+
+### 4.1 Introduction
+
+An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
+
+* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
+* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.xml
+
+Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv  TODO: Generate human readable test descriptor document, labels here will apply in that document.  
+
+**TODO: rs.tdwg.org namespace.**
+**TODO:VersionDate** The most recent date of update to any element of a test.
+
+**"#"**:"20" The github.com/tdwg/bdq/issues/{number} where documentation of the rationale management conversations for the development of the tests can be found.  See supplement [Section 10](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document#10-supplement-rationale-management-documentation) for descriptions of the terminology used in the issues (which do not fully conform to the Framework). 
+
+The number is present in the Markdown document as **Rationale Management** linking to https://github.com/tdwg/bdq/issues/{n}.
+
+## 5 Implementation
+
+In the Specificatiopns the phrase "interpreted as" means for Implementors, (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
+
+#### 5.1 Reading a Specification
 
 A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementors SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first.  Implementors MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
@@ -360,8 +355,7 @@ COMPLIANT means Response.status=RUN_HAS_RESULT, Response.value=COMPLIANT, Respon
 
 etc.
 
-
-#### 5.2.3 Compliant Implementation (Normative)
+#### 5.2 Compliant Implementation
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
 
@@ -369,14 +363,9 @@ We view the most important elements of this standard as being the structure that
 
 An implementation SHOULD include all CORE SingleRecord Validations, Amendments, and Measured for each implemented UseCase.  An Implementation SHOULD provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional tests and additional UseCases.
 
-
 Results from each test MUST be produced in the form Response.status, Response.result, and Response.comment, with one test producing one Response.   Results MAY include Response.qualifier (See 5.3).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.
 
 Where implementors add additional tests as part of a test suite compliant with this standard, they MUST describe those tests using the bdqffdq framework, those tests MUST use the same Response structures, and those tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
-
-<!--- Ming: Execution sequence of the tests, repeated in 1.6, 5.1.2 --->
-
-Implementations MAY run Validations, Measures, and Issues in a pre-Amendment phase, then run Amendments, then re-run the Validations, Measures, and Issues on the data with the proposed changes from the Amendments applied in a post-Amendment phase.   The use of pre-amendment, amendment, and post-amendment phases allows for measurement of how much acceptance of the changes proposed by the amendments would improve the quality of the data for core purposes.  
 
 The standard is agnostic as to how data are presented and piped within some framework to and from test implementations.  An implementation framework MAY present SingleRecords to tests and report results, or an implementation MAY find unique values for InformationElements, execute test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
 
@@ -392,7 +381,7 @@ How a test responds when given a parameter value that is not supported by the im
 
 Implementors are free to, and are encouraged to, in addition to framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-framework implementations MUST NOT assert compliance with this standard.
 
-### 5.3 Extension points (Normative)
+### 5.3 Extension points
 
 A response MAY include a Response.qualifier.  This is intended as a place to include structured assertions concerning uncertainty in a response.  This is also intended as a place to include structured assertions about the details of Ammendments (e.g. TRANSPOSED MAY be attached to a Response.qualifier for some Amendments.
 
@@ -404,7 +393,7 @@ Tests MAY specify that information elements are ActedUpon or Consulted. We do no
 
 MultiRecord Measues that return counts where the input InformationElement is Response values from tests on SingleRecords MUST report only a single count as the Response.value, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percents), the number of each value of Response.status encountered, and the number of each Response.value encountered.  Measures under the framework are only allowed to return COMPLETE/NOT_COMPLETE, or a single number, if it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use for this. 
 
-### 5.4 Core Test Specifications (Normative)
+### 5.4 Core Test Specifications
 
 These are the specifications for a set of Validations, Amendments, and Measures, each of which applies to a SingleRecord under one or more UseCases. 
 
@@ -413,7 +402,6 @@ These are the specifications for a set of Validations, Amendments, and Measures,
 Included Document: 
 
 [CORE SingleRecord Tests](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_tests.md)
-
 
 ### 5.5 Core MultiRecord Measure Specifications (Normative)
 
@@ -431,8 +419,7 @@ Included Document:
 
 [CORE MultiRecord Measure Tests](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_multirecord_measure_tests.md)
 
-
-## 6. Validating test implementations (Lee)
+## 6. Validating test implementations
 
 Implementors of tests SHOULD validate the behaviour of the internals of their test implementations with unit tests, and MUST validate that each test implementation is capable of taking relevant input from a set of standard test validation data, and returning the expected responses.
 
