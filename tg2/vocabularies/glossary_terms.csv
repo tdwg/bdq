@@ -75,3 +75,4 @@
 "notbdq","bdq:TestField","testFields","Column heading in the markdown of the tests in the bdq GitHub that list all the normative and informative metadata elements that describe a Data Quality Test","Test",
 "notbdq","bdq:TestPrerequisite","TestPrerequisite","Conditions that must be met for a test to be run (e.g., fields having values, tests that need to be run before the current test, availability of a bdq:sourceAuthority)","Test","See for example, INTERNAL_PREREQUISTES_NOT_MET (_q.v._) and EXTERNAL_PREREQUISITES_NOT_MET (_q.v._)."
 "notbdq","bdq:TestType","TestType","There are four types of tests, viz. bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Issue, and bdqffdq:Measure.","Test",
+"bdqTestField","bdqTestField:Examples","Examples","Provide one pass (e.g. COMPLIANT) example and one fail (e.g. NON_COMPLIANT) example for each test.","bdq:Parameter",
