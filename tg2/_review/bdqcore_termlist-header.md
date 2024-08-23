@@ -22,11 +22,29 @@
 
 **Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
 
+**RFC 2119 key words**
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
+
+**Namespace abbreviations**
+
+The following namespace abbreviations are used in this document:
+
+| Prefix | IRI |
+| --- | --- |
+| bdq: | http://rs.tdwg.org/bdq/terms/ |
+| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/ |
+| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/ |
+
+**Use of Terms**
+
+Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of the `bdqffdq:` namespace.
+Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled value strings MUST be used as values of the `bdq:` namespace.
+Due to the requirements of [bdq](https://rs.tdwg.org/bdqcore/terms), controlled value strings MUST be used as values of the `bdqcore:` namespace.
+
 ## 1 Introduction (non-normative)
 
 This document lists the BDQ Core tests. The document includes terms in three namespaces that contain the recommended terms: `bdq:`, `bdqffdq:` and `bdq:core`. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
-
-CORE tests are all defined as single record-level (bdqffdq:SingleRecord) tests, applying to a single observation or event structured under Darwin Core terms (Wieczorek et al 2012). The one exception to this is the test ISSUE_ANNOTATION_NOTEMPTY where this standard encourages the implementation of a standard for annotating occurrence records supported by Darwin Core. This test is an example of what the team calls 'aspirational tests', suggesting that supporting infrastructure seems well-justified. 
 
 [!--- suggest "Single record (bdqffdq:SingleRecord) tests apply to a single observation or event structured under Darwin Core terms (Wieczorek et al 2012). The one exception to this is the test ISSUE_ANNOTATION_NOTEMPTY where this standard encourages the implementation of a standard for annotating occurrence records supported by Darwin Core. Multi record (bdqffdq:MultiRecord) tests sum up results across all records for each single record test."   AC - PAUL to check?  ---]
 
@@ -147,22 +165,6 @@ Section 2 is normative.
 
 In Section 4, the values of the `Term IRI` and `Definition` are normative. The values of `Term Name` `skos:pref:Label` are non-normative, although one can expect that the namespace abbreviation prefix is one commonly used for the term namespace.  `Label` and the values of all other properties (such as `Examples` and `Notes`) are non-normative.
 
-### 1.2 RFC 2119 key words
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
-### 1.3 Namespace abbreviations
-
-The following namespace abbreviations are used in this document:
-
-| Prefix | IRI |
-| --- | --- |
-| bdq: | http://rs.tdwg.org/bdq/terms/ |
-| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/ |
-| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/ |
-
-## 2 Use of Terms
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of the `bdqffdq:` namespace.
-Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled value strings MUST be used as values of the `bdq:` namespace.
-Due to the requirements of [bdq](https://rs.tdwg.org/bdqcore/terms), controlled value strings MUST be used as values of the `bdqcore:` namespace.
 
 ## 3 Term indices
