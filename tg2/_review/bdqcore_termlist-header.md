@@ -1,6 +1,6 @@
-# List of BDQ Tests and Assertions
+# List of BDQ Core Tests and Assertions
 
-**Title**: List of BDQ Tests and Assertions
+**Title**: List of BDQ Core Tests and Assertions
 
 **Date version issued**: {ratification_date}
 
@@ -14,7 +14,7 @@
 
 {previous_version_slot}
 
-**Abstract**: The BDQ Core list of data quality tests.
+**Abstract**: The BDQ Core list of data quality tests. Test Types, Descriptors, 
 
 **Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Antonio M Saraiva, Alex Thompson, Miles Nicholls, Emily R Rees, Christian Gendreau, Dmitry Schigel, Yi Ming Gan
 
@@ -22,10 +22,9 @@
 
 **Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
 
-
 ## 1 Introduction (non-normative)
-[!--- JRW finished first pass to here ---]
-This document includes the tests that are used to test for biodiversity data quality. The document includes terms in three namespaces that contain the recommended terms: `bdq:`, `bdqffdq:` and `bdq:core`. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+
+This document lists the BDQ Core tests. The document includes terms in three namespaces that contain the recommended terms: `bdq:`, `bdqffdq:` and `bdq:core`. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
 CORE tests are all defined as single record-level (bdqffdq:SingleRecord) tests, applying to a single observation or event structured under Darwin Core terms (Wieczorek et al 2012). The one exception to this is the test ISSUE_ANNOTATION_NOTEMPTY where this standard encourages the implementation of a standard for annotating occurrence records supported by Darwin Core. This test is an example of what the team calls 'aspirational tests', suggesting that supporting infrastructure seems well-justified. 
 
