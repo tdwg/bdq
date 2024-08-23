@@ -1,5 +1,4 @@
-# Title
-BDQ-Core Supplemental Information
+# BDQ-Core Supplemental Information
 
 **Date version issued**  (Draft)
 
