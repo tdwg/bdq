@@ -1,0 +1,3 @@
+iri,term_localName,label,definition,comments,examples,organized_in,issued,status,replaces,rdf_type,term_iri,abcd_equivalence,flags
+
+This is a placeholder for the csv file that will contain the metadata for the tests - the bdqcore: vocabulary. The header is just a copy of the term_versions.csv from Darwin Core at this point and should be changed to suit the metadata for tests.

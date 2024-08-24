@@ -1,3 +1,5 @@
+**NOTE** This is a placeholder for the BDQ Core Supplemental Information document
+
 # BDQ Core Supplemental Information
 
 **Date version issued**  (Draft)
