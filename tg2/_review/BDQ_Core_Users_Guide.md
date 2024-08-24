@@ -1,4 +1,4 @@
-# BDQ Core Implementer's Guide
+# BDQ Core User's Guide
 
 **Date version issued**  (Draft)
 
