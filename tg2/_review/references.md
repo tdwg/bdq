@@ -1,5 +1,6 @@
 # References
-Header TBA
+
+The following references have been extracted from the "References" descriptor on the BDQ Core tests and supporting documents.
 
 <ul>
 <li>[RFC-2119] http://tools.ietf.org/html/rfc2119 Key words for use in RFCs to Indicate Requirement Levels. 1997. The Internet Engineering Task Force.</li>
