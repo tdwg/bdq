@@ -4,323 +4,336 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://rs.tdwg.org/bdqffdq/terms> .
 
 <https://rs.tdwg.org/bdqffdq/terms> rdf:type owl:Ontology ;
                                      rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731" ;
                                      rdfs:label "Fittnes for Use Framework" .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
-###  https://rs.tdwg.org/bdqffdq/terms#hasResponseResult
+###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperties
+:amendmentProperties rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/composedOf
+:composedOf rdf:type owl:ObjectProperty ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSpecification ;
+                         owl:someValuesFrom :InformationElement
+                       ] ;
+            rdfs:comment "Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be \"composedOf\" properties such as dwc:day, dwc:month and dwc:year." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/coversUseCase
+:coversUseCase rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasInformationElement ;
+                             owl:someValuesFrom :UseCase
+                           ] ;
+               rdfs:comment "Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of the use case covered by that policy." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/criterionInContext
+:criterionInContext rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :validationProperties ;
+                    rdfs:domain [ rdf:type owl:Restriction ;
+                                  owl:onProperty :criterionInContext ;
+                                  owl:someValuesFrom :ContextualizedCriterion
+                                ] ;
+                    rdfs:range [ rdf:type owl:Restriction ;
+                                 owl:onProperty :criterionInContext ;
+                                 owl:someValuesFrom :ValidationMethod
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :criterionInContext ;
+                                 owl:someValuesFrom :ValidationPolicy
+                               ] ;
+                    rdfs:comment "Describes the relationship between a validation concept in FFDQ (needs, solutions, reports) and a contextualizedCriterion." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/dimensionInContext
+:dimensionInContext rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :measurementProperties ;
+                    rdfs:domain [ rdf:type owl:Restriction ;
+                                  owl:onProperty :dimensionInContext ;
+                                  owl:someValuesFrom :ContextualizedDimension
+                                ] ;
+                    rdfs:range [ rdf:type owl:Restriction ;
+                                 owl:onProperty :dimensionInContext ;
+                                 owl:someValuesFrom :MeasurementMethod
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :dimensionInContext ;
+                                 owl:someValuesFrom :MeasurementPolicy
+                               ] ;
+                    rdfs:comment "Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedDimension." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/enhancementInContext
+:enhancementInContext rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :amendmentProperties ;
+                      rdfs:domain [ rdf:type owl:Restriction ;
+                                    owl:onProperty :enhancementInContext ;
+                                    owl:someValuesFrom :ContextualizedEnhancement
+                                  ] ;
+                      rdfs:range [ rdf:type owl:Restriction ;
+                                   owl:onProperty :enhancementInContext ;
+                                   owl:someValuesFrom :AmendmentMethod
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :enhancementInContext ;
+                                   owl:someValuesFrom :AmendmentPolicy
+                                 ] ;
+                      rdfs:comment "Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedEnhancement." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement
+:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :hasInformationElement ;
+                                rdfs:comment "Provides a relationship between FFDQ concepts and the information elements that are ActedUpon in a test."@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement
+:hasConsultedInformationElement rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :hasInformationElement ;
+                                rdfs:comment "Provides a relationship between FFDQ concepts and the information elements that are Consulted, but not ActedUpon in a test."@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasCriterion
+:hasCriterion rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :validationProperties ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCriterion ;
+                            owl:someValuesFrom :Validation
+                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCriterion ;
+                           owl:someValuesFrom :ContextualizedCriterion
+                         ] ;
+              rdfs:comment "Used to link the derived concept of a ContextualizedCriterion to the fundamental concept of a Criterion." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasDimension
+:hasDimension rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :measurementProperties ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDimension ;
+                            owl:someValuesFrom :DataQualityDimension
+                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasDimension ;
+                           owl:someValuesFrom :ContextualizedDimension
+                         ] ;
+              rdfs:comment "Used to link the derived concept of a ContextualizedDimension to the fundamental concept of a Dimension." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
+:hasEnhancement rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :amendmentProperties ;
+                rdfs:domain [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasEnhancement ;
+                              owl:someValuesFrom :Amendmenent
+                            ] ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasEnhancement ;
+                             owl:someValuesFrom :ContextualizedEnhancement
+                           ] ;
+                rdfs:comment "Used to link the derived concept of a ContextualizedEnhancement to the fundamental concept of an Enhancement." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasInformationElement
+:hasInformationElement rdf:type owl:ObjectProperty ;
+                       rdfs:domain [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasInformationElement ;
+                                     owl:someValuesFrom :InformationElement
+                                   ] ;
+                       rdfs:comment "Provides a relationship between FFDQ concepts and the information elements. For example, ContextualizedCriterion uses this property along with hasResourceType to define a criterion in the context of related information elements." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasIssue
+:hasIssue rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :problemProperties ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasIssue ;
+                        owl:someValuesFrom :Issue
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasIssue ;
+                       owl:someValuesFrom :ContextualizedIssue
+                     ] ;
+          rdfs:comment "Used to link the derived concept of a ContextualizedIssue to the fundamental concept of a Problem." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasResourceType
+:hasResourceType rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Provides additional metadata, along with the information elements, that describes the level (SingleRecord or MultiRecord) at which the FFDQ concept operates. For example, an enhancementInContext with resource type of MultiRecord could be used to define an Amendment that applies at the level of multiple record values." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResult
 :hasResponseResult rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :reportProperties ;
                    rdfs:comment "Used in the DQ Report concept to describe response result objects. For example, values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET.   If Response.results are not objects, use the datatype property hasResponseResultValue"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms#hasResponseStatus
+###  https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus
 :hasResponseStatus rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :reportProperties ;
                    rdfs:comment "Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be bdq:COMPLIANT or bdq:NON_COMPLIANT." .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms#reportProperties
-:reportProperties rdf:type owl:ObjectProperty .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperties
-<https://rs.tdwg.org/bdqffdq/terms/amendmentProperties> rdf:type owl:ObjectProperty ;
-                                                        rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/composedOf
-<https://rs.tdwg.org/bdqffdq/terms/composedOf> rdf:type owl:ObjectProperty ;
-                                               rdfs:range [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> ;
-                                                            owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/InformationElement>
-                                                          ] ;
-                                               rdfs:comment "Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be \"composedOf\" properties such as dwc:day, dwc:month and dwc:year." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/coversUseCase
-<https://rs.tdwg.org/bdqffdq/terms/coversUseCase> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasInformationElement> ;
-                                                                owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/UseCase>
-                                                              ] ;
-                                                  rdfs:comment "Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of the use case covered by that policy." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/criterionInContext
-<https://rs.tdwg.org/bdqffdq/terms/criterionInContext> rdf:type owl:ObjectProperty ;
-                                                       rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/validationProperties> ;
-                                                       rdfs:domain [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/criterionInContext> ;
-                                                                     owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion>
-                                                                   ] ;
-                                                       rdfs:range [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/criterionInContext> ;
-                                                                    owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/criterionInContext> ;
-                                                                    owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>
-                                                                  ] ;
-                                                       rdfs:comment "Describes the relationship between a validation concept in FFDQ (needs, solutions, reports) and a contextualizedCriterion." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/dimensionInContext
-<https://rs.tdwg.org/bdqffdq/terms/dimensionInContext> rdf:type owl:ObjectProperty ;
-                                                       rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/measurementProperties> ;
-                                                       rdfs:domain [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/dimensionInContext> ;
-                                                                     owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension>
-                                                                   ] ;
-                                                       rdfs:range [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/dimensionInContext> ;
-                                                                    owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>
-                                                                  ] ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/dimensionInContext> ;
-                                                                    owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy>
-                                                                  ] ;
-                                                       rdfs:comment "Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedDimension." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/enhancementInContext
-<https://rs.tdwg.org/bdqffdq/terms/enhancementInContext> rdf:type owl:ObjectProperty ;
-                                                         rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/amendmentProperties> ;
-                                                         rdfs:domain [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/enhancementInContext> ;
-                                                                       owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement>
-                                                                     ] ;
-                                                         rdfs:range [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/enhancementInContext> ;
-                                                                      owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>
-                                                                    ] ,
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/enhancementInContext> ;
-                                                                      owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy>
-                                                                    ] ;
-                                                         rdfs:comment "Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedEnhancement." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement
-<https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> rdf:type owl:ObjectProperty ;
-                                                                   rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/hasInformationElement> ;
-                                                                   rdfs:comment "Provides a relationship between FFDQ concepts and the information elements that are ActedUpon in a test."@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement
-<https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> rdf:type owl:ObjectProperty ;
-                                                                   rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/hasInformationElement> ;
-                                                                   rdfs:comment "Provides a relationship between FFDQ concepts and the information elements that are Consulted, but not ActedUpon in a test."@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasCriterion
-<https://rs.tdwg.org/bdqffdq/terms/hasCriterion> rdf:type owl:ObjectProperty ;
-                                                 rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/validationProperties> ;
-                                                 rdfs:domain [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> ;
-                                                               owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Validation>
-                                                             ] ;
-                                                 rdfs:range [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> ;
-                                                              owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion>
-                                                            ] ;
-                                                 rdfs:comment "Used to link the derived concept of a ContextualizedCriterion to the fundamental concept of a Criterion." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasDimension
-<https://rs.tdwg.org/bdqffdq/terms/hasDimension> rdf:type owl:ObjectProperty ;
-                                                 rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/measurementProperties> ;
-                                                 rdfs:domain [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasDimension> ;
-                                                               owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension>
-                                                             ] ;
-                                                 rdfs:range [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasDimension> ;
-                                                              owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension>
-                                                            ] ;
-                                                 rdfs:comment "Used to link the derived concept of a ContextualizedDimension to the fundamental concept of a Dimension." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
-<https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/amendmentProperties> ;
-                                                   rdfs:domain [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> ;
-                                                                 owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Amendmenent>
-                                                               ] ;
-                                                   rdfs:range [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> ;
-                                                                owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement>
-                                                              ] ;
-                                                   rdfs:comment "Used to link the derived concept of a ContextualizedEnhancement to the fundamental concept of an Enhancement." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasInformationElement
-<https://rs.tdwg.org/bdqffdq/terms/hasInformationElement> rdf:type owl:ObjectProperty ;
-                                                          rdfs:domain [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasInformationElement> ;
-                                                                        owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/InformationElement>
-                                                                      ] ;
-                                                          rdfs:comment "Provides a relationship between FFDQ concepts and the information elements. For example, ContextualizedCriterion uses this property along with hasResourceType to define a criterion in the context of related information elements." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasIssue
-<https://rs.tdwg.org/bdqffdq/terms/hasIssue> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/problemProperties> ;
-                                             rdfs:domain [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasIssue> ;
-                                                           owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Issue>
-                                                         ] ;
-                                             rdfs:range [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasIssue> ;
-                                                          owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue>
-                                                        ] ;
-                                             rdfs:comment "Used to link the derived concept of a ContextualizedIssue to the fundamental concept of a Problem." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasResourceType
-<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> rdf:type owl:ObjectProperty ;
-                                                    rdfs:comment "Provides additional metadata, along with the information elements, that describes the level (SingleRecord or MultiRecord) at which the FFDQ concept operates. For example, an enhancementInContext with resource type of MultiRecord could be used to define an Amendment that applies at the level of multiple record values." .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/hasSpecification
-<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> rdf:type owl:ObjectProperty ;
-                                                     rdfs:domain [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> ;
-                                                                   owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Specification>
-                                                                 ] ;
-                                                     rdfs:range [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> ;
-                                                                  owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Assertion>
-                                                                ] ;
-                                                     rdfs:comment "Describes the relationship between a derived FFDQ concept and the fundamental concept of a specification (technical description of a test)." .
+:hasSpecification rdf:type owl:ObjectProperty ;
+                  rdfs:domain [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasSpecification ;
+                                owl:someValuesFrom :Specification
+                              ] ;
+                  rdfs:range [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSpecification ;
+                               owl:someValuesFrom :Assertion
+                             ] ;
+                  rdfs:comment "Describes the relationship between a derived FFDQ concept and the fundamental concept of a specification (technical description of a test)." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasStatus
-<https://rs.tdwg.org/bdqffdq/terms/hasStatus> rdf:type owl:ObjectProperty ;
-                                              rdfs:comment "Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be COMPLIANT or NON_COMPLIANT." .
+:hasStatus rdf:type owl:ObjectProperty ;
+           rdfs:comment "Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be COMPLIANT or NON_COMPLIANT." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/implementedBy
-<https://rs.tdwg.org/bdqffdq/terms/implementedBy> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/implementedBy> ;
-                                                                owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Mechanism>
-                                                              ] ;
-                                                  rdfs:range [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/implementedBy> ;
-                                                               owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Implementation>
-                                                             ] ;
-                                                  rdfs:comment "Describes the link between the Implementation concept in FFDQ and the Mechanism that implements some specification (also defined in Implementation)." .
+:implementedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :implementedBy ;
+                             owl:someValuesFrom :Mechanism
+                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :implementedBy ;
+                            owl:someValuesFrom :Implementation
+                          ] ;
+               rdfs:comment "Describes the link between the Implementation concept in FFDQ and the Mechanism that implements some specification (also defined in Implementation)." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/improvedBy
-<https://rs.tdwg.org/bdqffdq/terms/improvedBy> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/improvedBy> ;
-                                                             owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement>
-                                                           ] ;
-                                               rdfs:range [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/improvedBy> ;
-                                                            owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget>
-                                                          ] ;
-                                               rdfs:comment "Object property that describes an enhancement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment." .
+:improvedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty :improvedBy ;
+                          owl:someValuesFrom :ContextualizedEnhancement
+                        ] ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :improvedBy ;
+                         owl:someValuesFrom :ImprovementTarget
+                       ] ;
+            rdfs:comment "Object property that describes an enhancement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/issueInContext
-<https://rs.tdwg.org/bdqffdq/terms/issueInContext> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <https://rs.tdwg.org/bdqffdq/terms/problemProperties> ;
-                                                   rdfs:domain [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/issueInContext> ;
-                                                                 owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue>
-                                                               ] ;
-                                                   rdfs:range [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/issueInContext> ;
-                                                                owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ProblemMethod>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/issueInContext> ;
-                                                                owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy>
-                                                              ] ;
-                                                   rdfs:comment "Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue." .
+:issueInContext rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :problemProperties ;
+                rdfs:domain [ rdf:type owl:Restriction ;
+                              owl:onProperty :issueInContext ;
+                              owl:someValuesFrom :ContextualizedIssue
+                            ] ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty :issueInContext ;
+                             owl:someValuesFrom :ProblemMethod
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :issueInContext ;
+                             owl:someValuesFrom :ProblemPolicy
+                           ] ;
+                rdfs:comment "Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/measurementProperties
-<https://rs.tdwg.org/bdqffdq/terms/measurementProperties> rdf:type owl:ObjectProperty ;
-                                                          rdfs:comment "Sub properties of this type group object properties that apply to measurement concepts such as MeasurementPolicy (DQ Needs), MeasurementMethod (DQ Solutions) and Measure (DQ Reports)." .
+:measurementProperties rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Sub properties of this type group object properties that apply to measurement concepts such as MeasurementPolicy (DQ Needs), MeasurementMethod (DQ Solutions) and Measure (DQ Reports)." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/problemProperties
-<https://rs.tdwg.org/bdqffdq/terms/problemProperties> rdf:type owl:ObjectProperty ;
-                                                      rdfs:comment "Sub properties of this type group object properties that apply to problem concepts such as ProblemPolicy (DQ Needs), ProblemMethod (DQ Solutions) and Issue (DQ Reports)." .
+:problemProperties rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Sub properties of this type group object properties that apply to problem concepts such as ProblemPolicy (DQ Needs), ProblemMethod (DQ Solutions) and Issue (DQ Reports)." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/reportProperties
+:reportProperties rdf:type owl:ObjectProperty .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedCriterion
-<https://rs.tdwg.org/bdqffdq/terms/targetedCriterion> rdf:type owl:ObjectProperty ;
-                                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                                      rdfs:domain [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/targetedCriterion> ;
-                                                                    owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion>
-                                                                  ] ;
-                                                      rdfs:range [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/targetedCriterion> ;
-                                                                   owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget>
-                                                                 ] ;
-                                                      rdfs:comment "The criteria targeted by some enhancement via the ImprovementTarget object." .
+:targetedCriterion rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain [ rdf:type owl:Restriction ;
+                                 owl:onProperty :targetedCriterion ;
+                                 owl:someValuesFrom :ContextualizedCriterion
+                               ] ;
+                   rdfs:range [ rdf:type owl:Restriction ;
+                                owl:onProperty :targetedCriterion ;
+                                owl:someValuesFrom :ImprovementTarget
+                              ] ;
+                   rdfs:comment "The criteria targeted by some enhancement via the ImprovementTarget object." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedDimension
-<https://rs.tdwg.org/bdqffdq/terms/targetedDimension> rdf:type owl:ObjectProperty ;
-                                                      rdfs:domain [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/targetedDimension> ;
-                                                                    owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension>
-                                                                  ] ;
-                                                      rdfs:range [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/targetedDimension> ;
-                                                                   owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget>
-                                                                 ] ;
-                                                      rdfs:comment "The dimension targeted by some enhancement via the ImprovementTarget object." .
+:targetedDimension rdf:type owl:ObjectProperty ;
+                   rdfs:domain [ rdf:type owl:Restriction ;
+                                 owl:onProperty :targetedDimension ;
+                                 owl:someValuesFrom :ContextualizedDimension
+                               ] ;
+                   rdfs:range [ rdf:type owl:Restriction ;
+                                owl:onProperty :targetedDimension ;
+                                owl:someValuesFrom :ImprovementTarget
+                              ] ;
+                   rdfs:comment "The dimension targeted by some enhancement via the ImprovementTarget object." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedIssue
-<https://rs.tdwg.org/bdqffdq/terms/targetedIssue> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/targetedIssue> ;
-                                                                owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/Issue>
-                                                              ] ;
-                                                  rdfs:range [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <https://rs.tdwg.org/bdqffdq/terms/targetedIssue> ;
-                                                               owl:someValuesFrom <https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget>
-                                                             ] ;
-                                                  rdfs:comment "The issue targeted by some problem via the ImprovementTarget object." .
+:targetedIssue rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :targetedIssue ;
+                             owl:someValuesFrom :Issue
+                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :targetedIssue ;
+                            owl:someValuesFrom :ImprovementTarget
+                          ] ;
+               rdfs:comment "The issue targeted by some problem via the ImprovementTarget object." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/validationProperties
-<https://rs.tdwg.org/bdqffdq/terms/validationProperties> rdf:type owl:ObjectProperty ;
-                                                         rdfs:comment "Sub properties of this type group object properties that apply to validation concepts such as ValidationPolicy (DQ Needs), ValidationMethod (DQ Solutions) and Validation (DQ Reports)." .
+:validationProperties rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Sub properties of this type group object properties that apply to validation concepts such as ValidationPolicy (DQ Needs), ValidationMethod (DQ Solutions) and Validation (DQ Reports)." .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://rs.tdwg.org/bdqffdq/terms#ExpectedResponse
+###  https://rs.tdwg.org/bdqffdq/terms/ExpectedResponse
 :ExpectedResponse rdf:type owl:DatatypeProperty ;
                   rdfs:comment "The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms#Parameters
+###  https://rs.tdwg.org/bdqffdq/terms/Parameters
 :Parameters rdf:type owl:DatatypeProperty ;
             rdfs:comment "Parameters that may be provided with the expected response along with their default values if they are not provided.  Parameters are expected to be data properties of a Specification."@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms#hasResponseResultValue
+###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 :hasResponseResultValue rdf:type owl:DatatypeProperty .
 
 
@@ -329,249 +342,251 @@
 #################################################################
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ActedUpon
-<https://rs.tdwg.org/bdqffdq/terms/ActedUpon> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/InformationElement> ;
-                                              rdfs:comment "An information element to which a Result applies."@en ;
-                                              rdfs:label "Acted Upon"@en .
+:ActedUpon rdf:type owl:Class ;
+           rdfs:subClassOf :InformationElement ;
+           rdfs:comment "An information element to which a Result applies."@en ;
+           rdfs:label "Acted Upon"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Amendmenent
-<https://rs.tdwg.org/bdqffdq/terms/Amendmenent> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed> ;
-                                                rdfs:comment "Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example, \"Recommends valid value for taxon name in a single record\".  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level."@en .
+:Amendmenent rdf:type owl:Class ;
+             rdfs:subClassOf :DataQualityNeed ;
+             rdfs:comment "Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example, \"Recommends valid value for taxon name in a single record\".  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level."@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion
-<https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/Assertion> ;
-                                                       rdfs:comment "The Amendment assertion type is a report level concept that describes a run of a test that proposes changes based on some data quality enhancement. The Amendment concept in FFDQ consists of a run result that includes a status (FILLED_IN, TRANSPOSED, etc) as well as the proposed changes to values from the original data." .
+:AmendmentAssertion rdf:type owl:Class ;
+                    rdfs:subClassOf :Assertion ;
+                    rdfs:comment "The Amendment assertion type is a report level concept that describes a run of a test that proposes changes based on some data quality enhancement. The Amendment concept in FFDQ consists of a run result that includes a status (FILLED_IN, TRANSPOSED, etc) as well as the proposed changes to values from the original data." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod
-<https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod> ;
-                                                    rdfs:comment "The AmendmentMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an enhancement in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+:AmendmentMethod rdf:type owl:Class ;
+                 rdfs:subClassOf :DataQualityMethod ;
+                 rdfs:comment "The AmendmentMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an enhancement in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
-<https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                    rdfs:comment "The AmendmentPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedEnhancement relates to a use case. This relationship defines which Amendments are supported by a given use case." .
+:AmendmentPolicy rdf:type owl:Class ;
+                 rdfs:subClassOf :NeedConcept ;
+                 rdfs:comment "The AmendmentPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedEnhancement relates to a use case. This relationship defines which Amendments are supported by a given use case." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Assertion
-<https://rs.tdwg.org/bdqffdq/terms/Assertion> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/ReportConcept> ;
-                                              rdfs:comment """The Assertion type in FFDQ is the fundamental concept that makes up a data quality report. Assertion can be any one of four types (represented as subClasses), Measure, Validation, Issue, and Amendement.
+:Assertion rdf:type owl:Class ;
+           rdfs:subClassOf :ReportConcept ;
+           rdfs:comment """The Assertion type in FFDQ is the fundamental concept that makes up a data quality report. Assertion can be any one of four types (represented as subClasses), Measure, Validation, Issue, and Amendement.
 
 The assertion concept consists of a specification (the technical description of a performed test), a data resource (initial values of input data expressed in terms of some controlled vocabulary), the mechanism (external service, actor, or code that performs the test), and some form of result.""" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Consulted
-<https://rs.tdwg.org/bdqffdq/terms/Consulted> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/InformationElement> ;
-                                              rdfs:comment "An Information Element the content of which is examined to assert a result on one or more other Information Elements"@en ;
-                                              rdfs:label "Consulted"@en .
+:Consulted rdf:type owl:Class ;
+           rdfs:subClassOf :InformationElement ;
+           rdfs:comment "An Information Element the content of which is examined to assert a result on one or more other Information Elements"@en ;
+           rdfs:label "Consulted"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion
-<https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                            rdfs:comment "Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+:ContextualizedCriterion rdf:type owl:Class ;
+                         rdfs:subClassOf :NeedConcept ;
+                         rdfs:comment "Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension
-<https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                            rdfs:comment "Describes an instance of the dimension concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+:ContextualizedDimension rdf:type owl:Class ;
+                         rdfs:subClassOf :NeedConcept ;
+                         rdfs:comment "Describes an instance of the dimension concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement
-<https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                              rdfs:comment "Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+:ContextualizedEnhancement rdf:type owl:Class ;
+                           rdfs:subClassOf :NeedConcept ;
+                           rdfs:comment "Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue
-<https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                        rdfs:comment "Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+:ContextualizedIssue rdf:type owl:Class ;
+                     rdfs:subClassOf :NeedConcept ;
+                     rdfs:comment "Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension
-<https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension> rdf:type owl:Class ;
-                                                         rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, \"precision\" in \"coordinate percision of single records\".  Includes Completeness (q.v.), Conformance (q.v.), Consistency (q.v.), Likeliness (q.v.), Reliability (q.v.), and Resolution (q.v.)."@en ;
-                                                         rdfs:label "Data Quality Dimension"@en .
+:DataQualityDimension rdf:type owl:Class ;
+                      rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, \"precision\" in \"coordinate precision of single records\"."@en ;
+                      rdfs:label "Data Quality Dimension"@en ;
+                      skos:definition "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines."@en ;
+                      skos:prefLabel "Data Quality Dimension" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
-<https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept> .
+:DataQualityMethod rdf:type owl:Class ;
+                   rdfs:subClassOf :SolutionsConcept .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
-<https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> .
+:DataQualityNeed rdf:type owl:Class ;
+                 rdfs:subClassOf :NeedConcept .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityReport
-<https://rs.tdwg.org/bdqffdq/terms/DataQualityReport> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/ReportConcept> ;
-                                                      rdfs:comment "The FFDQ Report concept consists of a set of assertions (measures, validations and amendments) that represent the output of a workflow/actor run.  These assertions form an account of the fitness for use of a tested data set for a specified use, as produced by a Mechanism."@en ;
-                                                      rdfs:label "Data Quality Report"@en .
+:DataQualityReport rdf:type owl:Class ;
+                   rdfs:subClassOf :ReportConcept ;
+                   rdfs:comment "The FFDQ Report concept consists of a set of assertions (measures, validations and amendments) that represent the output of a workflow/actor run.  These assertions form an account of the fitness for use of a tested data set for a specified use, as produced by a Mechanism."@en ;
+                   rdfs:label "Data Quality Report"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataResource
-<https://rs.tdwg.org/bdqffdq/terms/DataResource> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/ReportConcept> ;
-                                                 rdfs:comment "Describes a data resource described in terms of a controlled vocabulary such as dwc and represents the original values of the data operated on by an assertion test (i.e. an instance of dwc:Occurrence)." .
+:DataResource rdf:type owl:Class ;
+              rdfs:subClassOf :ReportConcept ;
+              rdfs:comment "Describes a data resource described in terms of a controlled vocabulary such as dwc and represents the original values of the data operated on by an assertion test (i.e. an instance of dwc:Occurrence)." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Implementation
-<https://rs.tdwg.org/bdqffdq/terms/Implementation> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept> ;
-                                                   rdfs:comment "The FFDQ derived concept of an Implementation describes the relationship between a specification (technical description of a test) and the mechanism that implements it." .
+:Implementation rdf:type owl:Class ;
+                rdfs:subClassOf :SolutionsConcept ;
+                rdfs:comment "The FFDQ derived concept of an Implementation describes the relationship between a specification (technical description of a test) and the mechanism that implements it." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget
-<https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                      rdfs:comment "The ImprovementTarget concept in FFDQ describes which measures and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures)." .
+:ImprovementTarget rdf:type owl:Class ;
+                   rdfs:subClassOf :NeedConcept ;
+                   rdfs:comment "The ImprovementTarget concept in FFDQ describes which measures and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures)." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/InformationElement
-<https://rs.tdwg.org/bdqffdq/terms/InformationElement> rdf:type owl:Class ;
-                                                       rdfs:comment "An information element identifies a portion of data to which a test pertains.  The information element in FFDQ can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a use case.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude)."@en ;
-                                                       rdfs:label "Information Element"@en .
+:InformationElement rdf:type owl:Class ;
+                    rdfs:comment "An information element identifies a portion of data to which a test pertains.  The information element in FFDQ can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a use case.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude)."@en ;
+                    rdfs:label "Information Element"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Issue
-<https://rs.tdwg.org/bdqffdq/terms/Issue> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed> ;
-                                          rdfs:comment "Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximantes an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POSSIBLE_PROBLEM that would need further review to determine if the data have qulity for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either HAS_PROBLEM or POSSIBLE_PROBLEM, if no issue is found with the data the result will be NO_PROBLEM.  NO_PROBLEM, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that paralells a IssueMethod at the solutions level, and a IssieAssertion at the report level."@en .
+:Issue rdf:type owl:Class ;
+       rdfs:subClassOf :DataQualityNeed ;
+       rdfs:comment "Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximantes an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POSSIBLE_PROBLEM that would need further review to determine if the data have qulity for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either HAS_PROBLEM or POSSIBLE_PROBLEM, if no issue is found with the data the result will be NO_PROBLEM.  NO_PROBLEM, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that paralells a IssueMethod at the solutions level, and a IssieAssertion at the report level."@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueAssertion
-<https://rs.tdwg.org/bdqffdq/terms/IssueAssertion> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/Assertion> ;
-                                                   rdfs:comment "The DQ report concept describing a test for the negative case. If a problem was found the result has a status of HAS_PROBLEM otherwise the status is NO_PROBLEM." .
+:IssueAssertion rdf:type owl:Class ;
+                rdfs:subClassOf :Assertion ;
+                rdfs:comment "The DQ report concept describing a test for the negative case. If a problem was found the result has a status of HAS_PROBLEM otherwise the status is NO_PROBLEM." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
-<https://rs.tdwg.org/bdqffdq/terms/Measure> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed> ;
-                                            rdfs:comment "Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data have quality for some need if all records are COMPLETE for all pertenent Measures.  A Measure is the data quality needs concept that paralells a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level."@en .
+:Measure rdf:type owl:Class ;
+         rdfs:subClassOf :DataQualityNeed ;
+         rdfs:comment "Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data have quality for some need if all records are COMPLETE for all pertenent Measures.  A Measure is the data quality needs concept that paralells a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level."@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
-<https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/Assertion> ;
-                                                         rdfs:comment "The Measure assertion type is a report level concept that describes a run of a test that performs a measurement according to some data quality dimension. In FFDQ, the Measure concept consists of a run result of COMPLETE or NOT_COMPLETE or a value of the measurement (i.e. a measure of dwc:eventDate duration in seconds)." .
+:MeasurementAssertion rdf:type owl:Class ;
+                      rdfs:subClassOf :Assertion ;
+                      rdfs:comment "The Measure assertion type is a report level concept that describes a run of a test that performs a measurement according to some data quality dimension. In FFDQ, the Measure concept consists of a run result of COMPLETE or NOT_COMPLETE or a value of the measurement (i.e. a measure of dwc:eventDate duration in seconds)." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod
-<https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod> ;
-                                                      rdfs:comment "The MeasurementMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+:MeasurementMethod rdf:type owl:Class ;
+                   rdfs:subClassOf :DataQualityMethod ;
+                   rdfs:comment "The MeasurementMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
-<https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                      rdfs:comment "The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case." .
+:MeasurementPolicy rdf:type owl:Class ;
+                   rdfs:subClassOf :NeedConcept ;
+                   rdfs:comment "The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Mechanism
-<https://rs.tdwg.org/bdqffdq/terms/Mechanism> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept> ;
-                                              rdfs:comment "The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation." .
+:Mechanism rdf:type owl:Class ;
+           rdfs:subClassOf :SolutionsConcept ;
+           rdfs:comment "The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/NeedConcept
-<https://rs.tdwg.org/bdqffdq/terms/NeedConcept> rdf:type owl:Class .
+:NeedConcept rdf:type owl:Class .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ProblemMethod
-<https://rs.tdwg.org/bdqffdq/terms/ProblemMethod> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod> ;
-                                                  rdfs:comment "The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+:ProblemMethod rdf:type owl:Class ;
+               rdfs:subClassOf :DataQualityMethod ;
+               rdfs:comment "The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
-<https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                  rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." .
+:ProblemPolicy rdf:type owl:Class ;
+               rdfs:subClassOf :NeedConcept ;
+               rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Profile
-<https://rs.tdwg.org/bdqffdq/terms/Profile> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                            rdfs:comment "Profile in FFDQ is a DQ Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions." .
+:Profile rdf:type owl:Class ;
+         rdfs:subClassOf :NeedConcept ;
+         rdfs:comment "Profile in FFDQ is a DQ Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ReportConcept
-<https://rs.tdwg.org/bdqffdq/terms/ReportConcept> rdf:type owl:Class .
+:ReportConcept rdf:type owl:Class .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResourceType
-<https://rs.tdwg.org/bdqffdq/terms/ResourceType> rdf:type owl:Class ;
-                                                 rdfs:comment "In FFDQ the concept of ResourceType has instances for SingleRecord or MultiRecord" .
+:ResourceType rdf:type owl:Class ;
+              rdfs:comment "In FFDQ the concept of ResourceType has instances for SingleRecord or MultiRecord" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Result
-<https://rs.tdwg.org/bdqffdq/terms/Result> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/ReportConcept> ;
-                                           rdfs:comment "The report result concept in FFDQ is represented as a value or a status for measures, just a result status for validations and a result status as well as values for changes propsed by amendments." .
+:Result rdf:type owl:Class ;
+        rdfs:subClassOf :ReportConcept ;
+        rdfs:comment "The report result concept in FFDQ is represented as a value or a status for measures, just a result status for validations and a result status as well as values for changes propsed by amendments." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResultStatus
-<https://rs.tdwg.org/bdqffdq/terms/ResultStatus> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/ReportConcept> ;
-                                                 rdfs:comment """Depending on the assertion type would have values of COMPLIANT or NON_COMPLIANT for a Validation, COMPLETE or NOT_COMPLETE for a Measure, CURATED, FILLED_IN,TRANSPOSED, NO_CHANGE for an Amendment and HAS_PROBLEM NO_PROBLEM for a Problem.
+:ResultStatus rdf:type owl:Class ;
+              rdfs:subClassOf :ReportConcept ;
+              rdfs:comment """Depending on the assertion type would have values of COMPLIANT or NON_COMPLIANT for a Validation, COMPLETE or NOT_COMPLETE for a Measure, CURATED, FILLED_IN,TRANSPOSED, NO_CHANGE for an Amendment and HAS_PROBLEM NO_PROBLEM for a Problem.
 
 A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_PREREQUISITES_NOT_MET and EXTERNAL_PREREQUISITES_NOT_MET.""" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept
-<https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept> rdf:type owl:Class .
+:SolutionsConcept rdf:type owl:Class .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Specification
-<https://rs.tdwg.org/bdqffdq/terms/Specification> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                  rdfs:comment "A specification is a technical desription of an assertion test."@en .
+:Specification rdf:type owl:Class ;
+               rdfs:subClassOf :NeedConcept ;
+               rdfs:comment "A specification is a technical desription of an assertion test."@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/UseCase
-<https://rs.tdwg.org/bdqffdq/terms/UseCase> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                            rdfs:comment """The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.
+:UseCase rdf:type owl:Class ;
+         rdfs:subClassOf :NeedConcept ;
+         rdfs:comment """The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.
 
 An example of a UseCase could be \"Check for internal consistency of dates\", with validation policies for checking consistency between atomic date fields and an Amendment such as \"eventDate filled in from verbatim\".""" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Validation
-<https://rs.tdwg.org/bdqffdq/terms/Validation> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed> ;
-                                               rdfs:comment "Describes the criteria for determining compliance of data to fill some data quality need.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example, \"The value of basisOfRecord of single records must be in the controlled vocabulary\".   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality."@en .
+:Validation rdf:type owl:Class ;
+            rdfs:subClassOf :DataQualityNeed ;
+            rdfs:comment "Describes the criteria for determining compliance of data to fill some data quality need.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example, \"The value of basisOfRecord of single records must be in the controlled vocabulary\".   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality."@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion
-<https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/Assertion> ;
-                                                        rdfs:comment "The Validation assertion type is a report level concept that describes a run of a test for validity. The Validation concept in FFDQ consists of a run result of COMPLIANT or NON_COMPLIANT and a criterion that describes the conditions for validity that result in a status of COMPLIANT." .
+:ValidationAssertion rdf:type owl:Class ;
+                     rdfs:subClassOf :Assertion ;
+                     rdfs:comment "The Validation assertion type is a report level concept that describes a run of a test for validity. The Validation concept in FFDQ consists of a run result of COMPLIANT or NON_COMPLIANT and a criterion that describes the conditions for validity that result in a status of COMPLIANT." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationMethod
-<https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod> ;
-                                                     rdfs:comment "The ValidationMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+:ValidationMethod rdf:type owl:Class ;
+                  rdfs:subClassOf :DataQualityMethod ;
+                  rdfs:comment "The ValidationMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
-<https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/NeedConcept> ;
-                                                     rdfs:comment "The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case." .
+:ValidationPolicy rdf:type owl:Class ;
+                  rdfs:subClassOf :NeedConcept ;
+                  rdfs:comment "The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case." .
 
 
 #################################################################
@@ -579,16 +594,16 @@ An example of a UseCase could be \"Check for internal consistency of dates\", wi
 #################################################################
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MultiRecord
-<https://rs.tdwg.org/bdqffdq/terms/MultiRecord> rdf:type owl:NamedIndividual ,
-                                                         <https://rs.tdwg.org/bdqffdq/terms/ResourceType> ;
-                                                rdfs:label "Multi Record"@en .
+:MultiRecord rdf:type owl:NamedIndividual ,
+                      :ResourceType ;
+             rdfs:label "Multi Record"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SingleRecord
-<https://rs.tdwg.org/bdqffdq/terms/SingleRecord> rdf:type owl:NamedIndividual ,
-                                                          <https://rs.tdwg.org/bdqffdq/terms/ResourceType> ;
-                                                 rdfs:comment "A record from a dataset without dependencies on any other record."@en ;
-                                                 rdfs:label "Single Record"@en .
+:SingleRecord rdf:type owl:NamedIndividual ,
+                       :ResourceType ;
+              rdfs:comment "A record from a dataset without dependencies on any other record."@en ;
+              rdfs:label "Single Record"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
