@@ -415,13 +415,15 @@ The assertion concept consists of a specification (the technical description of 
 :DataQualityDimension rdf:type owl:Class ;
                       rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, \"precision\" in \"coordinate precision of single records\"."@en ;
                       rdfs:label "Data Quality Dimension"@en ;
-                      skos:definition "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines."@en ;
+                      skos:definition "The aspects of data quality  that a test examines."@en ;
                       skos:prefLabel "Data Quality Dimension" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
 :DataQualityMethod rdf:type owl:Class ;
-                   rdfs:subClassOf :SolutionsConcept .
+                   rdfs:subClassOf :SolutionsConcept ;
+                   rdfs:label "Data Quality Method"@en ;
+                   skos:prefLabel "Data Quality Method"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
@@ -445,7 +447,9 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/Implementation
 :Implementation rdf:type owl:Class ;
                 rdfs:subClassOf :SolutionsConcept ;
-                rdfs:comment "The FFDQ derived concept of an Implementation describes the relationship between a specification (technical description of a test) and the mechanism that implements it." .
+                rdfs:comment "The FFDQ derived concept of an Implementation describes the relationship between a specification (technical description of a test) and the mechanism that implements it." ;
+                rdfs:label "Implementation"@en ;
+                skos:prefLabel "Implementation"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget
@@ -457,7 +461,8 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/InformationElement
 :InformationElement rdf:type owl:Class ;
                     rdfs:comment "An information element identifies a portion of data to which a test pertains.  The information element in FFDQ can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a use case.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude)."@en ;
-                    rdfs:label "Information Element"@en .
+                    rdfs:label "Information Element"@en ;
+                    skos:prefLabel "Information Element"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Issue
@@ -499,11 +504,16 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/Mechanism
 :Mechanism rdf:type owl:Class ;
            rdfs:subClassOf :SolutionsConcept ;
-           rdfs:comment "The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation." .
+           rdfs:comment "The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation." ;
+           rdfs:label "Mechanism"@en ;
+           skos:prefLabel "Mechanism"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/NeedConcept
-:NeedConcept rdf:type owl:Class .
+:NeedConcept rdf:type owl:Class ;
+             rdfs:label "Need Concept"@en ;
+             skos:definition "Category of concepts forming the Needs layer of the fittness for use framework."@en ;
+             skos:prefLabel "Need Concept"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ProblemMethod
@@ -525,12 +535,16 @@ The assertion concept consists of a specification (the technical description of 
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ReportConcept
-:ReportConcept rdf:type owl:Class .
+:ReportConcept rdf:type owl:Class ;
+               skos:definition "Category of concepts forming the Report layer of the fittness for use framework."@en ;
+               skos:prefLabel "Report Concept"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResourceType
 :ResourceType rdf:type owl:Class ;
-              rdfs:comment "In FFDQ the concept of ResourceType has instances for SingleRecord or MultiRecord" .
+              rdfs:comment "In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord" ;
+              rdfs:label "Resource Type"@en ;
+              skos:prefLabel "Resource Type"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Result
@@ -548,7 +562,9 @@ A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_P
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept
-:SolutionsConcept rdf:type owl:Class .
+:SolutionsConcept rdf:type owl:Class ;
+                  skos:definition "Category of concepts forming the Solutions layer of the fittness for use framework."@en ;
+                  skos:prefLabel "Solutions Concept"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Specification
