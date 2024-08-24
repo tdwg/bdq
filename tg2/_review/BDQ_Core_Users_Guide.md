@@ -24,16 +24,16 @@ This users guide describes how consumers of data quality reports can interpret t
 
 See also the [Implementer's Guide](BDQ_Core_Implementers_guide.md) for those writing sofware to implement the tests.
 
-Each test is intended to examine just one specific aspect of data quality.   Tests are assembled into test suites (profiles) that assess the fittness for use of data for a specific use.
+Each test is intended to examine just one specific aspect of data quality.   Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
 
 ## Kinds of Tests and what they do
 
-A Validation examines specific elements in the data (that is, particular Darwn Core terms) and asks whether those data conform to a single specific criterion for quality.
+A Validation examines specific elements in the data (that is, particular Darwin Core terms) and asks whether those data conform to a single specific criterion for quality.
 
 An Amendment examines specific elements in the data and asks if it can propose changes to improve the quality of the data under a single specific criterion for quality.
 
-Issues are like Validations, but they can identify potential problems in the data that may or may not be problems for all users of the same data. For example, there is a Validation that identifies whether or not dwc:dataGeneralizations contains any value, if it does, then users need to examine the specific statements made and evaluate them and against their quality needs.  These are different from Validations which assert that the data are fit for use or not.  
+Issues are like Validations, but they can identify potential problems in the data that may or may not be problems for all users of the same data. For example, there is a Validation that identifies whether or not dwc:dataGeneralizations contains any value, if it does, then users need to examine the specific statements made and evaluate them against their quality needs.  These are different from Validations which assert that the data are fit for use or not.  
 
 Measures count things.
 
@@ -43,7 +43,7 @@ Results from each test are delivered in the form of a Response.status, Response.
 
 The Response.status tells you if the test was able to run. 
 
-The Response.result tell you the conclusion of the test if it was able to be run.
+The Response.result tells you the conclusion of the test if it was able to be run.
 
 The Response.comment is a brief explanation of why the test reached the conclusion it did, examine the Response comment first to understand why a test provided a particular response.
 
