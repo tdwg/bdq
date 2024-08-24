@@ -1,6 +1,6 @@
-# List of BDQ Core Tests and Assertions
+# Quick Reference Guide to BDQ Core Tests
 
-**Title**: List of BDQ Core Tests and Assertions
+**Title**: Quick Reference Guide to BDQ Core Tests
 
 **Date version issued**: {ratification_date}
 
