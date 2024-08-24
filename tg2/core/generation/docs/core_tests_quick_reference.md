@@ -357,13 +357,6 @@ COMPLIANT if dwc:basisOfRecord is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:basisOfRecord
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:NotEmpty"
@@ -374,10 +367,6 @@ dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -399,9 +388,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:basisOfRecord
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -443,13 +429,6 @@ COMPLIANT if dc:type is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dc:type
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdq:NotEmpty"
@@ -460,10 +439,6 @@ dc:type="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Respo
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -485,13 +460,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dc:type
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -529,13 +497,6 @@ COMPLIANT if dcterms:license is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dcterms:license
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"
@@ -571,9 +532,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dcterms:license
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -614,9 +572,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -660,13 +615,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or is not interpr
 Acted Upon: 
 dwc:decimalLatitude,dwc:decimalLongitude
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:decimalLatitude="21.0534", dwc:decimalLongitude="81.0554": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude and dwc:decimalLongitude are not zero"
@@ -702,9 +650,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:stateProvince,dwc:decimalLatitude,dwc:decimalLongitude
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -791,13 +736,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is EMPTY; CO
 Acted Upon: 
 dwc:coordinateUncertaintyInMeters
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:coordinateUncertaintyInMeters="1": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:coordinateUncertaintyInMeters is in range"
@@ -834,13 +772,6 @@ COMPLIANT if dwc:countryCode is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:countryCode
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdq:NotEmpty"
@@ -851,10 +782,6 @@ dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIAN
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -876,13 +803,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if bdq:sourceAuthority is not available; INTERNAL
 
 Acted Upon: 
 dwc:countryCode
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -919,9 +839,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:country,dwc:stateProvince
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -963,13 +880,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:country,dwc:countryCode
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:country="Australia", dwc:countryCode="AU": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country matches dwc:countryCode"
@@ -1005,9 +915,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:country
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -1049,13 +956,6 @@ COMPLIANT if dwc:country is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:country
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is not EMPTY"
@@ -1092,13 +992,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or the value is n
 Acted Upon: 
 dwc:decimalLatitude
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:decimalLatitude="0.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is in RANGE"
@@ -1109,10 +1002,6 @@ dwc:decimalLatitude="121.0534": Response.status=RUN_HAS_RESULT, Response.result=
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -1135,13 +1024,6 @@ COMPLIANT if dwc:decimalLatitude is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:decimalLatitude
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatiitude is bdq:NotEmpty"
@@ -1152,10 +1034,6 @@ dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -1178,13 +1056,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is EMPTY or the value is 
 Acted Upon: 
 dwc:decimalLongitude
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is in range"
@@ -1195,10 +1066,6 @@ dwc:decimalLongitude="181.0554": Response.status=RUN_HAS_RESULT, Response.result
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -1221,13 +1088,6 @@ COMPLIANT if dwc:decimalLongitude is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:decimalLongitude
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:NotEmpty"
@@ -1238,10 +1098,6 @@ dwc:decimalLongitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -1264,13 +1120,6 @@ COMPLIANT if dwc:geodeticDatum is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:geodeticDatum
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:geodeticDatum="UTM": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:NotEmpty"
@@ -1281,10 +1130,6 @@ dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -1306,13 +1151,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 
 Acted Upon: 
 dwc:geodeticDatum
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -1350,13 +1188,6 @@ COMPLIANT if at least one term needed to determine the location of the entity ex
 Acted Upon: 
 dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryCode,dwc:stateProvince,dwc:county,dwc:municipality,dwc:waterBody,dwc:island,dwc:islandGroup,dwc:locality,dwc:locationID,dwc:verbatimLocality,dwc:decimalLatitude,dwc:decimalLongitude,dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:footprintWKT
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",  dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Location bdq:NotEmpty as there is a value in dwc:locationID"
@@ -1392,9 +1223,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is EMPTY or is not in
 
 Acted Upon: 
 dwc:maximumDepthInMeters
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -1436,9 +1264,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is EMPTY or the v
 Acted Upon: 
 dwc:maximumElevationInMeters
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
@@ -1478,9 +1303,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is EMPTY, or the valu
 
 Acted Upon: 
 dwc:minimumDepthInMeters
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -1522,13 +1344,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthIn
 Acted Upon: 
 dwc:minimumDepthInMeters,dwc:maximumDepthInMeters
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:minimumDepthInMeters="0", dwc:maximumDepthInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:minimumDepthInMeters = dwc:maximumDepthInMeters"
@@ -1539,10 +1354,6 @@ dwc:minimumDepthInMeters="1", dwc:maximumDepthInMeters="0": Response.status=RUN_
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -1564,9 +1375,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is EMPTY or the v
 
 Acted Upon: 
 dwc:minimumElevationInMeters
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -1608,13 +1416,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElev
 Acted Upon: 
 dwc:minimumElevationInMeters,dwc:maximumElevationInMeters
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:minimumElevationInMeters="0", dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:minimumElevationInMeters is equal to dwc: maximumElevationInMeters"
@@ -1625,10 +1426,6 @@ dwc:minimumElevationInMeters="1", dwc:maximumElevationInMeters="0": Response.sta
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -1650,9 +1447,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:stateProvince
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -1694,13 +1488,6 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is EMPTY, or (2) dwc:day is not in
 Acted Upon: 
 dwc:day,dwc:month,dwc:year
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:day="15", dwc:month="", dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:day is in range"
@@ -1736,13 +1523,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of th
 
 Acted Upon: 
 dwc:day
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -1783,10 +1563,6 @@ dwc:endDayOfYear
 Consulted: 
 dwc:eventDate
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:eventDate="1949-01-15T12:34/1949-01-20T17:00", dwc:endDayOfYear="20": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:endDayOfYear is in range"
@@ -1822,9 +1598,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:
 
 Acted Upon: 
 dwc:eventDate
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -1866,13 +1639,6 @@ COMPLIANT if dwc:eventDate is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:eventDate
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:eventDate="1962-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventdate is bdq:NotEmpty"
@@ -1883,10 +1649,6 @@ dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -1908,13 +1670,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; COMPLIANT if the value
 
 Acted Upon: 
 dwc:eventDate
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -1952,13 +1707,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY, or all of dwc:year, dw
 Acted Upon: 
 dwc:eventDate,dwc:day,dwc:month,dwc:year,dwc:startDayOfYear,dwc:endDayOfYear
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-15T12:34", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:day, dwc:month and dwc:year match dwc:eventDate"
@@ -1994,13 +1742,6 @@ COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfY
 
 Acted Upon: 
 dwc:eventDate,dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear,dwc:verbatimEventDate
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -2038,13 +1779,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; COMPLIANT if the value of 
 Acted Upon: 
 dwc:month
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:month="10": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:month is in range"
@@ -2055,10 +1789,6 @@ dwc:month="v": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Re
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -2083,10 +1813,6 @@ dwc:startDayOfYear
 
 Consulted: 
 dwc:eventDate
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -2123,9 +1849,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:year is EMPTY or cannot be interpreted as 
 
 Acted Upon: 
 dwc:year
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2167,13 +1890,6 @@ COMPLIANT if dwc:year is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:year
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:year="1949": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:year is bdq:NotEmpty"
@@ -2184,10 +1900,6 @@ dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Resp
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -2253,13 +1965,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; COMPLIANT if the 
 Acted Upon: 
 dwc:dateIdentified
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:dateIdentified="1963-03-08T14:07": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:dateIdentified is a valid ISO 8601-1:2019 date"
@@ -2270,10 +1975,6 @@ dwc:dateIdentified="1963-03-08X14:07-0600": Response.status=RUN_HAS_RESULT, Resp
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -2295,9 +1996,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:degreeOfEstablishment
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2339,9 +2037,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:establishmentMeans
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -2382,13 +2077,6 @@ COMPLIANT if dwc:occurrenceID is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:occurrenceID
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:occurrenceID="https://www.inaturalist.org/observations/43047701": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceID conforms to GUID structure"
@@ -2399,10 +2087,6 @@ dwc:occurrenceID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIA
 ### Use Cases
 
 bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -2425,13 +2109,6 @@ COMPLIANT if dwc:occurrenceStatus is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:occurrenceStatus
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:occurrenceStatus="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"
@@ -2442,10 +2119,6 @@ dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -2467,9 +2140,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:occurrenceStatus
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2511,9 +2181,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:pathway
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -2553,9 +2220,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:sex
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2597,9 +2261,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:typeStatus
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -2639,9 +2300,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2683,9 +2341,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:class
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -2725,9 +2380,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:family
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2769,9 +2421,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INT
 Acted Upon: 
 dwc:genus
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -2811,9 +2460,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:kingdom
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2855,13 +2501,6 @@ COMPLIANT if dwc:kingdom is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:kingdom
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:kingdom="Fungi": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom is not EMPTY"
@@ -2872,10 +2511,6 @@ dwc:kingdom="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, R
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -2898,13 +2533,6 @@ COMPLIANT if dwc:namePublishedInYear is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:namePublishedInYear
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:namePublishedInYear="2024": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:namePublishedInYear is not EMPTY"
@@ -2915,10 +2543,6 @@ dwc:namePublishedInYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -2940,9 +2564,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:order
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -2984,9 +2605,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:phylum
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -3027,13 +2645,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY, or all of dwc:gen
 Acted Upon: 
 dwc:scientificName,dwc:genericName,dwc:specificEpithet,dwc:infraspecificEpithet
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:scientificName="Hakea decurrens ssp. physocarpa", dwc:genericName="", dwc:specificEpithet="decurrens", dwc:infraspecificEpithet="physocarpa": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Values of all non-empty atomic terms are found in the polynomial"
@@ -3070,13 +2681,6 @@ COMPLIANT if dwc:scientificNameAuthorship is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:scientificNameAuthorship
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:scientificNameAuthorship="(Györfi, 1952)": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdq:NotEmpty"
@@ -3087,10 +2691,6 @@ dwc:scientificNameAuthorship="": Response.status=RUN_HAS_RESULT, Response.result
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -3112,13 +2712,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is EMPTY; COMPLIANT if (1
 
 Acted Upon: 
 dwc:scientificNameID
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -3156,13 +2749,6 @@ COMPLIANT if dwc:scientificNameID is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:scientificNameID
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:scientificNameID="8fa58e08-08de-4ac1-b69c-1235340b7001": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameID is bdq:NotEmpty"
@@ -3173,10 +2759,6 @@ dwc:scientificNameID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -3198,9 +2780,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:scientificName
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -3242,13 +2821,6 @@ COMPLIANT if dwc:scientificName is NOT EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:scientificName
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdq:NotEmpty"
@@ -3259,10 +2831,6 @@ dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -3285,13 +2853,6 @@ COMPLIANT if dwc:taxonRank is not EMPTY; otherwise NOT_COMPLIANT
 Acted Upon: 
 dwc:taxonRank
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is not EMPTY"
@@ -3302,10 +2863,6 @@ dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -3327,9 +2884,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:taxonRank
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -3371,13 +2925,6 @@ COMPLIANT if at least one term needed to determine the taxon of the entity exist
 Acted Upon: 
 dwc:taxonID,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:parentNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:scientificName,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:infragenericEpithet,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:vernacularName,dwc:cultivarEpithet
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Eucalyptus gunnii", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="" : Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="at least enough terms exist that identify that an entity exists"
@@ -3413,9 +2960,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:taxonID,dwc:scientificName,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:infragenericEpithet,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:cultivarEpithet,dwc:vernacularName,dwc:scientificNameAuthorship,dwc:taxonRank
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -3453,16 +2997,8 @@ A count of the number of distinct AMENDMENT tests that have a Response.status="A
 The number of tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED") 
 
 ### Information Elements
-
-Acted Upon: 
-nan
-
 Consulted: 
 bdq:AllAmendmentTestsRunOnSingleRecord"
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -3472,10 +3008,6 @@ Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 tests
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -3494,16 +3026,8 @@ Measures the number of distinct VALIDATION tests that have a Response.status="CO
 INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; Report the number of tests of output type VALIDATION run against the record that were COMPLIANT (passed) 
 
 ### Information Elements
-
-Acted Upon: 
-nan
-
 Consulted: 
 bdq:AllValidationTestsRunOnSingleRecord
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -3535,16 +3059,8 @@ A count of the number of distinct VALIDATION tests that have a Response.status="
 INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; REPORT of the number of tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT" 
 
 ### Information Elements
-
-Acted Upon: 
-nan
-
 Consulted: 
 bdq:AllValidationTestsRunOnSingleRecord
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -3576,16 +3092,8 @@ The number of distinct VALIDATION tests that have a Response.status="EXTERNAL_PR
 INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET") 
 
 ### Information Elements
-
-Acted Upon: 
-nan
-
 Consulted: 
 bdq:AllValidationTestsRunOnSingleRecord
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -3620,13 +3128,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:
 
 Acted Upon: 
 dwc:eventDate
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -3664,13 +3165,6 @@ POTENTIAL_ISSUE if dwc:dataGeneralizations is not EMPTY; otherwise NOT_ISSUE
 Acted Upon: 
 dwc:dataGeneralizations
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:dataGeneralizations="placed on quarter degree grid": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:dataGeneralizations is not EMPTY"
@@ -3706,9 +3200,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -3750,13 +3241,6 @@ POTENTIAL_ISSUE if dwc:establishmentMeans is NOT EMPTY; otherwise NOT_ISSUE
 Acted Upon: 
 dwc:establishmentMeans
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:establishmentMeans="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:establishmentMeans is bdq:NotEmpty"
@@ -3767,10 +3251,6 @@ dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_I
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -3789,10 +3269,6 @@ Are there any annotations associated with the record?
 EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE. bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" {[https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under test." {[https://www.w3.org/TR/annotation-vocab/]}
 
 ### Information Elements
-
-Acted Upon: 
-nan
-
 Consulted: 
 AllDarwinCoreTerms
 
@@ -3836,9 +3312,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:basisOfRecord
 
-Consulted: 
-nan
-
 ### Parameters
 
 dwc:basisOfRecord vocabulary
@@ -3879,13 +3352,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dc:type
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dc:type="event": Response.status=AMENDED, Response.result=dc:type="Event", Response.comment="dc:type contains an interpretable value"
@@ -3921,9 +3387,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMEN
 
 Acted Upon: 
 dcterms:license
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -3968,10 +3431,6 @@ dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum
 Consulted: 
 dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:verbatimCoordinateSystem,dwc:verbatimSRS
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",  dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"
@@ -4011,10 +3470,6 @@ dwc:decimalLatitude,dwc:decimalLongitude
 Consulted: 
 dwc:countryCode
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AU": Response.status=AMENDED, Response.result=dwc:decimalLatitude="-25.46", dwc:decimalLongitude="135.87", Response.comment="dwc:decimalLatitude sign reversed to fit dwc:countryCode=AU"
@@ -4050,9 +3505,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -4094,13 +3546,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:countryCode
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:countryCode="Australia": Response.status=AMENDED, Response.result=dwc:countryCode="AU", Response.comment="dwc:countryCode contains an interpretable value"
@@ -4111,10 +3556,6 @@ dwc:countryCode="Aust.": Response.status=NOT_AMENDED, Response.result=, Response
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
-
-### Notes
-
-nan
 
 ********************
 
@@ -4136,9 +3577,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is not EMPTY; FILLED_IN dwc:
 
 Acted Upon: 
 dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters,dwc:decimalLatitude,dwc:decimalLongitude
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -4180,13 +3618,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority was not available; INT
 Acted Upon: 
 dwc:geodeticDatum
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:geodeticDatum="WGS84": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", Response.comment="dwc:geodeticDatum contains a valid code in the bdq:sourceAuthority"
@@ -4225,10 +3656,6 @@ dwc:minimumDepthInMeters,dwc:maximumDepthInMeters
 
 Consulted: 
 dwc:verbatimDepth
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -4269,10 +3696,6 @@ dwc:minimumElevationInMeters,dwc:maximumElevationInMeters
 Consulted: 
 dwc:verbatimElevation
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:verbatimElevation="100 feet", dwc:minimumElevationInMeters="", dwc:maximumElevationInMeters="": Response.status=FILLED_IN, Response.result=dwc:minimumElevationInMeters="30.48", dwc:maximumElevationInMeters="30.48", Response.comment="dwc:verbatimElevation contains an interpretable value"
@@ -4308,13 +3731,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; AMENDED the value of dwc:day
 
 Acted Upon: 
 dwc:day
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -4355,10 +3771,6 @@ dwc:eventDate
 Consulted: 
 dwc:verbatimEventDate
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:eventDate="", dwc:verbatimEventDate="Friday 29th Oct. 2021": Response.status=FILLED_IN, Response.result=dwc:eventDate="2021-10-29", Response.comment="dwc:verbatimEventDate contains an interpretable value (assuming some external lookup thesauri)"
@@ -4397,10 +3809,6 @@ dwc:eventDate
 
 Consulted: 
 dwc:year,dwc:month,dwc:day
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -4441,10 +3849,6 @@ dwc:eventDate
 Consulted: 
 dwc:year,dwc:startDayOfYear,dwc:endDayOfYear
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:year="1901", dwc:startDayOfYear="15", dwc:endDayOfYear="25", dwc:eventDate="": Response.status=FILLED_IN, Response.result=dwc:eventDate="1901-01-15/1901-01-25", Response.comment="dwc:eventDate was interpreted from dwc:year, dwc:startDayOfYear and dwc:endDayOfYear"
@@ -4480,13 +3884,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; AMENDED if the value o
 
 Acted Upon: 
 dwc:eventDate
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -4527,10 +3924,6 @@ dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear
 Consulted: 
 dwc:eventDate
 
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:eventDate="2023-01-26",  dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result= dwc:startDayOfYear="26", dwc:month="1", dwc:day="26",dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate"
@@ -4566,13 +3959,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; AMENDED the value of dwc:m
 
 Acted Upon: 
 dwc:month
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Examples
 
@@ -4610,13 +3996,6 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; AMENDED if the va
 Acted Upon: 
 dwc:dateIdentified
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Examples
 
 dwc:dateIdentified="2021-28-10": Response.status=AMENDED, Response.result=dwc:dateIdentified="2021-10-28", Response.comment="dwc:dateIdentified assuming dwc:year, dwc:day and dwc:month"
@@ -4652,9 +4031,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:degreeOfEstablishment
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -4696,9 +4072,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:establishmentMeans
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -4713,10 +4086,6 @@ dwc:establishmentMeans="species": Response.status=NOT_AMENDED, Response.result="
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
-
-### Notes
-
-nan
 
 ********************
 
@@ -4757,10 +4126,6 @@ dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Res
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-### Notes
-
-nan
-
 ********************
 
 ##  Amendment dwc:occurrenceStatus Standardized
@@ -4781,9 +4146,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:occurrenceStatus
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -4825,9 +4187,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:pathway
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -4868,9 +4227,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:sex
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -4910,9 +4266,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 Acted Upon: 
 dwc:typeStatus
-
-Consulted: 
-nan
 
 ### Parameters
 
@@ -5040,9 +4393,6 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:taxonRank
 
-Consulted: 
-nan
-
 ### Parameters
 
 bdq:sourceAuthority
@@ -5086,13 +4436,6 @@ Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that ha
 Acted Upon: 
 bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -5121,13 +4464,6 @@ Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that ha
 
 Acted Upon: 
 bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5158,13 +4494,6 @@ Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Resp
 Acted Upon: 
 bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -5193,13 +4522,6 @@ Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Resp
 
 Acted Upon: 
 bdq:VALIDATION_DCTYPE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5230,13 +4552,6 @@ Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Res
 Acted Upon: 
 bdq:VALIDATION_LICENSE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management
@@ -5265,13 +4580,6 @@ Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Res
 
 Acted Upon: 
 bdq:VALIDATION_LICENSE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5302,13 +4610,6 @@ COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Respo
 Acted Upon: 
 bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -5337,13 +4638,6 @@ COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Respo
 
 Acted Upon: 
 bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5374,13 +4668,6 @@ COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.res
 Acted Upon: 
 bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -5409,13 +4696,6 @@ COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.res
 
 Acted Upon: 
 bdq:VALIDATION_DCTYPE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5446,13 +4726,6 @@ COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.re
 Acted Upon: 
 bdq:VALIDATION_LICENSE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management
@@ -5481,13 +4754,6 @@ COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.re
 
 Acted Upon: 
 bdq:VALIDATION_LICENSE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5518,13 +4784,6 @@ Count the number of VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in the MultiRe
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns
@@ -5553,13 +4812,6 @@ Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have 
 
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_NOTZERO.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5590,13 +4842,6 @@ Count the number of VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in the Multi
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -5625,13 +4870,6 @@ Count the number of VALIDATION_COORDINATES_TERRESTRIALMARINE in the MultiRecord 
 
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_TERRESTRIALMARINE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5662,13 +4900,6 @@ Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord 
 Acted Upon: 
 bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -5697,13 +4928,6 @@ Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have
 
 Acted Upon: 
 bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5734,13 +4958,6 @@ Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have
 Acted Upon: 
 bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -5769,13 +4986,6 @@ Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiReco
 
 Acted Upon: 
 bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5806,13 +5016,6 @@ Count the number of VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in the MultiRecord
 Acted Upon: 
 bdq:VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -5841,13 +5044,6 @@ Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Respon
 
 Acted Upon: 
 bdq:VALIDATION_COUNTRY_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5878,13 +5074,6 @@ Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Res
 Acted Upon: 
 bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -5913,13 +5102,6 @@ Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that h
 
 Acted Upon: 
 bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -5950,13 +5132,6 @@ Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that 
 Acted Upon: 
 bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -5985,13 +5160,6 @@ Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that 
 
 Acted Upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6022,13 +5190,6 @@ Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that
 Acted Upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -6057,13 +5218,6 @@ Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that ha
 
 Acted Upon: 
 bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6094,13 +5248,6 @@ Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that ha
 Acted Upon: 
 bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6129,13 +5276,6 @@ Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Re
 
 Acted Upon: 
 bdq:VALIDATION_LOCATION_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6166,13 +5306,6 @@ Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Res
 Acted Upon: 
 bdq:VALIDATION_MAXDEPTH_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6201,13 +5334,6 @@ Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have
 
 Acted Upon: 
 bdq:VALIDATION_MAXELEVATION_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6238,13 +5364,6 @@ Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Res
 Acted Upon: 
 bdq:VALIDATION_MINDEPTH_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6273,13 +5392,6 @@ Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord tha
 
 Acted Upon: 
 bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6310,13 +5422,6 @@ Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have
 Acted Upon: 
 bdq:VALIDATION_MINELEVATION_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6345,13 +5450,6 @@ Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRe
 
 Acted Upon: 
 bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6382,13 +5480,6 @@ Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have 
 Acted Upon: 
 bdq:VALIDATION_STATEPROVINCE_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6417,13 +5508,6 @@ COMPLETE if every VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT in the MultiReco
 
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6454,13 +5538,6 @@ COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_NOTZERO.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns
@@ -6489,13 +5566,6 @@ COMPLETE if every VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT in the MultiRe
 
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6526,13 +5596,6 @@ COMPLETE if every VALIDATION_COORDINATES_TERRESTRIALMARINE in the MultiRecord ha
 Acted Upon: 
 bdq:VALIDATION_COORDINATES_TERRESTRIALMARINE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6561,13 +5624,6 @@ COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord ha
 
 Acted Upon: 
 bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6598,13 +5654,6 @@ COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Respons
 Acted Upon: 
 bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6633,13 +5682,6 @@ COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Respons
 
 Acted Upon: 
 bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6670,13 +5712,6 @@ COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord
 Acted Upon: 
 bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6705,13 +5740,6 @@ COMPLETE if every VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT in the MultiRecord h
 
 Acted Upon: 
 bdq:VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6742,13 +5770,6 @@ COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.resul
 Acted Upon: 
 bdq:VALIDATION_COUNTRY_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6777,13 +5798,6 @@ COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.re
 
 Acted Upon: 
 bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6814,13 +5828,6 @@ COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Resp
 Acted Upon: 
 bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -6849,13 +5856,6 @@ COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Res
 
 Acted Upon: 
 bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6886,13 +5886,6 @@ COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Res
 Acted Upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -6921,13 +5914,6 @@ COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Re
 
 Acted Upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -6958,13 +5944,6 @@ COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Respo
 Acted Upon: 
 bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -6993,13 +5972,6 @@ COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Respo
 
 Acted Upon: 
 bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7030,13 +6002,6 @@ COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.r
 Acted Upon: 
 bdq:VALIDATION_LOCATION_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7065,13 +6030,6 @@ COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.re
 
 Acted Upon: 
 bdq:VALIDATION_MAXDEPTH_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7102,13 +6060,6 @@ COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Respons
 Acted Upon: 
 bdq:VALIDATION_MAXELEVATION_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7137,13 +6088,6 @@ COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.re
 
 Acted Upon: 
 bdq:VALIDATION_MINDEPTH_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7174,13 +6118,6 @@ COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has R
 Acted Upon: 
 bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7209,13 +6146,6 @@ COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Respons
 
 Acted Upon: 
 bdq:VALIDATION_MINELEVATION_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7246,13 +6176,6 @@ COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiReco
 Acted Upon: 
 bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7281,13 +6204,6 @@ COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response
 
 Acted Upon: 
 bdq:VALIDATION_STATEPROVINCE_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7318,13 +6234,6 @@ Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response
 Acted Upon: 
 bdq:VALIDATION_DAY_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7353,13 +6262,6 @@ Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Respons
 
 Acted Upon: 
 bdq:VALIDATION_DAY_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7390,13 +6292,6 @@ Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have
 Acted Upon: 
 bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7425,13 +6320,6 @@ Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Re
 
 Acted Upon: 
 bdq:VALIDATION_EVENTDATE_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7462,13 +6350,6 @@ Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have R
 Acted Upon: 
 bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -7497,13 +6378,6 @@ Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have R
 
 Acted Upon: 
 bdq:VALIDATION_EVENTDATE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7534,13 +6408,6 @@ Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Res
 Acted Upon: 
 bdq:VALIDATION_EVENT_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
@@ -7569,13 +6436,6 @@ Count the number of VALIDATION_EVENT_TEMPORAL_NOTEMPTY in the MultiRecord that h
 
 Acted Upon: 
 bdq:VALIDATION_EVENT_TEMPORAL_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7606,13 +6466,6 @@ Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Respo
 Acted Upon: 
 bdq:VALIDATION_MONTH_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7641,13 +6494,6 @@ Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that ha
 
 Acted Upon: 
 bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7678,13 +6524,6 @@ Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Respons
 Acted Upon: 
 bdq:VALIDATION_YEAR_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7713,13 +6552,6 @@ Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Respon
 
 Acted Upon: 
 bdq:VALIDATION_YEAR_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7750,13 +6582,6 @@ COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=
 Acted Upon: 
 bdq:VALIDATION_DAY_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7785,13 +6610,6 @@ COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result
 
 Acted Upon: 
 bdq:VALIDATION_DAY_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7822,13 +6640,6 @@ COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Respons
 Acted Upon: 
 bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -7857,13 +6668,6 @@ COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.r
 
 Acted Upon: 
 bdq:VALIDATION_EVENTDATE_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7894,13 +6698,6 @@ COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.
 Acted Upon: 
 bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -7929,13 +6726,6 @@ COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.
 
 Acted Upon: 
 bdq:VALIDATION_EVENTDATE_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -7966,13 +6756,6 @@ COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.re
 Acted Upon: 
 bdq:VALIDATION_EVENT_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
@@ -8001,13 +6784,6 @@ COMPLETE if every VALIDATION_EVENT_TEMPORAL_NOTEMPTY in the MultiRecord has Resp
 
 Acted Upon: 
 bdq:VALIDATION_EVENT_TEMPORAL_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8038,13 +6814,6 @@ COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.resu
 Acted Upon: 
 bdq:VALIDATION_MONTH_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -8073,13 +6842,6 @@ COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Respo
 
 Acted Upon: 
 bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8110,13 +6872,6 @@ COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result
 Acted Upon: 
 bdq:VALIDATION_YEAR_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
@@ -8145,13 +6900,6 @@ COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.resul
 
 Acted Upon: 
 bdq:VALIDATION_YEAR_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8182,13 +6930,6 @@ Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that ha
 Acted Upon: 
 bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
@@ -8217,13 +6958,6 @@ Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that h
 
 Acted Upon: 
 bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8254,13 +6988,6 @@ COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Respo
 Acted Upon: 
 bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
@@ -8289,13 +7016,6 @@ COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Resp
 
 Acted Upon: 
 bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8326,13 +7046,6 @@ Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord
 Acted Upon: 
 bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species
@@ -8361,13 +7074,6 @@ Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord th
 
 Acted Upon: 
 bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8398,13 +7104,6 @@ Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that hav
 Acted Upon: 
 bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management
@@ -8433,13 +7132,6 @@ Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that
 
 Acted Upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8470,13 +7162,6 @@ Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that
 Acted Upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -8505,13 +7190,6 @@ Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Res
 
 Acted Upon: 
 bdq:VALIDATION_PATHWAY_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8542,13 +7220,6 @@ Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Respons
 Acted Upon: 
 bdq:VALIDATION_SEX_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
@@ -8577,13 +7248,6 @@ Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have 
 
 Acted Upon: 
 bdq:VALIDATION_TYPESTATUS_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8614,13 +7278,6 @@ COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord h
 Acted Upon: 
 bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species
@@ -8649,13 +7306,6 @@ COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has 
 
 Acted Upon: 
 bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8686,13 +7336,6 @@ COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Respon
 Acted Upon: 
 bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management
@@ -8721,13 +7364,6 @@ COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Re
 
 Acted Upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8758,13 +7394,6 @@ COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Re
 Acted Upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -8793,13 +7422,6 @@ COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.re
 
 Acted Upon: 
 bdq:VALIDATION_PATHWAY_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8830,13 +7452,6 @@ COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result
 Acted Upon: 
 bdq:VALIDATION_SEX_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
@@ -8865,13 +7480,6 @@ COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response
 
 Acted Upon: 
 bdq:VALIDATION_TYPESTATUS_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8902,13 +7510,6 @@ Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that
 Acted Upon: 
 bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
@@ -8937,13 +7538,6 @@ Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response
 
 Acted Upon: 
 bdq:VALIDATION_CLASS_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -8974,13 +7568,6 @@ Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Respons
 Acted Upon: 
 bdq:VALIDATION_FAMILY_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9009,13 +7596,6 @@ Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response
 
 Acted Upon: 
 bdq:VALIDATION_GENUS_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9046,13 +7626,6 @@ Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Respon
 Acted Upon: 
 bdq:VALIDATION_KINGDOM_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9081,13 +7654,6 @@ Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Res
 
 Acted Upon: 
 bdq:VALIDATION_KINGDOM_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9118,13 +7684,6 @@ Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord t
 Acted Upon: 
 bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9153,13 +7712,6 @@ Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response
 
 Acted Upon: 
 bdq:VALIDATION_ORDER_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9190,13 +7742,6 @@ Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Respons
 Acted Upon: 
 bdq:VALIDATION_PHYLUM_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9225,13 +7770,6 @@ Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that hav
 
 Acted Upon: 
 bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9262,13 +7800,6 @@ Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRec
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
@@ -9297,13 +7828,6 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that
 
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9334,13 +7858,6 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
@@ -9369,13 +7886,6 @@ Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have
 
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9406,13 +7916,6 @@ Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that h
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -9441,13 +7944,6 @@ Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have R
 
 Acted Upon: 
 bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9478,13 +7974,6 @@ Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have R
 Acted Upon: 
 bdq:VALIDATION_TAXONRANK_STANDARD.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9513,13 +8002,6 @@ Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Respo
 
 Acted Upon: 
 bdq:VALIDATION_TAXON_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9550,13 +8032,6 @@ Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Re
 Acted Upon: 
 bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -9585,13 +8060,6 @@ COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Re
 
 Acted Upon: 
 bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9622,13 +8090,6 @@ COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=
 Acted Upon: 
 bdq:VALIDATION_CLASS_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
@@ -9657,13 +8118,6 @@ COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result
 
 Acted Upon: 
 bdq:VALIDATION_FAMILY_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9694,13 +8148,6 @@ COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=
 Acted Upon: 
 bdq:VALIDATION_GENUS_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
@@ -9729,13 +8176,6 @@ COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.resul
 
 Acted Upon: 
 bdq:VALIDATION_KINGDOM_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9766,13 +8206,6 @@ COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.re
 Acted Upon: 
 bdq:VALIDATION_KINGDOM_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9801,13 +8234,6 @@ COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has
 
 Acted Upon: 
 bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9838,13 +8264,6 @@ COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=
 Acted Upon: 
 bdq:VALIDATION_ORDER_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9873,13 +8292,6 @@ COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result
 
 Acted Upon: 
 bdq:VALIDATION_PHYLUM_FOUND.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9910,13 +8322,6 @@ COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Respon
 Acted Upon: 
 bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -9945,13 +8350,6 @@ COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecor
 
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -9982,13 +8380,6 @@ COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Re
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
@@ -10017,13 +8408,6 @@ COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Re
 
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -10054,13 +8438,6 @@ COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Respons
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -10089,13 +8466,6 @@ COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Resp
 
 Acted Upon: 
 bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -10126,13 +8496,6 @@ COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.
 Acted Upon: 
 bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Record-Management, bdq:Taxon-Management
@@ -10161,13 +8524,6 @@ COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.
 
 Acted Upon: 
 bdq:VALIDATION_TAXONRANK_STANDARD.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
@@ -10198,13 +8554,6 @@ COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.resu
 Acted Upon: 
 bdq:VALIDATION_TAXON_NOTEMPTY.Response
 
-Consulted: 
-nan
-
-### Parameters
-
-nan
-
 ### Use Cases
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
@@ -10233,13 +8582,6 @@ COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.r
 
 Acted Upon: 
 bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
-
-Consulted: 
-nan
-
-### Parameters
-
-nan
 
 ### Use Cases
 
