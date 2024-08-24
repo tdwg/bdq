@@ -49,9 +49,9 @@ The framework organizes data quality concepts into three areas: Needs, Mechanism
 
 * Horizontal: Needs, Reports, Vertical: Test informal, describes both need and reporting.
 
-The framework defines four descriptors of data quality needs: Amendments, Measures, Validations, and Issues.  
+The framework defines four central descriptors of data quality needs: Amendments, Measures, Validations, and Issues.  
 
-![Diagram of Validation, Amendment, Measure and Issue classes as subtype of Assertion class, with Assertion as a rectangular node, and the other 4 classes below it and linked to it. ](assertions.png "The 4 central assertion types in the framework.")
+![Diagram of Validation, Amendment, Measure and Issue classes as subtype of Assertion class, with Assertion as a rectangular node, DataQualityNeeds as a parent node above it, and the other 4 classes below the Assertion and linked to it. ](dataqualityneeds.png "The 4 central assertion types in the framework.")
 
 Amendments propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
 
@@ -70,6 +70,9 @@ Data quality needs can relate to the data quality of single records (bdqffdq:Sin
 
 ![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource Class.")
 
+Vertical paralell classes
+
+![Diagram of ValidationAssertion, AmendmentAssertion, MeasureAssertion and IssueAssertion classes as subtype of Assertion class, with Assertion as a rectangular node, ReportConcepts as its parent above it, and the other 4 classes below the Assertion and linked to it. ](assertions.png "Report concept paralels to the 4 central assertion types in the framework.")
 
 ### 1.1 Status of the content of this document
 In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. 
