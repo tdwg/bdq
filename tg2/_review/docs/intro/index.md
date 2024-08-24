@@ -1,5 +1,3 @@
-**NOTE** This is a placeholder for the BDQ Core Introduction document
-
 # Title: Biodiversity Data Quality (BDQ) Core Introduction
 
 **Date version issued**: (Draft)

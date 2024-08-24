@@ -1,4 +1,4 @@
-**NOTE** This is a placeholder for the BDQ Core Maintenance document
+**NOTE** This is a placeholder for the BDQ Core Maintenance document, which has it's source in tg2/core/generation/Maintainance.md.
 
 # Preliminary suggested guidance for maintainers
 

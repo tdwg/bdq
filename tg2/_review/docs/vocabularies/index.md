@@ -1,5 +1,3 @@
-**NOTE** This is a placeholder for the BDQ Core Vocabularies landing page
-
 ---
 layout: home
 ---

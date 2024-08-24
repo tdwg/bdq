@@ -1,5 +1,3 @@
-**NOTE** This is a placeholder for the landing page for the BDQ Core Standard.
-
 ---
 layout: home
 ---

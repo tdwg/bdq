@@ -1,5 +1,3 @@
-**NOTE** This is a placeholder for the BDQ Core Implementer's Guide
-
 # BDQ Core Implementer's Guide
 
 **Date version issued**  (Draft)
