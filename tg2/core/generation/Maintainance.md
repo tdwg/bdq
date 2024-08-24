@@ -2,6 +2,9 @@
 
 Notes on some preliminary guidance for maintainers if the BDQ-Core standard is ratified.
 
+## RFC 2119 keywords
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
+
 # Proposals for New Issues 
 
 Templates for proposals of new issues are available
@@ -33,3 +36,25 @@ Confirm that the Proposed test is linked to at least one use case.
 Once at least one implementation exists that passes all validation tests (produces exactly the expected Response.status, exactly the expected Response.result, and some Response.comment for each validation case/row), the Proposed test can be evaluated for inclusion in the standard.  
 
 At acceptance, tag the issue as CORE, remove the Proposed tab, export the markdown table into the normative term versions csv, generate derivatives as needed, and close the issue.
+
+## Additions to Test Validation Data
+
+The Test Validation Data provides a minimal suite of Darwin Core records to test the pathways through each Test Specification. The addition of edge cases to the existing Test Validation Data is RECOMMENDED. The addition of Validation Test Data for new Tests is REQUIRED.
+
+The Test Validation Data uses CSV format. There are two versions of the Validation Test Data. The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transfomred version is simpler to use by the Test Validation process.
+
+It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. This compressed version of the file contains columns of information for each record (e.g., link to test, Label, Dimension) that SHOULD be helpful in understanding the context of the focus columns of Input.data, Output.data, Response.status and Response.result. The Response.comment MUST describe the reason for the Response.status. 
+
+@paul [Normal and special character file handling].
+
+### Edits to Current Test Validation Data
+
+Amend the data record as required and updating the Date Last Updated is REQUIRED
+
+### Additions to Test Validation Data
+
+Additions to the Test Validation Data are best done by copying and pasting an existing record and editing the content of the new record. Within the (compressed) Test Validation, note that the DataID is unique, so additions MUST NOT re-use an existing DataID value. 
+
+Values in the column **LineForTest** are useful in determining the number of Test Validation records for each Test, but also flag an additional function. A LineForTest value of "88" flags an Input.data value of "[null]" while a value of "99" flags an Input.data value of "[non-printing characters]". Both of these record types are used to separate records of 'normally' expected values from records that require special handing within the testing framework. 
+
+### Processing Test Validation Data
