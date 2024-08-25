@@ -111,15 +111,28 @@ The [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_revie
 
 [!--- JRW first pass finished to here ---]
 
+
 ### 2.3 Implementation Validation Data
 
 ### 2.4 Exemplar Tests Implementation
 
-### 2.5 Test Lists
+### 2.6 Test Lists
 
-### 2.6 Glossary
+### 2.5 Test Execution Environments and Workflows
 
-### 2.7 Bibliography
+Neither the test descriptions nor the framework impose constraints on workflows for execution.  One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
+
+A single validation step, with measures evaluating the results of the amendments could look like the diagram below.
+
+![Diagram of workflow through single validation step](workflow_single_iteration.svg)
+
+Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted.
+
+![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
+
+### 2.7 Glossary
+
+### 2.8 Bibliography
 
 ## 3. Acknowledgements
 Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
