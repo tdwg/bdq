@@ -101,16 +101,19 @@ In this standard, we have taken an expedient approach in relation to making AMEN
 
 The validation data are intended as input into a testing system that can implementations of validation tests independently, presenting them with a validation case for input, and assessing whether the test Response conforms to the expected values in the validation data.  It could be processed as input for unit tests.   It could be used as the basis for presenting synthetic records to a larger test execution system, but is designed to be used at a level where individual tests are being assessed.  This may fit into integration tests of a larger system.  The structure of the validation data attempts to be at a level of abstraction somewhat above the method signature specificity needed in unit tests, but still at a level that is examining individual test implementations, below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
 
-The following column header for the data are used for the validation data files.
+<!--- Start: PJM Added the terms from "bdqValidationData" glossary terms 2024 Aug 24 --->
 
-<!-- vocabulary terms that apply only to the validation data files wth their current definitions --->
+The following column header for the data are used for the validation data files.
 
 | header | definition |
 | ------ | ---------- |
-| dataID | The local (to bdq:ValidationData) integer indentifier for the Validation Data record | 
-| LineForTest | A local to bdq:ValidationData identifier for test records within one test | 
-| LineNumber | The sequence number of the data record in the bdq:ValidationData |
+| dataID | A local to the validation data unique integer to indentify each Validation Data record | 
+| LineForTest | A local to bdq:ValidationData identifier for test records within one test. An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular test. | 
+| LineNumber | The sequence number of the data record in the bdq:ValidationData. An integer for maintaining the sort order of the file. |
 
+<!--- End: PJM Added the terms from "bdqValidationData" glossary terms 2024 Aug 24 --->
+
+<!--- TODO: consistent format with list below, which describes each header and is what is needed here --->
 
 * Line Number: An integer for maintaining the sort order of the file.
 * dataID: A unique identifier (within the validation data) of the validation data record, e.g., "123"
