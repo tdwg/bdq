@@ -5,7 +5,11 @@
 
 # bdqffdq files for the framework
 
+# bdqdim vocabulary
+
+cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_terms.csv
+
 # bdqcore files containing test descriptions
 
-cp ../core/TG2_tests.csv ../_review/vocabulary/bdq_terms.csv
-cp ../core/TG2_tests.xml ../_review/vocabulary/bdq_terms.xml
+cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_terms.csv
+cp ../core/TG2_tests.xml ../_review/vocabulary/bdqcore_terms.xml
