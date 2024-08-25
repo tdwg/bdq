@@ -13,3 +13,8 @@ cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_terms.csv
 
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_terms.csv
 cp ../core/TG2_tests.xml ../_review/vocabulary/bdqcore_terms.xml
+
+# CSV files of test validation data
+
+cp ../core/TG2_test_validation_data.csv  ../_review/docs/implementers/TG2_test_validation_data.csv 
+cp ../core/TG2_test_validation_data_nonprintingchars.csv ../_review/docs/implementers/TG2_test_validation_data_nonprintingchars.csv
