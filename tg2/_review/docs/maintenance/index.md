@@ -9,7 +9,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 # Proposals for New Issues 
 
-Templates for proposals of new issues are available
+Templates for proposals of new and change issues are available at https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE
 
 ## Suggested Lifecycle for a proposal,
 
