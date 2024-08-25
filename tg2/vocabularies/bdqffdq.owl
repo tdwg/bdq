@@ -323,6 +323,11 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms#AuthoritiesDefaults
+:AuthoritiesDefaults rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/ExpectedResponse
 :ExpectedResponse rdf:type owl:DatatypeProperty ;
                   rdfs:comment "The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification"@en .
@@ -341,6 +346,12 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms#Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:label "Parameter"@en ;
+           skos:prefLabel "Parameter"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/ActedUpon
 :ActedUpon rdf:type owl:Class ;
            rdfs:subClassOf :InformationElement ;
@@ -351,7 +362,9 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/Amendmenent
 :Amendmenent rdf:type owl:Class ;
              rdfs:subClassOf :DataQualityNeed ;
-             rdfs:comment "Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example, \"Recommends valid value for taxon name in a single record\".  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level."@en .
+             rdfs:comment "Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example, \"Recommends valid value for taxon name in a single record\".  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level."@en ;
+             rdfs:label "Amendment"@en ;
+             skos:prefLabel "Amendment"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion
@@ -369,7 +382,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
 :AmendmentPolicy rdf:type owl:Class ;
                  rdfs:subClassOf :NeedConcept ;
-                 rdfs:comment "The AmendmentPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedEnhancement relates to a use case. This relationship defines which Amendments are supported by a given use case." .
+                 rdfs:comment "A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case." ;
+                 rdfs:label "Amendment Policy"@en ;
+                 skos:definition "The set of Contextualized Enhancements that support a Use Case."@en ;
+                 skos:prefLabel "Amendment Policy"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Assertion
@@ -390,25 +406,32 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion
 :ContextualizedCriterion rdf:type owl:Class ;
                          rdfs:subClassOf :NeedConcept ;
-                         rdfs:comment "Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+                         rdfs:comment "Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
+                         skos:prefLabel "Contextualized Criterion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension
 :ContextualizedDimension rdf:type owl:Class ;
                          rdfs:subClassOf :NeedConcept ;
-                         rdfs:comment "Describes an instance of the dimension concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+                         rdfs:comment "Describes an instance of the dimension concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
+                         rdfs:label "Contextualized Dimension"@en ;
+                         skos:prefLabel "Contextualized Dimension"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement
 :ContextualizedEnhancement rdf:type owl:Class ;
                            rdfs:subClassOf :NeedConcept ;
-                           rdfs:comment "Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+                           rdfs:comment "Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
+                           rdfs:label "Contextualized Enhancement"@en ;
+                           skos:prefLabel "Contextualized Enhancement"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue
 :ContextualizedIssue rdf:type owl:Class ;
                      rdfs:subClassOf :NeedConcept ;
-                     rdfs:comment "Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." .
+                     rdfs:comment "Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
+                     rdfs:label "Contextualized Issue"@en ;
+                     skos:prefLabel "Contextualized Issue"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension
@@ -428,7 +451,9 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
 :DataQualityNeed rdf:type owl:Class ;
-                 rdfs:subClassOf :NeedConcept .
+                 rdfs:subClassOf :NeedConcept ;
+                 rdfs:label "Data Quality Need"@en ;
+                 skos:prefLabel "Data Quality Need"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityReport
@@ -455,7 +480,9 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget
 :ImprovementTarget rdf:type owl:Class ;
                    rdfs:subClassOf :NeedConcept ;
-                   rdfs:comment "The ImprovementTarget concept in FFDQ describes which measures and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures)." .
+                   rdfs:comment "The ImprovementTarget concept in FFDQ describes which measures and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures)." ;
+                   rdfs:label "Improvement Target"@en ;
+                   skos:prefLabel "Improvement Target"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/InformationElement
@@ -468,7 +495,9 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/Issue
 :Issue rdf:type owl:Class ;
        rdfs:subClassOf :DataQualityNeed ;
-       rdfs:comment "Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximantes an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POSSIBLE_PROBLEM that would need further review to determine if the data have qulity for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either HAS_PROBLEM or POSSIBLE_PROBLEM, if no issue is found with the data the result will be NO_PROBLEM.  NO_PROBLEM, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that paralells a IssueMethod at the solutions level, and a IssieAssertion at the report level."@en .
+       rdfs:comment "Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximantes an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POSSIBLE_PROBLEM that would need further review to determine if the data have qulity for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either HAS_PROBLEM or POSSIBLE_PROBLEM, if no issue is found with the data the result will be NO_PROBLEM.  NO_PROBLEM, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that paralells a IssueMethod at the solutions level, and a IssieAssertion at the report level."@en ;
+       rdfs:label "Issue"@en ;
+       skos:prefLabel "Issue"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueAssertion
@@ -480,7 +509,9 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
 :Measure rdf:type owl:Class ;
          rdfs:subClassOf :DataQualityNeed ;
-         rdfs:comment "Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data have quality for some need if all records are COMPLETE for all pertenent Measures.  A Measure is the data quality needs concept that paralells a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level."@en .
+         rdfs:comment "Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data have quality for some need if all records are COMPLETE for all pertenent Measures.  A Measure is the data quality needs concept that paralells a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level."@en ;
+         rdfs:label "Measure"@en ;
+         skos:prefLabel "Measure"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
@@ -498,7 +529,9 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
 :MeasurementPolicy rdf:type owl:Class ;
                    rdfs:subClassOf :NeedConcept ;
-                   rdfs:comment "The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case." .
+                   rdfs:comment "The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case." ;
+                   rdfs:label "Measurement Policy"@en ;
+                   skos:prefLabel "Measurement Policy"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Mechanism
@@ -525,13 +558,17 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
 :ProblemPolicy rdf:type owl:Class ;
                rdfs:subClassOf :NeedConcept ;
-               rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." .
+               rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." ;
+               rdfs:label "Problem Policy"@en ;
+               skos:prefLabel "Problem Policy"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Profile
 :Profile rdf:type owl:Class ;
          rdfs:subClassOf :NeedConcept ;
-         rdfs:comment "Profile in FFDQ is a DQ Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions." .
+         rdfs:comment "Profile in FFDQ is a DQ Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions." ;
+         rdfs:label "Profile"@en ;
+         skos:prefLabel "Profile"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ReportConcept
@@ -570,7 +607,9 @@ A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_P
 ###  https://rs.tdwg.org/bdqffdq/terms/Specification
 :Specification rdf:type owl:Class ;
                rdfs:subClassOf :NeedConcept ;
-               rdfs:comment "A specification is a technical desription of an assertion test."@en .
+               rdfs:comment "A specification is a technical desription of an assertion test."@en ;
+               rdfs:label "Specification"@en ;
+               skos:prefLabel "Specification"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/UseCase
@@ -578,13 +617,19 @@ A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_P
          rdfs:subClassOf :NeedConcept ;
          rdfs:comment """The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.
 
-An example of a UseCase could be \"Check for internal consistency of dates\", with validation policies for checking consistency between atomic date fields and an Amendment such as \"eventDate filled in from verbatim\".""" .
+An example of a UseCase could be \"Check for internal consistency of dates\", with validation policies for checking consistency between atomic date fields and an Amendment such as \"eventDate filled in from verbatim\".
+
+Use Cases in bdqffdq are not the same as Use Cases in the software engineering sense, but  are similar bdqffdq formal statements derived from analyis of user stories.""" ;
+         rdfs:label "Use Case"@en ;
+         skos:prefLabel "Use Case"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Validation
 :Validation rdf:type owl:Class ;
             rdfs:subClassOf :DataQualityNeed ;
-            rdfs:comment "Describes the criteria for determining compliance of data to fill some data quality need.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example, \"The value of basisOfRecord of single records must be in the controlled vocabulary\".   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality."@en .
+            rdfs:comment "Describes the criteria for determining compliance of data to fill some data quality need.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example, \"The value of basisOfRecord of single records must be in the controlled vocabulary\".   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality."@en ;
+            rdfs:label "Validation"@en ;
+            skos:prefLabel "Validation"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion
@@ -602,7 +647,9 @@ An example of a UseCase could be \"Check for internal consistency of dates\", wi
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
 :ValidationPolicy rdf:type owl:Class ;
                   rdfs:subClassOf :NeedConcept ;
-                  rdfs:comment "The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case." .
+                  rdfs:comment "The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case." ;
+                  rdfs:label "Validation Policy"@en ;
+                  skos:prefLabel "Validation Policy"@en .
 
 
 #################################################################
