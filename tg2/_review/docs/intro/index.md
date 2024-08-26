@@ -91,7 +91,7 @@ The following namespace abbreviations are used in this document:
 
 ### 2.1 Vocabularies
 
-The focus of this standard is on the tests and assertions. These are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata. The tests and assertions specifications make use of additional vocabularies, three of which are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/BDQ_Core_Vocabulary_Landing_Page_index). 
+The focus of this standard is on the tests and assertions. These are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata. The tests and assertions specifications make use of additional vocabularies, three of which are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md). 
 
 ### 2.2 Test Guidance
 
@@ -105,9 +105,9 @@ Test specifications consist of the metadata (e.g., identifier, preferred label, 
 
 The specifications for expected responses from tests consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the test that was run, whether the information elements were those consulted or those acted upon.
 
-The [BDQ User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/BDQ_Core_Users_Guide.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run. 
+The [BDQ User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run. 
 
-The [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/BDQ_Core_Implementers_Guide.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
+The [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
 
 [!--- JRW first pass finished to here ---]
 
