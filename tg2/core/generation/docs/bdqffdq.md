@@ -5,62 +5,62 @@ titlepage: true
 ---
 Ontology Terms forming the BDQ Core Framework For Data Quality.
 
-- [Classes](#Class terms)
-- [Named Individuals](#NamedIndividual terms)
-- [Object Properties](#ObjectProperty terms)
-- [Data Properties](#DataProperty terms)
+- [Classes](#Class%20terms)
+- [Named Individuals](#NamedIndividual%20terms)
+- [Object Properties](#ObjectProperty%20terms)
+- [Data Properties](#DataProperty%20terms)
 
 Alphabetical Index of classes
 
-- [https://rs.tdwg.org/bdqffdq/terms#Parameter](#https://rs.tdwg.org/bdqffdq/terms#Parameter) 
-- [bdqffdq:ActedUpon](#bdqffdq:ActedUpon) InformationElement
-- [bdqffdq:Amendmenent](#bdqffdq:Amendmenent) DataQualityNeed
-- [bdqffdq:AmendmentAssertion](#bdqffdq:AmendmentAssertion) Assertion
-- [bdqffdq:AmendmentMethod](#bdqffdq:AmendmentMethod) DataQualityMethod
-- [bdqffdq:AmendmentPolicy](#bdqffdq:AmendmentPolicy) NeedConcept
-- [bdqffdq:Assertion](#bdqffdq:Assertion) ReportConcept
-- [bdqffdq:Consulted](#bdqffdq:Consulted) InformationElement
-- [bdqffdq:ContextualizedCriterion](#bdqffdq:ContextualizedCriterion) NeedConcept
-- [bdqffdq:ContextualizedDimension](#bdqffdq:ContextualizedDimension) NeedConcept
-- [bdqffdq:ContextualizedEnhancement](#bdqffdq:ContextualizedEnhancement) NeedConcept
-- [bdqffdq:ContextualizedIssue](#bdqffdq:ContextualizedIssue) NeedConcept
-- [bdqffdq:DataQualityDimension](#bdqffdq:DataQualityDimension) 
-- [bdqffdq:DataQualityMethod](#bdqffdq:DataQualityMethod) SolutionsConcept
-- [bdqffdq:DataQualityNeed](#bdqffdq:DataQualityNeed) NeedConcept
-- [bdqffdq:DataQualityReport](#bdqffdq:DataQualityReport) ReportConcept
-- [bdqffdq:DataResource](#bdqffdq:DataResource) ReportConcept
-- [bdqffdq:Implementation](#bdqffdq:Implementation) SolutionsConcept
-- [bdqffdq:ImprovementTarget](#bdqffdq:ImprovementTarget) NeedConcept
-- [bdqffdq:InformationElement](#bdqffdq:InformationElement) 
-- [bdqffdq:Issue](#bdqffdq:Issue) DataQualityNeed
-- [bdqffdq:IssueAssertion](#bdqffdq:IssueAssertion) Assertion
-- [bdqffdq:IssueMethod](#bdqffdq:IssueMethod) DataQualityMethod
-- [bdqffdq:Measure](#bdqffdq:Measure) DataQualityNeed
-- [bdqffdq:MeasurementAssertion](#bdqffdq:MeasurementAssertion) Assertion
-- [bdqffdq:MeasurementMethod](#bdqffdq:MeasurementMethod) DataQualityMethod
-- [bdqffdq:MeasurementPolicy](#bdqffdq:MeasurementPolicy) NeedConcept
-- [bdqffdq:Mechanism](#bdqffdq:Mechanism) SolutionsConcept
-- [bdqffdq:NeedConcept](#bdqffdq:NeedConcept) 
-- [bdqffdq:ProblemPolicy](#bdqffdq:ProblemPolicy) NeedConcept
-- [bdqffdq:Profile](#bdqffdq:Profile) NeedConcept
-- [bdqffdq:ReportConcept](#bdqffdq:ReportConcept) 
-- [bdqffdq:ResourceType](#bdqffdq:ResourceType) 
-- [bdqffdq:Result](#bdqffdq:Result) ReportConcept
-- [bdqffdq:ResultStatus](#bdqffdq:ResultStatus) ReportConcept
-- [bdqffdq:SolutionsConcept](#bdqffdq:SolutionsConcept) 
-- [bdqffdq:Specification](#bdqffdq:Specification) NeedConcept
-- [bdqffdq:UseCase](#bdqffdq:UseCase) NeedConcept
-- [bdqffdq:Validation](#bdqffdq:Validation) DataQualityNeed
-- [bdqffdq:ValidationAssertion](#bdqffdq:ValidationAssertion) Assertion
-- [bdqffdq:ValidationMethod](#bdqffdq:ValidationMethod) DataQualityMethod
-- [bdqffdq:ValidationPolicy](#bdqffdq:ValidationPolicy) NeedConcept
+- [https://rs.tdwg.org/bdqffdq/terms#Parameter](#https%3a//rs.tdwg.org/bdqffdq/terms#Parameter) 
+- [bdqffdq:ActedUpon](#bdqffdq%3aActedUpon) InformationElement
+- [bdqffdq:Amendmenent](#bdqffdq%3aAmendmenent) DataQualityNeed
+- [bdqffdq:AmendmentAssertion](#bdqffdq%3aAmendmentAssertion) Assertion
+- [bdqffdq:AmendmentMethod](#bdqffdq%3aAmendmentMethod) DataQualityMethod
+- [bdqffdq:AmendmentPolicy](#bdqffdq%3aAmendmentPolicy) NeedConcept
+- [bdqffdq:Assertion](#bdqffdq%3aAssertion) ReportConcept
+- [bdqffdq:Consulted](#bdqffdq%3aConsulted) InformationElement
+- [bdqffdq:ContextualizedCriterion](#bdqffdq%3aContextualizedCriterion) NeedConcept
+- [bdqffdq:ContextualizedDimension](#bdqffdq%3aContextualizedDimension) NeedConcept
+- [bdqffdq:ContextualizedEnhancement](#bdqffdq%3aContextualizedEnhancement) NeedConcept
+- [bdqffdq:ContextualizedIssue](#bdqffdq%3aContextualizedIssue) NeedConcept
+- [bdqffdq:DataQualityDimension](#bdqffdq%3aDataQualityDimension) 
+- [bdqffdq:DataQualityMethod](#bdqffdq%3aDataQualityMethod) SolutionsConcept
+- [bdqffdq:DataQualityNeed](#bdqffdq%3aDataQualityNeed) NeedConcept
+- [bdqffdq:DataQualityReport](#bdqffdq%3aDataQualityReport) ReportConcept
+- [bdqffdq:DataResource](#bdqffdq%3aDataResource) ReportConcept
+- [bdqffdq:Implementation](#bdqffdq%3aImplementation) SolutionsConcept
+- [bdqffdq:ImprovementTarget](#bdqffdq%3aImprovementTarget) NeedConcept
+- [bdqffdq:InformationElement](#bdqffdq%3aInformationElement) 
+- [bdqffdq:Issue](#bdqffdq%3aIssue) DataQualityNeed
+- [bdqffdq:IssueAssertion](#bdqffdq%3aIssueAssertion) Assertion
+- [bdqffdq:IssueMethod](#bdqffdq%3aIssueMethod) DataQualityMethod
+- [bdqffdq:Measure](#bdqffdq%3aMeasure) DataQualityNeed
+- [bdqffdq:MeasurementAssertion](#bdqffdq%3aMeasurementAssertion) Assertion
+- [bdqffdq:MeasurementMethod](#bdqffdq%3aMeasurementMethod) DataQualityMethod
+- [bdqffdq:MeasurementPolicy](#bdqffdq%3aMeasurementPolicy) NeedConcept
+- [bdqffdq:Mechanism](#bdqffdq%3aMechanism) SolutionsConcept
+- [bdqffdq:NeedConcept](#bdqffdq%3aNeedConcept) 
+- [bdqffdq:ProblemPolicy](#bdqffdq%3aProblemPolicy) NeedConcept
+- [bdqffdq:Profile](#bdqffdq%3aProfile) NeedConcept
+- [bdqffdq:ReportConcept](#bdqffdq%3aReportConcept) 
+- [bdqffdq:ResourceType](#bdqffdq%3aResourceType) 
+- [bdqffdq:Result](#bdqffdq%3aResult) ReportConcept
+- [bdqffdq:ResultStatus](#bdqffdq%3aResultStatus) ReportConcept
+- [bdqffdq:SolutionsConcept](#bdqffdq%3aSolutionsConcept) 
+- [bdqffdq:Specification](#bdqffdq%3aSpecification) NeedConcept
+- [bdqffdq:UseCase](#bdqffdq%3aUseCase) NeedConcept
+- [bdqffdq:Validation](#bdqffdq%3aValidation) DataQualityNeed
+- [bdqffdq:ValidationAssertion](#bdqffdq%3aValidationAssertion) Assertion
+- [bdqffdq:ValidationMethod](#bdqffdq%3aValidationMethod) DataQualityMethod
+- [bdqffdq:ValidationPolicy](#bdqffdq%3aValidationPolicy) NeedConcept
 ********************
 
 # Class terms
 
 ********************
 
-##  https://rs.tdwg.org/bdqffdq/terms#Parameter
+## https://rs.tdwg.org/bdqffdq/terms#Parameter
 
 ### Name
 
@@ -90,7 +90,7 @@ nan
 
 ********************
 
-##  bdqffdq:DataQualityDimension
+## bdqffdq:DataQualityDimension
 
 ### Name
 
@@ -120,7 +120,7 @@ Class
 
 ********************
 
-##  bdqffdq:InformationElement
+## bdqffdq:InformationElement
 
 ### Name
 
@@ -150,7 +150,7 @@ nan
 
 ********************
 
-##  bdqffdq:NeedConcept
+## bdqffdq:NeedConcept
 
 ### Name
 
@@ -180,7 +180,7 @@ nan
 
 ********************
 
-##  bdqffdq:ReportConcept
+## bdqffdq:ReportConcept
 
 ### Name
 
@@ -210,7 +210,7 @@ nan
 
 ********************
 
-##  bdqffdq:ResourceType
+## bdqffdq:ResourceType
 
 ### Name
 
@@ -240,7 +240,7 @@ nan
 
 ********************
 
-##  bdqffdq:SolutionsConcept
+## bdqffdq:SolutionsConcept
 
 ### Name
 
@@ -270,7 +270,7 @@ nan
 
 ********************
 
-##  bdqffdq:AmendmentAssertion
+## bdqffdq:AmendmentAssertion
 
 ### Name
 
@@ -304,7 +304,7 @@ nan
 
 ********************
 
-##  bdqffdq:IssueAssertion
+## bdqffdq:IssueAssertion
 
 ### Name
 
@@ -338,7 +338,7 @@ nan
 
 ********************
 
-##  bdqffdq:MeasurementAssertion
+## bdqffdq:MeasurementAssertion
 
 ### Name
 
@@ -372,7 +372,7 @@ nan
 
 ********************
 
-##  bdqffdq:ValidationAssertion
+## bdqffdq:ValidationAssertion
 
 ### Name
 
@@ -406,7 +406,7 @@ nan
 
 ********************
 
-##  bdqffdq:AmendmentMethod
+## bdqffdq:AmendmentMethod
 
 ### Name
 
@@ -440,7 +440,7 @@ nan
 
 ********************
 
-##  bdqffdq:IssueMethod
+## bdqffdq:IssueMethod
 
 ### Name
 
@@ -474,7 +474,7 @@ nan
 
 ********************
 
-##  bdqffdq:MeasurementMethod
+## bdqffdq:MeasurementMethod
 
 ### Name
 
@@ -508,7 +508,7 @@ nan
 
 ********************
 
-##  bdqffdq:ValidationMethod
+## bdqffdq:ValidationMethod
 
 ### Name
 
@@ -542,7 +542,7 @@ nan
 
 ********************
 
-##  bdqffdq:Amendmenent
+## bdqffdq:Amendmenent
 
 ### Name
 
@@ -576,7 +576,7 @@ nan
 
 ********************
 
-##  bdqffdq:Issue
+## bdqffdq:Issue
 
 ### Name
 
@@ -610,7 +610,7 @@ nan
 
 ********************
 
-##  bdqffdq:Measure
+## bdqffdq:Measure
 
 ### Name
 
@@ -644,7 +644,7 @@ nan
 
 ********************
 
-##  bdqffdq:Validation
+## bdqffdq:Validation
 
 ### Name
 
@@ -678,7 +678,7 @@ nan
 
 ********************
 
-##  bdqffdq:ActedUpon
+## bdqffdq:ActedUpon
 
 ### Name
 
@@ -712,7 +712,7 @@ nan
 
 ********************
 
-##  bdqffdq:Consulted
+## bdqffdq:Consulted
 
 ### Name
 
@@ -746,7 +746,7 @@ nan
 
 ********************
 
-##  bdqffdq:AmendmentPolicy
+## bdqffdq:AmendmentPolicy
 
 ### Name
 
@@ -780,7 +780,7 @@ bdqffdq:NeedConcept
 
 ********************
 
-##  bdqffdq:ContextualizedCriterion
+## bdqffdq:ContextualizedCriterion
 
 ### Name
 
@@ -814,7 +814,7 @@ nan
 
 ********************
 
-##  bdqffdq:ContextualizedDimension
+## bdqffdq:ContextualizedDimension
 
 ### Name
 
@@ -848,7 +848,7 @@ nan
 
 ********************
 
-##  bdqffdq:ContextualizedEnhancement
+## bdqffdq:ContextualizedEnhancement
 
 ### Name
 
@@ -882,7 +882,7 @@ nan
 
 ********************
 
-##  bdqffdq:ContextualizedIssue
+## bdqffdq:ContextualizedIssue
 
 ### Name
 
@@ -916,7 +916,7 @@ nan
 
 ********************
 
-##  bdqffdq:DataQualityNeed
+## bdqffdq:DataQualityNeed
 
 ### Name
 
@@ -950,7 +950,7 @@ nan
 
 ********************
 
-##  bdqffdq:ImprovementTarget
+## bdqffdq:ImprovementTarget
 
 ### Name
 
@@ -984,7 +984,7 @@ nan
 
 ********************
 
-##  bdqffdq:MeasurementPolicy
+## bdqffdq:MeasurementPolicy
 
 ### Name
 
@@ -1018,7 +1018,7 @@ nan
 
 ********************
 
-##  bdqffdq:ProblemPolicy
+## bdqffdq:ProblemPolicy
 
 ### Name
 
@@ -1052,7 +1052,7 @@ nan
 
 ********************
 
-##  bdqffdq:Profile
+## bdqffdq:Profile
 
 ### Name
 
@@ -1086,7 +1086,7 @@ nan
 
 ********************
 
-##  bdqffdq:Specification
+## bdqffdq:Specification
 
 ### Name
 
@@ -1126,7 +1126,7 @@ Authorities and Parameters'
 
 ********************
 
-##  bdqffdq:UseCase
+## bdqffdq:UseCase
 
 ### Name
 
@@ -1164,7 +1164,7 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
 
 ********************
 
-##  bdqffdq:ValidationPolicy
+## bdqffdq:ValidationPolicy
 
 ### Name
 
@@ -1198,7 +1198,7 @@ nan
 
 ********************
 
-##  bdqffdq:Assertion
+## bdqffdq:Assertion
 
 ### Name
 
@@ -1234,7 +1234,7 @@ The assertion concept consists of a specification (the technical description of 
 
 ********************
 
-##  bdqffdq:DataQualityReport
+## bdqffdq:DataQualityReport
 
 ### Name
 
@@ -1268,7 +1268,7 @@ nan
 
 ********************
 
-##  bdqffdq:DataResource
+## bdqffdq:DataResource
 
 ### Name
 
@@ -1302,7 +1302,7 @@ nan
 
 ********************
 
-##  bdqffdq:Result
+## bdqffdq:Result
 
 ### Name
 
@@ -1336,7 +1336,7 @@ nan
 
 ********************
 
-##  bdqffdq:ResultStatus
+## bdqffdq:ResultStatus
 
 ### Name
 
@@ -1372,7 +1372,7 @@ A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_P
 
 ********************
 
-##  bdqffdq:DataQualityMethod
+## bdqffdq:DataQualityMethod
 
 ### Name
 
@@ -1406,7 +1406,7 @@ nan
 
 ********************
 
-##  bdqffdq:Implementation
+## bdqffdq:Implementation
 
 ### Name
 
@@ -1440,7 +1440,7 @@ nan
 
 ********************
 
-##  bdqffdq:Mechanism
+## bdqffdq:Mechanism
 
 ### Name
 
@@ -1479,7 +1479,7 @@ nan
 
 ********************
 
-##  https://rs.tdwg.org/bdqffdq/terms#AuthoritiesDefaults
+## https://rs.tdwg.org/bdqffdq/terms#AuthoritiesDefaults
 
 ### Name
 
@@ -1513,7 +1513,7 @@ DataProperty
 
 ********************
 
-##  bdqffdq:ExpectedResponse
+## bdqffdq:ExpectedResponse
 
 ### Name
 
@@ -1547,7 +1547,7 @@ DataProperty
 
 ********************
 
-##  bdqffdq:hasResponseResultValue
+## bdqffdq:hasResponseResultValue
 
 ### Name
 
@@ -1582,7 +1582,7 @@ DataProperty
 
 ********************
 
-##  bdqffdq:SingleRecord
+## bdqffdq:SingleRecord
 
 ### Name
 
@@ -1616,7 +1616,7 @@ nan
 
 ********************
 
-##  bdqffdq:MultiRecord
+## bdqffdq:MultiRecord
 
 ### Name
 
@@ -1651,7 +1651,7 @@ nan
 
 ********************
 
-##  bdqffdq:implementedBy
+## bdqffdq:implementedBy
 
 ### Name
 
@@ -1685,7 +1685,7 @@ nan
 
 ********************
 
-##  bdqffdq:composedOf
+## bdqffdq:composedOf
 
 ### Name
 
@@ -1719,7 +1719,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasSpecification
+## bdqffdq:hasSpecification
 
 ### Name
 
@@ -1753,7 +1753,7 @@ nan
 
 ********************
 
-##  bdqffdq:issueInContext
+## bdqffdq:issueInContext
 
 ### Name
 
@@ -1787,7 +1787,7 @@ nan
 
 ********************
 
-##  bdqffdq:criterionInContext
+## bdqffdq:criterionInContext
 
 ### Name
 
@@ -1821,7 +1821,7 @@ nan
 
 ********************
 
-##  bdqffdq:dimensionInContext
+## bdqffdq:dimensionInContext
 
 ### Name
 
@@ -1855,7 +1855,7 @@ nan
 
 ********************
 
-##  bdqffdq:enhancementInContext
+## bdqffdq:enhancementInContext
 
 ### Name
 
@@ -1889,7 +1889,7 @@ nan
 
 ********************
 
-##  bdqffdq:improvedBy
+## bdqffdq:improvedBy
 
 ### Name
 
@@ -1923,7 +1923,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasActedUponInformationElement
+## bdqffdq:hasActedUponInformationElement
 
 ### Name
 
@@ -1957,7 +1957,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasConsultedInformationElement
+## bdqffdq:hasConsultedInformationElement
 
 ### Name
 
@@ -1991,7 +1991,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasInformationElement
+## bdqffdq:hasInformationElement
 
 ### Name
 
@@ -2025,7 +2025,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasResourceType
+## bdqffdq:hasResourceType
 
 ### Name
 
@@ -2059,7 +2059,7 @@ nan
 
 ********************
 
-##  bdqffdq:amendmentProperties
+## bdqffdq:amendmentProperties
 
 ### Name
 
@@ -2093,7 +2093,7 @@ nan
 
 ********************
 
-##  bdqffdq:measurementProperties
+## bdqffdq:measurementProperties
 
 ### Name
 
@@ -2127,7 +2127,7 @@ nan
 
 ********************
 
-##  bdqffdq:problemProperties
+## bdqffdq:problemProperties
 
 ### Name
 
@@ -2161,7 +2161,7 @@ nan
 
 ********************
 
-##  bdqffdq:validationProperties
+## bdqffdq:validationProperties
 
 ### Name
 
@@ -2195,7 +2195,7 @@ nan
 
 ********************
 
-##  bdqffdq:targetedCriterion
+## bdqffdq:targetedCriterion
 
 ### Name
 
@@ -2229,7 +2229,7 @@ nan
 
 ********************
 
-##  bdqffdq:targetedDimension
+## bdqffdq:targetedDimension
 
 ### Name
 
@@ -2263,7 +2263,7 @@ nan
 
 ********************
 
-##  bdqffdq:targetedIssue
+## bdqffdq:targetedIssue
 
 ### Name
 
@@ -2297,7 +2297,7 @@ nan
 
 ********************
 
-##  bdqffdq:coversUseCase
+## bdqffdq:coversUseCase
 
 ### Name
 
@@ -2331,7 +2331,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasResponseResult
+## bdqffdq:hasResponseResult
 
 ### Name
 
@@ -2365,7 +2365,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasStatus
+## bdqffdq:hasStatus
 
 ### Name
 
@@ -2399,7 +2399,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasResponseStatus
+## bdqffdq:hasResponseStatus
 
 ### Name
 
@@ -2433,7 +2433,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasCriterion
+## bdqffdq:hasCriterion
 
 ### Name
 
@@ -2467,7 +2467,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasDimension
+## bdqffdq:hasDimension
 
 ### Name
 
@@ -2501,7 +2501,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasEnhancement
+## bdqffdq:hasEnhancement
 
 ### Name
 
@@ -2535,7 +2535,7 @@ nan
 
 ********************
 
-##  bdqffdq:hasIssue
+## bdqffdq:hasIssue
 
 ### Name
 
@@ -2569,7 +2569,7 @@ nan
 
 ********************
 
-##  http://www.w3.org/2002/07/owl#topObjectProperty
+## http://www.w3.org/2002/07/owl#topObjectProperty
 
 ### Name
 
@@ -2599,7 +2599,7 @@ nan
 
 ********************
 
-##  bdqffdq:reportProperties
+## bdqffdq:reportProperties
 
 ### Name
 
