@@ -74,6 +74,11 @@ Vertical paralell classes
 
 ![Diagram of ValidationAssertion, AmendmentAssertion, MeasureAssertion and IssueAssertion classes as subtype of Assertion class, with Assertion as a rectangular node, ReportConcepts as its parent above it, and the other 4 classes below the Assertion and linked to it. ](assertions.png "Report concept paralels to the 4 central assertion types in the framework.")
 
+Full class diagram 
+
+![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
+
+
 ### 1.1 Status of the content of this document
 In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. 
 
