@@ -3,6 +3,27 @@ title:  TDWG BDQ Core Framework for data quality
 geometry: margin=1cm
 titlepage: true
 ---
+#  'Parameter'
+
+## Name
+
+https://rs.tdwg.org/bdqffdq/terms#Parameter
+
+## Type
+
+Class
+
+## Superclass
+
+http://www.w3.org/2002/07/owl#Thing
+
+## Comment
+
+nan
+
+
+********************
+
 #  'Data Quality Dimension'
 
 ## Name
@@ -19,7 +40,7 @@ http://www.w3.org/2002/07/owl#Thing
 
 ## Comment
 
-'Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, 'precision' in 'coordinate percision of single records'.  Includes Completeness (q.v.), Conformance (q.v.), Consistency (q.v.), Likeliness (q.v.), Reliability (q.v.), and Resolution (q.v.).'
+'Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, 'precision' in 'coordinate precision of single records'.'
 
 
 ********************
@@ -45,7 +66,7 @@ http://www.w3.org/2002/07/owl#Thing
 
 ********************
 
-#  nan
+#  'Need Concept'
 
 ## Name
 
@@ -87,7 +108,7 @@ nan
 
 ********************
 
-#  nan
+#  'Resource Type'
 
 ## Name
 
@@ -103,12 +124,12 @@ http://www.w3.org/2002/07/owl#Thing
 
 ## Comment
 
-'In FFDQ the concept of ResourceType has instances for SingleRecord or MultiRecord'
+'In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord'
 
 
 ********************
 
-#  nan
+#  'Solutions Concept'
 
 ## Name
 
@@ -129,7 +150,7 @@ nan
 
 ********************
 
-#  nan
+#  'Amendment Assertion'
 
 ## Name
 
@@ -150,7 +171,7 @@ https://rs.tdwg.org/bdqffdq/terms/Assertion
 
 ********************
 
-#  nan
+#  'Issue Assertion'
 
 ## Name
 
@@ -171,7 +192,7 @@ https://rs.tdwg.org/bdqffdq/terms/Assertion
 
 ********************
 
-#  nan
+#  'Measurement Assertion'
 
 ## Name
 
@@ -192,7 +213,7 @@ https://rs.tdwg.org/bdqffdq/terms/Assertion
 
 ********************
 
-#  nan
+#  'Vailidation Assertion'
 
 ## Name
 
@@ -213,7 +234,7 @@ https://rs.tdwg.org/bdqffdq/terms/Assertion
 
 ********************
 
-#  nan
+#  'Amendment Method'
 
 ## Name
 
@@ -234,7 +255,28 @@ https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
 
 ********************
 
-#  nan
+#  'Issue Method'
+
+## Name
+
+https://rs.tdwg.org/bdqffdq/terms/IssueMethod
+
+## Type
+
+Class
+
+## Superclass
+
+https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
+
+## Comment
+
+'The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements.'
+
+
+********************
+
+#  'Measurement Method'
 
 ## Name
 
@@ -255,28 +297,7 @@ https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
 
 ********************
 
-#  nan
-
-## Name
-
-https://rs.tdwg.org/bdqffdq/terms/ProblemMethod
-
-## Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
-
-## Comment
-
-'The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements.'
-
-
-********************
-
-#  nan
+#  'Validation Method'
 
 ## Name
 
@@ -297,7 +318,7 @@ https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
 
 ********************
 
-#  nan
+#  'Amendment'
 
 ## Name
 
@@ -318,7 +339,7 @@ https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
 
 ********************
 
-#  nan
+#  'Issue'
 
 ## Name
 
@@ -339,7 +360,7 @@ https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
 
 ********************
 
-#  nan
+#  'Measure'
 
 ## Name
 
@@ -360,7 +381,7 @@ https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
 
 ********************
 
-#  nan
+#  'Validation'
 
 ## Name
 
@@ -423,7 +444,7 @@ https://rs.tdwg.org/bdqffdq/terms/InformationElement
 
 ********************
 
-#  nan
+#  'Amendment Policy'
 
 ## Name
 
@@ -439,7 +460,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ## Comment
 
-'The AmendmentPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedEnhancement relates to a use case. This relationship defines which Amendments are supported by a given use case.'
+'A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case.'
 
 
 ********************
@@ -465,7 +486,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Contextualized Dimension'
 
 ## Name
 
@@ -486,7 +507,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Contextualized Enhancement'
 
 ## Name
 
@@ -507,7 +528,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Contextualized Issue'
 
 ## Name
 
@@ -528,7 +549,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Data Quality Need'
 
 ## Name
 
@@ -549,7 +570,7 @@ nan
 
 ********************
 
-#  nan
+#  'Improvement Target'
 
 ## Name
 
@@ -570,7 +591,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Measurement Policy'
 
 ## Name
 
@@ -591,7 +612,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Problem Policy'
 
 ## Name
 
@@ -612,7 +633,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Profile'
 
 ## Name
 
@@ -633,7 +654,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Specification'
 
 ## Name
 
@@ -649,12 +670,18 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ## Comment
 
-'A specification is a technical desription of an assertion test.'
+'A specification is a technical desription of an assertion test.
+
+A specification is expected to have the following properies: 
+
+Expected Response
+
+Authorities and Parameters'
 
 
 ********************
 
-#  nan
+#  'Use Case'
 
 ## Name
 
@@ -672,12 +699,14 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 'The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.
 
-An example of a UseCase could be 'Check for internal consistency of dates', with validation policies for checking consistency between atomic date fields and an Amendment such as 'eventDate filled in from verbatim'.'
+An example of a UseCase could be 'Check for internal consistency of dates', with validation policies for checking consistency between atomic date fields and an Amendment such as 'eventDate filled in from verbatim'.
+
+Use Cases in bdqffdq are not the same as Use Cases in the software engineering sense, but  are similar bdqffdq formal statements derived from analyis of user stories.'
 
 
 ********************
 
-#  nan
+#  'Validation Policy'
 
 ## Name
 
@@ -698,7 +727,7 @@ https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 
 ********************
 
-#  nan
+#  'Assertion'
 
 ## Name
 
@@ -742,7 +771,7 @@ https://rs.tdwg.org/bdqffdq/terms/ReportConcept
 
 ********************
 
-#  nan
+#  'Data Resource'
 
 ## Name
 
@@ -763,7 +792,7 @@ https://rs.tdwg.org/bdqffdq/terms/ReportConcept
 
 ********************
 
-#  nan
+#  'Response.result'
 
 ## Name
 
@@ -784,7 +813,7 @@ https://rs.tdwg.org/bdqffdq/terms/ReportConcept
 
 ********************
 
-#  nan
+#  'Response.status'
 
 ## Name
 
@@ -807,7 +836,7 @@ A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_P
 
 ********************
 
-#  nan
+#  'Data Quality Method'
 
 ## Name
 
@@ -828,7 +857,7 @@ nan
 
 ********************
 
-#  nan
+#  'Implementation'
 
 ## Name
 
@@ -849,7 +878,7 @@ https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept
 
 ********************
 
-#  nan
+#  'Mechanism'
 
 ## Name
 
@@ -874,7 +903,7 @@ https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept
 
 ## Name
 
-https://rs.tdwg.org/bdqffdq/terms/Parameters
+https://rs.tdwg.org/bdqffdq/terms#AuthoritiesDefaults
 
 ## Type
 
@@ -882,11 +911,11 @@ DataProperty
 
 ## Superclass
 
-'Parameters that may be provided with the expected response along with their default values if they are not provided.  Parameters are expected to be data properties of a Specification.'
+'Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.'
 
 ## Comment
 
-nan
+'Authorities and Defaults'
 
 
 ********************
@@ -907,7 +936,7 @@ DataProperty
 
 ## Comment
 
-nan
+'Expected Response'
 
 
 ********************
@@ -928,7 +957,7 @@ nan
 
 ## Comment
 
-nan
+'has response result value'
 
 
 ********************
