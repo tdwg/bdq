@@ -25,10 +25,10 @@ with open ("../../../vocabularies/bdqffdq_export.csv", newline='') as csvfile:
 		print ("---")
 		print ("Ontology Terms forming the BDQ Core Framework For Data Quality.")
 		print()
-		print("- [Classes](#Class%20terms)")
-		print("- [Named Individuals](#NamedIndividual%20terms)")
-		print("- [Object Properties](#ObjectProperty%20terms)")
-		print("- [Data Properties](#DataProperty%20terms)")
+		print("- [Classes](#Class-terms)")
+		print("- [Named Individuals](#NamedIndividual-terms)")
+		print("- [Object Properties](#ObjectProperty-terms)")
+		print("- [Data Properties](#DataProperty-terms)")
 		print()
 		print("Alphabetical Index of classes")
 		print()
@@ -41,7 +41,7 @@ with open ("../../../vocabularies/bdqffdq_export.csv", newline='') as csvfile:
 					parent = parent.replace("https://rs.tdwg.org/bdqffdq/terms/","") 
 				entity = row['Entity']
 				entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-				print("- [{}](#{}) {}".format(entity,entity.replace(":","%3a"),parent))
+				print("- [{}](#{}) {}".format(entity,entity.replace(":",""),parent))
 		print("********************")
 		lastType = ""
 		for index, row in dataFrame.iterrows():

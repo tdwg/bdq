@@ -5,55 +5,55 @@ titlepage: true
 ---
 Ontology Terms forming the BDQ Core Framework For Data Quality.
 
-- [Classes](#Class%20terms)
-- [Named Individuals](#NamedIndividual%20terms)
-- [Object Properties](#ObjectProperty%20terms)
-- [Data Properties](#DataProperty%20terms)
+- [Classes](#Class-terms)
+- [Named Individuals](#NamedIndividual-terms)
+- [Object Properties](#ObjectProperty-terms)
+- [Data Properties](#DataProperty-terms)
 
 Alphabetical Index of classes
 
-- [https://rs.tdwg.org/bdqffdq/terms#Parameter](#https%3a//rs.tdwg.org/bdqffdq/terms#Parameter) 
-- [bdqffdq:ActedUpon](#bdqffdq%3aActedUpon) InformationElement
-- [bdqffdq:Amendmenent](#bdqffdq%3aAmendmenent) DataQualityNeed
-- [bdqffdq:AmendmentAssertion](#bdqffdq%3aAmendmentAssertion) Assertion
-- [bdqffdq:AmendmentMethod](#bdqffdq%3aAmendmentMethod) DataQualityMethod
-- [bdqffdq:AmendmentPolicy](#bdqffdq%3aAmendmentPolicy) NeedConcept
-- [bdqffdq:Assertion](#bdqffdq%3aAssertion) ReportConcept
-- [bdqffdq:Consulted](#bdqffdq%3aConsulted) InformationElement
-- [bdqffdq:ContextualizedCriterion](#bdqffdq%3aContextualizedCriterion) NeedConcept
-- [bdqffdq:ContextualizedDimension](#bdqffdq%3aContextualizedDimension) NeedConcept
-- [bdqffdq:ContextualizedEnhancement](#bdqffdq%3aContextualizedEnhancement) NeedConcept
-- [bdqffdq:ContextualizedIssue](#bdqffdq%3aContextualizedIssue) NeedConcept
-- [bdqffdq:DataQualityDimension](#bdqffdq%3aDataQualityDimension) 
-- [bdqffdq:DataQualityMethod](#bdqffdq%3aDataQualityMethod) SolutionsConcept
-- [bdqffdq:DataQualityNeed](#bdqffdq%3aDataQualityNeed) NeedConcept
-- [bdqffdq:DataQualityReport](#bdqffdq%3aDataQualityReport) ReportConcept
-- [bdqffdq:DataResource](#bdqffdq%3aDataResource) ReportConcept
-- [bdqffdq:Implementation](#bdqffdq%3aImplementation) SolutionsConcept
-- [bdqffdq:ImprovementTarget](#bdqffdq%3aImprovementTarget) NeedConcept
-- [bdqffdq:InformationElement](#bdqffdq%3aInformationElement) 
-- [bdqffdq:Issue](#bdqffdq%3aIssue) DataQualityNeed
-- [bdqffdq:IssueAssertion](#bdqffdq%3aIssueAssertion) Assertion
-- [bdqffdq:IssueMethod](#bdqffdq%3aIssueMethod) DataQualityMethod
-- [bdqffdq:Measure](#bdqffdq%3aMeasure) DataQualityNeed
-- [bdqffdq:MeasurementAssertion](#bdqffdq%3aMeasurementAssertion) Assertion
-- [bdqffdq:MeasurementMethod](#bdqffdq%3aMeasurementMethod) DataQualityMethod
-- [bdqffdq:MeasurementPolicy](#bdqffdq%3aMeasurementPolicy) NeedConcept
-- [bdqffdq:Mechanism](#bdqffdq%3aMechanism) SolutionsConcept
-- [bdqffdq:NeedConcept](#bdqffdq%3aNeedConcept) 
-- [bdqffdq:ProblemPolicy](#bdqffdq%3aProblemPolicy) NeedConcept
-- [bdqffdq:Profile](#bdqffdq%3aProfile) NeedConcept
-- [bdqffdq:ReportConcept](#bdqffdq%3aReportConcept) 
-- [bdqffdq:ResourceType](#bdqffdq%3aResourceType) 
-- [bdqffdq:Result](#bdqffdq%3aResult) ReportConcept
-- [bdqffdq:ResultStatus](#bdqffdq%3aResultStatus) ReportConcept
-- [bdqffdq:SolutionsConcept](#bdqffdq%3aSolutionsConcept) 
-- [bdqffdq:Specification](#bdqffdq%3aSpecification) NeedConcept
-- [bdqffdq:UseCase](#bdqffdq%3aUseCase) NeedConcept
-- [bdqffdq:Validation](#bdqffdq%3aValidation) DataQualityNeed
-- [bdqffdq:ValidationAssertion](#bdqffdq%3aValidationAssertion) Assertion
-- [bdqffdq:ValidationMethod](#bdqffdq%3aValidationMethod) DataQualityMethod
-- [bdqffdq:ValidationPolicy](#bdqffdq%3aValidationPolicy) NeedConcept
+- [https://rs.tdwg.org/bdqffdq/terms#Parameter](#https//rs.tdwg.org/bdqffdq/terms#Parameter) 
+- [bdqffdq:ActedUpon](#bdqffdqActedUpon) InformationElement
+- [bdqffdq:Amendmenent](#bdqffdqAmendmenent) DataQualityNeed
+- [bdqffdq:AmendmentAssertion](#bdqffdqAmendmentAssertion) Assertion
+- [bdqffdq:AmendmentMethod](#bdqffdqAmendmentMethod) DataQualityMethod
+- [bdqffdq:AmendmentPolicy](#bdqffdqAmendmentPolicy) NeedConcept
+- [bdqffdq:Assertion](#bdqffdqAssertion) ReportConcept
+- [bdqffdq:Consulted](#bdqffdqConsulted) InformationElement
+- [bdqffdq:ContextualizedCriterion](#bdqffdqContextualizedCriterion) NeedConcept
+- [bdqffdq:ContextualizedDimension](#bdqffdqContextualizedDimension) NeedConcept
+- [bdqffdq:ContextualizedEnhancement](#bdqffdqContextualizedEnhancement) NeedConcept
+- [bdqffdq:ContextualizedIssue](#bdqffdqContextualizedIssue) NeedConcept
+- [bdqffdq:DataQualityDimension](#bdqffdqDataQualityDimension) 
+- [bdqffdq:DataQualityMethod](#bdqffdqDataQualityMethod) SolutionsConcept
+- [bdqffdq:DataQualityNeed](#bdqffdqDataQualityNeed) NeedConcept
+- [bdqffdq:DataQualityReport](#bdqffdqDataQualityReport) ReportConcept
+- [bdqffdq:DataResource](#bdqffdqDataResource) ReportConcept
+- [bdqffdq:Implementation](#bdqffdqImplementation) SolutionsConcept
+- [bdqffdq:ImprovementTarget](#bdqffdqImprovementTarget) NeedConcept
+- [bdqffdq:InformationElement](#bdqffdqInformationElement) 
+- [bdqffdq:Issue](#bdqffdqIssue) DataQualityNeed
+- [bdqffdq:IssueAssertion](#bdqffdqIssueAssertion) Assertion
+- [bdqffdq:IssueMethod](#bdqffdqIssueMethod) DataQualityMethod
+- [bdqffdq:Measure](#bdqffdqMeasure) DataQualityNeed
+- [bdqffdq:MeasurementAssertion](#bdqffdqMeasurementAssertion) Assertion
+- [bdqffdq:MeasurementMethod](#bdqffdqMeasurementMethod) DataQualityMethod
+- [bdqffdq:MeasurementPolicy](#bdqffdqMeasurementPolicy) NeedConcept
+- [bdqffdq:Mechanism](#bdqffdqMechanism) SolutionsConcept
+- [bdqffdq:NeedConcept](#bdqffdqNeedConcept) 
+- [bdqffdq:ProblemPolicy](#bdqffdqProblemPolicy) NeedConcept
+- [bdqffdq:Profile](#bdqffdqProfile) NeedConcept
+- [bdqffdq:ReportConcept](#bdqffdqReportConcept) 
+- [bdqffdq:ResourceType](#bdqffdqResourceType) 
+- [bdqffdq:Result](#bdqffdqResult) ReportConcept
+- [bdqffdq:ResultStatus](#bdqffdqResultStatus) ReportConcept
+- [bdqffdq:SolutionsConcept](#bdqffdqSolutionsConcept) 
+- [bdqffdq:Specification](#bdqffdqSpecification) NeedConcept
+- [bdqffdq:UseCase](#bdqffdqUseCase) NeedConcept
+- [bdqffdq:Validation](#bdqffdqValidation) DataQualityNeed
+- [bdqffdq:ValidationAssertion](#bdqffdqValidationAssertion) Assertion
+- [bdqffdq:ValidationMethod](#bdqffdqValidationMethod) DataQualityMethod
+- [bdqffdq:ValidationPolicy](#bdqffdqValidationPolicy) NeedConcept
 ********************
 
 # Class terms
