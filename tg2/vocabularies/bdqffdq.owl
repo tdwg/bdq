@@ -251,7 +251,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                             ] ;
                 rdfs:range [ rdf:type owl:Restriction ;
                              owl:onProperty :issueInContext ;
-                             owl:someValuesFrom :ProblemMethod
+                             owl:someValuesFrom :IssueMethod
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :issueInContext ;
@@ -325,21 +325,22 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms#AuthoritiesDefaults
 :AuthoritiesDefaults rdf:type owl:DatatypeProperty ;
-                     rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." .
+                     rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
+                     rdfs:label "Authorities and Defaults" ;
+                     skos:prefLabel "Authorities and Defaults" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ExpectedResponse
 :ExpectedResponse rdf:type owl:DatatypeProperty ;
-                  rdfs:comment "The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/Parameters
-:Parameters rdf:type owl:DatatypeProperty ;
-            rdfs:comment "Parameters that may be provided with the expected response along with their default values if they are not provided.  Parameters are expected to be data properties of a Specification."@en .
+                  rdfs:comment "The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification"@en ;
+                  rdfs:label "Expected Response" ;
+                  skos:prefLabel "Expected Response" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
-:hasResponseResultValue rdf:type owl:DatatypeProperty .
+:hasResponseResultValue rdf:type owl:DatatypeProperty ;
+                        rdfs:label "has response result value" ;
+                        skos:prefLabel "has response result value" .
 
 
 #################################################################
@@ -370,13 +371,17 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion
 :AmendmentAssertion rdf:type owl:Class ;
                     rdfs:subClassOf :Assertion ;
-                    rdfs:comment "The Amendment assertion type is a report level concept that describes a run of a test that proposes changes based on some data quality enhancement. The Amendment concept in FFDQ consists of a run result that includes a status (FILLED_IN, TRANSPOSED, etc) as well as the proposed changes to values from the original data." .
+                    rdfs:comment "The Amendment assertion type is a report level concept that describes a run of a test that proposes changes based on some data quality enhancement. The Amendment concept in FFDQ consists of a run result that includes a status (FILLED_IN, TRANSPOSED, etc) as well as the proposed changes to values from the original data." ;
+                    rdfs:label "Amendment Assertion"@en ;
+                    skos:prefLabel "Amendment Assertion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod
 :AmendmentMethod rdf:type owl:Class ;
                  rdfs:subClassOf :DataQualityMethod ;
-                 rdfs:comment "The AmendmentMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an enhancement in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+                 rdfs:comment "The AmendmentMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an enhancement in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
+                 rdfs:label "Amendment Method"@en ;
+                 skos:prefLabel "Amendment Method"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
@@ -393,7 +398,9 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
            rdfs:subClassOf :ReportConcept ;
            rdfs:comment """The Assertion type in FFDQ is the fundamental concept that makes up a data quality report. Assertion can be any one of four types (represented as subClasses), Measure, Validation, Issue, and Amendement.
 
-The assertion concept consists of a specification (the technical description of a performed test), a data resource (initial values of input data expressed in terms of some controlled vocabulary), the mechanism (external service, actor, or code that performs the test), and some form of result.""" .
+The assertion concept consists of a specification (the technical description of a performed test), a data resource (initial values of input data expressed in terms of some controlled vocabulary), the mechanism (external service, actor, or code that performs the test), and some form of result.""" ;
+           rdfs:label "Assertion"@en ;
+           skos:prefLabel "Assertion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Consulted
@@ -460,13 +467,16 @@ The assertion concept consists of a specification (the technical description of 
 :DataQualityReport rdf:type owl:Class ;
                    rdfs:subClassOf :ReportConcept ;
                    rdfs:comment "The FFDQ Report concept consists of a set of assertions (measures, validations and amendments) that represent the output of a workflow/actor run.  These assertions form an account of the fitness for use of a tested data set for a specified use, as produced by a Mechanism."@en ;
-                   rdfs:label "Data Quality Report"@en .
+                   rdfs:label "Data Quality Report"@en ;
+                   skos:prefLabel "Data Quality Report"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataResource
 :DataResource rdf:type owl:Class ;
               rdfs:subClassOf :ReportConcept ;
-              rdfs:comment "Describes a data resource described in terms of a controlled vocabulary such as dwc and represents the original values of the data operated on by an assertion test (i.e. an instance of dwc:Occurrence)." .
+              rdfs:comment "Describes a data resource described in terms of a controlled vocabulary such as dwc and represents the original values of the data operated on by an assertion test (i.e. an instance of dwc:Occurrence)." ;
+              rdfs:label "Data Resource"@en ;
+              skos:prefLabel "Data Resource"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Implementation
@@ -503,7 +513,17 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueAssertion
 :IssueAssertion rdf:type owl:Class ;
                 rdfs:subClassOf :Assertion ;
-                rdfs:comment "The DQ report concept describing a test for the negative case. If a problem was found the result has a status of HAS_PROBLEM otherwise the status is NO_PROBLEM." .
+                rdfs:comment "The DQ report concept describing a test for the negative case. If a problem was found the result has a status of HAS_PROBLEM otherwise the status is NO_PROBLEM." ;
+                rdfs:label "Issue Assertion"@en ;
+                skos:prefLabel "Issue Assertion"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/IssueMethod
+:IssueMethod rdf:type owl:Class ;
+             rdfs:subClassOf :DataQualityMethod ;
+             rdfs:comment "The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
+             rdfs:label "Issue Method"@en ;
+             skos:prefLabel "Issue Method"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
@@ -517,13 +537,17 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
 :MeasurementAssertion rdf:type owl:Class ;
                       rdfs:subClassOf :Assertion ;
-                      rdfs:comment "The Measure assertion type is a report level concept that describes a run of a test that performs a measurement according to some data quality dimension. In FFDQ, the Measure concept consists of a run result of COMPLETE or NOT_COMPLETE or a value of the measurement (i.e. a measure of dwc:eventDate duration in seconds)." .
+                      rdfs:comment "The Measure assertion type is a report level concept that describes a run of a test that performs a measurement according to some data quality dimension. In FFDQ, the Measure concept consists of a run result of COMPLETE or NOT_COMPLETE or a value of the measurement (i.e. a measure of dwc:eventDate duration in seconds)." ;
+                      rdfs:label "Measurement Assertion"@en ;
+                      skos:prefLabel "Measurement Assertion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod
 :MeasurementMethod rdf:type owl:Class ;
                    rdfs:subClassOf :DataQualityMethod ;
-                   rdfs:comment "The MeasurementMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+                   rdfs:comment "The MeasurementMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
+                   rdfs:label "Measurement Method"@en ;
+                   skos:prefLabel "Measurement Method"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
@@ -547,12 +571,6 @@ The assertion concept consists of a specification (the technical description of 
              rdfs:label "Need Concept"@en ;
              skos:definition "Category of concepts forming the Needs layer of the fittness for use framework."@en ;
              skos:prefLabel "Need Concept"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/ProblemMethod
-:ProblemMethod rdf:type owl:Class ;
-               rdfs:subClassOf :DataQualityMethod ;
-               rdfs:comment "The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
@@ -587,7 +605,9 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/Result
 :Result rdf:type owl:Class ;
         rdfs:subClassOf :ReportConcept ;
-        rdfs:comment "The report result concept in FFDQ is represented as a value or a status for measures, just a result status for validations and a result status as well as values for changes propsed by amendments." .
+        rdfs:comment "The report result concept in FFDQ is represented as a value or a status for measures, just a result status for validations and a result status as well as values for changes propsed by amendments." ;
+        rdfs:label "Response.result"@en ;
+        skos:prefLabel "Response.result"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResultStatus
@@ -595,11 +615,14 @@ The assertion concept consists of a specification (the technical description of 
               rdfs:subClassOf :ReportConcept ;
               rdfs:comment """Depending on the assertion type would have values of COMPLIANT or NON_COMPLIANT for a Validation, COMPLETE or NOT_COMPLETE for a Measure, CURATED, FILLED_IN,TRANSPOSED, NO_CHANGE for an Amendment and HAS_PROBLEM NO_PROBLEM for a Problem.
 
-A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_PREREQUISITES_NOT_MET and EXTERNAL_PREREQUISITES_NOT_MET.""" .
+A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_PREREQUISITES_NOT_MET and EXTERNAL_PREREQUISITES_NOT_MET.""" ;
+              rdfs:label "Response.status"@en ;
+              skos:prefLabel "Response.status"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept
 :SolutionsConcept rdf:type owl:Class ;
+                  rdfs:label "Solutions Concept"@en ;
                   skos:definition "Category of concepts forming the Solutions layer of the fittness for use framework."@en ;
                   skos:prefLabel "Solutions Concept"@en .
 
@@ -607,7 +630,13 @@ A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_P
 ###  https://rs.tdwg.org/bdqffdq/terms/Specification
 :Specification rdf:type owl:Class ;
                rdfs:subClassOf :NeedConcept ;
-               rdfs:comment "A specification is a technical desription of an assertion test."@en ;
+               rdfs:comment """A specification is a technical desription of an assertion test.
+
+A specification is expected to have the following properies: 
+
+Expected Response
+
+Authorities and Parameters"""@en ;
                rdfs:label "Specification"@en ;
                skos:prefLabel "Specification"@en .
 
@@ -635,13 +664,17 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion
 :ValidationAssertion rdf:type owl:Class ;
                      rdfs:subClassOf :Assertion ;
-                     rdfs:comment "The Validation assertion type is a report level concept that describes a run of a test for validity. The Validation concept in FFDQ consists of a run result of COMPLIANT or NON_COMPLIANT and a criterion that describes the conditions for validity that result in a status of COMPLIANT." .
+                     rdfs:comment "The Validation assertion type is a report level concept that describes a run of a test for validity. The Validation concept in FFDQ consists of a run result of COMPLIANT or NON_COMPLIANT and a criterion that describes the conditions for validity that result in a status of COMPLIANT." ;
+                     rdfs:label "Vailidation Assertion"@en ;
+                     skos:prefLabel "Vailidation Assertion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationMethod
 :ValidationMethod rdf:type owl:Class ;
                   rdfs:subClassOf :DataQualityMethod ;
-                  rdfs:comment "The ValidationMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements." .
+                  rdfs:comment "The ValidationMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
+                  rdfs:label "Validation Method"@en ;
+                  skos:prefLabel "Validation Method"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
