@@ -1,6 +1,6 @@
 Files in this folder are for submission of BDQ Core for review for standard track in TDWG.
 
-[Start at landing pad page](BDQ_Core_Landing_Page_index.md)
+Start on the [BDQ Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) landing page.
 
 
 Work in progress description of files in this directory: 
