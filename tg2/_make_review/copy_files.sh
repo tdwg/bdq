@@ -5,6 +5,8 @@
 
 # bdqffdq files for the framework
 
+cp ../vocabularies/bdqffdq.owl ../_review/vocabulary/bdqffdq.owl
+
 # bdqdim vocabulary
 
 cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_terms.csv
