@@ -27,6 +27,20 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms#hasDataQualityDimension
+:hasDataQualityDimension rdf:type owl:ObjectProperty ;
+                         rdfs:label "has Data Quality Dimension"@en ;
+                         skos:prefLabel "has Data Quality Dimension"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms#hasPolicy
+:hasPolicy rdf:type owl:ObjectProperty .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms#hasUseCase
+:hasUseCase rdf:type owl:ObjectProperty .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperties
 :amendmentProperties rdf:type owl:ObjectProperty ;
                      rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." .
@@ -48,24 +62,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                              owl:someValuesFrom :UseCase
                            ] ;
                rdfs:comment "Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of the use case covered by that policy." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/criterionInContext
-:criterionInContext rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :validationProperties ;
-                    rdfs:domain [ rdf:type owl:Restriction ;
-                                  owl:onProperty :criterionInContext ;
-                                  owl:someValuesFrom :ContextualizedCriterion
-                                ] ;
-                    rdfs:range [ rdf:type owl:Restriction ;
-                                 owl:onProperty :criterionInContext ;
-                                 owl:someValuesFrom :ValidationMethod
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :criterionInContext ;
-                                 owl:someValuesFrom :ValidationPolicy
-                               ] ;
-                    rdfs:comment "Describes the relationship between a validation concept in FFDQ (needs, solutions, reports) and a contextualizedCriterion." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/dimensionInContext
@@ -114,20 +110,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :hasConsultedInformationElement rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf :hasInformationElement ;
                                 rdfs:comment "Provides a relationship between FFDQ concepts and the information elements that are Consulted, but not ActedUpon in a test."@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/hasCriterion
-:hasCriterion rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :validationProperties ;
-              rdfs:domain [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasCriterion ;
-                            owl:someValuesFrom :Validation
-                          ] ;
-              rdfs:range [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasCriterion ;
-                           owl:someValuesFrom :ContextualizedCriterion
-                         ] ;
-              rdfs:comment "Used to link the derived concept of a ContextualizedCriterion to the fundamental concept of a Criterion." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasDimension
@@ -206,7 +188,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                               ] ;
                   rdfs:range [ rdf:type owl:Restriction ;
                                owl:onProperty :hasSpecification ;
-                               owl:someValuesFrom :Assertion
+                               owl:someValuesFrom :DataQualityNeed
                              ] ;
                   rdfs:comment "Describes the relationship between a derived FFDQ concept and the fundamental concept of a specification (technical description of a test)." .
 
@@ -214,6 +196,20 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/hasStatus
 :hasStatus rdf:type owl:ObjectProperty ;
            rdfs:comment "Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be COMPLIANT or NON_COMPLIANT." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasValidation
+:hasValidation rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :validationProperties ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasValidation ;
+                             owl:someValuesFrom :Validation
+                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasValidation ;
+                            owl:someValuesFrom :ContextualizedCriterion
+                          ] ;
+               rdfs:comment "Used to link the derived concept of a ContextualizedCriterion to the fundamental concept of a Criterion." .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/implementedBy
@@ -314,6 +310,24 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                rdfs:comment "The issue targeted by some problem via the ImprovementTarget object." .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/validationInContext
+:validationInContext rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :validationProperties ;
+                     rdfs:domain [ rdf:type owl:Restriction ;
+                                   owl:onProperty :validationInContext ;
+                                   owl:someValuesFrom :ContextualizedCriterion
+                                 ] ;
+                     rdfs:range [ rdf:type owl:Restriction ;
+                                  owl:onProperty :validationInContext ;
+                                  owl:someValuesFrom :ValidationMethod
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :validationInContext ;
+                                  owl:someValuesFrom :ValidationPolicy
+                                ] ;
+                     rdfs:comment "Describes the relationship between a validation concept in FFDQ (needs, solutions, reports) and a contextualizedCriterion." .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/validationProperties
 :validationProperties rdf:type owl:ObjectProperty ;
                       rdfs:comment "Sub properties of this type group object properties that apply to validation concepts such as ValidationPolicy (DQ Needs), ValidationMethod (DQ Solutions) and Validation (DQ Reports)." .
@@ -323,22 +337,25 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  https://rs.tdwg.org/bdqffdq/terms#AuthoritiesDefaults
-:AuthoritiesDefaults rdf:type owl:DatatypeProperty ;
-                     rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
-                     rdfs:label "Authorities and Defaults" ;
-                     skos:prefLabel "Authorities and Defaults" .
+###  https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
+:hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
+                        rdfs:label "has Authorities and Defaults"@en ;
+                        skos:prefLabel "has Authorities and Defaults" .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/ExpectedResponse
-:ExpectedResponse rdf:type owl:DatatypeProperty ;
-                  rdfs:comment "The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification"@en ;
-                  rdfs:label "Expected Response" ;
-                  skos:prefLabel "Expected Response" .
+###  https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse
+:hasExpectedResponse rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification"@en ;
+                     rdfs:label "has Expected Response"@en ;
+                     skos:prefLabel "has Expected Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 :hasResponseResultValue rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:double ;
                         rdfs:label "has response result value" ;
                         skos:prefLabel "has response result value" .
 
@@ -346,12 +363,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
-
-###  https://rs.tdwg.org/bdqffdq/terms#Parameter
-:Parameter rdf:type owl:Class ;
-           rdfs:label "Parameter"@en ;
-           skos:prefLabel "Parameter"@en .
-
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ActedUpon
 :ActedUpon rdf:type owl:Class ;
@@ -362,7 +373,8 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Amendmenent
 :Amendmenent rdf:type owl:Class ;
-             rdfs:subClassOf :DataQualityNeed ;
+             rdfs:subClassOf :AmendmentConcept ,
+                             :DataQualityNeed ;
              rdfs:comment "Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example, \"Recommends valid value for taxon name in a single record\".  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level."@en ;
              rdfs:label "Amendment"@en ;
              skos:prefLabel "Amendment"@en .
@@ -370,15 +382,24 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion
 :AmendmentAssertion rdf:type owl:Class ;
-                    rdfs:subClassOf :Assertion ;
+                    rdfs:subClassOf :AmendmentConcept ,
+                                    :Assertion ;
                     rdfs:comment "The Amendment assertion type is a report level concept that describes a run of a test that proposes changes based on some data quality enhancement. The Amendment concept in FFDQ consists of a run result that includes a status (FILLED_IN, TRANSPOSED, etc) as well as the proposed changes to values from the original data." ;
                     rdfs:label "Amendment Assertion"@en ;
                     skos:prefLabel "Amendment Assertion"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/AmendmentConcept
+:AmendmentConcept rdf:type owl:Class ;
+                  rdfs:label "Amendment Concept"@en ;
+                  skos:definition "A term involved in proposals of changes to data or process to improve data quallity to fit expressed data quality needs."@en ;
+                  skos:prefLabel "Amendment Concept"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod
 :AmendmentMethod rdf:type owl:Class ;
-                 rdfs:subClassOf :DataQualityMethod ;
+                 rdfs:subClassOf :AmendmentConcept ,
+                                 :DataQualityMethod ;
                  rdfs:comment "The AmendmentMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an enhancement in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
                  rdfs:label "Amendment Method"@en ;
                  skos:prefLabel "Amendment Method"@en .
@@ -386,7 +407,8 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
 :AmendmentPolicy rdf:type owl:Class ;
-                 rdfs:subClassOf :NeedConcept ;
+                 rdfs:subClassOf :AmendmentConcept ,
+                                 :NeedConcept ;
                  rdfs:comment "A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case." ;
                  rdfs:label "Amendment Policy"@en ;
                  skos:definition "The set of Contextualized Enhancements that support a Use Case."@en ;
@@ -412,14 +434,16 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion
 :ContextualizedCriterion rdf:type owl:Class ;
-                         rdfs:subClassOf :NeedConcept ;
+                         rdfs:subClassOf :NeedConcept ,
+                                         :ValidationConcept ;
                          rdfs:comment "Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                          skos:prefLabel "Contextualized Criterion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension
 :ContextualizedDimension rdf:type owl:Class ;
-                         rdfs:subClassOf :NeedConcept ;
+                         rdfs:subClassOf :MeaurementConcept ,
+                                         :NeedConcept ;
                          rdfs:comment "Describes an instance of the dimension concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                          rdfs:label "Contextualized Dimension"@en ;
                          skos:prefLabel "Contextualized Dimension"@en .
@@ -427,7 +451,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement
 :ContextualizedEnhancement rdf:type owl:Class ;
-                           rdfs:subClassOf :NeedConcept ;
+                           rdfs:subClassOf :AmendmentConcept ,
+                                           :NeedConcept ;
                            rdfs:comment "Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                            rdfs:label "Contextualized Enhancement"@en ;
                            skos:prefLabel "Contextualized Enhancement"@en .
@@ -435,7 +460,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue
 :ContextualizedIssue rdf:type owl:Class ;
-                     rdfs:subClassOf :NeedConcept ;
+                     rdfs:subClassOf :IssueConcept ,
+                                     :NeedConcept ;
                      rdfs:comment "Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                      rdfs:label "Contextualized Issue"@en ;
                      skos:prefLabel "Contextualized Issue"@en .
@@ -504,7 +530,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Issue
 :Issue rdf:type owl:Class ;
-       rdfs:subClassOf :DataQualityNeed ;
+       rdfs:subClassOf :DataQualityNeed ,
+                       :IssueConcept ;
        rdfs:comment "Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximantes an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POSSIBLE_PROBLEM that would need further review to determine if the data have qulity for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either HAS_PROBLEM or POSSIBLE_PROBLEM, if no issue is found with the data the result will be NO_PROBLEM.  NO_PROBLEM, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that paralells a IssueMethod at the solutions level, and a IssieAssertion at the report level."@en ;
        rdfs:label "Issue"@en ;
        skos:prefLabel "Issue"@en .
@@ -512,15 +539,25 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueAssertion
 :IssueAssertion rdf:type owl:Class ;
-                rdfs:subClassOf :Assertion ;
+                rdfs:subClassOf :Assertion ,
+                                :IssueConcept ;
                 rdfs:comment "The DQ report concept describing a test for the negative case. If a problem was found the result has a status of HAS_PROBLEM otherwise the status is NO_PROBLEM." ;
                 rdfs:label "Issue Assertion"@en ;
                 skos:prefLabel "Issue Assertion"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/IssueConcept
+:IssueConcept rdf:type owl:Class ;
+              rdfs:comment "Issue terms are expressed in a negative sense, they identify data that do not or may not conform to quality needs."@en ;
+              rdfs:label "Issue Concept"@en ;
+              skos:definition "A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting expressed data quality needs.."@en ;
+              skos:prefLabel "Issue Concept"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueMethod
 :IssueMethod rdf:type owl:Class ;
-             rdfs:subClassOf :DataQualityMethod ;
+             rdfs:subClassOf :DataQualityMethod ,
+                             :IssueConcept ;
              rdfs:comment "The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
              rdfs:label "Issue Method"@en ;
              skos:prefLabel "Issue Method"@en .
@@ -528,7 +565,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
 :Measure rdf:type owl:Class ;
-         rdfs:subClassOf :DataQualityNeed ;
+         rdfs:subClassOf :DataQualityNeed ,
+                         :MeaurementConcept ;
          rdfs:comment "Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data have quality for some need if all records are COMPLETE for all pertenent Measures.  A Measure is the data quality needs concept that paralells a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level."@en ;
          rdfs:label "Measure"@en ;
          skos:prefLabel "Measure"@en .
@@ -536,7 +574,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
 :MeasurementAssertion rdf:type owl:Class ;
-                      rdfs:subClassOf :Assertion ;
+                      rdfs:subClassOf :Assertion ,
+                                      :MeaurementConcept ;
                       rdfs:comment "The Measure assertion type is a report level concept that describes a run of a test that performs a measurement according to some data quality dimension. In FFDQ, the Measure concept consists of a run result of COMPLETE or NOT_COMPLETE or a value of the measurement (i.e. a measure of dwc:eventDate duration in seconds)." ;
                       rdfs:label "Measurement Assertion"@en ;
                       skos:prefLabel "Measurement Assertion"@en .
@@ -544,7 +583,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod
 :MeasurementMethod rdf:type owl:Class ;
-                   rdfs:subClassOf :DataQualityMethod ;
+                   rdfs:subClassOf :DataQualityMethod ,
+                                   :MeaurementConcept ;
                    rdfs:comment "The MeasurementMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
                    rdfs:label "Measurement Method"@en ;
                    skos:prefLabel "Measurement Method"@en .
@@ -552,10 +592,18 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
 :MeasurementPolicy rdf:type owl:Class ;
-                   rdfs:subClassOf :NeedConcept ;
+                   rdfs:subClassOf :MeaurementConcept ,
+                                   :NeedConcept ;
                    rdfs:comment "The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case." ;
                    rdfs:label "Measurement Policy"@en ;
                    skos:prefLabel "Measurement Policy"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/MeaurementConcept
+:MeaurementConcept rdf:type owl:Class ;
+                   rdfs:label "Measurement Concept"@en ;
+                   skos:definition "A term involved in measurement of data quality with regards to expressed data quality needs."@en ;
+                   skos:prefLabel "Measurement Concept"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Mechanism
@@ -573,9 +621,16 @@ The assertion concept consists of a specification (the technical description of 
              skos:prefLabel "Need Concept"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:label "Parameter"@en ;
+           skos:prefLabel "Parameter"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
 :ProblemPolicy rdf:type owl:Class ;
-               rdfs:subClassOf :NeedConcept ;
+               rdfs:subClassOf :IssueConcept ,
+                               :NeedConcept ;
                rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." ;
                rdfs:label "Problem Policy"@en ;
                skos:prefLabel "Problem Policy"@en .
@@ -655,7 +710,8 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Validation
 :Validation rdf:type owl:Class ;
-            rdfs:subClassOf :DataQualityNeed ;
+            rdfs:subClassOf :DataQualityNeed ,
+                            :ValidationConcept ;
             rdfs:comment "Describes the criteria for determining compliance of data to fill some data quality need.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example, \"The value of basisOfRecord of single records must be in the controlled vocabulary\".   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality."@en ;
             rdfs:label "Validation"@en ;
             skos:prefLabel "Validation"@en .
@@ -663,15 +719,25 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion
 :ValidationAssertion rdf:type owl:Class ;
-                     rdfs:subClassOf :Assertion ;
+                     rdfs:subClassOf :Assertion ,
+                                     :ValidationConcept ;
                      rdfs:comment "The Validation assertion type is a report level concept that describes a run of a test for validity. The Validation concept in FFDQ consists of a run result of COMPLIANT or NON_COMPLIANT and a criterion that describes the conditions for validity that result in a status of COMPLIANT." ;
                      rdfs:label "Vailidation Assertion"@en ;
                      skos:prefLabel "Vailidation Assertion"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/ValidationConcept
+:ValidationConcept rdf:type owl:Class ;
+                   rdfs:comment "Validation terms are expressed in a positive sense, they identify data that conform to needs."@en ;
+                   rdfs:label "Validation Concept"@en ;
+                   skos:definition "A term involved in statements about the conformance of data to expressed quality needs."@en ;
+                   skos:prefLabel "Validation Concept"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationMethod
 :ValidationMethod rdf:type owl:Class ;
-                  rdfs:subClassOf :DataQualityMethod ;
+                  rdfs:subClassOf :DataQualityMethod ,
+                                  :ValidationConcept ;
                   rdfs:comment "The ValidationMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
                   rdfs:label "Validation Method"@en ;
                   skos:prefLabel "Validation Method"@en .
@@ -679,7 +745,8 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
 :ValidationPolicy rdf:type owl:Class ;
-                  rdfs:subClassOf :NeedConcept ;
+                  rdfs:subClassOf :NeedConcept ,
+                                  :ValidationConcept ;
                   rdfs:comment "The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case." ;
                   rdfs:label "Validation Policy"@en ;
                   skos:prefLabel "Validation Policy"@en .
@@ -700,6 +767,19 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
                        :ResourceType ;
               rdfs:comment "A record from a dataset without dependencies on any other record."@en ;
               rdfs:label "Single Record"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Amendmenent
+                :Issue
+                :Measure
+                :Validation
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -57,7 +57,9 @@ Amendments propose changes to data or processes that, if accepted, may improve t
 
 Measures measure some specific aspect of data quality.
 
-Validations assess compliance with a need.  Data have quality if they are compliant with the requirements of the validation test.
+Validations assess compliance with a need.  Data have quality if they are compliant with the requirements of the validation test.  Validations relate information elements and resource types with a specification of specifically how to assess fitness of the data under some narrow criterion, and themselves are assembled into validations policies, which are linked to other policies to cover a description of the data quality needs of a UseCase.
+
+![Diagram of the classes involved in expressing data quality needs with Validations.](bdqffdq_data_quality_needs.svg "Expressing data quality needs: Validations")
 
 Issues are the converse of Validations.  Data lack quality if an issue identifies a potential problem in the data that would require further human review to identify if the data have quality for some purpose.  
 
