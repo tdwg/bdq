@@ -24,7 +24,7 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="0.52921828"
-     inkscape:cx="1102.5696"
+     inkscape:cx="1088.3978"
      inkscape:cy="481.84276"
      inkscape:window-width="1738"
      inkscape:window-height="1002"
@@ -2261,15 +2261,33 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="941.08234"
-       y="99.776367"
+       x="937.24268"
+       y="101.77036"
        id="text32203"><tspan
          sodipodi:role="line"
-         id="tspan33530">Expressing</tspan><tspan
+         id="tspan33534"
+         x="937.24268"
+         y="101.77036">Expressing</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="937.24268"
+       y="136.90363"
+       id="text32203-0"><tspan
          sodipodi:role="line"
-         id="tspan33532">Data Quality Needs:</tspan><tspan
+         id="tspan33534-0"
+         x="937.24268"
+         y="136.90363">Data Quality Needs:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="940.15271"
+       y="170.74182"
+       id="text32203-0-3"><tspan
          sodipodi:role="line"
-         id="tspan33534">Validations</tspan></text>
+         id="tspan33534-0-9"
+         x="940.15271"
+         y="170.74182">Validations</tspan></text>
     <path
        style="display:inline;fill:#f5f5b1;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0.53597772;filter:url(#filter8030-7-3-8)"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
