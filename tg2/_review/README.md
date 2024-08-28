@@ -5,6 +5,7 @@ Start on the [BDQ Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/inde
 
 Work in progress description of files in this directory: 
 
+<pre>
 ├── build  build scripts and templates to assemble pages
 │   ├── .md files are working files that are to become templates but are not yet
 │   ├── .py files build other artifacts
@@ -28,5 +29,5 @@ Work in progress description of files in this directory:
     ├── .xml rdf/xml files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE **
     ├── .csv files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE ** 
     └── term_versions location for and proposed stubs for term-version files to which lines are only appended from which vocabulary artifacts will be built.
-
+</pre>
 
