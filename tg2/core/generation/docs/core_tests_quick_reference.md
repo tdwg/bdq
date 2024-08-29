@@ -350,7 +350,7 @@ Is there a value in dwc:basisOfRecord?
 
 ### Specification
 
-COMPLIANT if dwc:basisOfRecord is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:basisOfRecord is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -382,7 +382,7 @@ Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; COMPLIANT if the value of dwc:basisOfRecord is valid using the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; COMPLIANT if the value of dwc:basisOfRecord is valid using the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -392,6 +392,10 @@ dwc:basisOfRecord
 ### Parameters
 
 dwc:basisOfRecord vocabulary
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
 
 ### Examples
 
@@ -422,7 +426,7 @@ Is there a value in dc:type?
 
 ### Specification
 
-COMPLIANT if dc:type is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dc:type is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -454,12 +458,16 @@ Does the value in dc:type occur as a value in the DCMI type vocabulary?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is EMPTY; COMPLIANT if the value of dc:type is a term name in the DCMI Type Vocabulary (see bdq:sourceAuthority); otherwise NOT_COMPLIANT DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is EMPTY; COMPLIANT if the value of dc:type is a term name in the DCMI Type Vocabulary (see bdq:sourceAuthority); otherwise NOT_COMPLIANT
 
 ### Information Elements
 
 Acted Upon: 
 dc:type
+
+### Source Authorities and Default Parameter Values
+
+DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
 ### Examples
 
@@ -490,7 +498,7 @@ Is there a value in dcterms:license?
 
 ### Specification
 
-COMPLIANT if dcterms:license is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dcterms:license is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -526,7 +534,7 @@ Does the value of dcterms:license occur in bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is EMPTY; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is EMPTY; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -536,6 +544,10 @@ dcterms:license
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\
 
 ### Examples
 
@@ -566,7 +578,7 @@ Do the geographic coordinates fall on or within the boundaries of the territory 
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are EMPTY or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "ADM1 boundaries UNION with Exclusive Economic Zones" {[https://gadm.org] spatial UNION [https://marineregions.org]},bdq:spatialBufferInMeters default = "3000"
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are EMPTY or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -576,6 +588,10 @@ dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 ### Parameters
 
 bdq:sourceAuthority,bdq:spatialBufferInMeters
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"
 
 ### Examples
 
@@ -608,7 +624,7 @@ Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers tha
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or is not interpretable as a number, or dwc:decimalLongitude is EMPTY or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or is not interpretable as a number, or dwc:decimalLongitude is EMPTY or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -644,7 +660,7 @@ Do the geographic coordinates fall on or within the boundary from the bdq:source
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are EMPTY or invalid, or dwc:stateProvince is EMPTY or not found in bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "ADM1 boundaries" {[https://gadm.org]},bdq:spatialBufferInMeters default = "3000"
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are EMPTY or invalid, or dwc:stateProvince is EMPTY or not found in bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -655,13 +671,15 @@ dwc:stateProvince,dwc:decimalLatitude,dwc:decimalLongitude
 
 bdq:sourceAuthority,bdq:spatialBufferInMeters
 
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"
+
 ### Examples
 
-dwc:stateProvince="Rio Negro", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521", dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Input fields contain interpretable values"
+dwc:stateProvince="Tasmania", dwc:decimalLatitude="-42.85", dwc:decimalLongitude="146.75": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Input fields contain interpretable values"
 
-dwc:stateProvince="Neuquén", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521", dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Input fields contain interpretable values but coordinates don't match dwc:stateProvince"
-
-dwc:stateProvince="Neuquén", dwc:decimalLatitude="-141.0525925872862", dwc:decimalLongitude="-71.5310546742521", dwc:geodeticDatum="": Response.status=INTERNAL_PREREQUISTES_NOT_MET, Response.comment="Input field contain invalid value"
+dwc:stateProvince="Córdoba", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Input fields contain interpretable values but coordinates don't match dwc:stateProvince with buffer"
 
 
 ### Use Cases
@@ -686,7 +704,7 @@ Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match t
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is EMPTY or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are EMPTY or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},{bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"
+EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is EMPTY or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are EMPTY or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -699,6 +717,10 @@ dwc:scientificName
 ### Parameters
 
 bdq:taxonIsMarine,bdq:geospatialLand,bdq:spatialBufferInMeters,bdq:assumptionOnUnknownBiome
+
+### Source Authorities and Default Parameter Values
+
+bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},{{bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"
 
 ### Examples
 
@@ -729,7 +751,7 @@ Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is EMPTY; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters can be interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is EMPTY; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters can be interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -765,7 +787,7 @@ Is there a value in dwc:countryCode?
 
 ### Specification
 
-COMPLIANT if dwc:countryCode is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:countryCode is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -797,12 +819,16 @@ Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is EMPTY; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+EXTERNAL_PREREQUISITES_NOT_MET if bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is EMPTY; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
 Acted Upon: 
 dwc:countryCode
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 ### Examples
 
@@ -833,7 +859,7 @@ Is the combination of the values of the terms dwc:country, dwc:stateProvince uni
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are EMPTY; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are EMPTY; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -843,6 +869,10 @@ dwc:country,dwc:stateProvince
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 ### Examples
 
@@ -873,12 +903,16 @@ Does the ISO country code, determined from the value of dwc:country, equal the v
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are EMPTY; COMPLIANT if the value of the country code determined from the value of dwc:country from the bdq:sourceAuthority is equal to the value of dwc:countryCode; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are EMPTY; COMPLIANT if the value of the country code determined from the value of dwc:country from the bdq:sourceAuthority is equal to the value of dwc:countryCode; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
 Acted Upon: 
 dwc:country,dwc:countryCode
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 ### Examples
 
@@ -909,7 +943,7 @@ Does the value of dwc:country occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is EMPTY; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is EMPTY; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -919,6 +953,10 @@ dwc:country
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 ### Examples
 
@@ -949,7 +987,7 @@ Is there a value in dwc:country?
 
 ### Specification
 
-COMPLIANT if dwc:country is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:country is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -985,7 +1023,7 @@ Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is EMPTY or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1017,7 +1055,7 @@ Is there a value in dwc:decimalLatitude?
 
 ### Specification
 
-COMPLIANT if dwc:decimalLatitude is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:decimalLatitude is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1049,7 +1087,7 @@ Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is EMPTY or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is EMPTY or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1081,7 +1119,7 @@ Is there a value in dwc:decimalLongitude?
 
 ### Specification
 
-COMPLIANT if dwc:decimalLongitude is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:decimalLongitude is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1113,7 +1151,7 @@ Is there a value in dwc:geodeticDatum?
 
 ### Specification
 
-COMPLIANT if dwc:geodeticDatum is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:geodeticDatum is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1145,12 +1183,16 @@ Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Da
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is EMPTY; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid; otherwise NOT_COMPLIANT bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is EMPTY; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
 Acted Upon: 
 dwc:geodeticDatum
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
 
 ### Examples
 
@@ -1181,7 +1223,7 @@ Is there a value in any of the Darwin Core spatial terms that could specify a lo
 
 ### Specification
 
-COMPLIANT if at least one term needed to determine the location of the entity exists and is not EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if at least one term needed to determine the location of the entity exists and is not EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1217,7 +1259,7 @@ Is the value of dwc:maximumDepthInMeters within the Parameter range?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is EMPTY or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is EMPTY or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1227,6 +1269,10 @@ dwc:maximumDepthInMeters
 ### Parameters
 
 bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters
+
+### Source Authorities and Default Parameter Values
+
+bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
 
 ### Examples
 
@@ -1257,7 +1303,7 @@ Is the value of dwc:maximumElevationInMeters of a single record within a valid r
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is EMPTY or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is EMPTY or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1267,6 +1313,10 @@ dwc:maximumElevationInMeters
 ### Parameters
 
 bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
+
+### Source Authorities and Default Parameter Values
+
+bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
 
 ### Examples
 
@@ -1297,7 +1347,7 @@ Is the value of dwc:minimumDepthInMeters within the Parameter range?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is EMPTY, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is EMPTY, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1307,6 +1357,10 @@ dwc:minimumDepthInMeters
 ### Parameters
 
 bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters
+
+### Source Authorities and Default Parameter Values
+
+bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
 
 ### Examples
 
@@ -1337,7 +1391,7 @@ Is the value of dwc:minimumDepthInMeters a number that is less than or equal to 
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is EMPTY, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is EMPTY, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1369,7 +1423,7 @@ Is the value of dwc:minimumElevationInMeters within the Parameter range?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is EMPTY or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is EMPTY or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1379,6 +1433,10 @@ dwc:minimumElevationInMeters
 ### Parameters
 
 bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
+
+### Source Authorities and Default Parameter Values
+
+bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
 
 ### Examples
 
@@ -1409,7 +1467,7 @@ Is the value of dwc:minimumElevationInMeters a number less than or equal to the 
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is EMPTY, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is EMPTY, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1441,7 +1499,7 @@ Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is EMPTY; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is EMPTY; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1451,6 +1509,10 @@ dwc:stateProvince
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 ### Examples
 
@@ -1481,7 +1543,7 @@ Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclus
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is EMPTY, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601-1 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT. 
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is EMPTY, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601-1 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -1517,7 +1579,7 @@ Is the value of dwc:day an integer between 1 and 31 inclusive?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT. 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -1553,7 +1615,7 @@ Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is EMPTY or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is EMPTY or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is EMPTY or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is EMPTY or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1592,7 +1654,7 @@ Is the value of dwc:eventDate entirely with the Parameter Range?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:eventDate is not a valid ISO 8601-1 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:eventDate is not a valid ISO 8601-1 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1602,6 +1664,10 @@ dwc:eventDate
 ### Parameters
 
 bdq:earliestValidDate,bdq:latestValidDate
+
+### Source Authorities and Default Parameter Values
+
+bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year
 
 ### Examples
 
@@ -1632,7 +1698,7 @@ Is there a value in dwc:eventDate?
 
 ### Specification
 
-COMPLIANT if dwc:eventDate is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:eventDate is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1664,7 +1730,7 @@ Is the value of dwc:eventDate a valid ISO date?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601-1 date; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601-1 date; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1700,7 +1766,7 @@ Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:mont
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are EMPTY; COMPLIANT if all of the following conditions are met (1) dwc:year is EMPTY or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is EMPTY or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is EMPTY or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT. 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are EMPTY; COMPLIANT if all of the following conditions are met (1) dwc:year is EMPTY or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is EMPTY or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is EMPTY or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -1736,7 +1802,7 @@ Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day
 
 ### Specification
 
-COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are NOT EMPTY; otherwise NOT_COMPLIANT. 
+COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are NOT EMPTY; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -1772,7 +1838,7 @@ Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1804,7 +1870,7 @@ Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 36
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is EMPTY or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is EMPTY or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is EMPTY or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is EMPTY or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1843,7 +1909,7 @@ Is the value of dwc:year within the Parameter range?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:year is EMPTY or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT bdq:earliestValidDate="1582",bdq:latestValidDate=current year
+INTERNAL_PREREQUISITES_NOT_MET if dwc:year is EMPTY or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1853,6 +1919,10 @@ dwc:year
 ### Parameters
 
 bdq:earliestValidDate,bdq:latestValidDate
+
+### Source Authorities and Default Parameter Values
+
+bdq:earliestValidDate="1582",bdq:latestValidDate=current year
 
 ### Examples
 
@@ -1883,7 +1953,7 @@ Is there a value in dwc:year?
 
 ### Specification
 
-COMPLIANT if dwc:year is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:year is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1915,7 +1985,7 @@ Is the value of dwc:dateIdentified within Parameter ranges and either overlap or
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is EMPTY, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601-1, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601-1 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is EMPTY or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601-1 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]},bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is EMPTY, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601-1, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601-1 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is EMPTY or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601-1 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1928,6 +1998,10 @@ dwc:eventDate
 ### Parameters
 
 bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]},bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true
 
 ### Examples
 
@@ -1958,7 +2032,7 @@ Is the value of dwc:dateIdentified a valid ISO date?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601-1 date; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601-1 date; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1990,7 +2064,7 @@ Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is EMPTY; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is EMPTY; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -2000,6 +2074,10 @@ dwc:degreeOfEstablishment
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
 
 ### Examples
 
@@ -2030,7 +2108,7 @@ Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is EMPTY; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is EMPTY; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -2040,6 +2118,10 @@ dwc:establishmentMeans
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
 
 ### Examples
 
@@ -2070,7 +2152,7 @@ Is there a value in dwc:occurrenceID?
 
 ### Specification
 
-COMPLIANT if dwc:occurrenceID is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:occurrenceID is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2102,7 +2184,7 @@ Is there a value in dwc:occurrenceStatus?
 
 ### Specification
 
-COMPLIANT if dwc:occurrenceStatus is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:occurrenceStatus is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2134,7 +2216,7 @@ Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is EMPTY; COMPLIANT if the value of dwc:occurrenceStatus is resolved by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is EMPTY; COMPLIANT if the value of dwc:occurrenceStatus is resolved by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2144,6 +2226,10 @@ dwc:occurrenceStatus
 ### Parameters
 
 dwc:occurrenceStatus vocabulary
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
 
 ### Examples
 
@@ -2174,7 +2260,7 @@ Does the value of dwc:pathway occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is EMPTY; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is EMPTY; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -2184,6 +2270,10 @@ dwc:pathway
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
 
 ### Examples
 
@@ -2214,7 +2304,7 @@ Does the value of dwc:sex occur in bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is EMPTY; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is EMPTY; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -2224,6 +2314,10 @@ dwc:sex
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
 
 ### Examples
 
@@ -2254,7 +2348,7 @@ Does the value of dwc:typeStatus occur in bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; COMPLIANT if the value of the first word in each \ bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; COMPLIANT if the value of the first word in each \
 
 ### Information Elements
 
@@ -2264,6 +2358,10 @@ dwc:typeStatus
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
 
 ### Examples
 
@@ -2294,7 +2392,7 @@ Is the combination of higher classification taxonomic terms consistent using bdq
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are EMPTY; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are EMPTY; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2304,6 +2402,10 @@ dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfam
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2334,7 +2436,7 @@ Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is EMPTY; COMPLIANT if the value of dwc:class was found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is EMPTY; COMPLIANT if the value of dwc:class was found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2344,6 +2446,10 @@ dwc:class
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2374,7 +2480,7 @@ Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is EMPTY; COMPLIANT if the value of dwc:family was found as a value at the rank of Family by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is EMPTY; COMPLIANT if the value of dwc:family was found as a value at the rank of Family by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2384,6 +2490,10 @@ dwc:family
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2414,7 +2524,7 @@ Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthorit
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is EMPTY; COMPLIANT if the value of dwc:genus was found as a value at the rank of genus by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is EMPTY; COMPLIANT if the value of dwc:genus was found as a value at the rank of genus by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2424,6 +2534,10 @@ dwc:genus
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2454,7 +2568,7 @@ Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthorit
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is EMPTY; COMPLIANT if the value of dwc:kingdom was found as a value at the rank of kingdom by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is EMPTY; COMPLIANT if the value of dwc:kingdom was found as a value at the rank of kingdom by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2464,6 +2578,10 @@ dwc:kingdom
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2494,7 +2612,7 @@ Is there a value in dwc:kingdom?
 
 ### Specification
 
-COMPLIANT if dwc:kingdom is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:kingdom is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2526,7 +2644,7 @@ Is there a value in dwc:namePublishedInYear?
 
 ### Specification
 
-COMPLIANT if dwc:namePublishedInYear is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:namePublishedInYear is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2558,7 +2676,7 @@ Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is EMPTY; COMPLIANT if the value of dwc:order was found as a value at the rank of Order by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is EMPTY; COMPLIANT if the value of dwc:order was found as a value at the rank of Order by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2568,6 +2686,10 @@ dwc:order
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2598,7 +2720,7 @@ Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is EMPTY; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is EMPTY; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2608,6 +2730,10 @@ dwc:phylum
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2638,7 +2764,7 @@ Is the polynomial represented in dwc:scientificName consistent with the equivale
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are EMPTY; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with NOT_EMPTY values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT. 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are EMPTY; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with NOT_EMPTY values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -2674,7 +2800,7 @@ Is there a value in dwc:scientificNameAuthorship?
 
 ### Specification
 
-COMPLIANT if dwc:scientificNameAuthorship is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:scientificNameAuthorship is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2706,7 +2832,7 @@ Does the value of dwc:scientificNameID contain a complete identifier?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is EMPTY; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is EMPTY; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2726,7 +2852,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
-If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.  Note that GBIF currently uses "TaxonID" for this entity.
+If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.  Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.
 
 ********************
 
@@ -2742,7 +2868,7 @@ Is there a value in dwc:scientificNameID?
 
 ### Specification
 
-COMPLIANT if dwc:scientificNameID is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:scientificNameID is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2774,7 +2900,7 @@ Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthor
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2784,6 +2910,10 @@ dwc:scientificName
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2814,7 +2944,7 @@ Is there a value in dwc:scientificName?
 
 ### Specification
 
-COMPLIANT if dwc:scientificName is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:scientificName is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2846,7 +2976,7 @@ Is there a value in dwc:taxonRank?
 
 ### Specification
 
-COMPLIANT if dwc:taxonRank is not EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if dwc:taxonRank is not EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2878,7 +3008,7 @@ Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is EMPTY; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is EMPTY; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -2888,6 +3018,10 @@ dwc:taxonRank
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}
 
 ### Examples
 
@@ -2918,7 +3052,7 @@ Is there a value in any of the terms needed to determine that the taxon exists?
 
 ### Specification
 
-COMPLIANT if at least one term needed to determine the taxon of the entity exists and is NOT EMPTY; otherwise NOT_COMPLIANT 
+COMPLIANT if at least one term needed to determine the taxon of the entity exists and is NOT EMPTY; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2954,7 +3088,7 @@ Can the taxon be unambiguously resolved from bdq:sourceAuthority using the avail
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are EMPTY; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is EMPTY and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are EMPTY and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are EMPTY; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is EMPTY and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are EMPTY and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2964,6 +3098,10 @@ dwc:taxonID,dwc:scientificName,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -2994,7 +3132,7 @@ A count of the number of distinct AMENDMENT tests that have a Response.status="A
 
 ### Specification
 
-The number of tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED") 
+The number of tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED")
 
 ### Information Elements
 Consulted: 
@@ -3023,7 +3161,7 @@ Measures the number of distinct VALIDATION tests that have a Response.status="CO
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; Report the number of tests of output type VALIDATION run against the record that were COMPLIANT (passed) 
+INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; Report the number of tests of output type VALIDATION run against the record that were COMPLIANT (passed)
 
 ### Information Elements
 Consulted: 
@@ -3056,7 +3194,7 @@ A count of the number of distinct VALIDATION tests that have a Response.status="
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; REPORT of the number of tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT" 
+INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; REPORT of the number of tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"
 
 ### Information Elements
 Consulted: 
@@ -3089,7 +3227,7 @@ The number of distinct VALIDATION tests that have a Response.status="EXTERNAL_PR
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET") 
+INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")
 
 ### Information Elements
 Consulted: 
@@ -3122,7 +3260,7 @@ What is the duration of dwc:eventDate in seconds?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:eventDate is not a valid ISO 8601-1 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601-1) expressed in the dwc:eventDate, in seconds. 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or if the value of dwc:eventDate is not a valid ISO 8601-1 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601-1) expressed in the dwc:eventDate, in seconds.
 
 ### Information Elements
 
@@ -3158,7 +3296,7 @@ Is there a value in dwc:dataGeneralizations?
 
 ### Specification
 
-POTENTIAL_ISSUE if dwc:dataGeneralizations is not EMPTY; otherwise NOT_ISSUE 
+POTENTIAL_ISSUE if dwc:dataGeneralizations is not EMPTY; otherwise NOT_ISSUE
 
 ### Information Elements
 
@@ -3185,7 +3323,7 @@ This is not specific to spatial data, any value in the dwc:dataGeneralizations f
 ##  Issue Coordinates Center Of Country
 
 ###  ISSUE_COORDINATES_CENTEROFCOUNTRY
-https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e/2024-08-20
+https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e/2024-08-28
 Acts upon  SingleRecord
 
 ### Description
@@ -3194,16 +3332,23 @@ Are the supplied geographic coordinates within a defined buffer of the center of
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are EMPTY; POTENTIAL_ISSUE if the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center (or one of the centers), of the bdq:sourceAuthority provides more than one per country code of the supplied dwc:countryCode as represented in the bdq:sourceAuthority; otherwise NOT_ISSUE. bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are EMPTY; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is EMPTY or less than half the square root of the area of the country; otherwise NOT_ISSUE.
 
 ### Information Elements
 
 Acted Upon: 
 dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 
+Consulted: 
+dwc:coordinateUncertaintyInMeters
+
 ### Parameters
 
 bdq:spatialBufferInMeters,bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}
 
 ### Examples
 
@@ -3234,7 +3379,7 @@ Is there a value in dwc:establishmentMeans?
 
 ### Specification
 
-POTENTIAL_ISSUE if dwc:establishmentMeans is NOT EMPTY; otherwise NOT_ISSUE 
+POTENTIAL_ISSUE if dwc:establishmentMeans is NOT EMPTY; otherwise NOT_ISSUE
 
 ### Information Elements
 
@@ -3266,7 +3411,7 @@ Are there any annotations associated with the record?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE. bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" {[https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under test." {[https://www.w3.org/TR/annotation-vocab/]}
+EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
 
 ### Information Elements
 Consulted: 
@@ -3275,6 +3420,10 @@ AllDarwinCoreTerms
 ### Parameters
 
 bdq:annotationSystem,bdq:annotationAlertIf
+
+### Source Authorities and Default Parameter Values
+
+bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" {[https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under test." {[https://www.w3.org/TR/annotation-vocab/]}
 
 ### Examples
 
@@ -3305,7 +3454,7 @@ Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuth
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3315,6 +3464,10 @@ dwc:basisOfRecord
 ### Parameters
 
 dwc:basisOfRecord vocabulary
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
 
 ### Examples
 
@@ -3345,12 +3498,16 @@ Proposes an amendment to the value of dc:type using the DCMI type vocabulary.
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is EMPTY; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is EMPTY; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
 Acted Upon: 
 dc:type
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
 ### Examples
 
@@ -3381,7 +3538,7 @@ Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthor
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3391,6 +3548,10 @@ dcterms:license
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}
 
 ### Examples
 
@@ -3421,7 +3582,7 @@ Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude were NOT EMPTY, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude were EMPTY; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. 
+INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude were NOT EMPTY, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude were EMPTY; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3460,7 +3621,7 @@ Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLong
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are EMPTY; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are EMPTY; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3469,6 +3630,10 @@ dwc:decimalLatitude,dwc:decimalLongitude
 
 Consulted: 
 dwc:countryCode
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 ### Examples
 
@@ -3499,7 +3664,7 @@ Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is EMPTY, or if dwc:countryCode is NOT_EMPTY; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code; otherwise NOT_AMENDED. bdq:sourceAuthority default = "ADM1 boundaries spatial UNION with Exclusive Economic Zones" {[https://gadm.org] spatial UNION [https://marineregions.org]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is EMPTY, or if dwc:countryCode is NOT_EMPTY; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3509,6 +3674,10 @@ dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
 
 ### Examples
 
@@ -3539,12 +3708,16 @@ Proposes an amendment to the value of dwc:countryCode if it can be interpreted a
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is EMPTY; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted from bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is EMPTY; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted from bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
 Acted Upon: 
 dwc:countryCode
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 ### Examples
 
@@ -3571,7 +3744,7 @@ Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is not EMPTY; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are NOT_EMPTY, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}
+INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is not EMPTY; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are NOT_EMPTY, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3581,6 +3754,10 @@ dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters,dwc:decimalLatitude,dwc:deci
 ### Parameters
 
 bdq:defaultGeodeticDatum
+
+### Source Authorities and Default Parameter Values
+
+bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}
 
 ### Examples
 
@@ -3602,7 +3779,7 @@ If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not
 ##  Amendment dwc:geodeticDatum Standardized
 
 ###  AMENDMENT_GEODETICDATUM_STANDARDIZED
-https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-08-25
 Acts upon  SingleRecord
 
 ### Description
@@ -3611,12 +3788,16 @@ Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuth
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority was not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is EMPTY; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority was not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is EMPTY; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
 Acted Upon: 
 dwc:geodeticDatum
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
 
 ### Examples
 
@@ -3647,7 +3828,7 @@ Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDep
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are NOT EMPTY or dwc:verbatimDepth is EMPTY; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED. 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are NOT EMPTY or dwc:verbatimDepth is EMPTY; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3686,7 +3867,7 @@ Proposes an amendment or amendments to the values of dwc:minimumElevationInMeter
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are NOT EMPTY or dwc:verbatimElevation is EMPTY; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are NOT EMPTY or dwc:verbatimElevation is EMPTY; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3725,7 +3906,7 @@ Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inc
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; AMENDED the value of dwc:day if the value was unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; AMENDED the value of dwc:day if the value was unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3761,7 +3942,7 @@ Proposes an amendment to the value of dwc:eventDate from the content of dwc:verb
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is NOT EMPTY or the value of dwc:verbatimEventDate is EMPTY; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601-1 date was interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is NOT EMPTY or the value of dwc:verbatimEventDate is EMPTY; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601-1 date was interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3800,7 +3981,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 ### Specification
 
-INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is NOT EMPTY or dwc:year is EMPTY; FILLED_IN the value of dwc:eventDate if an ISO 8601-1 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED. 
+INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is NOT EMPTY or dwc:year is EMPTY; FILLED_IN the value of dwc:eventDate if an ISO 8601-1 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3839,7 +4020,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate was not EMPTY or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear were EMPTY; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each were independantly interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate was not EMPTY or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear were EMPTY; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each were independantly interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3878,7 +4059,7 @@ Proposes an amendment of the value of dwc:eventDate to a valid ISO date.
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; AMENDED if the value of dwc:eventDate was not a properly formatted ISO 8601-1 date but was unambiguous, and was altered to be a valid ISO 8601-1 date; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY; AMENDED if the value of dwc:eventDate was not a properly formatted ISO 8601-1 date but was unambiguous, and was altered to be a valid ISO 8601-1 date; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3914,7 +4095,7 @@ Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:star
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or contains an invalid value according to ISO 8601-1; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is EMPTY and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is EMPTY and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is EMPTY and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are EMPTY and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED. 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is EMPTY or contains an invalid value according to ISO 8601-1; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is EMPTY and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is EMPTY and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is EMPTY and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are EMPTY and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3953,7 +4134,7 @@ Proposes an amendment to the value of dwc:month as an integer between 1 and 12 i
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; AMENDED the value of dwc:month if it was able to be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is EMPTY; AMENDED the value of dwc:month if it was able to be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3989,12 +4170,16 @@ Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; AMENDED if the value of dwc:dateIdentified was not a properly formatted ISO 8601-1 date but was unambiguous and was altered to be a valid ISO 8601-1 date; otherwise NOT_AMENDED. bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]}
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; AMENDED if the value of dwc:dateIdentified was not a properly formatted ISO 8601-1 date but was unambiguous and was altered to be a valid ISO 8601-1 date; otherwise NOT_AMENDED.
 
 ### Information Elements
 
 Acted Upon: 
 dwc:dateIdentified
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]}
 
 ### Examples
 
@@ -4025,7 +4210,7 @@ Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:so
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is EMPTY; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is EMPTY; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4035,6 +4220,10 @@ dwc:degreeOfEstablishment
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
 
 ### Examples
 
@@ -4065,7 +4254,7 @@ Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourc
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is EMPTY; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is EMPTY; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4075,6 +4264,10 @@ dwc:establishmentMeans
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
 
 ### Examples
 
@@ -4101,7 +4294,7 @@ Proposes an amendment of the value of dwc:occurrenceStatus to the default parame
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is NOT EMPTY; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are EMPTY; otherwise NOT_AMENDED dwc:defaultOccurrenceStatus default = "present"
+INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is NOT EMPTY; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are EMPTY; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4114,6 +4307,10 @@ dwc:individualCount,dwc:organismQuantity
 ### Parameters
 
 dwc:defaultOccurrenceStatus
+
+### Source Authorities and Default Parameter Values
+
+dwc:defaultOccurrenceStatus default = "present"
 
 ### Examples
 
@@ -4140,7 +4337,7 @@ Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceA
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is EMPTY; AMENDED the value of dwc:occurrenceStatus if could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is EMPTY; AMENDED the value of dwc:occurrenceStatus if could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4150,6 +4347,10 @@ dwc:occurrenceStatus
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
 
 ### Examples
 
@@ -4180,7 +4381,7 @@ Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:pathway is EMPTY; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:pathway is EMPTY; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4190,6 +4391,10 @@ dwc:pathway
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
 
 ### Examples
 
@@ -4220,7 +4425,7 @@ Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is EMPTY; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is EMPTY; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4230,6 +4435,10 @@ dwc:sex
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
 
 ### Examples
 
@@ -4260,7 +4469,7 @@ Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthori
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; AMENDED the value of the first word in each \ bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is EMPTY; AMENDED the value of the first word in each \
 
 ### Information Elements
 
@@ -4270,6 +4479,10 @@ dwc:typeStatus
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
 
 ### Examples
 
@@ -4300,7 +4513,7 @@ Proposes an amendment to the value of dwc:scientificNameID if it can be unambigu
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is NOT EMPTY, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are EMPTY, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is EMPTY through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is NOT EMPTY, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are EMPTY, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is EMPTY through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4313,6 +4526,10 @@ dwc:taxonID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,d
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -4343,7 +4560,7 @@ Proposes an amendment to the value of dwc:scientificName using the dwc:scientifi
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is EMPTY, or dwc:scientificName was NOT EMPTY; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is EMPTY, or dwc:scientificName was NOT EMPTY; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4356,6 +4573,10 @@ dwc:scientificNameID
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 ### Examples
 
@@ -4386,7 +4607,7 @@ Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthorit
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is EMPTY; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is EMPTY; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4396,6 +4617,10 @@ dwc:taxonRank
 ### Parameters
 
 bdq:sourceAuthority
+
+### Source Authorities and Default Parameter Values
+
+bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}
 
 ### Examples
 
@@ -4420,7 +4645,7 @@ For reference, information about possible values of dwc:taxonRank can be found a
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4449,7 +4674,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
-https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4478,7 +4703,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4507,7 +4732,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4536,7 +4761,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4565,7 +4790,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4594,7 +4819,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4623,7 +4848,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
-https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4652,7 +4877,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4681,7 +4906,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4710,7 +4935,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4739,7 +4964,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4768,7 +4993,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_COUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_COUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/c44ce101-fb76-4948-a4f3-14c6dc5fee4a/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c44ce101-fb76-4948-a4f3-14c6dc5fee4a/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4797,7 +5022,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
-https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4826,7 +5051,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_STATEPROVINCE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_STATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/47d83e78-20fa-4da1-a867-4e93c7161f0d/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/47d83e78-20fa-4da1-a867-4e93c7161f0d/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4855,7 +5080,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_TERRESTRIALMARINE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_TERRESTRIALMARINE
-https://rs.tdwg.org/bdqcore/terms/10c84d1f-69b9-4321-a5a8-58a582e71fbc/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/10c84d1f-69b9-4321-a5a8-58a582e71fbc/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4884,7 +5109,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4913,7 +5138,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4942,7 +5167,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -4971,7 +5196,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5000,7 +5225,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_COUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_COUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/d197716f-6556-4010-822c-252479b17c1a/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d197716f-6556-4010-822c-252479b17c1a/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5029,7 +5254,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
-https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5058,7 +5283,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5087,7 +5312,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5116,7 +5341,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5145,7 +5370,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5174,7 +5399,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5203,7 +5428,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5232,7 +5457,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
-https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5261,7 +5486,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5290,7 +5515,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5319,7 +5544,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5348,7 +5573,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5377,7 +5602,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
-https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5406,7 +5631,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5435,7 +5660,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
-https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5464,7 +5689,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
-https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5493,7 +5718,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_COUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATES_COUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/d105bb0f-ec58-47d3-92f7-7d031f13534f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d105bb0f-ec58-47d3-92f7-7d031f13534f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5522,7 +5747,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
-https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5551,7 +5776,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_STATEPROVINCE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATES_STATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/c87aac27-bee7-45cf-b75c-e5a2d40b28e5/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c87aac27-bee7-45cf-b75c-e5a2d40b28e5/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5580,7 +5805,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_TERRESTRIALMARINE
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATES_TERRESTRIALMARINE
-https://rs.tdwg.org/bdqcore/terms/7e0f4e97-acae-466a-a9bf-c31956a85b4f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/7e0f4e97-acae-466a-a9bf-c31956a85b4f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5609,7 +5834,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5638,7 +5863,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5667,7 +5892,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5696,7 +5921,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5725,7 +5950,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_COUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_COUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/73fd9f74-7a81-4938-a51f-935d0786092d/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/73fd9f74-7a81-4938-a51f-935d0786092d/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5754,7 +5979,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
-https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5783,7 +6008,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5812,7 +6037,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5841,7 +6066,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5870,7 +6095,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5899,7 +6124,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5928,7 +6153,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5957,7 +6182,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
-https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -5986,7 +6211,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6015,7 +6240,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6044,7 +6269,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6073,7 +6298,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6102,7 +6327,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
-https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6131,7 +6356,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6160,7 +6385,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
-https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6189,7 +6414,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
-https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6218,7 +6443,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6247,7 +6472,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6276,7 +6501,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6305,7 +6530,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6334,7 +6559,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6363,7 +6588,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6392,7 +6617,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6421,7 +6646,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_TEMPORAL_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_TEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0adce26e-996b-4ee6-b3df-1368103462b3/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0adce26e-996b-4ee6-b3df-1368103462b3/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6450,7 +6675,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
-https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6479,7 +6704,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6508,7 +6733,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6537,7 +6762,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6566,7 +6791,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DAY_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DAY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6595,7 +6820,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6624,7 +6849,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6653,7 +6878,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6682,7 +6907,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6711,7 +6936,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6740,7 +6965,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6769,7 +6994,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENT_TEMPORAL_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_EVENT_TEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/215ea7b3-e52e-4c50-a5ac-86b8253c95cb/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/215ea7b3-e52e-4c50-a5ac-86b8253c95cb/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6798,7 +7023,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
-https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6827,7 +7052,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6856,7 +7081,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6885,7 +7110,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6914,7 +7139,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6943,7 +7168,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
-https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -6972,7 +7197,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
-https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7001,7 +7226,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
-https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7030,7 +7255,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
-https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7059,7 +7284,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7088,7 +7313,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7117,7 +7342,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7146,7 +7371,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7175,7 +7400,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7204,7 +7429,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
-https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7233,7 +7458,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7262,7 +7487,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
-https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7291,7 +7516,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7320,7 +7545,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7349,7 +7574,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7378,7 +7603,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7407,7 +7632,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7436,7 +7661,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SEX_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_SEX_STANDARD
-https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7465,7 +7690,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7494,7 +7719,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7523,7 +7748,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
-https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7552,7 +7777,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
-https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7581,7 +7806,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
-https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7610,7 +7835,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
-https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7639,7 +7864,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7668,7 +7893,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7697,7 +7922,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
-https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7726,7 +7951,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
-https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7755,7 +7980,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7784,7 +8009,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7813,7 +8038,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
-https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7842,7 +8067,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7871,7 +8096,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
-https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7900,7 +8125,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7929,7 +8154,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7958,7 +8183,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
-https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -7987,7 +8212,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8016,7 +8241,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8045,7 +8270,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8074,7 +8299,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_CLASS_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_CLASS_FOUND
-https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8103,7 +8328,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
-https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8132,7 +8357,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GENUS_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_GENUS_FOUND
-https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8161,7 +8386,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
-https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8190,7 +8415,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8219,7 +8444,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8248,7 +8473,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ORDER_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_ORDER_FOUND
-https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8277,7 +8502,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
-https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8306,7 +8531,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8335,7 +8560,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8364,7 +8589,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
-https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8393,7 +8618,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8422,7 +8647,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
-https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8451,7 +8676,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8480,7 +8705,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8509,7 +8734,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
-https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8538,7 +8763,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-08-29
 Acts upon  MultiRecord
 
 ### Description
@@ -8567,7 +8792,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-08-29
 Acts upon  MultiRecord
 
 ### Description

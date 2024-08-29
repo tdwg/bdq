@@ -1,4 +1,4 @@
-"GUID","Label","Method","Contextualized","Policy"
+"GUID","Label","Method","Specification","Policy"
 "0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8","urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047","urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142"
 "69b2efdc-6269-45a4-aecb-4cb99c2ae134","VALIDATION_COUNTRY_FOUND","urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9","urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848","urn:uuid:00a36139-71fa-4f82-a5f7-8574c54497bd"
 "eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f","VALIDATION_PHYLUM_FOUND","urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d","urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa","urn:uuid:022bd662-3052-4771-8e54-f4f74803ccc5"

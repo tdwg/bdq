@@ -107,6 +107,11 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 				print()
 				print(row['Parameters'])
 				print()
+			if not pandas.isna(row['AuthoritiesDefaults']) : 
+				print("### Source Authorities and Default Parameter Values")
+				print()
+				print(row['AuthoritiesDefaults'])
+				print()
 			print("### Examples")
 			print()
 			examplesRaw = row['Examples']
