@@ -393,7 +393,7 @@ dwc:basisOfRecord
 
 dwc:basisOfRecord vocabulary
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
 
@@ -465,7 +465,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dc:type
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
@@ -545,7 +545,7 @@ dcterms:license
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\
 
@@ -589,7 +589,7 @@ dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 
 bdq:sourceAuthority,bdq:spatialBufferInMeters
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"
 
@@ -671,7 +671,7 @@ dwc:stateProvince,dwc:decimalLatitude,dwc:decimalLongitude
 
 bdq:sourceAuthority,bdq:spatialBufferInMeters
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"
 
@@ -718,7 +718,7 @@ dwc:scientificName
 
 bdq:taxonIsMarine,bdq:geospatialLand,bdq:spatialBufferInMeters,bdq:assumptionOnUnknownBiome
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},{{bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"
 
@@ -826,7 +826,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if bdq:sourceAuthority is not available; INTERNAL
 Acted Upon: 
 dwc:countryCode
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
@@ -870,7 +870,7 @@ dwc:country,dwc:stateProvince
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
@@ -910,7 +910,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:country,dwc:countryCode
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
@@ -954,7 +954,7 @@ dwc:country
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
@@ -1190,7 +1190,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 Acted Upon: 
 dwc:geodeticDatum
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
 
@@ -1270,7 +1270,7 @@ dwc:maximumDepthInMeters
 
 bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
 
@@ -1314,7 +1314,7 @@ dwc:maximumElevationInMeters
 
 bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
 
@@ -1358,7 +1358,7 @@ dwc:minimumDepthInMeters
 
 bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
 
@@ -1434,7 +1434,7 @@ dwc:minimumElevationInMeters
 
 bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
 
@@ -1510,7 +1510,7 @@ dwc:stateProvince
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
@@ -1665,7 +1665,7 @@ dwc:eventDate
 
 bdq:earliestValidDate,bdq:latestValidDate
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year
 
@@ -1920,7 +1920,7 @@ dwc:year
 
 bdq:earliestValidDate,bdq:latestValidDate
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:earliestValidDate="1582",bdq:latestValidDate=current year
 
@@ -1999,7 +1999,7 @@ dwc:eventDate
 
 bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]},bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true
 
@@ -2075,7 +2075,7 @@ dwc:degreeOfEstablishment
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
 
@@ -2119,7 +2119,7 @@ dwc:establishmentMeans
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
 
@@ -2227,7 +2227,7 @@ dwc:occurrenceStatus
 
 dwc:occurrenceStatus vocabulary
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
 
@@ -2271,7 +2271,7 @@ dwc:pathway
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
 
@@ -2315,7 +2315,7 @@ dwc:sex
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
 
@@ -2359,7 +2359,7 @@ dwc:typeStatus
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
 
@@ -2403,7 +2403,7 @@ dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfam
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2447,7 +2447,7 @@ dwc:class
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2491,7 +2491,7 @@ dwc:family
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2535,7 +2535,7 @@ dwc:genus
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2579,7 +2579,7 @@ dwc:kingdom
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2687,7 +2687,7 @@ dwc:order
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2731,7 +2731,7 @@ dwc:phylum
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -2911,7 +2911,7 @@ dwc:scientificName
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -3019,7 +3019,7 @@ dwc:taxonRank
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}
 
@@ -3099,7 +3099,7 @@ dwc:taxonID,dwc:scientificName,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -3346,7 +3346,7 @@ dwc:coordinateUncertaintyInMeters
 
 bdq:spatialBufferInMeters,bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}
 
@@ -3421,7 +3421,7 @@ AllDarwinCoreTerms
 
 bdq:annotationSystem,bdq:annotationAlertIf
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" {[https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under test." {[https://www.w3.org/TR/annotation-vocab/]}
 
@@ -3465,7 +3465,7 @@ dwc:basisOfRecord
 
 dwc:basisOfRecord vocabulary
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
 
@@ -3505,7 +3505,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dc:type
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
@@ -3549,7 +3549,7 @@ dcterms:license
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}
 
@@ -3631,7 +3631,7 @@ dwc:decimalLatitude,dwc:decimalLongitude
 Consulted: 
 dwc:countryCode
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
@@ -3675,7 +3675,7 @@ dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
 
@@ -3715,7 +3715,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted Upon: 
 dwc:countryCode
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
@@ -3755,7 +3755,7 @@ dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters,dwc:decimalLatitude,dwc:deci
 
 bdq:defaultGeodeticDatum
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}
 
@@ -3795,7 +3795,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority was not available; INT
 Acted Upon: 
 dwc:geodeticDatum
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
 
@@ -4177,7 +4177,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is EMPTY; AMENDED if the va
 Acted Upon: 
 dwc:dateIdentified
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]}
 
@@ -4221,7 +4221,7 @@ dwc:degreeOfEstablishment
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
 
@@ -4265,7 +4265,7 @@ dwc:establishmentMeans
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
 
@@ -4308,7 +4308,7 @@ dwc:individualCount,dwc:organismQuantity
 
 dwc:defaultOccurrenceStatus
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 dwc:defaultOccurrenceStatus default = "present"
 
@@ -4348,7 +4348,7 @@ dwc:occurrenceStatus
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
 
@@ -4392,7 +4392,7 @@ dwc:pathway
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
 
@@ -4436,7 +4436,7 @@ dwc:sex
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
 
@@ -4480,7 +4480,7 @@ dwc:typeStatus
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
 
@@ -4527,7 +4527,7 @@ dwc:taxonID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,d
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -4574,7 +4574,7 @@ dwc:scientificNameID
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
@@ -4618,7 +4618,7 @@ dwc:taxonRank
 
 bdq:sourceAuthority
 
-### Source Authorities and Default Parameter Values
+### Default Parameter Values
 
 bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}
 
