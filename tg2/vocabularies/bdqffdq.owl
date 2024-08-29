@@ -337,6 +337,14 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms#hasCriterion
+:hasCriterion rdf:type owl:DatatypeProperty .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms#hasEnhancement
+:hasEnhancement rdf:type owl:DatatypeProperty .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
 :hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
                         rdfs:range xsd:string ;
@@ -363,6 +371,11 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  https://rs.tdwg.org/bdqffdq/terms#AbstractInformationElement
+:AbstractInformationElement rdf:type owl:Class ;
+                            rdfs:subClassOf :InformationElement .
+
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ActedUpon
 :ActedUpon rdf:type owl:Class ;
@@ -434,7 +447,7 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedCriterion
 :ContextualizedCriterion rdf:type owl:Class ;
-                         rdfs:subClassOf :NeedConcept ,
+                         rdfs:subClassOf :DataQualityNeed ,
                                          :ValidationConcept ;
                          rdfs:comment "Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                          skos:prefLabel "Contextualized Criterion"@en .
@@ -442,9 +455,9 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedDimension
 :ContextualizedDimension rdf:type owl:Class ;
-                         rdfs:subClassOf :MeaurementConcept ,
-                                         :NeedConcept ;
-                         rdfs:comment "Describes an instance of the dimension concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
+                         rdfs:subClassOf :DataQualityNeed ,
+                                         :MeaurementConcept ;
+                         rdfs:comment "Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                          rdfs:label "Contextualized Dimension"@en ;
                          skos:prefLabel "Contextualized Dimension"@en .
 
@@ -452,7 +465,7 @@ The assertion concept consists of a specification (the technical description of 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedEnhancement
 :ContextualizedEnhancement rdf:type owl:Class ;
                            rdfs:subClassOf :AmendmentConcept ,
-                                           :NeedConcept ;
+                                           :DataQualityNeed ;
                            rdfs:comment "Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                            rdfs:label "Contextualized Enhancement"@en ;
                            skos:prefLabel "Contextualized Enhancement"@en .
@@ -460,8 +473,8 @@ The assertion concept consists of a specification (the technical description of 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ContextualizedIssue
 :ContextualizedIssue rdf:type owl:Class ;
-                     rdfs:subClassOf :IssueConcept ,
-                                     :NeedConcept ;
+                     rdfs:subClassOf :DataQualityNeed ,
+                                     :IssueConcept ;
                      rdfs:comment "Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord." ;
                      rdfs:label "Contextualized Issue"@en ;
                      skos:prefLabel "Contextualized Issue"@en .
@@ -471,7 +484,7 @@ The assertion concept consists of a specification (the technical description of 
 :DataQualityDimension rdf:type owl:Class ;
                       rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, \"precision\" in \"coordinate precision of single records\"."@en ;
                       rdfs:label "Data Quality Dimension"@en ;
-                      skos:definition "The aspects of data quality  that a test examines."@en ;
+                      skos:definition "An aspect of data quality."@en ;
                       skos:prefLabel "Data Quality Dimension" .
 
 
@@ -772,6 +785,14 @@ Use Cases in bdqffdq are not the same as Use Cases in the software engineering s
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AbstractInformationElement
+                :ActedUpon
+                :Consulted
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Amendmenent
