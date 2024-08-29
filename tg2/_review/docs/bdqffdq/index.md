@@ -32,7 +32,26 @@
 [!--- JRW finished first draft to here ---]
 This document includes terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>
 
-### 1.7 Framework for describing data quality (Paul) (Informative)
+### 1.1 Namespace abbreviations
+
+The following namespace abbreviations are used in this document:
+
+
+| **Prefix**   | **Namespace**                                    |
+|--------------|--------------------------------------------------|
+| bdq          | https://rs.tdwg.org/bdq/terms/                   |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| dc           | https://purl.org/dc/elements/1.1/                |
+| dcterms      | https://purl.org/dc/elements/1.1/                |
+| dwc          | http://rs.tdwg.org/dwc/terms/                    |
+| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
+| oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| owl          | http://www.w3.org/2002/07/owl#                   |
+
+### 1.1 Framework for describing data quality (Paul) (Informative)
 Included in this standard is a specification for a framework for describing data quality. Each of the tests in this standard has been designed within this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
 The framework data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
