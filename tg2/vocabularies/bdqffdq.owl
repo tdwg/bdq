@@ -29,8 +29,18 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms#hasDataQualityDimension
 :hasDataQualityDimension rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DataQualityDimension ;
                          rdfs:label "has Data Quality Dimension"@en ;
                          skos:prefLabel "has Data Quality Dimension"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms#hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              rdfs:domain :Parameter ;
+              rdfs:comment "Expected to be a relationship between a Specification and a Parameter"@en ;
+              rdfs:label "has Parameter"@en ;
+              skos:definition "A relationship between a test class and a Parameter"@en ;
+              skos:prefLabel "has Parameter"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms#hasPolicy
@@ -38,7 +48,8 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms#hasUseCase
-:hasUseCase rdf:type owl:ObjectProperty .
+:hasUseCase rdf:type owl:ObjectProperty ;
+            rdfs:domain :UseCase .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperties
@@ -110,6 +121,18 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :hasConsultedInformationElement rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf :hasInformationElement ;
                                 rdfs:comment "Provides a relationship between FFDQ concepts and the information elements that are Consulted, but not ActedUpon in a test."@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasCriterion
+:hasCriterion rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :validationProperties ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCriterion ;
+                            owl:someValuesFrom :Criterion
+                          ] ;
+              rdfs:comment "Used to link the derived concept of a Validation to the fundamental concept of a Criterion."@en ;
+              rdfs:label "has Criterion"@en ;
+              skos:prefLabel "has Criterion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasDimension
@@ -199,13 +222,13 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                rdfs:subPropertyOf :validationProperties ;
                rdfs:domain [ rdf:type owl:Restriction ;
                              owl:onProperty :hasValidation ;
-                             owl:someValuesFrom :Criterion
+                             owl:someValuesFrom :Validation
                            ] ;
-               rdfs:range [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasValidation ;
-                            owl:someValuesFrom :Validation
-                          ] ;
-               rdfs:comment "Used to link the derived concept of a ContextualizedCriterion to the fundamental concept of a Criterion." .
+               rdfs:comment """Use to link ValidationPolicies and ValidationMethods to Validations.
+
+Describes the relationship between a validation concept in FFDQ (needs, solutions, reports) and a contextualizedCriterion."""@en ;
+               rdfs:label "has Validation"@en ;
+               skos:prefLabel "has Validation"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/implementedBy
@@ -266,33 +289,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :reportProperties rdf:type owl:ObjectProperty .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/targetedCriterion
-:targetedCriterion rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Restriction ;
-                                 owl:onProperty :targetedCriterion ;
-                                 owl:someValuesFrom :Validation
-                               ] ;
-                   rdfs:range [ rdf:type owl:Restriction ;
-                                owl:onProperty :targetedCriterion ;
-                                owl:someValuesFrom :ImprovementTarget
-                              ] ;
-                   rdfs:comment "The criteria targeted by some enhancement via the ImprovementTarget object." .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/targetedDimension
-:targetedDimension rdf:type owl:ObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Restriction ;
-                                 owl:onProperty :targetedDimension ;
-                                 owl:someValuesFrom :Measure
-                               ] ;
-                   rdfs:range [ rdf:type owl:Restriction ;
-                                owl:onProperty :targetedDimension ;
-                                owl:someValuesFrom :ImprovementTarget
-                              ] ;
-                   rdfs:comment "The dimension targeted by some enhancement via the ImprovementTarget object." .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedIssue
 :targetedIssue rdf:type owl:ObjectProperty ;
                rdfs:range [ rdf:type owl:Restriction ;
@@ -302,22 +298,34 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                rdfs:comment "The issue targeted by some problem via the ImprovementTarget object." .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/validationInContext
-:validationInContext rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :validationProperties ;
-                     rdfs:domain [ rdf:type owl:Restriction ;
-                                   owl:onProperty :validationInContext ;
-                                   owl:someValuesFrom :Validation
-                                 ] ;
-                     rdfs:range [ rdf:type owl:Restriction ;
-                                  owl:onProperty :validationInContext ;
-                                  owl:someValuesFrom :ValidationMethod
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :validationInContext ;
-                                  owl:someValuesFrom :ValidationPolicy
+###  https://rs.tdwg.org/bdqffdq/terms/targetedMeasure
+:targetedMeasure rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Restriction ;
+                               owl:onProperty :targetedMeasure ;
+                               owl:someValuesFrom :Measure
+                             ] ;
+                 rdfs:comment """Describes the relationship between an improvement target and a Measure.
+
+Was, but dimension is too abstract: The dimension targeted by some enhancement via the ImprovementTarget object."""@en ;
+                 rdfs:label "targeted Measure"@en ;
+                 skos:definition "Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
+                 skos:prefLabel "targeted Measure"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/targetedValidation
+:targetedValidation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain [ rdf:type owl:Restriction ;
+                                  owl:onProperty :targetedValidation ;
+                                  owl:someValuesFrom :Validation
                                 ] ;
-                     rdfs:comment "Describes the relationship between a validation concept in FFDQ (needs, solutions, reports) and a contextualizedCriterion." .
+                    rdfs:comment """Relates an improvement target to a Validation.
+
+
+Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract."""@en ;
+                    rdfs:label "targeted Validatiohn"@en ;
+                    skos:definition "Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
+                    skos:prefLabel "targeted Validation"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/validationProperties
@@ -328,11 +336,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #################################################################
 #    Data properties
 #################################################################
-
-###  https://rs.tdwg.org/bdqffdq/terms#hasCriterion
-:hasCriterion rdf:type owl:DatatypeProperty ;
-              rdfs:comment "General desccription of the criteria that a validation must meet for data to have quality." .
-
 
 ###  https://rs.tdwg.org/bdqffdq/terms#hasEnhancement
 :hasEnhancement rdf:type owl:DatatypeProperty .
@@ -459,6 +462,7 @@ The assertion concept consists of a specification (the technical description of 
 
 Composed with both Validations and Issues."""@en ;
            rdfs:label "Criterion"@en ;
+           skos:definition "Rule against which data are evaluated for conformance to quality criteria."@en ;
            skos:prefLabel "Criterion"@en .
 
 
@@ -523,7 +527,7 @@ Composed with both Validations and Issues."""@en ;
 ###  https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget
 :ImprovementTarget rdf:type owl:Class ;
                    rdfs:subClassOf :NeedConcept ;
-                   rdfs:comment "The ImprovementTarget concept in FFDQ describes which measures and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures)." ;
+                   rdfs:comment "The ImprovementTarget concept in FFDQ describes which measures, issues, and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures)."@en ;
                    rdfs:label "Improvement Target"@en ;
                    skos:prefLabel "Improvement Target"@en .
 
@@ -630,7 +634,7 @@ Describes the criteria for measuring an aspect of data quality related to some d
                            :SolutionsConcept ;
            rdfs:comment "The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation." ;
            rdfs:label "Mechanism"@en ;
-           skos:definition "An entity that can execute a data quality method."@en ;
+           skos:definition "An entity that can execute data quality methods."@en ;
            skos:prefLabel "Mechanism"@en .
 
 
@@ -644,6 +648,7 @@ Describes the criteria for measuring an aspect of data quality related to some d
 ###  https://rs.tdwg.org/bdqffdq/terms/Parameter
 :Parameter rdf:type owl:Class ;
            rdfs:label "Parameter"@en ;
+           skos:definition "A value that, when provided to a test Specification changes the behavior of the test in a defined manner."@en ;
            skos:prefLabel "Parameter"@en .
 
 
