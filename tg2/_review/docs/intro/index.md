@@ -136,7 +136,7 @@ Expanding on this single validation step, amendments can be run and their result
 ### 2.8 Bibliography
 
 ## 3. Acknowledgements
-Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
+Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
 
 <html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office"
