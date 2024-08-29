@@ -18,7 +18,7 @@
 
 **Abstract**: The BDQ Core list of terms used in the data quality tests using the `bdq:` namespace.
 
-**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Yi Ming Gan
+**Contributors**: Lee Belbin, Paul J. Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Yi Ming Gan
 
 **Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions)
 

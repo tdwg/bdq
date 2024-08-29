@@ -14,7 +14,7 @@
 
 **Contributors**
 
-Lee Belbin, Arthur D. Chapman, Paul Morris, John R. Wieczorek, Paula Zermoglio, Alex Thompson and Yi Ming Gan.
+Lee Belbin, Arthur D. Chapman, Paul J. Morris, John R. Wieczorek, Paula Zermoglio, Alex Thompson and Yi Ming Gan.
 
 **Creator**
 
