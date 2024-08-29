@@ -103,41 +103,39 @@ Full class diagram
 
 Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon InformationElement, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification.  Also shown is a fragment of a ValidationPolicy linking this Validation to a UseCase. 
 
-<pre>
 
-<bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
-    rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?" ;
-    rdfs:label "Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord" ;
-    skos:prefLabel "VALIDATION_COUNTRY_FOUND" ;
-    <bdqffdq:hasActedUponInformationElement> <urn:uuid:4b32157c-534e-4a74-ab03-f82a1074a8d2> ;
-    <bdqffdq:hasCriterion> <urn:uuid:ce55985b-a158-4411-9cd4-94950159ba6c> ;
-    <bdqffdq:hasResourceType> <bdqffdq:SingleRecord> .
-
-<urn:uuid:4b32157c-534e-4a74-ab03-f82a1074a8d2> a <bdqffdq:ActedUpon> ;
-    rdfs:label "Information Element ActedUpon dwc:country" ;
-    <bdqffdq:composedOf> <http://rs.tdwg.org/dwc/terms/country> ;
-    skos:prefLabel "Information Element ActedUpon dwc:country" .
+    <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
+        rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?" ;
+        rdfs:label "Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord" ;
+        skos:prefLabel "VALIDATION_COUNTRY_FOUND" ;
+        <bdqffdq:hasActedUponInformationElement> <urn:uuid:4b32157c-534e-4a74-ab03-f82a1074a8d2> ;
+        <bdqffdq:hasCriterion> <urn:uuid:ce55985b-a158-4411-9cd4-94950159ba6c> ;
+        <bdqffdq:hasResourceType> <bdqffdq:SingleRecord> .
     
-<urn:uuid:ce55985b-a158-4411-9cd4-94950159ba6c> a <bdqffdq:Criterion> ;
-    rdfs:label "Conformance: found" .
-
-<urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a <bdqffdq:ValidationMethod> ;
-    rdfs:label "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification Specification for: VALIDATION_COUNTRY_FOUND" ;
-    skos:prefLabel "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification Specification for: VALIDATION_COUNTRY_FOUND" ;
-    <bdqffdq:criterionInContext> <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> ;
-    <bdqffdq:hasSpecification> <urn:uuid:urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> .
-
-<urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a <bdqffdq:Specification> ;
-    rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is EMPTY; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT" ;
-    rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND" .
-
-<urn:uuid:00a36139-71fa-4f82-a5f7-8574c54497bd> a <bdqffdq:ValidationPolicy> ;
-    rdfs:label "ValidationPolicy: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord in UseCase bdq:Spatial-Temporal Patterns" ;
-    skos:prefLabel "ValidationPolicy: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord in UseCase bdq:Spatial-Temporal Patterns" ;
-    <bdqffdq:coversUseCase> <bdqffdq:Spatial-Temporal Patterns> ;
-    <bdqffdq:hasValidation> bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> .
+    <urn:uuid:4b32157c-534e-4a74-ab03-f82a1074a8d2> a <bdqffdq:ActedUpon> ;
+        rdfs:label "Information Element ActedUpon dwc:country" ;
+        <bdqffdq:composedOf> <http://rs.tdwg.org/dwc/terms/country> ;
+        skos:prefLabel "Information Element ActedUpon dwc:country" .
+        
+    <urn:uuid:ce55985b-a158-4411-9cd4-94950159ba6c> a <bdqffdq:Criterion> ;
+        rdfs:label "Conformance: found" .
+    
+    <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a <bdqffdq:ValidationMethod> ;
+        rdfs:label "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification Specification for: VALIDATION_COUNTRY_FOUND" ;
+        skos:prefLabel "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification Specification for: VALIDATION_COUNTRY_FOUND" ;
+        <bdqffdq:criterionInContext> <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> ;
+        <bdqffdq:hasSpecification> <urn:uuid:urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> .
+    
+    <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a <bdqffdq:Specification> ;
+        rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is EMPTY; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT" ;
+        rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND" .
+    
+    <urn:uuid:00a36139-71fa-4f82-a5f7-8574c54497bd> a <bdqffdq:ValidationPolicy> ;
+        rdfs:label "ValidationPolicy: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord in UseCase bdq:Spatial-Temporal Patterns" ;
+        skos:prefLabel "ValidationPolicy: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord in UseCase bdq:Spatial-Temporal Patterns" ;
+        <bdqffdq:coversUseCase> <bdqffdq:Spatial-Temporal Patterns> ;
+        bdqffdq:hasValidation> bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> .
  
-</pre>
 
 TODO: Add diagram
 
