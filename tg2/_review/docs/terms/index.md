@@ -98,7 +98,8 @@ Each test in the quick reference guide displays the following descriptors:
 - A heading, consising of
   - **rdfs:Label** [normative]: For consumers and implementors, a short human readable label identifying the test in the form TESTTYPE_INFORMATIONELEMENT_CRITERION e.g. VALIDATION_COUNTRYCODE_STANDARD.
   - **skos:prefLabel** [normative]: For consumers, A human readable label identifying the test.
-  - **Name** [normative]: For implementors, Machine readable fully qualified name for the test.
+  - **Name** [normative]: For implementors, Machine readable fully qualified name for the test. 
+  - **ResourceType** [normative]  For implementors.  The Resource Type that the test acts upon, SingleRecords or MultiRecords (data sets).
 - **Description** [non-normative]: For consumers. A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
 - **Specification** [normative]: For implementors. The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
 - **Information Elements** For implementors and consumers, what terms does the test evaluate.
