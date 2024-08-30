@@ -38,6 +38,8 @@ The following namespace abbreviations are used in this document:
 | bdqdim:  | http://rs.tdwg.org/bdqdim/terms |
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/ |
 | bbqcore: | http://rs.tdwg.org/bdq/bdqcore/ |
+| skos     | http://www.w3.org/2004/02/skos/core# |
+| rdfs     | http://www.w3.org/2000/01/rdf-schema |
 | dwc:     | https://rs.tdwg.org/dwc/        |
 
 **Use of Terms**

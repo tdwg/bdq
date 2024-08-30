@@ -86,6 +86,7 @@ The following namespace abbreviations are used in this document:
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
 ## 2. Parts of the Standard
