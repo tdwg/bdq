@@ -24,7 +24,19 @@ This document discusses
 
 ## 2 Reading Test Descriptors (non-normative)
 
-## 3 Framework elements not included in bdqcore test descriptions (normative)
+## 3 Responses from tests
+
+### 3.1 The Response Object (normative) 
+
+The test types are: Validation, Issue, Amendment and Measure. Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. The Response from a test is an assertion which can form part of a data quality report or be wrapped in an annotation, and MUST include the following three components: 
+
+1. Value is the returned result for the test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
+
+2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
+
+3. The Remark supplies human-readable text describing reasons for the test result output.
+
+### 3.2 Framework elements not included in bdqcore test descriptions (normative)
 
 Implementors SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of test implementations.
 
@@ -34,10 +46,9 @@ Implementors MUST provide bdq:Response data in data quality reports consisting o
 
 Implementations MAY perform data Quality Control, data Quality Assurance, or both.  
 
-## 4 Guidelines for Implementers (non-normative)
+## 4 Guidelines for Implementers
 
-
-### Parameters and changing the behavior of a test
+### Parameters and changing the behavior of a test (normative)
 
 Many tests specify bdqffdq:Parameters in addition to bdqffdq:InformationElements.  Parameters are intended to change the behavior of a test to fit local data quality needs without changing the specification of the test.  
 
@@ -47,7 +58,7 @@ Implemenentors MUST NOT produce test implementations identified by the same iden
 
 **TODO: The value supplied for the parameter for the test is not an attribute of the data, it is an attribute of the Mechanism (of the system assessing the data quality). If we had included assertions about the validity values of parameters, they should only return external prerequisites not met, as they are assertions about externalities to the data and will change if the same data are run on the same test with a different configuration.**
 
-### Execution Process Agnostic
+### Execution Process Agnostic (non-normative)
 
 The test descriptions in bdqcore are designed to be able to be implemented anywhere in the lifecycle of biodiversity data, and are designed to be independent of the environment in which the tests are run.   Tests may be run in the abstract within, for example, relational databases, they may be run individually on single Darwin Core records, or fragments of Darwin Core records within a data capture interface, or may be run in sequence in a processing pipleine of Darwin Core records, or they may be run in paralell in a processing pipeline of Darwin Core records, or they may be run in a workflow environment that produces lists of unique values of Information Elements for each test, executes the test on the unique values, and then maps the results back out onto rows in the data set.  Data may be presented to an execution framework as Flat Darwin Core, or as Structured Darwin Core, or in another structure that can be mapped to the information elements of relevant tests.
 
@@ -65,12 +76,45 @@ Some source authorities are highly stable small vocabularies.  Implementors MAY 
 
 #### Phases: Pre-Amendment, Amendment, Post-Amendment.
 
-Recommended process with the current suite of BDQ Core tests is to run all single record validations and measures, then run all multirecord measures, from these calculate the 
+Recommended process with the current suite of BDQ Core tests is to run all pertinent single record validations and measures, then run all pertinent multirecord measures, from these calculate some measure of quality, then execute all pertinent amendments, then to run all pertinent single record validations and measures again in a post-amendment phase on the data as if the proposed changes from each amendment were accepted, and then run all multirecord meaures.  A comparison of the multirecord measures from the pre-amendment phase with those from the post-amendment phase will quantify how much accepting the proposals from amendments would improve the data, with respect to the aspects measured by the tests.
+
+Under Quality Assurance, MultiRecord measures that return COMPLETE/NOT_COMPLETE MAY be used as filters for quality for purpose, exclude records from the data set untill all MultiRecord measures of this sort are returning COMPLETE, this under the mathematical forumuation of the framework, is the assertion that the data are fit for the purpose of the selected UseCase.
+
+Under Quality Control, MultiRecord measures that return numeric values MAY be used to assess the prevelance of quality issues in the data with respect to the selected UseCase.  
 
 #### Test dependencies
 
 Individual tests are designed to be as indepenent of each other as possible, but given the by design redundancies in Darwin Core, some amendments have potential interactions.
 
+<!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
+
+When Amendments are executed in a workflow where downstream Amendments operate on data with the changes proposed by upstream Amendments applied, the following sequences SHOULD be followed. Similarly when Amendments are executed in parallel these sequences SHOULD be applied.
+
+Given amendments propose a value to a primary term from secondary terms priority over those which back fill secondary terms from a primary term, AMENDMENT_EVENT_FROM_EVENTDATE SHOULD be run after the following Amendments that propose changes to dwc:eventDate: 
+
+AMENDMENT_EVENTDATE_FROM_VERBATIM, <!---should we add the GUIDs to these? in this document--->
+AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY,
+AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR,
+AMENDMENT_EVENTDATE_STANDARDIZED.
+
+AMENDMENT_SCIENTIFICNAME_FROM_TAXONID SHOULD be run after the Amendment
+which proposes changes to dwc:TaxonID: AMENDMENT_TAXONID_FROM_TAXON. 
+
+Where multiple Amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendments SHOULD be ordered.
+
+The following Amendments SHOULD be composed to run in an ordered sequence:
+
+| order       | test                                                       |
+|-------------|------------------------------------------------------------|
+| first       | AMENDMENT_EVENTDATE_FROM_VERBATIM                          | 
+| second      | AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR    |
+| and finally | AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY                      |
+
+BDQ Core does not specify how these ordering of these tests should be accomplished.   This could be done by describing an Amendment with an expected response that specifies the execution of each of these tests in order.  Such a composition of Amendments would be the preferred method of sequencing under the framework, but to keep tests as granular a possible, and to allow the maxiumum flexibility for the composition of tests in Profiles to support UseCases, BDQ Core does not currently provide such tests.   Ordering could also could be done by providing a configuration file for a test execution framework specifying test dependencies.  Ordering could be supported in a workflow environment by composing a workflow to execute these tests in sequence.  
+
+The bdqffdq: ontology does not include a property to describe sequence interdependencies among amendments.  
+
+The bdqffdq: ontology provides terms: bdqffdq:targetedMeasure, bdqffdq:targetedValidation, bdqffdq:TargetedIssue, that could be used, together with bdqffdq:improvedBy to relate Amendments to Validations, Measures, and Issues.  BDQ Core does not, at this time, use these terms to describe test interrelationships.  
 
 #### Implementing a concrete Test 
 
@@ -203,7 +247,9 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
 ## Presentation of Results
 
-We are agnostic about how reports from BDQ Core can be reported
+We are agnostic about how reports from BDQ Core can be reported, e.g. as aggregated results, on web pages for individual records, as spreadsheets of results with issues for quality control, etc.  
+
+Reports SHOULD identify tests to consumers of those reports using at least the skos:prefLabel for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
 ### Data Quality Reports
 

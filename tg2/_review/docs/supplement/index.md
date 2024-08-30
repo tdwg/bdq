@@ -346,32 +346,6 @@ SELECT
 FROM event
     WHERE day < 1 or day > 31
 
-**Amendments where order is important**
-
-<!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
-
-When Amendments are executed in a workflow where downstream Amendments operate on data with the changes proposed by upstream Amendments applied, the following sequences SHOULD be followed. Similarly when Amendments are executed in parallel these sequences SHOULD be applied.
-
-Given amendments propose a value to a primary term from secondary terms priority over those which back fill secondary terms from a primary term, AMENDMENT_EVENT_FROM_EVENTDATE SHOULD be run after the following Amendments that propose changes to dwc:eventDate: 
-
-AMENDMENT_EVENTDATE_FROM_VERBATIM, <!---should we add the GUIDs to these? in this document--->
-AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY,
-AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR,
-AMENDMENT_EVENTDATE_STANDARDIZED.
-
-AMENDMENT_SCIENTIFICNAME_FROM_TAXONID SHOULD be run after the Amendment
-which proposes changes to dwc:TaxonID: AMENDMENT_TAXONID_FROM_TAXON. 
-
-Where multiple Amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendments SHOULD be ordered.
-
-The following Amendments SHOULD be composed to run in an ordered sequence:
-
-| order       | test                                                       |
-|-------------|------------------------------------------------------------|
-| first       | AMENDMENT_EVENTDATE_FROM_VERBATIM                          | 
-| second      | AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR    |
-| and finally | AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY                      |
-
 
 ## 4. Guidance for Consumers of Data Quality Reports
 

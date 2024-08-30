@@ -26,8 +26,9 @@ See also the [Implementer's Guide](BDQ_Core_Implementers_guide.md) for those wri
 
 Each test is intended to examine just one specific aspect of data quality.   Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
-
 ## Kinds of Tests and what they do
+
+
 
 A Validation examines specific elements in the data (that is, particular Darwin Core terms) and asks whether those data conform to a single specific criterion for quality.
 
@@ -39,8 +40,9 @@ Measures count things.
 
 ## Parts of a Response from a test.
 
-Results from each test are delivered in the form of a Response.status, Response.result, and Response.comment.  Each test produces one Response.   A Response.qualifier may also be included.  
+Reports SHOULD identify tests to you using at least the skos:prefLabel for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
+Results from each test are delivered in the form of a Response.status, Response.result, and Response.comment.  Each test produces one Response.   A Response.qualifier may also be included.  
 The Response.status tells you if the test was able to run. 
 
 The Response.result tells you the conclusion of the test if it was able to be run.
@@ -58,4 +60,15 @@ Amendments can have a Response.status of either of the prerequisites not met, or
 Measures
 
 Issues
+
+
+
+### Reading the Quick Reference Guide to the tests
+
+
+
+
+## Amendments only propose changes
+
+Amendments propose changes to data, but it is up to the consumers of data quality reports to choose whether or not to accept those changes, particularly into authoritative databases of record. 
 
