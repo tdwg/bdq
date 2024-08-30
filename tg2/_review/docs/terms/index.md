@@ -83,23 +83,55 @@ A MEASURE may return either a Response.result that is a numeric value, or the va
 
 [!--- Should be add MultiRecord Measures here---- AC]
 
-### 2.3 Test Descriptors
+## 3 Quick Reference Guide to the Tests 
 
-Test Descriptors are those terms that comprehensively describe the BDQ Core test. The suite of descriptors are designed for three audiences (which may not be mutually exclusive)-
+### 3.1 Descriptors shown in the quick reference guide
+
+Test Descriptors are the collection of bdqffdq terms that comprehensively describe the BDQ Core tests. The suite of descriptors are designed for three audiences (which may not be mutually exclusive).  A subset of these descriptors are shown in the quick reference guide.
 
 - Machine readable. Example: GUID
 - Human readable - For consumers of Data Quality reports. Example: Description
 - Human readable - For implementors of BDQ Core. Example: Specification
 
+Each test in the quick reference guide displays the following descriptors: 
+
+- A heading, consising of
+  - **skos:prefLabel** [normative]: For consumers, A human readable label identifying the test.
+  - **rdfs:Label** [normative]: For consumers and implementors, a short human readable label identifying the test in the form TESTTYPE_INFORMATIONELEMENT_CRITERION e.g. VALIDATION_COUNTRYCODE_STANDARD.
+  - **Name** [normative]: For implementors, Machine readable fully qualified name for the test.
+- **Description** [non-normative]: For consumers. A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
+- **Specification** [normative]: For implementors. The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
+- **Information Elements** For implementors and consumers, what terms does the test evaluate.
+  - **ActedUpon** [normative]: A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
+  - **Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. For example, VALIDATION_ENDDAYOFYEAR_INRANGE tests whether or not dwc:endDayOfYear is in the range 1-365 or 1-366, consulting dwc:eventDate to see if the endDayOfYear falls in a leap year and 366 would be valid.  The test makes the assertion of COMPLIANT or NOT_COMPLIANT about the Acted Upon term, and is not evaluating whether the Consulted dwc:eventDate conforms to expectations or not. 
+  - **Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.. Example: "bdq:taxonIsMarine.
+  - **Default Parameter Values** [normative]: For Implementors.  Default values for parameters to the test, including references to external authorities required for the test.  Many parameters are sourceAuthorities, some are simple values.   
+	- Structue: bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. 
+	- Implementors Note: The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this exact string MUST be passed in as the parameter value for a test implementation to behave in the default manner.  Other non-empty strings would select other source authorities.  Implementations MAY regard empty values to be the Normative String Identifier.
+ - **Examples** [non-normative]: For Implementors. Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
+ - **Use Cases** [non-normative] For Consumers and Implementors. Descriptions of data quality needs that this test helps to support.
+ - **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
+
+## 3.2  The Tests
+
+TODO: When this becomes template, embed quick reference guide here instead of linking.
+
+[Quick Reference Guide to the Tests](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_tests_quick_reference.md)
+
+
+## Material to move to elsewhere: 
+
+These describe the issue TestFields and their translation to the bdqffdq csv file.
+
 **"skos:prefLabel"** [normative]: A human readable label identifying the test.  These labels largely follow the pattern 
 "type of test" "key information element acted upon" " TYPE_INFORMATIONELEMENT_STATUS.. Example: "VALIDATION_COUNTRYCODE_STANDARD" [--- This is not the skos:pref format---]
 
-**"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb" 
+**"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb"   (this is the Name of the test)
 
-**"Name"** [normative] https://
+Name - form rdfs:label
 
 **"Description"** [non-normative]: A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
-
+ 
 **"TestType"** [normative]: The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.. Example: "Validation" 
 
 **"Darwin Core Class"** [non-normative]: The Information Element in the original terms of the framework, the general sort of information this test operates on. Example: "dwc:Location"  
@@ -121,6 +153,8 @@ Test Descriptors are those terms that comprehensively describe the BDQ Core test
 **"Source Authority"** [normative]: A reference to an external, non-Darwin Core authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible, refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}"
 
 **"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
+
+**UseCases** 
 
 **"References"** [non-normative]: A list of references that will assist in a thorough understanding of the test. Example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
 
