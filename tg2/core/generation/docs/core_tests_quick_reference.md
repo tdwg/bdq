@@ -338,9 +338,9 @@ Research uses forming a bdqffdq:Use Case for relationships between organisms 1) 
 
 # Validations, Amendments, Measures operating on SingleRecords.
 
-##  Validation dwc:basisOfRecord Not Empty
+##  VALIDATION_BASISOFRECORD_NOTEMPTY
 
-###  VALIDATION_BASISOFRECORD_NOTEMPTY
+###  Validation dwc:basisOfRecord Not Empty
 https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536/2023-09-17
 Acts upon  SingleRecord
 
@@ -370,9 +370,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dwc:basisOfRecord Standard
+##  VALIDATION_BASISOFRECORD_STANDARD
 
-###  VALIDATION_BASISOFRECORD_STANDARD
+###  Validation dwc:basisOfRecord Standard
 https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8/2024-07-24
 Acts upon  SingleRecord
 
@@ -414,9 +414,9 @@ The term dwc:basisOfRecord has the comment "Recommended best practice is to use 
 
 ********************
 
-##  Validation dc:type Not Empty
+##  VALIDATION_DCTYPE_NOTEMPTY
 
-###  VALIDATION_DCTYPE_NOTEMPTY
+###  Validation dc:type Not Empty
 https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169/2023-09-18
 Acts upon  SingleRecord
 
@@ -446,9 +446,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dc:type Standard
+##  VALIDATION_DCTYPE_STANDARD
 
-###  VALIDATION_DCTYPE_STANDARD
+###  Validation dc:type Standard
 https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5/2023-09-18
 Acts upon  SingleRecord
 
@@ -486,9 +486,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation dcterms:license Not Empty
+##  VALIDATION_LICENSE_NOTEMPTY
 
-###  VALIDATION_LICENSE_NOTEMPTY
+###  Validation dcterms:license Not Empty
 https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849/2023-09-18
 Acts upon  SingleRecord
 
@@ -522,9 +522,9 @@ The license at the record level might be derived from the license of the data se
 
 ********************
 
-##  Validation dcterms:license Standard
+##  VALIDATION_LICENSE_STANDARD
 
-###  VALIDATION_LICENSE_STANDARD
+###  Validation dcterms:license Standard
 https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1/2023-09-17
 Acts upon  SingleRecord
 
@@ -566,9 +566,9 @@ The license at the record level might be derived from the license of the data se
 
 ********************
 
-##  Validation Coordinates dwc:countryCode Consistent
+##  VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT
 
-###  VALIDATION_COORDINATES_COUNTRYCODE_CONSISTENT
+###  Validation Coordinates dwc:countryCode Consistent
 https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9/2023-09-17
 Acts upon  SingleRecord
 
@@ -612,9 +612,9 @@ dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imp
 
 ********************
 
-##  Validation Coordinates Not Zero
+##  VALIDATION_COORDINATES_NOTZERO
 
-###  VALIDATION_COORDINATES_NOTZERO
+###  Validation Coordinates Not Zero
 https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871/2023-06-20
 Acts upon  SingleRecord
 
@@ -648,9 +648,9 @@ A record with 0.0 is interpreted as the string "0"
 
 ********************
 
-##  Validation Coordinates dwc:stateProvince Consistent
+##  VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT
 
-###  VALIDATION_COORDINATES_STATEPROVINCE_CONSISTENT
+###  Validation Coordinates dwc:stateProvince Consistent
 https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c/2024-08-21
 Acts upon  SingleRecord
 
@@ -692,9 +692,9 @@ The geographic determination service is expected to return a list of names of fi
 
 ********************
 
-##  Validation Coordinates Terrestrial Marine
+##  VALIDATION_COORDINATES_TERRESTRIALMARINE
 
-###  VALIDATION_COORDINATES_TERRESTRIALMARINE
+###  Validation Coordinates Terrestrial Marine
 https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380/2024-08-19
 Acts upon  SingleRecord
 
@@ -739,9 +739,9 @@ dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imp
 
 ********************
 
-##  Validation dwc:coordinateUncertaintyInMeters In Range
+##  VALIDATION_COORDINATEUNCERTAINTY_INRANGE
 
-###  VALIDATION_COORDINATEUNCERTAINTY_INRANGE
+###  Validation dwc:coordinateUncertaintyInMeters In Range
 https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57/2023-09-18
 Acts upon  SingleRecord
 
@@ -775,9 +775,9 @@ The upper limit is one half the equatorial circumference of the earth.
 
 ********************
 
-##  Validation dwc:countryCode Not Empty
+##  VALIDATION_COUNTRYCODE_NOTEMPTY
 
-###  VALIDATION_COUNTRYCODE_NOTEMPTY
+###  Validation dwc:countryCode Not Empty
 https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4/2023-09-18
 Acts upon  SingleRecord
 
@@ -807,9 +807,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Validation dwc:countryCode Standard
+##  VALIDATION_COUNTRYCODE_STANDARD
 
-###  VALIDATION_COUNTRYCODE_STANDARD
+###  Validation dwc:countryCode Standard
 https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe/2024-04-15
 Acts upon  SingleRecord
 
@@ -847,9 +847,9 @@ Locations outside of a jurisdiction covered by a country code may have a value i
 
 ********************
 
-##  Validation dwc:country dwc:stateProvince Unambiguous
+##  VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
-###  VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
+###  Validation dwc:country dwc:stateProvince Unambiguous
 https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11/2023-09-18
 Acts upon  SingleRecord
 
@@ -891,9 +891,9 @@ See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail 
 
 ********************
 
-##  Validation dwc:country dwc:countryCode Consistent
+##  VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT
 
-###  VALIDATION_COUNTRY_COUNTRYCODE_CONSISTENT
+###  Validation dwc:country dwc:countryCode Consistent
 https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c/2023-09-18
 Acts upon  SingleRecord
 
@@ -931,9 +931,9 @@ The country code determination service should be able to match the name of a cou
 
 ********************
 
-##  Validation dwc:country Found
+##  VALIDATION_COUNTRY_FOUND
 
-###  VALIDATION_COUNTRY_FOUND
+###  Validation dwc:country Found
 https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134/2024-08-19
 Acts upon  SingleRecord
 
@@ -975,9 +975,9 @@ Non-country information such as "high seas" will fail this test (High Seas shoul
 
 ********************
 
-##  Validation dwc:country Not Empty
+##  VALIDATION_COUNTRY_NOTEMPTY
 
-###  VALIDATION_COUNTRY_NOTEMPTY
+###  Validation dwc:country Not Empty
 https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c/2023-09-17
 Acts upon  SingleRecord
 
@@ -1011,9 +1011,9 @@ Country is expected to be empty if material comes from the high seas, or from th
 
 ********************
 
-##  Validation dwc:decimalLatitude In Range
+##  VALIDATION_DECIMALLATITUDE_INRANGE
 
-###  VALIDATION_DECIMALLATITUDE_INRANGE
+###  Validation dwc:decimalLatitude In Range
 https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83/2023-09-18
 Acts upon  SingleRecord
 
@@ -1043,9 +1043,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dwc:decimalLatitude Not Empty
+##  VALIDATION_DECIMALLATITUDE_NOTEMPTY
 
-###  VALIDATION_DECIMALLATITUDE_NOTEMPTY
+###  Validation dwc:decimalLatitude Not Empty
 https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275/2023-09-18
 Acts upon  SingleRecord
 
@@ -1075,9 +1075,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dwc:decimalLongitude In Range
+##  VALIDATION_DECIMALLONGITUDE_INRANGE
 
-###  VALIDATION_DECIMALLONGITUDE_INRANGE
+###  Validation dwc:decimalLongitude In Range
 https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1/2023-09-17
 Acts upon  SingleRecord
 
@@ -1107,9 +1107,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dwc:decimalLongitude Not Empty
+##  VALIDATION_DECIMALLONGITUDE_NOTEMPTY
 
-###  VALIDATION_DECIMALLONGITUDE_NOTEMPTY
+###  Validation dwc:decimalLongitude Not Empty
 https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a/2023-09-18
 Acts upon  SingleRecord
 
@@ -1139,9 +1139,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dwc:geodeticDatum Not Empty
+##  VALIDATION_GEODETICDATUM_NOTEMPTY
 
-###  VALIDATION_GEODETICDATUM_NOTEMPTY
+###  Validation dwc:geodeticDatum Not Empty
 https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44/2023-09-18
 Acts upon  SingleRecord
 
@@ -1171,9 +1171,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Vaildation dwc:geodeticDatum Standard
+##  VALIDATION_GEODETICDATUM_STANDARD
 
-###  VALIDATION_GEODETICDATUM_STANDARD
+###  Vaildation dwc:geodeticDatum Standard
 https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1/2023-09-17
 Acts upon  SingleRecord
 
@@ -1211,9 +1211,9 @@ Darwin Core recommends best practice is to use a controlled vocabulary. This tes
 
 ********************
 
-##  Validation dcterms:Location Not Empty
+##  VALIDATION_LOCATION_NOTEMPTY
 
-###  VALIDATION_LOCATION_NOTEMPTY
+###  Validation dcterms:Location Not Empty
 https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9/2023-09-18
 Acts upon  SingleRecord
 
@@ -1247,9 +1247,9 @@ Only fails if all of the relevant fields of the Darwin Core Location class are E
 
 ********************
 
-##  Validation dwc:maximumDepthInMeters In Range
+##  VALIDATION_MAXDEPTH_INRANGE
 
-###  VALIDATION_MAXDEPTH_INRANGE
+###  Validation dwc:maximumDepthInMeters In Range
 https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939/2023-09-18
 Acts upon  SingleRecord
 
@@ -1291,9 +1291,9 @@ The Challenger Deep in the Mariana Trench is the deepest known point in Earth's 
 
 ********************
 
-##  Validation dwc:maximumElevationInMeters In Range
+##  VALIDATION_MAXELEVATION_INRANGE
 
-###  VALIDATION_MAXELEVATION_INRANGE
+###  Validation dwc:maximumElevationInMeters In Range
 https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7/2023-09-18
 Acts upon  SingleRecord
 
@@ -1335,9 +1335,9 @@ We have rounded up the Parameter values. We are aware of sub-ice elevations in A
 
 ********************
 
-##  Validation dwc:minimumDepthInMeters In Range
+##  VALIDATION_MINDEPTH_INRANGE
 
-###  VALIDATION_MINDEPTH_INRANGE
+###  Validation dwc:minimumDepthInMeters In Range
 https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92/2023-09-18
 Acts upon  SingleRecord
 
@@ -1379,9 +1379,9 @@ The Challenger Deep in the Mariana Trench is the deepest known point in Earth's 
 
 ********************
 
-##  Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
+##  VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
 
-###  VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
+###  Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
 https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e/2023-09-18
 Acts upon  SingleRecord
 
@@ -1411,9 +1411,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Validation dwc:minimumElevationInMeters In Range
+##  VALIDATION_MINELEVATION_INRANGE
 
-###  VALIDATION_MINELEVATION_INRANGE
+###  Validation dwc:minimumElevationInMeters In Range
 https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798/2023-09-17
 Acts upon  SingleRecord
 
@@ -1455,9 +1455,9 @@ We have rounded up the Parameter values. We are aware of sub-ice elevations in A
 
 ********************
 
-##  Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
+##  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
 
-###  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
+###  Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
 https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396/2023-09-18
 Acts upon  SingleRecord
 
@@ -1487,9 +1487,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Validation dwc:stateProvince Found
+##  VALIDATION_STATEPROVINCE_FOUND
 
-###  VALIDATION_STATEPROVINCE_FOUND
+###  Validation dwc:stateProvince Found
 https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a/2023-09-18
 Acts upon  SingleRecord
 
@@ -1531,9 +1531,9 @@ Multiple values in the dwc:stateProvince field (whether to signify on a border o
 
 ********************
 
-##  Validation dwc:day In Range
+##  VALIDATION_DAY_INRANGE
 
-###  VALIDATION_DAY_INRANGE
+###  Validation dwc:day In Range
 https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e/2023-09-18
 Acts upon  SingleRecord
 
@@ -1567,9 +1567,9 @@ This test must take into account the given month and year, if present, to accoun
 
 ********************
 
-##  Validation dwc:day Standard
+##  VALIDATION_DAY_STANDARD
 
-###  VALIDATION_DAY_STANDARD
+###  Validation dwc:day Standard
 https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18
 Acts upon  SingleRecord
 
@@ -1603,9 +1603,9 @@ This is part of a group of similar tests (VALIDATION_DAY_INRANGE (8d787cb5-73e2-
 
 ********************
 
-##  Validation dwc:endDayOfYear In Range
+##  VALIDATION_ENDDAYOFYEAR_INRANGE
 
-###  VALIDATION_ENDDAYOFYEAR_INRANGE
+###  Validation dwc:endDayOfYear In Range
 https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8/2023-09-18
 Acts upon  SingleRecord
 
@@ -1642,9 +1642,9 @@ See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This tes
 
 ********************
 
-##  Validation dwc:eventDate In Range
+##  VALIDATION_EVENTDATE_INRANGE
 
-###  VALIDATION_EVENTDATE_INRANGE
+###  Validation dwc:eventDate In Range
 https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432/2023-09-17
 Acts upon  SingleRecord
 
@@ -1686,9 +1686,9 @@ This test provides for a default earliest date, which is 1582-11-15 by conventio
 
 ********************
 
-##  Validation dwc:eventDate Not Empty
+##  VALIDATION_EVENTDATE_NOTEMPTY
 
-###  VALIDATION_EVENTDATE_NOTEMPTY
+###  Validation dwc:eventDate Not Empty
 https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985/2023-09-17
 Acts upon  SingleRecord
 
@@ -1718,9 +1718,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-##  Validation dwc:eventDate Standard
+##  VALIDATION_EVENTDATE_STANDARD
 
-###  VALIDATION_EVENTDATE_STANDARD
+###  Validation dwc:eventDate Standard
 https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803/2023-09-18
 Acts upon  SingleRecord
 
@@ -1754,9 +1754,9 @@ This test should also pick up issues such as 29 Feb in a non leap year.
 
 ********************
 
-##  Validation dwc:Event Consistent
+##  VALIDATION_EVENT_CONSISTENT
 
-###  VALIDATION_EVENT_CONSISTENT
+###  Validation dwc:Event Consistent
 https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f/2023-09-18
 Acts upon  SingleRecord
 
@@ -1790,9 +1790,9 @@ This test does not take a position on whether the value in dwc:eventDate, or the
 
 ********************
 
-##  Validation dwc:Event Temporal Not Empty
+##  VALIDATION_EVENT_TEMPORAL_NOTEMPTY
 
-###  VALIDATION_EVENT_TEMPORAL_NOTEMPTY
+###  Validation dwc:Event Temporal Not Empty
 https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f/2023-09-18
 Acts upon  SingleRecord
 
@@ -1826,9 +1826,9 @@ Only fails if all of the relevant fields of the Darwin Core Event class are bdq:
 
 ********************
 
-##  Validation dwc:month Standard
+##  VALIDATION_MONTH_STANDARD
 
-###  VALIDATION_MONTH_STANDARD
+###  Validation dwc:month Standard
 https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc/2023-09-18
 Acts upon  SingleRecord
 
@@ -1858,9 +1858,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Validation dwc:startDayOfYear In Range
+##  VALIDATION_STARTDAYOFYEAR_INRANGE
 
-###  VALIDATION_STARTDAYOFYEAR_INRANGE
+###  Validation dwc:startDayOfYear In Range
 https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46/2023-09-18
 Acts upon  SingleRecord
 
@@ -1897,9 +1897,9 @@ See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e).  This te
 
 ********************
 
-##  Validation dwc:year In Range
+##  VALIDATION_YEAR_INRANGE
 
-###  VALIDATION_YEAR_INRANGE
+###  Validation dwc:year In Range
 https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8/2024-08-23
 Acts upon  SingleRecord
 
@@ -1941,9 +1941,9 @@ The results of this test are time-dependent. Next year is not valid now. Next ye
 
 ********************
 
-##  Validation dwc:year Not Empty
+##  VALIDATION_YEAR_NOTEMPTY
 
-###  VALIDATION_YEAR_NOTEMPTY
+###  Validation dwc:year Not Empty
 https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f/2023-09-17
 Acts upon  SingleRecord
 
@@ -1973,9 +1973,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Validation dwc:dateIdentified In Range
+##  VALIDATION_DATEIDENTIFIED_INRANGE
 
-###  VALIDATION_DATEIDENTIFIED_INRANGE
+###  Validation dwc:dateIdentified In Range
 https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e/2023-09-18
 Acts upon  SingleRecord
 
@@ -2020,9 +2020,9 @@ There may be valid identifications prior to Linnaeus, but this test will flag th
 
 ********************
 
-##  Validation dwc:dateIdentified Standard
+##  VALIDATION_DATEIDENTIFIED_STANDARD
 
-###  VALIDATION_DATEIDENTIFIED_STANDARD
+###  Validation dwc:dateIdentified Standard
 https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8/2023-09-18
 Acts upon  SingleRecord
 
@@ -2052,9 +2052,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Validation dwc:degreeofEstablishment Standard
+##  VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
 
-###  VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
+###  Validation dwc:degreeofEstablishment Standard
 https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a/2024-02-09
 Acts upon  SingleRecord
 
@@ -2096,9 +2096,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation dwc:establishmentMeans Standard
+##  VALIDATION_ESTABLISHMENTMEANS_STANDARD
 
-###  VALIDATION_ESTABLISHMENTMEANS_STANDARD
+###  Validation dwc:establishmentMeans Standard
 https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f/2024-02-08
 Acts upon  SingleRecord
 
@@ -2140,9 +2140,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation dwc:occurrenceID Not Empty
+##  VALIDATION_OCCURRENCEID_NOTEMPTY
 
-###  VALIDATION_OCCURRENCEID_NOTEMPTY
+###  Validation dwc:occurrenceID Not Empty
 https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4/2023-09-17
 Acts upon  SingleRecord
 
@@ -2172,9 +2172,9 @@ bdq:Record-Management
 
 ********************
 
-##  Validation dwc:occurrenceStatus Not Empty
+##  VALIDATION_OCCURRENCESTATUS_NOTEMPTY
 
-###  VALIDATION_OCCURRENCESTATUS_NOTEMPTY
+###  Validation dwc:occurrenceStatus Not Empty
 https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf/2023-09-18
 Acts upon  SingleRecord
 
@@ -2204,9 +2204,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-##  Validation dwc:occurrenceStatus Standard
+##  VALIDATION_OCCURRENCESTATUS_STANDARD
 
-###  VALIDATION_OCCURRENCESTATUS_STANDARD
+###  Validation dwc:occurrenceStatus Standard
 https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47/2023-09-18
 Acts upon  SingleRecord
 
@@ -2248,9 +2248,9 @@ The original recommended controlled vocabulary for this term consisted of "prese
 
 ********************
 
-##  Validation dwc:pathway Standard
+##  VALIDATION_PATHWAY_STANDARD
 
-###  VALIDATION_PATHWAY_STANDARD
+###  Validation dwc:pathway Standard
 https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93/2024-02-09
 Acts upon  SingleRecord
 
@@ -2292,9 +2292,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation dwc:sex Standard
+##  VALIDATION_SEX_STANDARD
 
-###  VALIDATION_SEX_STANDARD
+###  Validation dwc:sex Standard
 https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404/2024-02-09
 Acts upon  SingleRecord
 
@@ -2336,9 +2336,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation dwc:typeStatus Standard
+##  VALIDATION_TYPESTATUS_STANDARD
 
-###  VALIDATION_TYPESTATUS_STANDARD
+###  Validation dwc:typeStatus Standard
 https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048/2024-08-03
 Acts upon  SingleRecord
 
@@ -2380,9 +2380,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation Classification Consistent
+##  VALIDATION_CLASSIFICATION_CONSISTENT
 
-###  VALIDATION_CLASSIFICATION_CONSISTENT
+###  Validation Classification Consistent
 https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f/2023-09-18
 Acts upon  SingleRecord
 
@@ -2424,9 +2424,9 @@ A fail condition may arise either from the taxon terms being internally inconsis
 
 ********************
 
-##  Validation dwc:class Found
+##  VALIDATION_CLASS_FOUND
 
-###  VALIDATION_CLASS_FOUND
+###  Validation dwc:class Found
 https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b/2023-09-18
 Acts upon  SingleRecord
 
@@ -2468,9 +2468,9 @@ The purpose of this test is to check whether the value is a name that is a resul
 
 ********************
 
-##  Validation dwc:family Found
+##  VALIDATION_FAMILY_FOUND
 
-###  VALIDATION_FAMILY_FOUND
+###  Validation dwc:family Found
 https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c/2023-09-17
 Acts upon  SingleRecord
 
@@ -2512,9 +2512,9 @@ The purpose of this test is to check whether the value is a name that is a resul
 
 ********************
 
-##  Validation dwc:genus Found
+##  VALIDATION_GENUS_FOUND
 
-###  VALIDATION_GENUS_FOUND
+###  Validation dwc:genus Found
 https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec/2023-09-18
 Acts upon  SingleRecord
 
@@ -2556,9 +2556,9 @@ The purpose of this test is to check whether the value is a name that is a resul
 
 ********************
 
-##  Validation dwc:kingdom Found
+##  VALIDATION_KINGDOM_FOUND
 
-###  VALIDATION_KINGDOM_FOUND
+###  Validation dwc:kingdom Found
 https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e/2023-09-18
 Acts upon  SingleRecord
 
@@ -2600,9 +2600,9 @@ The purpose of this test is to check whether the value is a name that is a resul
 
 ********************
 
-##  Validation dwc:kingdom Not Empty
+##  VALIDATION_KINGDOM_NOTEMPTY
 
-###  VALIDATION_KINGDOM_NOTEMPTY
+###  Validation dwc:kingdom Not Empty
 https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098/2024-01-28
 Acts upon  SingleRecord
 
@@ -2632,9 +2632,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Validation dwc:namePublishedInYear Not Empty
+##  VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
-###  VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY
+###  Validation dwc:namePublishedInYear Not Empty
 https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70/2024-02-07
 Acts upon  SingleRecord
 
@@ -2664,9 +2664,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Validation dwc:order Found
+##  VALIDATION_ORDER_FOUND
 
-###  VALIDATION_ORDER_FOUND
+###  Validation dwc:order Found
 https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3/2023-09-18
 Acts upon  SingleRecord
 
@@ -2708,9 +2708,9 @@ The purpose of this test is to check whether the value is a name that is a resul
 
 ********************
 
-##  Validation dwc:phylum Found
+##  VALIDATION_PHYLUM_FOUND
 
-###  VALIDATION_PHYLUM_FOUND
+###  Validation dwc:phylum Found
 https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f/2022-03-25
 Acts upon  SingleRecord
 
@@ -2752,9 +2752,9 @@ The purpose of this test is to check whether the value is a name that is a resul
 
 ********************
 
-##  Validation Polynomial Consistent
+##  VALIDATION_POLYNOMIAL_CONSISTENT
 
-###  VALIDATION_POLYNOMIAL_CONSISTENT
+###  Validation Polynomial Consistent
 https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b/2023-09-18
 Acts upon  SingleRecord
 
@@ -2788,9 +2788,9 @@ If dwc:specificEpithet is populated then this test expects that the value dwc:sp
 
 ********************
 
-##  Validation dwc:scientificNameAuthorship Not Empty
+##  VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
-###  VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
+###  Validation dwc:scientificNameAuthorship Not Empty
 https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc/2024-02-04
 Acts upon  SingleRecord
 
@@ -2820,9 +2820,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Validation dwc:scientificNameID Complete
+##  VALIDATION_SCIENTIFICNAMEID_COMPLETE
 
-###  VALIDATION_SCIENTIFICNAMEID_COMPLETE
+###  Validation dwc:scientificNameID Complete
 https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8/2023-09-18
 Acts upon  SingleRecord
 
@@ -2856,9 +2856,9 @@ If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc
 
 ********************
 
-##  Validation dwc:scientificNameID Not Empty
+##  VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
 
-###  VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
+###  Validation dwc:scientificNameID Not Empty
 https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa/2023-09-18
 Acts upon  SingleRecord
 
@@ -2888,9 +2888,9 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Validation dwc:scientificName Found
+##  VALIDATION_SCIENTIFICNAME_FOUND
 
-###  VALIDATION_SCIENTIFICNAME_FOUND
+###  Validation dwc:scientificName Found
 https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45/2023-09-17
 Acts upon  SingleRecord
 
@@ -2932,9 +2932,9 @@ The purpose of this test is to detect errors in the scientific name but is depen
 
 ********************
 
-##  Validation dwc:scientificName Not Empty
+##  VALIDATION_SCIENTIFICNAME_NOTEMPTY
 
-###  VALIDATION_SCIENTIFICNAME_NOTEMPTY
+###  Validation dwc:scientificName Not Empty
 https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595/2023-09-18
 Acts upon  SingleRecord
 
@@ -2964,9 +2964,9 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Reco
 
 ********************
 
-##  Validation dwc:taxonRank Not Empty
+##  VALIDATION_TAXONRANK_NOTEMPTY
 
-###  VALIDATION_TAXONRANK_NOTEMPTY
+###  Validation dwc:taxonRank Not Empty
 https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890/2023-09-18
 Acts upon  SingleRecord
 
@@ -2996,9 +2996,9 @@ bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Validation dwc:taxonRank Standard
+##  VALIDATION_TAXONRANK_STANDARD
 
-###  VALIDATION_TAXONRANK_STANDARD
+###  Validation dwc:taxonRank Standard
 https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e/2023-09-18
 Acts upon  SingleRecord
 
@@ -3040,9 +3040,9 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 
 ********************
 
-##  Validation dwc:Taxon Not Empty
+##  VALIDATION_TAXON_NOTEMPTY
 
-###  VALIDATION_TAXON_NOTEMPTY
+###  Validation dwc:Taxon Not Empty
 https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75/2023-09-18
 Acts upon  SingleRecord
 
@@ -3076,9 +3076,9 @@ This tests for records that have no taxonomic (NAME) information. If there is an
 
 ********************
 
-##  Validation dwc:Taxon Unambiguous
+##  VALIDATION_TAXON_UNAMBIGUOUS
 
-###  VALIDATION_TAXON_UNAMBIGUOUS
+###  Validation dwc:Taxon Unambiguous
 https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590/2023-09-18
 Acts upon  SingleRecord
 
@@ -3120,9 +3120,9 @@ There are any number of potential controlled vocabularies that might be used for
 
 ********************
 
-##  Measure Amendments Proposed
+##  MEASURE_AMENDMENTS_PROPOSED
 
-###  MEASURE_AMENDMENTS_PROPOSED
+###  Measure Amendments Proposed
 https://rs.tdwg.org/bdqcore/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b/2024-08-18
 Acts upon  SingleRecord
 
@@ -3149,9 +3149,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
-##  Measure Validation Tests Compliant
+##  MEASURE_VALIDATIONTESTS_COMPLIANT
 
-###  MEASURE_VALIDATIONTESTS_COMPLIANT
+###  Measure Validation Tests Compliant
 https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73/2024-08-18
 Acts upon  SingleRecord
 
@@ -3182,9 +3182,9 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 
 ********************
 
-##  Measure Validation Tests Not Compliant
+##  MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
 
-###  MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
+###  Measure Validation Tests Not Compliant
 https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a/2024-08-22
 Acts upon  SingleRecord
 
@@ -3215,9 +3215,9 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 
 ********************
 
-##  Measure Validation Tests Prerequisites Not Met
+##  MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
 
-###  MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
+###  Measure Validation Tests Prerequisites Not Met
 https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d/2024-08-18
 Acts upon  SingleRecord
 
@@ -3248,9 +3248,9 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 
 ********************
 
-##  Measure dwc:eventDate Duration In Seconds
+##  MEASURE_EVENTDATE_DURATIONINSECONDS
 
-###  MEASURE_EVENTDATE_DURATIONINSECONDS
+###  Measure dwc:eventDate Duration In Seconds
 https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53/2023-09-18
 Acts upon  SingleRecord
 
@@ -3284,9 +3284,9 @@ The duration of a day is 86400 seconds. Implementations should treat all days as
 
 ********************
 
-##  Issue dwc:dataGeneralizations Not Empty
+##  ISSUE_DATAGENERALIZATIONS_NOTEMPTY
 
-###  ISSUE_DATAGENERALIZATIONS_NOTEMPTY
+###  Issue dwc:dataGeneralizations Not Empty
 https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2/2023-09-18
 Acts upon  SingleRecord
 
@@ -3320,9 +3320,9 @@ This is not specific to spatial data, any value in the dwc:dataGeneralizations f
 
 ********************
 
-##  Issue Coordinates Center Of Country
+##  ISSUE_COORDINATES_CENTEROFCOUNTRY
 
-###  ISSUE_COORDINATES_CENTEROFCOUNTRY
+###  Issue Coordinates Center Of Country
 https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e/2024-08-28
 Acts upon  SingleRecord
 
@@ -3367,9 +3367,9 @@ We have increased the buffer to 5000 meters to cater for differences that may ha
 
 ********************
 
-##  Issue dwc:establishmentMeans Not Empty
+##  ISSUE_ESTABLISHMENTMEANS_NOTEMPTY
 
-###  ISSUE_ESTABLISHMENTMEANS_NOTEMPTY
+###  Issue dwc:establishmentMeans Not Empty
 https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700/2023-09-18
 Acts upon  SingleRecord
 
@@ -3399,9 +3399,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Biotic-Relationships
 
 ********************
 
-##  Issue Annotation Not Empty
+##  ISSUE_ANNOTATION_NOTEMPTY
 
-###  ISSUE_ANNOTATION_NOTEMPTY
+###  Issue Annotation Not Empty
 https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1/2023-09-17
 Acts upon  SingleRecord
 
@@ -3442,9 +3442,9 @@ While there is a W3C standard on 'web annotation', there is no TDWG recommendati
 
 ********************
 
-##  Amendment dwc:basisOfRecord Standardized
+##  AMENDMENT_BASISOFRECORD_STANDARDIZED
 
-###  AMENDMENT_BASISOFRECORD_STANDARDIZED
+###  Amendment dwc:basisOfRecord Standardized
 https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933/2024-07-24
 Acts upon  SingleRecord
 
@@ -3486,9 +3486,9 @@ The term dwc:basisOfRecord has the comment "Recommended best practice is to use 
 
 ********************
 
-##  Amendment dc:type Standard
+##  AMENDMENT_DCTYPE_STANDARDIZED
 
-###  AMENDMENT_DCTYPE_STANDARDIZED
+###  Amendment dc:type Standard
 https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904/2024-08-16
 Acts upon  SingleRecord
 
@@ -3526,9 +3526,9 @@ dc:type holds literals (e.g. PhysicalObject), while dcterms:type holds an IRI fo
 
 ********************
 
-##  Amendment dcterms:license Standardized
+##  AMENDMENT_LICENSE_STANDARDIZED
 
-###  AMENDMENT_LICENSE_STANDARDIZED
+###  Amendment dcterms:license Standardized
 https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8/2023-09-18
 Acts upon  SingleRecord
 
@@ -3570,9 +3570,9 @@ The license at the record level might be derived from the license of the data se
 
 ********************
 
-##  Amendment Coordinates From Verbatim
+##  AMENDMENT_COORDINATES_FROM_VERBATIM
 
-###  AMENDMENT_COORDINATES_FROM_VERBATIM
+###  Amendment Coordinates From Verbatim
 https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e/2024-08-20
 Acts upon  SingleRecord
 
@@ -3609,9 +3609,9 @@ Transformations between coordinate reference systems should not be made as a par
 
 ********************
 
-##  Amendment Coordinates Transposed
+##  AMENDMENT_COORDINATES_TRANSPOSED
 
-###  AMENDMENT_COORDINATES_TRANSPOSED
+###  Amendment Coordinates Transposed
 https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082/2023-09-17
 Acts upon  SingleRecord
 
@@ -3652,9 +3652,9 @@ The dwc:geodeticDatum is not necessary for this test. The maximum positional shi
 
 ********************
 
-##  Amendment dwc:countryCode from Coordinates
+##  AMENDMENT_COUNTRYCODE_FROM_COORDINATES
 
-###  AMENDMENT_COUNTRYCODE_FROM_COORDINATES
+###  Amendment dwc:countryCode from Coordinates
 https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae/2024-08-18
 Acts upon  SingleRecord
 
@@ -3696,9 +3696,9 @@ This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude
 
 ********************
 
-##  Amendment dwc:countryCode Standard
+##  AMENDMENT_COUNTRYCODE_STANDARDIZED
 
-###  AMENDMENT_COUNTRYCODE_STANDARDIZED
+###  Amendment dwc:countryCode Standard
 https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350/2023-09-17
 Acts upon  SingleRecord
 
@@ -3732,9 +3732,9 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ********************
 
-##  Amendment dwc:geodeticDatum Assumed Default
+##  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
 
-###  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
+###  Amendment dwc:geodeticDatum Assumed Default
 https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7/2024-08-18
 Acts upon  SingleRecord
 
@@ -3776,9 +3776,9 @@ If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not
 
 ********************
 
-##  Amendment dwc:geodeticDatum Standardized
+##  AMENDMENT_GEODETICDATUM_STANDARDIZED
 
-###  AMENDMENT_GEODETICDATUM_STANDARDIZED
+###  Amendment dwc:geodeticDatum Standardized
 https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-08-25
 Acts upon  SingleRecord
 
@@ -3816,9 +3816,9 @@ Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https
 
 ********************
 
-##  Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth
+##  AMENDMENT_MINDEPTH-MAXDEPTH_FROM_VERBATIM
 
-###  AMENDMENT_MINDEPTH-MAXDEPTH_FROM_VERBATIM
+###  Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth
 https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c/2024-08-21
 Acts upon  SingleRecord
 
@@ -3855,9 +3855,9 @@ If dwc:verbatimDepth has a single value rather than a range, the minimum and max
 
 ********************
 
-##  Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation
+##  AMENDMENT_MINELEVATION-MAXELEVATION_FROM_VERBATIM
 
-###  AMENDMENT_MINELEVATION-MAXELEVATION_FROM_VERBATIM
+###  Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation
 https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d/2024-08-21
 Acts upon  SingleRecord
 
@@ -3894,9 +3894,9 @@ If the dwc:verbatimElevation as a single value rather than a range, the minimum 
 
 ********************
 
-##  Amendment dwc:day Standardized
+##  AMENDMENT_DAY_STANDARDIZED
 
-###  AMENDMENT_DAY_STANDARDIZED
+###  Amendment dwc:day Standardized
 https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b/2023-09-18
 Acts upon  SingleRecord
 
@@ -3930,9 +3930,9 @@ If dwc:day contains text that may be interpreted as Roman numerals, the result w
 
 ********************
 
-##  Amendment dwc:eventDate From dwc:verbatimEventDate
+##  AMENDMENT_EVENTDATE_FROM_VERBATIM
 
-###  AMENDMENT_EVENTDATE_FROM_VERBATIM
+###  Amendment dwc:eventDate From dwc:verbatimEventDate
 https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812/2024-08-18
 Acts upon  SingleRecord
 
@@ -3969,9 +3969,9 @@ If the proposed eventDate is prior to 1918-02-14, the Response.comment will incl
 
 ********************
 
-##  Amendment dwc:eventDate from dwc:year dwc:month dwc:day
+##  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
 
-###  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
+###  Amendment dwc:eventDate from dwc:year dwc:month dwc:day
 https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d/2024-08-18
 Acts upon  SingleRecord
 
@@ -4008,9 +4008,9 @@ An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:sta
 
 ********************
 
-##  Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear
+##  AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
 
-###  AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
+###  Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear
 https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b/2024-08-18
 Acts upon  SingleRecord
 
@@ -4047,9 +4047,9 @@ An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made b
 
 ********************
 
-##  Amendment dwc:eventDate Standardized
+##  AMENDMENT_EVENTDATE_STANDARDIZED
 
-###  AMENDMENT_EVENTDATE_STANDARDIZED
+###  Amendment dwc:eventDate Standardized
 https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7/2023-09-18
 Acts upon  SingleRecord
 
@@ -4083,9 +4083,9 @@ The intent of the amended range is to capture the original uncertainty where pos
 
 ********************
 
-##  Amendment dwc:Event from dwc:eventDate
+##  AMENDMENT_EVENT_FROM_EVENTDATE
 
-###  AMENDMENT_EVENT_FROM_EVENTDATE
+###  Amendment dwc:Event from dwc:eventDate
 https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d/2024-07-23
 Acts upon  SingleRecord
 
@@ -4122,9 +4122,9 @@ Only fields that are empty will be have changes proposed, and only if dwc:eventD
 
 ********************
 
-##  Amendment dwc:month Standardized
+##  AMENDMENT_MONTH_STANDARDIZED
 
-###  AMENDMENT_MONTH_STANDARDIZED
+###  Amendment dwc:month Standardized
 https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf/2023-09-18
 Acts upon  SingleRecord
 
@@ -4158,9 +4158,9 @@ Implementations should translate interpretable Roman numerals in the range I-XII
 
 ********************
 
-##  Amendment dwc:dateIdentified Standard
+##  AMENDMENT_DATEIDENTIFIED_STANDARDIZED
 
-###  AMENDMENT_DATEIDENTIFIED_STANDARDIZED
+###  Amendment dwc:dateIdentified Standard
 https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641/2023-09-17
 Acts upon  SingleRecord
 
@@ -4198,9 +4198,9 @@ We reference Wikipedia for the ISO standard because the standard documents are n
 
 ********************
 
-##  Amendment dwc:degreeOfEstablishment Standardized
+##  AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED
 
-###  AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED
+###  Amendment dwc:degreeOfEstablishment Standardized
 https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d/2024-04-16
 Acts upon  SingleRecord
 
@@ -4242,9 +4242,9 @@ For reference, synonyms for values of dwc:degreeOfEstablishment can be found at 
 
 ********************
 
-##  Amendment dwc:establishmentMeans Standardized
+##  AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
 
-###  AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
+###  Amendment dwc:establishmentMeans Standardized
 https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c/2024-02-08
 Acts upon  SingleRecord
 
@@ -4282,9 +4282,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-##  Amendment dwc:occurrenceStatus Assumed Default
+##  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
 
-###  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
+###  Amendment dwc:occurrenceStatus Assumed Default
 https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5/2024-08-23
 Acts upon  SingleRecord
 
@@ -4325,9 +4325,9 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 
 ********************
 
-##  Amendment dwc:occurrenceStatus Standardized
+##  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
 
-###  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
+###  Amendment dwc:occurrenceStatus Standardized
 https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75/2024-07-26
 Acts upon  SingleRecord
 
@@ -4369,9 +4369,9 @@ The original recommended controlled vocabulary for this term consisted of "prese
 
 ********************
 
-##  Amendment dwc:pathway Standardized
+##  AMENDMENT_PATHWAY_STANDARDIZED
 
-###  AMENDMENT_PATHWAY_STANDARDIZED
+###  Amendment dwc:pathway Standardized
 https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908/2024-02-09
 Acts upon  SingleRecord
 
@@ -4413,9 +4413,9 @@ For reference, synonyms for values of dwc:pathway can be found at https://regist
 
 ********************
 
-##  Amendment dwc:sex Standardized
+##  AMENDMENT_SEX_STANDARDIZED
 
-###  AMENDMENT_SEX_STANDARDIZED
+###  Amendment dwc:sex Standardized
 https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6/2024-03-25
 Acts upon  SingleRecord
 
@@ -4457,9 +4457,9 @@ For reference, a list of synonyms for dwc:sex values can be found at https://reg
 
 ********************
 
-##  Amendment dwc:typeStatus Standardized
+##  AMENDMENT_TYPESTATUS_STANDARDIZED
 
-###  AMENDMENT_TYPESTATUS_STANDARDIZED
+###  Amendment dwc:typeStatus Standardized
 https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805/2024-08-16
 Acts upon  SingleRecord
 
@@ -4501,9 +4501,9 @@ Valuable for data quality needs related to voucher specimens in natural science 
 
 ********************
 
-##  Amendment dwc:scientificNameID from dwc:Taxon
+##  AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
 
-###  AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
+###  Amendment dwc:scientificNameID from dwc:Taxon
 https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889/2023-09-17
 Acts upon  SingleRecord
 
@@ -4548,9 +4548,9 @@ Return a result with no value and a Result.status of NOT_AMENDED with a Response
 
 ********************
 
-##  Amendment dwc:scientificName from dwc:scientificNameID
+##  AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
 
-###  AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
+###  Amendment dwc:scientificName from dwc:scientificNameID
 https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea/2024-08-18
 Acts upon  SingleRecord
 
@@ -4595,9 +4595,9 @@ The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID referen
 
 ********************
 
-##  Amendment dwc:taxonRank Standardized
+##  AMENDMENT_TAXONRANK_STANDARDIZED
 
-###  AMENDMENT_TAXONRANK_STANDARDIZED
+###  Amendment dwc:taxonRank Standardized
 https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb/2023-09-18
 Acts upon  SingleRecord
 

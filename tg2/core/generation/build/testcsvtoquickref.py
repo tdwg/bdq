@@ -78,9 +78,9 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 		print("# Validations, Amendments, Measures operating on SingleRecords.")
 		print()
 		for index, row in dataFrame.iterrows():
-			print("## ",row['prefLabel'])
+			print("## ",row['Label'])
 			print()
-			print("### ",row['Label'])
+			print("### ",row['prefLabel'])
 			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['GUID'],row['DateLastUpdated']))
 			print("Acts upon ",row['Resource Type'])
 			print()
