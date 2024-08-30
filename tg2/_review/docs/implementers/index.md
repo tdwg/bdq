@@ -18,19 +18,153 @@
 
 TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions).
 
-## Introduction
+## 1 Introduction (non-normative)
 
-#### 5.2.4 Guidelines for Implementers (non-normative)
+This document discusses 
 
-**TODO: Mention of the need for local caching of web-site based source authorities.**
+## 2 Reading Test Descriptors (non-normative)
 
-Implementors should locally cache the results of calls to remote web services, particularly if they operate on a sequence of SingleRecords instead of operating on distinct values of InformationElements.  Data sets typically contain many repeated values, and remote web services should not be subject to repeated requests asking the same question over and over. 
+## 3 Framework elements not included in bdqcore test descriptions (normative)
 
-**TODO: Note that implementors do not need to implement web service calls to source authorities that are highly stable (e.g. DCMI type vocabulary #41).
+Implementors SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of test implementations.
 
-Some source authorities are highly stable small vocabularies.  Implementors may choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a test.  Implementors should monitor for changes to that vocabulary. 
+Implementations producing data quality reports SHOULD create instances of bdqffdq:Assertions grouped in bdqffdq:DataQualityReports that also specify the bdqffdq:DataResource that the bdqffdq:DataQualityReport concerns.
+
+Implementors MUST provide bdq:Response data in data quality reports consisting of bdq:Response.status, bdq:Response.result, and bdq:Response.comment.  
+
+Implementations MAY perform data Quality Control, data Quality Assurance, or both.  
+
+## 4 Guidelines for Implementers (non-normative)
+
+
+### Parameters and changing the behavior of a test
+
+Many tests specify bdqffdq:Parameters in addition to bdqffdq:InformationElements.  Parameters are intended to change the behavior of a test to fit local data quality needs without changing the specification of the test.  
+
+Implementors SHOULD only present non-default parameter values to a test implementation if needed for local data quality needs.
+
+Implemenentors MUST NOT produce test implementations identified by the same identifiers that only implement non-default parameter values.  An implementation of a test MUST support the test execution with the default parameter values, and MAY optionally support other parameter values.   Provided parameters MUST NOT change the behavior of the test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the test as specified in the bdqffdq:Specification.expectedResponse.
 
 **TODO: The value supplied for the parameter for the test is not an attribute of the data, it is an attribute of the Mechanism (of the system assessing the data quality). If we had included assertions about the validity values of parameters, they should only return external prerequisites not met, as they are assertions about externalities to the data and will change if the same data are run on the same test with a different configuration.**
+
+### Execution Process Agnostic
+
+The test descriptions in bdqcore are designed to be able to be implemented anywhere in the lifecycle of biodiversity data, and are designed to be independent of the environment in which the tests are run.   Tests may be run in the abstract within, for example, relational databases, they may be run individually on single Darwin Core records, or fragments of Darwin Core records within a data capture interface, or may be run in sequence in a processing pipleine of Darwin Core records, or they may be run in paralell in a processing pipeline of Darwin Core records, or they may be run in a workflow environment that produces lists of unique values of Information Elements for each test, executes the test on the unique values, and then maps the results back out onto rows in the data set.  Data may be presented to an execution framework as Flat Darwin Core, or as Structured Darwin Core, or in another structure that can be mapped to the information elements of relevant tests.
+
+The tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation.
+
+### Considerations for execution (normative)
+
+Many tests invoke external bdq:sourceAuthorities, some of these are downloadable vocabulary files, others are webservices over continually changing data.
+
+Implementations SHOULD locally cache the results of calls to remote web services, particularly if they operate on a sequence of SingleRecords instead of operating on distinct values of InformationElements.  Data sets typically contain many repeated values, and remote web services SHOULD NOT be subject to repeated requests asking the same question over and over. 
+
+Some source authorities are highly stable small vocabularies.  Implementors MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a test.  Implementors SHOULD monitor for changes to that vocabulary and update if it changes. 
+
+### Order of test execution.
+
+#### Phases: Pre-Amendment, Amendment, Post-Amendment.
+
+Recommended process with the current suite of BDQ Core tests is to run all single record validations and measures, then run all multirecord measures, from these calculate the 
+
+#### Test dependencies
+
+Individual tests are designed to be as indepenent of each other as possible, but given the by design redundancies in Darwin Core, some amendments have potential interactions.
+
+
+#### Implementing a concrete Test 
+
+
+
+#### Presenting Darwin Core data to a method that implements a test.
+
+One complexity introduced by the abstraction of tests into essentially APIs that take Darwin Core terms as input, and output Response objects is correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method.   Consider an implementation of VALIDATION_ENDDAYOFYEAR_INRANGE that has a method signature: 
+    
+    public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate) 
+
+If an implementation framework calls this method reversing the binding of dwc:startDayOfYear and dwc:eventDate as present in whatever structure is present in the framework, for example: 
+
+    Response endDayTestResponse = validationEnddayofyearInrange(eventDate, startDayOfYear);
+
+Then the test will not return the desired result, even if the implementation is correct.  Thus correct matching of input terms to the implementation of each test is critical. 
+
+Multiple approaches are possible to correctly matching input Darwin Core terms onto method signatures for methods that implement tests. 
+
+BDQ Core is entirely agnostic as to how this binding is done.  Implementors MAY freely implement in any appropriate way for their environment. However, test implementations MUST return structured Responses containing Response.status, Response.result, and Response.comment.   
+
+In java, annotating method parameters and using reflection to bind between the execution framework and test implementations works well, here is a simplified code snippet from the FilteredPush event_date_qc library that uses java annotations, e.g. @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which Information Element. 
+
+    public Response validationEnddayofyearInrange(
+            @ActedUpon(value="dwc:endDayOfYear") String endDay,
+            @Consulted(value="dwc:eventDate") String eventDate) {
+
+An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
+
+Additional metadata can be added in java annotations, here, from the FilteredPush event_date_qc library annotations enable an implementation framework to look a test implemenation by the test GUID, and can provide metadata about the test to users, and for maintinance, can be used to determine if an implementation is up to date with the latest version of a test specification.
+
+    @Validation(label="VALIDATION_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
+    @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
+    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8/2023-09-18")
+    @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is EMPTY or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is EMPTY or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT ")
+    public static DQResponse<ComplianceValue> validationEnddayofyearInrange(
+            @ActedUpon(value="dwc:endDayOfYear") String endDay,
+            @Consulted(value="dwc:eventDate") String eventDate) {
+        ....
+    } 
+
+This approach will only work with a subset of programming languages.  
+
+In many languages, an domain object can be passed as a method parameter.  
+    
+    public Response validationEnddayofyearInrange(Event event) { 
+        
+    }
+
+Here, both the execution framework and the internals of validationEnddayofyearInrange must be able to work with the Event (object or structure) and work with its Event.enddayofyear and Event.eventdate properties.
+
+It is also possible to implement in an object oriented manner as methods on a class: 
+
+    public class Event() { 
+
+        private eventDate;
+        private enddayofyear;
+
+        public Response validationEnddayofyearInRange()...
+
+    } 
+
+Other approaches are possible.  Implementors MAY use any approach to passing data into test implementations appropriate for their language(s) and environment.
+
+#### Implementing an abstract Test 
+
+In some environments, implementations MAY be lightweight implementations of an abstract test.
+
+Consider the validation: 
+
+VALIDATION_ENDDAYOFYEAR_INRANGE
+
+A SQL query that implements this abstract concept, that the enddayofyear is in range, could take the following form, using available database fields that contain data related to the abstract information element, but are not precicely mapped to the concrete specfied ActedUpon and Consulted Darwin Core terms in the specification.  This query produces a data quality report with: 
+
+    SELECT collecting_event_id, enddayofyear,
+         'VALIDATION_ENDDAYOFYEAR_INRANGE' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status, 
+         'The value of enddayofyear [' || enddayofyear ||'] is not an integer between 1 and 365 inclusive, or 366 if ended_date falls in a leap year.' as response_comment
+    FROM collecting_event
+    WHERE NOT ( 
+          enddayofyear BETWEEN 1 AND 365
+          OR (
+             enddayofyear = 366
+             AND 
+             (
+                 ( 
+                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),4) = 0
+                   AND
+                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) != 0
+                 )
+                 OR
+                 MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),400) = 0
+             )
+          )
+        );
 
 
 #### Example (non-normative)
@@ -67,13 +201,72 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
     Function isfoundCountryCode(countryCode,sourceAuthority) returns boolean throws NetworkException {...}
 
+## Presentation of Results
+
+We are agnostic about how reports from BDQ Core can be reported
+
+### Data Quality Reports
+
+#### Example (non-normative)
+
+Below is an example, taken from MCZbase, of a portion of a data quality report, run on demand, for a single specimen using an implementation of bdqcore tests integrated into that collection management system.
+
+This example shows tests that were run, using the rdfs:comment on the bdqffdq:Validation to identify the action taken by the test to the collection management staff reading the report. Then in columsn for a pre-amendment phase, the result (Response.status or Response.result) of the test, and the Response.comment explaining why the test returned the result it did.  Below this report are listed any proposed changes from Amendments, then in the table, the result and comment from repeating the Validations in a post-amendment phase, treating the data as if the results of any amendments had been accepted (which is not done automatically, users must explicitly change the data if they want to accept the proposals from the Amendments).   In the presentation, COMPLIANT values are styled in green and NOT_COMPLIANT values in red.
+
+** QC Taxon Name for MCZ:Herp:R-1440**
+
+Results of the TDWG Biodiversity Data Quality IG TG2 Taxon Name related
+tests.
+
+Tests run using (mechanism): Kurator: Scientific Name Validator -
+DwCSciNameDQ:v1.0.1.
+
+Compliant Results Pre-amendment: 75%; Post-amendment: 94%
+
+|                                                                                                                                                              |                                |                                                                                                                                                                                                                     |                       |                                                                                                                                                                                                                                                                                              |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test                                                                                                                                                         | Pre-amendment Result           | Comment                                                                                                                                                                                                             | Post-Amendment Result | Comment                                                                                                                                                                                                                                                                                      |
+| Is there a value in dwc:taxonRank?                                                                                                                           | **COMPLIANT**                  | Some value provided for taxonRank.                                                                                                                                                                                  | **COMPLIANT**         | Some value provided for taxonRank.                                                                                                                                                                                                                                                           |
+| dwc:kingdom is known to GBIF                                                                                                                                 | **COMPLIANT**                  | Exact match to provided Kingdom found in GBIF backbone taxonomy at rank Kingdom.                                                                                                                                    | **COMPLIANT**         | Exact match to provided Kingdom found in GBIF backbone taxonomy at rank Kingdom.                                                                                                                                                                                                             |
+| Is the combination of higher classification taxonomic terms consistent using GBIF?                                                                           | **COMPLIANT**                  | Genus Chelydra found in GBIF_BACKBONE_TAXONOMY\|Matches to higher ranks found in GBIF_BACKBONE_TAXONOMY\|No more higher ranks found to compare                                                                      | **COMPLIANT**         | Genus Chelydra found in GBIF_BACKBONE_TAXONOMY\|Matches to higher ranks found in GBIF_BACKBONE_TAXONOMY\|No more higher ranks found to compare                                                                                                                                               |
+| Does the value of dwc:taxonRank occur in bdq:sourceAuthority?                                                                                                | **COMPLIANT**                  | Provided value for taxonRank \[species\] found in the GBIF taxon rank vocabulary.                                                                                                                                   | **COMPLIANT**         | Provided value for taxonRank \[species\] found in the GBIF taxon rank vocabulary.                                                                                                                                                                                                            |
+| Is there a value in dwc:taxonID?                                                                                                                             | **NOT_COMPLIANT**              | No value provided for taxonID.                                                                                                                                                                                      | **COMPLIANT**         | Some value provided for taxonID.                                                                                                                                                                                                                                                             |
+| Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet? | **COMPLIANT**                  | Exact match of scientificName to genericName+specificEpithet+infraspecificEpithet.                                                                                                                                  | **COMPLIANT**         | Exact match of scientificName to genericName+specificEpithet+infraspecificEpithet.                                                                                                                                                                                                           |
+| Is there a value in any of the terms needed to determine that the taxon exists?                                                                              | **COMPLIANT**                  | Some value provided for at least one Taxon term.                                                                                                                                                                    | **COMPLIANT**         | Some value provided for at least one Taxon term.                                                                                                                                                                                                                                             |
+| dwc:phylum is known to GBIF                                                                                                                                  | **COMPLIANT**                  | Exact match to provided Phylum found in GBIF backbone taxonomy at rank Phylum.                                                                                                                                      | **COMPLIANT**         | Exact match to provided Phylum found in GBIF backbone taxonomy at rank Phylum.                                                                                                                                                                                                               |
+| dwc:scientificName contains a value                                                                                                                          | **COMPLIANT**                  | Some value provided for scientificName.                                                                                                                                                                             | **COMPLIANT**         | Some value provided for scientificName.                                                                                                                                                                                                                                                      |
+| dwc:class is known to GBIF                                                                                                                                   | **COMPLIANT**                  | Exact match to provided Class found in GBIF backbone taxonomy at rank Class.                                                                                                                                        | **COMPLIANT**         | Exact match to provided Class found in GBIF backbone taxonomy at rank Class.                                                                                                                                                                                                                 |
+| dwc:family is known to GBIF                                                                                                                                  | **COMPLIANT**                  | Exact match to provided Family found in GBIF backbone taxonomy at rank Family.                                                                                                                                      | **COMPLIANT**         | Exact match to provided Family found in GBIF backbone taxonomy at rank Family.                                                                                                                                                                                                               |
+| dwc:order is known to GBIF                                                                                                                                   | **NOT_COMPLIANT**              | No exact match to provided order found in GBIF backbone taxonomy as an order.                                                                                                                                       | **NOT_COMPLIANT**     | No exact match to provided order found in GBIF backbone taxonomy as an order.                                                                                                                                                                                                                |
+| dwc:scientificName is known to GBIF                                                                                                                          | **COMPLIANT**                  | Exact Match found for \[Chelydra serpentina (Linnaeus, 1758)\] to \[https://www.gbif.org/species/2441905\]                                                                                                          | **COMPLIANT**         | Exact Match found for \[Chelydra serpentina (Linnaeus, 1758)\] to \[https://www.gbif.org/species/2441905\]                                                                                                                                                                                   |
+| Can the taxon be unambiguously resolved from GBIF using the available taxon terms?                                                                           | **NOT_COMPLIANT**              | Provided taxon \[:Animalia:Chordata:Reptilia:Testudinata:Chelydridae:Chelydra:Chelydra serpentina (Linnaeus, 1758):(Linnaeus, 1758):Chelydra:\]\|No exact match found for provided taxon in GBIF_BACKBONE_TAXONOMY. | **COMPLIANT**         | Provided taxon \[urn:lsid:marinespecies.org:taxname:1378193:Animalia:Chordata:Reptilia:Testudinata:Chelydridae:Chelydra:Chelydra serpentina (Linnaeus, 1758):(Linnaeus, 1758):Chelydra:\]\|Exact match to provided taxonID found in WORMS, matching the provided value of dwc:scientificName |
+| dwc:genus is known to GBIF                                                                                                                                   | **COMPLIANT**                  | Exact match to provided genus found in GBIF backbone taxonomy as a genus.                                                                                                                                           | **COMPLIANT**         | Exact match to provided genus found in GBIF backbone taxonomy as a genus.                                                                                                                                                                                                                    |
+| Does the value of dwc:taxonID contain a complete identifier?                                                                                                 | INTERNAL_PREREQUISITES_NOT_MET | No value provided for taxonId.                                                                                                                                                                                      | **COMPLIANT**         | Provided taxonID recognized as an LSID.                                                                                                                                                                                                                                                      |
+
+** Proposed Amendments **
+
+-   lookup taxonID for taxon FILLED_IN
+    > **{dwc:taxonID=urn:lsid:marinespecies.org:taxname:1378193}**
+    > Provided taxon
+    > \[:Animalia:Chordata:Reptilia:Testudinata:Chelydridae:Chelydra:Chelydra
+    > serpentina (Linnaeus, 1758):(Linnaeus, 1758):Chelydra:\]\|1
+    > potential matches returned from authority.\|Match for provided
+    > taxon in WORMS with exact match on authorship. \|Exact match to
+    > provided taxon found in WORMS.
 
 
-## Validating Test Implementations (normative)
+### Annotations
+
+The bdqffdq: owl framework, and the framing of the tests in bdqcore: as rdf using that ontology makes, by design, tests results particularly amenable to being wrapped in annotations following the W3C Web Annotation Data Model (Sanderson et al. 2017). 
+
+The results could be structured as components that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
+
+
+## 5 Validating Test Implementations (normative)
 
 Implementors of tests SHOULD validate the behaviour of the internals of their test implementations with unit tests, and MUST validate that each test implementation is capable of taking relevant input from a set of standard test validation data, and returning the expected responses.
 
-### Introduction (non-normative)
+### 5.1 Introduction (non-normative)
 
 Accompanying the Core test descriptors is a set of test validation data.  This test validation data is intended for implementors to use to evaluate whether or not their test implementations produced the expected Response values for a set of cases for each test.  Each test specification could be graphed as a flow chart with several paths, the test validation data are intended to cover each node and each path within each test specification with at least a single case.  These are not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of tests for expected behaviour.  
 
@@ -83,7 +276,9 @@ The test validation records are all fragmentary flat Darwin Core Occurrence reco
 
 This is a minimalist suite of test data. Additional test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the DataID values MUST uniquely identify a validation case for each additional test data record and the resulting data added to the GitHub repository.
 
-### Considerations Concerning Input Data Values for AMENDMENTS
+###  Considerations Concerning Input Data Values for AMENDMENTS
+
+TODO: Move this section to supplementary.
 
 One of the early conclusions to this project was the need for controlled vocabularies and an early spin-off of Data Qality Task Group 4 on Vocabularies (https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core encoded data is made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
 
@@ -135,7 +330,6 @@ bdq:sourceAuthority="https://invalid/invalidservice", dwc:inputDataValue1="", dw
 
 bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
 
-See Section on Implementation
 
 ### Examples of the data for validating tests (Informative)
 

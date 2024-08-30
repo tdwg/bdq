@@ -166,13 +166,6 @@ For Quality Control, MultiRecord Measures may be defined to return a count of Re
 
 ## 3 Tests
 
-### 3.1 Test Usage
-
-The tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation.
-
-### 3.2 Annotations
-
-We are agnostic about how reports from BDQ Core can be reported, but we acknowledge the work of the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) in recommending how such results from BDQ Core could be reported using W3C Web Annotation Data Model (Sanderson et al. 2017). The results could be structured as components that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
 More details??
 

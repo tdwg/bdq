@@ -93,7 +93,7 @@ The following namespace abbreviations are used in this document:
 
 ### 2.1 Vocabularies
 
-The focus of this standard is on the tests and assertions. These are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata. The tests and assertions specifications make use of additional vocabularies, three of which are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md). 
+The focus of this standard is on a framework for describing data quality and the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata. The tests and assertions specifications make use of additional vocabularies, three of which are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md). 
 
 ### 2.2 Test Guidance
 
@@ -112,6 +112,7 @@ The [BDQ User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/
 The [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
 
 [!--- JRW first pass finished to here ---]
+
 
 
 ### 2.3 Implementation Validation Data
@@ -136,7 +137,28 @@ Expanding on this single validation step, amendments can be run and their result
 
 ### 2.8 Bibliography
 
-## 3. Acknowledgements
+## 3 Design of the Tests
+
+<!--- PJM: Section 3 is Important elements to put in the introduction --->
+
+### 3.1 Data Quality Control, Data Quality Assurance
+
+BDQ Core draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.  Implementations of the bdqcore tests MAY be used to perform Quality Control, Quality Assurance, or both.
+
+### 3.2 When are tests run 
+
+The bdqcore tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of records from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data.  They MAY be run in workflows for analysis of data for research purposes.
+
+### 3.3 Results of test executions 
+
+BDQ Core is agnostic about how reports from BDQ Core can be reported.  It does, however, specify that test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.  Responses MAY also contain more information in Response.qualifier.
+
+The results of the execution of implementations of the bdqcore: tests MAY be presented as Data Quality reports.  The bdqffdq: framework provides vocabulary and structure that MAY be used for such data quality reports.
+
+The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.
+
+## 4. Acknowledgements
+
 Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
 
 <html xmlns:v="urn:schemas-microsoft-com:vml"
