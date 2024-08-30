@@ -20,6 +20,7 @@ BDQ Core is a standard maintained by the [BDQ Core Maintenance Interest Group](h
   - [Test Specification Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdq/index.md)
   - [Data Quality Dimension Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqdim/index.md)
   - [Data Quality Criterion Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcrit/index.md)
+  - [Data Quality Enhancement Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqenh/index.md)
 - [BDQ Core User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/users/index.md)
 - [BDQ Core Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md)
   - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/TG2_test_validation_data.csv "Test validation data csv file")
