@@ -1,9 +1,0 @@
-﻿"dcterms:license","Response.Status","Response.Result","Response.Comment","Explanation"
-"CC0 1.0","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license is NOT_EMPTY]",
-"corrosive commons","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license is NOT_EMPTY]",
-"anyOldTerm","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license is NOT_EMPTY]",
-"…","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license is NOT_EMPTY]",
-"?","RUN_HAS_RESULT","COMPLIANT","[any human readable explanation, e.g. dcterms:license is NOT_EMPTY]",
-"  ","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license is EMPTY]","Filed composed of just white space"
-,"RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license is EMPTY or missing]",
-"[non-printing characters]","RUN_HAS_RESULT","NOT_COMPLIANT","[any human readable explanation, e.g. dcterms:license is EMPTY]","TEMPORARY Placeholder - need to add examples of non-printing characters"
