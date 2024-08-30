@@ -31,7 +31,7 @@ Implementors produce at least one implementation of the test, this will provide 
 
 Implementors run the implementation against the validation data, this will result in idenfification of problems that may be defects in the implementation, errors in the validation data, or problems in the specification.  
 
-Confirm that the normative and non normative elements are filled in as needed, including any references and links to source code for implementations.
+Confirm that the normative and non-normative elements are filled in as needed, including any references and links to source code for implementations.
 
 Confirm that the Proposed test is linked to at least one use case.  
 

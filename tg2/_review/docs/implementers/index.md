@@ -20,7 +20,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 
 ## Introduction
 
-#### 5.2.4 Guidelines for Implementers (non normative)
+#### 5.2.4 Guidelines for Implementers (non-normative)
 
 **TODO: Mention of the need for local caching of web-site based source authorities.**
 
@@ -33,7 +33,7 @@ Some source authorities are highly stable small vocabularies.  Implementors may 
 **TODO: The value supplied for the parameter for the test is not an attribute of the data, it is an attribute of the Mechanism (of the system assessing the data quality). If we had included assertions about the validity values of parameters, they should only return external prerequisites not met, as they are assertions about externalities to the data and will change if the same data are run on the same test with a different configuration.**
 
 
-#### Example (non normative)
+#### Example (non-normative)
 
 Given the specification: 
 
@@ -69,11 +69,11 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
 
 
-## Validating Test Implementations
+## Validating Test Implementations (normative)
 
 Implementors of tests SHOULD validate the behaviour of the internals of their test implementations with unit tests, and MUST validate that each test implementation is capable of taking relevant input from a set of standard test validation data, and returning the expected responses.
 
-### Introduction
+### Introduction (non-normative)
 
 Accompanying the Core test descriptors is a set of test validation data.  This test validation data is intended for implementors to use to evaluate whether or not their test implementations produced the expected Response values for a set of cases for each test.  Each test specification could be graphed as a flow chart with several paths, the test validation data are intended to cover each node and each path within each test specification with at least a single case.  These are not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of tests for expected behaviour.  
 
@@ -159,7 +159,7 @@ A validation test case for a validation where the input data result in a Respons
 
 "9","8","8","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","COMPLIANT","dwc countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value","","","","","","","","","","","","US","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-### Where to get the validation data (Informative)
+### Where to get the validation data (non-normative)
 
 The validation data is in two files, one containing normal data values, the other containing validation cases using non-printing characters.
 

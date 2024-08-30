@@ -30,7 +30,8 @@
 
 ## 1 Introduction
 [!--- JRW finished first draft to here ---]
-This document includes terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>
+
+This document includes terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
 ### 1.1 Namespace abbreviations
 
@@ -51,8 +52,32 @@ The following namespace abbreviations are used in this document:
 | skos         | http://www.w3.org/2004/02/skos/core#             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-### 1.1 Framework for describing data quality (Paul) (Informative)
-Included in this standard is a specification for a framework for describing data quality. Each of the tests in this standard has been designed within this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
+### 1.1 Status of the content of this document
+
+In Section 4, the values of following terms are normative: Term IRI, Name, rdfs:label, skos:prefLabel, Type, Superclass, Definition.
+
+In Section 4, the values of the following term are non-normative: Comment.
+
+Other sections of this document are marked as normative or non-normative.
+
+### 1.2 RFC 2119 key words (normative)
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+
+## 2 Use of Terms (normative) 
+
+TODO: needs updating
+
+Due to the requirements of bdqffdq, controlled value strings MUST be used as values of bdqffdq:dataQualityDimension.
+
+### 2 Framework for describing data quality 
+
+#### 2.1 Introduction (informative)
+
+Mathematical formulation, using set theory, and represenation as an owl ontology.
+
+#### 2.1 Description of the bdqffdq ontology (non-normative) 
+
+This portion of BDQ Core is a specification for a framework for describing data quality. Each of the tests in the bdqcore: namespace have been  designed and described within this framework and are framed using the terms and concepts from the framework.  The bdqffdq: framework provides the context for each test, and has shaped decisions made about each test.
 
 The framework data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
 
@@ -99,7 +124,7 @@ Full class diagram
 
 ![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
 
-### Example representation of a bdqcore test 
+### Example representation of a bdqcore test (non-normative)
 
 Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon InformationElement, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification.  Also shown is a fragment of a ValidationPolicy linking this Validation to a UseCase. 
 
@@ -140,13 +165,222 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 TODO: Add diagram
 
 
-### 1.1 Status of the content of this document
-In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. 
-
-### 1.2 RFC 2119 key words
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
-
-## 2 Use of Terms
-Due to the requirements of bdqffdq, controlled value strings MUST be used as values of bdqffdq:dataQualityDimension.
-
 ## 3 Term index
+
+TODO:  Generate and include these sections here.
+
+### 3.1 Classes
+
+### 3.2 Object Properties
+
+### 3.3 Data Properties
+
+TODO: Also index by concept.
+
+## 4 Terms in the bdqffdq ontology (portions normative, see 2.1)
+
+TODO:  Generate and include here.
+
+[Rough cut at generated list of ontology terms](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/bdqffdq.md)
+
+## 5 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
+
+This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo.  Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
+
+The following changes have been made to the original formulation: 
+
+- dcmitype:Dataset replaced with MultiRecord.  
+- Improvement Method changed to Enhancement Method, 
+- Improvement Policy changed to Enhancement Policy,
+- Data Quality Improvement changed to Data QualityAmendment.
+- Issue, IssuePolicy, IssueMethod, and IssueAssertion added as converse of Validation.
+- Dimension in Context renamed Measure.
+- Criterion in Context renamed Validation
+- Enhancement in Context renamed Amendment
+
+## Fundamental Concepts
+* U = Use Case
+* D = Dimension (e.g. Completeness)  
+* IE = Information Element (e.g. coordinates)
+* M = Mechanism 
+* C = Criterion (e.g. “in controlled vocabulary”)
+* E = Enhancement (description of a means by which data could be improved e.g. recommend replacement value from a controlled vocabulary).
+* S = Specification (specification of how a criterion is to be evaluated e.g. “Iterate records and calculate the proportion of records with scientific name different from null”)
+
+## Properties
+* US = Usages 
+* ID = Identifier for a resource
+* RT = Resource Type {SingleRecord, MultiRecord}
+* sr = instance of Single Records 
+* ds = instance of Dataset.
+* V = Data Resource Value
+* R = Assertion (result from a mechanism, of Validation, Measurement, Improvement on Resource)
+
+## Notation
+* X: Domain (Upper case symbols) 
+* x: instance (lower case symbols)
+* { } set
+* < > tuple	
+* ⋃ union
+* ∁ complement
+* ⋀ and (logical conjunction)
+* ∈ is a member of
+
+TODO: Update Domain/instance letters to reflect class name changes.
+
+## Derived Concepts
+### General
+#### Measure
+    CD = { cd | cd =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
+
+    cd1 = < ie1, d1, rt1 >
+
+* “coordinate precision of single records”
+
+#### Validation
+     CC = { cc | cc = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }   
+
+     cc1 = < ie1, c1, rt1 >
+
+* “The value of Basis of Records of single records must be in the controlled vocabulary”
+
+#### Amendment
+
+    CE = { ce | ce = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
+
+    ce1 = { < ie1, e1, rt1 >}
+
+*“Recommend valid value for taxon name in single record”
+
+#### Issue
+
+    I = { i | i = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
+
+    i1 = { < ie1, c1, rt1 >}
+
+* “Potential issue if geographic coordinate is at 0,0”
+
+TODO: Finish adding Issue concepts.
+
+### Data Quality Needs
+#### Use Case Coverage 
+   
+     UC(u) = { us | u ∈ U ⋀ us ⊂ US}
+
+     uc(u1) = {us1, us2}
+
+* “A Use Case for Niche Modeling covers MAXENT and GARP modeling”
+
+#### Valuable Information Elements
+
+     VIE(u) = {ie | ie ⊂ I E ⋀ u ∈ U }
+
+* For a Use Case, what information elements are valuable.
+
+#### Acceptable Data Quality Measure
+
+     AM(cd) = {cc | cd ∈ C D ⋀ cc ⊂ C C}
+
+     am(cd1) = {cc1, cc2}
+
+* For the dimension in context coordinate completeness in a dataset, acceptable quality is met by all records having coordinates complete.
+
+#### Enhancement Target
+
+    IT (ce) = {cd ⋃ cc | cd ∈ CD, cc ∈ CC ⋀ ce ∈ CE}
+
+    it(ce1) = {cd1, cc2}
+
+* Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion data set must have all records with coordinates.
+
+#### Measurement Policy
+
+    MP (u) = {cd | cd ⊂ CD ⋀ u ∈ U }
+
+    mp(u1) = {cd1, cd2, cd3, cd4}
+    mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
+
+#### Validation Policy
+
+    VP (u) = {cc | cc ⊂ CC ⋀ u ∈ U }
+
+    vp(u1) = {cc1, cc2}
+    vp(u1) = {< ie1, c1, rt1>, < ie2, c2, rt2> }
+
+#### Enhancement Policy
+
+     IP (u) = {ce | ce ⊂ CE ⋀ u ∈ U }
+
+     ip(u1) = {ce1, ce2}
+
+#### Data Quality Profile
+
+      DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ip(u), mp ∈ MP , vp ∈ VP , ip ∈ IP ⋀ u ∈ U }
+
+      dqp(u1) = {mp(u1), vp(u1), ip(u1)}
+
+### Data Quality Solutions
+
+#### Measurement Method
+    MM(cd) = {s | s ⊂ S ⋀ cd ∈ CD}
+
+#### Validation Method
+    VM(cc) = {s | s ⊂ S ⋀ cc ∈ CC}
+
+#### Enhancement Method
+    IM(ce) = {s | s ⊂ S ⋀ ce ∈ CE}
+
+#### Implementation 
+     I (s) = {m | m ⊂ M ⋀ s ∈ S}
+
+     i(s1) = {m1, m2}
+
+#### Mechanism Coverage
+    MC(m) = {s | s ⊂ S ⋀ m ∈ M }
+
+    mc(m1) = {s1, s2}
+
+### Data Quality Reports
+#### Data Resource
+    DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
+
+    dr1 =< id1, rt1, v1 >
+
+* “dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records”  Data resources are defined as having persistent GUIDs
+
+#### Data Quality Measure 
+     DQM(dr) = {dqm | dqm =< cd, s, m, r >, cd ∈ CD, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+     
+     dqm(dr1) = {< cd1, s1, m1, r1 >}
+
+* Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
+
+#### Data Quality Validation 
+
+     DQV (dr) = {dqv | dqv = < cc, s, m, r >, cc ∈ CC, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+
+     dqv(dr1) = {< cc1s1, m1, r1 >}
+
+* A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was not empty.
+
+#### Data Quality Amendment
+     DQI(dr) = {dqi | dqi = < ce, s, m, r >, ce ∈ CE, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+
+     dqi(dr1) = {< ce1, s1, m1, r1 >}
+
+* An amendment is proposed to replace the current value of the scientific name by the value “Apis” because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
+
+#### Data Quality Assessment
+     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) | dqm ∈ DQM, dqv ∈ DQV , dqi ∈ DQI ⋀ dr ∈ DR}
+
+     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1}
+
+#### Quality Control
+     QC(dr) = {dqv(dr) ⋃ dqi(dr) | dqv ∈ DQV , dqi ∈ DQI ⋀ dr ∈ DR}
+
+     qc(dr1) = {dqv1, dqi1}
+
+#### Quality Assurance
+     QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}
+
+     qa(dr1) = {dqv1, dqv2}
