@@ -97,15 +97,17 @@ The framework defines four central descriptors of data quality needs: Amendments
 
 ![Diagram of Validation, Amendment, Measure and Issue classes as subtype of Assertion class, with Assertion as a rectangular node, DataQualityNeeds as a parent node above it, and the other 4 classes below the Assertion and linked to it. ](dataqualityneeds.png "The 4 central assertion types in the framework.")
 
-Amendments propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
+Validations assess compliance with a need.  Data have quality if they are compliant with the requirements of the validation test.  Validations relate information elements and resource types with a specification of specifically how to assess fitness of the data under some narrow criterion, and themselves are assembled into validations policies, which are linked to other policies to cover a description of the data quality needs of a UseCase.
+
+![Diagram of the classes involved in expressing data quality needs with Validations.](bdqffdq_data_quality_needs_validation.svg "Expressing data quality needs: Validations")
+
+Issues are the converse of Validations.  Data lack quality if an issue identifies a potential problem in the data that would require further human review to identify if the data have quality for some purpose.  
 
 Measures measure some specific aspect of data quality.
 
-Validations assess compliance with a need.  Data have quality if they are compliant with the requirements of the validation test.  Validations relate information elements and resource types with a specification of specifically how to assess fitness of the data under some narrow criterion, and themselves are assembled into validations policies, which are linked to other policies to cover a description of the data quality needs of a UseCase.
+![Diagram of the classes involved in expressing data quality needs with Measures.](bdqffdq_data_quality_needs_measure.svg "Expressing data quality needs: Measures")
 
-![Diagram of the classes involved in expressing data quality needs with Validations.](bdqffdq_data_quality_needs.svg "Expressing data quality needs: Validations")
-
-Issues are the converse of Validations.  Data lack quality if an issue identifies a potential problem in the data that would require further human review to identify if the data have quality for some purpose.  
+Amendments propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
 
 The framework has an abstract concept of Information Elements. To frame tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the information elements in each test.
 

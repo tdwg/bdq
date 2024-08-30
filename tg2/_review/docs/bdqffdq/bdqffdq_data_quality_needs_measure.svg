@@ -5,7 +5,7 @@
    viewBox="0 0 1657.3191 824.43476"
    version="1.1"
    id="svg2688"
-   sodipodi:docname="bdqffdq_data_quality_needs.svg"
+   sodipodi:docname="bdqffdq_data_quality_needs_measure.svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    inkscape:export-filename="../../../../stuff/Projects/BDQ/bdqffdq_data_quality_needs3.png"
    inkscape:export-xdpi="96"
@@ -2333,26 +2333,6 @@
            y="242.69775">ActedUpon</tspan></text>
     </g>
     <g
-       id="g3862-3"
-       transform="translate(532.58617,-119.16675)"
-       style="display:inline;filter:url(#filter9891-2)">
-      <path
-         style="fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.61232;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-         d="m 80.114412,233.69694 c 0,22.49625 -36.487212,40.73226 -81.4994743,40.73226 -45.0091417,0 -81.4963627,-18.23601 -81.4963627,-40.73226 0,-22.49626 36.487221,-40.73226 81.4963627,-40.73226 45.0122623,0 81.4994743,18.236 81.4994743,40.73226"
-         id="path1741-3-6-60" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-         x="-50.116806"
-         y="241.54248"
-         id="text3788-5"><tspan
-           sodipodi:role="line"
-           id="tspan3786-02"
-           style="font-size:24px;stroke-width:0.75"
-           x="-50.116806"
-           y="241.54248">Criterion</tspan></text>
-    </g>
-    <g
        id="g3862-6"
        transform="translate(14.242904,-177.89221)"
        style="display:inline;filter:url(#filter9891-9)">
@@ -2398,7 +2378,7 @@
          sodipodi:role="line"
          id="tspan13371"
          x="140.19701"
-         y="384.64835">ValidationMethod</tspan></text>
+         y="384.64835">MeasurementMethod</tspan></text>
     <path
        style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter8030-6)"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
@@ -2407,13 +2387,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="611.00018"
-       y="274.83157"
+       x="624.73126"
+       y="276.62836"
        id="text3846-1"><tspan
          sodipodi:role="line"
          id="tspan20765"
-         x="611.00018"
-         y="274.83157">Validation</tspan></text>
+         x="624.73126"
+         y="276.62836">Measure</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
@@ -2613,7 +2593,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2.50762;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 874.22728,441.89885 c -64.47321,0 -48.90629,-133.96465 -108.01945,-133.96465"
+       d="m 872.33626,345.63877 c -64.47321,0 -47.01527,-37.70457 -106.12843,-37.70457"
        id="path2165-0-15"
        sodipodi:nodetypes="cc" />
     <path
@@ -2622,7 +2602,7 @@
        id="path2167-2-9" />
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 873.37689,442.20973 -10,-5 2.5,5 -2.5,5 z m 0,0"
+       d="m 873.37689,347.70973 -10,-5 2.5,5 -2.5,5 z m 0,0"
        id="path2167-2-9-8" />
     <path
        style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105-4)"
@@ -2738,12 +2718,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-9-3)"
        x="771.91577"
-       y="390.2692"
+       y="334.7692"
        id="text4277-04-1-59"><tspan
          sodipodi:role="line"
          id="tspan20836-5-4"
          x="771.91577"
-         y="390.2692">hasPolicy</tspan></text>
+         y="334.7692">hasPolicy</tspan></text>
     <path
        id="rect32199"
        style="fill:#fcfcdf;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:10"
@@ -2778,7 +2758,7 @@
          sodipodi:role="line"
          id="tspan33534-0-9"
          x="1020.7781"
-         y="116.62403">Validations</tspan></text>
+         y="116.62403">Measures</tspan></text>
     <path
        style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0.535978;filter:url(#filter8030-7-3-8)"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
@@ -2849,12 +2829,12 @@
          x="1124.6842"
          y="492.83823">hasUseCase</tspan></text>
     <rect
-       style="display:inline;fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:3.15691;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:3.89302;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="rect27789-6"
-       width="346.32855"
-       height="60.98016"
-       x="858.62476"
-       y="181.72679" />
+       width="533.10248"
+       height="60.244053"
+       x="858.9928"
+       y="182.09485" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
@@ -2874,7 +2854,7 @@
          sodipodi:role="line"
          id="tspan57808"
          x="866.21729"
-         y="230.4931">(e.g VALIDATION_DAY_INRANGE</tspan></text>
+         y="230.4931">(e.g MEASURE_EVENTDATE_DURATIONINSECONDS</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
@@ -2885,21 +2865,6 @@
          id="tspan57839"
          x="641.53265"
          y="73.836845">DataQualityDimension</tspan></text>
-    <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="M 671.97311,216.6103 C 651.43466,178.68729 591.36213,205.95777 575.20176,151.8495"
-       id="path1789-0"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-6-4-4)"
-       x="543.49603"
-       y="188.29503"
-       id="text4277-04-2-64-1"><tspan
-         sodipodi:role="line"
-         id="tspan58470"
-         x="543.49603"
-         y="188.29503">hasCriterion</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 706.8352,219.2192 c -20.53845,-37.92301 61.88969,-49.78318 45.72932,-103.89145"
@@ -2925,10 +2890,6 @@
          id="tspan65648"
          x="-182.88193"
          y="391.68445">Parameters optionally</tspan></text>
-    <path
-       style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 578.1262,148.78493 -5,10 5,-2.5 5,2.5 z m 0,0"
-       id="path1915-9" />
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 754.49165,112.58419 -5,10 5,-2.5 5,2.5 z m 0,0"
