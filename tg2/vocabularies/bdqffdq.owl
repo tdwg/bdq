@@ -270,7 +270,7 @@ Describes the relationship between a validation concept in FFDQ (needs, solution
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :issueInContext ;
-                             owl:someValuesFrom :ProblemPolicy
+                             owl:someValuesFrom :IssuePolicy
                            ] ;
                 rdfs:comment "Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue." .
 
@@ -371,6 +371,15 @@ Was: The criteria targeted by some enhancement via the ImprovementTarget object.
 ###  https://rs.tdwg.org/bdqffdq/terms#AbstractInformationElement
 :AbstractInformationElement rdf:type owl:Class ;
                             rdfs:subClassOf :InformationElement .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms#Enhancement
+:Enhancement rdf:type owl:Class ;
+             rdfs:subClassOf :FundamentalConcept ,
+                             :NeedConcept ;
+             rdfs:label "Enhancement"@en ;
+             skos:definition "A description of a means by which data could be improved."@en ;
+             skos:prefLabel "Enhancement"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept
@@ -581,6 +590,15 @@ Describes criteria by which data which lack quality for some purpose may be iden
              skos:prefLabel "Issue Method"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/IssuePolicy
+:IssuePolicy rdf:type owl:Class ;
+             rdfs:subClassOf :IssueConcept ,
+                             :NeedConcept ;
+             rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." ;
+             rdfs:label "Issue Policy"@en ;
+             skos:prefLabel "Issue Policy"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
 :Measure rdf:type owl:Class ;
          rdfs:subClassOf :DataQualityNeed ,
@@ -650,15 +668,6 @@ Describes the criteria for measuring an aspect of data quality related to some d
            rdfs:label "Parameter"@en ;
            skos:definition "A value that, when provided to a test Specification changes the behavior of the test in a defined manner."@en ;
            skos:prefLabel "Parameter"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
-:ProblemPolicy rdf:type owl:Class ;
-               rdfs:subClassOf :IssueConcept ,
-                               :NeedConcept ;
-               rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." ;
-               rdfs:label "Problem Policy"@en ;
-               skos:prefLabel "Problem Policy"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Profile

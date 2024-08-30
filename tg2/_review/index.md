@@ -10,9 +10,9 @@ BDQ Core is a standard maintained by the [BDQ Core Maintenance Interest Group](h
 ## Getting started
 
 - [BDQ Core Introduction](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/intro/index.md)
-- [BDQ Core Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/index.md)
+- [BDQ Core Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore/index.md)
 - [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
-  -  [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/index.md):
+  -  [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore_list/index.md):
      - File: [CSV List of Tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
      - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.xml "OWL representation of the tests descriptors.")
   - [Fitness For Use Framework Ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md):
