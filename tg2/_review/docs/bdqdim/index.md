@@ -37,13 +37,16 @@ This document includes terms intended to be used as a controlled value for BDQ C
 
 The scope of the standard is the fundamental information about core tests applied to occurrence type Darwin Core records. These tests evaluate one of Data Quality Dimension of the Fitness for Use Framework (Chapman et al., 2020): Measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved. These dimensions are:
 
-* Completeness: The extent to which data are present and sufficiently comprehensive for use.
-* Conformance: Conforms to a format, syntax, data type, range, or standard of the Information Element.
-* Consistency: Agreement among related Information Elements (q.v.) that are present in the data. Note that missing Information Elements do not make a test Inconsistent.
-* Likeliness: The likelihood of Darwin Core Term(s) having true or expected values.
-* Reliability: Measure of how the data values agree with an identified source of truth. The degree to which data correctly describes the truth (object, event or any abstract or real 'thing').
-* Resolution: Refers to the data having sufficiently detailed information. Measure of the granularity of the data, or the smallest measurable increment.
+<!--- Generate and include from /vocabulary/bdqdim_terms.csv --->
 
+| term_localName |  definition | rdf_type |
+| -------------------- |  ----------- | ---------- |
+| Completeness |  The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. | bdqffdq:DataQualityDimension |
+| Conformance |  Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard. | bdqffdq:DataQualityDimension |
+| Consistency |  Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test bdq:Inconsistent. | bdqffdq:DataQualityDimension |
+| Likeliness |  The likelihood of Darwin Core Term(s) having true or expected values. | bdqffdq:DataQualityDimension |
+| Reliability |  A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing'). | bdqffdq:DataQualityDimension |
+| Resolution |  The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment. | bdqffdq:DataQualityDimension |
 
 
 ### 1.1 Status of the content of this document
