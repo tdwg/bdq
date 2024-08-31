@@ -536,6 +536,30 @@ A reference to an external (non-Darwin Core) authority required for the test. bd
 
 **"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
 
+### And again duplicative Test Field vocabulary from the glossary
+
+| Test Field | Definition | 
+| Darwin Core Class | "The Information Element in the original terms of the framework, the general sort of information this test operates on. |
+| Data Quality Dimension | "The data quality dimension for this test. See bbqffdq:DataQualityDimension. |
+| Description | "A non-technical description of what the test does, intended for consumers of data quality reports in concert with the bdq:Response.comment. |
+| Example Implementations (Mechanisms) | "Known Mechanisms with implementations of the test. |
+| Examples | "A ’pass’ and a ‘fail’ example of test data. All examples listed are present in the the validation data suite. |
+| Examples | 
+| Expected Response | "The specification for implementors describing the expected behavior of the test. See bdqffdq:Specification |
+| GUID | "see bdq:GUID |
+| Information Elements Acted Upon | "A list of the specific Darwin Core terms that are the focus of a test. |
+| Information Elements Consulted | "AA list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. |
+| Label | "A human readable label identifying the test. The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS. |"cf. rdfs:label"
+| Link to Specification Source Code | "A link to code that implements the test. |
+| Notes | "Additional, non-normative comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. |
+| Parameter(s) | "Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain. |
+| References | "A list of references pertinent to the test. |
+| Source | "The origin of the concept of the test. |
+| Source Authority | "A reference to an external (non-Darwin Core) authority required for the test.  See bdq:sourceAuthority |
+| Specification Last Updated | "The last date a change was made to a test that affects the operation of the test. |
+| Term-Actions | "Equivalent to the bdqTestField:Label without the leading Test Type. |
+| Test Type | The Type of assertion that the test produces, Measure, Validation, Amendment, Issue. |
+
 ---
 
 ## Goes in Supplement: Time and Date Issues
