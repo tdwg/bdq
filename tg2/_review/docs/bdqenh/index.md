@@ -34,7 +34,7 @@ This document includes terms intended to be used as a controlled value for BDQ C
 
 ### 1.1 Data Quality Criteria
 
-The scope of the standard is the fundamental information about core tests of type bdqffdq:Amendment. The Enhancement describes, in abstract terms, how proposals can modify data to improve fittness.  An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Enhaneements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
+The scope of the standard is the fundamental information about core tests of type bdqffdq:Amendment. The Enhancement describes, in abstract terms, how proposals can modify data to improve fitness.  An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Enhancements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
 
 ### 1.2 Data Quality Criteria Vocabulary
 
