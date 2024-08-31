@@ -34,7 +34,7 @@ This document includes terms intended to be used as a controlled value for BDQ C
 
 ### 1.1 Data Quality Criteria
 
-The scope of the standard is the fundamental information about core tests of type bdqffdq:Validation or bdqffdq:Issue. The Criterion describes, in abstract terms how data can be evaluated for fittness.  A criterion expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Criteria have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
+The scope of the standard is the fundamental information about core tests of type bdqffdq:Validation or bdqffdq:Issue. The Criterion describes, in abstract terms how data can be evaluated for fitness.  A criterion expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Criteria have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
 
 ### 1.2 Data Quality Criteria Vocabulary
 
@@ -45,10 +45,10 @@ The scope of the standard is the fundamental information about core tests of typ
 | term_localName | definition | comments |
 | --------------------- | ----------- | ------------- |
 | Complete | Data are present and sufficiently comprehensive for use. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness |
-| Consistent | A data are internally consistent and consistent with any authorities consulted.  | A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.   Corresponding dimension is bdqdim:Consistency |
+| Consistent | Data are internally consistent and consistent with any authorities consulted.  | A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.   Corresponding dimension is bdqdim:Consistency |
 | Found | Data conform to the values in an authority. | Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority.  Corresponding dimension is bdqdim:Conformance |
 | InRange | Data conform to an expected range of values. | Data in a bdqffdq:InformationElement conform to an expected range of values.  Corresponding dimension is bdqdim:Conformance |
-| Likely | Data are likely to be true or expected values. | Data in a bdqffdq:InformationElement is likely to be true or expected values.  Corresponding dimension is bdqdim:Likelyness |
+| Likely | Data are likely to be true or expected values. | Data in a bdqffdq:InformationElement is likely to be true or expected values.  Corresponding dimension is bdqdim:Likeliness |
 | NotEmpty | Some data value is present. | Some value is present in a bdqffdq:InformationElement.  Corresponding dimension is bdqdim:Completeness.   See also bdq:EMPTY and bdq:NOT_EMPTY |
 | Standard | Data conform to a format, syntax, data type, or standard. | Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard.  Corresponding dimension is bdqdim:Conformance |
 | Unambiguous | Data adequately identify a unique entity. | Data in a bdqffdq:InformationElement adequately identifies a unique entity.  Corresponding dimension is bdqdim:Conformance |
