@@ -87,7 +87,7 @@ A MEASURE may return either a Response.result that is a numeric value, or the va
 
 ## 3 Quick Reference Guide to the Tests 
 
-### 3.1 Descriptors shown in the quick reference guide
+### 3.1 Descriptors shown in the quick reference guide 
 
 Test Descriptors are the collection of bdqffdq terms that comprehensively describe the BDQ Core tests. The suite of descriptors are designed for three audiences (which may not be mutually exclusive).  A subset of these descriptors are shown in the quick reference guide.
 
@@ -115,7 +115,33 @@ Each test in the quick reference guide displays the following descriptors:
 - **Use Cases** [non-normative] For Consumers and Implementors. Descriptions of data quality needs that this test helps to support.
 - **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
 
-## 3.2  The Tests
+
+## 3.2 SingleRecord tests and MultiRecord Measures (informative)
+
+The tests in bdqcore: include the following: 
+
+1. A set of Validations, Amendments, and Measures, each of which applies to a SingleRecord under one or more UseCases. 
+
+Each of these tests examines one aspect of data quality in a small set of bdqffdq:InformationElements in a bdqffdq:SingleRecord (where a SingleRecord may be a row in a flat table or may have more structure).
+
+2. A set of Measures, each of which applies to a MultiRecord under one or more UseCases.
+
+These Measures each apply to a MultiRecord under one or more UseCases.  The inputs, that is the InformationElements, for these Measures are the outputs of SingleRecord validations.  
+
+The outputs of these MultiRecord Measures fall into one of two categories:
+
+- The Response.result is a count of the number of Response.result=COMPLIANT for a single Validation in a pass through each of the SingleRecords in a MultiRecord.  The proportion of records that are COMPLIANT is easily calculated and displayed from the measured value over the total number of SingleRecords in the MultiRecord.  
+
+MultiRecord Measures that return counts can be run before an amendment step in a data processing pipeline, and run again after applying all of the proposed changes to the data from the Amendments to the data set.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data.  For QualityControl, these numbers identify where work is needed to make more of a data set fit for use for a given UseCase.  
+
+- The Response.result is COMPLETE if all of a given Validation on SingleRecords in a MultiRecord are COMPLIANT (or in some cases COMPLIANT or INTERNAL_PREREQISITES_NOTMET).  
+
+This set of measures serves to support Quality Assurance.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord measures return COMPLETE.  The MultiRecord Measures are a formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase (see the [Summary of Mathematical Formalization](../bdqffdq/index.md# 5 Fitness For Use Framework Summary of Mathematical Formalization) ). 
+
+The bdqffdq: framework also allows for MultiRecord Validations, Amendments, and Issues, bdqcore: does not currently contain any such.
+
+## 3.3  The Tests (normative)
+
 
 TODO: When this becomes template, embed quick reference guide here instead of linking.
 

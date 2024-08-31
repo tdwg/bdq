@@ -261,32 +261,21 @@ FROM event
     WHERE day < 1 or day > 31
 
 
-### 5.4 Core Test Specifications
+### Goes in Supplement: Considerations for use of MultiRecord Measures
 
-These are the specifications for a set of Validations, Amendments, and Measures, each of which applies to a SingleRecord under one or more UseCases. 
+MultiRecord tests examine data across a data set.  
 
-[Generate from https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv]
+The BDQ Core MultiRecord Measures all take the output of other tests as their input rather than data.  The inputs, that is the InformationElements, for these Measures in bdqcore: are the outputs of SingleRecord Validations.  
 
-Included Document: 
+One subset of these measures simply counts the Responses from a given Validation that have Response.result of COMPLIANT.  For QualityControl, these numbers identify where work is needed to make more of a data set fit for use for a given UseCase.  These MultiRecord Measures that return counts can be run before an amendment step in a data processing pipeline, and run again after applying all of the proposed changes to the data from the Amendments to the data set.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data for a given UseCase.
 
-[CORE SingleRecord Tests](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_tests.md)
-
-### 5.5 Core MultiRecord Measure Specifications (Normative)
-
-These are the specifications for a set of Measures each of which applies to a MultiRecord under one or more UseCases.  The inputs, that is the InformationElements, for these Measures are the outputs of SingleRecord validations.  One subset of these measures simply counts the number of Response.result=COMPLIANT for a given Validation in a pass through each of the SingleRecords in a MultiRecord.  The proportion of records that are COMPLIANT is easily calculated and displayed from the measured value over the total number of SingleRecords in the MultiRecord.  For QualityControl, these numbers identify where work is needed to make more of a data set fit for use for a given UseCase.  The other subset of these measures are intended for QualityAssurance.  These QA measures return a Response.result of COMPLETE if all of a given Validation on SingleRecords in a MultiRecord are COMPLIANT.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord QA Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord QA measures return COMPLETE.  The MultiRecord QA measures are the formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase.  
+The other subset of these measures are intended for QualityAssurance.  These QA measures return a Response.result of COMPLETE if all of a given Validation on SingleRecords in a MultiRecord have a response that indicates that the data are fit for use.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord QA Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord QA measures return COMPLETE.  The MultiRecord QA measures are the formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase.  
 
 Some Validations return Response.status=INTERNAL_PREREQUISITES_NOT_MET when one or more of the input InformationElements contain empty values.  For some UseCases, empty values in some fields make the data not fit for use (these are usually tested directly for with VALIDATION...NOTEMPTY tests), however, some Validations operate on sparse data or other cases where the data is fit for use even without values, but when values are present, they must comply with some restriction.  For example, dwc:minimumDepth and dwc:maximumDepth are not expected to be populated for terrestrial data, but are expected to be within range when values are supplied (for freshwater and marine data).  A subset of the MultiRecord QA Measures accomodate such cases by returning Response.result=COMPLETE for validations that are either Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET.  Thus they can measure that all of the SingleRecords in a MultiRecord either have, for example, no value in dwc:minimumDepth or have an in-range value for dwc:minimumDepth.   
 
 It is possible, but less flexible, to frame Validations to return Result.response=COMPLIANT for either empty values or non-empty values that satisfy other validation criteria.  Concerns are better separated, and individual tests are better composed to fit particular user needs, by having the Validations treat empty data as INTERNAL_PREREQUISITES_NOT_MET, and then framing MultiRecord QA Measures as appropriate for a given UseCase.
 
-MultiRecord Measures that return counts can be run before an amendment step in a data processing pipeline, and run again after applying all of the proposed changes to the data from the Amendments to the data set.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data.  
-
-[Generate from https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_multirecord_measure_tests.csv]
-
-Included Document: 
-
-[CORE MultiRecord Measure Tests](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_multirecord_measure_tests.md)
-
+MultiRecord measures can also operate directly on the data, for example, a MultiRecord Measure could be framed to measure the average number of individuals reported in dwc:individualCount in a data set.
 
 ### Goes in Supplement: Considerations Concerning Input Data Values for AMENDMENTS
 
