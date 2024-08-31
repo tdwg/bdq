@@ -7,9 +7,11 @@
 
 cp ../vocabularies/bdqffdq.owl ../_review/vocabulary/bdqffdq.owl
 
-# bdqdim vocabulary
+# bdqdim and related vocabulary
 
 cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_terms.csv
+cp ../vocabularies/bdqenh_terms.csv ../_review/vocabulary/bdqenh_terms.csv
+cp ../vocabularies/bdqcrit_terms.csv ../_review/vocabulary/bdqcrit_terms.csv
 
 # bdqcore files containing test descriptions
 
