@@ -20,9 +20,79 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 
 ## 1 Introduction (non-normative)
 
-This document discusses 
+This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
 
-## 2 Reading Test Descriptors (non-normative)
+## 1.1 Independence (normative) 
+
+Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
+
+## 2 About the Tests 
+
+### 2.1 The Concept of "EMPTY" in BDQ Core (normative)
+
+Empty and NotEmpty are defined as: 
+
+<!--- Load definition of Empty and NotEmpty from bdq vocabulary here into template --->
+
+| term | definition |
+| ---  | ---------- |
+| bdq:Empty | An evaluation of a value, that in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. |
+| bdq:NotEmpty |An evaluation of a value, that in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. |
+
+<!--- end load --->
+
+Data that has passed through arbitrary serializations and transformations can contain many anomolies.  Empty is defined to allow tests to clearly separate concerns.  An information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and are the concern of tests that evaluate bdqdim:Conformance.  Presence or absence of data is a concern for tests evaluating bdqdim:Completeness.  
+
+A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NotEmpty, identifying that they are invalid is a concern of other tests evaluating bdqdim:Completeness.
+
+#### 2.1.1 Concerns of Empty (normative)
+
+(1) Spaces, tabs, and other non-printing characters, treated as Empty.
+
+Objects that are null, or null values in a relational database, at the point of test execution, MUST be treated as bdq:Empty.
+
+(2) Serializations of NULL, treated as NotEmpty.
+
+Data serialized from relational database systems may contain string representations of NULL, 
+We considered, and explicitly rejected, treating common string serializations of null such as "\N" and "NULL" as empty values.  String serializations of NULL outside of a database, present at the point of evaluation of a test, MUST be treated as bdq:NotEmpty.  A test execution environment MAY deserialize these string serializations of NULL
+
+(3) Data values indicating an unknown, treated as NotEmpty.
+
+The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
+
+(4) Independence of tests from the execution framework. 
+
+The evaluation of bdq:Empty MUST be at the point of evaluation of the test.  This allows the tests to be independent of data serializations for transport and the representation of data in test execution environments. 
+
+In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by  the test bdq:CriterionInContext to be agnostic about the strucuture presented to a framework for executing the tests. 
+
+For csv data a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that.
+
+#### 2.1.2 Example implementation of a function to assess Empty (non-normative)
+
+Here is a java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty.  Test implementations can reuse a function like this for tests that evaluate bdq:Empty in their specification.
+
+    public boolean isEmpty(String aString)  {
+        boolean result = true;
+        if (aString != null && aString.trim().length()>0) { 
+            result = false;
+        }
+        return result;
+    }
+
+Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_NOTEMPTY that provides a list of NOT_COMPLIANT records for some flat taxonomy table in a database, again handing off the resposibility for evaluation of non-printing characters to the trim function available in the language.
+
+    SELECT taxonomy_id, kingdom,
+         'VALIDATION_KINGDOM_NOTEMPTY' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status,
+         'The value of kingdom is Empty.' as response_comment
+    FROM taxonomy
+    WHERE 
+         kingdom is null
+         OR
+         length(trim(kingdom)) == 0
+    ;
+
+### 2.2 Reading Test Descriptors (non-normative)
 
 ## 3 Responses from tests
 
@@ -306,6 +376,8 @@ The results could be structured as components that can be wrapped in the body an
 
 Implementors of tests SHOULD validate the behaviour of the internals of their test implementations with unit tests, and MUST validate that each test implementation is capable of taking relevant input from a set of standard test validation data, and returning the expected responses.
 
+If validation data could be conflated with actual data, see: [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
+
 ### 5.1 Introduction (non-normative)
 
 Accompanying the Core test descriptors is a set of test validation data.  This test validation data is intended for implementors to use to evaluate whether or not their test implementations produced the expected Response values for a set of cases for each test.  Each test specification could be graphed as a flow chart with several paths, the test validation data are intended to cover each node and each path within each test specification with at least a single case.  These are not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of tests for expected behaviour.  
@@ -355,7 +427,7 @@ The following column header for the data are used for the validation data files.
 * LineForTest: An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular test,
 * GitHubIssueNo: The GitHub issue where rationale management of the test under validation is maintained, can be use to form a link to the discussion history for the development of the relevant test, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20
 * GUID: the machine readable identifier for the test under validation, e.g. 69b2efdc-6269-45a4-aecb-4cb99c2ae134
-* Label: The human-readable name of the test, e.g., "VALIDATION	COUNTRY_FOUND"
+* Label: The human-readable name of the test, e.g., "VALIDATION_COUNTRY_FOUND"
 * Response.status: The status on applying the test to the test data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET".
 * Response.result: The result of running the test on the test data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED".
 * Response.comment: An example human-readable statement identifying the reason for the test result given the input data, implementations are not expected to produce this exact value, it is given as an example.

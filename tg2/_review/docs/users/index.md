@@ -72,3 +72,8 @@ Issues
 
 Amendments propose changes to data, but it is up to the consumers of data quality reports to choose whether or not to accept those changes, particularly into authoritative databases of record. 
 
+## Time and TimeZone
+
+Time is not considered in any of the bdqcore: test descriptions.  This means that some cases where time zone data is important, dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced.  If this would make such data unfit for your purposes, you will need to introduce additional tests. 
+
+

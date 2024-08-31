@@ -25,6 +25,7 @@ BDQ Core is a standard maintained by the [BDQ Core Maintenance Interest Group](h
 - [BDQ Core Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md)
   - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/TG2_test_validation_data.csv "Test validation data csv file")
   - File: [Test Validation Data for non-printing characters](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/TG2_test_validation_data_nonprintingchars.csv "Test validation data csv file for testing implementations of EMPTY, containing non-printing characters")
+- [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 - [References](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/references/index.md)
 - [BDQ Core Supplemental Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)
 - [BDQ Core Maintenance Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/maintenance/index.md)

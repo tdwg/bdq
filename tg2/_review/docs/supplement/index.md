@@ -109,13 +109,7 @@ The following namespace abbreviations are used in this document:
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-### 1.5 The Concept of "EMPTY" in BDQ Core
-
-An information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and may be separately detected. For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that. We considered, and explicitly rejected, treating common string serializations of null such as \N and NULL as empty values. If "\N" is present in a data set, the tests will explicitly treat that value as NOTEMPTY, and then try to evaluate it against whatever other criteria apply. This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
-
 ## 2 Framework for describing data quality
-
-[need to migrate from https://raw.githubusercontent.com/kurator-org/kurator-ffdq/master/competencyquestions/rdf/ffdq.owl to tdwg repository]
 
 The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
@@ -164,14 +158,11 @@ The framework expects that Quality Assurance is provided for through specificati
 
 For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
-## 3 Tests
-
-
-More details??
+## 3 Developing the Tests
 
 ### 3.3 Tests and Data Dimensions
 
-We identified four fundamental aspects of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord). A record without a taxonomic name, a location or a date has limited value. Three tests in this standard specifically target records with no name, space or time values.
+We identified four categories of information elements of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord). A record without a taxonomic name, a location or a date has limited value. Three tests in this standard specifically target records with no name, space or time values.
 
 #### 3.4 Types of Test
 
@@ -205,9 +196,9 @@ Data are found to be fit for some use if all Validations comprising that Use hav
 
 All tests could be accumulated across multiple records (bdqffdq:MultiRecords). For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.    
 
-### 3.5 Test Descriptors
+### 3.5 Test Descriptors used in markdown tables in issues
 
-The Test Descriptors are those terms that are necessary to comprehensively describe the test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
+The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
 **"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb" 
 
@@ -236,8 +227,6 @@ The Test Descriptors are those terms that are necessary to comprehensively descr
 **"Source Authority"** [normative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be exTests may require reference to external data such as standard vocabularies of terms or names. While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests.
 
 A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}"
-
-
 
 **"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
 
@@ -563,55 +552,6 @@ Response.comment values SHOULD be internationalized as appropriate for the the c
 
 Response.status and Response.value constants SHOULD be given internationalized labels as appropriate for the the consumers of data quality reports.  
 
-### 6.7 Identifying example data (Normative) (Paul)
-
-Data sets consisting of partly or wholly synthetic data, including data sets into which errors have been deliberately introduced may be used to test, validate, and demonstrate the operation of implementations of data quality tests.  It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses.  The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
-
-#### 6.7.1 Data Fragments and Occurrence Data Sets
-
-Inputs to unit tests and testing frameworks for individual test implementations, such as the test validation data in section 6.3 are likely to be organized as fragments of Occurrence data not easily mistaken for actual occurrence data.  A record forming a fragment of an Occurrence record for validating the behaviour of the implementation of a particular test SHOULD only contain the set of terms that form the Information Element for a particular test, along with test parameters, expected outputs, and related metadata, and SHOULD_NOT contain values in other Darwin Core terms not relevant to the test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4  Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers of Occurrence data.
-
-#### 6.7.2 Real data used as examples.
-
-Use the values in the original source, without modification except:  If no dwc:datasetID is provided, a value for dwc:datasetID MAY be added, this SHOULD be the doi of the source data set in which the example record was found.   
-
-#### 6.7.3  Real data with synthetic modifications used as examples:
-
-A. The data set MUST set values for record level terms to unambiguously mark the record as modified.
-
-The data set SHOULD use the following values, and consumers of biodiversity data MUST treat these values as not representing actual occurrence data. 
-
-dwc:institutionCode = "example.org"
-dwc:institutionID = “http://example.org/"
-dwc:collectionCode =  "Modified Example"
-dwc:collectionID = "urn:uuid:1887c794-7291-4005-8eee-1afbe9d7814e"
-
-B. Each modified record MUST provide a new GUID for the modified record distinct from the original GUID.
- 			
-dwc:occurrenceID = urn:uuid: + a random type 4 UUID.
-
-C. Each Occurrence record SHOULD include resource relationship terms in the modified example pointing at the original source:
-
-dwc:relatedResourceID = the ID (e.g. occurrenceID) for the original source record.
-
-dwc:relationshipOfResource = “source for modified example record”
-
-dwc:relationshipRemarks:  Structured data specifying the original values for institutionID, institutionCode, collectionCode, collectionID, and occurrenceID, the doi for the data set the original example record was found in, a list of the modifications made to the original record, and potentially, a list of standard tests and expected test results that this example illustrates. 
-
-#### 6.7.4 Wholly Synthetic Data MAY be used.  This is not recommended for entire Occurrence records or entire Occurrence data sets.
-
-A. The data set MUST set values for record level terms to unambiguously mark the record as synthetic.
-
-The data set SHOULD use the following values, and consumers of biodiversity data MUST treat these values as not representing actual occurrence data. 
-
-dwc:institutionCode = "example.org"
-dwc:institutionID = “http://example.org/"
-dwc:collectionCode =  "Synthetic Example"
-dwc:collectionID = "urn:uuid:0b1b9546-64aa-446b-bd9c-cbb0eacf4332"
-
-B.  Each modified record MUST provide a GUID for the synthetic record.
-
-dwc:occurrenceID = urn:uuid: + a random type 4 UUID
 
 ### 6.8 Updating test data due to changes in specifications or terms
 
@@ -623,7 +563,7 @@ Similarly, changes to the test specification 'Information Elements ActedUpon' an
 
 Therefore any changes to test specifications must trigger the need to check the associated test data and examples.
 
-## 7. Implications for the Darwin Core Standard (John)
+## Goes in Supplement? Implications for the Darwin Core Standard (John)
 
 Early recognition that estimating 'fitness for use'/'quality was made difficult because of the lack of vocabularies...TG4.
 
@@ -633,10 +573,8 @@ Definitions, uses in the wild, and best practices for Taxon class ..ID terms.
 
 How to identify the High Seas.
 
-## 8. Acknowledgements
-Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
 
-## 9. Acronyms
+## Goes in Supplement? Acronyms
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
@@ -655,22 +593,15 @@ Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Yi-Min Gan, Ian Engelbre
 | TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases                                  |
 | TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
 
+## Goes in Supplement: Rationale Management Documentation
 
-## 10. References
+### Goes in Supplement: Developing tests with Github Issues
 
-* Belbin L, Daly J, Hirsch T, Hobern D, Salle JL (2013) A specialist’s audit of aggregated occurrence records: An ‘aggregator’s’ perspective. ZooKeys 305: 67–76. doi: 10.3897/zookeys.305.5438
-* Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889
-* Rees ER, Nicholls M (2020). Suppl. material 2: Data Quality Use Case Study Result. https://biss.pensoft.net/article/download/suppl/5255738/.
-* [RFC-2119] http://tools.ietf.org/html/rfc2119 Key words for use in RFCs to Indicate Requirement Levels. 1997. The Internet Engineering Task Force.
-Sanderson et al. (2107) see Section 1.5
-* Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731
-* Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, Robertson T, Vieglais D (2012) Darwin Core: An Evolving Community-Developed Biodiversity Data Standard. PLoS ONE 7(1): e29715. https://doi.org/10.1371/journal.pone.0029715
-
-## 11. Supplement: Rationale Management Documentation
-
-<!--- Start: PJM Added the terms from "bdqtag" glossary terms 2024 Aug 24 --->
+### Goes in Supplement: Tags and Categorizing Issues
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq github repository. Each issue has table in markdown format in its Issue.  Each issue was tagged with the following GitHub issue tags to assist in finding, evaluating, and asserting conclusions about each test. 
+
+<!--- Start: PJM Added the terms from "bdqtag" glossary terms 2024 Aug 24 --->
 
 The following list of Tags is used on issues: 
 
@@ -698,16 +629,14 @@ The following list of Tags is used on issues:
 | Validation | A label to indicate a test of type VALIDATION that describes a run of a test for validity against a set of criteria. | See bdqffdq:Validation |
 | VOCABULARY | A label to indicate that a Test requires a controlled Vocabulary |  |
 
+<!--- End: PJM Added the terms from "bdqtag" glossary terms 2024 Aug 24 --->
+
 Four tags: CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary mark conclusions made about tests.
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, idependently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
 
 
-<!--- End: PJM Added the terms from "bdqtag" glossary terms 2024 Aug 24 --->
-
-TODO: Add preferred labels for tests using the pattern "Validation Day In Range" and "Validation ScientificNameID Complete".
-
-TODO: Create issue templates for new test and test change request. Include Preferred Label in that template.
+### Goes in Supplement: Using Markdown Tables in Github Issues to develop test descriptors
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq github repository. Each issue has table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below:
 
@@ -756,9 +685,9 @@ A number of tests were framed, but considered out of scope for CORE data quality
 
 ---
 
-## User guide
+## Goes in Supplement: Time and Date Issues
 
-#### **2.2.3.1 Event and Calendars**
+### Goes in Supplement: Event and Calendars
 
 Different calendars have been used at different times in different places, and the transcription of an
 original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date, and metadata may or not be present to even identify such records.
@@ -769,12 +698,11 @@ Countries and researchers have changed from the Julian calendar to the Gregorian
 
 In this particular issue, and perhaps in all others where this has come up, I do not see that the uncertainty associated with the date actually has anything to do with what we are testing. This test can't assess if a date is actually within a Gregorian date interval, except in special cases where the Julian and Gregorian calendars coincide, and even that is ignoring all other possible calendars. Instead, it is able to test that a date following the ISO 8601-1 date specification is within a range specified in that context. We can't effectively do anything else because Darwin Core doesn't even provide for stating the original calendar used - it's forcing people to use the Gregorian calendar without describing the responsibility for doing so and the consequences of not doing so. I think the place for awareness of the implications of dates with unknown calendars is in the Darwin Core date terms.]
 
-
-**If time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms**
-
-**Placeholder for TIME issue**
+## Goes in Supplement: Time
 
 See: https://xkcd.com/2867/ and  https://www.xkcd.com/1883/
+
+**If time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms**
 
 This standard avoids analysis of two time and date issues, time zones, and geographic and temporal variation in the change from Julian to Gregorian calendars.  
 

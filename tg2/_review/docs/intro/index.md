@@ -113,6 +113,8 @@ The [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_revie
 
 [!--- JRW first pass finished to here ---]
 
+[Synthetic and Modified Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
+
 <!--- PJM: Do sections 2.3 to 2.6 belong here? --->
 
 ### 2.3 Implementation Validation Data
