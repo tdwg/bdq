@@ -191,11 +191,11 @@ Implementations MAY perform data Quality Control, data Quality Assurance, or bot
 
 Many tests specify bdqffdq:Parameters in addition to bdqffdq:InformationElements.  Parameters are intended to change the behavior of a test to fit local data quality needs without changing the specification of the test.  
 
+A parameterized test will behave differently on the same data when given different parameter values. 
+
 Implementors SHOULD only present non-default parameter values to a test implementation if needed for local data quality needs.
 
 Implemenentors MUST NOT produce test implementations identified by the same identifiers that only implement non-default parameter values.  An implementation of a test MUST support the test execution with the default parameter values, and MAY optionally support other parameter values.   Provided parameters MUST NOT change the behavior of the test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the test as specified in the bdqffdq:Specification.expectedResponse.
-
-**TODO: The value supplied for the parameter for the test is not an attribute of the data, it is an attribute of the Mechanism (of the system assessing the data quality). If we had included assertions about the validity values of parameters, they should only return external prerequisites not met, as they are assertions about externalities to the data and will change if the same data are run on the same test with a different configuration.**
 
 ### Execution Process Agnostic (non-normative)
 
@@ -318,39 +318,7 @@ It is also possible to implement in an object oriented manner as methods on a cl
 
 Other approaches are possible.  Implementors MAY use any approach to passing data into test implementations appropriate for their language(s) and environment.
 
-#### Implementing an abstract Test 
-
-In some environments, implementations MAY be lightweight implementations of an abstract test.
-
-Consider the validation: 
-
-VALIDATION_ENDDAYOFYEAR_INRANGE
-
-A SQL query that implements this abstract concept, that the enddayofyear is in range, could take the following form, using available database fields that contain data related to the abstract information element, but are not precicely mapped to the concrete specfied ActedUpon and Consulted Darwin Core terms in the specification.  This query produces a data quality report with: 
-
-    SELECT collecting_event_id, enddayofyear,
-         'VALIDATION_ENDDAYOFYEAR_INRANGE' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status, 
-         'The value of enddayofyear [' || enddayofyear ||'] is not an integer between 1 and 365 inclusive, or 366 if ended_date falls in a leap year.' as response_comment
-    FROM collecting_event
-    WHERE NOT ( 
-          enddayofyear BETWEEN 1 AND 365
-          OR (
-             enddayofyear = 366
-             AND 
-             (
-                 ( 
-                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),4) = 0
-                   AND
-                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) != 0
-                 )
-                 OR
-                 MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),400) = 0
-             )
-          )
-        );
-
-
-#### Example (non-normative)
+#### Example test implementation (non-normative)
 
 Given the specification: 
 
@@ -383,6 +351,84 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
     }
 
     Function isfoundCountryCode(countryCode,sourceAuthority) returns boolean throws NetworkException {...}
+
+Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input countryCode contains a value.  This deviation from the logical sequence implied by the Specification (EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
+
+#### Implementing an abstract Test 
+
+In some environments, implementations MAY be lightweight implementations of an abstract test.
+
+Consider the validation: 
+
+VALIDATION_ENDDAYOFYEAR_INRANGE
+
+A SQL query that implements this abstract concept, that the enddayofyear is in range, could take the following form, using available database fields that contain data related to the abstract information element, but are not precicely mapped to the concrete specfied ActedUpon and Consulted Darwin Core terms in the specification.  This query produces a data quality report with: 
+
+    SELECT collecting_event_id, enddayofyear,
+         'VALIDATION_ENDDAYOFYEAR_INRANGE' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status, 
+         'The value of enddayofyear [' || enddayofyear ||'] is not an integer between 1 and 365 inclusive, or 366 if ended_date falls in a leap year.' as response_comment
+    FROM collecting_event
+    WHERE NOT ( 
+          enddayofyear BETWEEN 1 AND 365
+          OR (
+             enddayofyear = 366
+             AND 
+             (
+                 ( 
+                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),4) = 0
+                   AND
+                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) != 0
+                 )
+                 OR
+                 MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),400) = 0
+             )
+          )
+        );
+
+#### Implementing a test in a specific environment
+
+Given data stored in a known and controlled environment, test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. 
+
+Consider the validation: 
+
+VALIDATION_ENDDAYOFYEAR_INRANGE
+
+With the specification "INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT."
+
+Given a hypothetical Event table with fields including a primary key event_id and an integer field day, an implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
+
+    SELECT
+        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        event_id,
+        ‘INTERNAL_PREREQUISITES_NOT_MET’ as Result_status, 
+        null as Result_value,
+        ‘No value for dwc:day to evaluate’ as Result_comment 
+    FROM event
+        WHERE day is null
+    UNION 
+    SELECT
+        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        event_id,
+        ‘RUN_HAS_RESULT’ as Result_status, 
+        ‘COMPLIANT’ as Result_value,
+        ‘Value of dwc:day [‘|| day ||’] is in the range 1-31’ as Result_comment 
+    FROM event
+        WHERE day >=1 and day <=31
+    UNION 
+    SELECT
+        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        event_id,
+        ‘RUN_HAS_RESULT’ as Result_status, 
+        ‘NOT COMPLIANT’ as Result_value,
+        ‘Value of dwc:day [‘|| day ||’] is outside the range 1-31’ as Result_comment 
+    FROM event
+        WHERE day < 1 or day > 31
+
+This implementation is dependent on the schema the data is stored in, in particular, the definition of event.day as a field holding integers.  
+
+This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the test specification, which requires day to be an integer), for values of day such as "8.5"
+
+Implementations should carefully consider the assumptions inherent in the environment on which tests are being run.  For example, the FilteredPush implementations in event_date_qc, sci_name_qc, rec_occur_qc, and geo_ref_qc, expect that all data will be presented to the test methods as strings.  Therefore each test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation (and can use the failure to convert the data type as a means to identify internal prerequisites not met).
 
 ## Presentation of Results
 
@@ -434,12 +480,15 @@ Compliant Results Pre-amendment: 75%; Post-amendment: 94%
     > provided taxon found in WORMS.
 
 
-### Annotations
+### Annotations (normative)
 
 The bdqffdq: owl framework, and the framing of the tests in bdqcore: as rdf using that ontology makes, by design, tests results particularly amenable to being wrapped in annotations following the W3C Web Annotation Data Model (Sanderson et al. 2017). 
 
-The results could be structured as components that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
+Test responses MAY be represented as annotations.
 
+The responses from tests could be structured as elements that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
+
+When test responses are being returned as annotations, they SHOULD use the W3C Web Annotation Data Model for the annotations, and SHOULD place test responses within the body of the annotation.  Such annotations SHOULD include reference to the source test by the versioned fully qualified name of the test (e.g. bdqcore:47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18) and the test skos:prefLabel (e.g. VALIDATION_DAY_STANDARD).  Such annotations SHOULD also provide the bdqffdq:Mechanism that generated the test response. 
 
 ## 5 Validating Test Implementations (normative)
 
