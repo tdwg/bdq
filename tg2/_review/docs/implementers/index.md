@@ -221,9 +221,15 @@ Under Quality Assurance, MultiRecord measures that return COMPLETE/NOT_COMPLETE 
 
 Under Quality Control, MultiRecord measures that return numeric values MAY be used to assess the prevelance of quality issues in the data with respect to the selected UseCase.  
 
+<!--- Ming: Execution sequence of the tests , repeated in 1.6, but more detail than 1.6 --->
+
+A good practice for executing the tests is to execute all of the validations and measures in a pre-amendment phase, then to execute all of the amendments in an amendment phase, then to execute all of the validations again on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the validations and measures are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for tests is to aggregate the unique values of applicable Information Elements within a bdqffdq:MultiRecord for each Validation or Measure, then to execute the Validation or Measure on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing tests as SQL queries.
+
 #### Test dependencies
 
 Individual tests are designed to be as indepenent of each other as possible, but given the by design redundancies in Darwin Core, some amendments have potential interactions.
+
+The tests are agnostic to the framework within which they are run. The tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular tests are run. An exception is certain of the amendments, where the order of execution can be important.
 
 <!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
 
