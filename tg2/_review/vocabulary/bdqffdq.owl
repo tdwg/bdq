@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@base <https://rs.tdwg.org/bdqffdq/terms> .
+@base <https://rs.tdwg.org/bdqffdq/terms/> .
 
 <https://rs.tdwg.org/bdqffdq/terms> rdf:type owl:Ontology ;
                                      rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731" ;
@@ -26,31 +26,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
-
-###  https://rs.tdwg.org/bdqffdq/terms#hasDataQualityDimension
-:hasDataQualityDimension rdf:type owl:ObjectProperty ;
-                         rdfs:domain :DataQualityDimension ;
-                         rdfs:label "has Data Quality Dimension"@en ;
-                         skos:prefLabel "has Data Quality Dimension"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms#hasParameter
-:hasParameter rdf:type owl:ObjectProperty ;
-              rdfs:domain :Parameter ;
-              rdfs:comment "Expected to be a relationship between a Specification and a Parameter"@en ;
-              rdfs:label "has Parameter"@en ;
-              skos:definition "A relationship between a test class and a Parameter"@en ;
-              skos:prefLabel "has Parameter"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms#hasPolicy
-:hasPolicy rdf:type owl:ObjectProperty .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms#hasUseCase
-:hasUseCase rdf:type owl:ObjectProperty ;
-            rdfs:domain :UseCase .
-
 
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperties
 :amendmentProperties rdf:type owl:ObjectProperty ;
@@ -135,6 +110,13 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
               skos:prefLabel "has Criterion"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension
+:hasDataQualityDimension rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DataQualityDimension ;
+                         rdfs:label "has Data Quality Dimension"@en ;
+                         skos:prefLabel "has Data Quality Dimension"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :measurementProperties ;
@@ -159,8 +141,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                 rdfs:range [ rdf:type owl:Restriction ;
                              owl:onProperty :hasEnhancement ;
                              owl:someValuesFrom :Amendment
-                           ] ;
-                rdfs:comment "Used to link the derived concept of a ContextualizedEnhancement to the fundamental concept of an Enhancement." .
+                           ] .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasInformationElement
@@ -180,6 +161,19 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                        owl:someValuesFrom :Issue
                      ] ;
           rdfs:comment "Used to link the derived concept of a ContextualizedIssue to the fundamental concept of a Problem." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              rdfs:domain :Parameter ;
+              rdfs:comment "Expected to be a relationship between a Specification and a Parameter"@en ;
+              rdfs:label "has Parameter"@en ;
+              skos:definition "A relationship between a test class and a Parameter"@en ;
+              skos:prefLabel "has Parameter"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasPolicy
+:hasPolicy rdf:type owl:ObjectProperty .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResourceType
@@ -215,6 +209,11 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/hasStatus
 :hasStatus rdf:type owl:ObjectProperty ;
            rdfs:comment "Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be COMPLIANT or NON_COMPLIANT." .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasUseCase
+:hasUseCase rdf:type owl:ObjectProperty ;
+            rdfs:domain :UseCase .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasValidation
@@ -270,7 +269,7 @@ Describes the relationship between a validation concept in FFDQ (needs, solution
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :issueInContext ;
-                             owl:someValuesFrom :ProblemPolicy
+                             owl:someValuesFrom :IssuePolicy
                            ] ;
                 rdfs:comment "Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue." .
 
@@ -337,16 +336,16 @@ Was: The criteria targeted by some enhancement via the ImprovementTarget object.
 #    Data properties
 #################################################################
 
-###  https://rs.tdwg.org/bdqffdq/terms#hasEnhancement
-:hasEnhancement rdf:type owl:DatatypeProperty .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
 :hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
                         rdfs:range xsd:string ;
                         rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
                         rdfs:label "has Authorities and Defaults"@en ;
                         skos:prefLabel "has Authorities and Defaults" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
+:hasEnhancement rdf:type owl:DatatypeProperty .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse
@@ -368,16 +367,9 @@ Was: The criteria targeted by some enhancement via the ImprovementTarget object.
 #    Classes
 #################################################################
 
-###  https://rs.tdwg.org/bdqffdq/terms#AbstractInformationElement
+###  https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
 :AbstractInformationElement rdf:type owl:Class ;
                             rdfs:subClassOf :InformationElement .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept
-:FundamentalConcept rdf:type owl:Class ;
-                    rdfs:label "Fundamental Concept"@en ;
-                    skos:definition "Concepts that not derived by composition with other concepts."@en ;
-                    skos:prefLabel "Fundamental Concept"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ActedUpon
@@ -508,12 +500,21 @@ Composed with both Validations and Issues."""@en ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Enhancement
 :Enhancement rdf:type owl:Class ;
-             rdfs:subClassOf :FundamentalConcept ,
-                             :AmendmentConcept ;
+             rdfs:subClassOf :AmendmentConcept ,
+                             :FundamentalConcept ,
+                             :NeedConcept ;
              rdfs:comment "General statement, for example: \"Recomend replacement value from a controlled vocabulary\""@en ;
              rdfs:label "Enhancement"@en ;
-             skos:definition "Description of a means by which data could be improved."@en ;
+             skos:definition "A description of a means by which data could be improved."@en ,
+                             "Description of a means by which data could be improved."@en ;
              skos:prefLabel "Enhancement"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept
+:FundamentalConcept rdf:type owl:Class ;
+                    rdfs:label "Fundamental Concept"@en ;
+                    skos:definition "Concepts that not derived by composition with other concepts."@en ;
+                    skos:prefLabel "Fundamental Concept"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Implementation
@@ -579,6 +580,15 @@ Describes criteria by which data which lack quality for some purpose may be iden
              rdfs:comment "The ProblemMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and an issue in the context of resource type (SingleRecord or MultiRecord) and associated information elements." ;
              rdfs:label "Issue Method"@en ;
              skos:prefLabel "Issue Method"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/IssuePolicy
+:IssuePolicy rdf:type owl:Class ;
+             rdfs:subClassOf :IssueConcept ,
+                             :NeedConcept ;
+             rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." ;
+             rdfs:label "Issue Policy"@en ;
+             skos:prefLabel "Issue Policy"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
@@ -647,18 +657,10 @@ Describes the criteria for measuring an aspect of data quality related to some d
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Parameter
 :Parameter rdf:type owl:Class ;
+           rdfs:subClassOf :SolutionsConcept ;
            rdfs:label "Parameter"@en ;
            skos:definition "A value that, when provided to a test Specification changes the behavior of the test in a defined manner."@en ;
            skos:prefLabel "Parameter"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
-:ProblemPolicy rdf:type owl:Class ;
-               rdfs:subClassOf :IssueConcept ,
-                               :NeedConcept ;
-               rdfs:comment "The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case." ;
-               rdfs:label "Problem Policy"@en ;
-               skos:prefLabel "Problem Policy"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Profile
@@ -806,6 +808,13 @@ Describes an instance of the criterion concept in terms of the associated inform
 
 
 #################################################################
+#    Annotations
+#################################################################
+
+:hasEnhancement rdfs:comment "Used to link the derived concept of a ContextualizedEnhancement to the fundamental concept of an Enhancement." .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
@@ -826,4 +835,4 @@ Describes an instance of the criterion concept in terms of the associated inform
 ] .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
