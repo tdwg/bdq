@@ -68,6 +68,8 @@ The following namespace abbreviations are used in this document:
 
 ## Goes in Supplement: 2 Historical Context
 
+An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
+
 ## Goes in Supplement: 2.1 Definition of CORE
 
 'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what times, and a subset of Darwin Core terms that we consider to be critical metadata about occurrence records.
@@ -258,24 +260,6 @@ SELECT
 FROM event
     WHERE day < 1 or day > 31
 
-
-## 4. Guidance for Consumers of Data Quality Reports
-
-### 4.1 Introduction
-
-An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
-
-* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
-* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.xml
-
-Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv  TODO: Generate human readable test descriptor document, labels here will apply in that document.  
-
-**TODO: rs.tdwg.org namespace.**
-**TODO:VersionDate** The most recent date of update to any element of a test.
-
-**"#"**:"20" The github.com/tdwg/bdq/issues/{number} where documentation of the rationale management conversations for the development of the tests can be found.  See supplement [Section 10](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document#10-supplement-rationale-management-documentation) for descriptions of the terminology used in the issues (which do not fully conform to the Framework). 
-
-The number is present in the Markdown document as **Rationale Management** linking to https://github.com/tdwg/bdq/issues/{n}.
 
 ## 5 Implementation
 

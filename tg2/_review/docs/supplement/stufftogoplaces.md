@@ -237,24 +237,6 @@ FROM event
     WHERE day < 1 or day > 31
 
 
-## 4. Guidance for Consumers of Data Quality Reports
-
-### 4.1 Introduction
-
-An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
-
-* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv
-* https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.xml
-
-Column headers in https://github.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv  TODO: Generate human readable test descriptor document, labels here will apply in that document.  
-
-**TODO: rs.tdwg.org namespace.**
-**TODO:VersionDate** The most recent date of update to any element of a test.
-
-**"#"**:"20" The github.com/tdwg/bdq/issues/{number} where documentation of the rationale management conversations for the development of the tests can be found.  See supplement [Section 10](https://github.com/tdwg/bdq/wiki/TG2-Tests-and-Assertions-Standards-Document#10-supplement-rationale-management-documentation) for descriptions of the terminology used in the issues (which do not fully conform to the Framework). 
-
-The number is present in the Markdown document as **Rationale Management** linking to https://github.com/tdwg/bdq/issues/{n}.
-
 ## 5 Implementation
 
 In the Specificatiopns the phrase "interpreted as" means for Implementors, (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
