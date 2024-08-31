@@ -7,15 +7,10 @@ Delete from here once moved elsewhere.
 
 ## 2 Framework for describing data quality
 
-[need to migrate from https://raw.githubusercontent.com/kurator-org/kurator-ffdq/master/competencyquestions/rdf/ffdq.owl to tdwg repository]
-
 The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
 ### 2.1 Introduction
 
-Included in this standard is a specification for a framework for describing data quality. Each of the tests in this standard has been designed within this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
-
-The framework data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
 
 ### 2.2 Data Quality Control, Data Quality Assurance
 

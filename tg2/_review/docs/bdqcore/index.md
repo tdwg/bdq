@@ -51,12 +51,18 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdqcore/terms), controlled 
 
 ## 1 Introduction
 
-This document lists the BDQ Core tests. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+This document lists the BDQ Core tests.  The bdqcore: vocabulary provides the descriptions of each test.
+
+The BDQ Core tests are described using terms from bdqffdq:, a vocabulary that specifies a framework for describing data quality.   Each of the tests in bdqcore: has been designed within this framework and is framed using the terms and concepts from the framework. The bdqffdq: framework provides the context for each test, and has shaped decisions made about each test.  
+
+The bdqffdq: framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  
+
+For more details see the [bdqffdq documentation](../bdqffdq/index.md) and for more on the rationale, see: Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. [https://doi.org/10.3897/biss.4.50889](https://doi.org/10.3897/biss.4.50889).
 
 ## 2 BDQ Core Tests
 ### 2.1 The Scope of the Tests
 
-The scope of the BDQ Core tests is primarily encapsulated by the bdqffdq:Specification. The "Information Elements" within that "Specification" may specify the Darwin Core terms used in the Test. These Information Elements may include Darwin Core terms that do not reside in the "dwc:" namespace, for example "dcterms:licence". The "Specification" may also include references to external authorities other than Darwin Core that are required to implement the test, for example, to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test. Note that even though these 'external authorities' are external to Darwin Core, Darwin Core terms remain the focus.
+The scope of the BDQ Core tests is delinitated by a set of UseCases.  Each use case composes a set of tests (Validations, Measures, Amendments, and Issues) to provide a formal description of what it means for data to have quality with respect to the UseCase.  
 
 BDQ Core tests are designed to run at any point in the data lifecycle, from initial collection or observation to data transcription, database loading, and preparation for or during data aggregation.
 
@@ -84,6 +90,22 @@ An AMENDMENT may propose a change or addition to at least one Darwin Core term t
 A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or NOT_REPORTED (when the Response.status="INTERNAL_PREREQUISITES_NOTMET").  The principle Measure defined in the core tests is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the VALIDATIONs and AMENDMENTs and in one case provides an indication of the length of the period of the value of dwc:eventDate.
 
 [!--- Should be add MultiRecord Measures here---- AC]
+
+### 2.2 Central concepts for understanding the test descriptions
+
+#### Specification
+
+The bdqffdq:Specification provides a technical description of how a test evaluates input data for quality, and what conclusions asserts under what conditions. 
+
+#### InformationElements
+
+Tests have inputs, these are described as bdqffdq:InformationElements.  
+
+The "Information Elements" referred to in the Specification specify the Darwin Core terms (or other vocabularies) used in the Test. These Information Elements may include Darwin Core terms that do not reside in the "dwc:" namespace, for example "dcterms:licence". 
+
+#### Source Authority
+
+The Specification may include references to external authorities other than Darwin Core that are required to implement the test, for example, to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test.  Note that even though these 'external authorities' are external to Darwin Core, Darwin Core terms are the InformationElements being assessed.
 
 ## 3 Quick Reference Guide to the Tests 
 
@@ -114,7 +136,6 @@ Each test in the quick reference guide displays the following descriptors:
 - **Examples** [non-normative]: For Implementors. Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
 - **Use Cases** [non-normative] For Consumers and Implementors. Descriptions of data quality needs that this test helps to support.
 - **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
-
 
 ## 3.2 SingleRecord tests and MultiRecord Measures (informative)
 
