@@ -261,62 +261,6 @@ FROM event
     WHERE day < 1 or day > 31
 
 
-## 5 Implementation
-
-In the Specificatiopns the phrase "interpreted as" means for Implementors, (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
-
-#### 5.1 Reading a Specification
-
-A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementors SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first.  Implementors MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
-
-Responses in a Specification are expressed in an abbreviated form for readability by implementors.
-
-EXTERNAL_PREREQUISITES_NOT_MET means Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.value=null, Response.comment={some non-null description of the failure condition}
-
-INTERNAL_PREREQUISITES_NOT_MET means Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.value=null, Response.comment={some non-null description of the failure condition}.
-
-COMPLIANT means Response.status=RUN_HAS_RESULT, Response.value=COMPLIANT, Response.comment={some non-null description of the failure condition}.
-
-etc.
-
-#### 5.2 Compliant Implementation
-
-In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
-
-We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality test is intended to do, along with the consistent structure for reporting the results from the execution of a test upon some data.  We expect that implementors will implement sets of these tests that fit their data quality needs, and will also implement other tests.  The CORE tests provide a coherent library of tests that can be applied to the set of defined UseCases, and considerable thought has gone into describing tests that isolate particular data quality issues, and that work together as a conherent suite.   
-
-An implementation SHOULD include all CORE SingleRecord Validations, Amendments, and Measured for each implemented UseCase.  An Implementation SHOULD provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional tests and additional UseCases.
-
-Results from each test MUST be produced in the form Response.status, Response.result, and Response.comment, with one test producing one Response.   Results MAY include Response.qualifier (See 5.3).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.
-
-Where implementors add additional tests as part of a test suite compliant with this standard, they MUST describe those tests using the bdqffdq framework, those tests MUST use the same Response structures, and those tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
-
-The standard is agnostic as to how data are presented and piped within some framework to and from test implementations.  An implementation framework MAY present SingleRecords to tests and report results, or an implementation MAY find unique values for InformationElements, execute test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
-
-<!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, Repeated in 1.7 --->
-
-For each core SingleRecord Validation, an implementation intended for Quality Control SHOULD include a corresponding MultiRecord Measure that counts the number of Response.result values that are COMPLIANT.  An implementation MAY provide similar MultiRecord Measures that report aggregated counts of other Response.status and Response.value values.  
-
-For each core SingleRecord Validation, an implementation intended for Quality Assurance SHOULD include a corresponding MultiRecord Measure that returns COMPLETE when all pertenent Response.result values are COMPLIANT (or for some Measures also INTERNAL_PREREQUSISITES_NOT_MET).
-
-Implementations MUST provide implementations of parameterized tests that support the default parameter values. Implementations SHOULD provide for parameterized tests to take parameters, but MAY produce an implementation of a parameterized test that takes no parameters but only uses the default parameter value.
-
-How a test responds when given a parameter value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless specified in the Specification, implementations MUST_NOT use Response.status=EXTERNAL_PREREQUISITES_NOT_MET to indicate a non-supported parameter value.
-
-Implementors are free to, and are encouraged to, in addition to framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-framework implementations MUST NOT assert compliance with this standard.
-
-### 5.3 Extension points
-
-A response MAY include a Response.qualifier.  This is intended as a place to include structured assertions concerning uncertainty in a response.  This is also intended as a place to include structured assertions about the details of Ammendments (e.g. TRANSPOSED MAY be attached to a Response.qualifier for some Amendments.
-
-<!--- Bit about ActedUpon/Consulted Needs to move, we have added these to the test descriptors and the framework --->
-
-Implementations MAY identify InformationElements as ActedUpon or Consulted. Presentations of data quality results may use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon information elements are those for which a Validation is asserting compliance/non-compliance, or an Amendment is proposing a change. Consulted information elements are those which inform such decisions, but are not themselves the subject of the decision. For example, in AMENDMENT_EVENTDATE_FROM_VERBATIM, the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted. We do not  identify Information Elements as ActedUpon or Consulted here, but implementers may wish to do so to more clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular tests are making assertions about.
-
-Tests MAY specify that information elements are ActedUpon or Consulted. We do not do so here, but ActedUpon and Consulted properties of an Information Element are an extension point that may be included when specifying the Information Elements pertinent to a test
-
-MultiRecord Measues that return counts where the input InformationElement is Response values from tests on SingleRecords MUST report only a single count as the Response.value, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percents), the number of each value of Response.status encountered, and the number of each Response.value encountered.  Measures under the framework are only allowed to return COMPLETE/NOT_COMPLETE, or a single number, if it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use for this. 
-
 ### 5.4 Core Test Specifications
 
 These are the specifications for a set of Validations, Amendments, and Measures, each of which applies to a SingleRecord under one or more UseCases. 
