@@ -26,7 +26,8 @@ This document provides guidance for those wishing to create sofware implementati
 
 Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
 
-## 2 About the Tests 
+## 2 About the Tests and their Implementation
+
 
 ### 2.1 The Concept of "EMPTY" in BDQ Core (normative)
 
@@ -388,22 +389,6 @@ The test validation records are all fragmentary flat Darwin Core Occurrence reco
 
 This is a minimalist suite of test data. Additional test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the DataID values MUST uniquely identify a validation case for each additional test data record and the resulting data added to the GitHub repository.
 
-###  Considerations Concerning Input Data Values for AMENDMENTS
-
-TODO: Move this section to supplementary.
-
-One of the early conclusions to this project was the need for controlled vocabularies and an early spin-off of Data Qality Task Group 4 on Vocabularies (https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core encoded data is made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
-
-Testing Darwin Core values against a known Source Authority using a VALIDATION type test is straight forward: A test is either COMPLIANT or NOT COMPLIANT. This standard includes tests of type AMENDMENT and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a VALIDATION returns COMPLIANT, no AMENDMENT is necessary. For example, if the input value to a test is say dwc:sex="Female", then no AMENDMENT is required. If however, the input value is dwc:sex:f., can this be interpreted as "Female"? Probably. What about dwc:sex="M"? This could be "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. <!--- Ming: I asked GBIF about this specific example and they said that "M" will be matched to Male, but I am not sure how the API works exactly ---><!--- PJM: the rec_occur_qc implementation uses the vocabulary directly, finds, ^M matches male and mixed, so asserts that it can't make the amendment, I can't speak about the (by our test specification, incorrect) actions that gbif is taking on their vocabulary, their API delivers the vocabulary, but doesn't do this sort of matching, so what they are describing is some internal that uses the vocabulary --->
-
-A key phrase within this standard that particularly relates to many of the Expected Responses of tests is " dwc:term can be unambiguously interpreted as ...". In the case above for dwc:sex="M", the determination is that it is ambiguous. In this case, no AMENDMENT can be made.
-
-When carrying out Amendments where numeric vales are concerned (e.g. feet to meters, etc.) the principle of reversability is paramount, and thus rounding up or down or using approximations should be avoided and only exact values used.
-
-We see an urgent need for a comprehensive, internationally agreed list of Darwin Core (https://dwc.tdwg.org/) term values that are mapped to standard values. GBIF has implemented some unique values, for example https://api.gbif.org/v1/vocabularies/Sex/concepts/Female/hiddenLabels, but such lists are not comprehensive. While there has been a survey of Darwin Core 'distinct' values for GBIF, ALA, iDigBio and VertNet, these are both dated, and where possible, have not been mapped to standard values, if they exist.
-
-In this standard, we have taken an expedient approach in relation to making AMENDMENTs. We have used code in our tests to try and parse out likely, unambiguous matches. This is far from an ideal solution, but it does provide the potential of our AMENDMENTs to 'value add' to Darwin Core data records.
-
 ### Structure of the Validation Data 
 
 The validation data are intended as input into a testing system that can implementations of validation tests independently, presenting them with a validation case for input, and assessing whether the test Response conforms to the expected values in the validation data.  It could be processed as input for unit tests.   It could be used as the basis for presenting synthetic records to a larger test execution system, but is designed to be used at a level where individual tests are being assessed.  This may fit into integration tests of a larger system.  The structure of the validation data attempts to be at a level of abstraction somewhat above the method signature specificity needed in unit tests, but still at a level that is examining individual test implementations, below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
@@ -489,3 +474,21 @@ The expectation for the response that an implementation should produce when exec
 Parameter values are specified in a bdq:sourceAuthority column, when more than one sourceAuthority is involved, then these are given separate names.
 
 Darwin Core input columns are specified as "dc:type","dcterms:license","dwc:acceptedNameUsageID",...
+
+### Implementation and the validation data (normative)
+
+Implementations SHOULD provide support for each parameter value specified in the example data. 
+
+Implementations MUST produce structured Response values with a Response.status, Response.value, and Response.comment.  
+
+In order to be considered as compliant with this standard, an implementation of the Core tests MUST fulfill all of the REQUIRED elements of this section.
+
+Human readable Data Quality Reports for Quality Control MAY take any appropriate form, they MAY aggregate Response values and comments, they MAY present results organized by test, or by data record, or by frequency of problem, or any other form suitable for presentation.  Data Quality Reports for Quality Control SHOULD allow users to access individual Response.status Response.value Response.comment results.  
+
+Response.comment values SHOULD be internationalized as appropriate for the the consumers of data quality reports.  
+
+Response.status and Response.value constants SHOULD be given internationalized labels as appropriate for the the consumers of data quality reports.  
+
+For each test in an implementation, that test MUST produce the same results as are specified in a row of the validation data for that test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that test.
+
+

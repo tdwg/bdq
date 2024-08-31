@@ -28,50 +28,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 1.2 Status of the content of this document
 1.3 RFC 2119 keywords
 1.4 Namespace abbreviations
-1.5 The Concept of "EMPTY" in BDQ Core
 
-2 Framework for describing data quality
-2.1 Introduction
-2.2 Data Quality Control, Data Quality Assurance
-2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
-
-3 Tests
-3.1 Test Usage
-3.2 Annotations
-3.3 Tests and Data Dimensions
-3.4 Type of Tests
-3.5 Test Descriptors
-3.6 Domain Scope of Tests
-3.7 Test Parameters
-3.8 Workflows and Sequencing of Tests
-
-4 Guidance for Consumers of Data Quality Reports
-4.1 Introduction
-
-5 Implementation
-5.1 Reading a Specification
-5.2 Compliant Implementation
-5.3 Extension Points
-
-6 Validating test implementations
-6.1 Introduction
-6.2 Considerations Concerning Input Data Values for AMENDMENTS
-6.3 Test Data Specifications
-6.4 Example data for validating tests
-6.5 Where to get the Test Data
-6.6 Implementation
-6.7 Identifying example data
-6.8 Maintenance.....??
-
-7 Implications for the Darwin Core Standard
-
-8 Acknowledgements
-
-9 Acronyms
-
-10 References
-
-11 Supplement: Rationale Management Documentation
 ``` 
 
 ## 1. Introduction
@@ -108,6 +65,15 @@ The following namespace abbreviations are used in this document:
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
+
+## Goes in Supplement: 2 Historical Context
+
+## Goes in Supplement: 2.1 Definition of CORE
+
+'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what times, and a subset of Darwin Core terms that we consider to be critical metadata about occurrence records.
+
+A number of tests were framed, but considered out of scope for CORE data quality needs ('Supplementary' GitHub tag). Implementers are free to implement a subset of the CORE tests or add additional tests when there is a particular data quality needs within their domain. For example, the testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Over the period of this project, many tests were removed from CORE on the basis that they could not be currently implemented in a manner that would result in predictable results. For example, the test VALIDATION_GEOGRAPHY_CONSISTENT was rejected late in the project because of the complexities in matching terms in the geographic names hierarchy, which is less standardized than the taxonomic names hierarchy.
+
 
 ## 2 Framework for describing data quality
 
@@ -158,7 +124,7 @@ The framework expects that Quality Assurance is provided for through specificati
 
 For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
-## 3 Developing the Tests
+## Goes in Supplement: 3 Developing the Tests
 
 ### 3.3 Tests and Data Dimensions
 
@@ -195,49 +161,6 @@ Data are found to be fit for some use if all Validations comprising that Use hav
 [End QRG addition]
 
 All tests could be accumulated across multiple records (bdqffdq:MultiRecords). For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.    
-
-### 3.5 Test Descriptors used in markdown tables in issues
-
-The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
-
-**"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb" 
-
-**"Label"** [normative]: A human readable label identifying the test.  The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS.. Example: "VALIDATION_COUNTRYCODE_STANDARD" 
-
-**"Description"** [non-normative]: A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
-
-**"TestType"** [normative]: The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.. Example: "Validation" 
-
-**"Darwin Core Class"** [non-normative]: The Information Element in the original terms of the framework, the general sort of information this test operates on. . Example: "dwc:Location"  
-
-**"Information Elements ActedUpon"** [normative]:A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
-
-**"Information Elements Consulted"** [normative]:"dwc:scientificName" A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon.
-
-**"Specification"** [normative]: The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is EMPTY; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
-
-**"Parameters"** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.. Example: "bdq:taxonIsMarine" 
-
-**"Dimension"** [normative]: The [data quality dimension](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) for this test. Example: "Conformance"
-
-**"Criterion Label"** [non-normative]:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
-
-**"Resource Type"** [normative]: The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. Example: "SingleRecord"   
-
-**"Source Authority"** [normative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be exTests may require reference to external data such as standard vocabularies of terms or names. While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests.
-
-A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}"
-
-**"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
-
-**"References"** [non-normative]: A list of references that will assist in a thorough understanding of the test. Example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
-
-**"Example Implementations (Mechanisms)"** [non-normative]: nown Mechanisms with implementations of the test.
-. Example: "FilteredPush/Kurator: geo_ref_qc"
-
-**"Link to Specification Source Code"** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/
-
-**"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
 
 ### 3.6 Domain Scope of Tests
 
@@ -436,25 +359,12 @@ Included Document:
 
 [CORE MultiRecord Measure Tests](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_multirecord_measure_tests.md)
 
-## 6. Validating test implementations
 
-Implementors of tests SHOULD validate the behaviour of the internals of their test implementations with unit tests, and MUST validate that each test implementation is capable of taking relevant input from a set of standard test validation data, and returning the expected responses.
-
-### 6.1 Introduction
-
-Accompanying the Core test descriptors is a set of test validation data.  This test validation data is intended for implementors to use to evaluate whether or not their test implementations produced the expected Response values for a set of cases for each test.  Each test specification could be graphed as a flow chart with several paths, the test validation data are intended to cover each node and each path within each test specification with at least a single case.  These are not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of tests for expected behaviour.  
-
-The test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single test.  The file has columns identifying the validation case, the test that the row is intended to validate, the expected Response.status, Response.value, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given test).   
-
-The test validation records are all fragmentary flat Darwin Core Occurrence records.  Each row contains values for only those Darwin Core terms that are relevant input to the particular validation.   The validation records are all fragmentary, consisting of a mixture of real and artificial data with most of the records being synthetic.  The validation data are a set of 1191 records, with about 10 validation cases for each test.  The set of rows for a particular test are designed to validate that an implementation of that particular test performs as expected against the specifications.   This data set is referred to as the 'Test Validation Data'.   The set of about 10 validation records for each test are designed to exercise all of the decision pathways in the specification of the test.  
-
-This is a minimalist suite of test data. Additional test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the DataID values MUST uniquely identify a validation case for each additional test data record and the resulting data added to the GitHub repository.
-
-### 6.2 Considerations Concerning Input Data Values for AMENDMENTS
+### Goes in Supplement: Considerations Concerning Input Data Values for AMENDMENTS
 
 One of the early conclusions to this project was the need for controlled vocabularies and an early spin-off of Data Qality Task Group 4 on Vocabularies (https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core encoded data is made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
 
-Testing Darwin Core values against a known Source Authority using a VALIDATION type test is straight forward: A test is either COMPLIANT or NOT COMPLIANT. This standard includes tests of type AMENDMENT and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a VALIDATION returns COMPLIANT, no AMENDMENT is necessary. For example, if the input value to a test is say dwc:sex="Female", then no AMENDMENT is required. If however, the input value is dwc:sex:f., can this be interpreted as "Female"? Probably. What about dwc:sex="M"? This could be "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. <!--- Ming: I asked GBIF about this specific example and they said that "M" will be matched to Male, but I am not sure how the API works exactly --->
+Testing Darwin Core values against a known Source Authority using a VALIDATION type test is straight forward: A test is either COMPLIANT or NOT COMPLIANT. This standard includes tests of type AMENDMENT and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a VALIDATION returns COMPLIANT, no AMENDMENT is necessary. For example, if the input value to a test is say dwc:sex="Female", then no AMENDMENT is required. If however, the input value is dwc:sex:f., can this be interpreted as "Female"? Probably. What about dwc:sex="M"? This could be "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. <!--- Ming: I asked GBIF about this specific example and they said that "M" will be matched to Male, but I am not sure how the API works exactly ---><!--- PJM: the rec_occur_qc implementation uses the vocabulary directly, finds, ^M matches male and mixed, so asserts that it can't make the amendment, I can't speak about the (by our test specification, incorrect) actions that gbif is taking on their vocabulary, their API delivers the vocabulary, but doesn't do this sort of matching, so what they are describing is some internal that uses the vocabulary --->
 
 A key phrase within this standard that particularly relates to many of the Expected Responses of tests is " dwc:term can be unambiguously interpreted as ...". In the case above for dwc:sex="M", the determination is that it is ambiguous. In this case, no AMENDMENT can be made.
 
@@ -464,104 +374,6 @@ We see an urgent need for a comprehensive, internationally agreed list of Darwin
 
 In this standard, we have taken an expedient approach in relation to making AMENDMENTs. We have used code in our tests to try and parse out likely, unambiguous matches. This is far from an ideal solution, but it does provide the potential of our AMENDMENTs to 'value add' to Darwin Core data records.
 
-### 6.3 Structure of the Validation Data 
-
-The validation data are intended as input into a testing system that can implementations of validation tests independently, presenting them with a validation case for input, and assessing whether the test Response conforms to the expected values in the validation data.  It could be processed as input for unit tests.   It could be used as the basis for presenting synthetic records to a larger test execution system, but is designed to be used at a level where individual tests are being assessed.  This may fit into integration tests of a larger system.  The structure of the validation data attempts to be at a level of abstraction somewhat above the method signature specificity needed in unit tests, but still at a level that is examining individual test implementations, below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
-
-The following column header for the data are used for the validation data files.
-
-* Line Number: An integer for maintaining the sort order of the file.
-* dataID: A unique identifier (within the validation data) of the validation data record, e.g., "123"
-* LineForTest: An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular test,
-* GitHubIssueNo: The GitHub issue where rationale management of the test under validation is maintained, can be use to form a link to the discussion history for the development of the relevant test, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20
-* GUID: the machine readable identifier for the test under validation, e.g. 69b2efdc-6269-45a4-aecb-4cb99c2ae134
-* Label: The human-readable name of the test, e.g., "VALIDATION	COUNTRY_FOUND"
-* Response.status: The status on applying the test to the test data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET".
-* Response.result: The result of running the test on the test data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED".
-* Response.comment: An example human-readable statement identifying the reason for the test result given the input data, implementations are not expected to produce this exact value, it is given as an example.
-* IssuesWithThisRow: Temporary working column for recording problems while developing validation data, to be removed.
-* bdq:annotation placeholder for an annotation when testing for their presence.
-* bdq:sourceAuthority input parameter for some parameterized tests.
-* dwc: (77 columns)  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant test and pertinent to the test case at hand contain values.
-
-NOTE: We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the Input.Data structure of
-
-bdq:sourceAuthority="https://invalid/invalidservice", dwc:inputDataValue1="", dwc:inputDataValue 2... or as an example
-
-bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
-
-See Section on Implementation
-
-### 6.4 Examples of the data for validating tests (Informative)
-
-The validation files contain one column for each of 77 Darwin Core terms that are referenced as an Information Element somewhere in Core, but only terms relevant to the particular validation case for the row are populated, therefore the validation files are sparse.  They contain fragments of Flat Darwin Core records. 
-
-The header line for each of the validation files:  
-
-"LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","bdq:annotation","bdq:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision"
-
-The data are sparse, as most dwc: term columns do not contain a value for each individual case.
-
-A validation test case evaluating empty, where no dwc: term columns contain a value (dataID=1):  
-
-"2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-
-A validation test case for a validation where the input data result in a Response.value of NOT_COMPLIANT (dataID=7)
-
-"7","7","7","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","NOT_COMPLIANT","dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value ","","","","","","","","","","","","Austria","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-
-A validation test case for a validation where the input data result in a Response.value of COMPLIANT (dataID=8)
-
-"8","8","8","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","COMPLIANT","dwc countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value","","","","","","","","","","","","US","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-
-### 6.5 Where to get the validation data (Informative)
-
-The validation data is in two files, one containing normal data values, the other containing validation cases using non-printing characters.
-
-Validation file containing data values that would be expected to be encountered in the wild: 
- https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data.csv
-
-Validation data file containing non-printing characters for testing implementation of EMPTY: 
- https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data_nonprintingchars.csv
-
-This file is a csv file with the same set of columns as the above, but with rows that contain input values for selected Darwin Core terms consisting of either the 0x00 null character (e.g. dwc:scientificName="0x00"), or a pair of ASCII control characters (shift out 0x0E and shift in 0x0F, e.g. dwc:day="0x0E0x0F"). This file is intended to validate that implementations of tests are consistently evaluating inputs as EMPTY as expected by the definition of EMPTY.  
-
-The non-printing characters file should only be edited with a tool that will maintain the non-printing characters.  
-
-Both files have a header line identifying the specifications as defined in Section 6.2.
-
-The expectation for the response that an implementation should produce when executed against the row: "Response.status","Response.result","Response.comment", where an implementation is expected to produce the exact Response.status, the exact Response.result (ignoring order of any key-value pairs for an amendment response), and Response.comment is an example of what a comment, in English, might look like.  
-
-Parameter values are specified in a bdq:sourceAuthority column, when more than one sourceAuthority is involved, then these are given separate names.
-
-Darwin Core input columns are specified as "dc:type","dcterms:license","dwc:acceptedNameUsageID",...
-
-### 6.6 Implementation (Normative)
-
-Implementations SHOULD provide support for each parameter value specified in the example data. 
-
-REQUIRED: For each test in an implementation, that test MUST produce the same results as are specified in a row of the validation data for that test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that test.
-
-REQUIRED: Implementations MUST produce structured Response values with a Response.status, Response.value, and Response.comment.  
-
-In order to be considered as compliant with this standard, an implementation of the Core tests MUST fulfill all of the REQUIRED elements of this section.
-
-Human readable Data Quality Reports for Quality Control MAY take any appropriate form, they MAY aggregate Response values and comments, they MAY present results organized by test, or by data record, or by frequency of problem, or any other form suitable for presentation.  Data Quality Reports for Quality Control SHOULD allow users to access individual Response.status Response.value Response.comment results.  
-
-Response.comment values SHOULD be internationalized as appropriate for the the consumers of data quality reports.  
-
-Response.status and Response.value constants SHOULD be given internationalized labels as appropriate for the the consumers of data quality reports.  
-
-
-### 6.8 Updating test data due to changes in specifications or terms
-
-If any part of the logic of a test changes, parallel changes must be made to the test data for that test. For example, a change in a tests Expected Response will very likely to result in the need to amend at least one record within the associated test data. For example the Expected Response of the test AMENDMENT_EVENT_FROM_EVENTDATE to limit amendments to a single year resulted in an amendment to the Response.status of the data record DataID #320 from "FILLED_IN" to "NOT_AMENDED".
-
-A change to the test data may also precipitate the need to change one or both of the Examples within the test specification. As all examples of tests are based on the associated tests records in the test data, any such need for changes should be explicit.
-
-Similarly, changes to the test specification 'Information Elements ActedUpon' and 'Information Elements Consulted' will may require changes to Input.data, Output.data, Response.result and Response.comment.
-
-Therefore any changes to test specifications must trigger the need to check the associated test data and examples.
 
 ## Goes in Supplement? Implications for the Darwin Core Standard (John)
 
@@ -596,6 +408,8 @@ How to identify the High Seas.
 ## Goes in Supplement: Rationale Management Documentation
 
 ### Goes in Supplement: Developing tests with Github Issues
+
+The bdqcore: tests were developed in issues in the tdwg/bdq github space  
 
 ### Goes in Supplement: Tags and Categorizing Issues
 
@@ -640,6 +454,8 @@ The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq github repository. Each issue has table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below:
 
+<!--- three duplicative sets of information, two blocks of test here, then rows in glossary file... --->
+
 **Title**: A standardised, human readable name of the test-assertion based roughly on the template OUTPUTTYPE_TERMS_RESPONSE. There are 15 tests that only loosely conform to this template due to the difficulty of rendering them otherwise, for example "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION". <!---Note that there are 15 tests that don't strictly follow this - e.g. #132, #108, #93, #88, #86, #73, #71, #68, #62, #57, #56, #52, #50, #32, #24 - Should we mention the exception types here?--->. These names were considered helpful for human-human communication and to assist with code implementation, maintenance and searches. Example: VALIDATION_BASISOFRECORD_STANDARD.
 
 **GUID**: A globally unique identifier which allows software to uniquely identify each test (and in combination with parameter values, allows for specification of the expectations for the behaviour of a test implementation). Example: 42408a00-bf71-4892-a399-4325e2bc1fb8. 
@@ -677,11 +493,48 @@ The development of each test, with documentation of why particular decisions wer
 
 **Notes**: Additional comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. Example: For TAXONID_FROM_TAXON, “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
 
-## 1.5 Definition of CORE
+### Duplicate of above? 
 
-'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what times, and a subset of Darwin Core terms that we consider to be critical metadata about occurrence records.
+The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
-A number of tests were framed, but considered out of scope for CORE data quality needs ('Supplementary' GitHub tag). Implementers are free to implement a subset of the CORE tests or add additional tests when there is a particular data quality needs within their domain. For example, the testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Over the period of this project, many tests were removed from CORE on the basis that they could not be currently implemented in a manner that would result in predictable results. For example, the test VALIDATION_GEOGRAPHY_CONSISTENT was rejected late in the project because of the complexities in matching terms in the geographic names hierarchy, which is less standardized than the taxonomic names hierarchy.
+**"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb" 
+
+**"Label"** [normative]: A human readable label identifying the test.  The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS.. Example: "VALIDATION_COUNTRYCODE_STANDARD" 
+
+**"Description"** [non-normative]: A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
+
+**"TestType"** [normative]: The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.. Example: "Validation" 
+
+**"Darwin Core Class"** [non-normative]: The Information Element in the original terms of the framework, the general sort of information this test operates on. . Example: "dwc:Location"  
+
+**"Information Elements ActedUpon"** [normative]:A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
+
+**"Information Elements Consulted"** [normative]:"dwc:scientificName" A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon.
+
+**"Specification"** [normative]: The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is EMPTY; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
+
+**"Parameters"** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.. Example: "bdq:taxonIsMarine" 
+
+**"Dimension"** [normative]: The [data quality dimension](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) for this test. Example: "Conformance"
+
+**"Criterion Label"** [non-normative]:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
+
+**"Resource Type"** [normative]: The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. Example: "SingleRecord"   
+
+**"Source Authority"** [normative]: A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be exTests may require reference to external data such as standard vocabularies of terms or names. While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests.
+
+A reference to an external (non-Darwin Core) authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (if available), refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}"
+
+**"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation data suite. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
+
+**"References"** [non-normative]: A list of references that will assist in a thorough understanding of the test. Example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
+
+**"Example Implementations (Mechanisms)"** [non-normative]: nown Mechanisms with implementations of the test.
+. Example: "FilteredPush/Kurator: geo_ref_qc"
+
+**"Link to Specification Source Code"** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/
+
+**"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
 
 ---
 
@@ -725,97 +578,4 @@ if (DateUtils.isEmpty(eventTime)) {
 In general, assessing whether a date in biodiversity data was Julian or Gregorian is treated here as an intractable problem, and the problem of correctly determining the gregorian value for dwc:eventDates is left in the hands of data providers who may have additional knowledge of collectors and their practices to be able to assess how to interpret verbatim date values found in their historical records.  For consumers, this means that historical dates, even into recent times, may have systematic errors in subsets of the data where the date was julian but has been treated as gregorian.  This can, in some cases, introduce errors on the scale of one year differences between reported and correct eventDate value.     
 
 
-
-
-
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
-
-<head>
-
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link id=Main-File rel=Main-File
-href="file:///C:/Users/LEEBEL~1/AppData/Local/Temp/msohtmlclip1/01/clip.htm">
-<link rel=File-List
-href="file:///C:/Users/LEEBEL~1/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-x\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]-->
-<style>
-<!--table
-	{mso-displayed-decimal-separator:"\.";
-	mso-displayed-thousand-separator:"\,";}
-@page
-	{margin:.75in .7in .75in .7in;
-	mso-header-margin:.51in;
-	mso-footer-margin:.51in;}
-.font5
-	{color:black;
-	font-size:9.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Tahoma, sans-serif;
-	mso-font-charset:1;}
-.font6
-	{color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;}
-tr
-	{mso-height-source:auto;}
-col
-	{mso-width-source:auto;}
-br
-	{mso-data-placement:same-cell;}
-td
-	{padding:0px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri;
-	mso-generic-font-family:auto;
-	mso-font-charset:1;
-	mso-number-format:General;
-	text-align:general;
-	vertical-align:bottom;
-	border:none;
-	mso-background-source:auto;
-	mso-pattern:auto;
-	mso-protection:locked visible;
-	white-space:nowrap;
-	mso-rotate:0;}
-.xl66
-	{color:windowtext;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:1;}
-.xl67
-	{color:windowtext;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:1;}
--->
-</style>
-</head>
-
-<body link="#0563C1" vlink="#954F72">
-
-
-
-</body>
-
-</html>
 

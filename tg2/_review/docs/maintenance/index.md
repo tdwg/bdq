@@ -53,6 +53,16 @@ It is easier to edit the compressed version of the Test Validation Data to chang
 
 Amend the data record as required and updating the Date Last Updated is REQUIRED
 
+#### 6.8 Updating test data due to changes in specifications or terms
+
+If any part of the logic of a test changes, parallel changes must be made to the test data for that test. For example, a change in a tests Expected Response will very likely to result in the need to amend at least one record within the associated test data. For example the Expected Response of the test AMENDMENT_EVENT_FROM_EVENTDATE to limit amendments to a single year resulted in an amendment to the Response.status of the data record DataID #320 from "FILLED_IN" to "NOT_AMENDED".
+
+A change to the test data may also precipitate the need to change one or both of the Examples within the test specification. As all examples of tests are based on the associated tests records in the test data, any such need for changes should be explicit.
+
+Similarly, changes to the test specification 'Information Elements ActedUpon' and 'Information Elements Consulted' will may require changes to Input.data, Output.data, Response.result and Response.comment.
+
+Therefore any changes to test specifications must trigger the need to check the associated test data and examples.
+
 ### Additions to Test Validation Data
 
 Additions to the Test Validation Data are best done by copying and pasting an existing record and editing the content of the new record. Within the (compressed) Test Validation, note that the DataID is unique, so additions MUST NOT re-use an existing DataID value. 
@@ -60,3 +70,5 @@ Additions to the Test Validation Data are best done by copying and pasting an ex
 Values in the column **LineForTest** are useful in determining the number of Test Validation records for each Test, but also flag an additional function. A LineForTest value of "88" flags an Input.data value of "[null]" while a value of "99" flags an Input.data value of "[non-printing characters]". Both of these record types are used to separate records of 'normally' expected values from records that require special handing within the testing framework. 
 
 ### Processing Test Validation Data
+
+
