@@ -167,13 +167,24 @@ MultiRecord Measues that return counts where the input InformationElement is Res
 
 ### 3.1 The Response Object (normative) 
 
-The test types are: Validation, Issue, Amendment and Measure. Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. The Response from a test is an assertion which can form part of a data quality report or be wrapped in an annotation, and MUST include the following three components: 
+The four test types, Validation, Issue, Amendment, and Measure all provide a Response from the execution of the test.
+The Response from a test is an assertion which MAY form part of a data quality report or MAY be wrapped in an annotation. 
+
+Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. 
+
+The Response MUST include the following three components: 
 
 1. Value is the returned result for the test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
 
 2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
 
 3. The Remark supplies human-readable text describing reasons for the test result output.
+
+An Amendment may propose a change to an exisitng Darwin Core value or a set of Darwin Core terms or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  The Framework also supports changes to procedures but we have not framed any such tests in this form.  
+
+An Amendment Response.result SHOULD consist of a set of key:value pairs, where the key is the information element to be modified, and the value is the proposed new value for that information element.   The Response.result key:value pairs SHOULD be a JSON serialization of the proposed changes.
+
+Under bdqffdq: Amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Response.result, and implementors MAY develop their own structures and serialisations for such Amendment Response.results.
 
 ### 3.2 Framework elements not included in bdqcore test descriptions (normative)
 
@@ -220,6 +231,7 @@ Recommended process with the current suite of BDQ Core tests is to run all perti
 Under Quality Assurance, MultiRecord measures that return COMPLETE/NOT_COMPLETE MAY be used as filters for quality for purpose, exclude records from the data set untill all MultiRecord measures of this sort are returning COMPLETE, this under the mathematical forumuation of the framework, is the assertion that the data are fit for the purpose of the selected UseCase.
 
 Under Quality Control, MultiRecord measures that return numeric values MAY be used to assess the prevelance of quality issues in the data with respect to the selected UseCase.  
+
 
 <!--- Ming: Execution sequence of the tests , repeated in 1.6, but more detail than 1.6 --->
 

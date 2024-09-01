@@ -68,28 +68,48 @@ BDQ Core tests are designed to run at any point in the data lifecycle, from init
 
 ### 2.2 Types of tests
 
-#### 2.2.1 VALIDATION 
+#### 2.2.1 Validation
 
-A VALIDATION evaluates the values in one or more Darwin Core terms for fitness for some particular narrow data quality need. Validations evaluate values, or in some cases, presence or lack of a value. Validation tests are phrased as positive statements, consistent with the "Fitness for Use Framework".  A Validation tests to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY, is phrased as "Not Empty", and will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem. The formal response of VALIDATIONs can take one of four forms:
+A VALIDATION evaluates the values in one or more Darwin Core terms for fitness for some particular narrow data quality need. Validations evaluate values, or in some cases, presence or lack of a value. Validation tests are phrased as positive statements, consistent with the "Fitness for Use Framework".  A Validation tests to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY, is phrased as "Not Empty", and will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem. 
+
+The formal response of a Validation can take one of four forms:
 
 1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable.
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run.
 3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation:
 4. A Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not. 
 
-#### 2.2.2 ISSUE
+#### 2.2.2 Issue
 
 An ISSUE is a form of warning flag where the test is drawing attention to a non-empty value of a Darwin Core term. We have used these for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. For example, ISSUE_ANNOTATION_NOTEMPTY is informing the tester than there is at least one annotation associated with record and this should be evaluated before using the record. Similarly for the other two ISSUE-type tests: ISSUE_DATAGENERALIZATIONS_NOTEMPTY where some form of transformation has occurred, and ISSUE_ESTABLISHMENTMEANS_NOTEMPTY where the value needs to be assessed for utility. ISSUEs are currently outside the Data Quality Fitness for Use Framework. ISSUEs result in a Response.status of "RUN_HAS_RESULT" and a Response.status of "IS_ISSUE", "POTENTIAL_ISSUE" or "NOT_ISSUE". ISSUE is symmetrical to NOT_COMPLIANT, NOT_ISSUE is approximately symmetrical to COMPLIANT, and POSSIBLE_ISSUE does not have an equivalent Validation Response.result. 
 
-#### 2.2.3 AMENDMENT
+The formal response of an Issue can take one of four forms:
+
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable.
+2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run.
+3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation:
+4. A Response.result of either "POSSIBLE_PROBLEM" if the values of the Information Elements meet the criteria, or "NOT_PROBLEM" when they do not. 
+
+#### 2.2.3 Amendment
 
 An AMENDMENT may propose a change or addition to at least one Darwin Core term that is intended to improve one or more components of the quality of the record.  The Response.result from an AMENDMENT MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in these tests. In no case, should users ever overwrite an existing record, but make changes additional.   
 
+The formal response of an Amendment can take one for several forms:
+
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable.
+2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run.
+3. A Response.status of either "FILLED_IN" if a change has been proposed to fill in one or more Empty Information Elements or AMENDED if a change has been proposed to one or more NotEmpty information elements, and in this situation: 
+4. A Response.result containing a set of key:value pairs describing the proposed changes, where each key is an information element for which a change has been proposed, and the value is the proposed new value for that key.   This data structure SHOULD be a JSON serialization of the proposed changes.
+
 #### 2.2.4 MEASURE 
 
-A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or NOT_REPORTED (when the Response.status="INTERNAL_PREREQUISITES_NOTMET").  The principle Measure defined in the core tests is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the VALIDATIONs and AMENDMENTs and in one case provides an indication of the length of the period of the value of dwc:eventDate.
+A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or NOT_REPORTED (when the Response.status="INTERNAL_PREREQUISITES_NOTMET").  The sole SingleRecord Measure defined in bdqcore that directly measures data values is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes).  
 
-[!--- Should be add MultiRecord Measures here---- AC]
+#### 2.2.5 MultiRecord Measures 
+
+For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not. Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes. Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.
+
+For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns a count of the Response.result values from a particular Validation which are COMPLIANT across a bdqffdq:MultiRecord.  Under QualityControl, these measures serve to identify where quality problems with respect to a use case are present in a data set. 
 
 ### 2.2 Central concepts for understanding the test descriptions
 
