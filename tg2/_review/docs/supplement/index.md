@@ -207,37 +207,6 @@ We see an urgent need for a comprehensive, internationally agreed list of Darwin
 
 In this standard, we have taken an expedient approach in relation to making AMENDMENTs. We have used code in our tests to try and parse out likely, unambiguous matches. This is far from an ideal solution, but it does provide the potential of our AMENDMENTs to 'value add' to Darwin Core data records.
 
-
-## Goes in Supplement? Implications for the Darwin Core Standard (John)
-
-Early recognition that estimating 'fitness for use'/'quality was made difficult because of the lack of vocabularies...TG4.
-
-Definitions, uses in the wild, and best practices for Taxon class ..ID terms.
-
-[ Mention of issues arising such as use of dwc:country and dwc:countryCode and "High Seas"]
-
-How to identify the High Seas.
-
-
-## Goes in Supplement? Acronyms
-
-| **Acronym** | **Explanation**                                                                                                |
-|-------------|----------------------------------------------------------------------------------------------------------------|
-| ALA         | Atlas of Living Australia                                                                                      | 
-| BDQ         | TDWG Biodiversity Data Quality Interest Group                                                                  |
-| BISON       | Biodiversity Information Serving Our Nation                                                                    |
-| CRIA        | Centro de Referência em Informação Ambiental                                                                   |
-| EPSG        | European Petroleum Survey Group                                                                                |
-| GBIF        | Global Biodiversity Information Facility                                                                       |
-| iDigBio     | Integrated Digitized BioCollections                                                                            |
-| IRI         | Internationalized Resource Identifier                                                                          |
-| ISO         | International Standards Organization                                                                           |
-| TDWG        | Biodiversity Information Standards                                                                             |
-| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality                               |
-| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions                       |
-| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases                                  |
-| TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
-
 ## Goes in Supplement: Rationale Management Documentation
 
 ### Goes in Supplement: Developing tests with Github Issues
