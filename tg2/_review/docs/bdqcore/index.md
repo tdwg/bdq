@@ -81,7 +81,7 @@ The formal response of a Validation can take one of four forms:
 
 #### 2.2.2 Issue
 
-An ISSUE is a form of warning flag where the test is drawing attention to a non-empty value of a Darwin Core term. We have used these for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. For example, ISSUE_ANNOTATION_NOTEMPTY is informing the tester than there is at least one annotation associated with record and this should be evaluated before using the record. Similarly for the other two ISSUE-type tests: ISSUE_DATAGENERALIZATIONS_NOTEMPTY where some form of transformation has occurred, and ISSUE_ESTABLISHMENTMEANS_NOTEMPTY where the value needs to be assessed for utility. ISSUEs are currently outside the Data Quality Fitness for Use Framework. ISSUEs result in a Response.status of "RUN_HAS_RESULT" and a Response.status of "IS_ISSUE", "POTENTIAL_ISSUE" or "NOT_ISSUE". ISSUE is symmetrical to NOT_COMPLIANT, NOT_ISSUE is approximately symmetrical to COMPLIANT, and POSSIBLE_ISSUE does not have an equivalent Validation Response.result. 
+An ISSUE is a form of warning flag where the test is drawing attention to a non-empty value of a Darwin Core term. We have used these for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. For example, ISSUE_ANNOTATION_NOTEMPTY is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the other two ISSUE-type tests: ISSUE_DATAGENERALIZATIONS_NOTEMPTY where some form of transformation has occurred, and ISSUE_ESTABLISHMENTMEANS_NOTEMPTY where the value needs to be assessed for utility. ISSUEs are currently outside the Data Quality Fitness for Use Framework. ISSUEs result in a Response.status of "RUN_HAS_RESULT" and a Response.status of "IS_ISSUE", "POTENTIAL_ISSUE" or "NOT_ISSUE". ISSUE is symmetrical to NOT_COMPLIANT, NOT_ISSUE is approximately symmetrical to COMPLIANT, and POSSIBLE_ISSUE does not have an equivalent Validation Response.result. 
 
 The formal response of an Issue can take one of four forms:
 
@@ -103,7 +103,7 @@ The formal response of an Amendment can take one for several forms:
 
 #### 2.2.4 MEASURE 
 
-A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or NOT_REPORTED (when the Response.status="INTERNAL_PREREQUISITES_NOTMET").  The sole SingleRecord Measure defined in bdqcore that directly measures data values is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes).  
+A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or NOT_REPORTED (when the Response.status="INTERNAL_PREREQUISITES_NOTMET"). The sole SingleRecord Measure defined in bdqcore that directly measures data values is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes).  
 
 #### 2.2.5 MultiRecord Measures 
 
@@ -115,7 +115,7 @@ For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure
 
 #### Specification
 
-The bdqffdq:Specification provides a technical description of how a test evaluates input data for quality, and what conclusions asserts under what conditions. 
+The bdqffdq:Specification provides a technical description of how a test evaluates input data for quality, and what conclusions are asserted under what conditions. 
 
 #### InformationElements
 
@@ -133,7 +133,7 @@ The Specification may include references to external authorities other than Darw
 
 Test Descriptors are the collection of bdqffdq terms that comprehensively describe the BDQ Core tests. The suite of descriptors are designed for three audiences (which may not be mutually exclusive).  A subset of these descriptors are shown in the quick reference guide.
 
-- Machine readable. Example: GUID
+- Machine readable - Example: GUID
 - Human readable - For consumers of Data Quality reports. Example: Description
 - Human readable - For implementors of BDQ Core. Example: Specification
 
@@ -146,15 +146,15 @@ Each test in the quick reference guide displays the following descriptors:
   - **ResourceType** [normative]  For implementors.  The Resource Type that the test acts upon, SingleRecords or MultiRecords (data sets).
 - **Description** [non-normative]: For consumers. A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
 - **Specification** [normative]: For implementors. The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
-- **Information Elements** For implementors and consumers, what terms does the test evaluate.
-  - **ActedUpon** [normative]: A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
+- **Information Elements** For implementors and consumers, what terms do the test evaluate.
+  - **ActedUpon** [normative]: A list of the specific Darwin Core terms that are the focus of the test. Example: "dwc:countryCode" 
   - **Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. For example, VALIDATION_ENDDAYOFYEAR_INRANGE tests whether or not dwc:endDayOfYear is in the range 1-365 or 1-366, consulting dwc:eventDate to see if the endDayOfYear falls in a leap year and 366 would be valid.  The test makes the assertion of COMPLIANT or NOT_COMPLIANT about the Acted Upon term, and is not evaluating whether the Consulted dwc:eventDate conforms to expectations or not. 
-- **Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.. Example: "bdq:taxonIsMarine.
+- **Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain. Example: "bdq:taxonIsMarine.
 - **Default Parameter Values** [normative]: For Implementors.  Default values for parameters to the test, including references to external authorities required for the test.  Many parameters are sourceAuthorities, some are simple values.   
 	- Structue: bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. 
 	- Implementors Note: The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this exact string MUST be passed in as the parameter value for a test implementation to behave in the default manner.  Other non-empty strings would select other source authorities.  Implementations MAY regard empty values to be the Normative String Identifier.
-- **Examples** [non-normative]: For Implementors. Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
-- **Use Cases** [non-normative] For Consumers and Implementors. Descriptions of data quality needs that this test helps to support.
+- **Examples** [non-normative]: For Implementors. Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ‘pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
+- **Use Cases** [non-normative] For Consumers and Implementors. Descriptions of data example quality needs that this test helps to support.
 - **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
 
 ## 3.2 SingleRecord tests and MultiRecord Measures (informative)
@@ -177,9 +177,9 @@ MultiRecord Measures that return counts can be run before an amendment step in a
 
 - The Response.result is COMPLETE if all of a given Validation on SingleRecords in a MultiRecord are COMPLIANT (or in some cases COMPLIANT or INTERNAL_PREREQISITES_NOTMET).  
 
-This set of measures serves to support Quality Assurance.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord measures return COMPLETE.  The MultiRecord Measures are a formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase (see the [Summary of Mathematical Formalization](../bdqffdq/index.md# 5 Fitness For Use Framework Summary of Mathematical Formalization) ). 
+This set of measures serves to support Quality Assurance.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord measures return COMPLETE.  The MultiRecord Measures are a formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase (see the [Summary of Mathematical Formalization](../bdqffdq/index.md# 5 Fitness For Use Framework Summary of Mathematical Formalization). 
 
-The bdqffdq: framework also allows for MultiRecord Validations, Amendments, and Issues, bdqcore: does not currently contain any such.
+The bdqffdq: The Framework also allows for MultiRecord Validations, Amendments, and Issues, bdqcore: does not currently contain any such.
 
 ## 3.3  The Tests (normative)
 
