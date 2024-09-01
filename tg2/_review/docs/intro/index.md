@@ -167,89 +167,23 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
 
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
+<!--- TODO: Where do the acronyms go? --->
 
-<head>
+## 9. Acronyms
 
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link id=Main-File rel=Main-File
-href="file:///C:/Users/LEEBEL~1/AppData/Local/Temp/msohtmlclip1/01/clip.htm">
-<link rel=File-List
-href="file:///C:/Users/LEEBEL~1/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-x\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]-->
-<style>
-<!--table
-	{mso-displayed-decimal-separator:"\.";
-	mso-displayed-thousand-separator:"\,";}
-@page
-	{margin:.75in .7in .75in .7in;
-	mso-header-margin:.51in;
-	mso-footer-margin:.51in;}
-.font5
-	{color:black;
-	font-size:9.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Tahoma, sans-serif;
-	mso-font-charset:1;}
-.font6
-	{color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;}
-tr
-	{mso-height-source:auto;}
-col
-	{mso-width-source:auto;}
-br
-	{mso-data-placement:same-cell;}
-td
-	{padding:0px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri;
-	mso-generic-font-family:auto;
-	mso-font-charset:1;
-	mso-number-format:General;
-	text-align:general;
-	vertical-align:bottom;
-	border:none;
-	mso-background-source:auto;
-	mso-pattern:auto;
-	mso-protection:locked visible;
-	white-space:nowrap;
-	mso-rotate:0;}
-.xl66
-	{color:windowtext;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:1;}
-.xl67
-	{color:windowtext;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:1;}
--->
-</style>
-</head>
-
-<body link="#0563C1" vlink="#954F72">
-</body>
-</html>
+| **Acronym** | **Explanation**                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------|
+| ALA         | Atlas of Living Australia                                                                                      | 
+| BDQ         | TDWG Biodiversity Data Quality Interest Group                                                                  |
+| BISON       | Biodiversity Information Serving Our Nation                                                                    |
+| CRIA        | Centro de Referência em Informação Ambiental                                                                   |
+| EPSG        | European Petroleum Survey Group                                                                                |
+| GBIF        | Global Biodiversity Information Facility                                                                       |
+| iDigBio     | Integrated Digitized BioCollections                                                                            |
+| IRI         | Internationalized Resource Identifier                                                                          |
+| ISO         | International Standards Organization                                                                           |
+| TDWG        | Biodiversity Information Standards                                                                             |
+| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality                               |
+| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions                       |
+| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases                                  |
+| TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |

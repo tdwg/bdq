@@ -3,6 +3,9 @@ Date Last Updated 2024-08-24
 
 The following references have been extracted from the "References" descriptor on the BDQ Core tests and supporting documents. We have used the formatting as used by Pensoft, see https://checklist.pensoft.net/about#AuthorsGuidelines. 
 
+TODO: Add: 
+* [RFC-2119] http://tools.ietf.org/html/rfc2119 Key words for use in RFCs to Indicate Requirement Levels. 1997. The Internet Engineering Task Force.
+
 <ul>
 <li>ALA (2013) Data Processing. https://www.ala.org.au/blogs-news/data-processing/</li>
 <li>ALA (2020) Locations - Species distributions as areas. https://support.ala.org.au/support/solutions/articles/6000234834-locations-species-distributions-as-areas</li>
