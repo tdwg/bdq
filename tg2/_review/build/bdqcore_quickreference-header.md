@@ -20,27 +20,15 @@ Want to contribute? For information about how to contribute to the BDQ Core Stan
 
 This page is not part of the standard. It lists the BDQ Core tests by key descriptors defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., “dwc:”). These are included to show that the meaning for the word it is attached to very specifically means the term as defined in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-**"skos:prefLabel"** [normative]: A human readable label identifying the test.  These labels largely follow the pattern 
-"type of test" "key information element acted upon" " TYPE_INFORMATIONELEMENT_STATUS. For example: "VALIDATION_COUNTRYCODE_STANDARD" [--- This is not the skos:pref format---]
+---
 
-**"IRI"** [normative]:A machine readable unique identifier for the test with a Date Last Updated. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb " 
-
-**"Name"** [normative] https://
-
-**"Description"** [non-normative]: A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
-
-**"Darwin Core Class"** [non-normative]: The Information Element in the original terms of the framework, the general sort of information this test operates on. Example: "dwc:Location"  
-
-**"Information Elements ActedUpon"** [normative]:A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
-
-**"Specification"** [normative]: The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
-
-**"Data Quality Dimension"** [normative]: The [bdqdim (http://rs.tdwg.org/bdqdim/terms) for this test. Example: "Conformance"
-
-**"Criterion Label"** [non-normative]:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
-
-**"Resource Type"** [normative]: The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. Example: "bdqffdq:SingleRecord"   
-
-**"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
-
-**"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
+**IRI** [normative]:A machine readable unique identifier with a Date Last Updated appended. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb 2024-08-30" 
+**skos:prefLabel** [normative]: A human readable label that follows the pattern 'Test Type' 'Focus Information Element' 'Criterion'. Example: "Validation dwc:countryCode Standard"
+**Description** [non-normative]: A non-technical description of what the test does. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
+**Darwin Core Class"** [non-normative]: The focus area. Example: "dwc:Location"  
+**Information Elements ActedUpon** [normative]:The Darwin Core terms focused on. Example: "dwc:countryCode" 
+**Specification** [normative]: The concise logic of the test for implementors. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT"  
+**Criterion Label** [non-normative] for Validations:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
+**Resource Type** [normative]: What record type the tests operate on - 'SingleRecord' or 'MultiRecord'. Example: "bdqffdq:SingleRecord"   
+**Examples** [non-normative]: 'Pass' and 'Fail' examples of inputs and outputs for the test from the Test Validation Data. Example: "[dwc:countryCode="GL": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value"]
+[dwc:countryCode="GRL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value"]"
