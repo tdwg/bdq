@@ -12,119 +12,35 @@
 
 **Latest version**: <{current_iri}>
 
-{previous_version_slot}
+This document is intended to be an easy-to-read quick reference to the currently (as of 2024-xx-xx) BDQ Core Tests maintained as part of the BDQ Core standard.
 
-**Abstract**: The BDQ Core list of data quality tests. Test Types, Descriptors, 
+Need help? Read more about BDQ Core in Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889, the BDQ Core Introduction, BDQ Core Users Guide, BDQ Core Implementers Guide or BDQ Core Vocabularies. Still have questions? Submit a new issue (question/problem) to the Issues form page (link) in GitHub. See the bottom of this document for how to cite BDQ Core.
 
-**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Antonio M Saraiva, Alex Thompson, Miles Nicholls, Emily R Rees, Christian Gendreau, Dmitry Schigel, Yi Ming Gan
+Want to contribute? For information about how to contribute to the BDQ Core Standard, including how to propose changes, see the BDQ Core Guidelines for contributing.
 
-**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions)
-
-**Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
-
-**RFC 2119 key words**
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
-
-**Namespace abbreviations**
-
-The following namespace abbreviations are used in this document:
-
-| Prefix | IRI |
-| ---      | --- |
-| bdq:     | http://rs.tdwg.org/bdq/terms/   |
-| bdqdim:  | http://rs.tdwg.org/bdqdim/terms |
-| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/ |
-| bbqcore: | http://rs.tdwg.org/bdq/bdqcore/ |
-| dwc:     | https://rs.tdwg.org/dwc/        |
-
-**Use of Terms**
-
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of the `bdqffdq:` namespace.
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqdim/terms), controlled value strings MUST be used as values of the `bdqdim:` namespace.
-Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled value strings MUST be used as values of the `bdq:` namespace.
-Due to the requirements of [bdq](https://rs.tdwg.org/bdqcore/terms), controlled value strings MUST be used as values of the `bdqcore:` namespace.
-
-## 1 Introduction
-
-This document lists the BDQ Core tests. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
-
-## 2 BDQ Core Tests
-### 2.1 The Scope of the Tests
-
-The scope of the BDQ Core tests is primarily encapsulated by the bdqffdq:Specification. The "Information Elements" within that "Specification" may specify the Darwin Core terms used in the Test. These Information Elements may include Darwin Core terms that do not reside in the "dwc:" namespace, for example "dcterms:licence". The "Specification" may also include references to external authorities other than Darwin Core that are required to implement the test, for example, to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test. Note that even though these 'external authorities' are external to Darwin Core, Darwin Core terms remain the focus.
-
-BDQ Core tests are designed to run at any point in the data lifecycle, from initial collection or observation to data transcription, database loading, and preparation for or during data aggregation.
-
-### 2.2 Types of tests
-
-#### 2.2.1 VALIDATION 
-
-A VALIDATION evaluates the values in one or more Darwin Core terms for fitness for some particular narrow data quality need. Validations evaluate values, or in some cases, presence or lack of a value. Validation tests are phrased as positive statements, consistent with the "Fitness for Use Framework".  A Validation tests to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY, is phrased as "Not Empty", and will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem. The formal response of VALIDATIONs can take one of four forms:
-
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation:
-4. A Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not. 
-
-#### 2.2.2 ISSUE
-
-An ISSUE is a form of warning flag where the test is drawing attention to a non-empty value of a Darwin Core term. We have used these for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. For example, ISSUE_ANNOTATION_NOTEMPTY is informing the tester than there is at least one annotation associated with record and this should be evaluated before using the record. Similarly for the other two ISSUE-type tests: ISSUE_DATAGENERALIZATIONS_NOTEMPTY where some form of transformation has occurred, and ISSUE_ESTABLISHMENTMEANS_NOTEMPTY where the value needs to be assessed for utility. ISSUEs are currently outside the Data Quality Fitness for Use Framework. ISSUEs result in a Response.status of "RUN_HAS_RESULT" and a Response.status of "IS_ISSUE", "POTENTIAL_ISSUE" or "NOT_ISSUE". ISSUE is symmetrical to NOT_COMPLIANT, NOT_ISSUE is approximately symmetrical to COMPLIANT, and POSSIBLE_ISSUE does not have an equivalent Validation Response.result. 
-
-#### 2.2.3 AMENDMENT
-
-An AMENDMENT may propose a change or addition to at least one Darwin Core term that is intended to improve one or more components of the quality of the record.  The Response.result from an AMENDMENT MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in these tests. In no case, should users ever overwrite an existing record, but make changes additional.   
-
-#### 2.2.4 MEASURE 
-
-A MEASURE may return either a Response.result that is a numeric value, or the values COMPLETE or NOT_COMPLETE, or NOT_REPORTED (when the Response.status="INTERNAL_PREREQUISITES_NOTMET").  The principle Measure defined in the core tests is MEASURE_EVENTDATE_DURATIONINSECONDS, it returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the VALIDATIONs and AMENDMENTs and in one case provides an indication of the length of the period of the value of dwc:eventDate.
-
-[!--- Should be add MultiRecord Measures here---- AC]
-
-### 2.3 Test Descriptors
-
-Test Descriptors are those terms that comprehensively describe the BDQ Core test. The suite of descriptors are designed for three audiences (which may not be mutually exclusive)-
-
-- Machine readable. Example: GUID
-- Human readable - For consumers of Data Quality reports. Example: Description
-- Human readable - For implementors of BDQ Core. Example: Specification
+This page is not part of the standard. It lists the BDQ Core tests by key descriptors defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., “dwc:”). These are included to show that the meaning for the word it is attached to very specifically means the term as defined in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
 **"skos:prefLabel"** [normative]: A human readable label identifying the test.  These labels largely follow the pattern 
-"type of test" "key information element acted upon" " TYPE_INFORMATIONELEMENT_STATUS.. Example: "VALIDATION_COUNTRYCODE_STANDARD" [--- This is not the skos:pref format---]
+"type of test" "key information element acted upon" " TYPE_INFORMATIONELEMENT_STATUS. For example: "VALIDATION_COUNTRYCODE_STANDARD" [--- This is not the skos:pref format---]
 
-**"GUID"** [normative]:A machine readable unique identifier for the test. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb" 
+**"IRI"** [normative]:A machine readable unique identifier for the test with a Date Last Updated. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb " 
 
 **"Name"** [normative] https://
 
 **"Description"** [non-normative]: A non-technical description of what the test does, intended for consumers of data quality reports in concert with the Response.comment. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"
 
-**"TestType"** [normative]: The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.. Example: "Validation" 
-
 **"Darwin Core Class"** [non-normative]: The Information Element in the original terms of the framework, the general sort of information this test operates on. Example: "dwc:Location"  
 
 **"Information Elements ActedUpon"** [normative]:A list of the specific Darwin Core terms that are the focus of the test.. Example: "dwc:countryCode" 
 
-**"Information Elements Consulted"** [normative]:"dwc:scientificName" A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon.
-
 **"Specification"** [normative]: The specification for implementors describing the expected behavior of the test. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum was found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT."  
 
-**"Parameters"** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain.. Example: "bdq:taxonIsMarine" 
-
-**"Dimension"** [normative]: The [bdqdim (http://rs.tdwg.org/bdqdim/terms) for this test. Example: "Conformance"
+**"Data Quality Dimension"** [normative]: The [bdqdim (http://rs.tdwg.org/bdqdim/terms) for this test. Example: "Conformance"
 
 **"Criterion Label"** [non-normative]:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
 
 **"Resource Type"** [normative]: The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. Example: "bdqffdq:SingleRecord"   
 
-**"Source Authority"** [normative]: A reference to an external, non-Darwin Core authority required for the test. bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be expected to be passed in as the parameter value.  Other non-empty strings would select other source authorities. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible, refer to an API that will assist implementers of the tests. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}"
-
 **"Examples"** [non-normative]: Example of inputs for a test and the expected output from an implementation of the test given those outputs.  A ’pass’ and a ‘fail’ example are provided for each test.  All examples listed are also present in the the validation test data. Example: "[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]"
-
-**"References"** [non-normative]: A list of references that will assist in a thorough understanding of the test. Example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
-
-**"Example Implementations (Mechanisms)"** [non-normative]: known Mechanisms with implementations of the test.
-. Example: "FilteredPush/Kurator: geo_ref_qc"
-
-**"Link to Specification Source Code"** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/
 
 **"Notes"** [non-normative]: Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."  
