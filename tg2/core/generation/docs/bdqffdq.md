@@ -12,85 +12,56 @@ Ontology Terms forming the BDQ Core Framework For Data Quality.
 
 Alphabetical Index of classes
 
-- [https://rs.tdwg.org/bdqffdq/terms#AbstractInformationElement](#https//rs.tdwg.org/bdqffdq/terms#AbstractInformationElement) InformationElement
-- [https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept](#https//rs.tdwg.org/bdqffdq/terms#FundamentalConcept) 
+- [https://rs.tdwg.org/bdqffdq/terms#Policy](#https//rs.tdwg.org/bdqffdq/terms#Policy) NeedConcept
+- [bdqffdq:AbstractInformationElement](#bdqffdqAbstractInformationElement) InformationElement
 - [bdqffdq:ActedUpon](#bdqffdqActedUpon) InformationElement
 - [bdqffdq:Amendment](#bdqffdqAmendment) AmendmentConcept	DataQualityNeed
 - [bdqffdq:AmendmentAssertion](#bdqffdqAmendmentAssertion) AmendmentConcept	Assertion
 - [bdqffdq:AmendmentConcept](#bdqffdqAmendmentConcept) 
 - [bdqffdq:AmendmentMethod](#bdqffdqAmendmentMethod) AmendmentConcept	DataQualityMethod
-- [bdqffdq:AmendmentPolicy](#bdqffdqAmendmentPolicy) AmendmentConcept	NeedConcept
+- [bdqffdq:AmendmentPolicy](#bdqffdqAmendmentPolicy) https://rs.tdwg.org/bdqffdq/terms#Policy	AmendmentConcept
 - [bdqffdq:Assertion](#bdqffdqAssertion) ReportConcept
 - [bdqffdq:Consulted](#bdqffdqConsulted) InformationElement
-- [bdqffdq:Criterion](#bdqffdqCriterion) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	NeedConcept
-- [bdqffdq:DataQualityDimension](#bdqffdqDataQualityDimension) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	NeedConcept
+- [bdqffdq:Criterion](#bdqffdqCriterion) NeedConcept	FundamentalConcept
+- [bdqffdq:DataQualityDimension](#bdqffdqDataQualityDimension) NeedConcept	FundamentalConcept
 - [bdqffdq:DataQualityMethod](#bdqffdqDataQualityMethod) SolutionsConcept
 - [bdqffdq:DataQualityNeed](#bdqffdqDataQualityNeed) NeedConcept
 - [bdqffdq:DataQualityReport](#bdqffdqDataQualityReport) ReportConcept
 - [bdqffdq:DataResource](#bdqffdqDataResource) ReportConcept
-- [bdqffdq:Enhancement](#bdqffdqEnhancement) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	AmendmentConcept
+- [bdqffdq:Enhancement](#bdqffdqEnhancement) AmendmentConcept	NeedConcept	FundamentalConcept
+- [bdqffdq:FundamentalConcept](#bdqffdqFundamentalConcept) 
 - [bdqffdq:Implementation](#bdqffdqImplementation) SolutionsConcept
 - [bdqffdq:ImprovementTarget](#bdqffdqImprovementTarget) NeedConcept
-- [bdqffdq:InformationElement](#bdqffdqInformationElement) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept
+- [bdqffdq:InformationElement](#bdqffdqInformationElement) FundamentalConcept
 - [bdqffdq:Issue](#bdqffdqIssue) DataQualityNeed	IssueConcept
 - [bdqffdq:IssueAssertion](#bdqffdqIssueAssertion) Assertion	IssueConcept
 - [bdqffdq:IssueConcept](#bdqffdqIssueConcept) 
 - [bdqffdq:IssueMethod](#bdqffdqIssueMethod) DataQualityMethod	IssueConcept
+- [bdqffdq:IssuePolicy](#bdqffdqIssuePolicy) https://rs.tdwg.org/bdqffdq/terms#Policy	IssueConcept
 - [bdqffdq:Measure](#bdqffdqMeasure) DataQualityNeed	MeaurementConcept
 - [bdqffdq:MeasurementAssertion](#bdqffdqMeasurementAssertion) MeaurementConcept	Assertion
 - [bdqffdq:MeasurementMethod](#bdqffdqMeasurementMethod) MeaurementConcept	DataQualityMethod
-- [bdqffdq:MeasurementPolicy](#bdqffdqMeasurementPolicy) MeaurementConcept	NeedConcept
+- [bdqffdq:MeasurementPolicy](#bdqffdqMeasurementPolicy) https://rs.tdwg.org/bdqffdq/terms#Policy	MeaurementConcept
 - [bdqffdq:MeaurementConcept](#bdqffdqMeaurementConcept) 
-- [bdqffdq:Mechanism](#bdqffdqMechanism) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	SolutionsConcept
+- [bdqffdq:Mechanism](#bdqffdqMechanism) FundamentalConcept	SolutionsConcept
 - [bdqffdq:NeedConcept](#bdqffdqNeedConcept) 
-- [bdqffdq:Parameter](#bdqffdqParameter) 
-- [bdqffdq:ProblemPolicy](#bdqffdqProblemPolicy) NeedConcept	IssueConcept
+- [bdqffdq:Parameter](#bdqffdqParameter) SolutionsConcept
 - [bdqffdq:Profile](#bdqffdqProfile) NeedConcept
 - [bdqffdq:ReportConcept](#bdqffdqReportConcept) 
 - [bdqffdq:ResourceType](#bdqffdqResourceType) 
-- [bdqffdq:Result](#bdqffdqResult) ReportConcept
-- [bdqffdq:ResultStatus](#bdqffdqResultStatus) ReportConcept
+- [bdqffdq:ResponseResult](#bdqffdqResponseResult) ReportConcept
+- [bdqffdq:ResponseStatus](#bdqffdqResponseStatus) ReportConcept
 - [bdqffdq:SolutionsConcept](#bdqffdqSolutionsConcept) 
-- [bdqffdq:Specification](#bdqffdqSpecification) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	SolutionsConcept
-- [bdqffdq:UseCase](#bdqffdqUseCase) https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	NeedConcept
+- [bdqffdq:Specification](#bdqffdqSpecification) FundamentalConcept	SolutionsConcept
+- [bdqffdq:UseCase](#bdqffdqUseCase) NeedConcept	FundamentalConcept
 - [bdqffdq:Validation](#bdqffdqValidation) DataQualityNeed	ValidationConcept
 - [bdqffdq:ValidationAssertion](#bdqffdqValidationAssertion) ValidationConcept	Assertion
 - [bdqffdq:ValidationConcept](#bdqffdqValidationConcept) 
 - [bdqffdq:ValidationMethod](#bdqffdqValidationMethod) ValidationConcept	DataQualityMethod
-- [bdqffdq:ValidationPolicy](#bdqffdqValidationPolicy) ValidationConcept	NeedConcept
+- [bdqffdq:ValidationPolicy](#bdqffdqValidationPolicy) https://rs.tdwg.org/bdqffdq/terms#Policy	ValidationConcept
 ********************
 
 # Class terms
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept
-
-### Preferred Label
-
-'Fundamental Concept'
-
-### Label
-
-'Fundamental Concept'
-
-### Type
-
-Class
-
-### Definition
-
-'Concepts that not derived by composition with other concepts.'
-
-
-### Comment
-
-nan
-
 
 ********************
 
@@ -115,6 +86,36 @@ Class
 ### Definition
 
 'A term involved in proposals of changes to data or process to improve data quallity to fit expressed data quality needs.'
+
+
+### Comment
+
+nan
+
+
+********************
+
+## bdqffdq:FundamentalConcept
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept
+
+### Preferred Label
+
+'Fundamental Concept'
+
+### Label
+
+'Fundamental Concept'
+
+### Type
+
+Class
+
+### Definition
+
+'Concepts that not derived by composition with other concepts.'
 
 
 ### Comment
@@ -205,36 +206,6 @@ Class
 ### Definition
 
 'Category of concepts forming the Needs layer of the fittness for use framework.'
-
-
-### Comment
-
-nan
-
-
-********************
-
-## bdqffdq:Parameter
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/Parameter
-
-### Preferred Label
-
-'Parameter'
-
-### Label
-
-'Parameter'
-
-### Type
-
-Class
-
-### Definition
-
-'A value that, when provided to a test Specification changes the behavior of the test in a defined manner.'
 
 
 ### Comment
@@ -364,19 +335,19 @@ Class
 
 ********************
 
-## bdqffdq:InformationElement
+## bdqffdq:AmendmentPolicy
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/InformationElement
+https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
 
 ### Preferred Label
 
-'Information Element'
+'Amendment Policy'
 
 ### Label
 
-'Information Element'
+'Amendment Policy'
 
 ### Type
 
@@ -384,7 +355,41 @@ Class
 
 ## Superclass
 
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept
+https://rs.tdwg.org/bdqffdq/terms#Policy	bdqffdq:AmendmentConcept
+
+### Definition
+
+'The set of Validations that support a Use Case.'
+
+
+### Comment
+
+'A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case.'
+
+
+********************
+
+## bdqffdq:IssuePolicy
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/IssuePolicy
+
+### Preferred Label
+
+'Issue Policy'
+
+### Label
+
+'Issue Policy'
+
+### Type
+
+Class
+
+## Superclass
+
+https://rs.tdwg.org/bdqffdq/terms#Policy	bdqffdq:IssueConcept
 
 ### Definition
 
@@ -393,24 +398,24 @@ nan
 
 ### Comment
 
-'An information element identifies a portion of data to which a test pertains.  The information element in FFDQ can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a use case.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude).'
+'The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case.'
 
 
 ********************
 
-## bdqffdq:Enhancement
+## bdqffdq:MeasurementPolicy
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/Enhancement
+https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
 
 ### Preferred Label
 
-'Enhancement'
+'Measurement Policy'
 
 ### Label
 
-'Enhancement'
+'Measurement Policy'
 
 ### Type
 
@@ -418,111 +423,7 @@ Class
 
 ## Superclass
 
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	bdqffdq:AmendmentConcept
-
-### Definition
-
-'Description of a means by which data could be improved.'
-
-
-### Comment
-
-'General statement, for example: 'Recomend replacement value from a controlled vocabulary''
-
-
-********************
-
-## bdqffdq:Criterion
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/Criterion
-
-### Preferred Label
-
-'Criterion'
-
-### Label
-
-'Criterion'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	bdqffdq:NeedConcept
-
-### Definition
-
-'Rule against which data are evaluated for conformance to quality criteria.'
-
-
-### Comment
-
-'General statement, for example 'In a controlled vocabulary'
-
-Composed with both Validations and Issues.'
-
-
-********************
-
-## bdqffdq:DataQualityDimension
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension
-
-### Preferred Label
-
-'Data Quality Dimension'
-
-### Label
-
-'Data Quality Dimension'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	bdqffdq:NeedConcept
-
-### Definition
-
-'An aspect of data quality.'
-
-
-### Comment
-
-'Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, 'precision' in 'coordinate precision of single records'.'
-
-
-********************
-
-## bdqffdq:UseCase
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/UseCase
-
-### Preferred Label
-
-'Use Case'
-
-### Label
-
-'Use Case'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	bdqffdq:NeedConcept
+https://rs.tdwg.org/bdqffdq/terms#Policy	bdqffdq:MeaurementConcept
 
 ### Definition
 
@@ -531,28 +432,24 @@ nan
 
 ### Comment
 
-'The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.
-
-An example of a UseCase could be 'Check for internal consistency of dates', with validation policies for checking consistency between atomic date fields and an Amendment such as 'eventDate filled in from verbatim'.
-
-Use Cases in bdqffdq are not the same as Use Cases in the software engineering sense, but  are similar bdqffdq formal statements derived from analyis of user stories.'
+'The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case.'
 
 
 ********************
 
-## bdqffdq:Mechanism
+## bdqffdq:ValidationPolicy
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/Mechanism
+https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
 
 ### Preferred Label
 
-'Mechanism'
+'Validation Policy'
 
 ### Label
 
-'Mechanism'
+'Validation Policy'
 
 ### Type
 
@@ -560,56 +457,16 @@ Class
 
 ## Superclass
 
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	bdqffdq:SolutionsConcept
+https://rs.tdwg.org/bdqffdq/terms#Policy	bdqffdq:ValidationConcept
 
 ### Definition
 
-'An entity that can execute data quality methods.'
+nan
 
 
 ### Comment
 
-'The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation.'
-
-
-********************
-
-## bdqffdq:Specification
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/Specification
-
-### Preferred Label
-
-'Specification'
-
-### Label
-
-'Specification'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#FundamentalConcept	bdqffdq:SolutionsConcept
-
-### Definition
-
-'A specific statement about how to evaluate a criterion.'
-
-
-### Comment
-
-'A specification is a technical desription of an assertion test.
-
-A specification is expected to have the following properies: 
-
-Expected Response
-
-Authorities and Parameters'
+'The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case.'
 
 
 ********************
@@ -722,19 +579,19 @@ A = { a | a = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }'
 
 ********************
 
-## bdqffdq:AmendmentPolicy
+## bdqffdq:Enhancement
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
+https://rs.tdwg.org/bdqffdq/terms/Enhancement
 
 ### Preferred Label
 
-'Amendment Policy'
+'Enhancement'
 
 ### Label
 
-'Amendment Policy'
+'Enhancement'
 
 ### Type
 
@@ -742,16 +599,16 @@ Class
 
 ## Superclass
 
-bdqffdq:AmendmentConcept	bdqffdq:NeedConcept
+bdqffdq:AmendmentConcept	bdqffdq:NeedConcept	bdqffdq:FundamentalConcept
 
 ### Definition
 
-'The set of Contextualized Enhancements that support a Use Case.'
+'Description of a means by which data could be improved.'	'A description of a means by which data could be improved.'
 
 
 ### Comment
 
-'A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case.'
+'General statement, for example: 'Recomend replacement value from a controlled vocabulary''
 
 
 ********************
@@ -943,11 +800,119 @@ Describes an instance of the criterion concept in terms of the associated inform
 
 ********************
 
-## https://rs.tdwg.org/bdqffdq/terms#AbstractInformationElement
+## bdqffdq:InformationElement
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms#AbstractInformationElement
+https://rs.tdwg.org/bdqffdq/terms/InformationElement
+
+### Preferred Label
+
+'Information Element'
+
+### Label
+
+'Information Element'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:FundamentalConcept
+
+### Definition
+
+nan
+
+
+### Comment
+
+'An information element identifies a portion of data to which a test pertains.  The information element in FFDQ can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a use case.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude).'
+
+
+********************
+
+## bdqffdq:Mechanism
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/Mechanism
+
+### Preferred Label
+
+'Mechanism'
+
+### Label
+
+'Mechanism'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:FundamentalConcept	bdqffdq:SolutionsConcept
+
+### Definition
+
+'An entity that can execute data quality methods.'
+
+
+### Comment
+
+'The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation.'
+
+
+********************
+
+## bdqffdq:Specification
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/Specification
+
+### Preferred Label
+
+'Specification'
+
+### Label
+
+'Specification'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:FundamentalConcept	bdqffdq:SolutionsConcept
+
+### Definition
+
+'A specific statement about how to evaluate a criterion.'
+
+
+### Comment
+
+'A specification is a technical desription of an assertion test.
+
+A specification is expected to have the following properies: 
+
+Expected Response
+
+Authorities and Parameters'
+
+
+********************
+
+## bdqffdq:AbstractInformationElement
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
 
 ### Preferred Label
 
@@ -1113,19 +1078,19 @@ nan
 
 ********************
 
-## bdqffdq:MeasurementPolicy
+## https://rs.tdwg.org/bdqffdq/terms#Policy
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
+https://rs.tdwg.org/bdqffdq/terms#Policy
 
 ### Preferred Label
 
-'Measurement Policy'
+'Policy'
 
 ### Label
 
-'Measurement Policy'
+'Policy'
 
 ### Type
 
@@ -1133,16 +1098,16 @@ Class
 
 ## Superclass
 
-bdqffdq:MeaurementConcept	bdqffdq:NeedConcept
+bdqffdq:NeedConcept
 
 ### Definition
 
-nan
+'The set of Data Quality Needs for a Use Case'
 
 
 ### Comment
 
-'The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case.'
+'Composition of Data Quality Needs into Use Cases'
 
 
 ********************
@@ -1249,19 +1214,19 @@ nan
 
 ********************
 
-## bdqffdq:ProblemPolicy
+## bdqffdq:Criterion
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/ProblemPolicy
+https://rs.tdwg.org/bdqffdq/terms/Criterion
 
 ### Preferred Label
 
-'Problem Policy'
+'Criterion'
 
 ### Label
 
-'Problem Policy'
+'Criterion'
 
 ### Type
 
@@ -1269,7 +1234,77 @@ Class
 
 ## Superclass
 
-bdqffdq:NeedConcept	bdqffdq:IssueConcept
+bdqffdq:NeedConcept	bdqffdq:FundamentalConcept
+
+### Definition
+
+'Rule against which data are evaluated for conformance to quality criteria.'
+
+
+### Comment
+
+'General statement, for example 'In a controlled vocabulary'
+
+Composed with both Validations and Issues.'
+
+
+********************
+
+## bdqffdq:DataQualityDimension
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension
+
+### Preferred Label
+
+'Data Quality Dimension'
+
+### Label
+
+'Data Quality Dimension'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:NeedConcept	bdqffdq:FundamentalConcept
+
+### Definition
+
+'An aspect of data quality.'
+
+
+### Comment
+
+'Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, 'precision' in 'coordinate precision of single records'.'
+
+
+********************
+
+## bdqffdq:UseCase
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/UseCase
+
+### Preferred Label
+
+'Use Case'
+
+### Label
+
+'Use Case'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:NeedConcept	bdqffdq:FundamentalConcept
 
 ### Definition
 
@@ -1278,7 +1313,11 @@ nan
 
 ### Comment
 
-'The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case.'
+'The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.
+
+An example of a UseCase could be 'Check for internal consistency of dates', with validation policies for checking consistency between atomic date fields and an Amendment such as 'eventDate filled in from verbatim'.
+
+Use Cases in bdqffdq are not the same as Use Cases in the software engineering sense, but  are similar bdqffdq formal statements derived from analyis of user stories.'
 
 
 ********************
@@ -1387,11 +1426,11 @@ nan
 
 ********************
 
-## bdqffdq:Result
+## bdqffdq:ResponseResult
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/Result
+https://rs.tdwg.org/bdqffdq/terms/ResponseResult
 
 ### Preferred Label
 
@@ -1421,11 +1460,11 @@ nan
 
 ********************
 
-## bdqffdq:ResultStatus
+## bdqffdq:ResponseStatus
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/ResultStatus
+https://rs.tdwg.org/bdqffdq/terms/ResponseStatus
 
 ### Preferred Label
 
@@ -1525,6 +1564,40 @@ nan
 
 ********************
 
+## bdqffdq:Parameter
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/Parameter
+
+### Preferred Label
+
+'Parameter'
+
+### Label
+
+'Parameter'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:SolutionsConcept
+
+### Definition
+
+'A value that, when provided to a test Specification changes the behavior of the test in a defined manner.'
+
+
+### Comment
+
+nan
+
+
+********************
+
 ## bdqffdq:ValidationAssertion
 
 ### Name
@@ -1593,42 +1666,42 @@ nan
 
 ********************
 
-## bdqffdq:ValidationPolicy
+
+# DataProperty terms
+
+********************
+
+## bdqffdq:hasResponseResultValue
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
+https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 
 ### Preferred Label
 
-'Validation Policy'
+nan
 
 ### Label
 
-'Validation Policy'
+nan
 
 ### Type
 
-Class
+DataProperty
 
 ## Superclass
 
-bdqffdq:ValidationConcept	bdqffdq:NeedConcept
+'Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).'
 
 ### Definition
 
-nan
+'has response result value'
 
 
 ### Comment
 
-'The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case.'
+'has response result value'
 
-
-********************
-
-
-# DataProperty terms
 
 ********************
 
@@ -1700,11 +1773,11 @@ DataProperty
 
 ********************
 
-## https://rs.tdwg.org/bdqffdq/terms#hasEnhancement
+## https://rs.tdwg.org/bdqffdq/terms#hasResponseComment
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms#hasEnhancement
+https://rs.tdwg.org/bdqffdq/terms#hasResponseComment
 
 ### Preferred Label
 
@@ -1720,42 +1793,12 @@ DataProperty
 
 ### Definition
 
-nan
+'has Response Comment'
 
 
 ### Comment
 
-nan
-
-
-********************
-
-## bdqffdq:hasResponseResultValue
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-DataProperty
-
-### Definition
-
-'has response result value'
-
-
-### Comment
-
-'has response result value'
+'has Response Comment'
 
 
 ********************
@@ -1834,6 +1877,108 @@ nan
 
 ********************
 
+## https://rs.tdwg.org/bdqffdq/terms#issueProperty
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms#issueProperty
+
+### Preferred Label
+
+nan
+
+### Label
+
+nan
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Category of properties that apply to Issues.'
+
+### Definition
+
+'issue Property'
+
+
+### Comment
+
+'issue Property'
+
+
+********************
+
+## bdqffdq:reportProperty
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/reportProperty
+
+### Preferred Label
+
+nan
+
+### Label
+
+nan
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Category of properties used in reports.'
+
+### Definition
+
+'report Property'
+
+
+### Comment
+
+'report Property'
+
+
+********************
+
+## https://rs.tdwg.org/bdqffdq/terms#producesAssertion
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms#producesAssertion
+
+### Preferred Label
+
+nan
+
+### Label
+
+'Connects an entity that creates an assertion with the assertion.'
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Connects Implementations with Assertions'
+
+### Definition
+
+'produces Assertion'
+
+
+### Comment
+
+'produces Assertion'
+
+
+********************
+
 ## bdqffdq:implementedBy
 
 ### Name
@@ -1858,12 +2003,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'implemented By'
 
 
 ### Comment
 
-nan
+'implemented By'
 
 
 ********************
@@ -1892,12 +2037,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'composed of'
 
 
 ### Comment
 
-nan
+'composed of'
 
 
 ********************
@@ -1926,114 +2071,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Specification'
 
 
 ### Comment
 
-nan
-
-
-********************
-
-## bdqffdq:issueInContext
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/issueInContext
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue.'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
-
-
-********************
-
-## bdqffdq:dimensionInContext
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/dimensionInContext
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedDimension.'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
-
-
-********************
-
-## bdqffdq:enhancementInContext
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/enhancementInContext
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedEnhancement.'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
+'has Specification'
 
 
 ********************
@@ -2074,11 +2117,11 @@ Was, but dimension is too abstract: The dimension targeted by some enhancement v
 
 ********************
 
-## https://rs.tdwg.org/bdqffdq/terms#hasParameter
+## bdqffdq:hasParameter
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms#hasParameter
+https://rs.tdwg.org/bdqffdq/terms/hasParameter
 
 ### Preferred Label
 
@@ -2128,16 +2171,19 @@ ObjectProperty
 
 ## Superclass
 
-'Object property that describes an enhancement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment.'
+'Had Domain: Amendment, Range Improvement Target.   Asserting improvement target could be improved by the Amendment.
+
+
+Object property that describes an enhancement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment.'
 
 ### Definition
 
-nan
+'improved By'
 
 
 ### Comment
 
-nan
+'improved By'
 
 
 ********************
@@ -2166,12 +2212,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Acted Upon Information Element'
 
 
 ### Comment
 
-nan
+'has Acted Upon Information Element'
 
 
 ********************
@@ -2200,12 +2246,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Consulted Information Element'
 
 
 ### Comment
 
-nan
+'has Consulted Information Element'
 
 
 ********************
@@ -2234,12 +2280,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Information Element'
 
 
 ### Comment
 
-nan
+'has Information Element'
 
 
 ********************
@@ -2268,12 +2314,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Resource Type'
 
 
 ### Comment
 
-nan
+'has Resource Type'
 
 
 ********************
@@ -2315,11 +2361,11 @@ Was: The criteria targeted by some enhancement via the ImprovementTarget object.
 
 ********************
 
-## bdqffdq:amendmentProperties
+## bdqffdq:amendmentProperty
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/amendmentProperties
+https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 
 ### Preferred Label
 
@@ -2339,21 +2385,21 @@ ObjectProperty
 
 ### Definition
 
-nan
+'amendment Property'
 
 
 ### Comment
 
-nan
+'amendment  Property'
 
 
 ********************
 
-## bdqffdq:measurementProperties
+## bdqffdq:measurementProperty
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/measurementProperties
+https://rs.tdwg.org/bdqffdq/terms/measurementProperty
 
 ### Preferred Label
 
@@ -2373,55 +2419,21 @@ ObjectProperty
 
 ### Definition
 
-nan
+'measurement Property'
 
 
 ### Comment
 
-nan
+'measurement Property'
 
 
 ********************
 
-## bdqffdq:problemProperties
+## bdqffdq:validationProperty
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/problemProperties
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Sub properties of this type group object properties that apply to problem concepts such as ProblemPolicy (DQ Needs), ProblemMethod (DQ Solutions) and Issue (DQ Reports).'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
-
-
-********************
-
-## bdqffdq:validationProperties
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/validationProperties
+https://rs.tdwg.org/bdqffdq/terms/validationProperty
 
 ### Preferred Label
 
@@ -2441,12 +2453,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'validation Property'
 
 
 ### Comment
 
-nan
+'validation Property'
 
 
 ********************
@@ -2463,7 +2475,7 @@ nan
 
 ### Label
 
-nan
+'Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
 
 ### Type
 
@@ -2475,12 +2487,118 @@ ObjectProperty
 
 ### Definition
 
-nan
+'targeted Issue'
 
 
 ### Comment
 
+'targeted Issue'
+
+
+********************
+
+## bdqffdq:forAmendment
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/forAmendment
+
+### Preferred Label
+
 nan
+
+### Label
+
+nan
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Use to link AmendmentMethods to Amendments.
+
+Describes the relationship between an Amendment concept in FFDQ (needs, solutions, reports) and a ContextualizedEnhancement.'
+
+### Definition
+
+'for Amendment'
+
+
+### Comment
+
+'for Amendment'
+
+
+********************
+
+## bdqffdq:forIssue
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/forIssue
+
+### Preferred Label
+
+nan
+
+### Label
+
+nan
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Use to link IssueMethods to Issues.
+
+Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue.'
+
+### Definition
+
+'for Issue'
+
+
+### Comment
+
+'for Issue'
+
+
+********************
+
+## https://rs.tdwg.org/bdqffdq/terms#forMeasure
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms#forMeasure
+
+### Preferred Label
+
+nan
+
+### Label
+
+nan
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Use to link MeasurementMethods to Measures.'
+
+### Definition
+
+'for Measure'
+
+
+### Comment
+
+'for Measure'
 
 
 ********************
@@ -2521,11 +2639,11 @@ Describes the relationship between a validation concept in FFDQ (needs, solution
 
 ********************
 
-## bdqffdq:coversUseCase
+## bdqffdq:hasUseCase
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/coversUseCase
+https://rs.tdwg.org/bdqffdq/terms/hasUseCase
 
 ### Preferred Label
 
@@ -2545,12 +2663,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Use Case'
 
 
 ### Comment
 
-nan
+'has Use Case'
 
 
 ********************
@@ -2579,46 +2697,12 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Response Result'
 
 
 ### Comment
 
-nan
-
-
-********************
-
-## bdqffdq:hasStatus
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/hasStatus
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be COMPLIANT or NON_COMPLIANT.'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
+'has Response Result'
 
 
 ********************
@@ -2647,21 +2731,21 @@ ObjectProperty
 
 ### Definition
 
-nan
+'has Response Status'
 
 
 ### Comment
 
-nan
+'hase Response Status'
 
 
 ********************
 
-## bdqffdq:hasDimension
+## bdqffdq:hasDataQualityDimension
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms/hasDimension
+https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension
 
 ### Preferred Label
 
@@ -2669,7 +2753,7 @@ nan
 
 ### Label
 
-nan
+'The DataQualityDimension to which a DataQualityNeed Applies.'
 
 ### Type
 
@@ -2677,84 +2761,24 @@ ObjectProperty
 
 ## Superclass
 
-'Used to link the derived concept of a ContextualizedDimension to the fundamental concept of a Dimension.'
+'Used to link a derived concept of a DataQualityNeed (Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.
+
+For a Measure, the dimension of data quality measured.  
+
+For a Validation or Issue, the dimension of data quality assessed.
+
+For an Amendment, the dimension of data quality to be improved.
+
+Under the original formulation of the Framework, only Measures have Dimensions.'
 
 ### Definition
 
-nan
+'has Data Quality Dimension'
 
 
 ### Comment
 
-nan
-
-
-********************
-
-## bdqffdq:hasEnhancement
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Used to link the derived concept of a ContextualizedEnhancement to the fundamental concept of an Enhancement.'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
-
-
-********************
-
-## bdqffdq:hasIssue
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/hasIssue
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-## Superclass
-
-'Used to link the derived concept of a ContextualizedIssue to the fundamental concept of a Problem.'
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
+'has Data Quality Dimension'
 
 
 ********************
@@ -2793,6 +2817,74 @@ ObjectProperty
 
 ********************
 
+## bdqffdq:hasEnhancement
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
+
+### Preferred Label
+
+nan
+
+### Label
+
+nan
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'Used to link the derived property of an Amendment to the Fundamental property of an Enhancement.'
+
+### Definition
+
+'has Enhancement'
+
+
+### Comment
+
+'has Enhancement'
+
+
+********************
+
+## https://rs.tdwg.org/bdqffdq/terms#appliesTo
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms#appliesTo
+
+### Preferred Label
+
+nan
+
+### Label
+
+'Describes the DataResource about which an Assertion is made.'
+
+### Type
+
+ObjectProperty
+
+## Superclass
+
+'applies To'	'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.'
+
+### Definition
+
+'applies To'
+
+
+### Comment
+
+nan
+
+
+********************
+
 ## http://www.w3.org/2002/07/owl#topObjectProperty
 
 ### Name
@@ -2823,11 +2915,11 @@ nan
 
 ********************
 
-## https://rs.tdwg.org/bdqffdq/terms#hasDataQualityDimension
+## bdqffdq:includedInPolicy
 
 ### Name
 
-https://rs.tdwg.org/bdqffdq/terms#hasDataQualityDimension
+https://rs.tdwg.org/bdqffdq/terms/includedInPolicy
 
 ### Preferred Label
 
@@ -2835,7 +2927,7 @@ nan
 
 ### Label
 
-nan
+'Assserts that a Data Quality Need is part of a Policy'
 
 ### Type
 
@@ -2843,102 +2935,12 @@ ObjectProperty
 
 ### Definition
 
-'has Data Quality Dimension'
+'included In Policy'
 
 
 ### Comment
 
-'has Data Quality Dimension'
-
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#hasPolicy
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#hasPolicy
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
-
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#hasUseCase
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#hasUseCase
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
-
-
-********************
-
-## bdqffdq:reportProperties
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/reportProperties
-
-### Preferred Label
-
-nan
-
-### Label
-
-nan
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-
-### Comment
-
-nan
+'included in Policy'
 
 
 ********************
