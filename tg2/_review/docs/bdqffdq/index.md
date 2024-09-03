@@ -62,16 +62,25 @@ In Section 4, the values of following terms are normative: Term IRI, Name, rdfs:
 
 In Section 4, the values of the following term are non-normative: Comment.
 
+Figures are non-normative.
+
 Other sections of this document are marked as normative or non-normative.
 
 ### 1.2 RFC 2119 key words (normative)
+
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ## 2 Use of Terms (normative) 
 
-TODO: needs updating
+When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
+
+
+TODO: needs updating.  
+
+?? bdqffdq:hasDataQualityDimension is an object property, bdqffdq:DataQualityDimension is an object. Is this an asertion about the vocabularies for dimension, criterion, and enhancement ??
 
 Due to the requirements of bdqffdq, controlled value strings MUST be used as values of bdqffdq:dataQualityDimension.
+
 
 ### 2 Framework for describing data quality 
 
