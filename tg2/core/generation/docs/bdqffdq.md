@@ -12,14 +12,13 @@ Ontology Terms forming the BDQ Core Framework For Data Quality.
 
 Alphabetical Index of classes
 
-- [https://rs.tdwg.org/bdqffdq/terms#Policy](#https//rs.tdwg.org/bdqffdq/terms#Policy) NeedConcept
 - [bdqffdq:AbstractInformationElement](#bdqffdqAbstractInformationElement) InformationElement
 - [bdqffdq:ActedUpon](#bdqffdqActedUpon) InformationElement
 - [bdqffdq:Amendment](#bdqffdqAmendment) AmendmentConcept|DataQualityNeed
 - [bdqffdq:AmendmentAssertion](#bdqffdqAmendmentAssertion) AmendmentConcept|Assertion
 - [bdqffdq:AmendmentConcept](#bdqffdqAmendmentConcept) 
 - [bdqffdq:AmendmentMethod](#bdqffdqAmendmentMethod) AmendmentConcept|DataQualityMethod
-- [bdqffdq:AmendmentPolicy](#bdqffdqAmendmentPolicy) https://rs.tdwg.org/bdqffdq/terms#Policy|AmendmentConcept
+- [bdqffdq:AmendmentPolicy](#bdqffdqAmendmentPolicy) AmendmentConcept|Policy
 - [bdqffdq:Assertion](#bdqffdqAssertion) ReportConcept
 - [bdqffdq:Consulted](#bdqffdqConsulted) InformationElement
 - [bdqffdq:Criterion](#bdqffdqCriterion) NeedConcept|FundamentalConcept
@@ -37,18 +36,19 @@ Alphabetical Index of classes
 - [bdqffdq:IssueAssertion](#bdqffdqIssueAssertion) Assertion|IssueConcept
 - [bdqffdq:IssueConcept](#bdqffdqIssueConcept) 
 - [bdqffdq:IssueMethod](#bdqffdqIssueMethod) DataQualityMethod|IssueConcept
-- [bdqffdq:IssuePolicy](#bdqffdqIssuePolicy) https://rs.tdwg.org/bdqffdq/terms#Policy|IssueConcept
+- [bdqffdq:IssuePolicy](#bdqffdqIssuePolicy) Policy|IssueConcept
 - [bdqffdq:Measure](#bdqffdqMeasure) DataQualityNeed|MeaurementConcept
 - [bdqffdq:MeasurementAssertion](#bdqffdqMeasurementAssertion) MeaurementConcept|Assertion
 - [bdqffdq:MeasurementMethod](#bdqffdqMeasurementMethod) MeaurementConcept|DataQualityMethod
-- [bdqffdq:MeasurementPolicy](#bdqffdqMeasurementPolicy) https://rs.tdwg.org/bdqffdq/terms#Policy|MeaurementConcept
+- [bdqffdq:MeasurementPolicy](#bdqffdqMeasurementPolicy) Policy|MeaurementConcept
 - [bdqffdq:MeaurementConcept](#bdqffdqMeaurementConcept) 
 - [bdqffdq:Mechanism](#bdqffdqMechanism) FundamentalConcept|SolutionsConcept
 - [bdqffdq:NeedConcept](#bdqffdqNeedConcept) 
 - [bdqffdq:Parameter](#bdqffdqParameter) SolutionsConcept
+- [bdqffdq:Policy](#bdqffdqPolicy) NeedConcept
 - [bdqffdq:Profile](#bdqffdqProfile) NeedConcept
 - [bdqffdq:ReportConcept](#bdqffdqReportConcept) 
-- [bdqffdq:ResourceType](#bdqffdqResourceType) 
+- [bdqffdq:ResourceType](#bdqffdqResourceType) FundamentalConcept
 - [bdqffdq:ResponseResult](#bdqffdqResponseResult) ReportConcept
 - [bdqffdq:ResponseStatus](#bdqffdqResponseStatus) ReportConcept
 - [bdqffdq:SolutionsConcept](#bdqffdqSolutionsConcept) 
@@ -58,7 +58,7 @@ Alphabetical Index of classes
 - [bdqffdq:ValidationAssertion](#bdqffdqValidationAssertion) ValidationConcept|Assertion
 - [bdqffdq:ValidationConcept](#bdqffdqValidationConcept) 
 - [bdqffdq:ValidationMethod](#bdqffdqValidationMethod) ValidationConcept|DataQualityMethod
-- [bdqffdq:ValidationPolicy](#bdqffdqValidationPolicy) https://rs.tdwg.org/bdqffdq/terms#Policy|ValidationConcept
+- [bdqffdq:ValidationPolicy](#bdqffdqValidationPolicy) Policy|ValidationConcept
 ********************
 
 # Class terms
@@ -110,7 +110,11 @@ Class
 
 ### Definition
 
-'Concepts that not derived by composition with other concepts.'
+'Category of Fittness for use concepts that are not derived by composition with other concepts.'
+
+### Comment
+
+'Contrast with derived concepts, which are compositions of two or more fundamental concepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into Amendment Concept, Validation Concept, Measurment concept or Issue concept.  Derived concepts can also be organized by framework layer into Needs Concept, Solutions Concept, and Report Concept.'
 
 
 ********************
@@ -189,6 +193,10 @@ Class
 
 ### Definition
 
+'A concept that expresses an aspect of a data quality need.'
+
+### Comment
+
 'Category of concepts forming the Needs layer of the fittness for use framework.'
 
 
@@ -214,36 +222,11 @@ Class
 
 ### Definition
 
-'Category of concepts forming the Report layer of the fittness for use framework.'
-
-
-********************
-
-## bdqffdq:ResourceType
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/ResourceType
-
-### Preferred Label
-
-'Resource Type'
-
-### Label
-
-'Resource Type'
-
-### Type
-
-Class
-
-### Definition
-
-nan
+'A concept concerning data quality expressed in a data quality report.'
 
 ### Comment
 
-'In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord'
+'Category of concepts forming the Report layer of the fittness for use framework.'
 
 
 ********************
@@ -268,7 +251,11 @@ Class
 
 ### Definition
 
-'Category of concepts forming the Solutions layer of the fittness for use framework.'
+'A concept that expresses an aspect of a data quality solution.'
+
+### Comment
+
+'Category of concepts forming the Solutions layer of the fittness for use framework.  Solutions are tools that evaluate data against needs and express conclusions in data quality reports.'
 
 
 ********************
@@ -302,138 +289,6 @@ Class
 
 ********************
 
-## bdqffdq:AmendmentPolicy
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
-
-### Preferred Label
-
-'Amendment Policy'
-
-### Label
-
-'Amendment Policy'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#Policy|bdqffdq:AmendmentConcept
-
-### Definition
-
-'The set of Validations that support a Use Case.'
-
-### Comment
-
-'A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case.'
-
-
-********************
-
-## bdqffdq:IssuePolicy
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/IssuePolicy
-
-### Preferred Label
-
-'Issue Policy'
-
-### Label
-
-'Issue Policy'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#Policy|bdqffdq:IssueConcept
-
-### Definition
-
-nan
-
-### Comment
-
-'The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case.'
-
-
-********************
-
-## bdqffdq:MeasurementPolicy
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
-
-### Preferred Label
-
-'Measurement Policy'
-
-### Label
-
-'Measurement Policy'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#Policy|bdqffdq:MeaurementConcept
-
-### Definition
-
-nan
-
-### Comment
-
-'The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case.'
-
-
-********************
-
-## bdqffdq:ValidationPolicy
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
-
-### Preferred Label
-
-'Validation Policy'
-
-### Label
-
-'Validation Policy'
-
-### Type
-
-Class
-
-## Superclass
-
-https://rs.tdwg.org/bdqffdq/terms#Policy|bdqffdq:ValidationConcept
-
-### Definition
-
-nan
-
-### Comment
-
-'The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case.'
-
-
-********************
-
 ## bdqffdq:AmendmentAssertion
 
 ### Name
@@ -458,7 +313,7 @@ bdqffdq:AmendmentConcept|bdqffdq:Assertion
 
 ### Definition
 
-nan
+'An assertion expressing the result of an implementation evaluating an amendment supporting a particular data quality need to improve a particular data resource.'
 
 ### Comment
 
@@ -491,7 +346,7 @@ bdqffdq:AmendmentConcept|bdqffdq:DataQualityMethod
 
 ### Definition
 
-nan
+'A data quality solution concept that relates an Amendment to its Specifications.'
 
 ### Comment
 
@@ -524,11 +379,11 @@ bdqffdq:AmendmentConcept|bdqffdq:DataQualityNeed
 
 ### Definition
 
-nan
+'A data quality need that expresses how proposals may be made to improve the fittnes for use of data.'
 
 ### Comment
 
-'ContextualizedEnhacement in the original framework.  Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.  Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example: Recommends valid value for taxon name in a single record.  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.  A = { a | a = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }'
+'ContextualizedEnhacement in the original framework.   Describes an instance of the enhancement concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.  Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example: Recommends valid value for taxon name in a single record.  Amendments may describe proposed changes to data values, or to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.   A = { a | a = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }'
 
 
 ********************
@@ -566,6 +421,39 @@ bdqffdq:AmendmentConcept|bdqffdq:NeedConcept|bdqffdq:FundamentalConcept
 
 ********************
 
+## bdqffdq:AmendmentPolicy
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
+
+### Preferred Label
+
+'Amendment Policy'
+
+### Label
+
+'Amendment Policy'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:AmendmentConcept|bdqffdq:Policy
+
+### Definition
+
+'A need concept that relates a Use Case to a set of supporting Amendments.'
+
+### Comment
+
+'A Data Quality needs level concept that describes how some bdqffdq:contextualizedEnhancement relates to a bdqffdq:UseCase. This relationship defines which amendments are supported by a given use case.'
+
+
+********************
+
 ## bdqffdq:IssueAssertion
 
 ### Name
@@ -590,7 +478,7 @@ bdqffdq:Assertion|bdqffdq:IssueConcept
 
 ### Definition
 
-nan
+'An assertion expressing the result of an implementation evaluating an issue for a particular data quality need in a particular data resource.'
 
 ### Comment
 
@@ -623,7 +511,7 @@ bdqffdq:DataQualityMethod|bdqffdq:IssueConcept
 
 ### Definition
 
-nan
+'A data quality solution concept that relates an Issue to its Specifications.'
 
 ### Comment
 
@@ -656,7 +544,7 @@ bdqffdq:DataQualityNeed|bdqffdq:IssueConcept
 
 ### Definition
 
-nan
+'A data quality need that expresses how quality problems may be identified in data.'
 
 ### Comment
 
@@ -689,7 +577,7 @@ bdqffdq:DataQualityNeed|bdqffdq:MeaurementConcept
 
 ### Definition
 
-nan
+'A data quality need that expressed how the fittness of data for some use may be measured.'
 
 ### Comment
 
@@ -722,11 +610,11 @@ bdqffdq:DataQualityNeed|bdqffdq:ValidationConcept
 
 ### Definition
 
-'A description of a criterion applied to an information element for some resource type.'
+'A data quality need that expreses how data may be evaluated for fittness for use.'
 
 ### Comment
 
-'ContextualizedCriterion in the original framework.  Describes the criteria for determining compliance of data to fill some data quality need.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example: The value of basisOfRecord of single records must be in the controlled vocabulary.   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality.  Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.   V = { v | v = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }'
+'ContextualizedCriterion in the original framework.  Describes the criteria for determining compliance of data to fill some data quality need.  A description of a criterion applied to an information element for some resource type.  Validations are phrased in a positive sense, they identify data which has quality for some need.  For example: The value of basisOfRecord of single records must be in the controlled vocabulary.   A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality.  Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.   V = { v | v = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }'
 
 
 ********************
@@ -755,11 +643,44 @@ bdqffdq:FundamentalConcept
 
 ### Definition
 
-nan
+'A portion of data with which a Data Quality Need is concerned.'
 
 ### Comment
 
 'An information element identifies a portion of data to which a test pertains.  The information element in FFDQ can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a use case.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude).'
+
+
+********************
+
+## bdqffdq:ResourceType
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/ResourceType
+
+### Preferred Label
+
+'Resource Type'
+
+### Label
+
+'Resource Type'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:FundamentalConcept
+
+### Definition
+
+'Category of things that are data objects about which data quality assertions may be made.'
+
+### Comment
+
+'In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord'
 
 
 ********************
@@ -792,7 +713,9 @@ bdqffdq:FundamentalConcept|bdqffdq:SolutionsConcept
 
 ### Comment
 
-'The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation.'
+'Mechanisms may produce data quality reports as products.    
+
+The FFDQ concept of mechanism describes the entity that performs an assertion test (code, external service, actor, etc.). Tied to a specification via the concept of an Implementation.'
 
 
 ********************
@@ -821,7 +744,7 @@ bdqffdq:FundamentalConcept|bdqffdq:SolutionsConcept
 
 ### Definition
 
-'A specific statement about how to evaluate a criterion.'
+'A specific statement about how to evaluate a data quality need.'
 
 ### Comment
 
@@ -887,7 +810,7 @@ bdqffdq:InformationElement
 
 ### Definition
 
-nan
+'An information element, expressed in concrete terms, about which a data quality need expresses assertions about the data quality in that element.'
 
 ### Comment
 
@@ -920,7 +843,7 @@ bdqffdq:InformationElement
 
 ### Definition
 
-nan
+'An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element.'
 
 ### Comment
 
@@ -953,7 +876,7 @@ bdqffdq:MeaurementConcept|bdqffdq:Assertion
 
 ### Definition
 
-nan
+'An assertion expressing the result of an implementation measuring a particular data quality need in a particular data resource.'
 
 ### Comment
 
@@ -986,44 +909,11 @@ bdqffdq:MeaurementConcept|bdqffdq:DataQualityMethod
 
 ### Definition
 
-nan
+'A data quality solution concept that relates a Measure to its Specifications.'
 
 ### Comment
 
 'The MeasurementMethod in FFDQ is a DQ Solutions level concept describing the relationship between a specification (technical description of a test) and a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements.'
-
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#Policy
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#Policy
-
-### Preferred Label
-
-'Policy'
-
-### Label
-
-'Policy'
-
-### Type
-
-Class
-
-## Superclass
-
-bdqffdq:NeedConcept
-
-### Definition
-
-'The set of Data Quality Needs for a Use Case'
-
-### Comment
-
-'Composition of Data Quality Needs into Use Cases'
 
 
 ********************
@@ -1052,7 +942,11 @@ bdqffdq:NeedConcept
 
 ### Definition
 
-nan
+'A data quality need concept that expresses what assertions may be made about data with respect to fittness for use.'
+
+### Comment
+
+'Subtypes of DataQualityNeed are the Test Types.  Data Quality Need appoximates the informal concept of Test as used in BDQ Core.'
 
 
 ********************
@@ -1081,11 +975,44 @@ bdqffdq:NeedConcept
 
 ### Definition
 
-nan
+'A specific data quality need for which a specific Amendment is intended to improve.'
 
 ### Comment
 
 'The ImprovementTarget concept in FFDQ describes which measures, issues, and validations are improved by some amendment. ImprovementTarget includes relationships between a contextualizedEnhancement (for an Amendment) and one or more contextualizedCriterion (link to validations) or contextualizedDimensions (link to measures).'
+
+
+********************
+
+## bdqffdq:Policy
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/Policy
+
+### Preferred Label
+
+'Policy'
+
+### Label
+
+'Policy'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:NeedConcept
+
+### Definition
+
+'The set of Data Quality Needs for a Use Case'
+
+### Comment
+
+'Composition of Data Quality Needs into Use Cases'
 
 
 ********************
@@ -1114,11 +1041,11 @@ bdqffdq:NeedConcept
 
 ### Definition
 
-nan
+'A needs concept expressing the composition of Policies to satisfy a Use Case.'
 
 ### Comment
 
-'Profile in FFDQ is a DQ Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions.'
+'Profile in FFDQ is a DQ Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions.   DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ip(u), mp ∈ MP , vp ∈ VP , ip ∈ IP ⋀ u ∈ U }'
 
 
 ********************
@@ -1213,11 +1140,110 @@ bdqffdq:NeedConcept|bdqffdq:FundamentalConcept
 
 ### Definition
 
-nan
+'A needs concept expressing a purpose to which data are put for which the data must have quality for the result of the purpose to have meaning and reliability.'
 
 ### Comment
 
 'The UseCase concept in FFDQ describes some data quality control use case. The Amendment, Measurement and Validation policies that make up a use case define which assertions cover a given use case.  An example of a UseCase could be 'Check for internal consistency of dates', with validation policies for checking consistency between atomic date fields and an Amendment such as 'eventDate filled in from verbatim'.  Use Cases in bdqffdq are not the same as Use Cases in the software engineering sense, but  are similar bdqffdq formal statements derived from analyis of user stories.'
+
+
+********************
+
+## bdqffdq:IssuePolicy
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/IssuePolicy
+
+### Preferred Label
+
+'Issue Policy'
+
+### Label
+
+'Issue Policy'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:Policy|bdqffdq:IssueConcept
+
+### Definition
+
+'A need concept that relates a Use Case to a set of supporting Issues.'
+
+### Comment
+
+'The ProblemPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedIssue relates to a use case. This relationship defines which problems are supported by a given use case.'
+
+
+********************
+
+## bdqffdq:MeasurementPolicy
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
+
+### Preferred Label
+
+'Measurement Policy'
+
+### Label
+
+'Measurement Policy'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:Policy|bdqffdq:MeaurementConcept
+
+### Definition
+
+'A need concept that relates a Use Case to a set of supporting Measures.'
+
+### Comment
+
+'The MeasurementPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedDimension relates to a use case. This relationship defines which measures are supported by a given use case.'
+
+
+********************
+
+## bdqffdq:ValidationPolicy
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
+
+### Preferred Label
+
+'Validation Policy'
+
+### Label
+
+'Validation Policy'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:Policy|bdqffdq:ValidationConcept
+
+### Definition
+
+'A need concept that relates a Use Case to a set of supporting Validations.'
+
+### Comment
+
+'The ValidationPolicy in FFDQ is a DQ Needs level concept that describes how some contextualizedCriterion relates to a use case. This relationship defines which validations are supported by a given use case.'
 
 
 ********************
@@ -1246,7 +1272,7 @@ bdqffdq:ReportConcept
 
 ### Definition
 
-nan
+'A report concept expressing a statement about data quality assertion following some specification produced by some implementation pertaining to some data resource.'
 
 ### Comment
 
@@ -1279,7 +1305,7 @@ bdqffdq:ReportConcept
 
 ### Definition
 
-nan
+'A report concept comprising a set of data quality assertions.'
 
 ### Comment
 
@@ -1312,7 +1338,7 @@ bdqffdq:ReportConcept
 
 ### Definition
 
-nan
+'A thing to whch a data quality assertion applies.'
 
 ### Comment
 
@@ -1345,11 +1371,13 @@ bdqffdq:ReportConcept
 
 ### Definition
 
-nan
+'A report concept to which a controlled vocabulary assertions about the result of the execution of the specification of a data quality need are attached.'
 
 ### Comment
 
-'The report result concept in FFDQ is represented as a value or a status for measures, just a result status for validations and a result status as well as values for changes propsed by amendments.'
+'For Validations, response results may be COMPLIANT, or NOT_COMPLIANT.  For Measures, response result objects may be COMPLETE or NOT_COMPLETE.  For Issues, Response results may be PROBLEM, POSSIBLE_PROBLEM, or NOT_PROBLEM.  See the bdq: vocabulary.  Measures may also use a numeric data property.  Amendments assert a string data property.
+
+The report result concept in FFDQ is represented as a value or a status for measures, just a result status for validations and a result status as well as values for changes propsed by amendments.'
 
 
 ********************
@@ -1378,11 +1406,13 @@ bdqffdq:ReportConcept
 
 ### Definition
 
-nan
+'A report concept expressing controlled vocabulary values about the exit state of an execution process of a data quality specification by an implementation.'
 
 ### Comment
 
-'Depending on the assertion type would have values of COMPLIANT or NON_COMPLIANT for a Validation, COMPLETE or NOT_COMPLETE for a Measure, CURATED, FILLED_IN,TRANSPOSED, NO_CHANGE for an Amendment and HAS_PROBLEM NO_PROBLEM for a Problem.  A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_PREREQUISITES_NOT_MET and EXTERNAL_PREREQUISITES_NOT_MET.'
+'The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.  
+
+Depending on the assertion type would have values of COMPLIANT or NON_COMPLIANT for a Validation, COMPLETE or NOT_COMPLETE for a Measure, CURATED, FILLED_IN,TRANSPOSED, NO_CHANGE for an Amendment and HAS_PROBLEM NO_PROBLEM for a Problem.  A separate concept describes the result state as values of AMBIGIOUS, INTERNAL_PREREQUISITES_NOT_MET and EXTERNAL_PREREQUISITES_NOT_MET.'
 
 
 ********************
@@ -1411,7 +1441,11 @@ bdqffdq:SolutionsConcept
 
 ### Definition
 
-nan
+'A solutions concept that relates a data quality need to a specification.'
+
+### Comment
+
+'DataQualityMethods are associative entities that allow specifications or data quality tests to be reused by supporting a many to many relationship between the two.'
 
 
 ********************
@@ -1440,7 +1474,7 @@ bdqffdq:SolutionsConcept
 
 ### Definition
 
-nan
+'A solutions concept that describes the portion of a Mechanism that carries out the proccess described in a particular Specification.'
 
 ### Comment
 
@@ -1502,7 +1536,7 @@ bdqffdq:ValidationConcept|bdqffdq:Assertion
 
 ### Definition
 
-nan
+'An assertion expressing the result of an implementation validating compliance with a a particular data quality need in a particular data resource.'
 
 ### Comment
 
@@ -1535,7 +1569,7 @@ bdqffdq:ValidationConcept|bdqffdq:DataQualityMethod
 
 ### Definition
 
-nan
+'A data quality solution concept that relates an Validation to its Specifications.'
 
 ### Comment
 
@@ -1546,35 +1580,6 @@ nan
 
 
 # DataProperty terms
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#hasResponseComment
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#hasResponseComment
-
-### Preferred Label
-
-'has Response Comment'
-
-### Label
-
-'has Response Comment'
-
-### Type
-
-DataProperty
-
-### Definition
-
-'Free text describing the assertion made in the response and why that conclusion was reached.'
-
-### Comment
-
-'Intended for consumption by human readers of data qualiy reports to understand why particular assertions were made.'
-
 
 ********************
 
@@ -1632,6 +1637,35 @@ nan
 ### Comment
 
 'The description of the logic of a test specification.  An expected response is expected to be a data property of a Specification'
+
+
+********************
+
+## bdqffdq:hasResponseComment
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
+
+### Preferred Label
+
+'has Response Comment'
+
+### Label
+
+'has Response Comment'
+
+### Type
+
+DataProperty
+
+### Definition
+
+'Free text describing the assertion made in the response and why that conclusion was reached.'
+
+### Comment
+
+'Intended for consumption by human readers of data qualiy reports to understand why particular assertions were made.'
 
 
 ********************
@@ -1729,122 +1763,6 @@ nan
 
 ********************
 
-## https://rs.tdwg.org/bdqffdq/terms#appliesTo
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#appliesTo
-
-### Preferred Label
-
-'applies To'
-
-### Label
-
-'applies To'
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-'Describes the DataResource about which an Assertion is made.'
-
-### Comment
-
-'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.'
-
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#forMeasure
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#forMeasure
-
-### Preferred Label
-
-'for Measure'
-
-### Label
-
-'for Measure'
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-### Comment
-
-'Use to link MeasurementMethods to Measures.'
-
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#issueProperty
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#issueProperty
-
-### Preferred Label
-
-'issue Property'
-
-### Label
-
-'issue Property'
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-### Comment
-
-'Category of properties that apply to Issues.'
-
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#producesAssertion
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#producesAssertion
-
-### Preferred Label
-
-'produces Assertion'
-
-### Label
-
-'produces Assertion'
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-'Connects an entity that creates an assertion with the assertion.'
-
-### Comment
-
-'Connects Implementations with Assertions'
-
-
-********************
-
 ## bdqffdq:amendmentProperty
 
 ### Name
@@ -1870,6 +1788,35 @@ nan
 ### Comment
 
 'Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports).'
+
+
+********************
+
+## bdqffdq:appliesTo
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/appliesTo
+
+### Preferred Label
+
+'applies To'
+
+### Label
+
+'applies To'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+'Describes the DataResource about which an Assertion is made.'
+
+### Comment
+
+'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.'
 
 
 ********************
@@ -1957,6 +1904,35 @@ nan
 ### Comment
 
 'Use to link IssueMethods to Issues.  Describes the relationship between a problem concept in FFDQ (needs, solutions, reports) and a ContextualizedIssue.'
+
+
+********************
+
+## bdqffdq:forMeasure
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/forMeasure
+
+### Preferred Label
+
+'for Measure'
+
+### Label
+
+'for Measure'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+nan
+
+### Comment
+
+'Use to link MeasurementMethods to Measures.'
 
 
 ********************
@@ -2421,6 +2397,35 @@ ObjectProperty
 
 ********************
 
+## bdqffdq:issueProperty
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/issueProperty
+
+### Preferred Label
+
+'issue Property'
+
+### Label
+
+'issue Property'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+nan
+
+### Comment
+
+'Category of properties that apply to Issues.'
+
+
+********************
+
 ## bdqffdq:measurementProperty
 
 ### Name
@@ -2446,6 +2451,35 @@ nan
 ### Comment
 
 'Sub properties of this type group object properties that apply to measurement concepts such as MeasurementPolicy (DQ Needs), MeasurementMethod (DQ Solutions) and Measure (DQ Reports).'
+
+
+********************
+
+## bdqffdq:producesAssertion
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/producesAssertion
+
+### Preferred Label
+
+'produces Assertion'
+
+### Label
+
+'produces Assertion'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+'Connects an entity that creates an assertion with the assertion.'
+
+### Comment
+
+'Connects Implementations with Assertions'
 
 
 ********************
