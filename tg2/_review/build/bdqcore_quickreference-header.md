@@ -22,13 +22,13 @@ This page is not part of the standard. It lists the BDQ Core tests by key descri
 
 ---
 
-**rdfs:Label** [normative]: A brief human-readable test label for consumers and implementors and using the structure TESTTYPE_INFORMATIONELEMENT_CRITERION e.g. VALIDATION_COUNTRYCODE_STANDARD.\
+**rdfs:Label** [normative]: A brief human-readable test label for consumers and implementors and using the structure TESTTYPE_INFORMATIONELEMENT_CRITERION e.g. VALIDATION_COUNTRYCODE_STANDARD\
 **skos:prefLabel** [normative]: A human readable label that follows the pattern 'Test Type' 'Focus Information Element' 'Criterion'. Example: "Validation dwc:countryCode Standard"\
-**IRI** [normative]:A machine readable unique identifier with a Date Last Updated appended. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb 2024-08-30"\ 
+**IRI** [normative]:A machine readable unique identifier with a Date Last Updated appended. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb 2024-08-30"\
 **Description** [non-normative]: A non-technical description of what the test does. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"\
 **Darwin Core Class** [non-normative]: The focus Darwin Core Class. Example: "dwc:Location"\
-**Information Elements** For implementors and consumers, what terms do the test evaluate.\
-- **ActedUpon** [normative]: A list of Darwin Core terms that are the focus of the test. Example: "dwc:countryCode"\
+**Information Elements** For implementors and consumers, what terms do the test evaluate.
+- **ActedUpon** [normative]: A list of Darwin Core terms that are the focus of the test. Example: "dwc:countryCode"
 - **Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. Example: "dwc:country"\
 **Specification** [normative]: The concise logic of the test for implementors. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT"\
 **Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain. Example: "bdq:taxonIsMarine.\
