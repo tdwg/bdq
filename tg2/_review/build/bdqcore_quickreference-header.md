@@ -29,7 +29,7 @@ This page is not part of the standard. It lists the BDQ Core tests by key descri
 **Darwin Core Class** [non-normative]: The focus Darwin Core Class. Example: "dwc:Location"\
 **Information Elements** For implementors and consumers, what terms do the test evaluate.
 * **ActedUpon** [normative]: A list of Darwin Core terms that are the focus of the test. Example: "dwc:countryCode"
-* **Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. Example: "dwc:country"\n\n
+* **Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. Example: "dwc:country"\\
 **Specification** [normative]: The concise logic of the test for implementors. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT"\
 **Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain. Example: "bdq:taxonIsMarine.\
 **Resource Type** [normative]: What record type the tests operate on - 'SingleRecord' or 'MultiRecord'. Example: "bdqffdq:SingleRecord"\
