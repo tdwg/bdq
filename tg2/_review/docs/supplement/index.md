@@ -39,7 +39,8 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 3.4 Parameterising the tests
 3.5 Independence and Paired test
 3.6 Considerations for use of MultiRecord Measures
-3.7 Considerations Concerning Input Data Values for AMENDMENTS
+3.7 Input Data Values for AMENDMENTS
+3.8 Amendments and Annotations
 4 Rationale Management Documentation
 4.1 Developing tests with Github Issues
 4.2 Github Tags and Categorizing Issues
@@ -136,19 +137,21 @@ Three tests in bdqcore: specifically identify records with no name, space or tim
 
 The types of test in bdqcore are identified by the bdqffdq classes of Validation, Issue, Amendment and Measure. 
 
-Validation tests are phrased as positive statements, consistent with the Framework.  Validations evaluate values or in some cases, presence or lack of a value to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT. The formal response of VALIDATIONs can take one of four forms. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable (bdq:sourceAuthority), a Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run, a Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation, a Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not. 
+**Validation** tests are phrased as positive statements, consistent with the Framework.  Validations evaluate values or in some cases, presence or lack of a value to see if input data have quality for some purpose. For example, VALIDATION_TAXONRANK_NOTEMPTY will return Response.status RUN_HAS_RESULT and Response.result COMPLIANT if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT. The formal response of VALIDATIONs can take one of four forms. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service is unavailable (bdq:sourceAuthority), a Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of the Information Elements are such that the test cannot be meaningfully run, a Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation, a Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not. 
 
 During the development of the tests, there were significant discussions about how tests were to be phrased, for several contributors, the most natural form seemed to be to describe assertions in the negative sense, identifying problems.  The bdqffdq framework, however, focused entirely on positive statements, identifying data that have quality and are fit for purpose.  Over the evolution of the description of the tests we conformed the language to the positive sense of the framework in almost all cases.  Validations are thus phrased in the framework sense of being COMPLIANT if the data have quality with respect to the test evaluation criteria.  There were, however, a set of cases that didn't fit well into this positive sense, in particular, those where the conclusion of the test was that the data might or might not be fit for purpose and a human would have to evaluate more closely.  In order to accomodate this "there might be a problem" case, we expanded the framework to include the concept of bdqffdq:Issue, where Issues are the converse of Validations and are phrased in a negative sense, identifying problems. 
 
-Issues are a form of warning flag where the test is drawing attention to potential problem with the value of a Darwin Core term for at least one use case. Issues can result in a Response.status of "RUN_HAS_RESULT" accompanied by a Response.result of PROBLEM, "POTENTIAL_PROBLEM" or "NOT_PROBLEM".   PROBLEM is the equivalent to NOT_COMPLIANT from a Validation.  NOT_PROBLEM is similar to COMPLIANT from a Validation, but with slightly different semantics, COMPLIANT means that the data is fit for some use, NOT_PROBLEM means that no reason was found for the data not to be fit for use.  POTENTIAL_PROBLEM is the reason we incorporated Issues into bdqffdq.   POTENTIAL_PROBLEM means that the Issue found a concern in the data that might make it unfit for some use, but that Human evaluation of the details of the data and the use are needed.  Data flagged with potential issues require a human review.  For example, PROBLEM_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_PROBLEM if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.  
+**Issues** are a form of warning flag where the test is drawing attention to potential problem with the value of a Darwin Core term for at least one use case. Issues can result in a Response.status of "RUN_HAS_RESULT" accompanied by a Response.result of PROBLEM, "POTENTIAL_PROBLEM" or "NOT_PROBLEM".   PROBLEM is the equivalent to NOT_COMPLIANT from a Validation.  NOT_PROBLEM is similar to COMPLIANT from a Validation, but with slightly different semantics, COMPLIANT means that the data is fit for some use, NOT_PROBLEM means that no reason was found for the data not to be fit for use.  POTENTIAL_PROBLEM is the reason we incorporated Issues into bdqffdq.   POTENTIAL_PROBLEM means that the Issue found a concern in the data that might make it unfit for some use, but that Human evaluation of the details of the data and the use are needed.  Data flagged with potential issues require a human review.  For example, PROBLEM_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_PROBLEM if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.  
 
-An Amendment may propose a change to an exisitng Darwin Core value or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment is a proposal for a change, not to be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses may choose to (blindly or after analysis) accept all proposed amendments as part of a pipeline in preparing data for an analysis.  
+**Amendments** may propose a change to an exisitng Darwin Core value or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment is a proposal for a change, not to be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses may choose to (blindly or after analysis) accept all proposed amendments as part of a pipeline in preparing data for an analysis.  
 
 The Framework also supports Amendments where the Response.result is a proposal to changes in procedures, such as suggesting that a constraint should be placed on a database field to restrict allowed values, or that a mapping of a data set onto Darwin Core terms has transposed a set of fields, or some other process related change.   We have not framed any such tests in this form, nor have we considered how such assertions should be represented in a Response.result. 
 
+**Placeholder for link to annotations as related to AMENDMENTS?**
+
 A Measure returns a numeric value or INTERNAL_PREREQUISITES_NOT_MET. Most Measures count the number of Validation or Amendment tests that a specifified Response.Result. MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the Validations and Amendments and in one case provides an indication of the length of the period of the value of dwc:eventDate. 
 
-A MEASURE may apply to a single record (bdqffdq:SingleRecord), or could be accumulated across multiple records (bdqffdq:MultiRecords). 
+**MEASURES** may apply to a single record (bdqffdq:SingleRecord), or could be accumulated across multiple records (bdqffdq:MultiRecords). 
 
 SingleRecord MEASUREs within bdqcore: are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS.   Of these, MEASURE_EVENTDATE_DURATIONINSECONDS is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases, for example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temoral resolution of about a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  
 
@@ -169,13 +172,7 @@ Each test is designed to stand in isolation. This is by design to both support t
 
 ### 3.4 Parameterising the tests
 
-<!--- TODO: Two Duplicative paragraphs follow, merge --->
-
-The existence of national requirements for spatial data to be represented with a particular datum lead us to identify a requirement that some tests be able to be adjusted to the needs of particular communities. An example is AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT, which takes a Parameter bdq:defaultGeodeticDatum, with a default value that fills most users’ needs of “EPSG:4326”, but recognizes that some users may have requirements that for data to have quality, they must associate dwc:decimalLatitude and dwc:decimalLongitude with a different spatial reference system in dwc:geodeticDatum. Other tests related to georeferences are similarly parameterized, with a similar default, understanding that most CORE users will be working with EPSG:4326, but others will have requirements for a different spatial reference system. Similarly, parameters are specified for depth and elevation information based on global maximum values, while users who’s data falls entirely within some smaller geographic region may be able to impose tighter constraints on depth and elevation for their data to have quality, for example for quality control to identify records needing evaluation where the specified elevation is larger than any elevation within the region.
-
-For example, for spatial biodiversity data to have quality for use within some countries, there exist country specific requirement for which geodetic datum is to be used.  A test for fitness for use of biodiversity data for core needs that only allowed the use of EPSG:4326 as the sole COMPLIANT value for dwc:geodeticDatum would not meet the non functional requirements for use in some countries, and thus would not meet the Core purposes for this test suite. Thus, in cases where portions of the community do have clear distinct needs for quality within Core, we provided for the parameterization of tests. Similarly, parameters are specified for depth and elevation information based on global maximum values, while users who’s data falls entirely within some smaller geographic region may be able to impose tighter constraints on depth and elevation for their data to have quality, for example for quality control to identify records needing evaluation where the specified elevation is larger than any elevation within the region.
-
-<!--- End two duplicative paragraphs --->
+The existence of national requirements for spatial data to be represented with a particular datum lead us to identify a requirement for tests to be adjusted to the needs of particular communities. An example is AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT, which takes a Parameter bdq:defaultGeodeticDatum, with a default value that fills most users’ needs of “EPSG:4326”, but recognizes that some users may have requirements that for data to have quality, they must associate dwc:decimalLatitude and dwc:decimalLongitude with a different spatial reference system in dwc:geodeticDatum. Other tests related to georeferences are similarly parameterized, with a similar default, understanding that most CORE users will be working with EPSG:4326, but others will have requirements for a different spatial reference system. Similarly, parameters are specified for depth and elevation information based on global maximum values, while users who’s data falls entirely within some smaller geographic region may be able to impose tighter constraints on depth and elevation for their data to have quality, for example for quality control to identify records needing evaluation where the specified elevation is larger than any elevation within the region.
 
 When we identified that, within Core data quality needs, different portions of the community have different authorities that they are required to adopt for particular terms, we define Parameters for tests, where the Parameter values allow a particular test to behave differently when given different parameter values. Parameterized tests are those for which we saw the high likelihood of different data quality needs within the community of CORE users and CORE needs. This allows us to define general tests that provide support for non functional requirements that vary within the community. 
 
@@ -189,9 +186,9 @@ Parameters are not intended to relax the definition of data having quality for C
 
 ### 3.5 Independence and Paired tests
 
-To the best of our abilities, we have designed each test to stand alone.  This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks.  The specification of interdependencies among tests would impose constraints upon test execution frameworks.  Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.  For a subset of amendments, we do provide guidance on execution order to produce deterministic results.
+To the best of our abilities, we have designed each test to stand alone.  This is by design to support the mixing and matching of these and other tests to meet particular data quality needs, and not impose any particular model of test execution on implementation frameworks.  The specification of interdependencies among tests would impose constraints upon test execution frameworks.  Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.  For a subset of amendments, we do provide guidance on execution order to produce deterministic results.
 
-Tests in bdqcore: are paired in that Amendments have a corresponding Validation that assesses the same aspect of data quality. An AMENDMENT may be able to improve the quality of data with respect to that VALIDATION.  The bdqffdq: framework contains terms for expressing such formal relationships among tests, we have chosen not to specify these to allow users to more flexibly mix and match tests to their own data quality needs.  
+Tests in bdqcore: are paired in that Amendments have a corresponding Validation that assesses the same aspect of data quality. An Amendment may be able to improve the quality of data with respect to that Validation. The bdqffdq: framework contains terms for expressing such formal relationships among tests, we have chosen not to specify these to allow users to more flexibly mix and match tests to their own data quality needs.  
 
 We have also defined MultiRecord Measures that take the Response objects from other tests as their input information elements, for example, to to return a count of Response.value of COMPLIANT for a Validation across a data set, and thus provide a measure of how fit a data set is for some purpose.  Other than specifying the InformationElements, we do not provide another formal description of how pairs of such tests are related.   
 
@@ -209,7 +206,7 @@ It is possible, but less flexible, to frame Validations to return Result.respons
 
 MultiRecord measures can also operate directly on the data, for example, a MultiRecord Measure could be framed to measure the average number of individuals reported in dwc:individualCount in a data set.
 
-### 3.7 Considerations Concerning Input Data Values for AMENDMENTS
+### 3.7 Input Data Values for AMENDMENTS
 
 One of the early conclusions to this project was the need for controlled vocabularies and an early spin-off of Data Qality Task Group 4 on Vocabularies (https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core encoded data is made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
 
@@ -223,19 +220,29 @@ We see an urgent need for a comprehensive, internationally agreed list of Darwin
 
 In this standard, we have taken an expedient approach in relation to making AMENDMENTs. We have used code in our tests to try and parse out likely, unambiguous matches. This is far from an ideal solution, but it does provide the potential of our AMENDMENTs to 'value add' to Darwin Core data records.
 
+### 3.8 Amendments and Annotations
+
+This is from @chicoreus last comment on https://github.com/tdwg/bdq/issues/113 and is placed here for completeness and discussion. We
+
+An approach to this is to assert that Amendments only propose changes, and then it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when changes are made into a database of record, the Response.comment from the Amendment is available for them to add to the modified record when they accept the amendment.
+
+This approach is probably broader than appending values into Remarks terms as part of the proposed change, as such metadata in the Response.result would duplicate the metadata found in the Response.comment, but only in a small number of cases where Remarks terms are available, and raising the concerns of order of actions noted above.
+
+Thus most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an amendment, and add that as desired to their representation of the data.
+
 ## 4 Rationale Management Documentation
 
 ### 4.1 Developing tests with Github Issues
 
-The bdqcore: tests were developed in issues in the tdwg/bdq github space  
+The bdqcore: tests were developed in issues in the tdwg/bdq github space. The reasoning was that github provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on github Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. Github then enabled anyone (with access?) to comment on the Test issues, facilitating discussion. When there was general agreement among the core team, generally by emojis such as 'thumbs up', the values within the template could be easily modified.
+
+Github's API also provided ample latitude to 'scrape' and filter Issues by github tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.
 
 ### 4.2 Github Tags and Categorizing Issues
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq github repository. Each issue has table in markdown format in its Issue.  Each issue was tagged with the following GitHub issue tags to assist in finding, evaluating, and asserting conclusions about each test. 
 
-<!--- Start: PJM Added the terms from "bdqtag" glossary terms 2024 Aug 24 --->
-
-The following list of Tags is used on issues: 
+The following list of github Tags were used on all Test Issues: 
 
 | tag | definition | comment |
 | --- | ---------- | ------- |
@@ -261,28 +268,23 @@ The following list of Tags is used on issues:
 | Validation | A label to indicate a test of type VALIDATION that describes a run of a test for validity against a set of criteria. | See bdqffdq:Validation |
 | VOCABULARY | A label to indicate that a Test requires a controlled Vocabulary |  |
 
-<!--- End: PJM Added the terms from "bdqtag" glossary terms 2024 Aug 24 --->
-
-Four tags: CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary mark conclusions made about tests.
+The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark conclusions made about each proposed test.
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, idependently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
-
 
 ### 4.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq github repository. Each issue has table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below. The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable' for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
-<!--- three duplicative sets of information, two blocks of test here, then rows in glossary file... --->
+**Title** [non-normative]: A standardised, human readable name of the test-assertion based roughly on the template OUTPUTTYPE_TERMS_RESPONSE. There are 15 tests that only loosely conform to this template due to the difficulty of rendering them otherwise, for example "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION". <!---Note that there are 15 tests that don't strictly follow this - e.g. #132, #108, #93, #88, #86, #73, #71, #68, #62, #57, #56, #52, #50, #32, #24 - Should we mention the exception types here?--->. These names were considered helpful for human-human communication and to assist with code implementation, maintenance and searches. Example: VALIDATION_BASISOFRECORD_STANDARD.
 
 **GUID** [normative]: A globally unique identifier which allows software to uniquely identify each test (and in combination with parameter values, allows for specification of the expectations for the behaviour of a test implementation). Example: 42408a00-bf71-4892-a399-4325e2bc1fb8. 
-
-**Title** [non-normative]: A standardised, human readable name of the test-assertion based roughly on the template OUTPUTTYPE_TERMS_RESPONSE. There are 15 tests that only loosely conform to this template due to the difficulty of rendering them otherwise, for example "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION". <!---Note that there are 15 tests that don't strictly follow this - e.g. #132, #108, #93, #88, #86, #73, #71, #68, #62, #57, #56, #52, #50, #32, #24 - Should we mention the exception types here?--->. These names were considered helpful for human-human communication and to assist with code implementation, maintenance and searches. Example: VALIDATION_BASISOFRECORD_STANDARD.
 
 **Label** [normative]: A human readable label identifying the test.  The labels largely follow the pattern TYPE_INFORMATIONELEMENT_STATUS.. Example: "VALIDATION_COUNTRYCODE_STANDARD" 
  
 **Description** [non-normative]: An English language brief description. Example: Does the value of dwc:basisOfRecord occur in bdq:sourceAuthority? 
 
-**Output Type** [non-normative]: Tests have been classified into four Fitness for Use Framework classes; VALIDATION (validates values in one or more Darwin Core terms),  AMENDMENT (an improvement that will result in a change or addition to at least one Darwin Core term); and MEASURE (returns a numeric value, for the tests described here; all values are in the form of the number of tests that conform to a criterion). Three tests are typed as ISSUE (flag a potential problem). Example: POTENTIAL_ISSUE.
+**Test Type** [non-normative]: Tests have been classified into four Fitness for Use Framework classes; VALIDATION (validates values in one or more Darwin Core terms),  AMENDMENT (an improvement that will result in a change or addition to at least one Darwin Core term); and MEASURE (returns a numeric value, for the tests described here; all values are in the form of the number of tests that conform to a criterion). Three tests are typed as ISSUE (flag a potential problem). Example: POTENTIAL_ISSUE.
 
 **Darwin Core Class** [non-normative]: The Darwin Core class that contains the Information Elements. Example: dwc:Taxon.
 
@@ -293,6 +295,8 @@ The development of each test, with documentation of why particular decisions wer
 **Expected Response (Specification)** [normative]: A concise description of the logic of the test to clarify implementation. The Expected Response takes the form (for a VALIDATION) of: EXTERNAL_PREREQUISITES_NOT_MET if <condition>; INTERNAL_PREREQUESITES_NOT_MET if <condition>; COMPLIANT if <condition>; otherwise NOT_COMPLIANT. Example: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED.
 
 **Data Quality Dimension** [normative]: A test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (the extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the information element); "Consistency" (agreement among related information elements in the data); "Likeliness" (low probability that values are real); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data). The [data quality dimension](https://github.com/tdwg/bdq/blob/master/tg2/vocabularies/data_quality_dimensions.csv) for this test. Example: "Conformance"
+
+**Term_Actions** [non-normative]: The last two components of the Title, useful in filtering Tests in CSV files. Example: "COUNTRYCODE_STANDARD"
 
 **Parameter(s)** [normative]: Parameters that modify the behaviour of the test, along with default values or links to source authorities. A parameter value exists only where there are a number of alternate options. For example, "bdq:sourceAuthority default = "GBIF Backbone Taxonomy"" is parameterised as it allows for regional taxonomic authorities whereas "bdq:sourceAuthority is "EPSG:" [https://epsg.io]"" is not parameterised as there is a single source authority. Example: bdq:defaultGeodeticDatum.	
 
@@ -313,17 +317,6 @@ The development of each test, with documentation of why particular decisions wer
 **Link to Specification Source Code** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169.
 
 **Notes** [non-normative]: Additional comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. Example: For TAXONID_FROM_TAXON, “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
-
-**"TestType"** [normative]: The Type of assertion that this test produces, Measure, Validation, Amendment, Issue.. Example: "Validation" 
-
-**"Criterion Label"** [non-normative]:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"
-
-**"Resource Type"** [normative]: The type of resource on which this test acts, SingleRecord or MultiRecord, the CORE tests include Validations, Measures, and Amendments that operate on SingleRecords and a set of MultiRecord Measures that assess the results of the SingleRecord Validations. Example: "SingleRecord"   
-
-**"Example Implementations (Mechanisms)"** [non-normative]: nown Mechanisms with implementations of the test.
-. Example: "FilteredPush/Kurator: geo_ref_qc"
-
-**"Link to Specification Source Code"** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/
 
 ## 5 Date and Time Issues
 
