@@ -222,13 +222,19 @@ In this standard, we have taken an expedient approach in relation to making AMEN
 
 ### 3.8 Amendments and Annotations
 
-This is from @chicoreus last comment on https://github.com/tdwg/bdq/issues/113 and is placed here for completeness and discussion. We
+This is from @chicoreus last comment on https://github.com/tdwg/bdq/issues/113 and is placed here for completeness and discussion.
 
-An approach to this is to assert that Amendments only propose changes, and then it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when changes are made into a database of record, the Response.comment from the Amendment is available for them to add to the modified record when they accept the amendment.
+"An approach to this is to assert that Amendments only propose changes, and then it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when changes are made into a database of record, the Response.comment from the Amendment is available for them to add to the modified record when they accept the amendment.
 
 This approach is probably broader than appending values into Remarks terms as part of the proposed change, as such metadata in the Response.result would duplicate the metadata found in the Response.comment, but only in a small number of cases where Remarks terms are available, and raising the concerns of order of actions noted above.
 
-Thus most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an amendment, and add that as desired to their representation of the data.
+Thus most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an amendment, and add that as desired to their representation of the data".
+
+This is from https://github.com/tdwg/bdq/issues/149 last comment by @ymgan as it seems related and, as noted, needs some text...
+
+"Thanks @ArthurChapman ! I think it could helpful to be documented somewhere. We got the same question in the OBIS community and it was also asked during the panel session in TDWG conference last year.
+
+I did got confuse a little whether this is something that the TDWG Annotations IG is working on and whether there is something concrete that people can already do. I remember @chicoreus mentioned about the use of W3C annotation data model about this."
 
 ## 4 Rationale Management Documentation
 
