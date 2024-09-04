@@ -12,9 +12,9 @@
 
 **Latest version**: <{current_iri}>
 
-This document is intended to be an easy-to-read quick reference to the currently (as of 2024-xx-xx) BDQ Core Tests and a subset of associated Descriptors maintained as part of the BDQ Core standard.
+**Audience** This document is intended to be an easy-to-read quick reference to the current BDQ Core Tests using a subset of Descriptors maintained as part of the BDQ Core standard.
 
-**Need help?** Read more about BDQ Core in Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889, the BDQ Core Introduction, BDQ Core Users Guide, BDQ Core Implementers Guide or BDQ Core Vocabularies. Still have questions? Submit a new issue (question/problem) to the Issues form page (link) in GitHub. See the bottom of this document for how to cite BDQ Core.
+**Need help?** See "Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889", the BDQ Core Introduction (link), BDQ Core Users Guide (link), BDQ Core Implementers Guide (link) and BDQ Core Vocabularies (link). Still have questions? Submit a new issue to the Issues form page (link) in GitHub. See the bottom of this document for how to cite BDQ Core.
 
 **Want to contribute?** For information about how to contribute to the BDQ Core Standard, including how to propose changes, see the BDQ Core Guidelines for contributing.
 
@@ -27,9 +27,8 @@ This page is not part of the standard. It lists the BDQ Core tests by key descri
 **IRI** [normative]:A machine readable unique identifier with a Date Last Updated appended. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb 2024-08-30"\
 **Description** [non-normative]: A non-technical description of what the test does. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"\
 **Darwin Core Class** [non-normative]: The focus Darwin Core Class. Example: "dwc:Location"\
-**Information Elements** For implementors and consumers, what terms do the test evaluate.
-* **ActedUpon** [normative]: A list of Darwin Core terms that are the focus of the test. Example: "dwc:countryCode"
-* **Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. Example: "dwc:country"\\
+**Information Elements ActedUpon** [normative]: For implementors and consumers. A list of Darwin Core terms that are the focus of the test. Example: "dwc:countryCode"\
+**Information Elements Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. Example: "dwc:country"\
 **Specification** [normative]: The concise logic of the test for implementors. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT"\
 **Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain. Example: "bdq:taxonIsMarine.\
 **Resource Type** [normative]: What record type the tests operate on - 'SingleRecord' or 'MultiRecord'. Example: "bdqffdq:SingleRecord"\
@@ -37,9 +36,3 @@ This page is not part of the standard. It lists the BDQ Core tests by key descri
 [dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in bdq:sourceAuthority"]"\
 **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."\
 **Use Cases** [non-normative]: For Consumers and Implementors. Descriptions of data example quality needs that this test helps to support. Example: "bdq:Record-Management", "bdq:alien-species"
-
-From https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore/index.md - OMMITTED in QRG List by Paul
-
-**Source Authority** [normative]: An authority required for the test to be evaluated.  bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}.
-Implementors Note: The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this exact string MUST be passed in as the parameter value for a test implementation to behave in the default manner. Other non-empty strings would select other source authorities. Implementations MAY regard empty values to be the Normative String Identifier.
-**Criterion Label** [non-normative] for Validations:  A label for the Criterion (TODO: Criterion/CriteronInContext applies to Validations, need to clarify for Dimension/DimensionInContext, Enhancement/EnhancementInContext, Issue/IssueInContext). Example: "Conformance: standard"\
