@@ -269,38 +269,64 @@ TODO: Update Domain/instance letters to reflect class name changes.
 ## Derived Concepts
 ### General
 #### Measure
-    CD = { cd | cd =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
+    ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
 
-    cd1 = < ie1, d1, rt1 >
+    me1 = < ie1, d1, rt1 >
 
 * “coordinate precision of single records”
 
 #### Validation
-     CC = { cc | cc = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }   
+     VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }   
 
-     cc1 = < ie1, c1, rt1 >
+     va1 = < ie1, c1, rt1 >
 
 * “The value of Basis of Records of single records must be in the controlled vocabulary”
 
 #### Amendment
 
-    CE = { ce | ce = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
+    AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
-    ce1 = { < ie1, e1, rt1 >}
+    am1 = { < ie1, e1, rt1 >}
 
 *“Recommend valid value for taxon name in single record”
 
 #### Issue
 
-    I = { i | i = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
+    IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 
-    i1 = { < ie1, c1, rt1 >}
+    is1 = { < ie1, c1, rt1 >}
 
 * “Potential issue if geographic coordinate is at 0,0”
 
-TODO: Finish adding Issue concepts.
+Note: Issue concepts would parallel Validation concepts, but are not shown further here.
 
 ### Data Quality Needs
+#### Measurement Policy
+
+    MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
+
+    mp(u1) = {me1, me2, me3, me4}
+    mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
+
+#### Validation Policy
+
+    VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
+
+    vp(u1) = {va1, va2}
+    vp(u1) = {< ie1, c1, rt1>, < ie2, c2, rt2> }
+
+#### Enhancement Policy
+
+     EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
+
+     ep(u1) = {am1, am2}
+
+#### Data Quality Profile
+
+      DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }
+
+      dqp(u1) = {mp(u1), vp(u1), ep(u1)}
+
 #### Use Case Coverage 
    
      UC(u) = { us | u ∈ U ⋀ us ⊂ US}
@@ -315,58 +341,34 @@ TODO: Finish adding Issue concepts.
 
 * For a Use Case, what information elements are valuable.
 
-#### Acceptable Data Quality Measure
+#### Acceptable Data Quality Measure 
 
-     AM(cd) = {cc | cd ∈ C D ⋀ cc ⊂ C C}
+     MEaq(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 
-     am(cd1) = {cc1, cc2}
+     meaq(me1) = {va1, va2}
 
 * For the dimension in context coordinate completeness in a dataset, acceptable quality is met by all records having coordinates complete.
 
-#### Enhancement Target
+Note: This is a representation of the MultiRecord Measures that return COMPLETE/NOT_COMPLETE
 
-    IT (ce) = {cd ⋃ cc | cd ∈ CD, cc ∈ CC ⋀ ce ∈ CE}
+#### Improvement Target
 
-    it(ce1) = {cd1, cc2}
+    IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
+
+    it(am1) = {me1, va2}
 
 * Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion data set must have all records with coordinates.
-
-#### Measurement Policy
-
-    MP (u) = {cd | cd ⊂ CD ⋀ u ∈ U }
-
-    mp(u1) = {cd1, cd2, cd3, cd4}
-    mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
-
-#### Validation Policy
-
-    VP (u) = {cc | cc ⊂ CC ⋀ u ∈ U }
-
-    vp(u1) = {cc1, cc2}
-    vp(u1) = {< ie1, c1, rt1>, < ie2, c2, rt2> }
-
-#### Enhancement Policy
-
-     IP (u) = {ce | ce ⊂ CE ⋀ u ∈ U }
-
-     ip(u1) = {ce1, ce2}
-
-#### Data Quality Profile
-
-      DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ip(u), mp ∈ MP , vp ∈ VP , ip ∈ IP ⋀ u ∈ U }
-
-      dqp(u1) = {mp(u1), vp(u1), ip(u1)}
 
 ### Data Quality Solutions
 
 #### Measurement Method
-    MM(cd) = {s | s ⊂ S ⋀ cd ∈ CD}
+    MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
 #### Validation Method
-    VM(cc) = {s | s ⊂ S ⋀ cc ∈ CC}
+    VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
 
 #### Enhancement Method
-    IM(ce) = {s | s ⊂ S ⋀ ce ∈ CE}
+    EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 
 #### Implementation 
      I (s) = {m | m ⊂ M ⋀ s ∈ S}
@@ -379,44 +381,45 @@ TODO: Finish adding Issue concepts.
     mc(m1) = {s1, s2}
 
 ### Data Quality Reports
+
 #### Data Resource
     DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
 
     dr1 =< id1, rt1, v1 >
 
-* “dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records”  Data resources are defined as having persistent GUIDs
+* “dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records” 
 
-#### Data Quality Measure 
-     DQM(dr) = {dqm | dqm =< cd, s, m, r >, cd ∈ CD, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+#### MeasurementAssertion 
+     DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
      
-     dqm(dr1) = {< cd1, s1, m1, r1 >}
+     dqm(dr1) = {< me1, s1, m1, r1 >}
 
 * Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
 
-#### Data Quality Validation 
+#### ValidationAssertion 
 
-     DQV (dr) = {dqv | dqv = < cc, s, m, r >, cc ∈ CC, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+     DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
-     dqv(dr1) = {< cc1s1, m1, r1 >}
+     dqv(dr1) = {< va1, s1, m1, r1 >}
 
 * A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was not empty.
 
-#### Data Quality Amendment
-     DQI(dr) = {dqi | dqi = < ce, s, m, r >, ce ∈ CE, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+#### AmendmentAssertion
+     DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
-     dqi(dr1) = {< ce1, s1, m1, r1 >}
+     dqa(dr1) = {< am1, s1, m1, r1 >}
 
 * An amendment is proposed to replace the current value of the scientific name by the value “Apis” because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
 
 #### Data Quality Assessment
-     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) | dqm ∈ DQM, dqv ∈ DQV , dqi ∈ DQI ⋀ dr ∈ DR}
+     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}
 
-     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1}
+     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqa1}
 
 #### Quality Control
-     QC(dr) = {dqv(dr) ⋃ dqi(dr) | dqv ∈ DQV , dqi ∈ DQI ⋀ dr ∈ DR}
+     QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQI ⋀ dr ∈ DR}
 
-     qc(dr1) = {dqv1, dqi1}
+     qc(dr1) = {dqv1, dqa1}
 
 #### Quality Assurance
      QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}
