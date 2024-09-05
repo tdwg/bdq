@@ -319,6 +319,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                         rdfs:range xsd:string ;
                         rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
                         rdfs:label "has Authorities and Defaults"@en ;
+                        skos:definition "Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response." ;
                         skos:prefLabel "has Authorities and Defaults" .
 
 
@@ -327,6 +328,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                      rdfs:range xsd:string ;
                      rdfs:comment "The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification"@en ;
                      rdfs:label "has Expected Response"@en ;
+                     skos:definition "Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements." ;
                      skos:prefLabel "has Expected Response"@en .
 
 
@@ -866,14 +868,18 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 :MultiRecord rdf:type owl:NamedIndividual ,
                       :ResourceType ;
-             rdfs:label "Multi Record"@en .
+             rdfs:comment "A data set." ;
+             rdfs:label "Multi Record"@en ;
+             skos:definition "A set of one or more Single Records." ;
+             skos:prefLabel "Multi Record" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SingleRecord
 :SingleRecord rdf:type owl:NamedIndividual ,
                        :ResourceType ;
-              rdfs:comment "A record from a dataset without dependencies on any other record."@en ;
-              rdfs:label "Single Record"@en .
+              rdfs:comment "A record from a dataset.  May be a single row in a table, or rows related across several tables, or a graph of data.   Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities)."@en ;
+              rdfs:label "Single Record"@en ;
+              skos:prefLabel "Single Record" .
 
 
 #################################################################
