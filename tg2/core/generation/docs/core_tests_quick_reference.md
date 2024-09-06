@@ -112,10 +112,14 @@ Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) wher
 - [VALIDATION_BASISOFRECORD_STANDARD](#VALIDATION_BASISOFRECORD_STANDARD)
 - [VALIDATION_DCTYPE_NOTEMPTY](#VALIDATION_DCTYPE_NOTEMPTY)
 - [VALIDATION_DCTYPE_STANDARD](#VALIDATION_DCTYPE_STANDARD)
+- [VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT](#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT)
+- [VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT](#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT)
+- [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT)
 - [VALIDATION_COORDINATES_NOTZERO](#VALIDATION_COORDINATES_NOTZERO)
 - [VALIDATION_COORDINATEUNCERTAINTY_INRANGE](#VALIDATION_COORDINATEUNCERTAINTY_INRANGE)
 - [VALIDATION_COUNTRYCODE_NOTEMPTY](#VALIDATION_COUNTRYCODE_NOTEMPTY)
 - [VALIDATION_COUNTRYCODE_STANDARD](#VALIDATION_COUNTRYCODE_STANDARD)
+- [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT)
 - [VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS)
 - [VALIDATION_COUNTRY_FOUND](#VALIDATION_COUNTRY_FOUND)
 - [VALIDATION_COUNTRY_NOTEMPTY](#VALIDATION_COUNTRY_NOTEMPTY)
@@ -139,6 +143,7 @@ Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) wher
 - [VALIDATION_EVENTDATE_INRANGE](#VALIDATION_EVENTDATE_INRANGE)
 - [VALIDATION_EVENTDATE_NOTEMPTY](#VALIDATION_EVENTDATE_NOTEMPTY)
 - [VALIDATION_EVENTDATE_STANDARD](#VALIDATION_EVENTDATE_STANDARD)
+- [VALIDATION_EVENTTEMPORAL_NOTEMPTY](#VALIDATION_EVENTTEMPORAL_NOTEMPTY)
 - [VALIDATION_MONTH_STANDARD](#VALIDATION_MONTH_STANDARD)
 - [VALIDATION_STARTDAYOFYEAR_INRANGE](#VALIDATION_STARTDAYOFYEAR_INRANGE)
 - [VALIDATION_YEAR_INRANGE](#VALIDATION_YEAR_INRANGE)
@@ -168,6 +173,8 @@ Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) wher
 - [AMENDMENT_COUNTRYCODE_STANDARDIZED](#AMENDMENT_COUNTRYCODE_STANDARDIZED)
 - [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT)
 - [AMENDMENT_GEODETICDATUM_STANDARDIZED](#AMENDMENT_GEODETICDATUM_STANDARDIZED)
+- [AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM](#AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM)
+- [AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM](#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM)
 - [AMENDMENT_DAY_STANDARDIZED](#AMENDMENT_DAY_STANDARDIZED)
 - [AMENDMENT_EVENTDATE_STANDARDIZED](#AMENDMENT_EVENTDATE_STANDARDIZED)
 - [AMENDMENT_EVENT_FROM_EVENTDATE](#AMENDMENT_EVENT_FROM_EVENTDATE)
@@ -189,9 +196,12 @@ A bdqffdq:Use Case that documents the management of the quality of biodiversity 
 - [VALIDATION_DCTYPE_STANDARD](#VALIDATION_DCTYPE_STANDARD)
 - [VALIDATION_LICENSE_NOTEMPTY](#VALIDATION_LICENSE_NOTEMPTY)
 - [VALIDATION_LICENSE_STANDARD](#VALIDATION_LICENSE_STANDARD)
+- [VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT](#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT)
+- [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT)
 - [VALIDATION_COORDINATEUNCERTAINTY_INRANGE](#VALIDATION_COORDINATEUNCERTAINTY_INRANGE)
 - [VALIDATION_COUNTRYCODE_NOTEMPTY](#VALIDATION_COUNTRYCODE_NOTEMPTY)
 - [VALIDATION_COUNTRYCODE_STANDARD](#VALIDATION_COUNTRYCODE_STANDARD)
+- [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT)
 - [VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS)
 - [VALIDATION_COUNTRY_FOUND](#VALIDATION_COUNTRY_FOUND)
 - [VALIDATION_COUNTRY_NOTEMPTY](#VALIDATION_COUNTRY_NOTEMPTY)
@@ -215,6 +225,7 @@ A bdqffdq:Use Case that documents the management of the quality of biodiversity 
 - [VALIDATION_EVENTDATE_INRANGE](#VALIDATION_EVENTDATE_INRANGE)
 - [VALIDATION_EVENTDATE_NOTEMPTY](#VALIDATION_EVENTDATE_NOTEMPTY)
 - [VALIDATION_EVENTDATE_STANDARD](#VALIDATION_EVENTDATE_STANDARD)
+- [VALIDATION_EVENTTEMPORAL_NOTEMPTY](#VALIDATION_EVENTTEMPORAL_NOTEMPTY)
 - [VALIDATION_EVENT_CONSISTENT](#VALIDATION_EVENT_CONSISTENT)
 - [VALIDATION_MONTH_STANDARD](#VALIDATION_MONTH_STANDARD)
 - [VALIDATION_STARTDAYOFYEAR_INRANGE](#VALIDATION_STARTDAYOFYEAR_INRANGE)
@@ -264,6 +275,8 @@ A bdqffdq:Use Case that documents the management of the quality of biodiversity 
 - [AMENDMENT_COUNTRYCODE_STANDARDIZED](#AMENDMENT_COUNTRYCODE_STANDARDIZED)
 - [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT)
 - [AMENDMENT_GEODETICDATUM_STANDARDIZED](#AMENDMENT_GEODETICDATUM_STANDARDIZED)
+- [AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM](#AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM)
+- [AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM](#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM)
 - [AMENDMENT_DAY_STANDARDIZED](#AMENDMENT_DAY_STANDARDIZED)
 - [AMENDMENT_EVENTDATE_FROM_VERBATIM](#AMENDMENT_EVENTDATE_FROM_VERBATIM)
 - [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](#AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY)
@@ -318,19 +331,6 @@ Research uses forming a bdqffdq:Use Case for relationships between organisms 1) 
 - [AMENDMENT_PATHWAY_STANDARDIZED](#AMENDMENT_PATHWAY_STANDARDIZED)
 - [AMENDMENT_TYPESTATUS_STANDARDIZED](#AMENDMENT_TYPESTATUS_STANDARDIZED)
 - [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
-
-
-##  nan
-
-error extracting definition
-
-- [VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT](#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT)
-- [VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT](#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT)
-- [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT)
-- [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT)
-- [VALIDATION_EVENTTEMPORAL_NOTEMPTY](#VALIDATION_EVENTTEMPORAL_NOTEMPTY)
-- [AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM](#AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM)
-- [AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM](#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM)
 
 
 
@@ -509,7 +509,7 @@ dcterms:license
 
 dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"
 
-dcterms:license="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"
+dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"
 
 
 ### Use Cases
@@ -604,7 +604,7 @@ dwc:countryCode="ZX", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongit
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns
 
 ### Notes
 
@@ -624,7 +624,7 @@ Do the geographic coordinates fall on or within the boundary from the bdq:source
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -648,7 +648,7 @@ dwc:stateProvince="Córdoba", dwc:decimalLatitude="-41.0525925872862", dwc:decim
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -684,7 +684,7 @@ bdq:taxonIsMarine,bdq:geospatialLand,bdq:spatialBufferInMeters,bdq:assumptionOnU
 
 ### Default Parameter Values
 
-bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},{{bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"
+bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"
 
 ### Examples
 
@@ -695,11 +695,11 @@ dwc:decimalLatitude="20.0", dwc:decimalLongitude="-30.0", dwc:scientificName="Vi
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
-dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation tests treat "brackish" in WoRMS as both marine and terrestrial.
+dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation tests treat "brackish" in WoRMS as both marine and terrestrial.   Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.
 
 ********************
 
@@ -879,7 +879,7 @@ dwc:country="United States Minor Outlying Islands", dwc:countryCode="US": Respon
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -943,7 +943,7 @@ Does the value of dwc:country occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1130,7 +1130,7 @@ dwc:decimalLongitude
 
 dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:NotEmpty"
 
-dwc:decimalLongitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:Empty"
+dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:Empty"
 
 
 ### Use Cases
@@ -1196,9 +1196,9 @@ bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://a
 
 ### Examples
 
-dwc:geodeticDatum="epsg:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in bdq:sourceAuthority"
+dwc:geodeticDatum="epsg:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"
 
-dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"
+dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"
 
 
 ### Use Cases
@@ -1782,7 +1782,7 @@ dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", 
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -2453,9 +2453,9 @@ bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.1546
 
 ### Examples
 
-dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the paramaterized bdq:sourceAuthority"
+dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority"
 
-dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,  Response.comment="dwc:class does not have an equivalent at the rank of Class in the parameterized bdq:sourceAuthority."
+dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,  Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -2568,7 +2568,7 @@ Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthorit
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2720,7 +2720,7 @@ Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -3411,7 +3411,7 @@ Are there any annotations associated with the record?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
+EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
 
 ### Information Elements
 Consulted: 
@@ -3454,7 +3454,7 @@ Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuth
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3473,7 +3473,7 @@ bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org
 
 dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"
 
-dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in bdq:sourceAuthority so NOT_AMENDED"
+dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"
 
 
 ### Use Cases
@@ -3511,7 +3511,7 @@ bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMITyp
 
 ### Examples
 
-dc:type="event": Response.status=AMENDED, Response.result=dc:type="Event", Response.comment="dc:type contains an interpretable value"
+dc:type="evnt": Response.status=AMENDED, Response.result=dc:type="Event", Response.comment="dc:type contains an interpretable value"
 
 dc:type="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="dc:type contains an uninterpretable value"
 
@@ -3779,7 +3779,7 @@ If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not
 ##  AMENDMENT_GEODETICDATUM_STANDARDIZED
 
 ###  Amendment dwc:geodeticDatum Standardized
-https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-09-06
 Acts upon  SingleRecord
 
 ### Description
@@ -3788,7 +3788,7 @@ Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuth
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3847,7 +3847,7 @@ dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="", dwc:verbatimDepth="x":
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3886,7 +3886,7 @@ dwc:verbatimElevation="x", dwc:minimumElevationInMeters="", dwc:maximumElevation
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3995,7 +3995,7 @@ dwc:year,dwc:month,dwc:day
 
 dwc:eventDate="", dwc:year="2021", dwc:month="X", dwc:day="29": Response.status=FILLED_IN, Response.result=dwc:eventDate="2021-10-29", Response.comment="dwc:year and dwc:day in range and dwc:month is interpretable as an integer between 1-12."
 
-dwc:eventDate="", dwc:year="x", dwc:month="10", dwc:day="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:year is uninterpretable as a valid year and dwc:day are bdq:Empty so dwc:eventDate is not FILLED_IN"
+dwc:eventDate="", dwc:year="x", dwc:month="10", dwc:day="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:year is uninterpretable as a valid year and dwc:day are bdq:Empty so dwc:eventDate is not AMENDED"
 
 
 ### Use Cases
@@ -4020,7 +4020,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each were independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4107,7 +4107,7 @@ dwc:eventDate
 
 ### Examples
 
-dwc:eventDate="2023-01-26",  dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result= dwc:startDayOfYear="26", dwc:month="1", dwc:day="26",dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate"
+dwc:eventDate="2023-01-26", dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result=dwc:month="1", dwc:day="26", dwc:startDayOfYear="26", dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate"
 
 dwc:eventDate="2023",  dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=NOT_AMENDED, Response.result=, Response.comment="No amendments possible"
 
@@ -4560,7 +4560,7 @@ Proposes an amendment to the value of dwc:scientificName using the dwc:scientifi
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4645,7 +4645,7 @@ For reference, information about possible values of dwc:taxonRank can be found a
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4674,7 +4674,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
-https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4703,7 +4703,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4732,7 +4732,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4761,7 +4761,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4790,7 +4790,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4819,7 +4819,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4848,7 +4848,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
-https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4877,7 +4877,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4906,7 +4906,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4935,7 +4935,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4964,7 +4964,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -4993,7 +4993,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/4ed39eaa-560a-4418-ac46-18de54f6cc8e/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/d0b18a7a-d203-4649-bf02-99026d126f72/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5011,7 +5011,7 @@ bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns
 
 ### Notes
 
@@ -5022,7 +5022,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/eb89e81e-9eb7-4468-a3cd-d62961acd5e9/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/2dcfd271-0350-4707-bf08-47884394938f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5040,7 +5040,7 @@ bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5051,7 +5051,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/c047e8b9-c5cb-47b5-a5ae-187f2ce09c02/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/e866e02e-3365-4fb7-a235-cedefa759b8e/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5069,7 +5069,7 @@ bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5080,7 +5080,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
-https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5109,7 +5109,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5138,7 +5138,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5167,7 +5167,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5196,7 +5196,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/4838f41d-abd6-4d5a-bb1c-263b7181e96b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f9e302ea-4cb5-41fe-8170-f96a684c55de/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5214,7 +5214,7 @@ bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5225,7 +5225,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5254,7 +5254,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
-https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5283,7 +5283,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5312,7 +5312,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5341,7 +5341,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5370,7 +5370,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5399,7 +5399,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5428,7 +5428,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5457,7 +5457,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
-https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5486,7 +5486,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5515,7 +5515,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5544,7 +5544,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5573,7 +5573,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5602,7 +5602,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
-https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5631,7 +5631,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5660,7 +5660,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
-https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5689,7 +5689,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
-https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5718,7 +5718,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/b093a198-1676-476a-9bce-e0c0786a972d/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/9760a600-3386-47eb-9b99-8b8b62ad0dbd/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5736,7 +5736,7 @@ bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns
 
 ### Notes
 
@@ -5747,7 +5747,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/6ad21c23-e020-44a8-afb5-32954f800e16/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/8fdd2ac0-9a58-4f63-96b8-e0630268b807/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5765,7 +5765,7 @@ bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5776,7 +5776,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/59e5030e-56f0-45bf-8f0c-5f222949e28b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0c255ac0-134d-410d-afb9-bb6445c51fc9/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5794,7 +5794,7 @@ bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5805,7 +5805,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
-https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5834,7 +5834,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5863,7 +5863,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5892,7 +5892,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5921,7 +5921,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/46f26ec4-46e9-4936-8e35-fb185ce8dac5/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/8418d14c-4eed-4fe1-b1d9-7524960c3fc0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5939,7 +5939,7 @@ bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5950,7 +5950,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -5979,7 +5979,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
-https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6008,7 +6008,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6037,7 +6037,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6066,7 +6066,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6095,7 +6095,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6124,7 +6124,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6153,7 +6153,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6182,7 +6182,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
-https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6211,7 +6211,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6240,7 +6240,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6269,7 +6269,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6298,7 +6298,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
-https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6327,7 +6327,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
-https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6356,7 +6356,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
-https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6385,7 +6385,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
-https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6414,7 +6414,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
-https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6443,7 +6443,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6472,7 +6472,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6501,7 +6501,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6530,7 +6530,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6559,7 +6559,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6588,7 +6588,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6617,7 +6617,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/6cb58bd6-49f0-45dc-a973-894a86e2b9b5/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/3951b465-69f6-45b2-a16d-f6926d0cba9d/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6635,7 +6635,7 @@ bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6646,7 +6646,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6675,7 +6675,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
-https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6704,7 +6704,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6733,7 +6733,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6762,7 +6762,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6791,7 +6791,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DAY_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DAY_INRANGE
-https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6820,7 +6820,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6849,7 +6849,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6878,7 +6878,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
-https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6907,7 +6907,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6936,7 +6936,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
-https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6965,7 +6965,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/004852c3-2158-45e2-8bc3-33cd1a788722/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/ce4bdd83-0012-4f36-b357-51dcd851be0f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -6983,7 +6983,7 @@ bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 ### Use Cases
 
-nan
+bdq:Spatial-Temporal Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6994,7 +6994,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7023,7 +7023,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
-https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7052,7 +7052,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7081,7 +7081,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
-https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7110,7 +7110,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7139,7 +7139,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
-https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7168,7 +7168,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
-https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7197,7 +7197,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
 
 ###  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
-https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7226,7 +7226,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
-https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7255,7 +7255,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
-https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7284,7 +7284,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7313,7 +7313,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7342,7 +7342,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7371,7 +7371,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7400,7 +7400,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7429,7 +7429,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
-https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7458,7 +7458,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7487,7 +7487,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
-https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7516,7 +7516,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7545,7 +7545,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7574,7 +7574,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7603,7 +7603,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7632,7 +7632,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
-https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7661,7 +7661,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SEX_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_SEX_STANDARD
-https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7690,7 +7690,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
-https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7719,7 +7719,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7748,7 +7748,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
-https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7777,7 +7777,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
-https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7806,7 +7806,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
-https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7835,7 +7835,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
-https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7864,7 +7864,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7893,7 +7893,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7922,7 +7922,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
-https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7951,7 +7951,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
-https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -7980,7 +7980,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8009,7 +8009,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8038,7 +8038,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
-https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8067,7 +8067,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8096,7 +8096,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
-https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8125,7 +8125,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8154,7 +8154,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8183,7 +8183,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
-https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8212,7 +8212,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8241,7 +8241,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8270,7 +8270,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8299,7 +8299,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_CLASS_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_CLASS_FOUND
-https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8328,7 +8328,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
-https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8357,7 +8357,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GENUS_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_GENUS_FOUND
-https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8386,7 +8386,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
-https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8415,7 +8415,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8444,7 +8444,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8473,7 +8473,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ORDER_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_ORDER_FOUND
-https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8502,7 +8502,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
-https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8531,7 +8531,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
 
 ###  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
-https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8560,7 +8560,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8589,7 +8589,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
-https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8618,7 +8618,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8647,7 +8647,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
-https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8676,7 +8676,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8705,7 +8705,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8734,7 +8734,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
 
 ###  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
-https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8763,7 +8763,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
 
 ###  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
-https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
@@ -8792,7 +8792,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
 
 ###  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
-https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-09-05
+https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-09-06
 Acts upon  MultiRecord
 
 ### Description
