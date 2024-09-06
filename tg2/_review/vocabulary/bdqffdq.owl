@@ -238,6 +238,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/includedInPolicy
 :includedInPolicy rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relates Policies to Tests." ;
                   rdfs:label "included in Policy" ;
                   skos:definition "Assserts that a Data Quality Need is part of a Policy" ;
                   skos:prefLabel "included In Policy" .
