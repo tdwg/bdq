@@ -137,10 +137,10 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 		print("# Measures operating on test Responses for MultiRecords (data sets).")
 		print()
 		for index, row in multirecordDataFrame.iterrows():
-			# TODO: need pref label in multirecord csv.
-			# print("## ",row['prefLabel'])
 			print("## ",row['Label'])
 			print()
+			# TODO: need pref label in multirecord csv.
+			# print("### ",row['prefLabel'])
 			print("### ",row['Label'])
 			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['GUID'],row['DateLastUpdated']))
 			print("Acts upon ",row['Resource Type'])
