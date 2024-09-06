@@ -926,7 +926,7 @@ bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdq/d0b18a7a-d203-4649-bf02-99026d126f72
+https://rs.tdwg.org/bdq/43d7a3f0-c5ea-4605-aca8-466d44dcb07d
 
 ## Description
 
@@ -942,7 +942,7 @@ Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRec
 
 ##  GUID
 
-d0b18a7a-d203-4649-bf02-99026d126f72
+43d7a3f0-c5ea-4605-aca8-466d44dcb07d
 
 ##  DateLastUpdated
 
@@ -1002,7 +1002,7 @@ bdq:Spatial-Temporal Patterns
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdq/2dcfd271-0350-4707-bf08-47884394938f
+https://rs.tdwg.org/bdq/1bb8daf9-7a9b-4092-8cbe-9b38c1c2c989
 
 ## Description
 
@@ -1018,7 +1018,7 @@ Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiR
 
 ##  GUID
 
-2dcfd271-0350-4707-bf08-47884394938f
+1bb8daf9-7a9b-4092-8cbe-9b38c1c2c989
 
 ##  DateLastUpdated
 
@@ -1078,7 +1078,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
-https://rs.tdwg.org/bdq/e866e02e-3365-4fb7-a235-cedefa759b8e
+https://rs.tdwg.org/bdq/ed2a449e-96fd-4ac8-99ed-cd122bc66336
 
 ## Description
 
@@ -1094,7 +1094,7 @@ Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the Mu
 
 ##  GUID
 
-e866e02e-3365-4fb7-a235-cedefa759b8e
+ed2a449e-96fd-4ac8-99ed-cd122bc66336
 
 ##  DateLastUpdated
 
@@ -1446,7 +1446,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdq/f9e302ea-4cb5-41fe-8170-f96a684c55de
+https://rs.tdwg.org/bdq/ffa14819-b3ae-4773-a0ac-6356283b9473
 
 ## Description
 
@@ -1462,7 +1462,7 @@ Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord 
 
 ##  GUID
 
-f9e302ea-4cb5-41fe-8170-f96a684c55de
+ffa14819-b3ae-4773-a0ac-6356283b9473
 
 ##  DateLastUpdated
 
@@ -2778,7 +2778,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdq/9760a600-3386-47eb-9b99-8b8b62ad0dbd
+https://rs.tdwg.org/bdq/56de3d09-cbbb-4b99-a0fc-736d093da14d
 
 ## Description
 
@@ -2794,7 +2794,7 @@ COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecor
 
 ##  GUID
 
-9760a600-3386-47eb-9b99-8b8b62ad0dbd
+56de3d09-cbbb-4b99-a0fc-736d093da14d
 
 ##  DateLastUpdated
 
@@ -2854,7 +2854,7 @@ bdq:Spatial-Temporal Patterns
 ********************
 
 #  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
-https://rs.tdwg.org/bdq/8fdd2ac0-9a58-4f63-96b8-e0630268b807
+https://rs.tdwg.org/bdq/bb02a847-97a4-4453-9f41-44aaacb8e10b
 
 ## Description
 
@@ -2870,7 +2870,7 @@ COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRec
 
 ##  GUID
 
-8fdd2ac0-9a58-4f63-96b8-e0630268b807
+bb02a847-97a4-4453-9f41-44aaacb8e10b
 
 ##  DateLastUpdated
 
@@ -2930,7 +2930,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
-https://rs.tdwg.org/bdq/0c255ac0-134d-410d-afb9-bb6445c51fc9
+https://rs.tdwg.org/bdq/8d1c2c27-bb61-4386-b1fd-052557032feb
 
 ## Description
 
@@ -2946,7 +2946,7 @@ COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the Mult
 
 ##  GUID
 
-0c255ac0-134d-410d-afb9-bb6445c51fc9
+8d1c2c27-bb61-4386-b1fd-052557032feb
 
 ##  DateLastUpdated
 
@@ -3298,7 +3298,7 @@ bdq:Spatial-Temporal Patterns, bdq:Record-Management
 ********************
 
 #  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
-https://rs.tdwg.org/bdq/8418d14c-4eed-4fe1-b1d9-7524960c3fc0
+https://rs.tdwg.org/bdq/107136b5-cbed-46bc-a4e6-0e6a4fe029d1
 
 ## Description
 
@@ -3314,7 +3314,7 @@ COMPLETE if every VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord ha
 
 ##  GUID
 
-8418d14c-4eed-4fe1-b1d9-7524960c3fc0
+107136b5-cbed-46bc-a4e6-0e6a4fe029d1
 
 ##  DateLastUpdated
 
@@ -5066,7 +5066,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdq/3951b465-69f6-45b2-a16d-f6926d0cba9d
+https://rs.tdwg.org/bdq/a4c8aebf-cf54-4b37-b5e5-0bb2c5f95911
 
 ## Description
 
@@ -5082,7 +5082,7 @@ Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord that ha
 
 ##  GUID
 
-3951b465-69f6-45b2-a16d-f6926d0cba9d
+a4c8aebf-cf54-4b37-b5e5-0bb2c5f95911
 
 ##  DateLastUpdated
 
@@ -5938,7 +5938,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Bio
 ********************
 
 #  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
-https://rs.tdwg.org/bdq/ce4bdd83-0012-4f36-b357-51dcd851be0f
+https://rs.tdwg.org/bdq/0ba4ca7d-428d-4ce4-a5d1-706813888fec
 
 ## Description
 
@@ -5954,7 +5954,7 @@ COMPLETE if every VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord has Respo
 
 ##  GUID
 
-ce4bdd83-0012-4f36-b357-51dcd851be0f
+0ba4ca7d-428d-4ce4-a5d1-706813888fec
 
 ##  DateLastUpdated
 
