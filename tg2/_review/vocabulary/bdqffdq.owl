@@ -31,6 +31,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :amendmentProperty rdf:type owl:ObjectProperty ;
                    rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." ;
                    rdfs:label "amendment  Property" ;
+                   skos:definition "Category of object properties that apply to Amendmentts" ;
                    skos:prefLabel "amendment Property" .
 
 
@@ -136,12 +137,17 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasInformationElement
 :hasInformationElement rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :amendmentProperty ,
+                                          :issueProperty ,
+                                          :measurementProperty ,
+                                          :validationProperty ;
                        rdfs:domain [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasInformationElement ;
                                      owl:someValuesFrom :InformationElement
                                    ] ;
-                       rdfs:comment "Provides a relationship between bdqffdq concepts and the information elements. For example, ContextualizedCriterion uses this property along with hasResourceType to define a criterion in the context of related information elements." ;
+                       rdfs:comment "Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements." ;
                        rdfs:label "has Information Element" ;
+                       skos:definition "Describes the InformationElements assessed by a DataQiualityNeed." ;
                        skos:prefLabel "has Information Element" .
 
 
@@ -239,8 +245,9 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/issueProperty
 :issueProperty rdf:type owl:ObjectProperty ;
-               rdfs:comment "Category of properties that apply to Issues." ;
+               rdfs:comment "Properties that relate Issues to IssiueMethods, Criteria, and dataQualityDimensions." ;
                rdfs:label "issue Property" ;
+               skos:definition "Category of object properties that apply to Issues." ;
                skos:prefLabel "issue Property" .
 
 
@@ -345,6 +352,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                         rdfs:range xsd:double ;
                         rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input)." ;
                         rdfs:label "has response result value" ;
+                        skos:definition "Data property carrying the value of an Assertion when not an object." ;
                         skos:prefLabel "has response result value" .
 
 
