@@ -169,31 +169,35 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
      <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
          rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?" ;
          rdfs:label "Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord" ;
-         <http://www.w3.org/2004/02/skos/core#prefLabel> "VALIDATION_COUNTRY_FOUND" ;
-         <bdqffdq:hasActedUponInformationElement> <urn:uuid:e98e03c9-21ec-42da-ad90-626e10377416> ; 
-         <bdqffdq:hasCriterion> <urn:uuid:bdda6178-628e-4402-aac4-b6c29ac401e2> ;
+         skos:prefLabel "VALIDATION_COUNTRY_FOUND" ;
+         <bdqffdq:hasActedUponInformationElement> <urn:uuid:8a2bbe0d-7218-4861-8d70-e4f2108a6dc4> ;
+         <bdqffdq:hasCriterion> <bdqcrit:Found> ;
+         <bdqffdq:hasDataQualityDimension> <bdqdim:Conformance> ;
          <bdqffdq:hasResourceType> <bdqffdq:SingleRecord> .
      
+     <urn:uuid:8a2bbe0d-7218-4861-8d70-e4f2108a6dc4> a <bdqffdq:ActedUpon> ;
+         rdfs:label "Information Element ActedUpon dwc:country" ;
+         <bdqffdq:composedOf> dwc:country ;
+         <skos:prefLabel> "Information Element ActedUpon dwc:country" .
+     
+     <bdqcrit:Found> a <bdqffdq:Criterion> ;
+         rdfs:label "Found" .
+
+     <bdqdim:Conformance> a <bdqffdq:DataQualityDimension> ;
+         rdfs:label "Conformance" .     
+
      <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a <bdqffdq:ValidationMethod> ;
          rdfs:label "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
-         <http://www.w3.org/2004/02/skos/core#prefLabel> "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
+         skos:prefLabel "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
          <bdqffdq:forValidation> <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> ;
          <bdqffdq:hasSpecification> <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> .
-         
+     
      <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a <bdqffdq:Specification> ;
-         rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
+         rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
          rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND" ;
          <bdqffdq:hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
-         <bdqffdq:hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" by the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
+         <bdqffdq:hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
      
-     <urn:uuid:bdda6178-628e-4402-aac4-b6c29ac401e2> a <bdqffdq:Criterion> ;
-         rdfs:label "Conformance: found" .
-     
-     <urn:uuid:e98e03c9-21ec-42da-ad90-626e10377416> a <bdqffdq:ActedUpon> ;
-         rdfs:label "Information Element ActedUpon dwc:country" ;
-         <bdqffdq:composedOf> <dwc:country> ;
-         <skos:prefLabel> "Information Element ActedUpon dwc:country" .
-
      <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a <bdqffdq:ValidationPolicy> ;
      	rdfs:label "ValidationPolicy: (65) validations  in UseCase bdq:Record-Management" ;
      	<http://www.w3.org/2004/02/skos/core#prefLabel> "ValidationPolicy: (65) validations  in UseCase bdq:Record-Management" ;
