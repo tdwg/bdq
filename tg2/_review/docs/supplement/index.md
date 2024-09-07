@@ -32,6 +32,7 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 2.1 Definition of CORE
 2.2 Use case development
 2.3 Data Quality Control and Data Quality Assurance
+2.4 Framework Competency Questions
 3 Developing the Tests
 3.1 Tests and Data Dimensions
 3.2 Types of Test
@@ -109,6 +110,46 @@ We identified four fundamental aspects of biodiversity-related data that we need
 The framework (bdqffdq:) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
 
 The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
+
+### 2.4 Framework Competency Questions
+
+The development of the representation of the Fittness for Use Framework as an owl ontology (bdqffdq:) was influenced by competency questions, shaped by the late Robert A. Morris, and originally written by David Lowery (within in the kurator-ffdq codebase).  The development of the test descriptors led to changes in the ontology (largely adopting a consistent naming pattern).  Changes to the specifics of competency questions follow on that.  
+
+Example comptency questions that can be asked of the RDF representation of bdqcore: 
+
+    # Given a use case find validation tests and their specifications
+
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    
+    SELECT DISTINCT ?useCase ?test ?spec
+    
+    WHERE {
+    
+        # Find Validations from the ValidationPolicy
+        # for a given use case
+    
+        ?policy a bdqffdq:ValidationPolicy .
+        ?policy bdqffdq:hasUseCase ?uc .
+        ?policy bdqffdq:includesInPolicy ?cc .
+        ?uc rdfs:label ?useCase .
+    
+        # Find the specification from the validation method
+        # referencing the Validation
+    
+        ?cc skos:prefLabel ?test .
+    
+        ?vm a bdqffdq:ValidationMethod .
+        ?vm bdqffdq:forValidation ?cc .
+        ?vm bdqffdq:hasSpecification ?testSpec .
+        ?testSpec rdfs:comment ?spec
+
+        # Filter by a specific use case
+    
+         FILTER( ?uc = <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> )
+    }
+
 
 ## 3 Developing the Tests
 
