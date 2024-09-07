@@ -123,7 +123,7 @@ Example comptency questions that can be asked of the RDF representation of bdqco
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     
-    SELECT DISTINCT ?useCase ?test ?spec
+    SELECT DISTINCT ?useCase ?test ?specification
     
     WHERE {
     
@@ -143,11 +143,45 @@ Example comptency questions that can be asked of the RDF representation of bdqco
         ?vm a bdqffdq:ValidationMethod .
         ?vm bdqffdq:forValidation ?cc .
         ?vm bdqffdq:hasSpecification ?testSpec .
-        ?testSpec rdfs:comment ?spec
+        ?testSpec bdqffdq:hasExpectedResponse ?specification .
 
         # Filter by a specific use case
     
          FILTER( ?uc = <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> )
+    }
+
+And another that lists the valuable information elements for a use case: 
+
+    # Given a use case find the ActedUpon
+    # information elements 
+    
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    
+    SELECT DISTINCT ?useCase ?ie
+    
+    WHERE {
+    
+       # Find Validations from the ValidationPolicy
+       # for a given use case
+    
+       ?policy a bdqffdq:ValidationPolicy .
+       ?policy bdqffdq:hasUseCase ?uc .
+       ?policy bdqffdq:includesInPolicy ?cc .
+       ?uc rdfs:label ?useCase .
+    
+       # Find ActedUpon InformationElements 
+       # for the Validations
+     
+       ?cc bdqffdq:hasActedUponInformationElement ?ieClass .
+       ?ieClass bdqffdq:composedOf ?ie
+    
+       # Filter by a specific use case
+
+       FILTER( ?uc = <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> )
+    
     }
 
 
