@@ -104,9 +104,9 @@ Research uses forming a bdqffdq:Use Case for occurrence data of alien species 1)
 - [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
 
-##  bdq:Spatial-Temporal Patterns
+##  bdq:Spatial-Temporal_Patterns
 
-Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) where the information elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
+error extracting definition
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](#VALIDATION_BASISOFRECORD_NOTEMPTY)
 - [VALIDATION_BASISOFRECORD_STANDARD](#VALIDATION_BASISOFRECORD_STANDARD)
@@ -366,7 +366,7 @@ dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -406,7 +406,7 @@ dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NO
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -437,12 +437,12 @@ dc:type
 
 dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdq:NotEmpty"
 
-dc:type="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdq:Empty"
+dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdq:Empty"
 
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -478,7 +478,7 @@ dc:type="StillerImage": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -604,7 +604,7 @@ dwc:countryCode="ZX", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongit
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -648,7 +648,7 @@ dwc:stateProvince="Córdoba", dwc:decimalLatitude="-41.0525925872862", dwc:decim
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -695,7 +695,7 @@ dwc:decimalLatitude="20.0", dwc:decimalLongitude="-30.0", dwc:scientificName="Vi
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -731,7 +731,7 @@ dwc:decimalLatitude="0", dwc:decimalLongitude="0",: Response.status=RUN_HAS_RESU
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -767,7 +767,7 @@ dwc:coordinateUncertaintyInMeters="-1": Response.status=RUN_HAS_RESULT, Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -803,7 +803,7 @@ dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIAN
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -839,7 +839,7 @@ dwc:countryCode="GRL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -879,7 +879,7 @@ dwc:country="United States Minor Outlying Islands", dwc:countryCode="US": Respon
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -916,14 +916,14 @@ bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[
 
 ### Examples
 
-dwc:country="Russian Federation", dwc:stateProvince="Moscow Oblast": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country and dwc:stateProvince are unambiguous"
+dwc:country="Argentina", dwc:stateProvince="Rio Negro": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country and dwc:stateProvince are unambiguous"
 
 dwc:country="", dwc:stateProvince="WA": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country and dwc:stateProvince are ambiguous. Matches Western Australia, Washington State (US)"
 
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -967,7 +967,7 @@ dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1003,7 +1003,7 @@ dwc:country="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, R
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1039,7 +1039,7 @@ dwc:decimalLatitude="121.0534": Response.status=RUN_HAS_RESULT, Response.result=
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -1071,7 +1071,7 @@ dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -1103,7 +1103,7 @@ dwc:decimalLongitude="181.0554": Response.status=RUN_HAS_RESULT, Response.result
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -1135,7 +1135,7 @@ dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_CO
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -1167,7 +1167,7 @@ dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -1203,7 +1203,7 @@ dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_CO
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1239,7 +1239,7 @@ dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:contine
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1283,7 +1283,7 @@ dwc:maximumDepthInMeters="99999": Response.status=RUN_HAS_RESULT, Response.resul
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1327,7 +1327,7 @@ dwc:maximumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.re
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1371,7 +1371,7 @@ dwc:minimumDepthInMeters="12000": Response.status=RUN_HAS_RESULT, Response.resul
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1407,7 +1407,7 @@ dwc:minimumDepthInMeters="1", dwc:maximumDepthInMeters="0": Response.status=RUN_
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -1447,7 +1447,7 @@ dwc:minimumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.re
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1483,7 +1483,7 @@ dwc:minimumElevationInMeters="1", dwc:maximumElevationInMeters="0": Response.sta
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -1523,7 +1523,7 @@ dwc:stateProvince="Tasmanian": Response.status=RUN_HAS_RESULT, Response.result=N
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1559,7 +1559,7 @@ dwc:day="30", dwc:month="2", dwc:year="1952": Response.status=RUN_HAS_RESULT, Re
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1595,7 +1595,7 @@ dwc:day="32": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Res
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1634,7 +1634,7 @@ dwc:eventDate="", dwc:endDayOfYear="x": Response.status=RUN_HAS_RESULT, Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1678,7 +1678,7 @@ dwc:eventDate="2300-11-01T10:00": Response.status=RUN_HAS_RESULT, Response.resul
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1714,7 +1714,7 @@ dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -1746,7 +1746,7 @@ dwc:eventDate="1963-03-08T14:67-0600": Response.status=RUN_HAS_RESULT, Response.
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -1782,7 +1782,7 @@ dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", 
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1854,7 +1854,7 @@ dwc:month="v": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Re
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -1889,7 +1889,7 @@ dwc:eventDate="", dwc:startDayOfYear="0": Response.status=RUN_HAS_RESULT, Respon
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1933,7 +1933,7 @@ dwc:year="9999": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, 
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -1969,7 +1969,7 @@ dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Resp
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -2012,7 +2012,7 @@ dwc:dateIdentified="1963-03-08T14:07-0600", dwc:eventDate="1964-11-01T10:00-0600
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -2048,7 +2048,7 @@ dwc:dateIdentified="1963-03-08X14:07-0600": Response.status=RUN_HAS_RESULT, Resp
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
@@ -2081,9 +2081,9 @@ bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary Lis
 
 ### Examples
 
-dwc:degreeOfEstablishment="cultivated": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:degreeOfEstablishment has an equivalent in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="cultivated": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:degreeOfEstablishment found in the bdq:sourceAuthority"
 
-dwc:degreeOfEstablishment="grown in garden": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:degreeOfEstablishment does not have an equivalent in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="grown in garden": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:degreeOfEstablishment not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -2125,14 +2125,14 @@ bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of
 
 ### Examples
 
-dwc:establishmentMeans="native": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:establishmentMeans has an equivalent in the bdq:sourceAuthority"
+dwc:establishmentMeans="native": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:establishmentMeans found in the bdq:sourceAuthority"
 
-dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:establishmentMeans does not have an equivalent in the bdq:sourceAuthority"
+dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:establishmentMeans not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -2200,7 +2200,7 @@ dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -2240,7 +2240,7 @@ dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -2277,9 +2277,9 @@ bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[ht
 
 ### Examples
 
-dwc:pathway="transportStowaway": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:pathway has an equivalent in the bdq:sourceAuthority"
+dwc:pathway="transportStowaway": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:pathway found in the bdq:sourceAuthority"
 
-dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:pathway does not have an equivalent in the bdq:sourceAuthority"
+dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:pathway not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -2321,9 +2321,9 @@ bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/voc
 
 ### Examples
 
-dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex has an equivalent in the bdq:sourceAuthority"
+dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex found in the bdq:sourceAuthority"
 
-dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex does not have an equivalent in the bdq:sourceAuthority"
+dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -2365,9 +2365,9 @@ bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/li
 
 ### Examples
 
-dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus has an equivalent in the bdq:sourceAuthority"
+dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"
 
-dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus does not have an equivalent in the bdq:sourceAuthority"
+dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -2409,9 +2409,9 @@ bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.1546
 
 ### Examples
 
-dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:family="Myrtaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:family) can be unambiguously resolved by the bdq:sourceAuthority"
+dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:superfamily="", dwc:family="Myrtaceae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="",  dwc:genus="Punica": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdq:sourceAuthority"
 
-dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:family="Muricidae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:family) cannot be unambiguously resolved by the bdq:sourceAuthority"
+dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamly="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -2879,7 +2879,7 @@ dwc:scientificNameID
 
 dwc:scientificNameID="8fa58e08-08de-4ac1-b69c-1235340b7001": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameID is bdq:NotEmpty"
 
-dwc:scientificNameID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameID is bdq:Empty"
+dwc:scientificNameID=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameID is bdq:Empty"
 
 
 ### Use Cases
@@ -2924,7 +2924,7 @@ dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.re
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -2960,7 +2960,7 @@ dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -2987,7 +2987,7 @@ dwc:taxonRank
 
 dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdq:NotEmpty"
 
-dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdq:Empty"
+dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdq:Empty"
 
 
 ### Use Cases
@@ -3061,14 +3061,14 @@ dwc:taxonID,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:parentNameUsageID,d
 
 ### Examples
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Eucalyptus gunnii", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="" : Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="at least enough terms exist that identify that an entity exists"
+dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Eucalyptus gunnii", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",  dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="" : Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="at least enough terms exist that identify that an entity exists"
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields are empty or missing"
+dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",  dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields are bdq:Empty or missing"
 
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -3112,7 +3112,7 @@ dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:origina
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -3145,7 +3145,7 @@ Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 tests
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ********************
 
@@ -3174,7 +3174,7 @@ Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDAT
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -3207,7 +3207,7 @@ Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALID
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -3240,7 +3240,7 @@ Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALID
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -3276,7 +3276,7 @@ dwc:eventDate="95": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.res
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3312,7 +3312,7 @@ dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3359,7 +3359,7 @@ dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:country
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -3395,7 +3395,7 @@ dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_I
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships
 
 ********************
 
@@ -3478,7 +3478,7 @@ dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3518,7 +3518,7 @@ dc:type="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -3601,7 +3601,7 @@ dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3644,7 +3644,7 @@ dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AX"
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3688,7 +3688,7 @@ dwc:decimalLatitude="-38.280937", dwc:decimalLongitude="72.047790", dwc:countryC
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3728,7 +3728,7 @@ dwc:countryCode="Aust.": Response.status=NOT_AMENDED, Response.result=, Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ********************
 
@@ -3763,12 +3763,12 @@ bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}
 
 dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2877", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
 
-dwc:geodeticDatum="WGS84": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains and interpretable value"
+dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an interpretable value"
 
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3808,7 +3808,7 @@ dwc:geodeticDatum="WGS8": Response.status=NOT_AMENDED, Response.result="", Respo
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3847,7 +3847,7 @@ dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="", dwc:verbatimDepth="x":
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3886,7 +3886,7 @@ dwc:verbatimElevation="x", dwc:minimumElevationInMeters="", dwc:maximumElevation
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -3922,7 +3922,7 @@ dwc:day="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -4075,7 +4075,7 @@ dwc:eventDate="10-28": Response.status=NOT_AMENDED, Response.result=, Response.c
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -4114,7 +4114,7 @@ dwc:eventDate="2023",  dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOf
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -4150,7 +4150,7 @@ dwc:month="October": Response.status=NOT_AMENDED, Response.result=, Response.com
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -4190,7 +4190,7 @@ dwc:dateIdentified="21-10-28": Response.status=NOT_AMENDED, Response.result=, Re
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -4227,7 +4227,7 @@ bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary Lis
 
 ### Examples
 
-dwc:degreeOfEstablishment="cap.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="capt.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value in the bdq:sourceAuthority"
 
 dwc:degreeOfEstablishment="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:degreeOfEstablishment does not contain an interpretable value in the bdq:sourceAuthority"
 
@@ -4273,12 +4273,12 @@ bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of
 
 dwc:establishmentMeans="nat": Response.status=AMENDED, Response.result=dwc:establishmentMeans="native", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdq:sourceAuthority"
 
-dwc:establishmentMeans="species": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans does not contain an interpretable value in the bdq:sourceAuthority"
+dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans is not an interpretable value in the bdq:sourceAuthority"
 
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -4321,7 +4321,7 @@ dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Res
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ********************
 
@@ -4361,7 +4361,7 @@ dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Respons
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4398,9 +4398,9 @@ bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[ht
 
 ### Examples
 
-dwc:pathway="Stowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway contains an interpretable value in the bdq:sourceAuthority"
+dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdq:sourceAuthority"
 
-dwc:pathway="weed": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway does not contain an interpretable value in the bdq:sourceAuthority"
+dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -4442,9 +4442,9 @@ bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/voc
 
 ### Examples
 
-dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex contains an interpretable value in the bdq:sourceAuthority"
+dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex found in the bdq:sourceAuthority"
 
-dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex does not contain an interpretable value in the bdq:sourceAuthority"
+dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -4486,9 +4486,9 @@ bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/li
 
 ### Examples
 
-dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus contains an interpretable value in the bdq:sourceAuthority"
+dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"
 
-dwc:typeStatus="cleptotype": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus does not contain an interpretable value in the bdq:sourceAuthority"
+dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -4587,7 +4587,7 @@ dwc:scientificNameID="gbif:8a", dwc:scientificName="": Response.status=NOT_AMEND
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4645,7 +4645,7 @@ For reference, information about possible values of dwc:taxonRank can be found a
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty
-https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4663,7 +4663,7 @@ bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4674,7 +4674,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard
-https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4692,7 +4692,7 @@ bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4703,7 +4703,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty
-https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4721,7 +4721,7 @@ bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4732,7 +4732,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dc:type Standard
-https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4750,7 +4750,7 @@ bdq:VALIDATION_DCTYPE_STANDARD.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4761,7 +4761,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty
-https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4790,7 +4790,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard
-https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4819,7 +4819,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty
-https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4837,7 +4837,7 @@ bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4848,7 +4848,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard
-https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4866,7 +4866,7 @@ bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4877,7 +4877,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty
-https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4895,7 +4895,7 @@ bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4906,7 +4906,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard
-https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4924,7 +4924,7 @@ bdq:VALIDATION_DCTYPE_STANDARD.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -4935,7 +4935,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty
-https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4964,7 +4964,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard
-https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -4993,7 +4993,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/43d7a3f0-c5ea-4605-aca8-466d44dcb07d/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/958ab383-ab8c-4fab-b476-098aa81e73fa/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5011,7 +5011,7 @@ bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -5022,7 +5022,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/1bb8daf9-7a9b-4092-8cbe-9b38c1c2c989/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/824bdf53-458b-460c-afc3-6dc605be20c9/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5040,7 +5040,7 @@ bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5051,7 +5051,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/ed2a449e-96fd-4ac8-99ed-cd122bc66336/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/77f857cb-8bcc-4aa5-865a-b9f171e2d5d0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5069,7 +5069,7 @@ bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5080,7 +5080,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero
-https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5098,7 +5098,7 @@ bdq:VALIDATION_COORDINATES_NOTZERO.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -5109,7 +5109,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:coordinateUncertaintyInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5127,7 +5127,7 @@ bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5138,7 +5138,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5156,7 +5156,7 @@ bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5167,7 +5167,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5185,7 +5185,7 @@ bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5196,7 +5196,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/ffa14819-b3ae-4773-a0ac-6356283b9473/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/32baefe9-fcf6-4ff7-b59f-941432939f23/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5214,7 +5214,7 @@ bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5225,7 +5225,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:stateProvince Unambiguous
-https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5243,7 +5243,7 @@ bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5254,7 +5254,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country Found
-https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5272,7 +5272,7 @@ bdq:VALIDATION_COUNTRY_FOUND.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5283,7 +5283,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country Not Empty
-https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5301,7 +5301,7 @@ bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5312,7 +5312,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude In Range
-https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5330,7 +5330,7 @@ bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -5341,7 +5341,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5359,7 +5359,7 @@ bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5370,7 +5370,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude In Range
-https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5388,7 +5388,7 @@ bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -5399,7 +5399,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5417,7 +5417,7 @@ bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -5428,7 +5428,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Not Empty
-https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5446,7 +5446,7 @@ bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5457,7 +5457,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5475,7 +5475,7 @@ bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5486,7 +5486,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty
-https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5504,7 +5504,7 @@ bdq:VALIDATION_LOCATION_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5515,7 +5515,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:maximumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5533,7 +5533,7 @@ bdq:VALIDATION_MAXDEPTH_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5544,7 +5544,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:maximumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5562,7 +5562,7 @@ bdq:VALIDATION_MAXELEVATION_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5573,7 +5573,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5591,7 +5591,7 @@ bdq:VALIDATION_MINDEPTH_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5602,7 +5602,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
-https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5620,7 +5620,7 @@ bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5631,7 +5631,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5649,7 +5649,7 @@ bdq:VALIDATION_MINELEVATION_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5660,7 +5660,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
-https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5678,7 +5678,7 @@ bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5689,7 +5689,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:stateProvince Found
-https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5707,7 +5707,7 @@ bdq:VALIDATION_STATEPROVINCE_FOUND.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5718,7 +5718,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/56de3d09-cbbb-4b99-a0fc-736d093da14d/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/573cf644-dd44-451a-a971-3d0a0f478963/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5736,7 +5736,7 @@ bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -5747,7 +5747,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/bb02a847-97a4-4453-9f41-44aaacb8e10b/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6c19c4a2-3988-48ab-a300-bb21c6fea346/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5765,7 +5765,7 @@ bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5776,7 +5776,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/8d1c2c27-bb61-4386-b1fd-052557032feb/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6cd3b6d6-a8fa-49fd-b047-fc630efa42e4/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5794,7 +5794,7 @@ bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5805,7 +5805,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero
-https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5823,7 +5823,7 @@ bdq:VALIDATION_COORDINATES_NOTZERO.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns
+bdq:Spatial-Temporal_Patterns
 
 ### Notes
 
@@ -5834,7 +5834,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:coordinateUncertaintyInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5852,7 +5852,7 @@ bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5863,7 +5863,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5881,7 +5881,7 @@ bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5892,7 +5892,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5910,7 +5910,7 @@ bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5921,7 +5921,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/107136b5-cbed-46bc-a4e6-0e6a4fe029d1/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6521e410-82e7-4617-b75c-a616c36aa787/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5939,7 +5939,7 @@ bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5950,7 +5950,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:stateProvince Unambiguous
-https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5968,7 +5968,7 @@ bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -5979,7 +5979,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found
-https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -5997,7 +5997,7 @@ bdq:VALIDATION_COUNTRY_FOUND.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6008,7 +6008,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country Not Empty
-https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6026,7 +6026,7 @@ bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6037,7 +6037,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude In Range
-https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6055,7 +6055,7 @@ bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6066,7 +6066,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6084,7 +6084,7 @@ bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6095,7 +6095,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude In Range
-https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6113,7 +6113,7 @@ bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6124,7 +6124,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6142,7 +6142,7 @@ bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6153,7 +6153,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Not Empty
-https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6171,7 +6171,7 @@ bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6182,7 +6182,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6200,7 +6200,7 @@ bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6211,7 +6211,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty
-https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6229,7 +6229,7 @@ bdq:VALIDATION_LOCATION_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6240,7 +6240,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6258,7 +6258,7 @@ bdq:VALIDATION_MAXDEPTH_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6269,7 +6269,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6287,7 +6287,7 @@ bdq:VALIDATION_MAXELEVATION_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6298,7 +6298,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6316,7 +6316,7 @@ bdq:VALIDATION_MINDEPTH_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6327,7 +6327,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
-https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6345,7 +6345,7 @@ bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6356,7 +6356,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6374,7 +6374,7 @@ bdq:VALIDATION_MINELEVATION_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6385,7 +6385,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
-https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6403,7 +6403,7 @@ bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6414,7 +6414,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:stateProvince Found
-https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6432,7 +6432,7 @@ bdq:VALIDATION_STATEPROVINCE_FOUND.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6443,7 +6443,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:day In Range
-https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6461,7 +6461,7 @@ bdq:VALIDATION_DAY_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6472,7 +6472,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:day Standard
-https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6490,7 +6490,7 @@ bdq:VALIDATION_DAY_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6501,7 +6501,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:endDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6519,7 +6519,7 @@ bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6530,7 +6530,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate In Range
-https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6548,7 +6548,7 @@ bdq:VALIDATION_EVENTDATE_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6559,7 +6559,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Not Empty
-https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6577,7 +6577,7 @@ bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6588,7 +6588,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Standard
-https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6606,7 +6606,7 @@ bdq:VALIDATION_EVENTDATE_STANDARD.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6617,7 +6617,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/a4c8aebf-cf54-4b37-b5e5-0bb2c5f95911/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/1ab035d6-62ca-4fd8-a11b-2ed59e714bf0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6635,7 +6635,7 @@ bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6646,7 +6646,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent
-https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6675,7 +6675,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:month Standard
-https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6693,7 +6693,7 @@ bdq:VALIDATION_MONTH_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6704,7 +6704,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:startDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6722,7 +6722,7 @@ bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6733,7 +6733,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:year In Range
-https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6751,7 +6751,7 @@ bdq:VALIDATION_YEAR_INRANGE.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6762,7 +6762,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:year Not Empty
-https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6780,7 +6780,7 @@ bdq:VALIDATION_YEAR_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6791,7 +6791,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DAY_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:day In Range
-https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6809,7 +6809,7 @@ bdq:VALIDATION_DAY_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6820,7 +6820,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DAY_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:day Standard
-https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6838,7 +6838,7 @@ bdq:VALIDATION_DAY_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6849,7 +6849,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:endDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6867,7 +6867,7 @@ bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6878,7 +6878,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate In Range
-https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6896,7 +6896,7 @@ bdq:VALIDATION_EVENTDATE_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6907,7 +6907,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Not Empty
-https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6925,7 +6925,7 @@ bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6936,7 +6936,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Standard
-https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6954,7 +6954,7 @@ bdq:VALIDATION_EVENTDATE_STANDARD.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -6965,7 +6965,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/0ba4ca7d-428d-4ce4-a5d1-706813888fec/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f1f0357c-585e-46be-8964-291e265da072/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -6983,7 +6983,7 @@ bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -6994,7 +6994,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent
-https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7023,7 +7023,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:month Standard
-https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7041,7 +7041,7 @@ bdq:VALIDATION_MONTH_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -7052,7 +7052,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7070,7 +7070,7 @@ bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -7081,7 +7081,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:year In Range
-https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7099,7 +7099,7 @@ bdq:VALIDATION_YEAR_INRANGE.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -7110,7 +7110,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:year Not Empty
-https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7128,7 +7128,7 @@ bdq:VALIDATION_YEAR_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ### Notes
 
@@ -7139,7 +7139,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified In Range
-https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7157,7 +7157,7 @@ bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -7168,7 +7168,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified Standard
-https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7186,7 +7186,7 @@ bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -7197,7 +7197,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified In Range
-https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7215,7 +7215,7 @@ bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -7226,7 +7226,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified Standard
-https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7244,7 +7244,7 @@ bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
 
 ### Use Cases
 
-bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 ### Notes
 
@@ -7255,7 +7255,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7284,7 +7284,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:establishmentMeans Standard
-https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7302,7 +7302,7 @@ bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -7313,7 +7313,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceID Not Empty
-https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7342,7 +7342,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Not Empty
-https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7360,7 +7360,7 @@ bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -7371,7 +7371,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7389,7 +7389,7 @@ bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -7400,7 +7400,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:pathway Standard
-https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7429,7 +7429,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:sex Standard
-https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7458,7 +7458,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7487,7 +7487,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7516,7 +7516,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:establishmentMeans Standard
-https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7534,7 +7534,7 @@ bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -7545,7 +7545,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceID Not Empty
-https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7574,7 +7574,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Not Empty
-https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7592,7 +7592,7 @@ bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -7603,7 +7603,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7621,7 +7621,7 @@ bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
 ### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -7632,7 +7632,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:pathway Standard
-https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7661,7 +7661,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SEX_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:sex Standard
-https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7690,7 +7690,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7719,7 +7719,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Classification Consistent
-https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7748,7 +7748,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:class Found
-https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7777,7 +7777,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:family Found
-https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7806,7 +7806,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:genus Found
-https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7835,7 +7835,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Found
-https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7864,7 +7864,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Not Empty
-https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7893,7 +7893,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:namePublishedInYear Not Empty
-https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7922,7 +7922,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:order Found
-https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7951,7 +7951,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:phylum Found
-https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -7980,7 +7980,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent
-https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8009,7 +8009,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameAuthorship Not Empty
-https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8038,7 +8038,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Complete
-https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8067,7 +8067,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Not Empty
-https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8096,7 +8096,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found
-https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8114,7 +8114,7 @@ bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8125,7 +8125,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty
-https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8143,7 +8143,7 @@ bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8154,7 +8154,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Not Empty
-https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8183,7 +8183,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Standard
-https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8212,7 +8212,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty
-https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8230,7 +8230,7 @@ bdq:VALIDATION_TAXON_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8241,7 +8241,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous
-https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8259,7 +8259,7 @@ bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8270,7 +8270,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent
-https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8299,7 +8299,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_CLASS_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found
-https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8328,7 +8328,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:family Found
-https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8357,7 +8357,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GENUS_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:genus Found
-https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8386,7 +8386,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Found
-https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8415,7 +8415,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Not Empty
-https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8444,7 +8444,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:namePublishedInYear Not Empty
-https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8473,7 +8473,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ORDER_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:order Found
-https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8502,7 +8502,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:phylum Found
-https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8531,7 +8531,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent
-https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8560,7 +8560,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameAuthorship Not Empty
-https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8589,7 +8589,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Complete
-https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8618,7 +8618,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Not Empty
-https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8647,7 +8647,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found
-https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8665,7 +8665,7 @@ bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8676,7 +8676,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty
-https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8694,7 +8694,7 @@ bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8705,7 +8705,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Not Empty
-https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8734,7 +8734,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Standard
-https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8763,7 +8763,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty
-https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8781,7 +8781,7 @@ bdq:VALIDATION_TAXON_NOTEMPTY.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
@@ -8792,7 +8792,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous
-https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-09-06
+https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-09-08
 Acts upon  MultiRecord
 
 ### Description
@@ -8810,7 +8810,7 @@ bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
 ### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 ### Notes
 
