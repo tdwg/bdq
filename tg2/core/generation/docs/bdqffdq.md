@@ -1981,6 +1981,35 @@ ObjectProperty
 
 ********************
 
+## bdqffdq:forDataQualityNeed
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed
+
+### Preferred Label
+
+'for Data Quality Need'
+
+### Label
+
+'for Data Quality Need'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+'Category of properties that relates specific Data Quality Needs to specific Methods.'
+
+### Comment
+
+'Category of properties that link tests to their Methods'
+
+
+********************
+
 ## bdqffdq:forIssue
 
 ### Name
@@ -2712,6 +2741,35 @@ ObjectProperty
 ### Comment
 
 'Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract.'
+
+
+********************
+
+## bdqffdq:usesSpecification
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/usesSpecification
+
+### Preferred Label
+
+'uses Specification'
+
+### Label
+
+'uses Specification'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+'Specification that an Implementation implements.'
+
+### Comment
+
+'Relates an Implementation to the Specification that the Implementation implements.'
 
 
 ********************

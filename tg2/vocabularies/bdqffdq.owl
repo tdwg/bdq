@@ -53,16 +53,26 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
 :forAmendment rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :amendmentProperty ;
+              rdfs:subPropertyOf :amendmentProperty ,
+                                 :forDataQualityNeed ;
               rdfs:comment "Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs)." ;
               rdfs:label "for Amendment" ;
               skos:definition "Relates an AmendmentMethod to an Amendment." ;
               skos:prefLabel "for Amendment" .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed
+:forDataQualityNeed rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Category of properties that link tests to their Methods" ;
+                    rdfs:label "for Data Quality Need" ;
+                    skos:definition "Category of properties that relates specific Data Quality Needs to specific Methods." ;
+                    skos:prefLabel "for Data Quality Need" .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/forIssue
 :forIssue rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :issueProperty ;
+          rdfs:subPropertyOf :forDataQualityNeed ,
+                             :issueProperty ;
           rdfs:domain [ rdf:type owl:Restriction ;
                         owl:onProperty :forIssue ;
                         owl:someValuesFrom :Issue
@@ -75,7 +85,8 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forMeasure
 :forMeasure rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :measurementProperty ;
+            rdfs:subPropertyOf :forDataQualityNeed ,
+                               :measurementProperty ;
             rdfs:comment "Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmedhment, forValidation, forIssue." ;
             rdfs:label "for Measure" ;
             skos:definition "Relates an MeasurementMethod to a Measure." ;
@@ -84,7 +95,8 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forValidation
 :forValidation rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :validationProperty ;
+               rdfs:subPropertyOf :forDataQualityNeed ,
+                                  :validationProperty ;
                rdfs:domain [ rdf:type owl:Restriction ;
                              owl:onProperty :forValidation ;
                              owl:someValuesFrom :Validation
@@ -337,6 +349,14 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
                     rdfs:label "targeted Validatiohn"@en ;
                     skos:definition "Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
                     skos:prefLabel "targeted Validation"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/usesSpecification
+:usesSpecification rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relates an Implementation to the Specification that the Implementation implements." ;
+                   rdfs:label "uses Specification" ;
+                   skos:definition "Specification that an Implementation implements." ;
+                   skos:prefLabel "uses Specification" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/validationProperty
