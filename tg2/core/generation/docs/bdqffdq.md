@@ -12,7 +12,6 @@ Ontology Terms forming the BDQ Core Framework For Data Quality.
 
 Alphabetical Index of classes
 
-- [https://rs.tdwg.org/bdqffdq/terms#ResponseQualifier](#https//rs.tdwg.org/bdqffdq/terms#ResponseQualifier) ReportConcept
 - [bdqffdq:AbstractInformationElement](#bdqffdqAbstractInformationElement) InformationElement
 - [bdqffdq:ActedUpon](#bdqffdqActedUpon) InformationElement
 - [bdqffdq:Amendment](#bdqffdqAmendment) AmendmentConcept|DataQualityNeed
@@ -50,6 +49,7 @@ Alphabetical Index of classes
 - [bdqffdq:Policy](#bdqffdqPolicy) NeedConcept
 - [bdqffdq:ReportConcept](#bdqffdqReportConcept) 
 - [bdqffdq:ResourceType](#bdqffdqResourceType) FundamentalConcept
+- [bdqffdq:ResponseQualifier](#bdqffdqResponseQualifier) ReportConcept
 - [bdqffdq:ResponseResult](#bdqffdqResponseResult) ReportConcept
 - [bdqffdq:ResponseStatus](#bdqffdqResponseStatus) ReportConcept
 - [bdqffdq:SolutionsConcept](#bdqffdqSolutionsConcept) 
@@ -1297,39 +1297,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }'
 
 ********************
 
-## https://rs.tdwg.org/bdqffdq/terms#ResponseQualifier
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#ResponseQualifier
-
-### Preferred Label
-
-'Response Qualifier'
-
-### Label
-
-'Response Qualifier'
-
-### Type
-
-Class
-
-## Superclass
-
-bdqffdq:ReportConcept
-
-### Definition
-
-'A report concept to which additional assertions providing additional information beyond that of ResponseResult from the result of the execution of the Specification of a data quality need are attached.'
-
-### Comment
-
-'Intended as an extension point for qualifying information about uncertainty or ambiguity.'
-
-
-********************
-
 ## bdqffdq:Assertion
 
 ### Name
@@ -1429,6 +1396,39 @@ bdqffdq:ReportConcept
 A data resource could be the oa:target of a oa:Annotation of which an Assertion is the oa:body.
 
 DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }'
+
+
+********************
+
+## bdqffdq:ResponseQualifier
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier
+
+### Preferred Label
+
+'Response Qualifier'
+
+### Label
+
+'Response Qualifier'
+
+### Type
+
+Class
+
+## Superclass
+
+bdqffdq:ReportConcept
+
+### Definition
+
+'A report concept to which additional assertions providing additional information beyond that of ResponseResult from the result of the execution of the Specification of a data quality need are attached.'
+
+### Comment
+
+'Intended as an extension point for qualifying information about uncertainty or ambiguity.'
 
 
 ********************
@@ -1699,7 +1699,7 @@ DataProperty
 
 ### Definition
 
-nan
+'Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.'
 
 ### Comment
 
@@ -1728,7 +1728,7 @@ DataProperty
 
 ### Definition
 
-nan
+'Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.'
 
 ### Comment
 
@@ -1786,7 +1786,7 @@ DataProperty
 
 ### Definition
 
-nan
+'Data property carrying the value of an Assertion when not an object.'
 
 ### Comment
 
@@ -1808,7 +1808,7 @@ https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 
 ### Preferred Label
 
-nan
+'Multi Record'
 
 ### Label
 
@@ -1820,7 +1820,11 @@ NamedIndividual
 
 ### Definition
 
-nan
+'A set of one or more Single Records.'
+
+### Comment
+
+'A data set.'
 
 
 ********************
@@ -1833,7 +1837,7 @@ https://rs.tdwg.org/bdqffdq/terms/SingleRecord
 
 ### Preferred Label
 
-nan
+'Single Record'
 
 ### Label
 
@@ -1849,7 +1853,7 @@ nan
 
 ### Comment
 
-'A record from a dataset without dependencies on any other record.'
+'A record from a dataset.  May be a single row in a table, or rows related across several tables, or a graph of data.   Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).'
 
 
 ********************
@@ -1879,7 +1883,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Category of object properties that apply to Amendmentts'
 
 ### Comment
 
@@ -1912,7 +1916,7 @@ ObjectProperty
 
 ### Comment
 
-'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.'
+'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.  If Assertions are composed in DataQualityReports, the appliesTo DataResource is an item examined as part of the report.  Expectation for SingleRecord test Assertions on Darwin Core data in BDQ Core is that appliesTo would point at an Occurrence.'
 
 
 ********************
@@ -1937,11 +1941,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Specific vocabulary term that comprises a non-abstract Information Element.'
 
 ### Comment
 
-'Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be 'composedOf' properties such as dwc:day, dwc:month and dwc:year.'
+'Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.'
 
 
 ********************
@@ -1966,11 +1970,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Relates an AmendmentMethod to an Amendment.'
 
 ### Comment
 
-'Use to link AmendmentMethods to Amendments.  Describes the relationship between an Amendment concept in bdqffdq (needs, solutions, reports) and a ContextualizedEnhancement.'
+'Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions)  and an Amendment (needs).'
 
 
 ********************
@@ -1995,11 +1999,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Relates an IssuetMethod to an Issue.'
 
 ### Comment
 
-'Use to link IssueMethods to Issues.  Describes the relationship between a problem concept in bdqffdq (needs, solutions, reports) and a ContextualizedIssue.'
+'Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedhment, forValidation, forMeasure.'
 
 
 ********************
@@ -2024,11 +2028,40 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Relates an MeasurementMethod to a Measure.'
 
 ### Comment
 
-'Use to link MeasurementMethods to Measures.'
+'Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmedhment, forValidation, forIssue.'
+
+
+********************
+
+## bdqffdq:forValidation
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/forValidation
+
+### Preferred Label
+
+'for Validation'
+
+### Label
+
+'for Validation'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+'Relates an ValidationMethod to a Validation.'
+
+### Comment
+
+'Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmedhment, forMeasure, and forIssue.'
 
 
 ********************
@@ -2053,7 +2086,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Describes the ActedUpon InformationElements assessed by a DataQiualityNeed about which Assertions arising from the DataQualityNeed would apply.'
 
 ### Comment
 
@@ -2082,7 +2115,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Describes the InformationElements assessed by a DataQiualityNeed in order to make Assertions concerning ActedUpon InformationElements.'
 
 ### Comment
 
@@ -2111,7 +2144,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'The Criterion under which a Validation or Issue assesses for data quality.'
 
 ### Comment
 
@@ -2144,7 +2177,9 @@ ObjectProperty
 
 ### Comment
 
-'Used to link a derived concept of a DataQualityNeed (Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.  For a Measure, the dimension of data quality measured.   For a Validation or Issue, the dimension of data quality assessed.  For an Amendment, the dimension of data quality to be improved.  Under the original formulation of the Framework, only Measures have Dimensions.'
+'Used to link a derived concept of a DataQualityNeed (a test, that is a Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.  For a Measure, the dimension of data quality measured.   For a Validation or Issue, the dimension of data quality assessed.  For an Amendment, the dimension of data quality to be improved.  
+
+Under the original formulation of the Framework, only Measures have Dimensions.'
 
 
 ********************
@@ -2169,7 +2204,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'The Enhancement that describes how an Amendment may propose changes to improve data quality.'
 
 ### Comment
 
@@ -2198,11 +2233,13 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Describes the InformationElements assessed by a DataQiualityNeed.'
 
 ### Comment
 
-'Provides a relationship between bdqffdq concepts and the information elements. For example, ContextualizedCriterion uses this property along with hasResourceType to define a criterion in the context of related information elements.'
+'Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
+
+Subtypes hasActedUponInformationElment and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).'
 
 
 ********************
@@ -2227,11 +2264,11 @@ ObjectProperty
 
 ### Definition
 
-'A relationship between a test class and a Parameter'
+'Parameter that can alter the behavior of a Specification.'
 
 ### Comment
 
-'Expected to be a relationship between a Specification and a Parameter'
+'Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Paramter under that specification.'
 
 
 ********************
@@ -2256,11 +2293,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Resource Type to which a DataQualityNeed applies.'
 
 ### Comment
 
-'Provides additional metadata, along with the information elements, that describes the level (SingleRecord or MultiRecord) at which the bdqffdq concept operates. For example, an enhancementInContext with resource type of MultiRecord could be used to define an Amendment that applies at the level of multiple record values.'
+'Provides additional metadata, along with the information elements, that describe the nature of the data  (SingleRecord or MultiRecord) on which the bdqffdq concept operates. For example, an Amendment with resource type of MultiRecord defines that Amendment as operating on a data set.'
 
 
 ********************
@@ -2285,11 +2322,13 @@ ObjectProperty
 
 ### Definition
 
-nan
+'ResponseResult object asserted by a Assertion.'
 
 ### Comment
 
-'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET.   If Response.results are not objects, use the datatype property hasResponseResultValue'
+'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so.  MeasurementAssertion ResponseResults may be objects or data.  
+
+ If Response.results are not objects, use the datatype property hasResponseResultValue'
 
 
 ********************
@@ -2306,7 +2345,7 @@ https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus
 
 ### Label
 
-'hase Response Status'
+'has Response Status'
 
 ### Type
 
@@ -2314,11 +2353,13 @@ ObjectProperty
 
 ### Definition
 
-nan
+'ResponseStatus object asserted by a Assertion.'
 
 ### Comment
 
-'Used in the DQ Report concept to describe result status. For example, in the case of a Validation result, values could be bdq:COMPLIANT or bdq:NON_COMPLIANT.'
+'Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET, or bdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdq:AMENDED or bdq:FILLED_IN.  
+
+ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.'
 
 
 ********************
@@ -2343,11 +2384,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Relates a Method to a Specification.'
 
 ### Comment
 
-'Describes the relationship between a derived bdqffdq concept and the fundamental concept of a Specification (technical description of a test).'
+'Describes the relationship between a derived bdqffdq concept that is a Method and the fundamental concept of a Specification (technical description of a test).'
 
 
 ********************
@@ -2372,40 +2413,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Relates a Policy to a UseCase.'
 
 ### Comment
 
-'Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of the UseCase covered by that policy.'
-
-
-********************
-
-## bdqffdq:hasValidation
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/hasValidation
-
-### Preferred Label
-
-'has Validation'
-
-### Label
-
-'has Validation'
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-### Comment
-
-'Use to link ValidationPolicies and ValidationMethods to Validations.  Describes the relationship between a validation concept in bdqffdq (needs, solutions, reports) and a contextualizedCriterion.'
+'Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase.'
 
 
 ********************
@@ -2430,11 +2442,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Mechanism that provides an Implementation'
 
 ### Comment
 
-'Describes the link between the Implementation concept in bdqffdq and the Mechanism that implements some Specification (also defined in Implementation).'
+'Describes the link between the Implementation concept in bdqffdq and a Mechanism.'
 
 
 ********************
@@ -2459,11 +2471,13 @@ ObjectProperty
 
 ### Definition
 
-nan
+'ImprovementTarget that would have data quality improved by assertions resulting from an Amendment.'
 
 ### Comment
 
-'Had Domain: Amendment, Range Improvement Target.   Asserting improvement target could be improved by the Amendment.  Object property that describes an enhancement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment.'
+'Origially had Domain: Amendment and Range: ImprovementTarget.   Asserts that an improvement target could be improved by the Amendment.  
+
+Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment.'
 
 
 ********************
@@ -2490,6 +2504,10 @@ ObjectProperty
 
 'Assserts that a Data Quality Need is part of a Policy'
 
+### Comment
+
+'Relates Policies to tests (DataQualityNeeds) .'
+
 
 ********************
 
@@ -2513,11 +2531,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Category of object properties that apply to Issues.'
 
 ### Comment
 
-'Category of properties that apply to Issues.'
+'Properties that relate Issues to IssiueMethods, Criteria, and dataQualityDimensions.'
 
 
 ********************
@@ -2542,7 +2560,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Category of object properties that apply to Measures.'
 
 ### Comment
 
@@ -2575,7 +2593,7 @@ ObjectProperty
 
 ### Comment
 
-'Connects Implementations with Assertions'
+'Connects Implementations (solutions) with the Assertions (reports) that they produce from the execution of a Specification.'
 
 
 ********************
@@ -2600,11 +2618,11 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Category of object properties that apply to Assertions.'
 
 ### Comment
 
-'Category of properties used in reports.'
+'Category of properties used in reports (object properties associated with Response objects (bdqffdq:Assertions)).  See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.'
 
 
 ********************
@@ -2633,7 +2651,7 @@ ObjectProperty
 
 ### Comment
 
-'The issue targeted by some problem via the ImprovementTarget object.'
+'The issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an improvement target and an Issue.'
 
 
 ********************
@@ -2691,7 +2709,7 @@ ObjectProperty
 
 ### Comment
 
-'Relates an improvement target to a Validation.  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract.'
+'Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Valication/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract.'
 
 
 ********************
@@ -2716,7 +2734,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Category of object properties that apply to Validations.'
 
 ### Comment
 
