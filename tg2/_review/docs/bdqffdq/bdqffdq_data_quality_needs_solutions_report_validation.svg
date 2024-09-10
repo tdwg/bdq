@@ -27,12 +27,12 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="0.52666493"
-     inkscape:cx="1431.6503"
-     inkscape:cy="763.29365"
+     inkscape:cx="768.04051"
+     inkscape:cy="763.29366"
      inkscape:window-width="1738"
      inkscape:window-height="1002"
      inkscape:window-x="71"
-     inkscape:window-y="1080"
+     inkscape:window-y="44"
      inkscape:window-maximized="0"
      inkscape:current-layer="surface31859" />
   <defs
@@ -3815,7 +3815,7 @@
          sodipodi:role="line"
          id="tspan7199"
          x="-120.23602"
-         y="565.4458">hasSpecification</tspan></text>
+         y="565.4458">usesSpecification</tspan></text>
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 59.950096,547.90021 -0.66987,11.16026 -3.08013,-4.66507 -5.58013,-0.33493 z m 0,0"
