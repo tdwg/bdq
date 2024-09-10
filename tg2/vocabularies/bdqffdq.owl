@@ -8,8 +8,8 @@
 @base <https://rs.tdwg.org/bdqffdq/terms/> .
 
 <https://rs.tdwg.org/bdqffdq/terms> rdf:type owl:Ontology ;
-                                     rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fittness for use tests in the BDQ Core (draft) TDWG Standard." ;
-                                     rdfs:label "Biodiversity Data Quality Fittnes for Use Framework" .
+                                     rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fitness for use tests in the BDQ Core (draft) TDWG Standard." ;
+                                     rdfs:label "Biodiversity Data Quality Fitness for Use Framework" .
 
 #################################################################
 #    Annotation properties
@@ -30,7 +30,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 :amendmentProperty rdf:type owl:ObjectProperty ;
                    rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." ;
-                   rdfs:label "amendment  Property" ;
+                   rdfs:label "amendment Property" ;
                    skos:definition "Category of object properties that apply to Amendmentts" ;
                    skos:prefLabel "amendment Property" .
 
@@ -54,7 +54,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
 :forAmendment rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :amendmentProperty ;
-              rdfs:comment "Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions)  and an Amendment (needs)." ;
+              rdfs:comment "Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs)." ;
               rdfs:label "for Amendment" ;
               skos:definition "Relates an AmendmentMethod to an Amendment." ;
               skos:prefLabel "for Amendment" .
@@ -100,7 +100,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                                 rdfs:subPropertyOf :hasInformationElement ;
                                 rdfs:comment "Provides a relationship between bdqffdq concepts and the information elements that are ActedUpon in a test."@en ;
                                 rdfs:label "has Acted Upon Information Element" ;
-                                skos:definition "Describes the ActedUpon InformationElements assessed by a DataQiualityNeed about which Assertions arising from the DataQualityNeed would apply." ;
+                                skos:definition "Describes the ActedUpon InformationElements assessed by a DataQualityNeed about which Assertions arising from the DataQualityNeed would apply." ;
                                 skos:prefLabel "has Acted Upon Information Element" .
 
 
@@ -109,7 +109,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                                 rdfs:subPropertyOf :hasInformationElement ;
                                 rdfs:comment "Provides a relationship between bdqffdq concepts and the information elements that are Consulted, but not ActedUpon in a test."@en ;
                                 rdfs:label "has Consulted Information Element" ;
-                                skos:definition "Describes the InformationElements assessed by a DataQiualityNeed in order to make Assertions concerning ActedUpon InformationElements." ;
+                                skos:definition "Describes the InformationElements assessed by a DataQualityNeed in order to make Assertions concerning ActedUpon InformationElements." ;
                                 skos:prefLabel "has Consulted Information Element" .
 
 
@@ -170,9 +170,9 @@ Under the original formulation of the Framework, only Measures have Dimensions."
                                    ] ;
                        rdfs:comment """Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
 
-Subtypes hasActedUponInformationElment and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).""" ;
+Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).""" ;
                        rdfs:label "has Information Element" ;
-                       skos:definition "Describes the InformationElements assessed by a DataQiualityNeed." ;
+                       skos:definition "Describes the InformationElements assessed by a DataQualityNeed." ;
                        skos:prefLabel "has Information Element" .
 
 
@@ -196,11 +196,11 @@ Subtypes hasActedUponInformationElment and hasConsultedInformationElement allow 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResult
 :hasResponseResult rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :reportProperty ;
-                   rdfs:comment """Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so.  MeasurementAssertion ResponseResults may be objects or data.  
+                   rdfs:comment """Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
 
  If Response.results are not objects, use the datatype property hasResponseResultValue"""@en ;
                    rdfs:label "has Response Result" ;
-                   skos:definition "ResponseResult object asserted by a Assertion." ;
+                   skos:definition "ResponseResult object asserted by an Assertion." ;
                    skos:prefLabel "has Response Result" .
 
 
@@ -211,7 +211,7 @@ Subtypes hasActedUponInformationElment and hasConsultedInformationElement allow 
 
 ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.""" ;
                    rdfs:label "has Response Status" ;
-                   skos:definition "ResponseStatus object asserted by a Assertion." ;
+                   skos:definition "ResponseStatus object asserted by an Assertion." ;
                    skos:prefLabel "has Response Status" .
 
 
@@ -272,7 +272,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/issueProperty
 :issueProperty rdf:type owl:ObjectProperty ;
-               rdfs:comment "Properties that relate Issues to IssiueMethods, Criteria, and dataQualityDimensions." ;
+               rdfs:comment "Properties that relate Issues to IssueMethods, Criteria, and dataQualityDimensions." ;
                rdfs:label "issue Property" ;
                skos:definition "Category of object properties that apply to Issues." ;
                skos:prefLabel "issue Property" .
@@ -290,7 +290,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 :producesAssertion rdf:type owl:ObjectProperty ;
                    rdfs:comment "Connects Implementations (solutions) with the Assertions (reports) that they produce from the execution of a Specification." ;
                    rdfs:label "produces Assertion" ;
-                   skos:definition "Connects an entity that creates an assertion with the assertion." ;
+                   skos:definition "Connects an entity with an assertion that the entity created." ;
                    skos:prefLabel "produces Assertion" .
 
 
@@ -333,7 +333,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
                                   owl:onProperty :targetedValidation ;
                                   owl:someValuesFrom :Validation
                                 ] ;
-                    rdfs:comment "Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Valication/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract."@en ;
+                    rdfs:comment "Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract."@en ;
                     rdfs:label "targeted Validatiohn"@en ;
                     skos:definition "Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
                     skos:prefLabel "targeted Validation"@en .
@@ -371,7 +371,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
 :hasResponseComment rdf:type owl:DatatypeProperty ;
-                    rdfs:comment "Intended for consumption by human readers of data qualiy reports to understand why particular assertions were made." ;
+                    rdfs:comment "Intended for consumption by human readers of data quality reports to understand why particular assertions were made." ;
                     rdfs:label "has Response Comment" ;
                     skos:definition "Free text describing the assertion made in the response and why that conclusion was reached." ;
                     skos:prefLabel "has Response Comment" .
@@ -430,7 +430,7 @@ AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
 :AmendmentAssertion rdf:type owl:Class ;
                     rdfs:subClassOf :AmendmentConcept ,
                                     :Assertion ;
-                    rdfs:comment """The Amendment assertion type is a report level concept that describes the results of the execution of of a test that performs an AmendmentMethod following some Specification  to proposes changes based on some Amendment. 
+                    rdfs:comment """The Amendment assertion type is a report level concept that describes the results of the execution of of a test that performs an AmendmentMethod following some Specification to propose changes based on some Amendment. 
 
 An Amendment concept in bdqffdq is expected to carry a ResponseStatus result that includes a status FILLED_IN, AMENDED, as well as a ResponseResult that asserts proposed changes to values from the original data.
 
@@ -573,7 +573,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 
 ###  https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept
 :FundamentalConcept rdf:type owl:Class ;
-                    rdfs:comment "Contrast with derived concepts, which are compositions of two or more fundamental concepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into Amendment Concept, Validation Concept, Measurement concept or Issue concept.  Derived concepts can also be organized by framework layer into Needs Concept, Solutions Concept, and Report Concept." ;
+                    rdfs:comment "Contrast with derived concepts, which are compositions of two or more fundamental concepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into AmendmentConcept, ValidationConcept, MeasurementConcept or IssueConcept.  Derived concepts can also be organized by framework layer into NeedsConcept, SolutionsConcept, and ReportConcept." ;
                     rdfs:label "Fundamental Concept"@en ;
                     skos:definition "Category of fitness for use concepts that are not derived by composition with other concepts."@en ;
                     skos:prefLabel "Fundamental Concept"@en .
@@ -626,7 +626,7 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }"""@en ;
 :IssueAssertion rdf:type owl:Class ;
                 rdfs:subClassOf :Assertion ,
                                 :IssueConcept ;
-                rdfs:comment """The data quality report concept describing a the result of a test in the negative, that is  identifying the potential absence of data quality. 
+                rdfs:comment """The data quality report concept describing a the result of a test in the negative, that is identifying the potential absence of data quality. 
 
 If a problem was found the ResponseResult is expected to carry a a value of IS_ISSUE, if a potential problem was found that needs human review the ResponseResult is expected to be of POTENTIAL_ISSUE, otherwise if the ResponseStatus is RUN_HAS_RESULT,  the ResponseResult is expected to be NOT_ISSUE.""" ;
                 rdfs:label "Issue Assertion"@en ;
@@ -656,7 +656,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 :IssuePolicy rdf:type owl:Class ;
              rdfs:subClassOf :IssueConcept ,
                              :Policy ;
-             rdfs:comment "The ProblemPolicy in bdqffdq is a data quality Needs level concept that describes how some contextualizedIssue relates to a UseCase. This relationship defines which problems are supported by a given UseCase." ;
+             rdfs:comment "The IssuePolicy in bdqffdq is a data quality Needs level concept that describes how some Issue relates to a UseCase. This relationship defines which Issues are supported by a given UseCase." ;
              rdfs:label "Issue Policy"@en ;
              skos:definition "A need concept that relates a UseCase to a set of supporting Issues." ;
              skos:prefLabel "Issue Policy"@en .
@@ -666,7 +666,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 :Measure rdf:type owl:Class ;
          rdfs:subClassOf :DataQualityNeed ,
                          :MeaurementConcept ;
-         rdfs:comment """Contextualized Dimension in the original framework  Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord. 
+         rdfs:comment """Contextualized Dimension in the original framework Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord. 
 
 Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data that have quality for some need if all records are COMPLETE for all pertenent Measures. 
 
@@ -684,7 +684,7 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}"""@en ;
 :MeasurementAssertion rdf:type owl:Class ;
                       rdfs:subClassOf :Assertion ,
                                       :MeaurementConcept ;
-                      rdfs:comment """The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod according following some Specification  to assess some data quality Measurement. 
+                      rdfs:comment """The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod following some Specification to assess some data quality Measurement. 
 
 In bdqffdq, the MeasurementAssertion is expected to carry a ResponseResult of COMPLETE or NOT_COMPLETE or a numeric measured value value (e.g. a measure of dwc:eventDate duration in seconds).
 
@@ -748,7 +748,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 ###  https://rs.tdwg.org/bdqffdq/terms/Parameter
 :Parameter rdf:type owl:Class ;
            rdfs:subClassOf :SolutionsConcept ;
-           rdfs:comment "An extension to the original fittness for use framework as described in Veiga et al., 2017." ;
+           rdfs:comment "An extension to the original fitness for use framework as described in Veiga et al., 2017." ;
            rdfs:label "Parameter"@en ;
            skos:definition "A value that, when provided to a test Specification changes the behavior of the test in a defined manner."@en ;
            skos:prefLabel "Parameter"@en .
@@ -857,7 +857,7 @@ VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }"""@en ;
 :ValidationAssertion rdf:type owl:Class ;
                      rdfs:subClassOf :Assertion ,
                                      :ValidationConcept ;
-                     rdfs:comment """The ValidationAssertion is a report level concept that describes the results of the execution of of a test that performs a ValidationMethod according following some Specification  to assess the validity of some data with respect to the Criteria of some Validation. 
+                     rdfs:comment """The ValidationAssertion is a report level concept that describes the results of the execution of of a test that performs a ValidationMethod following some Specification to assess the validity of some data with respect to the Criteria of some Validation. 
 
 The ValidationAssertion concept in bdqffdq is expected to carry a a ResponseResult of COMPLIANT or NON_COMPLIANT.
 

@@ -115,7 +115,7 @@ Class
 
 ### Comment
 
-'Contrast with derived concepts, which are compositions of two or more fundamental concepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into Amendment Concept, Validation Concept, Measurement concept or Issue concept.  Derived concepts can also be organized by framework layer into Needs Concept, Solutions Concept, and Report Concept.'
+'Contrast with derived concepts, which are compositions of two or more fundamental concepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into AmendmentConcept, ValidationConcept, MeasurementConcept or IssueConcept.  Derived concepts can also be organized by framework layer into NeedsConcept, SolutionsConcept, and ReportConcept.'
 
 
 ********************
@@ -318,7 +318,7 @@ bdqffdq:AmendmentConcept|bdqffdq:Assertion
 
 ### Comment
 
-'The Amendment assertion type is a report level concept that describes the results of the execution of of a test that performs an AmendmentMethod following some Specification  to proposes changes based on some Amendment. 
+'The Amendment assertion type is a report level concept that describes the results of the execution of of a test that performs an AmendmentMethod following some Specification to propose changes based on some Amendment. 
 
 An Amendment concept in bdqffdq is expected to carry a ResponseStatus result that includes a status FILLED_IN, AMENDED, as well as a ResponseResult that asserts proposed changes to values from the original data.
 
@@ -499,7 +499,7 @@ bdqffdq:Assertion|bdqffdq:IssueConcept
 
 ### Comment
 
-'The data quality report concept describing a the result of a test in the negative, that is  identifying the potential absence of data quality. 
+'The data quality report concept describing a the result of a test in the negative, that is identifying the potential absence of data quality. 
 
 If a problem was found the ResponseResult is expected to carry a a value of IS_ISSUE, if a potential problem was found that needs human review the ResponseResult is expected to be of POTENTIAL_ISSUE, otherwise if the ResponseStatus is RUN_HAS_RESULT,  the ResponseResult is expected to be NOT_ISSUE.'
 
@@ -602,7 +602,7 @@ bdqffdq:DataQualityNeed|bdqffdq:MeaurementConcept
 
 ### Comment
 
-'Contextualized Dimension in the original framework  Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord. 
+'Contextualized Dimension in the original framework Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord. 
 
 Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data that have quality for some need if all records are COMPLETE for all pertenent Measures. 
 
@@ -915,7 +915,7 @@ bdqffdq:MeaurementConcept|bdqffdq:Assertion
 
 ### Comment
 
-'The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod according following some Specification  to assess some data quality Measurement. 
+'The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod following some Specification to assess some data quality Measurement. 
 
 In bdqffdq, the MeasurementAssertion is expected to carry a ResponseResult of COMPLETE or NOT_COMPLETE or a numeric measured value value (e.g. a measure of dwc:eventDate duration in seconds).
 
@@ -1222,7 +1222,7 @@ bdqffdq:Policy|bdqffdq:IssueConcept
 
 ### Comment
 
-'The ProblemPolicy in bdqffdq is a data quality Needs level concept that describes how some contextualizedIssue relates to a UseCase. This relationship defines which problems are supported by a given UseCase.'
+'The IssuePolicy in bdqffdq is a data quality Needs level concept that describes how some Issue relates to a UseCase. This relationship defines which Issues are supported by a given UseCase.'
 
 
 ********************
@@ -1597,7 +1597,7 @@ bdqffdq:SolutionsConcept
 
 ### Comment
 
-'An extension to the original fittness for use framework as described in Veiga et al., 2017.'
+'An extension to the original fitness for use framework as described in Veiga et al., 2017.'
 
 
 ********************
@@ -1630,7 +1630,7 @@ bdqffdq:ValidationConcept|bdqffdq:Assertion
 
 ### Comment
 
-'The ValidationAssertion is a report level concept that describes the results of the execution of of a test that performs a ValidationMethod according following some Specification  to assess the validity of some data with respect to the Criteria of some Validation. 
+'The ValidationAssertion is a report level concept that describes the results of the execution of of a test that performs a ValidationMethod following some Specification to assess the validity of some data with respect to the Criteria of some Validation. 
 
 The ValidationAssertion concept in bdqffdq is expected to carry a a ResponseResult of COMPLIANT or NON_COMPLIANT.
 
@@ -1761,7 +1761,7 @@ DataProperty
 
 ### Comment
 
-'Intended for consumption by human readers of data qualiy reports to understand why particular assertions were made.'
+'Intended for consumption by human readers of data quality reports to understand why particular assertions were made.'
 
 
 ********************
@@ -1877,7 +1877,7 @@ https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 
 ### Label
 
-'amendment  Property'
+'amendment Property'
 
 ### Type
 
@@ -1976,7 +1976,7 @@ ObjectProperty
 
 ### Comment
 
-'Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions)  and an Amendment (needs).'
+'Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs).'
 
 
 ********************
@@ -2088,7 +2088,7 @@ ObjectProperty
 
 ### Definition
 
-'Describes the ActedUpon InformationElements assessed by a DataQiualityNeed about which Assertions arising from the DataQualityNeed would apply.'
+'Describes the ActedUpon InformationElements assessed by a DataQualityNeed about which Assertions arising from the DataQualityNeed would apply.'
 
 ### Comment
 
@@ -2117,7 +2117,7 @@ ObjectProperty
 
 ### Definition
 
-'Describes the InformationElements assessed by a DataQiualityNeed in order to make Assertions concerning ActedUpon InformationElements.'
+'Describes the InformationElements assessed by a DataQualityNeed in order to make Assertions concerning ActedUpon InformationElements.'
 
 ### Comment
 
@@ -2235,13 +2235,13 @@ ObjectProperty
 
 ### Definition
 
-'Describes the InformationElements assessed by a DataQiualityNeed.'
+'Describes the InformationElements assessed by a DataQualityNeed.'
 
 ### Comment
 
 'Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
 
-Subtypes hasActedUponInformationElment and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).'
+Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).'
 
 
 ********************
@@ -2324,11 +2324,11 @@ ObjectProperty
 
 ### Definition
 
-'ResponseResult object asserted by a Assertion.'
+'ResponseResult object asserted by an Assertion.'
 
 ### Comment
 
-'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so.  MeasurementAssertion ResponseResults may be objects or data.  
+'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
 
  If Response.results are not objects, use the datatype property hasResponseResultValue'
 
@@ -2355,7 +2355,7 @@ ObjectProperty
 
 ### Definition
 
-'ResponseStatus object asserted by a Assertion.'
+'ResponseStatus object asserted by an Assertion.'
 
 ### Comment
 
@@ -2537,7 +2537,7 @@ ObjectProperty
 
 ### Comment
 
-'Properties that relate Issues to IssiueMethods, Criteria, and dataQualityDimensions.'
+'Properties that relate Issues to IssueMethods, Criteria, and dataQualityDimensions.'
 
 
 ********************
@@ -2591,7 +2591,7 @@ ObjectProperty
 
 ### Definition
 
-'Connects an entity that creates an assertion with the assertion.'
+'Connects an entity with an assertion that the entity created.'
 
 ### Comment
 
@@ -2711,7 +2711,7 @@ ObjectProperty
 
 ### Comment
 
-'Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Valication/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract.'
+'Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract.'
 
 
 ********************
