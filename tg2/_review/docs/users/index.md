@@ -28,17 +28,15 @@ Each test is intended to examine just one specific aspect of data quality.   Tes
 
 ## Kinds of Tests and what they do
 
-
-
 A Validation examines specific elements in the data (that is, particular Darwin Core terms) and asks whether those data conform to a single specific criterion for quality.
 
 An Amendment examines specific elements in the data and asks if it can propose changes to improve the quality of the data under a single specific criterion for quality.
 
-Issues are like Validations, but they can identify potential problems in the data that may or may not be problems for all users of the same data. For example, there is a Validation that identifies whether or not dwc:dataGeneralizations contains any value, if it does, then users need to examine the specific statements made and evaluate them against their quality needs.  These are different from Validations which assert that the data are fit for use or not.  
+Issues are like Validations, but they can identify potential problems in the data that may or may not be problems for all users of the same data. For example, there is a Validation that identifies whether or not dwc:dataGeneralizations contains any value, if it does, then users need to examine the specific statements made and evaluate them against their quality needs.  These are different from Validations which assert that the data are fit for use or not.   Issues are a form of warning flag where the test is drawing attention to potential problem with the value of a Darwin Core term for at least one use case. 
 
-Measures count things.
+Measures either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  
 
-## Parts of a Response from a test.
+## Parts of a Response from a test. (normative) 
 
 Reports SHOULD identify tests to you using at least the skos:prefLabel for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
@@ -63,33 +61,20 @@ A Measure returns a numeric value or INTERNAL_PREREQUISITES_NOT_MET. Most Measur
 
 Issues
 
-Issues are a form of warning flag where the test is drawing attention to potential problem with the value of a Darwin Core term for at least one use case. 
-Issues result in a Response.status of "RUN_HAS_RESULT" and a Response.status of ISSUE, "POTENTIAL_ISSUE" or "NOT_ISSUE".  Potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.  
+Issues result in a Response.status of "RUN_HAS_RESULT" and a Response.status of ISSUE, "POTENTIAL_ISSUE" or "NOT_ISSUE".  Potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.   An issue that reports ISSUE is making an assertions that is the same as a Validation reporting a Response.result of NOT_COMPLIANT, in this sense, Issues are the converse of Validations.  The meaning, however, of NOT_ISSUE from an Issue is not the same as COMPLIANT from a Validation.  NOT_ISSUE means that no issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisify some critierion for fitness for some use.  POTENTIAL_ISSUE has no analog in validations, it marks the presence of something in the data that will need evaluation by a human to determine whether or not the data are fit for their use or not.  One Issue in BDQ Core evaluates whether dwc:dataGeneralizations contains any value, if it does, then it reports POTENTIAL_ISSUE, meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose.  See: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../bdqcore/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY)  Very few Issues are defined in BDQ Core.
 
 
-### Reading the Quick Reference Guide to the tests
+### Reading the Quick Reference Guide to the tests (non-normative)
 
-The BDQ Core Quick Reference Guide lists the tests by a subset of Descriptors. This subset provides a summary of the nature of each of the tests, and some Descriptors can be used to filter the tests to those that may be applicable to an application.
+The BDQ Core Quick Reference Guide lists the tests by a subset of Descriptors. This subset provides a summary of the nature of each of the tests, and some Descriptors can be used to filter the tests to those that may be applicable to an application.   An index is provided for each test by UseCase.  Both SingleRecord tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
-The following block of text is from the QRG:
+For each test, the Quick Reference Guide lists ways to identify the test (Label: the brief human readable means for identifying a test; skos:prefLabel: a human readable label spelled out in words; Versioned IRI: the means for software to identify the test).  It is noted whether a test operates on SingleRecords or a MultiRecord (data set).   A brief description of what the test is intended to do is provided, along with a more detailed description for implementors (consisting of Specification, InformationElements ActedIpon and Consulted, any Paramters that could change the behaviour of the tests, default values for any bdq:sourceAuthority consulted by the test or other parameters).  
 
-**rdfs:Label** [normative]: A brief human-readable label for consumers and implementors using the structure TESTTYPE_INFORMATIONELEMENT_CRITERION e.g. VALIDATION_COUNTRYCODE_STANDARD\
-**skos:prefLabel** [normative]: A human readable label that follows the pattern 'Test Type' 'Focus Information Element' 'Criterion'. Example: "Validation dwc:countryCode Standard"\
-**Versioned IRI** [normative]:A machine readable unique identifier with a Date Last Updated appended. Example: "0493bcfb-652e-4d17-815b-b0cce0742fb 2024-08-30"\
-**Resource Type** [normative]: What record type the tests operate on - 'SingleRecord' or 'MultiRecord'. Example: "bdqffdq:SingleRecord"\
-**Description** [non-normative]: A non-technical description of what the test does. Example: "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?"\
-<!--- Darwin Core Class isn't present in the RDF, part of rationale management, not terms --->
-<!--- **Information Element Class** [non-normative]: The focus Darwin Core Class. Example: "dwc:Location"\--->
-**Specification** [normative]: The concise logic of the test for implementors. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is EMPTY; COMPLIANT if there is a match of the contents of dwc:scientificName with the bdq:sourceAuthority; otherwise NOT_COMPLIANT"\
-**Information Elements ActedUpon** [normative]: For implementors and consumers. A list of Darwin Core terms that are the focus of the test. Example: "dwc:countryCode"\
-**Information Elements Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the Information Elements ActedUpon. Example: "dwc:country"\
-**Parameters** [normative]: Any parameters that change the behavior of the test for a subset of users with special data quality needs within the domain. Example: "bdq:taxonIsMarine.\
-**Default Parameter Values** [normative]: The default values for any bdq:sourceAuthority and any paramters used in the Specification that define the default behavior of the test. Example: bdq:maximumValidElevationInMeters default = "8850" .\
-**Examples** [non-normative]: 'Pass' and 'Fail' examples of inputs and outputs for the test from the Test Validation Data. Example: "[dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in bdq:sourceAuthority"]
-[dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in bdq:sourceAuthority"]"\
-**Use Cases** [non-normative]: For Consumers and Implementors. Descriptions of data example quality needs that this test helps to support. Example: "bdq:Record-Management", "bdq:alien-species"
-**Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."\
+Two examples are given, each illustrating opposing behaviors of the test. For Validations, one example provides a Response.result of COMPLIANT, the other of NOT_COMPLIANT.  See the implementation guide for information on a larger set of test validation data.   
 
+A list of UseCases describing data quality needs to which each test is seen to be applicable is provided, along with notes that provide additional guidance for understanding test results and for implementation.  
+
+[Quick Reference Guide to the tests](../bdqcore/index.md)
 
 ## Amendments only propose changes
 
