@@ -1824,7 +1824,7 @@ NamedIndividual
 
 ### Comment
 
-'A data set.'
+'A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset'
 
 
 ********************
@@ -1849,11 +1849,13 @@ NamedIndividual
 
 ### Definition
 
-nan
+'A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need.'
 
 ### Comment
 
-'A record from a dataset.  May be a single row in a table, or rows related across several tables, or a graph of data.   Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).'
+'A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).
+
+A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset'
 
 
 ********************

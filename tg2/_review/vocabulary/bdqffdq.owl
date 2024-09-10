@@ -8,7 +8,7 @@
 @base <https://rs.tdwg.org/bdqffdq/terms/> .
 
 <https://rs.tdwg.org/bdqffdq/terms> rdf:type owl:Ontology ;
-                                     rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731" ;
+                                     rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fittness for use tests in the BDQ Core (draft) TDWG Standard." ;
                                      rdfs:label "Biodiversity Data Quality Fittnes for Use Framework" .
 
 #################################################################
@@ -906,7 +906,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 :MultiRecord rdf:type owl:NamedIndividual ,
                       :ResourceType ;
-             rdfs:comment "A data set." ;
+             rdfs:comment "A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset" ;
              rdfs:label "Multi Record"@en ;
              skos:definition "A set of one or more Single Records." ;
              skos:prefLabel "Multi Record" .
@@ -915,8 +915,11 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/SingleRecord
 :SingleRecord rdf:type owl:NamedIndividual ,
                        :ResourceType ;
-              rdfs:comment "A record from a dataset.  May be a single row in a table, or rows related across several tables, or a graph of data.   Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities)."@en ;
+              rdfs:comment """A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).
+
+A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset"""@en ;
               rdfs:label "Single Record"@en ;
+              skos:definition "A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need." ;
               skos:prefLabel "Single Record" .
 
 
