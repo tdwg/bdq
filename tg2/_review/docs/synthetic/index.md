@@ -1,4 +1,4 @@
-# Title: Biodiversity Data Quality (BDQ) Core: Identifying Synthetic and Modified Data
+# Biodiversity Data Quality (BDQ) Core: Identifying Synthetic and Modified Data
 
 **Date version issued**: (Draft)
 
