@@ -10,5 +10,5 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-BDQ Core Maintenance Group. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://bdq.tdwg.org/
+BDQ Core Maintenance Group. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://bdq.tdwg.org/terms/
 
