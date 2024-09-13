@@ -82,6 +82,7 @@ if has_namespace:
 # Load the contributors YAML file from its GitHub URL
 contributors_yaml_url = githubBaseUri + config_file_path + contributors_yaml_file
 contributors_yaml = requests.get(contributors_yaml_url).text
+print(contributors_yaml_url)
 if contributors_yaml == '404: Not Found':
     print('Contributors YAML file not found. Check the URL.')
     print(contributors_yaml_url)
@@ -503,8 +504,15 @@ headerObject.close()
 contributors = ''
 separator = ''
 for contributor in contributors_yaml:
-    contributors += separator + '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
-    contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + '))'
+    if contributor['contributor_iri'] :
+        contributors += separator + '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
+    else : 
+        contributors += separator + contributor['contributor_literal'] + ' '
+    if contributor['affiliation'] :
+        if contributor['affiliation_uri'] :
+            contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + '))'
+        else :
+            contributors += '(' + contributor['affiliation'] + ')'
     separator = ", "
 
 # Substitute values of ratification_date and contributors into the header template
