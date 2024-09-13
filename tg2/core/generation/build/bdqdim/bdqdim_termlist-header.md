@@ -38,12 +38,6 @@ Bibliographic citation
 
 {comment}
 
-<!--- TODO put values in yaml configuration file --->
-
-**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Anytonio M Saraiva, Yi Ming Gan
-
-**Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
-
 
 ## 1 Introduction
 [!--- JRW finished first draft to here ---]
