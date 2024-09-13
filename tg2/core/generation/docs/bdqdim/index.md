@@ -1,26 +1,44 @@
+<!--- Template for header, values provided from yaml configuration --->
 # Data Quality Dimension Controlled Vocabulary List of Terms
 
-**Title**: Data Quality Dimension Controlled Vocabulary List of Terms
+Title
+: Data Quality Dimension Controlled Vocabulary List of Terms
 
-**Namespace URI**: <http://rs.tdwg.org/bdqdim/values/>
+Date version issued
+: 2024-09-10
 
-**Preferred namespace abbreviation**: bdqdim:
+Date created
+: 2024-09-10
 
-**Date version issued**: 2024-09-10
+Part of TDWG Standard
+: <http://example.org/to_be_determined>
 
-**Date created**: 2024-09-10
+Preferred namespace abbreviation
+: bdqdim
 
-**Part of TDWG Standard**: <http://www.tdwg.org/standards/[*******]>
+This version
+: <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
 
-**This document version**: <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+Latest version
+: <http://rs.tdwg.org/bdqcore/terms/>
 
-**Latest version of document**: <http://rs.tdwg.org/bdq/doc/dim/>
+Abstract
+: This document is a reference for the (Draft) BDQ Core Standard, documenting vocabulary values for the BDQ Core term Dimension.  Dimension describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate precision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution.
 
-**Abstract**: The BDQ Core term `Dimension` describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate precision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution. 
+Contributors
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Atlas of Living Australia](http://www.wikidata.org/entity/Q16335177)), [Arthur Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660))
+
+Creator
+: TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions)
+
+Bibliographic citation
+: TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions). 2024. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+
+Draft Standard for Submission
+
+<!--- TODO put values in yaml configuration file --->
 
 **Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Anytonio M Saraiva, Yi Ming Gan
-
-**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 1 (Framework on Data Quality) and Task Group 2 (Data Quality Tests and Assertions)
 
 **Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
 
@@ -275,5 +293,31 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 		</tr>
 	</tbody>
 </table>
+
+
+
+## Cite BDQ Core
+
+**To cite BDQ Core in general, use the peer-reviewed article:**
+
+Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
+M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
+Benson A, Schigel D (2020). Developing Standards for Improved Data
+Quality and for Selecting Fit for Use Biodiversity Data.
+Biodiversity Information Science and Standards 4: e50889.
+https://doi.org/10.3897/biss.4.50889
+
+**To cite the standard document upon which this page is built, use
+the following:**
+
+BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
+
+**To cite this document specifically, use the following:**
+
+TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions). 2024. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+
+**Biodiversity Information Standards (TDWG)**
+
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
 
 

@@ -517,6 +517,7 @@ header = header.replace('{current_iri}', document_configuration_yaml['current_ir
 header = header.replace('{abstract}', document_configuration_yaml['abstract'])
 header = header.replace('{creator}', document_configuration_yaml['creator'])
 header = header.replace('{publisher}', document_configuration_yaml['publisher'])
+header = header.replace('{comment}', document_configuration_yaml['comment'])
 year = document_configuration_yaml['doc_modified'].split('-')[0]
 header = header.replace('{year}', year)
 if has_namespace:
@@ -551,6 +552,15 @@ else:
 footerObject = open(footerFileName, 'rt', encoding='utf-8')
 footer = footerObject.read()
 footerObject.close()
+footer = footer.replace('{license_statement}', document_configuration_yaml['license_statement'])
+footer = footer.replace('{publisher}', document_configuration_yaml['publisher'])
+footer = footer.replace('{license_uri}', document_configuration_yaml['license_uri'])
+footer = footer.replace('{publisher}', document_configuration_yaml['publisher'])
+footer = footer.replace('{creator}', document_configuration_yaml['creator'])
+footer = footer.replace('{year}', year)
+footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
+footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
+footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 
 output = header + text + footer
 outputObject = open(outFileName, 'wt', encoding='utf-8')

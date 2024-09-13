@@ -1,28 +1,46 @@
-# Data Quality Dimension Controlled Vocabulary List of Terms
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
-**Title**: Data Quality Dimension Controlled Vocabulary List of Terms
+Title
+: {document_title}
 
-**Namespace URI**: <http://rs.tdwg.org/bdqdim/values/>
+Date version issued
+: {ratification_date}
 
-**Preferred namespace abbreviation**: bdqdim:
+Date created
+: {created_date}
 
-**Date version issued**: {ratification_date}
+Part of TDWG Standard
+: <{standard_iri}>
 
-**Date created**: {created_date}
+Preferred namespace abbreviation
+: {pref_namespace_prefix}
 
-**Part of TDWG Standard**: <http://www.tdwg.org/standards/[*******]>
+This version
+: <{current_iri}{ratification_date}>
 
-**This document version**: <{current_iri}{ratification_date}>
-
-**Latest version of document**: <http://rs.tdwg.org/bdq/doc/dim/>
+Latest version
+: <{current_iri}>
 
 {previous_version_slot}
 
-**Abstract**: The BDQ Core term `Dimension` describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, "precision" in "coordinate precision of single records". Includes Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution. 
+Abstract
+: {abstract}
+
+Contributors
+: {contributors}
+
+Creator
+: {creator}
+
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+{comment}
+
+<!--- TODO put values in yaml configuration file --->
 
 **Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Anytonio M Saraiva, Yi Ming Gan
-
-**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 1 (Framework on Data Quality) and Task Group 2 (Data Quality Tests and Assertions)
 
 **Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
 
