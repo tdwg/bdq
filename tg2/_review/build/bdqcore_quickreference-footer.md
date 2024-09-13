@@ -9,6 +9,12 @@ Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER,
 BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
 
 **To cite this document specifically, use the following:**
-
+<!--- TODO: move citation elements to document_configuration.yaml --->
 BDQ Core Maintenance Group. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://bdq.tdwg.org/terms/
+
+{creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+**{publisher}**
+
+This content made open by {publisher} is licensed under a [{license_statement}]({license_uri})
 
