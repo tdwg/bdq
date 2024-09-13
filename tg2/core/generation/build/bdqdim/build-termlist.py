@@ -501,10 +501,11 @@ headerObject.close()
 
 # Build the Markdown for the contributors list
 contributors = ''
+separator = ''
 for contributor in contributors_yaml:
-    contributors += '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
-    contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + ')), '
-contributors = contributors[:-2] # Remove the last comma and space
+    contributors += separator + '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
+    contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + '))'
+    separator = ", "
 
 # Substitute values of ratification_date and contributors into the header template
 print(document_configuration_yaml)
