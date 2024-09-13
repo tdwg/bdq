@@ -562,7 +562,9 @@ footer = footer.replace('{document_title}', document_configuration_yaml['documen
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 
-output = header + text + footer
+warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
+
+output = warning + header + text + footer
 outputObject = open(outFileName, 'wt', encoding='utf-8')
 outputObject.write(output)
 outputObject.close()
