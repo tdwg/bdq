@@ -33,3 +33,38 @@
   affiliation: Royal Belgian Institute of Natural Sciences
   affiliation_uri: http://www.wikidata.org/entity/Q16665660
 
+- contributor_iri: https://orcid.org/0000-0003-2283-1123
+  contributor_literal: Antonio Mauro Saraiva
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: University of São Paulo, Research Center on Biodiversity and Computing
+  affiliation_uri: 
+
+- contributor_iri: http://orcid.org/0000-0003-2672-8115 
+  contributor_literal: Alan Koch Veiga
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: 
+  affiliation_uri: 
+
+- contributor_iri: https://orcid.org/0000-0002-6056-5084
+  contributor_literal: Paula F Zermoglio 
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche
+  affiliation_uri: https://www.irnad.com/
+
+- contributor_iri: 
+  contributor_literal: Alexander Thompson
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: 
+  affiliation_uri: 
+
+- contributor_iri: 
+  contributor_literal: David Lowery
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: 
+  affiliation_uri: 
+
