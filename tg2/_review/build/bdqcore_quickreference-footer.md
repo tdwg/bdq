@@ -1,4 +1,4 @@
-**Cite BDQ Core**
+## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**
 
