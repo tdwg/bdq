@@ -1,4 +1,4 @@
-# Title: Biodiversity Data Quality (BDQ) Core Introduction
+# Biodiversity Data Quality (BDQ) Core Introduction
 
 **Date version issued**: (Draft)
 
