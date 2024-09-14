@@ -27,8 +27,8 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="0.52666493"
-     inkscape:cx="768.04051"
-     inkscape:cy="763.29366"
+     inkscape:cx="744.30625"
+     inkscape:cy="765.1924"
      inkscape:window-width="1738"
      inkscape:window-height="1002"
      inkscape:window-x="71"
@@ -2867,6 +2867,41 @@
          result="composite2"
          id="feComposite9889-1-0" />
     </filter>
+    <filter
+       inkscape:label="Fill Background"
+       inkscape:menu="Fill and Transparency"
+       inkscape:menu-tooltip="Adds a colorizable opaque background"
+       style="color-interpolation-filters:sRGB"
+       id="filter4968-9-9-3-67-5"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feFlood
+         result="result1"
+         flood-color="rgb(255,255,255)"
+         flood-opacity="1"
+         id="feFlood4956-2-0-0-3-9" />
+      <feImage
+         xlink:href=""
+         result="result2"
+         id="feImage4958-6-9-9-6-2" />
+      <feBlend
+         result="result4"
+         in2="result1"
+         mode="multiply"
+         id="feBlend4960-6-1-2-5-2" />
+      <feMerge
+         result="result3"
+         id="feMerge4966-4-7-5-6-8">
+        <feMergeNode
+           in="result1"
+           id="feMergeNode4962-9-7-4-3-9" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode4964-5-1-0-9-7" />
+      </feMerge>
+    </filter>
   </defs>
   <g
      id="surface31859"
@@ -4099,5 +4134,19 @@
          id="tspan64845"
          x="-2.3515003"
          y="442.45068">hasParameter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-9-3-67-5)"
+       x="75.865837"
+       y="845.38525"
+       id="text4277-04-1-59-1-36"><tspan
+         sodipodi:role="line"
+         id="tspan13929"
+         x="75.865837"
+         y="845.38525">containsAssertion</tspan></text>
+    <path
+       style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+       d="m 335.53312,802.90561 -9.99999,-5 2.49999,5 -2.49999,5 z m 0,0"
+       id="path1915-9-8-9-5" />
   </g>
 </svg>
