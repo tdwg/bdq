@@ -1865,6 +1865,35 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
+## https://rs.tdwg.org/bdqffdq/terms#containsAssertion
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms#containsAssertion
+
+### Preferred Label
+
+'Connects a Data Quality Report with Assertions that comprise that report.'|'contains Assertion'
+
+### Label
+
+'contains Assertion'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+nan
+
+### Comment
+
+'Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used.'
+
+
+********************
+
 ## bdqffdq:amendmentProperty
 
 ### Name
