@@ -26,9 +26,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="2549"
-     inkscape:cy="2406"
+     inkscape:zoom="0.28156197"
+     inkscape:cx="1765.1532"
+     inkscape:cy="1559.1595"
      inkscape:window-width="1572"
      inkscape:window-height="1048"
      inkscape:window-x="128"
@@ -4410,12 +4410,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
        x="-0.32733917"
-       y="891.1369"
+       y="897.1369"
        id="text3846-2-4-0-9-0-0-6-8"><tspan
          sodipodi:role="line"
          id="tspan7682"
          x="-0.32733917"
-         y="891.1369">ValidationAssertion</tspan></text>
+         y="897.1369">ValidationAssertion</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-3)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4465,16 +4465,6 @@
          id="tspan13371-5-4-5"
          x="-191.00136"
          y="626.87048">xsd:string</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="49.69619"
-       y="917.76947"
-       id="text3846-2-4-0-9-0-0-6-1-9"><tspan
-         sodipodi:role="line"
-         id="tspan7937"
-         x="49.69619"
-         y="917.76947">(Response)</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-9)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4493,7 +4483,7 @@
          y="668.04797">DataResource</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2.50762;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="M 4.9865865,716.24264 C -63.915015,562.53799 -60.232599,427.2449 -187.05667,313.70826"
+       d="M 4.9865865,716.24264 C -63.915015,562.53799 -90.392505,449.84353 114.35379,381.46481"
        id="path2165-0-15-4"
        sodipodi:nodetypes="cc" />
     <text
@@ -4502,7 +4492,7 @@
        x="153.82343"
        y="717.68445"
        id="text4277-04-1-59-1"
-       transform="translate(-316.14513,-223.14957)"><tspan
+       transform="translate(-276.44836,-228.40481)"><tspan
          id="tspan8086"
          x="153.82343"
          y="717.68445">producesAssertion</tspan></text>
