@@ -42,5 +42,8 @@ Preferred Citation
 - [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 - [References](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/references/index.md)
 - [BDQ Core Supplemental Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)
-- [BDQ Core Maintenance Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/maintenance/index.md)
+
+## Appendix
+
+- [BDQ Core Maintenance Guide (draft)](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/maintenance/index.md)
 - [GitHub repository](https://github.com/tdwg/bdq): where BDQ Core is maintained
