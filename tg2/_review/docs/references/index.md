@@ -63,6 +63,7 @@ The following references have been extracted from the "References" descriptor on
 <li>Sanderson R, Ciccarese P and Young B (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>
 <li>Seppälä S, Ruttenberg A, and Smith B (2017) Guidelines for writing definitions in ontologies. Ciência da Informação 46(1) pp 73-88. https://philpapers.org/archive/SEPGFW.pdf</li>
 <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org</li>
+<li>Veiga AK. (2016) A conceptual framework on biodiversity data quality [online]. São Paulo : Escola Politécnica, University of São Paulo. Doctoral Thesis in Sistemas Digitais. Available from: <http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/>.</li>
 <li>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017) A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</li>
 <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li>
 <li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>
