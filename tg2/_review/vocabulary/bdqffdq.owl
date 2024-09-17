@@ -55,8 +55,8 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :containsAssertion rdf:type owl:ObjectProperty ;
                    rdfs:comment "Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used." ;
                    rdfs:label "contains Assertion" ;
-                   skos:prefLabel "Connects a Data Quality Report with Assertions that comprise that report." ,
-                                  "contains Assertion" .
+                   skos:definition "Connects a Data Quality Report with Assertions that comprise that report." ;
+                   skos:prefLabel "contains Assertion" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
