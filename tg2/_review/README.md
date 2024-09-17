@@ -13,18 +13,34 @@ Work in progress description of files in this directory:
 ├── dist Generated csv distribution files for building other artifacts
 │   └── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name, purpose?
 ├── docs  human readable documentation files ultimately to be built from files in build
-│   ├── bdq
-│   ├── bdqdim
-│   ├── bdqffdq
-│   ├── implementers
-│   ├── intro
-│   ├── list
+│   ├── intro 
+│   ├── vocabularies
+│   ├── terms  Build targets for Quick reference guides Do not edit here
+│   │   └── bdqcore
+│   ├── list  Build targets for Human readable term list documents Do not edit here
+│   │   ├── bdq
+│   │   ├── bdqcore
+│   │   ├── bdqcrit
+│   │   ├── bdqdim
+│   │   ├── bdqenh
+│   │   └── bdqffdq
+│   ├── guide descriptive document build targets Do not edit here 
+│   │   ├── bdqffdq  build target for bdqffdq guide
+│   │   ├── implementers build target for implementors guide
+│   │   └── users build target for users guide
+│   ├── synthetic
+│   │   └── index.md
 │   ├── maintenance
+│   │   └── index.md
 │   ├── references
 │   ├── supplement
-│   ├── terms
-│   ├── users
-│   └── vocabularies
+│   ├── bdq to move
+│   ├── bdqdim to move
+│   ├── bdqffdq to move
+│   ├── implementers to move
+│   ├── list to move
+│   ├── terms to move
+│   └── users to move
 └── vocabulary ?should this just be the term version files, or do the deriviative vocabulary csv, xml, owl files go here?
     ├── .xml rdf/xml files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE **
     ├── .csv files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE ** 
