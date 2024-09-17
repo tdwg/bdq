@@ -13,6 +13,8 @@ cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_terms.csv
 cp ../vocabularies/bdqenh_terms.csv ../_review/vocabulary/bdqenh_terms.csv
 cp ../vocabularies/bdqcrit_terms.csv ../_review/vocabulary/bdqcrit_terms.csv
 
+cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_terms.csv
+
 # bdqcore files containing test descriptions
 
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_terms.csv
