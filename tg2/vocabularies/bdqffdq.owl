@@ -27,14 +27,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://rs.tdwg.org/bdqffdq/terms#containsAssertion
-:containsAssertion rdf:type owl:ObjectProperty ;
-                   rdfs:comment "Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used." ;
-                   rdfs:label "contains Assertion" ;
-                   skos:prefLabel "Connects a Data Quality Report with Assertions that comprise that report." ,
-                                  "contains Assertion" .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 :amendmentProperty rdf:type owl:ObjectProperty ;
                    rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." ;
@@ -57,6 +49,14 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
             rdfs:label "composed of" ;
             skos:definition "Specific vocabulary term that comprises a non-abstract Information Element." ;
             skos:prefLabel "composed of" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/containsAssertion
+:containsAssertion rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used." ;
+                   rdfs:label "contains Assertion" ;
+                   skos:prefLabel "Connects a Data Quality Report with Assertions that comprise that report." ,
+                                  "contains Assertion" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
@@ -211,6 +211,15 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
                  rdfs:label "has Resource Type" ;
                  skos:definition "Resource Type to which a DataQualityNeed applies." ;
                  skos:prefLabel "has Resource Type" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier
+:hasResponseQualifier rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :reportProperty ;
+                      rdfs:comment "Optional extension point, could be used to add structured information about uncertainty."@en ;
+                      rdfs:label "has Response Qualifier"@en ;
+                      skos:definition "ResponseQualifier object asserted by an Assertion." ;
+                      skos:prefLabel "has Response Qualifier"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResult
@@ -399,7 +408,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
 :hasResponseComment rdf:type owl:DatatypeProperty ;
-                    rdfs:comment "Intended for consumption by human readers of data quality reports to understand why particular assertions were made." ;
+                    rdfs:comment "Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment." ;
                     rdfs:label "has Response Comment" ;
                     skos:definition "Free text describing the assertion made in the response and why that conclusion was reached." ;
                     skos:prefLabel "has Response Comment" .
@@ -931,6 +940,72 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 #    Individuals
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms/AMENDED
+:AMENDED rdf:type owl:NamedIndividual ,
+                  :ResponseStatus ;
+         owl:differentFrom :NOT_AMENDED ;
+         rdfs:comment "AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property." ;
+         rdfs:label "AMENDED" ;
+         skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change." ;
+         skos:prefLabel "AMENDED" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/COMPLETE
+:COMPLETE rdf:type owl:NamedIndividual ,
+                   :ResponseResult ;
+          owl:differentFrom :NOT_COMPLETE ;
+          rdfs:comment "These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT." ;
+          rdfs:label "COMPLETE" ;
+          skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are present and sufficiently comprehensive for use." ;
+          skos:prefLabel "COMPLETE" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/COMPLIANT
+:COMPLIANT rdf:type owl:NamedIndividual ,
+                    :ResponseResult ;
+           owl:differentFrom :NOT_COMPLIANT ;
+           rdfs:label "COMPLIANT" ;
+           skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the criteria for quality in the test specification." ;
+           skos:prefLabel "COMPLIANT" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET
+:EXTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
+                                         :ResponseStatus ;
+                                owl:differentFrom :INTERNAL_PREREQUISITES_NOT_MET ;
+                                rdfs:label "EXTERNAL_PREREQUISITES_NOT_MET" ;
+                                skos:definition "A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result." ;
+                                skos:prefLabel "EXTERNAL_PREREQUISITES_NOT_MET" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/FILLED_IN
+:FILLED_IN rdf:type owl:NamedIndividual ,
+                    :ResponseStatus ;
+           owl:differentFrom :NOT_AMENDED ;
+           rdfs:label "FILLED_IN" ;
+           skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty." ;
+           skos:prefLabel "FILLED_IN" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET
+:INTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
+                                         :ResponseStatus ;
+                                rdfs:label "INTERNAL_PREREQUISITES_NOT_MET" ;
+                                skos:definition "A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response." ;
+                                skos:prefLabel "INTERNAL_PREREQUISITES_NOT_MET" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE
+:IS_ISSUE rdf:type owl:NamedIndividual ,
+                   :ResponseResult ;
+          owl:differentFrom :NOT_ISSUE ,
+                            :POTENTIAL_ISSUE ;
+          rdfs:comment "This is a paralell assertion to NOT_COMPLIANT" ;
+          rdfs:label "IS_ISSUE" ;
+          skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use." ;
+          skos:prefLabel "IS_ISSUE" .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 :MultiRecord rdf:type owl:NamedIndividual ,
                       :ResourceType ;
@@ -938,6 +1013,60 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
              rdfs:label "Multi Record"@en ;
              skos:definition "A set of one or more Single Records." ;
              skos:prefLabel "Multi Record" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
+:NOT_AMENDED rdf:type owl:NamedIndividual ,
+                      :ResponseStatus ;
+             rdfs:comment "No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties." ;
+             rdfs:label "NOT_AMENDED" ;
+             skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change." ;
+             skos:prefLabel "NOT_AMENDED" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
+:NOT_COMPLETE rdf:type owl:NamedIndividual ,
+                       :ResponseResult ;
+              rdfs:comment "These can be used to exclude data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT." ;
+              rdfs:label "NOT_COMPLETE" ;
+              skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for use." ;
+              skos:prefLabel "NOT_COMPLETE" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
+:NOT_COMPLIANT rdf:type owl:NamedIndividual ,
+                        :ResponseResult ;
+               rdfs:label "NOT_COMPLIANT" ;
+               skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the criteria for quality in the test specification." ;
+               skos:prefLabel "NOT_COMPLIANT" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE
+:NOT_ISSUE rdf:type owl:NamedIndividual ,
+                    :ResponseResult ;
+           owl:differentFrom :POTENTIAL_ISSUE ;
+           rdfs:comment "This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality." ;
+           rdfs:label "NOT_ISSUE" ;
+           skos:definition "A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected." ;
+           skos:prefLabel "NOT_ISSUE" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
+:POTENTIAL_ISSUE rdf:type owl:NamedIndividual ,
+                          :ResponseResult ;
+                 rdfs:comment "See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation." ;
+                 rdfs:label "POTENTIAL_ISSUE" ;
+                 skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not." ;
+                 skos:prefLabel "POTENTIAL_ISSUE" .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
+:RUN_HAS_RESULT rdf:type owl:NamedIndividual ,
+                         :ResponseStatus ;
+                rdfs:comment "Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. for Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object." ;
+                rdfs:label "RUN_HAS_RESULT" ;
+                skos:definition "A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated." ;
+                skos:prefLabel "RUN_HAS_RESULT" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SingleRecord

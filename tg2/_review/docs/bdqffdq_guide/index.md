@@ -76,9 +76,9 @@ When not represented as objects, controlled value strings MUST be used as values
 
 IRIs MUST be use for values for all individual class instances and object properties when using bdqffdq: terms.
 
-### 2 Framework for describing data quality 
+### 3 Framework for describing data quality 
 
-#### 2.1 Introduction and Context (non-normative)
+#### 3.1 Introduction and Context (non-normative)
 
 The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality.  This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an owl ontology.  This document describes the organization and use of the owl ontology, and gives a summary of the mathematical formulation.
 
@@ -86,7 +86,7 @@ This document provides a background for understanding the bdqcore: test descript
 
 See the [bdqffdq: Term List](../bdqffdq/index.md) for the list of terms in the bdqffdq: vocabulary, and the [owl ontology](../../vocabluary/bdqffdq.owl) for the vocabulary and additional axioms (extension term list).
 
-#### 2.1 Description of the bdqffdq ontology (non-normative) 
+#### 3.2 Description of the bdqffdq ontology (non-normative) 
 
 The bdqffdq framework describes data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use.  That is, bdqffdq lets users describe how to evaluate if some data set is fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  Under the framework, data do not have quality in the abstract, but only can be evaluated for quality with respect to a specified purpose.  The term that purposes and uses of data in bdqffdq is UseCase.  
 
@@ -96,15 +96,15 @@ The framework can also be conceptually divided into four vertical themes, four s
 
 We use the informal term "Test" to describe these four vertical themes, a test involves terms in both Needs and Solutions, and tests produce particular reporting elements.
 
-### 2.1.1 Data Quality Control, Data Quality Assurance
+### 3.2.1 Data Quality Control, Data Quality Assurance
 
 The framework draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
 
-### 2.1.2 Information Elements
+### 3.2.2 Information Elements
 
 The framework has an abstract concept of Information Elements. To frame tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the information elements in each test.
 
-### 2.1.2 Concepts in the framework, Test Types: Measure, Validation, Amendment, Issue.
+### 3.2.3 Concepts in the framework, Test Types: Measure, Validation, Amendment, Issue.
 
 Vertical slices by concept.
 
@@ -136,7 +136,7 @@ Data quality needs can relate to the data quality of single records (bdqffdq:Sin
 ![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource Class.")
 
 
-### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
+### 3.4 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
 Horizontal slices through the framework.
 
@@ -160,15 +160,27 @@ A useful way to think of the framework is to divide it horizontally into Needs, 
 
 ![Diagram of Illustrating both the horizonal (needs/solutions/reports) layers and the vertical test concepts (validation, amendment, measurement, issues)](bdqffdq_data_quality_layers.svg "All four tests concepts in the Needs Solutions, and Reports levels.")
 
+### 3.5 Responses
 
-### 2.4 Organization of the bdqcore classes 
+Assertions are expected to assert Response objects, these will involve, in RDF, a combination of object properties and data properties.
+
+| Concept | bdqffdq Term(s) | Description |
+| ------- | ------- | ----------- |
+| Response | bdqffdq:Assertion | The report from a single execution of a single test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
+| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue) was able to be performed or not.| 
+| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue)|
+| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the test.|
+| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
+
+
+### 3.6 Organization of the bdqcore classes 
 
 Class diagram 
 
 ![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
 
 
-### Example representation of a bdqcore test (non-normative)
+### 3.7 Example representation of a bdqcore test (non-normative)
 
 Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon InformationElement, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification.  Also shown is a ValidationPolicy linking this Validation to a UseCase. 
 
@@ -213,25 +225,25 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
      TODO: Add diagram
 
 
-## 3 Term index
+## 4 Term index
 
 TODO:  Generate and include these sections here.
 
-### 3.1 Classes
+### 4.1 Classes
 
-### 3.2 Object Properties
+### 4.2 Object Properties
 
-### 3.3 Data Properties
+### 4.3 Data Properties
 
 TODO: Also index by concept.
 
-## 4 Terms in the bdqffdq ontology (portions normative, see 2.1)
+## 5 List of Terms in the bdqffdq ontology (portions normative, see 2.1)
 
 TODO:  Generate and include here.
 
 [Rough cut at generated list of ontology terms](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/bdqffdq.md)
 
-## 5 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
+## 6 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 
 This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo.  Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
 

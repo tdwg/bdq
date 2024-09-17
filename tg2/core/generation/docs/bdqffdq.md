@@ -1761,7 +1761,7 @@ DataProperty
 
 ### Comment
 
-'Intended for consumption by human readers of data quality reports to understand why particular assertions were made.'
+'Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment.'
 
 
 ********************
@@ -1800,6 +1800,193 @@ DataProperty
 
 ********************
 
+## bdqffdq:AMENDED
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/AMENDED
+
+### Preferred Label
+
+'AMENDED'
+
+### Label
+
+'AMENDED'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.'
+
+### Comment
+
+'AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.'
+
+
+********************
+
+## bdqffdq:COMPLETE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/COMPLETE
+
+### Preferred Label
+
+'COMPLETE'
+
+### Label
+
+'COMPLETE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are present and sufficiently comprehensive for use.'
+
+### Comment
+
+'These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.'
+
+
+********************
+
+## bdqffdq:COMPLIANT
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/COMPLIANT
+
+### Preferred Label
+
+'COMPLIANT'
+
+### Label
+
+'COMPLIANT'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the criteria for quality in the test specification.'
+
+
+********************
+
+## bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET
+
+### Preferred Label
+
+'EXTERNAL_PREREQUISITES_NOT_MET'
+
+### Label
+
+'EXTERNAL_PREREQUISITES_NOT_MET'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result.'
+
+
+********************
+
+## bdqffdq:FILLED_IN
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/FILLED_IN
+
+### Preferred Label
+
+'FILLED_IN'
+
+### Label
+
+'FILLED_IN'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.'
+
+
+********************
+
+## bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET
+
+### Preferred Label
+
+'INTERNAL_PREREQUISITES_NOT_MET'
+
+### Label
+
+'INTERNAL_PREREQUISITES_NOT_MET'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response.'
+
+
+********************
+
+## bdqffdq:IS_ISSUE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE
+
+### Preferred Label
+
+'IS_ISSUE'
+
+### Label
+
+'IS_ISSUE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use.'
+
+### Comment
+
+'This is a paralell assertion to NOT_COMPLIANT'
+
+
+********************
+
 ## bdqffdq:MultiRecord
 
 ### Name
@@ -1825,6 +2012,176 @@ NamedIndividual
 ### Comment
 
 'A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset'
+
+
+********************
+
+## bdqffdq:NOT_AMENDED
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
+
+### Preferred Label
+
+'NOT_AMENDED'
+
+### Label
+
+'NOT_AMENDED'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.'
+
+### Comment
+
+'No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties.'
+
+
+********************
+
+## bdqffdq:NOT_COMPLETE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
+
+### Preferred Label
+
+'NOT_COMPLETE'
+
+### Label
+
+'NOT_COMPLETE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for use.'
+
+### Comment
+
+'These can be used to exclude data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.'
+
+
+********************
+
+## bdqffdq:NOT_COMPLIANT
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
+
+### Preferred Label
+
+'NOT_COMPLIANT'
+
+### Label
+
+'NOT_COMPLIANT'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the criteria for quality in the test specification.'
+
+
+********************
+
+## bdqffdq:NOT_ISSUE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE
+
+### Preferred Label
+
+'NOT_ISSUE'
+
+### Label
+
+'NOT_ISSUE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected.'
+
+### Comment
+
+'This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality.'
+
+
+********************
+
+## bdqffdq:POTENTIAL_ISSUE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
+
+### Preferred Label
+
+'POTENTIAL_ISSUE'
+
+### Label
+
+'POTENTIAL_ISSUE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not.'
+
+### Comment
+
+'See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation.'
+
+
+********************
+
+## bdqffdq:RUN_HAS_RESULT
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
+
+### Preferred Label
+
+'RUN_HAS_RESULT'
+
+### Label
+
+'RUN_HAS_RESULT'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.'
+
+### Comment
+
+'Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. for Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.'
 
 
 ********************
@@ -1862,35 +2219,6 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 
 # ObjectProperty terms
-
-********************
-
-## https://rs.tdwg.org/bdqffdq/terms#containsAssertion
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms#containsAssertion
-
-### Preferred Label
-
-'Connects a Data Quality Report with Assertions that comprise that report.'|'contains Assertion'
-
-### Label
-
-'contains Assertion'
-
-### Type
-
-ObjectProperty
-
-### Definition
-
-nan
-
-### Comment
-
-'Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used.'
-
 
 ********************
 
@@ -1977,6 +2305,35 @@ ObjectProperty
 ### Comment
 
 'Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.'
+
+
+********************
+
+## bdqffdq:containsAssertion
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/containsAssertion
+
+### Preferred Label
+
+'contains Assertion'|'Connects a Data Quality Report with Assertions that comprise that report.'
+
+### Label
+
+'contains Assertion'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+nan
+
+### Comment
+
+'Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used.'
 
 
 ********************
@@ -2358,6 +2715,35 @@ ObjectProperty
 ### Comment
 
 'Provides additional metadata, along with the information elements, that describe the nature of the data  (SingleRecord or MultiRecord) on which the bdqffdq concept operates. For example, an Amendment with resource type of MultiRecord defines that Amendment as operating on a data set.'
+
+
+********************
+
+## bdqffdq:hasResponseQualifier
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier
+
+### Preferred Label
+
+'has Response Qualifier'
+
+### Label
+
+'has Response Qualifier'
+
+### Type
+
+ObjectProperty
+
+### Definition
+
+'ResponseQualifier object asserted by an Assertion.'
+
+### Comment
+
+'Optional extension point, could be used to add structured information about uncertainty.'
 
 
 ********************
