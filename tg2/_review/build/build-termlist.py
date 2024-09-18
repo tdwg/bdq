@@ -72,7 +72,7 @@ display_id = ['Vocabulary'] # these are the fragment identifiers for the associa
 
 # Load the contributors YAML file from its local location.
 with open(contributors_yaml_file) as cyf:
-	contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
+    contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
 
 # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 # load from local file
@@ -82,7 +82,7 @@ with open(document_configuration_yaml_file) as dcfy:
 if has_namespace:
     # Load the configuration file used in the metadata creation process.
     #metadata_config_text = requests.get(githubBaseUri + 'process/config.yaml').text
-	# PJM: Using local file for namespace when building draft documents
+    # PJM: Using local file for namespace when building draft documents
     metadata_config_text = open('temp_namespaces.yaml','r')
     metadata_config = yaml.load(metadata_config_text, Loader=yaml.FullLoader)
     namespace_uri = metadata_config['namespaces'][0]['namespace_uri']
@@ -171,7 +171,7 @@ for term in termLists:
     print('Generating files for %s.'.format(term))
     headerFileName = 'templates/%s/%s_termlist-header.md'.format(term,term)
     footerFileName = 'templates/%s/%s_termlist-footer.md'.format(term,term)
-	document_configuration_yaml_file = 'templates/%s/document_configuration.yaml'.format(term)
+    document_configuration_yaml_file = 'templates/%s/document_configuration.yaml'.format(term)
     outFileName = '../docs/%s/index.md'.format(term)
     outRDFFileName = '../dist/%s.xml'.format(term)
     term_history_csv = "../vocabulary/%s_terms.csv".format(term)
@@ -193,7 +193,7 @@ for term in termLists:
     table_list = []
     for term_list in term_lists_info:
         # retrieve versions metadata for term list
-    	# PJM: This is unavailable for a draft standard.
+        # PJM: This is unavailable for a draft standard.
         versions_url = githubBaseUri + term_list['database'] + '-versions/' + term_list['database'] + '-versions.csv'
         #versions_df = pd.read_csv(versions_url, na_filter=False)
         
@@ -203,11 +203,11 @@ for term in termLists:
         data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
         frame = pd.read_csv(data_url, na_filter=False)
         for index,row in frame.iterrows():
-    		# PJM: TODO: just use column list?
+        # PJM: TODO: just use column list?
             row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
     
-    		# PJM: TODO: column headers in term version files for simple vocabularies: 
-    		# iri,term_localName,prefLabel,label,definition,comments,organized_in,issued,status,replaces,rdf_type,term_iri,flags
+            # PJM: TODO: column headers in term version files for simple vocabularies: 
+            # iri,term_localName,prefLabel,label,definition,comments,organized_in,issued,status,replaces,rdf_type,term_iri,flags
     
             # row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['rdfs_comment'], row['dcterms_description'], row['examples'], row['term_modified'], row['term_deprecated'], row['rdf_type'], row['tdwgutility_abcdEquivalence'], row['replaces_term'], row['replaces1_term']]
             #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
