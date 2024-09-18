@@ -76,7 +76,18 @@ In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` 
 ### 1.2 RFC 2119 key words
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-### 1.3 Term List Distributions
+### 1.3 Namespace Abbreviations
+
+The following namespace abbreviations are used in this document:
+
+| Prefix | IRI |
+| --- | --- |
+| bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
+| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
+| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
+| bdq:     | https://rs.tdwg.org/bdq/terms/   |
+
+### 1.4 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 

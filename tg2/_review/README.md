@@ -24,6 +24,7 @@ Work in progress description of files in this directory:
 │   │   └── bdqcore
 │   ├── list  Build targets for Human readable term list documents Do not edit here
 │   │   ├── bdq
+│   │   │   └── index.md  Generated term list document Do not edit.
 │   │   ├── bdqcore
 │   │   ├── bdqcrit
 │   │   ├── bdqdim
@@ -40,7 +41,6 @@ Work in progress description of files in this directory:
 │   │   └── index.md
 │   ├── references
 │   ├── supplement
-│   ├── bdq to move
 │   ├── bdqffdq to move
 │   ├── implementers to move
 │   ├── list to move

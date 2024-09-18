@@ -1,28 +1,42 @@
-# Test Specification Vocabulary List of Terms
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
-**Title**: Test Specification Vocabulary List of Terms
+Title
+: {document_title}
 
-**Date version issued**: {ratification_date}
+Date version issued
+: {ratification_date}
 
-**Date created**: {created_date}
+Date created
+: {created_date}
 
-**Part of TDWG Standard**: <{standard_iri}>
+Part of TDWG Standard
+: <{standard_iri}>
 
-**This version**: <{current_iri}{ratification_date}>
+Preferred namespace abbreviation
+: {pref_namespace_prefix}
 
-**Latest version**: <{current_iri}>
+This version
+: <{current_iri}{ratification_date}>
+
+Latest version
+: <{current_iri}>
 
 {previous_version_slot}
 
-**Abstract**: The BDQ Core list of terms used in the data quality tests using the `bdq:` namespace.
+Abstract
+: {abstract}
 
-**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, Yi Ming Gan
+Contributors
+: {contributors}
 
-**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions)
+Creator
+: {creator}
 
-**Bibliographic citation**
-: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <{current_iri}{ratification_date}>
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
+{comment}
 
 ## 1 Introduction (non-normitive)
 [!--- JRW finished first draft to here ---]
@@ -36,27 +50,38 @@ An information element containing invalid characters (e.g. letters in an informa
 
 This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
-For a simplied list of current terms, see the BDQ Core Quick Reference Guide {http://..........}.
+For a simplied list of current terms, see the [BDQ Core Quick Reference Guide](../../guides/index.md).
+
+### 1.1 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-In Section 4, the values of the `Term IRI` and `Definition` are normative. The values of `Term Name` `skos:pref:Label` are non-normative, although one can expect that the namespace abbreviation prefix is one commonly used for the term namespace.  `Label` and the values of all other properties (such as `Examples` and `Notes`) are non-normative.
+In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. The values of `Term Name` and `skos:prefLabel` are non-normative. 
 
 ### 1.2 RFC 2119 key words
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
 ### 1.3 Namespace abbreviations
 
-The following namespace abbreviation is used in this document:
+The following namespace abbreviations are used in this document:
 
 | Prefix | IRI |
 | --- | --- |
-| bdq: | http://rs.tdwg.org/bdq/terms/ |
+| bdq:     | https://rs.tdwg.org/bdq/terms/   |
+| bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
+| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
+| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
+### 1.4 Term List Distributions
 
-## 2 Use of Terms
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
+
+## 2 Use of Terms (normative)
 
 Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled value strings MUST be used as values of the `bdq:` namespace.
 

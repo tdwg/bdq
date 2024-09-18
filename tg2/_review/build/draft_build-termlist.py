@@ -18,7 +18,7 @@ import yaml
 
 # This is a Python list of the names of the term lists for which documents are to be produced.
 # One set of documents is produced for each term.  See assumptions below.
-termLists = ['bdqdim']
+termLists = ['bdqdim','bdq']
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
