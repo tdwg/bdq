@@ -15,6 +15,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+rdf:value rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
 
@@ -944,7 +948,9 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :AMENDED rdf:type owl:NamedIndividual ,
                   :ResponseStatus ;
          owl:differentFrom :NOT_AMENDED ;
-         rdfs:comment "AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property." ;
+         rdf:value "AMENDED" ;
+         rdfs:comment "" ,
+                      "AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property." ;
          rdfs:label "AMENDED" ;
          skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change." ;
          skos:prefLabel "AMENDED" .
@@ -954,6 +960,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :COMPLETE rdf:type owl:NamedIndividual ,
                    :ResponseResult ;
           owl:differentFrom :NOT_COMPLETE ;
+          rdf:value "COMPLETE" ;
           rdfs:comment "These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT." ;
           rdfs:label "COMPLETE" ;
           skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are present and sufficiently comprehensive for use." ;
@@ -964,6 +971,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :COMPLIANT rdf:type owl:NamedIndividual ,
                     :ResponseResult ;
            owl:differentFrom :NOT_COMPLIANT ;
+           rdf:value "COMPLIANT" ;
            rdfs:label "COMPLIANT" ;
            skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the criteria for quality in the test specification." ;
            skos:prefLabel "COMPLIANT" .
@@ -973,6 +981,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :EXTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
                                          :ResponseStatus ;
                                 owl:differentFrom :INTERNAL_PREREQUISITES_NOT_MET ;
+                                rdf:value "EXTERNAL_PREREQUISITES_NOT_MET" ;
                                 rdfs:label "EXTERNAL_PREREQUISITES_NOT_MET" ;
                                 skos:definition "A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result." ;
                                 skos:prefLabel "EXTERNAL_PREREQUISITES_NOT_MET" .
@@ -982,6 +991,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :FILLED_IN rdf:type owl:NamedIndividual ,
                     :ResponseStatus ;
            owl:differentFrom :NOT_AMENDED ;
+           rdf:value "FILLED_IN" ;
            rdfs:label "FILLED_IN" ;
            skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty." ;
            skos:prefLabel "FILLED_IN" .
@@ -990,6 +1000,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET
 :INTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
                                          :ResponseStatus ;
+                                rdf:value "INTERNAL_PREREQUISITES_NOT_MET" ;
                                 rdfs:label "INTERNAL_PREREQUISITES_NOT_MET" ;
                                 skos:definition "A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response." ;
                                 skos:prefLabel "INTERNAL_PREREQUISITES_NOT_MET" .
@@ -1000,6 +1011,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
                    :ResponseResult ;
           owl:differentFrom :NOT_ISSUE ,
                             :POTENTIAL_ISSUE ;
+          rdf:value "IS_ISSUE" ;
           rdfs:comment "This is a paralell assertion to NOT_COMPLIANT" ;
           rdfs:label "IS_ISSUE" ;
           skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use." ;
@@ -1018,6 +1030,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
 :NOT_AMENDED rdf:type owl:NamedIndividual ,
                       :ResponseStatus ;
+             rdf:value "NOT_AMENDED" ;
              rdfs:comment "No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties." ;
              rdfs:label "NOT_AMENDED" ;
              skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change." ;
@@ -1027,6 +1040,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
 :NOT_COMPLETE rdf:type owl:NamedIndividual ,
                        :ResponseResult ;
+              rdf:value "NOT_COMPLETE" ;
               rdfs:comment "These can be used to exclude data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT." ;
               rdfs:label "NOT_COMPLETE" ;
               skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for use." ;
@@ -1036,6 +1050,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
 :NOT_COMPLIANT rdf:type owl:NamedIndividual ,
                         :ResponseResult ;
+               rdf:value "NOT_COMPLIANT" ;
                rdfs:label "NOT_COMPLIANT" ;
                skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the criteria for quality in the test specification." ;
                skos:prefLabel "NOT_COMPLIANT" .
@@ -1045,6 +1060,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :NOT_ISSUE rdf:type owl:NamedIndividual ,
                     :ResponseResult ;
            owl:differentFrom :POTENTIAL_ISSUE ;
+           rdf:value "NOT_ISSUE" ;
            rdfs:comment "This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality." ;
            rdfs:label "NOT_ISSUE" ;
            skos:definition "A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected." ;
@@ -1054,6 +1070,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
 :POTENTIAL_ISSUE rdf:type owl:NamedIndividual ,
                           :ResponseResult ;
+                 rdf:value "POTENTIAL_ISSUE" ;
                  rdfs:comment "See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation." ;
                  rdfs:label "POTENTIAL_ISSUE" ;
                  skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not." ;
@@ -1063,6 +1080,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
 :RUN_HAS_RESULT rdf:type owl:NamedIndividual ,
                          :ResponseStatus ;
+                rdf:value "RUN_HAS_RESULT" ;
                 rdfs:comment "Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. for Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object." ;
                 rdfs:label "RUN_HAS_RESULT" ;
                 skos:definition "A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated." ;

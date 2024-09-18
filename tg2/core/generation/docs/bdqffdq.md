@@ -1814,6 +1814,10 @@ https://rs.tdwg.org/bdqffdq/terms/AMENDED
 
 'AMENDED'
 
+## Controlled Value
+
+'AMENDED'
+
 ### Type
 
 NamedIndividual
@@ -1824,7 +1828,7 @@ NamedIndividual
 
 ### Comment
 
-'AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.'
+''|'AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.'
 
 
 ********************
@@ -1840,6 +1844,10 @@ https://rs.tdwg.org/bdqffdq/terms/COMPLETE
 'COMPLETE'
 
 ### Label
+
+'COMPLETE'
+
+## Controlled Value
 
 'COMPLETE'
 
@@ -1872,6 +1880,10 @@ https://rs.tdwg.org/bdqffdq/terms/COMPLIANT
 
 'COMPLIANT'
 
+## Controlled Value
+
+'COMPLIANT'
+
 ### Type
 
 NamedIndividual
@@ -1894,6 +1906,10 @@ https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET
 'EXTERNAL_PREREQUISITES_NOT_MET'
 
 ### Label
+
+'EXTERNAL_PREREQUISITES_NOT_MET'
+
+## Controlled Value
 
 'EXTERNAL_PREREQUISITES_NOT_MET'
 
@@ -1922,6 +1938,10 @@ https://rs.tdwg.org/bdqffdq/terms/FILLED_IN
 
 'FILLED_IN'
 
+## Controlled Value
+
+'FILLED_IN'
+
 ### Type
 
 NamedIndividual
@@ -1947,6 +1967,10 @@ https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET
 
 'INTERNAL_PREREQUISITES_NOT_MET'
 
+## Controlled Value
+
+'INTERNAL_PREREQUISITES_NOT_MET'
+
 ### Type
 
 NamedIndividual
@@ -1969,6 +1993,10 @@ https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE
 'IS_ISSUE'
 
 ### Label
+
+'IS_ISSUE'
+
+## Controlled Value
 
 'IS_ISSUE'
 
@@ -2030,6 +2058,10 @@ https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
 
 'NOT_AMENDED'
 
+## Controlled Value
+
+'NOT_AMENDED'
+
 ### Type
 
 NamedIndividual
@@ -2056,6 +2088,10 @@ https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
 'NOT_COMPLETE'
 
 ### Label
+
+'NOT_COMPLETE'
+
+## Controlled Value
 
 'NOT_COMPLETE'
 
@@ -2088,6 +2124,10 @@ https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
 
 'NOT_COMPLIANT'
 
+## Controlled Value
+
+'NOT_COMPLIANT'
+
 ### Type
 
 NamedIndividual
@@ -2110,6 +2150,10 @@ https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE
 'NOT_ISSUE'
 
 ### Label
+
+'NOT_ISSUE'
+
+## Controlled Value
 
 'NOT_ISSUE'
 
@@ -2142,6 +2186,10 @@ https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
 
 'POTENTIAL_ISSUE'
 
+## Controlled Value
+
+'POTENTIAL_ISSUE'
+
 ### Type
 
 NamedIndividual
@@ -2168,6 +2216,10 @@ https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
 'RUN_HAS_RESULT'
 
 ### Label
+
+'RUN_HAS_RESULT'
+
+## Controlled Value
 
 'RUN_HAS_RESULT'
 

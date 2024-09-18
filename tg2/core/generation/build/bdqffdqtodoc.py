@@ -69,6 +69,11 @@ with open ("../../../vocabularies/bdqffdq_export.csv", newline='') as csvfile:
 			print()
 			print(row['http://www.w3.org/2000/01/rdf-schema#label'])
 			print()
+			if not pandas.isna(row["http://www.w3.org/1999/02/22-rdf-syntax-ns#value"]) : 
+				print("## Controlled Value")
+				print()
+				print(row['http://www.w3.org/1999/02/22-rdf-syntax-ns#value']) 
+				print()
 			print("### Type")
 			print()
 			print(row['Type'])
