@@ -2317,7 +2317,7 @@ https://rs.tdwg.org/bdqffdq/terms/containsAssertion
 
 ### Preferred Label
 
-'contains Assertion'|'Connects a Data Quality Report with Assertions that comprise that report.'
+'contains Assertion'
 
 ### Label
 
@@ -2329,7 +2329,7 @@ ObjectProperty
 
 ### Definition
 
-nan
+'Connects a Data Quality Report with Assertions that comprise that report.'
 
 ### Comment
 
