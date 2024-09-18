@@ -29,7 +29,7 @@ githubBaseUri = 'https://raw.githubusercontent.com/tdwg/bdq/' + github_branch + 
 # ---------------
 # (1) The repository has build/ docs/ dist/ and vocabulary/ directories in the same parent directory.
 # (2) This file is located in a build/ directory
-# (3) This file produces human readable documents in the docs/ directory within docs/{term}/ directories
+# (3) This file produces human readable documents in the docs/ directory within docs/list/{term}/ directories
 # (4) This file produces rdf artifacts in the the dist/ directory.
 # (5) The source csv file for each term is vocabulary/{term}_terms.csv
 # (6) A list of authors/contributors is in the build/ directory in: 
@@ -40,9 +40,9 @@ term_list_document = "temp_term-lists.csv"
 local_metadata_config_file = 'temp_namespaces.yaml'
 # (8) {term}_termlist-header.md, {term}_termlist-footer.md files are in build/templates/{term}/ along with a document_configuration.yaml file
 # see loop below through termLists
-# headerFileName = 'templates/%s/%s_termlist-header.md'.format(term,term)
-# footerFileName = 'templates/%s/%s_termlist-footer.md'.format(term,term)
-# document_configuration_yaml_file = 'templates/%s/document_configuration.yaml'.format(term)
+# headerFileName = 'templates/{}/{}_termlist-header.md'.format(term,term)
+# footerFileName = 'templates/{}/{}_termlist-footer.md'.format(term,term)
+# document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(term)
 
 # The following configuration values apply to all terms in termLists: 
 
@@ -73,11 +73,6 @@ display_id = ['Vocabulary'] # these are the fragment identifiers for the associa
 # Load the contributors YAML file from its local location.
 with open(contributors_yaml_file) as cyf:
     contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
-
-# Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
-# load from local file
-with open(document_configuration_yaml_file) as dcfy:
-    document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
 if has_namespace:
     # Load the configuration file used in the metadata creation process.
@@ -168,13 +163,18 @@ print()
 # ---------------
 
 for term in termLists: 
-    print('Generating files for %s.'.format(term))
-    headerFileName = 'templates/%s/%s_termlist-header.md'.format(term,term)
-    footerFileName = 'templates/%s/%s_termlist-footer.md'.format(term,term)
-    document_configuration_yaml_file = 'templates/%s/document_configuration.yaml'.format(term)
-    outFileName = '../docs/%s/index.md'.format(term)
-    outRDFFileName = '../dist/%s.xml'.format(term)
-    term_history_csv = "../vocabulary/%s_terms.csv".format(term)
+    print('Generating files for {}.'.format(term))
+    headerFileName = 'templates/{}/{}_termlist-header.md'.format(term,term)
+    footerFileName = 'templates/{}/{}_termlist-footer.md'.format(term,term)
+    document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(term)
+    outFileName = '../docs/list/{}/index.md'.format(term)
+    outRDFFileName = '../dist/{}.xml'.format(term)
+    term_history_csv = "../vocabulary/{}_terms.csv".format(term)
+
+    # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
+    # load from local file
+    with open(document_configuration_yaml_file) as dcfy:
+        document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
     # Create column list
     column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in','issued','status','term_iri','flags']

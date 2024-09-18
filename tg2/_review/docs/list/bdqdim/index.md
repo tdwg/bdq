@@ -75,6 +75,13 @@ In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` 
 ### 1.2 RFC 2119 key words
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
+### 1.3 Term List Distributions
+
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | http://rs.tdwg.org/bdq/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqdim/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqdim.xml | Example for submission, to be generated | 
+
 ## 2 Use of Terms
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of `bdqffdq:dataQualityDimension`.
