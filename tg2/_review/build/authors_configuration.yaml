@@ -38,7 +38,7 @@
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
   affiliation: University of São Paulo, Research Center on Biodiversity and Computing
-  affiliation_uri: 
+  affiliation_uri: https://www.wikidata.org/wiki/Q835960
 
 - contributor_iri: http://orcid.org/0000-0003-2672-8115 
   contributor_literal: Alan Koch Veiga
@@ -58,8 +58,8 @@
   contributor_literal: Alexander Thompson
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
-  affiliation: 
-  affiliation_uri: 
+  affiliation: Google
+  affiliation_uri: https://www.wikidata.org/wiki/Q95
 
 - contributor_iri: 
   contributor_literal: David Lowery
