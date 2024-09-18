@@ -3,7 +3,7 @@
 # updated 2021-02-11
 # Modified Paul J. Morris for generating draft standard documents without rs.tdwg.org files
 # 2024-09-12
-# This script merges static Markdown header and footer documents with term information tables (in Markdown) generated from data in the rs.tdwg.org repo from the TDWG Github site
+# This script merges static Markdown header and footer documents with generated term information tables loading data from in local csv and yaml files.
 
 import re
 import requests   # best library to manage HTTP transactions
@@ -16,14 +16,6 @@ import yaml
 # Configuration section
 # -----------------
 
-# !!!! NOTE !!!!
-# There is not currently an example of a complex vocabulary that has the column headers
-# used in the sample files. In order to test this script, it uses the Audubon Core files,
-# which have headers that differ from the samples. So throughout the code, there are
-# pairs of lines where the default header names are commented out and the Audubon Core
-# headers are not. To build a page using the sample files, you will need to reverse the
-# commenting of these pairs.
-
 github_branch = 'master' # "master" for production, something else for development
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
@@ -34,9 +26,10 @@ footerFileName = 'bdqdim_termlist-footer.md'
 term_list_document = "temp_term-lists.csv"
 outFileName = '../../docs/bdqdim/index.md'
 
-# This is a Python list of the database names of the term lists to be included in the document.
+term_history_csv = "../../../../vocabularies/bdqdim_terms.csv"
+
+# This is a Python list of the names of the term lists to be included in the document.
 termLists = ['bdqdim']
-#termLists = ['pathway']
 
 # If this list of terms is for terms in a single namespace, set the value of has_namespace to True. The value
 # of has_namespace should be False for a list of terms that contains multiple namespaces.
@@ -52,15 +45,11 @@ organized_in_categories = False
 
 # If organized in categories, the display_order list must contain the IRIs that are values of tdwgutility_organizedInClass
 # If not organized into categories, the value is irrelevant. There just needs to be one item in the list.
-display_order = ['']
-display_label = ['Vocabulary']
-display_comments = ['']
-display_id = ['Vocabulary']
 
-#display_order = ['']
-#display_label = ['Vocabulary'] # these are the section labels for the categories in the page
-#display_comments = [''] # these are the comments about the category to be appended following the section labels
-#display_id = ['Vocabulary'] # these are the fragment identifiers for the associated sections for the categories
+display_order = ['']
+display_label = ['Vocabulary'] # these are the section labels for the categories in the page
+display_comments = [''] # these are the comments about the category to be appended following the section labels
+display_id = ['Vocabulary'] # these are the fragment identifiers for the associated sections for the categories
 
 # ---------------
 # Load header data
@@ -89,10 +78,7 @@ if contributors_yaml == '404: Not Found':
     exit()
 contributors_yaml = yaml.load(contributors_yaml, Loader=yaml.FullLoader)
 
-# Load the document configuration YAML file from its GitHub URL
-#document_configuration_yaml_url = githubBaseUri + config_file_path + document_configuration_yaml_file
-#document_configuration_yaml = requests.get(document_configuration_yaml_url).text
-#document_configuration_yaml = yaml.load(document_configuration_yaml, Loader=yaml.FullLoader)
+# Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
     document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
@@ -153,7 +139,7 @@ def convert_examples(text_with_list_of_examples: str) -> str:
 # ---------------
 
 ## PJM: Unavailable for draft without rs.tdwg.org files
-print('Retrieving term list metadata from GitHub')
+print('Loading term list metadata')
 term_lists_info = []
 
 
@@ -177,15 +163,15 @@ print()
 # ---------------
 
 # Create column list
-# column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'rdfs_comment', 'dcterms_description', 'examples', 'term_modified', 'term_deprecated', 'rdf_type', 'replaces_term']
-column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in']
+column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in','issued','status','term_iri','flags']
 #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
-#if vocab_type == 2:
-#    column_list += ['controlled_value_string']
+if vocab_type == 2:
+    column_list += ['controlled_value_string']
 #elif vocab_type == 3:
 #    column_list += ['controlled_value_string', 'skos_broader']
 #if organized_in_categories:
 #    column_list.append('tdwgutility_organizedInClass')
+# PJM?? version_iri appears in the documents as iri.
 #column_list.append('version_iri')
 
 print('Retrieving metadata about terms from all namespaces from GitHub')
@@ -193,26 +179,27 @@ print('Retrieving metadata about terms from all namespaces from GitHub')
 table_list = []
 for term_list in term_lists_info:
     # retrieve versions metadata for term list
+	# PJM: This is unavailable for a draft standard.
     versions_url = githubBaseUri + term_list['database'] + '-versions/' + term_list['database'] + '-versions.csv'
     #versions_df = pd.read_csv(versions_url, na_filter=False)
     
     # retrieve current term metadata for term list
     # data_url = githubBaseUri + term_list['database'] + '/' + term_list['database'] + '.csv'
     # PJM: Using local file
-    data_url = "../../../../vocabularies/bdqdim_terms.csv"
+    data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
     frame = pd.read_csv(data_url, na_filter=False)
     for index,row in frame.iterrows():
-        # "iri","term_localName","prefLabel","label","definition","comments","organized_in","rdf_type"
-        row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in']]
+		# PJM: TODO: just use column list?
+        row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
 
 		# PJM: TODO: column headers in term version files for simple vocabularies: 
 		# iri,term_localName,prefLabel,label,definition,comments,organized_in,issued,status,replaces,rdf_type,term_iri,flags
 
         # row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['rdfs_comment'], row['dcterms_description'], row['examples'], row['term_modified'], row['term_deprecated'], row['rdf_type'], row['tdwgutility_abcdEquivalence'], row['replaces_term'], row['replaces1_term']]
         #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
-#        if vocab_type == 2:
-#            row_list += [row['controlled_value_string']]
-#            print(row_list)
+        if vocab_type == 2:
+            row_list += [row['controlled_value_string']]
+            print(row_list)
 #        elif vocab_type == 3:
 #            if row['skos_broader'] =='':
 #                row_list += [row['controlled_value_string'], '']
@@ -336,11 +323,27 @@ print()
 
 #print(index_by_label)
 
+## PJM: Decisions won't apply for draft standards.
 decisions_df = pd.read_csv('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/decisions/decisions-links.csv', na_filter=False)
 
 # ---------------
 # generate a table for each term, with terms grouped by category
 # ---------------
+
+## PJM: SDS 3.3.3.1 Term list metadata 
+# Each term entry on the list SHOULD include the following items.
+# Term Name (Required)
+# Label 
+# Controlled Value (Required for controlled Vocabularies)
+# Term IRI (Required) The HTTP IRI that uniquely identifies the current term 
+# Term version IRI (Required) The HTTP IRI that identifies the version of the term that is currently in force. (Required if defined for vocabulary (is so for TDWG vocabularies)).
+# Modified
+# Decision
+# Definition (Required)
+# Type (Required) Values include "Class", "Property", and "Concept".
+
+# PJM: TODO: map from row column headers 
+
 
 print('Generating terms table')
 # generate the Markdown for the terms table
@@ -371,20 +374,20 @@ if True:
         text += '\t<tbody>\n'
         text += '\t\t<tr>\n'
         text += '\t\t\t<td>Term IRI</td>\n'
-        # uri = row['pref_ns_uri'] + row['term_localName']
-        uri = "http://rs.tdwg.org/bdq/bdqdim/terms/" + row['term_localName']
+        uri = row['term_iri']
+        # uri = "http://rs.tdwg.org/bdq/bdqdim/terms/" + row['term_localName']
         text += '\t\t\t<td><a href="' + uri + '">' + uri + '</a></td>\n'
         text += '\t\t</tr>\n'
-        #text += '\t\t<tr>\n'
-        #text += '\t\t\t<td>Modified</td>\n'
-        #text += '\t\t\t<td>' + row['term_modified'] + '</td>\n'
-        #text += '\t\t</tr>\n'
+        text += '\t\t<tr>\n'
+        text += '\t\t\t<td>Modified</td>\n'
+        text += '\t\t\t<td>' + row['issued'] + '</td>\n'
+        text += '\t\t</tr>\n'
 
-        #if row['version_iri'] != '':
-        #    text += '\t\t<tr>\n'
-        #    text += '\t\t\t<td>Term version IRI</td>\n'
-        #    text += '\t\t\t<td><a href="' + row['version_iri'] + '">' + row['version_iri'] + '</a></td>\n'
-        #    text += '\t\t</tr>\n'
+        if row['iri'] != '':
+            text += '\t\t<tr>\n'
+            text += '\t\t\t<td>Term version IRI</td>\n'
+            text += '\t\t\t<td><a href="' + row['iri'] + '">' + row['iri'] + '</a></td>\n'
+            text += '\t\t</tr>\n'
 
         text += '\t\t<tr>\n'
         text += '\t\t\t<td>Label</td>\n'
@@ -443,12 +446,12 @@ if True:
 #            text += '\t\t\t<td>' + convert_link(convert_code(row['tdwgutility_abcdEquivalence'])) + '</td>\n'
 #            text += '\t\t</tr>\n'
 #
-#        if vocab_type == 2 or vocab_type ==3: # controlled vocabulary
-#            text += '\t\t<tr>\n'
-#            text += '\t\t\t<td>Controlled value</td>\n'
-#            text += '\t\t\t<td>' + row['controlled_value_string'] + '</td>\n'
-#            text += '\t\t</tr>\n'
-#
+        if vocab_type == 2 or vocab_type ==3: # controlled vocabulary
+            text += '\t\t<tr>\n'
+            text += '\t\t\t<td>Controlled value</td>\n'
+            text += '\t\t\t<td>' + row['controlled_value_string'] + '</td>\n'
+            text += '\t\t</tr>\n'
+
 #        if vocab_type == 3 and row['skos_broader'] != '': # controlled vocabulary with skos:broader relationships
 #            text += '\t\t<tr>\n'
 #            text += '\t\t\t<td>Has broader concept</td>\n'
@@ -459,14 +462,11 @@ if True:
         text += '\t\t<tr>\n'
         text += '\t\t\t<td>Type</td>\n'
         if row['rdf_type'] == 'http://www.w3.org/1999/02/22-rdf-syntax-ns#Property':
-        #if row['type'] == 'http://www.w3.org/1999/02/22-rdf-syntax-ns#Property':
-            text += '\t\t\t<td>Property</td>\n'
+            text += '\t\t\t<td>rdfs:Property</td>\n'
         elif row['rdf_type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
-        #elif row['type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
-            text += '\t\t\t<td>Class</td>\n'
+            text += '\t\t\t<td>rdfs:Class</td>\n'
         elif row['rdf_type'] == 'http://www.w3.org/2004/02/skos/core#Concept':
-        #elif row['type'] == 'http://www.w3.org/2004/02/skos/core#Concept':
-            text += '\t\t\t<td>Concept</td>\n'
+            text += '\t\t\t<td>skos:Concept</td>\n'
         else:
             text += '\t\t\t<td>' + row['rdf_type'] + '</td>\n' # this should rarely happen
             #text += '\t\t\t<td>' + row['type'] + '</td>\n' # this should rarely happen

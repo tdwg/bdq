@@ -31,7 +31,7 @@ Preferred Citation
   - [Fitness For Use Framework Ontology List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md):
     - File [bdqffdq: Owl](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl "Owl ontology for the bdqffdq framework.")
   - [Test Specification Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdq/index.md)
-  - [Data Quality Dimension Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqdim/index.md)
+  - [Data Quality Dimension Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqdim/index.md)
   - [Data Quality Criterion Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcrit/index.md)
   - [Data Quality Enhancement Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqenh/index.md)
 - [BDQ Core User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/users/index.md)
