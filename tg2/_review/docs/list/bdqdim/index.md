@@ -107,16 +107,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 **Vocabulary**
 
 [bdqdim:Completeness](#bdqdim_Completeness) |
-[bdqdim:Completeness](#bdqdim_Completeness) |
-[bdqdim:Conformance](#bdqdim_Conformance) |
 [bdqdim:Conformance](#bdqdim_Conformance) |
 [bdqdim:Consistency](#bdqdim_Consistency) |
-[bdqdim:Consistency](#bdqdim_Consistency) |
-[bdqdim:Likeliness](#bdqdim_Likeliness) |
 [bdqdim:Likeliness](#bdqdim_Likeliness) |
 [bdqdim:Reliability](#bdqdim_Reliability) |
-[bdqdim:Reliability](#bdqdim_Reliability) |
-[bdqdim:Resolution](#bdqdim_Resolution) |
 [bdqdim:Resolution](#bdqdim_Resolution) 
 
 ### 3.2 Index By Label
@@ -126,12 +120,8 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 **Classes**
 
 [Completeness](#Completeness) |
-[Completeness](#Completeness) |
-[Conformance](#Conformance) |
 [Conformance](#Conformance) |
 [Consistency](#Consistency) |
-[Consistency](#Consistency) |
-[Likeliness](#Likeliness) |
 [Likeliness](#Likeliness) |
 [Reliability](#Reliability) |
 [Resolution](#Resolution) 
@@ -182,48 +172,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqdim_Completeness"></a>Term Name  bdqdim:Completeness</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/Completeness">https://rs.tdwg.org/bdqdim/terms/Completeness</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30">https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:DataQualityDimension</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqdim_Conformance"></a>Term Name  bdqdim:Conformance</th>
 		</tr>
 	</thead>
@@ -255,90 +203,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 		<tr>
 			<td>Controlled value</td>
 			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:DataQualityDimension</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqdim_Conformance"></a>Term Name  bdqdim:Conformance</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/Conformance">https://rs.tdwg.org/bdqdim/terms/Conformance</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/version/Conformance-2024-09-30">https://rs.tdwg.org/bdqdim/terms/version/Conformance-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:DataQualityDimension</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqdim_Consistency"></a>Term Name  bdqdim:Consistency</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/Consistency">https://rs.tdwg.org/bdqdim/terms/Consistency</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/version/Consistency-2024-09-30">https://rs.tdwg.org/bdqdim/terms/version/Consistency-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Consistency</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test bdq:Inconsistent.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Consistency</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -434,48 +298,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqdim_Likeliness"></a>Term Name  bdqdim:Likeliness</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/Likeliness">https://rs.tdwg.org/bdqdim/terms/Likeliness</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/version/Likeliness-2024-09-30">https://rs.tdwg.org/bdqdim/terms/version/Likeliness-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Likeliness</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>The likelihood of Darwin Core Term(s) having true or expected values.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Likeliness</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:DataQualityDimension</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqdim_Reliability"></a>Term Name  bdqdim:Reliability</th>
 		</tr>
 	</thead>
@@ -507,90 +329,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 		<tr>
 			<td>Controlled value</td>
 			<td>Reliability</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:DataQualityDimension</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqdim_Reliability"></a>Term Name  bdqdim:Reliability</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/Reliability">https://rs.tdwg.org/bdqdim/terms/Reliability</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/version/Reliability-2024-09-30">https://rs.tdwg.org/bdqdim/terms/version/Reliability-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Reliability</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing').</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Reliability</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:DataQualityDimension</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqdim_Resolution"></a>Term Name  bdqdim:Resolution</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/Resolution">https://rs.tdwg.org/bdqdim/terms/Resolution</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqdim/terms/version/Resolution-2024-09-30">https://rs.tdwg.org/bdqdim/terms/version/Resolution-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Resolution</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Resolution</td>
 		</tr>
 		<tr>
 			<td>Type</td>

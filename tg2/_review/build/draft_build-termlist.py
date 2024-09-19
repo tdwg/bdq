@@ -192,53 +192,54 @@ for term in termLists:
     # Create list of lists metadata table
     table_list = []
     for term_list in term_lists_info:
-        # retrieve versions metadata for term list
-        # PJM: This is unavailable for a draft standard.
-        versions_url = githubBaseUri + term_list['database'] + '-versions/' + term_list['database'] + '-versions.csv'
-        #versions_df = pd.read_csv(versions_url, na_filter=False)
+        if (term_list['pref_ns_prefix']==term) : 
+            # retrieve versions metadata for term list
+            # PJM: This is unavailable for a draft standard.
+            versions_url = githubBaseUri + term_list['database'] + '-versions/' + term_list['database'] + '-versions.csv'
+            #versions_df = pd.read_csv(versions_url, na_filter=False)
+            
+            # retrieve current term metadata for term list
+            # data_url = githubBaseUri + term_list['database'] + '/' + term_list['database'] + '.csv'
+            # PJM: Using local file
+            data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
+            frame = pd.read_csv(data_url, na_filter=False)
+            for index,row in frame.iterrows():
+            # PJM: TODO: just use column list?
+                row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
         
-        # retrieve current term metadata for term list
-        # data_url = githubBaseUri + term_list['database'] + '/' + term_list['database'] + '.csv'
-        # PJM: Using local file
-        data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
-        frame = pd.read_csv(data_url, na_filter=False)
-        for index,row in frame.iterrows():
-        # PJM: TODO: just use column list?
-            row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
-    
-            # PJM: TODO: column headers in term version files for simple vocabularies: 
-            # iri,term_localName,prefLabel,label,definition,comments,organized_in,issued,status,replaces,rdf_type,term_iri,flags
-    
-            # row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['rdfs_comment'], row['dcterms_description'], row['examples'], row['term_modified'], row['term_deprecated'], row['rdf_type'], row['tdwgutility_abcdEquivalence'], row['replaces_term'], row['replaces1_term']]
-            #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
-            if vocab_type == 2:
-                row_list += [row['controlled_value_string']]
+                # PJM: TODO: column headers in term version files for simple vocabularies: 
+                # iri,term_localName,prefLabel,label,definition,comments,organized_in,issued,status,replaces,rdf_type,term_iri,flags
+        
+                # row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['rdfs_comment'], row['dcterms_description'], row['examples'], row['term_modified'], row['term_deprecated'], row['rdf_type'], row['tdwgutility_abcdEquivalence'], row['replaces_term'], row['replaces1_term']]
+                #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
+                if vocab_type == 2:
+                    row_list += [row['controlled_value_string']]
+                    print(row_list)
+        #        elif vocab_type == 3:
+        #            if row['skos_broader'] =='':
+        #                row_list += [row['controlled_value_string'], '']
+        #            else:
+        #                row_list += [row['controlled_value_string'], term_list['pref_ns_prefix'] + ':' + row['skos_broader']]
+        #        if organized_in_categories:
+        #            row_list.append(row['tdwgutility_organizedInClass'])
+        
+                # Borrowed terms really don't have implemented versions. They may be lacking values for version_status.
+                # In their case, their version IRI will be omitted.
+        #        found = False
+        #        for vindex, vrow in versions_df.iterrows():
+        #            if vrow['term_localName']==row['term_localName'] and vrow['version_status']=='recommended':
+        #                found = True
+        #                version_iri = vrow['version']
+        #                # NOTE: the current hack for non-TDWG terms without a version is to append # to the end of the term IRI
+        #                if version_iri[len(version_iri)-1] == '#':
+        #                    version_iri = ''
+        #        if not found:
+        #            version_iri = ''
+        #        row_list.append(version_iri)
+        
+                table_list.append(row_list)
                 print(row_list)
-    #        elif vocab_type == 3:
-    #            if row['skos_broader'] =='':
-    #                row_list += [row['controlled_value_string'], '']
-    #            else:
-    #                row_list += [row['controlled_value_string'], term_list['pref_ns_prefix'] + ':' + row['skos_broader']]
-    #        if organized_in_categories:
-    #            row_list.append(row['tdwgutility_organizedInClass'])
-    
-            # Borrowed terms really don't have implemented versions. They may be lacking values for version_status.
-            # In their case, their version IRI will be omitted.
-    #        found = False
-    #        for vindex, vrow in versions_df.iterrows():
-    #            if vrow['term_localName']==row['term_localName'] and vrow['version_status']=='recommended':
-    #                found = True
-    #                version_iri = vrow['version']
-    #                # NOTE: the current hack for non-TDWG terms without a version is to append # to the end of the term IRI
-    #                if version_iri[len(version_iri)-1] == '#':
-    #                    version_iri = ''
-    #        if not found:
-    #            version_iri = ''
-    #        row_list.append(version_iri)
-    
-            table_list.append(row_list)
-            print(row_list)
-    
+        
     print('processing data')
     print(column_list)
     # Turn list of lists into dataframe
@@ -418,8 +419,8 @@ for term in termLists:
     
         for row_index,row in filtered_table.iterrows():
             text += '<table>\n'
-            #curie = row['pref_ns_prefix'] + ":" + row['term_localName']
-            curie = "bdqdim:" + row['term_localName']
+            curie = term + ":" + row['term_localName']
+            #curie = "bdqdim:" + row['term_localName']
             curieAnchor = curie.replace(':','_')
             text += '\t<thead>\n'
             text += '\t\t<tr>\n'
