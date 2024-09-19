@@ -60,9 +60,9 @@ with open ("../../TG2_tests.csv", newline='') as csvfile:
 		for useCase in usecaseDict.keys(): 
 			print("## ",useCase)
 			print()
-			definitionRow = vocabDataFrame.loc[vocabDataFrame["namespace:Term"]==useCase]
+			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
 			try: 
-				definitionCell = definitionRow.iloc[0]["Definition"]
+				definitionCell = definitionRow.iloc[0]["definition"]
 				print(definitionCell)
 			except: 
 				print("error extracting definition")

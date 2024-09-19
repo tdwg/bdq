@@ -373,7 +373,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 ##  VALIDATION_BASISOFRECORD_STANDARD
 
 ###  Validation dwc:basisOfRecord Standard
-https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8/2024-07-24
+https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8/2024-08-18
 Acts upon  SingleRecord
 
 ### Description
@@ -382,7 +382,7 @@ Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid using the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -810,7 +810,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 ##  VALIDATION_COUNTRYCODE_STANDARD
 
 ###  Validation dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe/2024-04-15
+https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe/2024-09-19
 Acts upon  SingleRecord
 
 ### Description
@@ -819,7 +819,7 @@ Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -850,7 +850,7 @@ Locations outside of a jurisdiction covered by a country code may have a value i
 ##  VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c/2023-09-30
+https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c/2024-09-18
 Acts upon  SingleRecord
 
 ### Description
@@ -859,7 +859,7 @@ Does the ISO country code, determined from the value of dwc:country, equal the v
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the value of the country code determined from the value of dwc:country from the bdq:sourceAuthority is equal to the value of dwc:countryCode; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the value of the country code determined from the value of dwc:country in the bdq:sourceAuthority is equal to the value of dwc:countryCode; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -890,7 +890,7 @@ The country code determination service should be able to match the name of a cou
 ##  VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  Validation dwc:country dwc:stateProvince Unambiguous
-https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11/2024-09-18
 Acts upon  SingleRecord
 
 ### Description
@@ -899,7 +899,7 @@ Is the combination of the values of the terms dwc:country, dwc:stateProvince uni
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1183,7 +1183,7 @@ Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Da
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1490,7 +1490,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 ##  VALIDATION_STATEPROVINCE_FOUND
 
 ###  Validation dwc:stateProvince Found
-https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a/2024-09-18
 Acts upon  SingleRecord
 
 ### Description
@@ -1499,7 +1499,7 @@ Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1518,7 +1518,7 @@ bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[
 
 dwc:stateProvince="Florida": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:stateProvince found in bdq:sourceAuthority"
 
-dwc:stateProvince="Tasmanian": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:stateProvince not found in bdq:sourceAuthority"
+dwc:stateProvince="Taswegian": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:stateProvince not found in bdq:sourceAuthority"
 
 
 ### Use Cases
@@ -1534,7 +1534,7 @@ Multiple values in the dwc:stateProvince field (whether to signify on a border o
 ##  VALIDATION_DAY_INRANGE
 
 ###  Validation dwc:day In Range
-https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -1543,7 +1543,7 @@ Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclus
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601-1 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
 
 ### Information Elements
 
@@ -1645,7 +1645,7 @@ See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This tes
 ##  VALIDATION_EVENTDATE_INRANGE
 
 ###  Validation dwc:eventDate In Range
-https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432/2023-09-17
+https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -1654,7 +1654,7 @@ Is the value of dwc:eventDate entirely with the Parameter Range?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601-1 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1721,7 +1721,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 ##  VALIDATION_EVENTDATE_STANDARD
 
 ###  Validation dwc:eventDate Standard
-https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -1730,7 +1730,7 @@ Is the value of dwc:eventDate a valid ISO date?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601-1 date; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -1976,7 +1976,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 ##  VALIDATION_DATEIDENTIFIED_INRANGE
 
 ###  Validation dwc:dateIdentified In Range
-https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -1985,7 +1985,7 @@ Is the value of dwc:dateIdentified within Parameter ranges and either overlap or
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601-1, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601-1 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601-1 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2001,7 +2001,7 @@ bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate
 
 ### Default Parameter Values
 
-bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]},bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true
+,bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true
 
 ### Examples
 
@@ -2023,7 +2023,7 @@ There may be valid identifications prior to Linnaeus, but this test will flag th
 ##  VALIDATION_DATEIDENTIFIED_STANDARD
 
 ###  Validation dwc:dateIdentified Standard
-https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -2032,7 +2032,7 @@ Is the value of dwc:dateIdentified a valid ISO date?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601-1 date; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -2480,7 +2480,7 @@ Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family by the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 ### Information Elements
 
@@ -3251,7 +3251,7 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 ##  MEASURE_EVENTDATE_DURATIONINSECONDS
 
 ###  Measure dwc:eventDate Duration In Seconds
-https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -3260,7 +3260,7 @@ What is the duration of dwc:eventDate in seconds?
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601-1 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601-1) expressed in the dwc:eventDate, in seconds.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.
 
 ### Information Elements
 
@@ -3402,7 +3402,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships
 ##  ISSUE_ANNOTATION_NOTEMPTY
 
 ###  Issue Annotation Not Empty
-https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1/2023-09-17
+https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1/2023-09-18
 Acts upon  SingleRecord
 
 ### Description
@@ -3411,7 +3411,7 @@ Are there any annotations associated with the record?
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
 
 ### Information Elements
 Consulted: 
@@ -3664,7 +3664,7 @@ Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code; otherwise NOT_AMENDED.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -3699,7 +3699,7 @@ This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude
 ##  AMENDMENT_COUNTRYCODE_STANDARDIZED
 
 ###  Amendment dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350/2023-09-17
+https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350/2024-09-18
 Acts upon  SingleRecord
 
 ### Description
@@ -3708,7 +3708,7 @@ Proposes an amendment to the value of dwc:countryCode if it can be interpreted a
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted from bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3761,7 +3761,7 @@ bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}
 
 ### Examples
 
-dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2877", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
+dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
 
 dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an interpretable value"
 
@@ -3933,7 +3933,7 @@ If dwc:day contains text that may be interpreted as Roman numerals, the result w
 ##  AMENDMENT_EVENTDATE_FROM_VERBATIM
 
 ###  Amendment dwc:eventDate From dwc:verbatimEventDate
-https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812/2024-08-18
+https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -3942,7 +3942,7 @@ Proposes an amendment to the value of dwc:eventDate from the content of dwc:verb
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601-1 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3972,7 +3972,7 @@ If the proposed eventDate is prior to 1918-02-14, the Response.comment will incl
 ##  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
 
 ###  Amendment dwc:eventDate from dwc:year dwc:month dwc:day
-https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d/2024-08-18
+https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d/2024-09-15
 Acts upon  SingleRecord
 
 ### Description
@@ -3981,7 +3981,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 ### Specification
 
-INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or dwc:year is bdq:Empty; FILLED_IN the value of dwc:eventDate if an ISO 8601-1 date is interpretable from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED.
+INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -3993,9 +3993,9 @@ dwc:year,dwc:month,dwc:day
 
 ### Examples
 
-dwc:eventDate="", dwc:year="2021", dwc:month="X", dwc:day="29": Response.status=FILLED_IN, Response.result=dwc:eventDate="2021-10-29", Response.comment="dwc:year and dwc:day in range and dwc:month is interpretable as an integer between 1-12."
+dwc:eventDate="", dwc:year="1420", dwc:month="10", dwc:day="29": Response.status=FILLED_IN, Response.result=dwc:eventDate="1420-10-29", Response.comment="dwc:year, dwc:month and dwc:day are interpretable, even if pre-Linnaeus"
 
-dwc:eventDate="", dwc:year="x", dwc:month="10", dwc:day="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:year is uninterpretable as a valid year and dwc:day are bdq:Empty so dwc:eventDate is not AMENDED"
+dwc:eventDate="", dwc:year="2024", dwc:month="2", dwc:day="30": Response.status=NOT_AMENDED, Response.result=, Response.comment="Not a valid date"
 
 
 ### Use Cases
@@ -4050,7 +4050,7 @@ An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made b
 ##  AMENDMENT_EVENTDATE_STANDARDIZED
 
 ###  Amendment dwc:eventDate Standardized
-https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -4059,7 +4059,7 @@ Proposes an amendment of the value of dwc:eventDate to a valid ISO date.
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601-1 date but is unambiguous, and altered to be a valid ISO 8601-1 date; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4086,7 +4086,7 @@ The intent of the amended range is to capture the original uncertainty where pos
 ##  AMENDMENT_EVENT_FROM_EVENTDATE
 
 ###  Amendment dwc:Event from dwc:eventDate
-https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d/2024-07-23
+https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -4095,7 +4095,7 @@ Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:star
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601-1; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
 
 ### Information Elements
 
@@ -4161,7 +4161,7 @@ Implementations should translate interpretable Roman numerals in the range I-XII
 ##  AMENDMENT_DATEIDENTIFIED_STANDARDIZED
 
 ###  Amendment dwc:dateIdentified Standard
-https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641/2023-09-17
+https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641/2024-09-16
 Acts upon  SingleRecord
 
 ### Description
@@ -4170,16 +4170,12 @@ Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.
 
 ### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601-1 date but is unambiguous and altered to be a valid ISO 8601-1 date; otherwise NOT_AMENDED.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.
 
 ### Information Elements
 
 Acted Upon: 
 dwc:dateIdentified
-
-### Default Parameter Values
-
-bdq:sourceAuthority = "ISO 8601-1:2019" {[https://www.iso.org/iso-8601-date-and-time-format.html]}
 
 ### Examples
 
@@ -4271,7 +4267,7 @@ bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of
 
 ### Examples
 
-dwc:establishmentMeans="nat": Response.status=AMENDED, Response.result=dwc:establishmentMeans="native", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdq:sourceAuthority"
+dwc:establishmentMeans="vag.": Response.status=AMENDED, Response.result=dwc:establishmentMeans="vagrant", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdq:sourceAuthority"
 
 dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans is not an interpretable value in the bdq:sourceAuthority"
 
@@ -4372,7 +4368,7 @@ The original recommended controlled vocabulary for this term consisted of "prese
 ##  AMENDMENT_PATHWAY_STANDARDIZED
 
 ###  Amendment dwc:pathway Standardized
-https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908/2024-02-09
+https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908/2024-09-18
 Acts upon  SingleRecord
 
 ### Description
@@ -4381,7 +4377,7 @@ Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
 
 ### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 ### Information Elements
 
@@ -4645,7 +4641,7 @@ For reference, information about possible values of dwc:taxonRank can be found a
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty
-https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4674,7 +4670,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard
-https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4703,7 +4699,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty
-https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4732,7 +4728,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dc:type Standard
-https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4761,7 +4757,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty
-https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4790,7 +4786,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard
-https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4819,7 +4815,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty
-https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4848,7 +4844,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard
-https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4877,7 +4873,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty
-https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4906,7 +4902,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard
-https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4935,7 +4931,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty
-https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4964,7 +4960,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard
-https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -4993,7 +4989,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/958ab383-ab8c-4fab-b476-098aa81e73fa/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9a45cb65-a372-4518-a05d-2bc407f3769f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5022,7 +5018,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/824bdf53-458b-460c-afc3-6dc605be20c9/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a56898c9-e9fb-4cb4-878f-9bca63f5c1bb/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5051,7 +5047,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/77f857cb-8bcc-4aa5-865a-b9f171e2d5d0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/40a2ecdd-1b0b-422f-a45d-2947ae532ca3/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5080,7 +5076,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero
-https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5109,7 +5105,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:coordinateUncertaintyInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5138,7 +5134,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5167,7 +5163,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5196,7 +5192,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/32baefe9-fcf6-4ff7-b59f-941432939f23/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/b4aafe7e-6744-4dfe-9813-bf859a20a5f3/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5225,7 +5221,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:stateProvince Unambiguous
-https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5254,7 +5250,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country Found
-https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5283,7 +5279,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:country Not Empty
-https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5312,7 +5308,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude In Range
-https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5341,7 +5337,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5370,7 +5366,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude In Range
-https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5399,7 +5395,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5428,7 +5424,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Not Empty
-https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5457,7 +5453,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5486,7 +5482,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty
-https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5515,7 +5511,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:maximumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5544,7 +5540,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:maximumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5573,7 +5569,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5602,7 +5598,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
-https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5631,7 +5627,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5660,7 +5656,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
-https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5689,7 +5685,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:stateProvince Found
-https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5718,7 +5714,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/573cf644-dd44-451a-a971-3d0a0f478963/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/d2b9ff89-fa9c-4c49-a82e-bc8d428b36a3/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5747,7 +5743,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/6c19c4a2-3988-48ab-a300-bb21c6fea346/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9058bbdd-bb72-4147-a9f9-05cd201a7551/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5776,7 +5772,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/6cd3b6d6-a8fa-49fd-b047-fc630efa42e4/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/2be8ac50-c16c-4b63-8fe2-500e978e4849/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5805,7 +5801,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero
-https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5834,7 +5830,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:coordinateUncertaintyInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5863,7 +5859,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5892,7 +5888,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5921,7 +5917,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/6521e410-82e7-4617-b75c-a616c36aa787/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/2c4853e6-d1bd-419d-89c4-d6f47cca2bcf/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5950,7 +5946,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:stateProvince Unambiguous
-https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -5979,7 +5975,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found
-https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6008,7 +6004,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:country Not Empty
-https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6037,7 +6033,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude In Range
-https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6066,7 +6062,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6095,7 +6091,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude In Range
-https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6124,7 +6120,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude Not Empty
-https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6153,7 +6149,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Not Empty
-https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6182,7 +6178,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6211,7 +6207,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty
-https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6240,7 +6236,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6269,7 +6265,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6298,7 +6294,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6327,7 +6323,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
-https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6356,7 +6352,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters In Range
-https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6385,7 +6381,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
-https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6414,7 +6410,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:stateProvince Found
-https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6443,7 +6439,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:day In Range
-https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6472,7 +6468,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:day Standard
-https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6501,7 +6497,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:endDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6530,7 +6526,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate In Range
-https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6559,7 +6555,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Not Empty
-https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6588,7 +6584,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Standard
-https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6617,7 +6613,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/1ab035d6-62ca-4fd8-a11b-2ed59e714bf0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/9301d5a4-c71a-4e0f-a5f9-7445f5f07f4b/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6646,7 +6642,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent
-https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6675,7 +6671,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:month Standard
-https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6704,7 +6700,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:startDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6733,7 +6729,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:year In Range
-https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6762,7 +6758,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:year Not Empty
-https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6791,7 +6787,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DAY_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:day In Range
-https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6820,7 +6816,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DAY_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:day Standard
-https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6849,7 +6845,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:endDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6878,7 +6874,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate In Range
-https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6907,7 +6903,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Not Empty
-https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6936,7 +6932,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Standard
-https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6965,7 +6961,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/f1f0357c-585e-46be-8964-291e265da072/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/17e47434-9958-4c09-b652-2df5b5346538/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -6994,7 +6990,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent
-https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7023,7 +7019,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:month Standard
-https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7052,7 +7048,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range
-https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7081,7 +7077,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:year In Range
-https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7110,7 +7106,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:year Not Empty
-https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7139,7 +7135,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified In Range
-https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7168,7 +7164,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified Standard
-https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7197,7 +7193,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified In Range
-https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7226,7 +7222,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified Standard
-https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7255,7 +7251,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7284,7 +7280,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:establishmentMeans Standard
-https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7313,7 +7309,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceID Not Empty
-https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7342,7 +7338,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Not Empty
-https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7371,7 +7367,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7400,7 +7396,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:pathway Standard
-https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7429,7 +7425,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:sex Standard
-https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7458,7 +7454,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7487,7 +7483,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7516,7 +7512,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:establishmentMeans Standard
-https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7545,7 +7541,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceID Not Empty
-https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7574,7 +7570,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Not Empty
-https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7603,7 +7599,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7632,7 +7628,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:pathway Standard
-https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7661,7 +7657,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SEX_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:sex Standard
-https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7690,7 +7686,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7719,7 +7715,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Classification Consistent
-https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7748,7 +7744,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:class Found
-https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7777,7 +7773,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:family Found
-https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7806,7 +7802,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:genus Found
-https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7835,7 +7831,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Found
-https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7864,7 +7860,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Not Empty
-https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7893,7 +7889,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:namePublishedInYear Not Empty
-https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7922,7 +7918,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:order Found
-https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7951,7 +7947,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:phylum Found
-https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -7980,7 +7976,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
 
 ###  Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent
-https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8009,7 +8005,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameAuthorship Not Empty
-https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8038,7 +8034,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Complete
-https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8067,7 +8063,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Not Empty
-https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8096,7 +8092,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found
-https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8125,7 +8121,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty
-https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8154,7 +8150,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Not Empty
-https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8183,7 +8179,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Standard
-https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8212,7 +8208,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty
-https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8241,7 +8237,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous
-https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8270,7 +8266,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ##  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent
-https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8299,7 +8295,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_CLASS_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found
-https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8328,7 +8324,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:family Found
-https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8357,7 +8353,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_GENUS_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:genus Found
-https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8386,7 +8382,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Found
-https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8415,7 +8411,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Not Empty
-https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8444,7 +8440,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:namePublishedInYear Not Empty
-https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8473,7 +8469,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_ORDER_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:order Found
-https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8502,7 +8498,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:phylum Found
-https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8531,7 +8527,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent
-https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8560,7 +8556,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameAuthorship Not Empty
-https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8589,7 +8585,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Complete
-https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8618,7 +8614,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Not Empty
-https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8647,7 +8643,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found
-https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8676,7 +8672,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty
-https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8705,7 +8701,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Not Empty
-https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8734,7 +8730,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Standard
-https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8763,7 +8759,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty
-https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
@@ -8792,7 +8788,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ##  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
 
 ###  Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous
-https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-09-08
+https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda/2024-09-18
 Acts upon  MultiRecord
 
 ### Description
