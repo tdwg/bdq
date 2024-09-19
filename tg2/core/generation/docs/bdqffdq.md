@@ -1687,15 +1687,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
 
 ### Preferred Label
 
-nan
+'has Authorities and Defaults'
 
 ### Label
 
-'Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.'
-
-## Controlled Value
-
-'Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.'
+'has Authorities and Defaults'
 
 ### Type
 
@@ -1703,11 +1699,11 @@ DataProperty
 
 ### Definition
 
-'has Authorities and Defaults'
+'Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.'
 
 ### Comment
 
-'has Authorities and Defaults'
+'Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.'
 
 
 ********************
@@ -1720,15 +1716,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse
 
 ### Preferred Label
 
-nan
+'has Expected Response'
 
 ### Label
 
-'Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.'
-
-## Controlled Value
-
-'The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification'
+'has Expected Response'
 
 ### Type
 
@@ -1736,11 +1728,11 @@ DataProperty
 
 ### Definition
 
-'has Expected Response'
+'Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.'
 
 ### Comment
 
-'has Expected Response'
+'The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification'
 
 
 ********************
@@ -1753,15 +1745,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
 
 ### Preferred Label
 
-nan
+'has Response Comment'
 
 ### Label
 
-'Free text describing the assertion made in the response and why that conclusion was reached.'
-
-## Controlled Value
-
-'Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment.'
+'has Response Comment'
 
 ### Type
 
@@ -1769,11 +1757,11 @@ DataProperty
 
 ### Definition
 
-'has Response Comment'
+'Free text describing the assertion made in the response and why that conclusion was reached.'
 
 ### Comment
 
-'has Response Comment'
+'Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment.'
 
 
 ********************
@@ -1786,15 +1774,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 
 ### Preferred Label
 
-nan
+'has response result value'
 
 ### Label
 
-'Data property carrying the value of an Assertion when not an object.'
-
-## Controlled Value
-
-'Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).'
+'has response result value'
 
 ### Type
 
@@ -1802,11 +1786,11 @@ DataProperty
 
 ### Definition
 
-'has response result value'
+'Data property carrying the value of an Assertion when not an object.'
 
 ### Comment
 
-'has response result value'
+'Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).'
 
 
 ********************
@@ -1824,31 +1808,27 @@ https://rs.tdwg.org/bdqffdq/terms/AMENDED
 
 ### Preferred Label
 
-nan
+'AMENDED'
 
 ### Label
 
-'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.'
+'AMENDED'
 
 ## Controlled Value
 
-'AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.'
+'AMENDED'
 
 ### Type
 
 NamedIndividual
 
-## Superclass
-
-'AMENDED'
-
 ### Definition
 
-'AMENDED'
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.'
 
 ### Comment
 
-'AMENDED'
+'AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.'
 
 
 ********************
@@ -1861,31 +1841,27 @@ https://rs.tdwg.org/bdqffdq/terms/COMPLETE
 
 ### Preferred Label
 
-nan
+'COMPLETE'
 
 ### Label
 
-'A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are present and sufficiently comprehensive for use.'
+'COMPLETE'
 
 ## Controlled Value
 
-'These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.'
+'COMPLETE'
 
 ### Type
 
 NamedIndividual
 
-## Superclass
-
-'COMPLETE'
-
 ### Definition
 
-'COMPLETE'
+'A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are present and sufficiently comprehensive for use.'
 
 ### Comment
 
-'COMPLETE'
+'These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.'
 
 
 ********************
@@ -1898,27 +1874,23 @@ https://rs.tdwg.org/bdqffdq/terms/COMPLIANT
 
 ### Preferred Label
 
-nan
+'COMPLIANT'
 
 ### Label
 
-'A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the criteria for quality in the test specification.'
+'COMPLIANT'
+
+## Controlled Value
+
+'COMPLIANT'
 
 ### Type
 
 NamedIndividual
 
-## Superclass
-
-'COMPLIANT'
-
 ### Definition
 
-'COMPLIANT'
-
-### Comment
-
-'COMPLIANT'
+'A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the criteria for quality in the test specification.'
 
 
 ********************
@@ -1931,27 +1903,23 @@ https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET
 
 ### Preferred Label
 
-nan
+'EXTERNAL_PREREQUISITES_NOT_MET'
 
 ### Label
 
-'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result.'
+'EXTERNAL_PREREQUISITES_NOT_MET'
+
+## Controlled Value
+
+'EXTERNAL_PREREQUISITES_NOT_MET'
 
 ### Type
 
 NamedIndividual
 
-## Superclass
-
-'EXTERNAL_PREREQUISITES_NOT_MET'
-
 ### Definition
 
-'EXTERNAL_PREREQUISITES_NOT_MET'
-
-### Comment
-
-'EXTERNAL_PREREQUISITES_NOT_MET'
+'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result.'
 
 
 ********************
@@ -1964,27 +1932,23 @@ https://rs.tdwg.org/bdqffdq/terms/FILLED_IN
 
 ### Preferred Label
 
-nan
+'FILLED_IN'
 
 ### Label
 
-'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.'
+'FILLED_IN'
+
+## Controlled Value
+
+'FILLED_IN'
 
 ### Type
 
 NamedIndividual
 
-## Superclass
-
-'FILLED_IN'
-
 ### Definition
 
-'FILLED_IN'
-
-### Comment
-
-'FILLED_IN'
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.'
 
 
 ********************
@@ -1997,27 +1961,23 @@ https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET
 
 ### Preferred Label
 
-nan
+'INTERNAL_PREREQUISITES_NOT_MET'
 
 ### Label
 
-'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response.'
+'INTERNAL_PREREQUISITES_NOT_MET'
+
+## Controlled Value
+
+'INTERNAL_PREREQUISITES_NOT_MET'
 
 ### Type
 
 NamedIndividual
 
-## Superclass
-
-'INTERNAL_PREREQUISITES_NOT_MET'
-
 ### Definition
 
-'INTERNAL_PREREQUISITES_NOT_MET'
-
-### Comment
-
-'INTERNAL_PREREQUISITES_NOT_MET'
+'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response.'
 
 
 ********************
@@ -2030,249 +1990,27 @@ https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE
 
 ### Preferred Label
 
-nan
+'IS_ISSUE'
 
 ### Label
+
+'IS_ISSUE'
+
+## Controlled Value
+
+'IS_ISSUE'
+
+### Type
+
+NamedIndividual
+
+### Definition
 
 'A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use.'
 
-## Controlled Value
+### Comment
 
 'This is a parallel assertion to NOT_COMPLIANT'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'IS_ISSUE'
-
-### Definition
-
-'IS_ISSUE'
-
-### Comment
-
-'IS_ISSUE'
-
-
-********************
-
-## bdqffdq:NOT_AMENDED
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
-
-### Preferred Label
-
-nan
-
-### Label
-
-'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.'
-
-## Controlled Value
-
-'No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties.'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'NOT_AMENDED'
-
-### Definition
-
-'NOT_AMENDED'
-
-### Comment
-
-'NOT_AMENDED'
-
-
-********************
-
-## bdqffdq:NOT_COMPLETE
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
-
-### Preferred Label
-
-nan
-
-### Label
-
-'A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for use.'
-
-## Controlled Value
-
-'These can be used to exclude data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'NOT_COMPLETE'
-
-### Definition
-
-'NOT_COMPLETE'
-
-### Comment
-
-'NOT_COMPLETE'
-
-
-********************
-
-## bdqffdq:NOT_COMPLIANT
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
-
-### Preferred Label
-
-nan
-
-### Label
-
-'A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the criteria for quality in the test specification.'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'NOT_COMPLIANT'
-
-### Definition
-
-'NOT_COMPLIANT'
-
-### Comment
-
-'NOT_COMPLIANT'
-
-
-********************
-
-## bdqffdq:NOT_ISSUE
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE
-
-### Preferred Label
-
-nan
-
-### Label
-
-'A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected.'
-
-## Controlled Value
-
-'This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality.'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'NOT_ISSUE'
-
-### Definition
-
-'NOT_ISSUE'
-
-### Comment
-
-'NOT_ISSUE'
-
-
-********************
-
-## bdqffdq:POTENTIAL_ISSUE
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
-
-### Preferred Label
-
-nan
-
-### Label
-
-'A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not.'
-
-## Controlled Value
-
-'See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation.'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'POTENTIAL_ISSUE'
-
-### Definition
-
-'POTENTIAL_ISSUE'
-
-### Comment
-
-'POTENTIAL_ISSUE'
-
-
-********************
-
-## bdqffdq:RUN_HAS_RESULT
-
-### Name
-
-https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
-
-### Preferred Label
-
-nan
-
-### Label
-
-'A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.'
-
-## Controlled Value
-
-'Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.'
-
-### Type
-
-NamedIndividual
-
-## Superclass
-
-'RUN_HAS_RESULT'
-
-### Definition
-
-'RUN_HAS_RESULT'
-
-### Comment
-
-'RUN_HAS_RESULT'
 
 
 ********************
@@ -2285,15 +2023,11 @@ https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 
 ### Preferred Label
 
-nan
+'Multi Record'
 
 ### Label
 
-'A set of one or more Single Records.'
-
-## Controlled Value
-
-'A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset'
+'Multi Record'
 
 ### Type
 
@@ -2301,11 +2035,205 @@ NamedIndividual
 
 ### Definition
 
-'Multi Record'
+'A set of one or more Single Records.'
 
 ### Comment
 
-'Multi Record'
+'A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset'
+
+
+********************
+
+## bdqffdq:NOT_AMENDED
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
+
+### Preferred Label
+
+'NOT_AMENDED'
+
+### Label
+
+'NOT_AMENDED'
+
+## Controlled Value
+
+'NOT_AMENDED'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.'
+
+### Comment
+
+'No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties.'
+
+
+********************
+
+## bdqffdq:NOT_COMPLETE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
+
+### Preferred Label
+
+'NOT_COMPLETE'
+
+### Label
+
+'NOT_COMPLETE'
+
+## Controlled Value
+
+'NOT_COMPLETE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for use.'
+
+### Comment
+
+'These can be used to exclude data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.'
+
+
+********************
+
+## bdqffdq:NOT_COMPLIANT
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
+
+### Preferred Label
+
+'NOT_COMPLIANT'
+
+### Label
+
+'NOT_COMPLIANT'
+
+## Controlled Value
+
+'NOT_COMPLIANT'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the criteria for quality in the test specification.'
+
+
+********************
+
+## bdqffdq:NOT_ISSUE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE
+
+### Preferred Label
+
+'NOT_ISSUE'
+
+### Label
+
+'NOT_ISSUE'
+
+## Controlled Value
+
+'NOT_ISSUE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected.'
+
+### Comment
+
+'This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality.'
+
+
+********************
+
+## bdqffdq:POTENTIAL_ISSUE
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
+
+### Preferred Label
+
+'POTENTIAL_ISSUE'
+
+### Label
+
+'POTENTIAL_ISSUE'
+
+## Controlled Value
+
+'POTENTIAL_ISSUE'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not.'
+
+### Comment
+
+'See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation.'
+
+
+********************
+
+## bdqffdq:RUN_HAS_RESULT
+
+### Name
+
+https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
+
+### Preferred Label
+
+'RUN_HAS_RESULT'
+
+### Label
+
+'RUN_HAS_RESULT'
+
+## Controlled Value
+
+'RUN_HAS_RESULT'
+
+### Type
+
+NamedIndividual
+
+### Definition
+
+'A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.'
+
+### Comment
+
+'Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.'
 
 
 ********************
@@ -2318,17 +2246,11 @@ https://rs.tdwg.org/bdqffdq/terms/SingleRecord
 
 ### Preferred Label
 
-nan
+'Single Record'
 
 ### Label
 
-'A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need.'
-
-## Controlled Value
-
-'A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).
-
-A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset'
+'Single Record'
 
 ### Type
 
@@ -2336,11 +2258,13 @@ NamedIndividual
 
 ### Definition
 
-'Single Record'
+'A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need.'
 
 ### Comment
 
-'Single Record'
+'A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).
+
+A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset'
 
 
 ********************
@@ -2358,15 +2282,11 @@ https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 
 ### Preferred Label
 
-nan
+'amendment Property'
 
 ### Label
 
-'Category of object properties that apply to Amendmentts'
-
-## Controlled Value
-
-'Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports).'
+'amendment Property'
 
 ### Type
 
@@ -2374,11 +2294,11 @@ ObjectProperty
 
 ### Definition
 
-'amendment Property'
+'Category of object properties that apply to Amendmentts'
 
 ### Comment
 
-'amendment Property'
+'Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports).'
 
 
 ********************
@@ -2391,15 +2311,11 @@ https://rs.tdwg.org/bdqffdq/terms/appliesTo
 
 ### Preferred Label
 
-nan
+'applies To'
 
 ### Label
 
-'Describes the DataResource about which an Assertion is made.'
-
-## Controlled Value
-
-'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.  If Assertions are composed in DataQualityReports, the appliesTo DataResource is an item examined as part of the report.  Expectation for SingleRecord test Assertions on Darwin Core data in BDQ Core is that appliesTo would point at an Occurrence.'
+'applies To'
 
 ### Type
 
@@ -2407,11 +2323,11 @@ ObjectProperty
 
 ### Definition
 
-'applies To'
+'Describes the DataResource about which an Assertion is made.'
 
 ### Comment
 
-'applies To'
+'If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.  If Assertions are composed in DataQualityReports, the appliesTo DataResource is an item examined as part of the report.  Expectation for SingleRecord test Assertions on Darwin Core data in BDQ Core is that appliesTo would point at an Occurrence.'
 
 
 ********************
@@ -2424,15 +2340,11 @@ https://rs.tdwg.org/bdqffdq/terms/composedOf
 
 ### Preferred Label
 
-nan
+'composed Of'
 
 ### Label
 
-'Specific vocabulary term that comprises a non-abstract Information Element.'
-
-## Controlled Value
-
-'Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.'
+'composed Of'
 
 ### Type
 
@@ -2440,11 +2352,11 @@ ObjectProperty
 
 ### Definition
 
-'composed Of'
+'Specific vocabulary term that comprises a non-abstract Information Element.'
 
 ### Comment
 
-'composed Of'
+'Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.'
 
 
 ********************
@@ -2457,15 +2369,11 @@ https://rs.tdwg.org/bdqffdq/terms/containsAssertion
 
 ### Preferred Label
 
-nan
+'contains Assertion'
 
 ### Label
 
-'Connects a Data Quality Report with Assertions that comprise that report.'
-
-## Controlled Value
-
-'Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used.'
+'contains Assertion'
 
 ### Type
 
@@ -2473,11 +2381,11 @@ ObjectProperty
 
 ### Definition
 
-'contains Assertion'
+'Connects a Data Quality Report with Assertions that comprise that report.'
 
 ### Comment
 
-'contains Assertion'
+'Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used.'
 
 
 ********************
@@ -2490,15 +2398,11 @@ https://rs.tdwg.org/bdqffdq/terms/forAmendment
 
 ### Preferred Label
 
-nan
+'for Amendment'
 
 ### Label
 
-'Relates an AmendmentMethod to an Amendment.'
-
-## Controlled Value
-
-'Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs).'
+'for Amendment'
 
 ### Type
 
@@ -2506,11 +2410,11 @@ ObjectProperty
 
 ### Definition
 
-'for Amendment'
+'Relates an AmendmentMethod to an Amendment.'
 
 ### Comment
 
-'for Amendment'
+'Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs).'
 
 
 ********************
@@ -2523,15 +2427,11 @@ https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed
 
 ### Preferred Label
 
-nan
+'for Data Quality Need'
 
 ### Label
 
-'Category of properties that relates specific Data Quality Needs to specific Methods.'
-
-## Controlled Value
-
-'Category of properties that link tests to their Methods'
+'for Data Quality Need'
 
 ### Type
 
@@ -2539,11 +2439,11 @@ ObjectProperty
 
 ### Definition
 
-'for Data Quality Need'
+'Category of properties that relates specific Data Quality Needs to specific Methods.'
 
 ### Comment
 
-'for Data Quality Need'
+'Category of properties that link tests to their Methods'
 
 
 ********************
@@ -2556,15 +2456,11 @@ https://rs.tdwg.org/bdqffdq/terms/forIssue
 
 ### Preferred Label
 
-nan
+'for Issue'
 
 ### Label
 
-'Relates an IssuetMethod to an Issue.'
-
-## Controlled Value
-
-'Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedment, forValidation, forMeasure.'
+'for Issue'
 
 ### Type
 
@@ -2572,11 +2468,11 @@ ObjectProperty
 
 ### Definition
 
-'for Issue'
+'Relates an IssuetMethod to an Issue.'
 
 ### Comment
 
-'for Issue'
+'Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedment, forValidation, forMeasure.'
 
 
 ********************
@@ -2589,15 +2485,11 @@ https://rs.tdwg.org/bdqffdq/terms/forMeasure
 
 ### Preferred Label
 
-nan
+'for Measure'
 
 ### Label
 
-'Relates an MeasurementMethod to a Measure.'
-
-## Controlled Value
-
-'Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmendment, forValidation, forIssue.'
+'for Measure'
 
 ### Type
 
@@ -2605,11 +2497,11 @@ ObjectProperty
 
 ### Definition
 
-'for Measure'
+'Relates an MeasurementMethod to a Measure.'
 
 ### Comment
 
-'for Measure'
+'Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmendment, forValidation, forIssue.'
 
 
 ********************
@@ -2622,15 +2514,11 @@ https://rs.tdwg.org/bdqffdq/terms/forValidation
 
 ### Preferred Label
 
-nan
+'for Validation'
 
 ### Label
 
-'Relates an ValidationMethod to a Validation.'
-
-## Controlled Value
-
-'Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmendment, forMeasure, and forIssue.'
+'for Validation'
 
 ### Type
 
@@ -2638,11 +2526,11 @@ ObjectProperty
 
 ### Definition
 
-'for Validation'
+'Relates an ValidationMethod to a Validation.'
 
 ### Comment
 
-'for Validation'
+'Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmendment, forMeasure, and forIssue.'
 
 
 ********************
@@ -2655,15 +2543,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement
 
 ### Preferred Label
 
-nan
+'has Acted Upon Information Element'
 
 ### Label
 
-'Describes the ActedUpon InformationElements assessed by a DataQualityNeed about which Assertions arising from the DataQualityNeed would apply.'
-
-## Controlled Value
-
-'Provides a relationship between bdqffdq concepts and the information elements that are ActedUpon in a test.'
+'has Acted Upon Information Element'
 
 ### Type
 
@@ -2671,11 +2555,11 @@ ObjectProperty
 
 ### Definition
 
-'has Acted Upon Information Element'
+'Describes the ActedUpon InformationElements assessed by a DataQualityNeed about which Assertions arising from the DataQualityNeed would apply.'
 
 ### Comment
 
-'has Acted Upon Information Element'
+'Provides a relationship between bdqffdq concepts and the information elements that are ActedUpon in a test.'
 
 
 ********************
@@ -2688,15 +2572,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement
 
 ### Preferred Label
 
-nan
+'has Consulted Information Element'
 
 ### Label
 
-'Describes the InformationElements assessed by a DataQualityNeed in order to make Assertions concerning ActedUpon InformationElements.'
-
-## Controlled Value
-
-'Provides a relationship between bdqffdq concepts and the information elements that are Consulted, but not ActedUpon in a test.'
+'has Consulted Information Element'
 
 ### Type
 
@@ -2704,11 +2584,11 @@ ObjectProperty
 
 ### Definition
 
-'has Consulted Information Element'
+'Describes the InformationElements assessed by a DataQualityNeed in order to make Assertions concerning ActedUpon InformationElements.'
 
 ### Comment
 
-'has Consulted Information Element'
+'Provides a relationship between bdqffdq concepts and the information elements that are Consulted, but not ActedUpon in a test.'
 
 
 ********************
@@ -2721,15 +2601,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasCriterion
 
 ### Preferred Label
 
-nan
+'has Criterion'
 
 ### Label
 
-'The Criterion under which a Validation or Issue assesses for data quality.'
-
-## Controlled Value
-
-'Used to link the derived concept of a Validation to the fundamental concept of a Criterion.'
+'has Criterion'
 
 ### Type
 
@@ -2737,11 +2613,11 @@ ObjectProperty
 
 ### Definition
 
-'has Criterion'
+'The Criterion under which a Validation or Issue assesses for data quality.'
 
 ### Comment
 
-'has Criterion'
+'Used to link the derived concept of a Validation to the fundamental concept of a Criterion.'
 
 
 ********************
@@ -2754,17 +2630,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension
 
 ### Preferred Label
 
-nan
+'has Data Quality Dimension'
 
 ### Label
 
-'The DataQualityDimension to which a DataQualityNeed Applies.'
-
-## Controlled Value
-
-'Used to link a derived concept of a DataQualityNeed (a test, that is a Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.  For a Measure, the dimension of data quality measured.   For a Validation or Issue, the dimension of data quality assessed.  For an Amendment, the dimension of data quality to be improved.  
-
-Under the original formulation of the Framework, only Measures have Dimensions.'
+'has Data Quality Dimension'
 
 ### Type
 
@@ -2772,11 +2642,13 @@ ObjectProperty
 
 ### Definition
 
-'has Data Quality Dimension'
+'The DataQualityDimension to which a DataQualityNeed Applies.'
 
 ### Comment
 
-'has Data Quality Dimension'
+'Used to link a derived concept of a DataQualityNeed (a test, that is a Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.  For a Measure, the dimension of data quality measured.   For a Validation or Issue, the dimension of data quality assessed.  For an Amendment, the dimension of data quality to be improved.  
+
+Under the original formulation of the Framework, only Measures have Dimensions.'
 
 
 ********************
@@ -2789,15 +2661,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
 
 ### Preferred Label
 
-nan
+'has Enhancement'
 
 ### Label
 
-'The Enhancement that describes how an Amendment may propose changes to improve data quality.'
-
-## Controlled Value
-
-'Used to link the derived property of an Amendment to the Fundamental property of an Enhancement.'
+'has Enhancement'
 
 ### Type
 
@@ -2805,11 +2673,11 @@ ObjectProperty
 
 ### Definition
 
-'has Enhancement'
+'The Enhancement that describes how an Amendment may propose changes to improve data quality.'
 
 ### Comment
 
-'has Enhancement'
+'Used to link the derived property of an Amendment to the Fundamental property of an Enhancement.'
 
 
 ********************
@@ -2822,17 +2690,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasInformationElement
 
 ### Preferred Label
 
-nan
+'has Information Element'
 
 ### Label
 
-'Describes the InformationElements assessed by a DataQualityNeed.'
-
-## Controlled Value
-
-'Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
-
-Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).'
+'has Information Element'
 
 ### Type
 
@@ -2840,11 +2702,13 @@ ObjectProperty
 
 ### Definition
 
-'has Information Element'
+'Describes the InformationElements assessed by a DataQualityNeed.'
 
 ### Comment
 
-'has Information Element'
+'Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
+
+Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).'
 
 
 ********************
@@ -2857,15 +2721,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasParameter
 
 ### Preferred Label
 
-nan
+'has Parameter'
 
 ### Label
 
-'Parameter that can alter the behavior of a Specification.'
-
-## Controlled Value
-
-'Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification.'
+'has Parameter'
 
 ### Type
 
@@ -2873,11 +2733,11 @@ ObjectProperty
 
 ### Definition
 
-'has Parameter'
+'Parameter that can alter the behavior of a Specification.'
 
 ### Comment
 
-'has Parameter'
+'Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification.'
 
 
 ********************
@@ -2890,15 +2750,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasResourceType
 
 ### Preferred Label
 
-nan
+'has Resource Type'
 
 ### Label
 
-'Resource Type to which a DataQualityNeed applies.'
-
-## Controlled Value
-
-'Provides additional metadata, along with the information elements, that describe the nature of the data  (SingleRecord or MultiRecord) on which the bdqffdq concept operates. For example, an Amendment with resource type of MultiRecord defines that Amendment as operating on a data set.'
+'has Resource Type'
 
 ### Type
 
@@ -2906,11 +2762,11 @@ ObjectProperty
 
 ### Definition
 
-'has Resource Type'
+'Resource Type to which a DataQualityNeed applies.'
 
 ### Comment
 
-'has Resource Type'
+'Provides additional metadata, along with the information elements, that describe the nature of the data  (SingleRecord or MultiRecord) on which the bdqffdq concept operates. For example, an Amendment with resource type of MultiRecord defines that Amendment as operating on a data set.'
 
 
 ********************
@@ -2923,15 +2779,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier
 
 ### Preferred Label
 
-nan
+'has Response Qualifier'
 
 ### Label
 
-'ResponseQualifier object asserted by an Assertion.'
-
-## Controlled Value
-
-'Optional extension point, could be used to add structured information about uncertainty.'
+'has Response Qualifier'
 
 ### Type
 
@@ -2939,11 +2791,11 @@ ObjectProperty
 
 ### Definition
 
-'has Response Qualifier'
+'ResponseQualifier object asserted by an Assertion.'
 
 ### Comment
 
-'has Response Qualifier'
+'Optional extension point, could be used to add structured information about uncertainty.'
 
 
 ********************
@@ -2956,17 +2808,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasResponseResult
 
 ### Preferred Label
 
-nan
+'has Response Result'
 
 ### Label
 
-'ResponseResult object asserted by an Assertion.'
-
-## Controlled Value
-
-'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
-
- If Response.results are not objects, use the datatype property hasResponseResultValue'
+'has Response Result'
 
 ### Type
 
@@ -2974,11 +2820,13 @@ ObjectProperty
 
 ### Definition
 
-'has Response Result'
+'ResponseResult object asserted by an Assertion.'
 
 ### Comment
 
-'has Response Result'
+'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
+
+ If Response.results are not objects, use the datatype property hasResponseResultValue'
 
 
 ********************
@@ -2991,17 +2839,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus
 
 ### Preferred Label
 
-nan
+'has Response Status'
 
 ### Label
 
-'ResponseStatus object asserted by an Assertion.'
-
-## Controlled Value
-
-'Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET, or bdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdq:AMENDED or bdq:FILLED_IN.  
-
-ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.'
+'has Response Status'
 
 ### Type
 
@@ -3009,11 +2851,13 @@ ObjectProperty
 
 ### Definition
 
-'has Response Status'
+'ResponseStatus object asserted by an Assertion.'
 
 ### Comment
 
-'has Response Status'
+'Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET, or bdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdq:AMENDED or bdq:FILLED_IN.  
+
+ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.'
 
 
 ********************
@@ -3026,15 +2870,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasSpecification
 
 ### Preferred Label
 
-nan
+'has Specification'
 
 ### Label
 
-'Relates a Method to a Specification.'
-
-## Controlled Value
-
-'Describes the relationship between a derived bdqffdq concept that is a Method and the fundamental concept of a Specification (technical description of a test).'
+'has Specification'
 
 ### Type
 
@@ -3042,11 +2882,11 @@ ObjectProperty
 
 ### Definition
 
-'has Specification'
+'Relates a Method to a Specification.'
 
 ### Comment
 
-'has Specification'
+'Describes the relationship between a derived bdqffdq concept that is a Method and the fundamental concept of a Specification (technical description of a test).'
 
 
 ********************
@@ -3059,15 +2899,11 @@ https://rs.tdwg.org/bdqffdq/terms/hasUseCase
 
 ### Preferred Label
 
-nan
+'has Use Case'
 
 ### Label
 
-'Relates a Policy to a UseCase.'
-
-## Controlled Value
-
-'Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase.'
+'has Use Case'
 
 ### Type
 
@@ -3075,11 +2911,11 @@ ObjectProperty
 
 ### Definition
 
-'has Use Case'
+'Relates a Policy to a UseCase.'
 
 ### Comment
 
-'has Use Case'
+'Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase.'
 
 
 ********************
@@ -3092,15 +2928,11 @@ https://rs.tdwg.org/bdqffdq/terms/implementedBy
 
 ### Preferred Label
 
-nan
+'implemented By'
 
 ### Label
 
-'Mechanism that provides an Implementation'
-
-## Controlled Value
-
-'Describes the link between the Implementation concept in bdqffdq and a Mechanism.'
+'implemented By'
 
 ### Type
 
@@ -3108,11 +2940,11 @@ ObjectProperty
 
 ### Definition
 
-'implemented By'
+'Mechanism that provides an Implementation'
 
 ### Comment
 
-'implemented By'
+'Describes the link between the Implementation concept in bdqffdq and a Mechanism.'
 
 
 ********************
@@ -3125,17 +2957,11 @@ https://rs.tdwg.org/bdqffdq/terms/improvedBy
 
 ### Preferred Label
 
-nan
+'improved By'
 
 ### Label
 
-'ImprovementTarget that would have data quality improved by assertions resulting from an Amendment.'
-
-## Controlled Value
-
-'Origially had Domain: Amendment and Range: ImprovementTarget.   Asserts that an improvement target could be improved by the Amendment.  
-
-Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of Measures or Validations.  This can be used to determine which Measures and Validations are improved upon by a given Amendment.'
+'improved By'
 
 ### Type
 
@@ -3143,11 +2969,13 @@ ObjectProperty
 
 ### Definition
 
-'improved By'
+'ImprovementTarget that would have data quality improved by assertions resulting from an Amendment.'
 
 ### Comment
 
-'improved By'
+'Origially had Domain: Amendment and Range: ImprovementTarget.   Asserts that an improvement target could be improved by the Amendment.  
+
+Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of Measures or Validations.  This can be used to determine which Measures and Validations are improved upon by a given Amendment.'
 
 
 ********************
@@ -3160,15 +2988,11 @@ https://rs.tdwg.org/bdqffdq/terms/includedInPolicy
 
 ### Preferred Label
 
-nan
+'included In Policy'
 
 ### Label
 
-'Assserts that a Data Quality Need is part of a Policy'
-
-## Controlled Value
-
-'Relates Policies to tests (DataQualityNeeds) .'
+'included in Policy'
 
 ### Type
 
@@ -3176,11 +3000,11 @@ ObjectProperty
 
 ### Definition
 
-'included In Policy'
+'Assserts that a Data Quality Need is part of a Policy'
 
 ### Comment
 
-'included in Policy'
+'Relates Policies to tests (DataQualityNeeds) .'
 
 
 ********************
@@ -3193,15 +3017,11 @@ https://rs.tdwg.org/bdqffdq/terms/issueProperty
 
 ### Preferred Label
 
-nan
+'issue Property'
 
 ### Label
 
-'Category of object properties that apply to Issues.'
-
-## Controlled Value
-
-'Properties that relate Issues to IssueMethods, Criteria, and dataQualityDimensions.'
+'issue Property'
 
 ### Type
 
@@ -3209,11 +3029,11 @@ ObjectProperty
 
 ### Definition
 
-'issue Property'
+'Category of object properties that apply to Issues.'
 
 ### Comment
 
-'issue Property'
+'Properties that relate Issues to IssueMethods, Criteria, and dataQualityDimensions.'
 
 
 ********************
@@ -3226,15 +3046,11 @@ https://rs.tdwg.org/bdqffdq/terms/measurementProperty
 
 ### Preferred Label
 
-nan
+'measurement Property'
 
 ### Label
 
-'Category of object properties that apply to Measures.'
-
-## Controlled Value
-
-'Sub properties of this type group object properties that apply to measurement concepts such as MeasurementPolicy (DQ Needs), MeasurementMethod (DQ Solutions) and Measure (DQ Reports).'
+'measurement Property'
 
 ### Type
 
@@ -3242,11 +3058,11 @@ ObjectProperty
 
 ### Definition
 
-'measurement Property'
+'Category of object properties that apply to Measures.'
 
 ### Comment
 
-'measurement Property'
+'Sub properties of this type group object properties that apply to measurement concepts such as MeasurementPolicy (DQ Needs), MeasurementMethod (DQ Solutions) and Measure (DQ Reports).'
 
 
 ********************
@@ -3259,15 +3075,11 @@ https://rs.tdwg.org/bdqffdq/terms/producesAssertion
 
 ### Preferred Label
 
-nan
+'produces Assertion'
 
 ### Label
 
-'Connects an entity with an assertion that the entity created.'
-
-## Controlled Value
-
-'Connects Implementations (solutions) with the Assertions (reports) that they produce from the execution of a Specification.'
+'produces Assertion'
 
 ### Type
 
@@ -3275,11 +3087,11 @@ ObjectProperty
 
 ### Definition
 
-'produces Assertion'
+'Connects an entity with an assertion that the entity created.'
 
 ### Comment
 
-'produces Assertion'
+'Connects Implementations (solutions) with the Assertions (reports) that they produce from the execution of a Specification.'
 
 
 ********************
@@ -3292,15 +3104,11 @@ https://rs.tdwg.org/bdqffdq/terms/reportProperty
 
 ### Preferred Label
 
-nan
+'report Property'
 
 ### Label
 
-'Category of object properties that apply to Assertions.'
-
-## Controlled Value
-
-'Category of properties used in reports (object properties associated with Response objects (bdqffdq:Assertions)).  See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.'
+'report Property'
 
 ### Type
 
@@ -3308,11 +3116,11 @@ ObjectProperty
 
 ### Definition
 
-'report Property'
+'Category of object properties that apply to Assertions.'
 
 ### Comment
 
-'report Property'
+'Category of properties used in reports (object properties associated with Response objects (bdqffdq:Assertions)).  See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.'
 
 
 ********************
@@ -3325,15 +3133,11 @@ https://rs.tdwg.org/bdqffdq/terms/targetedIssue
 
 ### Preferred Label
 
-nan
+'targeted Issue'
 
 ### Label
 
-'Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
-
-## Controlled Value
-
-'The issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an improvement target and an Issue.'
+'targeted Issue'
 
 ### Type
 
@@ -3341,11 +3145,11 @@ ObjectProperty
 
 ### Definition
 
-'targeted Issue'
+'Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
 
 ### Comment
 
-'targeted Issue'
+'The issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an improvement target and an Issue.'
 
 
 ********************
@@ -3358,15 +3162,11 @@ https://rs.tdwg.org/bdqffdq/terms/targetedMeasure
 
 ### Preferred Label
 
-nan
+'targeted Measure'
 
 ### Label
 
-'Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
-
-## Controlled Value
-
-'Describes the relationship between an improvement target and a Measure.'
+'targeted Measure'
 
 ### Type
 
@@ -3374,11 +3174,11 @@ ObjectProperty
 
 ### Definition
 
-'targeted Measure'
+'Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
 
 ### Comment
 
-'targeted Measure'
+'Describes the relationship between an improvement target and a Measure.'
 
 
 ********************
@@ -3391,15 +3191,11 @@ https://rs.tdwg.org/bdqffdq/terms/targetedValidation
 
 ### Preferred Label
 
-nan
+'targeted Validation'
 
 ### Label
 
-'Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
-
-## Controlled Value
-
-'Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation.'
+'targeted Validatiohn'
 
 ### Type
 
@@ -3407,11 +3203,11 @@ ObjectProperty
 
 ### Definition
 
-'targeted Validation'
+'Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.'
 
 ### Comment
 
-'targeted Validatiohn'
+'Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation.'
 
 
 ********************
@@ -3424,15 +3220,11 @@ https://rs.tdwg.org/bdqffdq/terms/usesSpecification
 
 ### Preferred Label
 
-nan
+'uses Specification'
 
 ### Label
 
-'Specification that an Implementation implements.'
-
-## Controlled Value
-
-'Relates an Implementation to the Specification that the Implementation implements.'
+'uses Specification'
 
 ### Type
 
@@ -3440,11 +3232,11 @@ ObjectProperty
 
 ### Definition
 
-'uses Specification'
+'Specification that an Implementation implements.'
 
 ### Comment
 
-'uses Specification'
+'Relates an Implementation to the Specification that the Implementation implements.'
 
 
 ********************
@@ -3457,15 +3249,11 @@ https://rs.tdwg.org/bdqffdq/terms/validationProperty
 
 ### Preferred Label
 
-nan
+'validation Property'
 
 ### Label
 
-'Category of object properties that apply to Validations.'
-
-## Controlled Value
-
-'Sub properties of this type group object properties that apply to validation concepts such as ValidationPolicy (DQ Needs), ValidationMethod (DQ Solutions) and Validation (DQ Reports).'
+'validation Property'
 
 ### Type
 
@@ -3473,11 +3261,11 @@ ObjectProperty
 
 ### Definition
 
-'validation Property'
+'Category of object properties that apply to Validations.'
 
 ### Comment
 
-'validation Property'
+'Sub properties of this type group object properties that apply to validation concepts such as ValidationPolicy (DQ Needs), ValidationMethod (DQ Solutions) and Validation (DQ Reports).'
 
 
 ********************
