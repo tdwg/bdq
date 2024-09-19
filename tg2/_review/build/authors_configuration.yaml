@@ -54,7 +54,7 @@
   affiliation: 'Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche'
   affiliation_uri: https://www.irnad.com/
 
-- contributor_iri: 
+- contributor_iri: https://orcid.org/0000-0002-8981-4048
   contributor_literal: Alexander Thompson
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
