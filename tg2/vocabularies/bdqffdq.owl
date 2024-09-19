@@ -50,9 +50,9 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 ###  https://rs.tdwg.org/bdqffdq/terms/composedOf
 :composedOf rdf:type owl:ObjectProperty ;
             rdfs:comment "Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year." ;
-            rdfs:label "composed of" ;
+            rdfs:label "composed Of" ;
             skos:definition "Specific vocabulary term that comprises a non-abstract Information Element." ;
-            skos:prefLabel "composed of" .
+            skos:prefLabel "composed Of" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/containsAssertion
@@ -89,7 +89,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                         owl:onProperty :forIssue ;
                         owl:someValuesFrom :Issue
                       ] ;
-          rdfs:comment "Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedhment, forValidation, forMeasure." ;
+          rdfs:comment "Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedment, forValidation, forMeasure." ;
           rdfs:label "for Issue" ;
           skos:definition "Relates an IssuetMethod to an Issue." ;
           skos:prefLabel "for Issue" .
@@ -99,7 +99,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :forMeasure rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :forDataQualityNeed ,
                                :measurementProperty ;
-            rdfs:comment "Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmedhment, forValidation, forIssue." ;
+            rdfs:comment "Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmendment, forValidation, forIssue." ;
             rdfs:label "for Measure" ;
             skos:definition "Relates an MeasurementMethod to a Measure." ;
             skos:prefLabel "for Measure" .
@@ -113,7 +113,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                              owl:onProperty :forValidation ;
                              owl:someValuesFrom :Validation
                            ] ;
-               rdfs:comment "Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmedhment, forMeasure, and forIssue."@en ;
+               rdfs:comment "Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmendment, forMeasure, and forIssue."@en ;
                rdfs:label "for Validation"@en ;
                skos:definition "Relates an ValidationMethod to a Validation." ;
                skos:prefLabel "for Validation"@en .
@@ -203,7 +203,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 ###  https://rs.tdwg.org/bdqffdq/terms/hasParameter
 :hasParameter rdf:type owl:ObjectProperty ;
               rdfs:domain :Parameter ;
-              rdfs:comment "Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Paramter under that specification."@en ;
+              rdfs:comment "Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification."@en ;
               rdfs:label "has Parameter"@en ;
               skos:definition "Parameter that can alter the behavior of a Specification."@en ;
               skos:prefLabel "has Parameter"@en .
@@ -289,7 +289,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
                         ] ;
             rdfs:comment """Origially had Domain: Amendment and Range: ImprovementTarget.   Asserts that an improvement target could be improved by the Amendment.  
 
-Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of measures or validations.  This can be used to determine which measures and validations are improved upon by a given amendment.""" ;
+Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of Measures or Validations.  This can be used to determine which Measures and Validations are improved upon by a given Amendment.""" ;
             rdfs:label "improved By" ;
             skos:definition "ImprovementTarget that would have data quality improved by assertions resulting from an Amendment." ;
             skos:prefLabel "improved By" .
@@ -353,7 +353,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
                                owl:onProperty :targetedMeasure ;
                                owl:someValuesFrom :Measure
                              ] ;
-                 rdfs:comment "Describes the relationship between an improvement target and a Measure.  Was, but dimension is too abstract: The dimension targeted by some enhancement via the ImprovementTarget object."@en ;
+                 rdfs:comment "Describes the relationship between an improvement target and a Measure."@en ;
                  rdfs:label "targeted Measure"@en ;
                  skos:definition "Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
                  skos:prefLabel "targeted Measure"@en .
@@ -366,7 +366,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
                                   owl:onProperty :targetedValidation ;
                                   owl:someValuesFrom :Validation
                                 ] ;
-                    rdfs:comment "Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation/  Was: The criteria targeted by some enhancement via the ImprovementTarget object.  But, too abstract."@en ;
+                    rdfs:comment "Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation."@en ;
                     rdfs:label "targeted Validatiohn"@en ;
                     skos:definition "Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
                     skos:prefLabel "targeted Validation"@en .
@@ -459,7 +459,7 @@ Describes a proposal for enhancement of original data, which if accepted, would 
 
 Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  
 
-An Amendment is the data quality needs concept that paralells an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.   
+An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.   
 
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
            rdfs:label "Amendment"@en ;
@@ -655,7 +655,7 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}"""@en ;
 :Issue rdf:type owl:Class ;
        rdfs:subClassOf :DataQualityNeed ,
                        :IssueConcept ;
-       rdfs:comment """Added to the original framework.  Inverse of Contextualized Criterion in the original framework.  Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.  Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximates an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either IS_ISSUE or POTENTIAL_ISSUE, if no issue is found with the data the result will be NOT_ISSUE.  NOT_ISSUE, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that paralells a IssueMethod at the solutions level, and a IssueAssertion at the report level.   
+       rdfs:comment """Added to the original framework.  Inverse of Contextualized Criterion in the original framework.  Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.  Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximates an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either IS_ISSUE or POTENTIAL_ISSUE, if no issue is found with the data the result will be NOT_ISSUE.  NOT_ISSUE, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that parallels a IssueMethod at the solutions level, and a IssueAssertion at the report level.   
 
 IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }"""@en ;
        rdfs:label "Issue"@en ;
@@ -711,7 +711,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 
 Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data that have quality for some need if all records are COMPLETE for all pertenent Measures. 
 
-A Measure is the data quality needs concept that paralells a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level.
+A Measure is the data quality needs concept that parallels a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level.
 
 ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
 also acceptable measure
@@ -886,7 +886,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 Validations are phrased in a positive sense, they identify data which has quality for some need.  For example: The value of basisOfRecord of single records must be in the controlled vocabulary.   
 
-A Validation is the data quality needs concept that paralells a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality for some use.  
+A Validation is the data quality needs concept that parallels a ValidationMethod at the solutions level, and a ValidationAssertion at the report level.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality for some use.  
 
 VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }"""@en ;
             rdfs:label "Validation"@en ;
@@ -949,8 +949,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
                   :ResponseStatus ;
          owl:differentFrom :NOT_AMENDED ;
          rdf:value "AMENDED" ;
-         rdfs:comment "" ,
-                      "AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property." ;
+         rdfs:comment "AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property." ;
          rdfs:label "AMENDED" ;
          skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change." ;
          skos:prefLabel "AMENDED" .
@@ -1012,7 +1011,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
           owl:differentFrom :NOT_ISSUE ,
                             :POTENTIAL_ISSUE ;
           rdf:value "IS_ISSUE" ;
-          rdfs:comment "This is a paralell assertion to NOT_COMPLIANT" ;
+          rdfs:comment "This is a parallel assertion to NOT_COMPLIANT" ;
           rdfs:label "IS_ISSUE" ;
           skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use." ;
           skos:prefLabel "IS_ISSUE" .
@@ -1081,7 +1080,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 :RUN_HAS_RESULT rdf:type owl:NamedIndividual ,
                          :ResponseStatus ;
                 rdf:value "RUN_HAS_RESULT" ;
-                rdfs:comment "Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. for Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object." ;
+                rdfs:comment "Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object." ;
                 rdfs:label "RUN_HAS_RESULT" ;
                 skos:definition "A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated." ;
                 skos:prefLabel "RUN_HAS_RESULT" .
