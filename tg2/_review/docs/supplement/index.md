@@ -35,13 +35,14 @@ TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests 
 2.4 Framework Competency Questions
 3 Developing the Tests
 3.1 Tests and Data Dimensions
-3.2 Types of Test
-3.3 Domain Scope of Tests
-3.4 Parameterising the tests
-3.5 Independence and Paired test
-3.6 Considerations for use of MultiRecord Measures
-3.7 Input Data Values for AMENDMENTS
-3.8 Amendments and Annotations
+3.2 Warning Types and Data Quality Dimension
+3.3 Types of Test
+3.4 Domain Scope of Tests
+3.5 Parameterising the tests
+3.6 Independence and Paired test
+3.7 Considerations for use of MultiRecord Measures
+3.8 Input Data Values for AMENDMENTS
+3.9 Amendments and Annotations
 4 Rationale Management Documentation
 4.1 Developing tests with Github Issues
 4.2 Github Tags and Categorizing Issues
@@ -186,14 +187,13 @@ And another that lists the valuable information elements for a use case:
     
     }
 
-
 ## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2 was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized that any software was likely to be far less stable than defining a core suite of tests, so the software component was dropped.
 
 Finding out what tests were being used by a range of aggregators was the first step in identifying candidate tests. We aggregated all 152 unique tests from GBIF, ALA, iDigBio, CRIA, BISON and elsewhere. We then identified a common set of Descriptors of these tests. Descriptors at this time included Information Elements (ref), Specification	(Techncial Description), Darwin Core Class, Source and References. We peformed a full evaluation of each candidate test using six critera. Tests had to be informative in being able to evaluate or enhance the quality of a data record. Tests had to be relatively simple/straight forward to implement with existing tools. Tests were mandatory for any potential enhancements to record values in that a VALIDATION was required before any AMENDMENT. Tests required power in that they will not likely result in 0% or 100% of all record hits. The suite of tests were designed to provide an adequate coverage of basic information dimensions of Darwin Core: dwc:Taxon; dwc:Event and dcterms:Location, and a category that we called "Other" to cover tests on dwc terms such as dc:license (see Section 3.1). Tests also had to be widely applicable across a range of use cases. Tests that were identified as useful in a limited context were documented  as core tests but tagged as "Supplementary" in that they could be implemented by a community of usage.
 
-We originally documeted the tests in the form of flagging a **FAIL**, for example dwc:eventDate did not conform to ISO 8601-1 date. Our reasoning was this strategy aligned with all of the sources of the tests in that we all saught to identify **issues** with values in the record that would reduce the quality. However, the Data Quality Framework (ref) worked in the opposite direction: Identifying values in a record that **PASSED** a test. To align with the Framework, we renamed all tests from FAIL to PASS type, for example, COUNTRYCODE_NOTSTANDARD became COUNTRYCODE_STANDARD.
+We originally documeted the tests in the form of flagging a **FAIL**, for example dwc:eventDate did not conform to ISO 8601-1 date. Our reasoning was this strategy aligned with all of the sources of the tests in that we all saught to identify **issues** with values in the record that would reduce the quality. However, the Data Quality Framework (ref.) worked in the opposite direction: Identifying values in a record that **PASSED** a test. To align with the Framework, we renamed all tests from FAIL to PASS type, for example, COUNTRYCODE_NOTSTANDARD became COUNTRYCODE_STANDARD. This reversal of 'fail' to 'pass' was also reflected in the comparison of the Framework's 'Data Quality Dimension' versus our early concept of 'Warning Type' (see Section 3.2).
 
 Second and subsequent evaluations of the candidate core tests reduced the number to about 100 that seemed to fulfil the criteria above. The Tests came and went as we provided more consistent and compehensive documentation against what we now called the Descriptors. The tests also changed as we began to implement them. We modified a Test Specification to then find that we would not be able to implement it due to potential ambiguous responses from the test or that a test response may be misleading. By far the greatest changes to the candidate tests came about when we implemented them and ran them against the Test Data (ref).
 
@@ -210,6 +210,22 @@ We identified four categories of information elements of biodiversity-related da
 A record without a taxonomic name, a location or a date has limited value for many research uses (but may be fit for use for others).
 
 Three tests in bdqcore: specifically identify records with no name, space or time values.
+
+### 3.2 Data Quality Dimension and 'Warning Types'
+
+A "Warning Type" for each test was originally envisioned to provide insight into the nature of the issues associated the negative results of tests. Initially, we had a concept of 'severity' where a failed test could be considered either a "Warning" or an "Error". We subsequently elaborated the warnings into "Warning Types" that had a value of "Ambiguous", "Amended", "Incomplete", "Inconsistent", "Invalid", "Issue", "Report" or "Unlikely". In 2023, a cross tabulation of 'Data Quality Dimension' from the Framework (ref.) against 'Warning Type' demonstrated that they were highly correlated (see table below). Subsequently, 'Warning Type' was removed as a test Descriptor.
+
+| Data Quality Dimension/Warning Type | Ambiguous | Amended | Incomplete | Inconsistent | Invalid | Issue | Report | Unlikely | Total |
+|-------------------------------------|-----------|---------|------------|--------------|---------|-------|--------|----------|-------|
+| Completeness                        |           |   11    |    22      |              |         |   1   |    5   |          |  39   |
+| Conformance                         |     2     |   17    |            |              |    40   |       |        |          |  59   |
+| Consistency                         |           |    1    |            |       7      |         |       |        |          |   8   |
+| Likeliness                          |           |         |            |              |         |       |        |     2    |   2   |
+| Reliability                         |           |         |            |              |         |   1   |    2   |          |   3   |
+| Resolution                          |           |         |            |              |         |   1   |    1   |          |   2   |
+| Total                               |     2     |   28    |    22      |       7      |    40   |   3   |    8   |     2    | 113   |
+
+Caption: Data Quality Dimension vs Warning Type with the number of tests as cell values. 
 
 ### 3.2 Types of Test
 
@@ -229,7 +245,7 @@ The Framework also supports Amendments where the Response.result is a proposal t
 
 A Measure returns a numeric value or INTERNAL_PREREQUISITES_NOT_MET. Most Measures count the number of Validation or Amendment tests that a specifified Response.Result. MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the Validations and Amendments and in one case provides an indication of the length of the period of the value of dwc:eventDate. 
 
-**MEASURES** may apply to a single record (bdqffdq:SingleRecord), or could be accumulated across multiple records (bdqffdq:MultiRecords). 
+**Measures** may apply to a single record (bdqffdq:SingleRecord), or could be accumulated across multiple records (bdqffdq:MultiRecords). 
 
 SingleRecord MEASUREs within bdqcore: are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS.   Of these, MEASURE_EVENTDATE_DURATIONINSECONDS is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases, for example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temoral resolution of about a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  
 
