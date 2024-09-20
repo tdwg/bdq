@@ -2472,7 +2472,7 @@ ObjectProperty
 
 ### Comment
 
-'Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedment, forValidation, forMeasure.'
+'Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmendment, forValidation, forMeasure.'
 
 
 ********************

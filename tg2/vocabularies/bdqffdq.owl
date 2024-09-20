@@ -89,7 +89,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                         owl:onProperty :forIssue ;
                         owl:someValuesFrom :Issue
                       ] ;
-          rdfs:comment "Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmedment, forValidation, forMeasure." ;
+          rdfs:comment "Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmendment, forValidation, forMeasure." ;
           rdfs:label "for Issue" ;
           skos:definition "Relates an IssuetMethod to an Issue." ;
           skos:prefLabel "for Issue" .
