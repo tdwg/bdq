@@ -524,7 +524,7 @@
 <bdqdim:Consistency> a <https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension> ;
 	rdfs:label "Consistency" .
 
-<urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/04c7fe3d-9f0b-4864-82ac-75ccfc522fa0> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT" ;
 	rdfs:label "Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT" ;
@@ -537,13 +537,19 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response ;
 	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response" .
 
-<urn:uuid:e2857b1c-9c3d-4445-9f1e-32000e2243ce> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:ce136978-41f5-4b5e-b6b0-eb897e3708cd> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/04c7fe3d-9f0b-4864-82ac-75ccfc522fa0> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<urn:uuid:null> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
+	rdfs:comment "COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = \"3000\"" ;
+	rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = \"3000\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." .
+
+<https://rs.tdwg.org/bdqcore/terms/e9a0bbd4-c3ad-456a-8ff3-a8dc4e8649cc> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT" ;
 	rdfs:label "Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT" ;
@@ -551,18 +557,13 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Consistency> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:c3b3862b-5ea3-494b-9a09-8bb3d9dfe016> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:5650a59c-7a89-4fe3-8d38-1f972474a3b8> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/e9a0bbd4-c3ad-456a-8ff3-a8dc4e8649cc> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:351049a9-bc84-42f6-af70-493e2e063153> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> ;
-	rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" ;
-	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response ;
-	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
-
-<urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/813cf7c0-699f-47b7-b1ce-5313d9129d7c> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT" ;
 	rdfs:label "Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
@@ -570,13 +571,18 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Consistency> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:2a044176-8820-4745-a797-9541c7e06ab2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:351049a9-bc84-42f6-af70-493e2e063153> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> ;
+	rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" ;
+	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response ;
+	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
+
+<urn:uuid:605071d2-7f56-403e-9832-016c623174e7> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/813cf7c0-699f-47b7-b1ce-5313d9129d7c> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/3a761d7b-cd6b-44a6-835c-229113947dcd> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT" ;
 	rdfs:label "Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
@@ -584,18 +590,13 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Consistency> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:66e40165-c61e-461b-b91d-7d2b3c3427fe> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:06ec2226-a023-4c84-82c5-49e4ca7f146a> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/3a761d7b-cd6b-44a6-835c-229113947dcd> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:463c35d2-41c0-4e68-af22-4bb4c200b376> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> ;
-	rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" ;
-	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response ;
-	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
-
-<urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/fa79cca2-0a5b-4424-a7f3-4c406fb67260> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT" ;
 	rdfs:label "Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT" ;
@@ -603,13 +604,18 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Consistency> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:d1b7295f-9a2a-4a52-a066-6e3eac61b0c2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:463c35d2-41c0-4e68-af22-4bb4c200b376> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> ;
+	rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" ;
+	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response ;
+	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
+
+<urn:uuid:603b2ac8-037b-49b9-a38a-6a9ef3f429ae> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/fa79cca2-0a5b-4424-a7f3-4c406fb67260> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:e4de3444-b469-426d-abed-30b345328da4> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/987fd989-74c4-4139-832c-e64ee9caac8c> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT" ;
 	rdfs:label "Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT" ;
@@ -617,11 +623,11 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Consistency> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:b64c6792-c08c-46da-b98b-e0bb0363c2ed> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:3f51c557-989c-45ef-8ed3-14acbb779663> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:e4de3444-b469-426d-abed-30b345328da4> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:e4de3444-b469-426d-abed-30b345328da4> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/987fd989-74c4-4139-832c-e64ee9caac8c> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
 <urn:uuid:0782e4e5-010f-4e59-82d7-618a84ead70a> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT" ;
@@ -689,7 +695,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:d2f89397-78f3-4e67-8994-79102470d305> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:d2f89397-78f3-4e67-8994-79102470d305> .
 
-<urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/ff210d30-6096-45cb-a28a-7f74c1382712> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT" ;
 	rdfs:label "Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT" ;
@@ -702,13 +708,13 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response ;
 	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response" .
 
-<urn:uuid:cda169b0-4a95-447d-8654-bdab5e180947> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:4efd48d9-940f-43a8-b45e-2a64ca707b28> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/ff210d30-6096-45cb-a28a-7f74c1382712> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/70ccc73a-e537-44c1-aa23-3ad26c824fb0> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT" ;
 	rdfs:label "Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT" ;
@@ -716,11 +722,11 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Consistency> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:0f7cc4a7-55b8-4108-bfdf-2b35d7f69262> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:5b987ce4-4c68-4d25-9969-04e120c8e05f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT" ;
 	skos:prefLabel "MeasurementMethod: Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT MeasureAssertion of Consistency for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/70ccc73a-e537-44c1-aa23-3ad26c824fb0> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
 <urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> ;
 	rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_STANDARD.Response" ;
@@ -1154,7 +1160,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:0a4b0450-5f8d-4425-9bf3-dc79498741c0> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:0a4b0450-5f8d-4425-9bf3-dc79498741c0> .
 
-<urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/cdfa9705-c254-4781-998a-fa8327d64e8a> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT" ;
 	rdfs:label "Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT MeasureAssertion of Completeness for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY" ;
@@ -1167,13 +1173,13 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response ;
 	<skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
 
-<urn:uuid:36fcff08-e64e-4640-984f-5263b0407a97> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:07a774a1-a370-42ed-a268-87ecc42f7ae2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT MeasureAssertion of Completeness for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY" ;
 	skos:prefLabel "MeasurementMethod: Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT MeasureAssertion of Completeness for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/cdfa9705-c254-4781-998a-fa8327d64e8a> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
-<urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
+<https://rs.tdwg.org/bdqcore/terms/4c138bd0-fc18-457e-aa78-fe51ba548e50> a <https://rs.tdwg.org/bdqffdq/terms/Measure> ;
 	rdfs:comment "Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT" ;
 	rdfs:label "Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT MeasureAssertion of Completeness for MultiRecord" ;
 	skos:prefLabel "MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY" ;
@@ -1181,11 +1187,11 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Completeness> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord> .
 
-<urn:uuid:9409ef24-baf9-4dfc-b4a8-7b6459cc1d54> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
+<urn:uuid:61757b0a-7632-43dd-80d7-56d8e5ed042d> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod> ;
 	rdfs:label "MeasurementMethod: Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT MeasureAssertion of Completeness for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY" ;
 	skos:prefLabel "MeasurementMethod: Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT MeasureAssertion of Completeness for MultiRecord with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY" ;
-	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42> .
+	<https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/4c138bd0-fc18-457e-aa78-fe51ba548e50> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:null> .
 
 <urn:uuid:3c6be17f-a7fc-4449-9d91-a528d012f415> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> ;
 	rdfs:label "Information Element ActedUpon bdq:VALIDATION_DCTYPE_STANDARD.Response" ;
