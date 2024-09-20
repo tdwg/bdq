@@ -54,21 +54,6 @@ The scope of the standard is the fundamental information about core tests applie
 * Reliability: Measure of how the data values agree with an identified source of truth. The degree to which data correctly describes the truth (object, event or any abstract or real 'thing').
 * Resolution: Refers to the data having sufficiently detailed information. Measure of the granularity of the data, or the smallest measurable increment.
 
-
-A "Warning Type" for each test was originally envisioned to provide insight into the nature of the issues, but a review the relationship with "Data Quality Dimension" across the tests suggested such a high degree of correlation that "Warning Type" is effectively redundant. See table xx below. **NEEDS UPDATING**
-
-| Data Quality Dimension/Warning Type | Ambiguous | Amended | Incomplete | Inconsistent | Invalid | Issue | Report | Unlikely | Total |
-|-------------------------------------|-----------|---------|------------|--------------|---------|-------|--------|----------|-------|
-| Completeness                        |           |   11    |    19      |              |         |   1   |    2   |          |  33   |
-| Conformance                         |     2     |   13    |            |       3      |    35   |       |        |          |  53   |
-| Consistency                         |           |    1    |            |       5      |         |       |        |          |   6   |
-| Likeliness                          |           |         |            |              |         |       |        |     2    |   2   |
-| Reliability                         |           |         |            |              |         |   1   |    2   |          |   3   |
-| Resolution                          |           |         |            |              |         |   1   |    1   |          |   2   |
-| Total                               |     2     |   25    |    19      |       8      |    35   |   3   |    5   |     2    |  99   |
-
-Caption: Data Quality Dimension vs Warning Type with the number of tests as cell values. 
-
 ### 1.1 Status of the content of this document
 
 In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. The values of `Term Name` and `skos:prefLabel` are non-normative. 
