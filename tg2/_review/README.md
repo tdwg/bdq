@@ -10,12 +10,14 @@ Work in progress description of files in this directory:
 │   ├── authors_configuration.yaml list of authors and contributors used by build scripts
 │   ├── .md files are working files that are to become templates but are not yet
 │   ├── .py files build other artifacts
-│   ├── draft_build_termlist.py builds the docs/{term}/index.md files and dist/{term}.xml files from templates, builds for draft standard
+│   ├── draft_build-termlist.py builds the docs/{term}/index.md files and dist/{term}.xml files from templates, builds for draft standard
 │   ├── temp_namespaces.yaml File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
 │   ├── temp_term-lists.csv File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
 │   └── templates template files used by build scripts 
 │       └── bdqdim templates and configuration files for bdqdim 
 ├── dist Generated csv distribution files for building other artifacts
+│   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py)
+│   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py)
 │   └── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name, purpose?
 ├── docs  human readable documentation files ultimately to be built from files in build
 │   ├── intro 
