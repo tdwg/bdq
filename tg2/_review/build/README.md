@@ -5,9 +5,9 @@ This directory contains build files to generate the BDQ Core standard files for 
 Editable master copies of templates for human readable vocabulary lists and human readable documentation live here.
 
 <pre>
-├── make_bdq_tests_vertical.py
-├── README.md
-├── templates
+├── make_bdq_tests_vertical.py  builds an artifact containing a list of tests, purpose unclear.
+├── README.md this file.
+├── templates  for various docs files.
 │   ├── bdq for docs/terms/bdq 
 │   │   ├── bdq_termlist-footer.md
 │   │   ├── bdq_termlist-header.md
@@ -16,20 +16,24 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │   ├── bdqdim_termlist-footer.md
 │   │   ├── bdqdim_termlist-header.md
 │   │   └── document_configuration.yaml
-│   ├── bdqcore  work in progress
+│   ├── bdqenh for docs/terms/bdqenh
+│   │   ├── bdqenh_termlist-header.md
+│   │   ├── bdqenh_termlist-footer.md
+│   │   └── document_configuration.yaml
+│   ├── bdqcrit for docs/terms/bdqcrit
+│   │   ├── bdqcrit_termlist-header.md
+│   │   ├── bdqcrit_termlist-footer.md
+│   │   └── document_configuration.yaml
+│   ├── bdqcore  **work in progress**
 │   │   ├── bdqcore_termlist-footer.md
 │   │   └── bdqcore_termlist-header.md
-│   ├── bdqcore_qrg  work in progress  to build docs/terms/bdqcore/index.md quick reference guide.
+│   ├── bdqcore_qrg  **work in progress**  to build docs/terms/bdqcore/index.md quick reference guide.
 │   │   ├── bdqcore_quickreference-footer.md
 │   │   └── bdqcore_quickreference-header.md
-│   ├── bdqcrit work in progress
-│   │   └── bdqcrit_termlist-header.md
-│   ├── bdqenh work in progress
-│   │   └── bdqenh_termlist-header.md
-│   ├── bdqffdq work in progress
+│   ├── bdqffdq **work in progress**
 │   │   ├── bdqffdq_termlist-footer.md
 │   │   └── bdqffdq_termlist-header.md
-│   └── guide to build docs/guide/ pages
+│   └── guide to build docs/guide/ pages  **work in progress**
 │       ├── bdqffdq
 │       │   ├── assertions.png
 │       │   ├── bdqffdq_class_diagram.png
