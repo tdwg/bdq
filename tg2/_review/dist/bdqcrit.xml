@@ -1,0 +1,139 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:bdq="https://rs.tdwg.org/bdq/terms/"
+xmlns:bdqdim="https://rs.tdwg.org/bdqdim/terms/"
+xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"
+xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"
+xmlns:bdqcore="https://rs.tdwg.org/bdqcore/terms/"
+xmlns:bdqffdq="https://rs.tdwg.org/bdqffdq/terms/"
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
+>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Complete</rdfs:label>
+     <skos:prefLabel xml:lang="en">Complete</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness</rdfs:comment>
+     <skos:definition xml:lang="en">Data are present and sufficiently comprehensive for use.</skos:definition>
+     <rdf:value>Complete</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Complete"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Consistent-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Consistent</rdfs:label>
+     <skos:prefLabel xml:lang="en">Consistent</skos:prefLabel>
+     <rdfs:comment xml:lang="en">A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.   Corresponding dimension is bdqdim:Consistency</rdfs:comment>
+     <skos:definition xml:lang="en">Data are internally consistent and consistent with any authorities consulted. </skos:definition>
+     <rdf:value>Consistent</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Consistent"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Found-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Found</rdfs:label>
+     <skos:prefLabel xml:lang="en">Found</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
+     <skos:definition xml:lang="en">Data conform to the values in an authority.</skos:definition>
+     <rdf:value>Found</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Found"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/InRange-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">In Range</rdfs:label>
+     <skos:prefLabel xml:lang="en">In Range</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement conform to an expected range of values.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
+     <skos:definition xml:lang="en">Data conform to an expected range of values.</skos:definition>
+     <rdf:value>InRange</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/InRange"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Likely-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Likely</rdfs:label>
+     <skos:prefLabel xml:lang="en">Likely</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement is likely to be true or expected values.  Corresponding dimension is bdqdim:Likeliness</rdfs:comment>
+     <skos:definition xml:lang="en">Data are likely to be true or expected values.</skos:definition>
+     <rdf:value>Likely</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Likely"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/NotEmpty-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Not Empty</rdfs:label>
+     <skos:prefLabel xml:lang="en">Not Empty</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Some value is present in a bdqffdq:InformationElement.  Corresponding dimension is bdqdim:Completeness.   See also bdq:EMPTY and bdq:NOT_EMPTY</rdfs:comment>
+     <skos:definition xml:lang="en">Some data value is present.</skos:definition>
+     <rdf:value>NotEmpty</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Standard-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Standard</rdfs:label>
+     <skos:prefLabel xml:lang="en">Standard</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
+     <skos:definition xml:lang="en">Data conform to a format, syntax, data type, or standard.</skos:definition>
+     <rdf:value>Standard</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Standard"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Unambiguous-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">Unambiguous</rdfs:label>
+     <skos:prefLabel xml:lang="en">Unambiguous</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement adequately identifies a unique entity.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
+     <skos:definition xml:lang="en">Data adequately identify a unique entity.</skos:definition>
+     <rdf:value>Unambiguous</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Unambiguous"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://rs.tdwg.org/bdqcrit/terms/">
+     <dc:format>application/rdf+xml</dc:format>
+     <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+     <dcterms:references rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
+     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+</rdf:Description>
+
+</rdf:RDF>
