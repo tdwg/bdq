@@ -30,10 +30,10 @@ Preferred Citation
      - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.xml "OWL representation of the tests descriptors.")
   - [Fitness For Use Framework Ontology List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md):
     - File [bdqffdq: Owl](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl "Owl ontology for the bdqffdq framework.")
-  - [Test Specification Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdq/index.md)
+  - [Test Specification Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdq/index.md)
   - [Data Quality Dimension Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqdim/index.md)
-  - [Data Quality Criterion Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcrit/index.md)
-  - [Data Quality Enhancement Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqenh/index.md)
+  - [Data Quality Criterion Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcrit/index.md)
+  - [Data Quality Enhancement Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqenh/index.md)
 - [BDQ Core User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/users/index.md)
 - [BDQ Core Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md)
   - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/TG2_test_validation_data.csv "Test validation data csv file")
