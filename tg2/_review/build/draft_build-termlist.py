@@ -4,13 +4,14 @@
 # Modified Paul J. Morris for generating draft standard documents without rs.tdwg.org files
 # 2024-09-12
 # This script merges static Markdown header and footer documents with generated term information tables loading data from in local csv and yaml files.
+# Unlike the original, this version is intended to run entirely on local files.
 
 import re
-import requests   # best library to manage HTTP transactions
+# import requests   # best library to manage HTTP transactions
 import csv        # library to read/write/parse CSV files
 import json       # library to convert JSON to Python data structures
-import pandas as pd
-import yaml
+import pandas as pd  # library to handle data loaded from csv as data frames
+import yaml       # Library to parse yaml files
 
 # -----------------
 # Configuration section
@@ -342,45 +343,37 @@ for term in termLists:
     # decisions_df = pd.read_csv('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/decisions/decisions-links.csv', na_filter=False)
 
     # PJM: TODO: Write xml
-    #<rdf:RDF
-    #xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    #xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    #xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    #xmlns:owl="http://www.w3.org/2002/07/owl#"
-    #xmlns:dc="http://purl.org/dc/elements/1.1/"
-    #xmlns:dcterms="http://purl.org/dc/terms/"
-    #xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-    #xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    #xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"
-    #xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    #xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
-    #>
-    #<rdf:Description rdf:about="http://rs.tdwg.org/dwcem/values/version/e006-2021-09-01">
-    #     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwcem/values/version/"/>
-    #     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwcem/values/version/"/>
-    #     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-01</dcterms:issued>
-    #     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
-    #     <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwcem/values/version/e006-2020-10-13"/>
-    #     <rdfs:label xml:lang="en">uncertain (unknown, cryptogenic)</rdfs:label>
-    #     <skos:prefLabel xml:lang="en">uncertain (unknown, cryptogenic)</skos:prefLabel>
-    #     <rdfs:comment xml:lang="en">The origin of the occurrence of the taxon in an area is obscure.</rdfs:comment>
-    #     <skos:definition xml:lang="en">The origin of the occurrence of the taxon in an area is obscure.</skos:definition>
-    #     <dcterms:description xml:lang="en">When there is a lack of fossil or historical evidence for the occurrence of a taxon in an area it can be impossible to know if the taxon is new to the area or native.</dcterms:description>
-    #     <rdf:value>uncertain</rdf:value>
-    #     <skos:inScheme rdf:resource="http://rs.tdwg.org/dwcem/values/e"/>
-    #     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    #     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/dwcem/values/e006"/>
-    #</rdf:Description>
+    outputRdfHeader = "<rdf:RDF\n"
+    outputRdfHeader += 'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n'
+    outputRdfHeader += 'xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"\n'
+    outputRdfHeader += 'xmlns:xsd="http://www.w3.org/2001/XMLSchema#"\n'
+    outputRdfHeader += 'xmlns:owl="http://www.w3.org/2002/07/owl#"\n'
+    outputRdfHeader += 'xmlns:dc="http://purl.org/dc/elements/1.1/"\n'
+    outputRdfHeader += 'xmlns:bdq="https://rs.tdwg.org/bdq/terms/"\n'
+    outputRdfHeader += 'xmlns:bdqdim="https://rs.tdwg.org/bdqdim/terms/"\n'
+    outputRdfHeader += 'xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"\n'
+    outputRdfHeader += 'xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"\n'
+    outputRdfHeader += 'xmlns:bdqcore="https://rs.tdwg.org/bdqcore/terms/"\n'
+    outputRdfHeader += 'xmlns:bdqffdq="https://rs.tdwg.org/bdqffdq/terms/"\n'
+    outputRdfHeader += 'xmlns:dcterms="http://purl.org/dc/terms/"\n'
+    outputRdfHeader += 'xmlns:dwc="http://rs.tdwg.org/dwc/terms/"\n'
+    outputRdfHeader += 'xmlns:skos="http://www.w3.org/2004/02/skos/core#"\n'
+    outputRdfHeader += 'xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"\n'
+    outputRdfHeader += 'xmlns:foaf="http://xmlns.com/foaf/0.1/"\n'
+    outputRdfHeader += 'xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"\n'
+    outputRdfHeader += ">\n"
     #
-    #<rdf:Description rdf:about="http://rs.tdwg.org/dwcem/values/version/e006-2021-09-01.rdf">
-    #     <dc:format>application/rdf+xml</dc:format>
-    #     <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
-    #     <dcterms:references rdf:resource="http://rs.tdwg.org/dwcem/values/version/e006-2021-09-01"/>
-    #     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-01T22:18:44-05:00</dcterms:modified>
-    #     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
-    #</rdf:Description>
+    outputRdf = ""
     #
-    #</rdf:RDF>
+    outputRdfFooter = '<rdf:Description rdf:about="http://rs.tdwg.org/{}/terms/">\n'.format(term)
+    outputRdfFooter += '     <dc:format>application/rdf+xml</dc:format>\n'
+    outputRdfFooter += '     <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>\n'
+    outputRdfFooter += '     <dcterms:references rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+    #outputRdfFooter += '     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-01T22:18:44-05:00</dcterms:modified>\n'
+    outputRdfFooter += '     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>\n'
+    outputRdfFooter += '</rdf:Description>\n'
+    outputRdfFooter += '\n'
+    outputRdfFooter += '</rdf:RDF>\n'
     
     # ---------------
     # generate a table for each term, with terms grouped by category
@@ -418,9 +411,23 @@ for term in termLists:
     #        filtered_table = terms_sorted_by_localname
     
         for row_index,row in filtered_table.iterrows():
+            # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
+            outputRdf += '<rdf:Description rdf:about="{}">\n'.format(row['iri'])
+            outputRdf += '     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+            outputRdf += '     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+            outputRdf += '     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">{}</dcterms:issued>\n'.format(row['issued'])
+            outputRdf += '     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>\n'
+            outputRdf += '     <rdfs:label xml:lang="en">{}</rdfs:label>\n'.format(row['label'])
+            outputRdf += '     <skos:prefLabel xml:lang="en">{}</skos:prefLabel>\n'.format(row['prefLabel'])
+            outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(row['comments'])
+            outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(row['definition'])
+            outputRdf += '     <rdf:value>{}</rdf:value>\n'.format(row['term_localName'])
+            outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/e"/>\n'.format(term)
+            outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(row['rdf_type'])
+            outputRdf += '     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
+            outputRdf += '</rdf:Description>\n'
             text += '<table>\n'
             curie = term + ":" + row['term_localName']
-            #curie = "bdqdim:" + row['term_localName']
             curieAnchor = curie.replace(':','_')
             text += '\t<thead>\n'
             text += '\t\t<tr>\n'
@@ -631,6 +638,11 @@ for term in termLists:
     output = warning + header + text + footer
     outputObject = open(outFileName, 'wt', encoding='utf-8')
     outputObject.write(output)
+    outputObject.close()
+
+    rdfOutput = outputRdfHeader + outputRdf + outputRdfFooter
+    outputObject = open(outRDFFileName, 'wt', encoding='utf-8')
+    outputObject.write(rdfOutput)
     outputObject.close()
     
 print('done')
