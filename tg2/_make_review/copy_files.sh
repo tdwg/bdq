@@ -7,13 +7,13 @@
 
 cp ../vocabularies/bdqffdq.owl ../_review/vocabulary/bdqffdq.owl
 
-# bdqdim and related vocabulary
+# bdq, bdqdim and related vocabulary
 
-cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_terms.csv
+cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_term_versions.csv
 cp ../vocabularies/bdqenh_terms.csv ../_review/vocabulary/bdqenh_terms.csv
 cp ../vocabularies/bdqcrit_terms.csv ../_review/vocabulary/bdqcrit_terms.csv
 
-cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_terms.csv
+cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_term_versions.csv
 
 # bdqcore files containing test descriptions
 
@@ -22,5 +22,5 @@ cp ../core/TG2_tests.xml ../_review/vocabulary/bdqcore_terms.xml
 
 # CSV files of test validation data
 
-cp ../core/TG2_test_validation_data.csv  ../_review/docs/implementers/TG2_test_validation_data.csv 
-cp ../core/TG2_test_validation_data_nonprintingchars.csv ../_review/docs/implementers/TG2_test_validation_data_nonprintingchars.csv
+cp ../core/TG2_test_validation_data.csv  ../_review/build/templates/guide/implementers/TG2_test_validation_data.csv 
+cp ../core/TG2_test_validation_data_nonprintingchars.csv ../_review/build/templates/guide/implementers/TG2_test_validation_data_nonprintingchars.csv

@@ -44,8 +44,10 @@ Work in progress description of files in this directory:
 │   ├── references
 │   ├── supplement
 └── vocabulary ?should this just be the term version files, or do the deriviative vocabulary csv, xml, owl files go here?
+    ├── bdq_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdq_vocabulary_terms.csv
+    ├── bdqdim_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdq_dim_terms.csv
+    ├── {term}\_terms.csv files, pending conversion to term version files.  
     ├── .xml rdf/xml files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE **
-    ├── .csv files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE ** 
-    └── term_versions location for and proposed stubs for term-version files to which lines are only appended from which vocabulary artifacts will be built.
+    └── .csv files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE ** 
 </pre>
 

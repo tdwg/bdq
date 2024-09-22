@@ -170,7 +170,7 @@ for term in termLists:
     document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(term)
     outFileName = '../docs/list/{}/index.md'.format(term)
     outRDFFileName = '../dist/{}.xml'.format(term)
-    term_history_csv = "../vocabulary/{}_terms.csv".format(term)
+    term_history_csv = "../vocabulary/{}_term_versions.csv".format(term)
 
     # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
     # load from local file
