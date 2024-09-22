@@ -1,1 +1,0 @@
-**NOTE This file is superceded by (https://github.com/tdwg/bdq/blob/master/tg2/_review/build/bdqcore_quickreference-header.md). Lee has copy of the original content and is ensuring it is either added elsewhere or is redudundant**

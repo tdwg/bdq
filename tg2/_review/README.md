@@ -43,11 +43,6 @@ Work in progress description of files in this directory:
 │   │   └── index.md
 │   ├── references
 │   ├── supplement
-│   ├── bdqffdq to move
-│   ├── implementers to move
-│   ├── list to move
-│   ├── terms to move
-│   └── users to move
 └── vocabulary ?should this just be the term version files, or do the deriviative vocabulary csv, xml, owl files go here?
     ├── .xml rdf/xml files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE **
     ├── .csv files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE ** 
