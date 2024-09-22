@@ -10,8 +10,8 @@ cp ../vocabularies/bdqffdq.owl ../_review/vocabulary/bdqffdq.owl
 # bdq, bdqdim and related vocabulary
 
 cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_term_versions.csv
-cp ../vocabularies/bdqenh_terms.csv ../_review/vocabulary/bdqenh_terms.csv
-cp ../vocabularies/bdqcrit_terms.csv ../_review/vocabulary/bdqcrit_terms.csv
+cp ../vocabularies/bdqenh_terms.csv ../_review/vocabulary/bdqenh_term_versions.csv
+cp ../vocabularies/bdqcrit_terms.csv ../_review/vocabulary/bdqcrit_term_versions.csv
 
 cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_term_versions.csv
 
