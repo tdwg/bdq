@@ -107,7 +107,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 [bdq:sourceAuthority](#bdq_sourceAuthority) |
 [bdq:Spatial-TemporalPatterns](#bdq_Spatial-TemporalPatterns) |
 [bdq:spatialBufferInMeters](#bdq_spatialBufferInMeters) |
-[bdq:targetCRS](#bdq_targetCRS) |
 [bdq:Taxon-Management](#bdq_Taxon-Management) |
 [bdq:taxonIsMarine](#bdq_taxonIsMarine) 
 
@@ -142,7 +141,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 [minimumValidElevationInMeters](#bdq_minimumValidElevationInMeters) |
 [sourceAuthority](#bdq_sourceAuthority) |
 [spatialBufferInMeters](#bdq_spatialBufferInMeters) |
-[targetCRS](#bdq_targetCRS) |
 [taxonIsMarine](#bdq_taxonIsMarine) 
 
 ## 4 Vocabulary
@@ -255,7 +253,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A list of bdqffdq:Validation tests that have been run on a bdqffdq:SingleRecord forming the input to another test.</td>
+			<td>A list of bdqffdq:Validation tests that have been run on a bdqffdq:SingleRecord.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -511,7 +509,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See test AMENDMENT_GE:ODETICDATUM_ASSUMEDDEFAULT (bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
+			<td>See test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -1146,48 +1144,6 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Controlled value</td>
 			<td>spatialBufferInMeters</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdq_targetCRS"></a>Term Name  bdq:targetCRS</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms/targetCRS">https://rs.tdwg.org/bdq/terms/targetCRS</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/targetCRS-2024-09-30">https://rs.tdwg.org/bdq/terms//version/targetCRS-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>targetCRS</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>The Coordinate Reference System (CRS) used as the output when converting coordinates from one CRS to another. The default is EPSG:4326.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Used in the test AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>targetCRS</td>
 		</tr>
 		<tr>
 			<td>Type</td>
