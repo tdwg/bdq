@@ -158,6 +158,7 @@ for templatePath, document in directories.items() :
         for line in headerFile:
            aHeading = re.search(regexHeadings,line)
            if (aHeading) : 
+               headingText = aHeading.group().replace("# ","")
                headingText = aHeading.group().replace("#","")
                headingAnchor = headingText.replace(" ","-").lower().replace(".","")
                toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
