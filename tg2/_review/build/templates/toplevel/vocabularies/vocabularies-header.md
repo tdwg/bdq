@@ -13,15 +13,6 @@ Date created
 Part of TDWG Standard
 : <{standard_iri}>
 
-Preferred namespace abbreviation
-: {pref_namespace_prefix}
-
-This version
-: <{current_iri}{ratification_date}>
-
-Latest version
-: <{current_iri}>
-
 {previous_version_slot}
 
 Abstract

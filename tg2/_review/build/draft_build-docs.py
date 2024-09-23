@@ -21,7 +21,7 @@ import yaml       # Library to parse yaml files
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
-directories = ['vocabularies':'vocabularies']
+directories = {'toplevel/vocabularies':'vocabularies'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -44,6 +44,8 @@ local_metadata_config_file = 'temp_namespaces.yaml'
 # headerFileName = 'templates/{}/{}_termlist-header.md'.format(directory,document)
 # footerFileName = 'templates/{}/{}_termlist-footer.md'.format(directory,document)
 # document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(directory)
+
+has_namespace = False
 
 # ---------------
 # Load header data
@@ -113,34 +115,44 @@ print('Loading term list metadata')
 term_lists_info = []
 
 
-print(term_list_document)
-#frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
-frame = pd.read_csv(term_list_document, na_filter=False)
-for termList in termLists:
-    term_list_dict = {'list_iri': termList}
-    term_list_dict = {'database': termList}
-    for index,row in frame.iterrows():
-        if row['database'] == termList:
-            term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
-            term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
-            term_list_dict['list_iri'] = row['list']
-    term_lists_info.append(term_list_dict)
-print(term_lists_info)
-print()
+#print(term_list_document)
+##frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
+#frame = pd.read_csv(term_list_document, na_filter=False)
+#for termList in termLists:
+#    term_list_dict = {'list_iri': termList}
+#    term_list_dict = {'database': termList}
+#    for index,row in frame.iterrows():
+#        if row['database'] == termList:
+#            term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
+#            term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
+#            term_list_dict['list_iri'] = row['list']
+#    term_lists_info.append(term_list_dict)
+#print(term_lists_info)
+#print()
 
-for templatePath, document in directories :
+#############
+## Process each document in directories dictionary
+############
+for templatePath, document in directories.items() :
     print('Filling in header and footer template and saving file')
     print('Generating files for {}.'.format(document))
-    headerFileName = 'templates/{}/{}_termlist-header.md'.format(templatePath,document)
-    footerFileName = 'templates/{}/{}_termlist-footer.md'.format(templatePath,document)
+    headerFileName = 'templates/{}/{}-header.md'.format(templatePath,document)
+    footerFileName = 'templates/{}/{}-footer.md'.format(templatePath,document)
     document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(templatePath)
     outFileName = '../docs/{}/index.md'.format(document)
     
+    # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
+    # load from local file
+    with open(document_configuration_yaml_file) as dcfy:
+        document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+
     # read in header and footer, merge with terms table, and output
     headerObject = open(headerFileName, 'rt', encoding='utf-8')
     header = headerObject.read()
     headerObject.close()
     
+    text = ""
+
     # Build the Markdown for the contributors list
     contributors = ''
     separator = ''
@@ -219,10 +231,5 @@ for templatePath, document in directories :
     outputObject.write(output)
     outputObject.close()
 
-    rdfOutput = outputRdfHeader + outputRdf + outputRdfFooter
-    outputObject = open(outRDFFileName, 'wt', encoding='utf-8')
-    outputObject.write(rdfOutput)
-    outputObject.close()
-    
 print('done')
 
