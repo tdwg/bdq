@@ -66,7 +66,7 @@ The scope of the standard is the fundamental information about core tests of typ
 
 ## 1.3 Use of Terms
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled values from this vocabulary are REQUIRED values of `bdqffdq:Criterion`.
+Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used values of `bdqffdq:Criterion`.
 
 ### 1.4 Term List Distributions
 

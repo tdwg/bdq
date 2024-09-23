@@ -41,16 +41,6 @@ Draft Standard for Submission
 [!--- JRW finished first draft to here ---]
 This document includes terms that are part of the BDQ vocabulary (<http://rs.tdwg.org/version/bdq/2024-09-10>). For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
-#### Definition of EMPTY
-
-We need a reusable definition for EMPTY that can apply in any test where the concept is relevant. Here we define EMPTY as an information element that is either not present or does not contain any characters or values other than those in the range U+0000 to U+0020. 
-
-An information element containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and may be separately detected. The phrase "not present" is there to cover cases where a test implementation cannot tell if a particular data set under test includes a particular Darwin Core term. This allows the test implementations to be independent of, and agnostic about frameworks within which the tests are run, the nature of the data. For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that. We considered, and explicitly rejected, treating common string serializations of null such as \N and NULL as empty values. If "\N" is present in a data set, the tests will explicitly treat that value as NOTEMPTY, and then try to evaluate it against whatever other criteria apply. 
-
-This definition is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
-
-For a simplied list of current terms, see the [BDQ Core Quick Reference Guide](../../guides/index.md).
-
 ### 1.1 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
@@ -82,7 +72,7 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Use of Terms (normative)
 
-Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled value strings MUST be used as values of the `bdq:` namespace.
+Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.
 
 ## 3 Term indices
 ### 3.1 Index By Term Name
@@ -181,7 +171,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:Use Case for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).</td>
+			<td>Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -311,7 +301,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in test "ANNOTATION_ISSUE_NOTEMPTY" (fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+			<td>Used in test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -353,7 +343,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in test "ANNOTATION_ISSUE_NOTEMPTY" (fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+			<td>Used in test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -395,7 +385,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See VALIDATION_COORDINATES_TERRESTRIALMARINE (b9c184ce-a859-410c-9d12-71a338200380).</td>
+			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -437,7 +427,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
+			<td>Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -475,7 +465,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:Use Case for relationships between organisms 1) where the bdqffdq:InformationElements concern what organisms have a relationship and 2) that are used for analysis of the relationship of one organism to another (see examples in ​​Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).</td>
+			<td>Research uses forming a bdqffdq:UseCase for relationships between organisms 1) where the bdqffdq:InformationElements concern what organisms have a relationship and 2) that are used for analysis of the relationship of one organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -521,7 +511,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
+			<td>See test AMENDMENT_GE:ODETICDATUM_ASSUMEDDEFAULT (bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -559,7 +549,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A provided default bdq:SourceAuthority where a required bdq:Parameter or a bdq:sourceAuthority has not been provided.</td>
+			<td>A provided default bdq:SourceAuthority that is used when a required bdq:Parameter specifying a bdq:sourceAuthority has not been provided at the time the test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -601,7 +591,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A preselected value (e.g. year, elevation) where a required bdq:Parameter value has not been provided.</td>
+			<td>A preselected value (e.g. year, elevation) to be used where a required bdq:Parameter value has not been provided at the time the test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -689,7 +679,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by  the test bdq:CriterionInContext to be agnostic about the strucuture presented to a framework for executing the tests.  The term bdq:Empty is defined to be more generaly usable.  Note: A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOT_EMPTY and may be separately detected.</td>
+			<td>See also: bdq:notEmpty.  In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   The phrasing 'in the context of the evauation' is to allow the test implementations to be independed of, and agnostic about the data strucutures presented to a framework for executing the tests and the framework within which the tests are run.  The term bdq:Empty is defined to be more generaly usable than just with bdqcore.  Note: A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:notEmpty and their invalidity must be separately detected.   The definition of bdq:empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:empty should be used as a data value to represent some form of 'Null', 'Unknown', 'Not Recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -731,7 +721,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See VALIDATION_COORDINATES_TERRESTRIALMARINE (b9c184ce-a859-410c-9d12-71a338200380)</td>
+			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380)</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -983,7 +973,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a test specification.  The term bdq:NotEmpty is defined to be more generaly usable. </td>
+			<td>See also: bdq:empty.  In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a test specification.  Common string serializations of null such as \N and NULL are treated as bdq:notEmpty. If '\N' is present in a data set, tests are expected to explicitly treat that value as bdq:notEmpty, and then try to evaluate it against whatever other criteria may apply.  The term bdq:NotEmpty is defined to be more generaly usable than the scope of bdqcore: tests. </td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -1021,7 +1011,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:Use Case that documents the management of the quality of biodiversity data records (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
+			<td>A bdqffdq:UseCase that documents the management of the quality of biodiversity data records (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1277,7 +1267,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See VALIDATION_COORDINATES_TERRESTRIALMARINE (b9c184ce-a859-410c-9d12-71a338200380).</td>
+			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>

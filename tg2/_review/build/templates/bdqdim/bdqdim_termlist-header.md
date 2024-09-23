@@ -81,6 +81,6 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Use of Terms
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), controlled value strings MUST be used as values of `bdqffdq:dataQualityDimension`.
+Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of `bdqffdq:dataQualityDimension`.
 
 ## 3 Term index
