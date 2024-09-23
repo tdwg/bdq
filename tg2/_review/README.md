@@ -62,8 +62,9 @@ Work in progress description of files in this directory:
 │   ├── synthetic
 │   │   └── index.md Generated file, do not edit.
 │   ├── maintenance
-│   │   └── index.md
+│   │   └── index.md  suggestions for maintinance group, editable.
 │   ├── references
+│   │   └── index.md list of references, editable.
 │   └── supplement
 │       └── index.md Generated file, do not edit.
 └── vocabulary ?should this just be the term version files, or do the deriviative vocabulary csv, xml, owl files go here?
