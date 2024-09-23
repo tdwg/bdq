@@ -32,9 +32,9 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 
-- [ 1 BDQ Core Vocabularies](#-1-bdq-core-vocabularies)
-- [ 1.1 Vocabularies central to BDQ Core](#-11-vocabularies-central-to-bdq-core)
-- [ 1.2 Vocabularies supporting to BDQ Core](#-12-vocabularies-supporting-to-bdq-core)
+- [ 1 BDQ Core Vocabularies](#1-bdq-core-vocabularies)
+- [ 1.1 Vocabularies central to BDQ Core](#11-vocabularies-central-to-bdq-core)
+- [ 1.2 Vocabularies supporting to BDQ Core](#12-vocabularies-supporting-to-bdq-core)
 
 
 
