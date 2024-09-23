@@ -33,8 +33,8 @@ Draft Standard for Submission
 
 
 - [ 1 BDQ Core Vocabularies](#-1-bdq-core-vocabularies)
-- [ 1.1 Vocabularies central to BDQ Core](#-11-vocabularies-central-to-bdq-core)
-- [ 1.2 Vocabularies supporting to BDQ Core](#-12-vocabularies-supporting-to-bdq-core)
+- [ 1.1 Vocabularies central to BDQ Core](#-1 1-vocabularies-central-to-bdq-core)
+- [ 1.2 Vocabularies supporting to BDQ Core](#-1 2-vocabularies-supporting-to-bdq-core)
 
 
 
