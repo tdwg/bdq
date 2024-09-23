@@ -141,7 +141,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -183,7 +183,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -225,7 +225,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -267,7 +267,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -309,7 +309,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -351,7 +351,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document (Link needed to RDF document  - https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
