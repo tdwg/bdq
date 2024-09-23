@@ -313,7 +313,9 @@ for term in termLists:
     text += '\n'
     for row_index,row in terms_sorted_by_label.iterrows():
         if row['rdf_type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
-            curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
+            ## PJM: Assuming term is prefix for all terms in vocabulary file
+            curie = term + ":" + row['term_localName']
+            curie_anchor = curie.replace(':','_')
             text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
     text = text[:len(text)-2] # remove final trailing vertical bar and newline
     text += '\n\n' # put back removed newline
@@ -331,7 +333,9 @@ for term in termLists:
             if row_index == 0 or (row_index != 0 and row['label'] != filtered_table.iloc[row_index - 1].loc['label']): # this is a hack to prevent duplicate labels
                 if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
                     # curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
-                    curie_anchor = row['term_localName']
+                    ## PJM: Assuming term is prefix for all terms in vocabulary file
+                    curie = term + ":" + row['term_localName']
+                    curie_anchor = curie.replace(':','_')
                     text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
         text = text[:len(text)-2] # remove final trailing vertical bar and newline
         text += '\n\n' # put back removed newline

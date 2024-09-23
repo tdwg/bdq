@@ -104,12 +104,12 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 
 **Classes**
 
-[Completeness](#Completeness) |
-[Conformance](#Conformance) |
-[Consistency](#Consistency) |
-[Likeliness](#Likeliness) |
-[Reliability](#Reliability) |
-[Resolution](#Resolution) 
+[Completeness](#bdqdim_Completeness) |
+[Conformance](#bdqdim_Conformance) |
+[Consistency](#bdqdim_Consistency) |
+[Likeliness](#bdqdim_Likeliness) |
+[Reliability](#bdqdim_Reliability) |
+[Resolution](#bdqdim_Resolution) 
 
 ## 4 Vocabulary
 <table>

@@ -127,33 +127,33 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 
 **Classes**
 
-[Alien-Species](#Alien-Species) |
-[AllAmendmentTestsRunOnSingleRecord](#AllAmendmentTestsRunOnSingleRecord) |
-[AllValidationTestsRunOnSingleRecord](#AllValidationTestsRunOnSingleRecord) |
-[Biotic-Relationships](#Biotic-Relationships) |
-[DefaultSourceAuthority](#DefaultSourceAuthority) |
-[Empty](#Empty) |
-[NotEmpty](#NotEmpty) |
-[Record-Management](#Record-Management) |
-[Spatial-Temporal Patterns](#Spatial-TemporalPatterns) |
-[Taxon-Management](#Taxon-Management) |
-[annotationAlertIf](#annotationAlertIf) |
-[annotationSystem](#annotationSystem) |
-[assumptionOnUnknownBiome](#assumptionOnUnknownBiome) |
-[bdq:includeEventDate](#bdq:includeEventDate) |
-[defaultGeodeticDatum](#defaultGeodeticDatum) |
-[defaultValue](#defaultValue) |
-[earliestValidDate](#earliestValidDate) |
-[geospatialLand](#geospatialLand) |
-[latestValidDate](#latestValidDate) |
-[maximumValidDepthInMeters](#maximumValidDepthInMeters) |
-[maximumValidElevationInMeters](#maximumValidElevationInMeters) |
-[minimumValidDepthInMeters](#minimumValidDepthInMeters) |
-[minimumValidElevationInMeters](#minimumValidElevationInMeters) |
-[sourceAuthority](#sourceAuthority) |
-[spatialBufferInMeters](#spatialBufferInMeters) |
-[targetCRS](#targetCRS) |
-[taxonIsMarine](#taxonIsMarine) 
+[Alien-Species](#bdq_Alien-Species) |
+[AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
+[AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) |
+[Biotic-Relationships](#bdq_Biotic-Relationships) |
+[DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
+[Empty](#bdq_Empty) |
+[NotEmpty](#bdq_NotEmpty) |
+[Record-Management](#bdq_Record-Management) |
+[Spatial-Temporal Patterns](#bdq_Spatial-TemporalPatterns) |
+[Taxon-Management](#bdq_Taxon-Management) |
+[annotationAlertIf](#bdq_annotationAlertIf) |
+[annotationSystem](#bdq_annotationSystem) |
+[assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
+[bdq:includeEventDate](#bdq_bdq_includeEventDate) |
+[defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
+[defaultValue](#bdq_defaultValue) |
+[earliestValidDate](#bdq_earliestValidDate) |
+[geospatialLand](#bdq_geospatialLand) |
+[latestValidDate](#bdq_latestValidDate) |
+[maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
+[maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
+[minimumValidDepthInMeters](#bdq_minimumValidDepthInMeters) |
+[minimumValidElevationInMeters](#bdq_minimumValidElevationInMeters) |
+[sourceAuthority](#bdq_sourceAuthority) |
+[spatialBufferInMeters](#bdq_spatialBufferInMeters) |
+[targetCRS](#bdq_targetCRS) |
+[taxonIsMarine](#bdq_taxonIsMarine) 
 
 ## 4 Vocabulary
 <table>

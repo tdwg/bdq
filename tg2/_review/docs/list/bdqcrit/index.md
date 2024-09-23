@@ -104,14 +104,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 **Classes**
 
-[Complete](#Complete) |
-[Consistent](#Consistent) |
-[Found](#Found) |
-[In Range](#InRange) |
-[Likely](#Likely) |
-[Not Empty](#NotEmpty) |
-[Standard](#Standard) |
-[Unambiguous](#Unambiguous) 
+[Complete](#bdqcrit_Complete) |
+[Consistent](#bdqcrit_Consistent) |
+[Found](#bdqcrit_Found) |
+[In Range](#bdqcrit_InRange) |
+[Likely](#bdqcrit_Likely) |
+[Not Empty](#bdqcrit_NotEmpty) |
+[Standard](#bdqcrit_Standard) |
+[Unambiguous](#bdqcrit_Unambiguous) 
 
 ## 4 Vocabulary
 <table>
