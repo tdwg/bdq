@@ -40,8 +40,7 @@ Bibliographic citation
 
 
 ## 1 Introduction
-[!--- JRW finished first draft to here ---]
-This document includes terms intended to be used as a controlled value for BDQ Core tests with local name `Dimension`. For details and rationale, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>
+This document includes terms intended to be used as a controlled value for BDQ Core tests with local name `Dimension`. For details and rationale, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731.
 
 #### Data Quality Dimensions 
 
