@@ -1,16 +1,50 @@
----
-layout: home
----
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
+Title
+: {document_title}
+
+Date version issued
+: {ratification_date}
+
+Date created
+: {created_date}
+
+Part of TDWG Standard
+: <{standard_iri}>
+
+Preferred namespace abbreviation
+: {pref_namespace_prefix}
+
+This version
+: <{current_iri}{ratification_date}>
+
+Latest version
+: <{current_iri}>
+
+{previous_version_slot}
+
+Abstract
+: {abstract}
+
+Contributors
+: {contributors}
+
+Creator
+: {creator}
+
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+{comment}
 # BDQ Core Vocabularies
 
-{:.lead}
 This page provides an introduction and index to the six vocabularies introduced by this standard. The vocabularies are distinguished by their roles within applications of the standard to biodiversity data quality (BDQ) use cases. Each vocabulary has its own namespace and term list document. 
 
 ## Vocabularies central to BDQ Core
 
-- [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore_list/index.md) - this vocabulary is likely to be the focus of interest for both implementors and consumers of the outputs of implementations of tests and assertions. This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
-- [Fitness For Use Framework Ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) - this vocabulary, in the form of an ontology, provides the semantics of terms that describe data quality and fitness for use in the namespace `https://rs.tdwg.org/bdqffdq` (abbreviated `bdqffdq:`).
+- [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore_list/index.md) - this vocabulary is likely to be the focus of interest for both implementors and consumers of the outputs of implementations of tests and assertions.  This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
+- [Fitness For Use Framework Ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) - this vocabulary, in the form of an ontology, provides the semantics of terms that describe data quality and fitness for use in the namespace `https://rs.tdwg.org/bdqffdq` (abbreviated `bdqffdq:`), these are the terms used to describe the tests in bdqcore:.
 
 ## Vocabularies supporting to BDQ Core
 
