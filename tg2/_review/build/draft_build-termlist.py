@@ -39,11 +39,11 @@ contributors_yaml_file = 'authors_configuration.yaml'
 # are in the build/ directory in the following files, which provide metadata for each term in termLists: 
 term_list_document = "temp_term-lists.csv"
 local_metadata_config_file = 'temp_namespaces.yaml'
-# (8) {term}_termlist-header.md, {term}_termlist-footer.md files are in build/templates/{term}/ along with a document_configuration.yaml file
+# (8) {term}_termlist-header.md, {term}_termlist-footer.md files are in build/templates/terms/{term}/ along with a document_configuration.yaml file
 # see loop below through termLists
-# headerFileName = 'templates/{}/{}_termlist-header.md'.format(term,term)
-# footerFileName = 'templates/{}/{}_termlist-footer.md'.format(term,term)
-# document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(term)
+# headerFileName = 'templates/terms/{}/{}_termlist-header.md'.format(term,term)
+# footerFileName = 'templates/terms/{}/{}_termlist-footer.md'.format(term,term)
+# document_configuration_yaml_file = 'templates/terms/{}/document_configuration.yaml'.format(term)
 
 # The following configuration values apply to all terms in termLists: 
 
@@ -165,9 +165,9 @@ print()
 
 for term in termLists: 
     print('Generating files for {}.'.format(term))
-    headerFileName = 'templates/{}/{}_termlist-header.md'.format(term,term)
-    footerFileName = 'templates/{}/{}_termlist-footer.md'.format(term,term)
-    document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(term)
+    headerFileName = 'templates/terms/{}/{}_termlist-header.md'.format(term,term)
+    footerFileName = 'templates/terms/{}/{}_termlist-footer.md'.format(term,term)
+    document_configuration_yaml_file = 'templates/terms/{}/document_configuration.yaml'.format(term)
     outFileName = '../docs/list/{}/index.md'.format(term)
     outRDFFileName = '../dist/{}.xml'.format(term)
     term_history_csv = "../vocabulary/{}_term_versions.csv".format(term)

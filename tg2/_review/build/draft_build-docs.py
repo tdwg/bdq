@@ -24,7 +24,7 @@ import shutil
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
-directories = {'toplevel/vocabularies':'vocabularies', 'toplevel/intro/':'intro', 'toplevel/supplement':'supplement', 'toplevel/synthetic':'synthetic'}
+directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
