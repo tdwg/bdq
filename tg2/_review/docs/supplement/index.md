@@ -1,38 +1,66 @@
+<!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 <!--- Template for header, values provided from yaml configuration --->
-# {document_title}
+# BDQ Core Supplemental Information
 
 Title
-: {document_title}
+: BDQ Core Supplemental Information
 
 Date version issued
-: {ratification_date}
+: 2024-09-10
 
 Date created
-: {created_date}
+: 2024-09-10
 
 Part of TDWG Standard
-: <{standard_iri}>
-
-{previous_version_slot}
+: <http://example.org/to_be_determined>
 
 Abstract
-: {abstract}
+: This document provides information supplementary to the (Draft) BDQ Core Standard, describing some of the history of the development of the standard, and rationale management  for decisions made while describing the tests..
 
 Contributors
-: {contributors}
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [Antonio Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([University of São Paulo, Research Center on Biodiversity and Computing](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) , [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), David Lowery 
 
 Creator
-: {creator}
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2024-09-10>
 
-{comment}
+Draft Standard for Submission
 
 
 ### Table of Contents ###
 
-{toc}
+
+[ 1. Introduction](#-1.-introduction)
+[ 1.1 Audience](#-1.1-audience)
+[ 1.2. Status of the content of this document](#-1.2.-status-of-the-content-of-this-document)
+[ 1.3 RFC 2119 keywords](#-1.3-rfc-2119-keywords)
+[ 1.4 Namespace abbreviations](#-1.4-namespace-abbreviations)
+[ 2.0 Historical Context](#-2.0-historical-context)
+[ 2.1 Definition of CORE](#-2.1-definition-of-core)
+[ 2.2 Use case development](#-2.2-use-case-development)
+[ 2.3 Data Quality Control and Data Quality Assurance](#-2.3-data-quality-control-and-data-quality-assurance)
+[ 2.4 Framework Competency Questions](#-2.4-framework-competency-questions)
+[ 3 Developing the Tests](#-3-developing-the-tests)
+[ 3.1 Tests and Data Dimensions](#-3.1-tests-and-data-dimensions)
+[ 3.2 Data Quality Dimension and 'Warning Types'](#-3.2-data-quality-dimension-and-'warning-types')
+[ 3.2 Types of Test](#-3.2-types-of-test)
+[ 3.3 Domain Scope of Tests](#-3.3-domain-scope-of-tests)
+[ 3.4 Parameterising the tests](#-3.4-parameterising-the-tests)
+[ 3.5 Independence and Paired tests](#-3.5-independence-and-paired-tests)
+[ 3.6 Considerations for use of MultiRecord Measures](#-3.6-considerations-for-use-of-multirecord-measures)
+[ 3.7 Input Data Values for AMENDMENTS](#-3.7-input-data-values-for-amendments)
+[ 3.8 Amendments and Annotations](#-3.8-amendments-and-annotations)
+[ 4 Rationale Management Documentation](#-4-rationale-management-documentation)
+[ 4.1 Developing tests with Github Issues](#-4.1-developing-tests-with-github-issues)
+[ 4.2 Github Tags and Categorizing Issues](#-4.2-github-tags-and-categorizing-issues)
+[ 4.3 Using Markdown Tables in Github Issues to Develop Test Descriptors](#-4.3-using-markdown-tables-in-github-issues-to-develop-test-descriptors)
+[ 5 Date and Time Issues](#-5-date-and-time-issues)
+[ 5.1 Events and Calendars](#-5.1-events-and-calendars)
+[ 5.2 Time](#-5.2-time)
+
+
 
 
 ## 1. Introduction
@@ -436,3 +464,29 @@ if (DateUtils.isEmpty(eventTime)) {
 }
 
 In general, assessing whether a date in biodiversity data was Julian or Gregorian is treated here as an intractable problem, and the problem of correctly determining the gregorian value for dwc:eventDates is left in the hands of data providers who may have additional knowledge of collectors and their practices to be able to assess how to interpret verbatim date values found in their historical records.  For consumers, this means that historical dates, even into recent times, may have systematic errors in subsets of the data where the date was julian but has been treated as gregorian.  This can, in some cases, introduce errors on the scale of one year differences between reported and correct eventDate value.     
+
+## Cite BDQ Core
+
+**To cite BDQ Core in general, use the peer-reviewed article:**
+
+Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
+M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
+Benson A, Schigel D (2020). Developing Standards for Improved Data
+Quality and for Selecting Fit for Use Biodiversity Data.
+Biodiversity Information Science and Standards 4: e50889.
+https://doi.org/10.3897/biss.4.50889
+
+**To cite the standard document upon which this page is built, use
+the following:**
+
+BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
+
+**To cite this document specifically, use the following:**
+
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2024-09-10>
+
+**Biodiversity Information Standards (TDWG)**
+
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
+
+

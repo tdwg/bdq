@@ -8,11 +8,14 @@
 # This script merges static Markdown header and footer documents with generated term information tables loading data from in local csv and yaml files.
 # Unlike the original, this version is intended to run entirely on local files.
 
-import re
+import re         # regular expressions
 import csv        # library to read/write/parse CSV files
 import json       # library to convert JSON to Python data structures
 import pandas as pd  # library to handle data loaded from csv as data frames
 import yaml       # Library to parse yaml files
+# To copy image files from build/templates/ to /docs/
+import glob
+import shutil
 
 # -----------------
 # Configuration section
@@ -21,7 +24,7 @@ import yaml       # Library to parse yaml files
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
-directories = {'toplevel/vocabularies':'vocabularies'}
+directories = {'toplevel/vocabularies':'vocabularies', 'toplevel/intro/':'intro', 'toplevel/supplement':'supplement', 'toplevel/synthetic':'synthetic'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -136,16 +139,30 @@ term_lists_info = []
 for templatePath, document in directories.items() :
     print('Filling in header and footer template and saving file')
     print('Generating files for {}.'.format(document))
-    headerFileName = 'templates/{}/{}-header.md'.format(templatePath,document)
-    footerFileName = 'templates/{}/{}-footer.md'.format(templatePath,document)
+    sourceDirectory = 'templates/{}/'.format(templatePath)
+    headerFileName = '{}{}-header.md'.format(sourceDirectory,document)
+    footerFileName = '{}{}-footer.md'.format(sourceDirectory,document)
     document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(templatePath)
-    outFileName = '../docs/{}/index.md'.format(document)
-    
+    outputDirectory = '../docs/{}/'.format(document)
+    outFileName = '{}index.md'.format(outputDirectory)
+
     # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
     # load from local file
     with open(document_configuration_yaml_file) as dcfy:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
+    ## Produce a table of contents from the headings 
+    toc = ""
+    regexHeadings = "^#+ [0-9]+.*"
+    with open(headerFileName) as headerFile:
+        for line in headerFile:
+           aHeading = re.search(regexHeadings,line)
+           if (aHeading) : 
+               headingText = aHeading.group().replace("#","")
+               headingAnchor = headingText.replace(" ","-").lower()
+               toc = toc + "[" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+        headerFile.close()
+    
     # read in header and footer, merge with terms table, and output
     headerObject = open(headerFileName, 'rt', encoding='utf-8')
     header = headerObject.read()
@@ -180,6 +197,7 @@ for templatePath, document in directories.items() :
     header = header.replace('{creator}', document_configuration_yaml['creator'])
     header = header.replace('{publisher}', document_configuration_yaml['publisher'])
     header = header.replace('{comment}', document_configuration_yaml['comment'])
+    header = header.replace('{toc}','\n{}\n'.format(toc))
     year = document_configuration_yaml['doc_modified'].split('-')[0]
     header = header.replace('{year}', year)
     if has_namespace:
@@ -211,6 +229,8 @@ for templatePath, document in directories.items() :
         # If there was no previous version, remove the slot from the header.
         header = header.replace('{previous_version_slot}\n\n', '')
     
+
+
     footerObject = open(footerFileName, 'rt', encoding='utf-8')
     footer = footerObject.read()
     footerObject.close()
@@ -230,6 +250,14 @@ for templatePath, document in directories.items() :
     outputObject = open(outFileName, 'wt', encoding='utf-8')
     outputObject.write(output)
     outputObject.close()
+
+    # Find image files to copy from templates and copy them over to docs
+    for file in glob.glob('{}*.svg'.format(sourceDirectory)):
+       print(file)
+       shutil.copy(file, outputDirectory)
+    for file in glob.glob('{}*.png'.format(sourceDirectory)):
+       print(file)
+       shutil.copy(file, outputDirectory)
 
 print('done')
 

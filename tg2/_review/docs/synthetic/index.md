@@ -1,37 +1,49 @@
+<!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 <!--- Template for header, values provided from yaml configuration --->
-# {document_title}
+# Biodiversity Data Quality (BDQ) Core: Identifying Synthetic and Modified Data
 
 Title
-: {document_title}
+: Biodiversity Data Quality (BDQ) Core: Identifying Synthetic and Modified Data
 
 Date version issued
-: {ratification_date}
+: 2024-09-10
 
 Date created
-: {created_date}
+: 2024-09-10
 
 Part of TDWG Standard
-: <{standard_iri}>
-
-{previous_version_slot}
+: <http://example.org/to_be_determined>
 
 Abstract
-: {abstract}
+: This document is a standard for the marking of synthetic and modified biodiversity data to allow users of biodiversity data to identify and exclude modified and synthetic data from analysies and other uses.
 
 Contributors
-: {contributors}
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [Antonio Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([University of São Paulo, Research Center on Biodiversity and Computing](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) , [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), David Lowery 
 
 Creator
-: {creator}
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality (BDQ) Core: Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2024-09-10>
 
-{comment}
+Draft Standard for Submission
 
 ### Table of Contents ###
 
-{toc}
+
+[ 1. Introduction](#-1.-introduction)
+[ 1.1 Audience](#-1.1-audience)
+[ 1.2. Status of the content of this document](#-1.2.-status-of-the-content-of-this-document)
+[ 1.3 RFC 2119 keywords](#-1.3-rfc-2119-keywords)
+[ 2 Synthetic and Example Data ](#-2-synthetic-and-example-data-)
+[ 2.1 Identifying example data (normative)](#-2.1-identifying-example-data-(normative))
+[ 2.2 Data Fragments and Occurrence Data Sets (normative)](#-2.2-data-fragments-and-occurrence-data-sets-(normative))
+[ 2.2.1 BDQ Core validation data (informative) ](#-2.2.1-bdq-core-validation-data-(informative)-)
+[ 2.3 Real data used as examples. (normative)](#-2.3-real-data-used-as-examples.-(normative))
+[ 2.4  Real data with synthetic modifications used as examples: (normative)](#-2.4--real-data-with-synthetic-modifications-used-as-examples:-(normative))
+[ 2.5 Wholly Synthetic Data (normative)](#-2.5-wholly-synthetic-data-(normative))
+
+
 
 # 1. Introduction
 
@@ -109,3 +121,29 @@ dwc:collectionID = "urn:uuid:0b1b9546-64aa-446b-bd9c-cbb0eacf4332"
 B.  Each modified record MUST provide a GUID for the synthetic record.
 
 dwc:occurrenceID = urn:uuid: + a random type 4 UUID
+
+## Cite BDQ Core
+
+**To cite BDQ Core in general, use the peer-reviewed article:**
+
+Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
+M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
+Benson A, Schigel D (2020). Developing Standards for Improved Data
+Quality and for Selecting Fit for Use Biodiversity Data.
+Biodiversity Information Science and Standards 4: e50889.
+https://doi.org/10.3897/biss.4.50889
+
+**To cite the standard document upon which this page is built, use
+the following:**
+
+BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
+
+**To cite this document specifically, use the following:**
+
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality (BDQ) Core: Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2024-09-10>
+
+**Biodiversity Information Standards (TDWG)**
+
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
+
+
