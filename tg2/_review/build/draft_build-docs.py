@@ -159,8 +159,8 @@ for templatePath, document in directories.items() :
            aHeading = re.search(regexHeadings,line)
            if (aHeading) : 
                headingText = aHeading.group().replace("#","")
-               headingAnchor = headingText.replace(" ","-").lower()
-               toc = toc + "[" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+               headingAnchor = headingText.replace(" ","-").lower().replace(".","")
+               toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
         headerFile.close()
     
     # read in header and footer, merge with terms table, and output
