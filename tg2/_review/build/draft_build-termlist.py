@@ -284,8 +284,10 @@ for term in termLists:
             
         for row_index,row in filtered_table.iterrows():
             if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
-                #curie = row['pref_ns_prefix'] + ":" + row['term_localName']
-                curie = "bdqdim:" + row['term_localName']
+                # curie = row['pref_ns_prefix'] + ":" + row['term_localName']
+                ## PJM: Assuming term is prefix for all terms in vocabulary file
+                curie = term + ":" + row['term_localName']
+                #curie = "bdqdim:" + row['term_localName']
                 curie_anchor = curie.replace(':','_')
                 text += '[' + curie + '](#' + curie_anchor + ') |\n'
         text = text[:len(text)-2] # remove final trailing vertical bar and newline
@@ -593,7 +595,7 @@ for term in termLists:
     header = header.replace('{year}', year)
     if has_namespace:
         header = header.replace('{namespace_uri}', namespace_uri)
-        header = header.replace('{pref_namespace_prefix}', pref_namespace_prefix)
+        header = header.replace('{pref_namespace_prefix}', term)
     
     # Determine whether there was a previous version of the document.
     if document_configuration_yaml['doc_created'] != document_configuration_yaml['doc_modified']:

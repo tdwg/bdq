@@ -15,7 +15,7 @@ Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
-: bdqdim
+: bdqenh
 
 This version
 : <http://rs.tdwg.org/bdq/bdqenh/terms/2024-09-10>
@@ -69,8 +69,8 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdqenh/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqdim/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqdim.xml | Example for submission, to be generated | 
+| HTML file   | http://rs.tdwg.org/bdq/bdqenh/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqenh/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqenh.xml | Example for submission, to be generated | 
 
 ### 2 Status of the content of this document
 
@@ -87,11 +87,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 **Vocabulary**
 
-[bdqdim:AssumedDefault](#bdqdim_AssumedDefault) |
-[bdqdim:Converted](#bdqdim_Converted) |
-[bdqdim:FillInFrom](#bdqdim_FillInFrom) |
-[bdqdim:Standardized](#bdqdim_Standardized) |
-[bdqdim:Transposed](#bdqdim_Transposed) 
+[bdqenh:AssumedDefault](#bdqenh_AssumedDefault) |
+[bdqenh:Converted](#bdqenh_Converted) |
+[bdqenh:FillInFrom](#bdqenh_FillInFrom) |
+[bdqenh:Standardized](#bdqenh_Standardized) |
+[bdqenh:Transposed](#bdqenh_Transposed) 
 
 ### 3.2 Index By Label
 

@@ -15,7 +15,7 @@ Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
-: bdqdim
+: bdqcrit
 
 This version
 : <http://rs.tdwg.org/bdq/bdqcrit/terms/2024-09-10>
@@ -71,8 +71,8 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), control
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqdim/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqdim.xml | Example for submission, to be generated | 
+| HTML file   | http://rs.tdwg.org/bdq/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcrit/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcrit.xml | Example for submission, to be generated | 
 
 ### 2 Status of the content of this document
 
@@ -89,14 +89,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 **Vocabulary**
 
-[bdqdim:Complete](#bdqdim_Complete) |
-[bdqdim:Consistent](#bdqdim_Consistent) |
-[bdqdim:Found](#bdqdim_Found) |
-[bdqdim:InRange](#bdqdim_InRange) |
-[bdqdim:Likely](#bdqdim_Likely) |
-[bdqdim:NotEmpty](#bdqdim_NotEmpty) |
-[bdqdim:Standard](#bdqdim_Standard) |
-[bdqdim:Unambiguous](#bdqdim_Unambiguous) 
+[bdqcrit:Complete](#bdqcrit_Complete) |
+[bdqcrit:Consistent](#bdqcrit_Consistent) |
+[bdqcrit:Found](#bdqcrit_Found) |
+[bdqcrit:InRange](#bdqcrit_InRange) |
+[bdqcrit:Likely](#bdqcrit_Likely) |
+[bdqcrit:NotEmpty](#bdqcrit_NotEmpty) |
+[bdqcrit:Standard](#bdqcrit_Standard) |
+[bdqcrit:Unambiguous](#bdqcrit_Unambiguous) 
 
 ### 3.2 Index By Label
 

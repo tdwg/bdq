@@ -18,10 +18,10 @@ Preferred namespace abbreviation
 : bdq
 
 This version
-: <http://rs.tdwg.org/bdq/bdq/terms/2024-09-10>
+: <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 Latest version
-: <http://rs.tdwg.org/bdq/bdq/terms/>
+: <http://rs.tdwg.org/bdq/terms/>
 
 Abstract
 : This document is a reference for the (Draft) BDQ Core Standard, documenting vocabulary values largely used as bdqffdq:Parameters, but including a few other terms used in test Specifications.
@@ -33,7 +33,7 @@ Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions)
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions). 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdq/terms/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions). 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 Draft Standard for Submission
 
@@ -77,8 +77,8 @@ The following namespace abbreviations are used in this document:
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqdim/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqdim.xml | Example for submission, to be generated | 
+| HTML file   | http://rs.tdwg.org/bdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdq/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdq.xml | Example for submission, to be generated | 
 
 ## 2 Use of Terms (normative)
 
@@ -93,33 +93,33 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 
 **Vocabulary**
 
-[bdqdim:Alien-Species](#bdqdim_Alien-Species) |
-[bdqdim:AllAmendmentTestsRunOnSingleRecord](#bdqdim_AllAmendmentTestsRunOnSingleRecord) |
-[bdqdim:AllValidationTestsRunOnSingleRecord](#bdqdim_AllValidationTestsRunOnSingleRecord) |
-[bdqdim:annotationAlertIf](#bdqdim_annotationAlertIf) |
-[bdqdim:annotationSystem](#bdqdim_annotationSystem) |
-[bdqdim:assumptionOnUnknownBiome](#bdqdim_assumptionOnUnknownBiome) |
-[bdqdim:bdq:includeEventDate](#bdqdim_bdq_includeEventDate) |
-[bdqdim:Biotic-Relationships](#bdqdim_Biotic-Relationships) |
-[bdqdim:defaultGeodeticDatum](#bdqdim_defaultGeodeticDatum) |
-[bdqdim:DefaultSourceAuthority](#bdqdim_DefaultSourceAuthority) |
-[bdqdim:defaultValue](#bdqdim_defaultValue) |
-[bdqdim:earliestValidDate](#bdqdim_earliestValidDate) |
-[bdqdim:Empty](#bdqdim_Empty) |
-[bdqdim:geospatialLand](#bdqdim_geospatialLand) |
-[bdqdim:latestValidDate](#bdqdim_latestValidDate) |
-[bdqdim:maximumValidDepthInMeters](#bdqdim_maximumValidDepthInMeters) |
-[bdqdim:maximumValidElevationInMeters](#bdqdim_maximumValidElevationInMeters) |
-[bdqdim:minimumValidDepthInMeters](#bdqdim_minimumValidDepthInMeters) |
-[bdqdim:minimumValidElevationInMeters](#bdqdim_minimumValidElevationInMeters) |
-[bdqdim:NotEmpty](#bdqdim_NotEmpty) |
-[bdqdim:Record-Management](#bdqdim_Record-Management) |
-[bdqdim:sourceAuthority](#bdqdim_sourceAuthority) |
-[bdqdim:Spatial-Temporal Patterns](#bdqdim_Spatial-Temporal Patterns) |
-[bdqdim:spatialBufferInMeters](#bdqdim_spatialBufferInMeters) |
-[bdqdim:targetCRS](#bdqdim_targetCRS) |
-[bdqdim:Taxon-Management](#bdqdim_Taxon-Management) |
-[bdqdim:taxonIsMarine](#bdqdim_taxonIsMarine) 
+[bdq:Alien-Species](#bdq_Alien-Species) |
+[bdq:AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
+[bdq:AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) |
+[bdq:annotationAlertIf](#bdq_annotationAlertIf) |
+[bdq:annotationSystem](#bdq_annotationSystem) |
+[bdq:assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
+[bdq:bdq:includeEventDate](#bdq_bdq_includeEventDate) |
+[bdq:Biotic-Relationships](#bdq_Biotic-Relationships) |
+[bdq:defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
+[bdq:DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
+[bdq:defaultValue](#bdq_defaultValue) |
+[bdq:earliestValidDate](#bdq_earliestValidDate) |
+[bdq:Empty](#bdq_Empty) |
+[bdq:geospatialLand](#bdq_geospatialLand) |
+[bdq:latestValidDate](#bdq_latestValidDate) |
+[bdq:maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
+[bdq:maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
+[bdq:minimumValidDepthInMeters](#bdq_minimumValidDepthInMeters) |
+[bdq:minimumValidElevationInMeters](#bdq_minimumValidElevationInMeters) |
+[bdq:NotEmpty](#bdq_NotEmpty) |
+[bdq:Record-Management](#bdq_Record-Management) |
+[bdq:sourceAuthority](#bdq_sourceAuthority) |
+[bdq:Spatial-Temporal Patterns](#bdq_Spatial-Temporal Patterns) |
+[bdq:spatialBufferInMeters](#bdq_spatialBufferInMeters) |
+[bdq:targetCRS](#bdq_targetCRS) |
+[bdq:Taxon-Management](#bdq_Taxon-Management) |
+[bdq:taxonIsMarine](#bdq_taxonIsMarine) 
 
 ### 3.2 Index By Label
 
@@ -1310,7 +1310,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions). 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdq/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions). 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 **Biodiversity Information Standards (TDWG)**
 
