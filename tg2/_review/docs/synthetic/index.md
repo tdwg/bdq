@@ -31,17 +31,17 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 
-- [ 1. Introduction](#-1 -introduction)
-- [ 1.1 Audience](#-1 1-audience)
-- [ 1.2. Status of the content of this document](#-1 2 -status-of-the-content-of-this-document)
-- [ 1.3 RFC 2119 keywords](#-1 3-rfc-2119-keywords)
+- [ 1. Introduction](#-1-introduction)
+- [ 1.1 Audience](#-11-audience)
+- [ 1.2. Status of the content of this document](#-12-status-of-the-content-of-this-document)
+- [ 1.3 RFC 2119 keywords](#-13-rfc-2119-keywords)
 - [ 2 Synthetic and Example Data ](#-2-synthetic-and-example-data-)
-- [ 2.1 Identifying example data (normative)](#-2 1-identifying-example-data-(normative))
-- [ 2.2 Data Fragments and Occurrence Data Sets (normative)](#-2 2-data-fragments-and-occurrence-data-sets-(normative))
-- [ 2.2.1 BDQ Core validation data (informative) ](#-2 2 1-bdq-core-validation-data-(informative)-)
-- [ 2.3 Real data used as examples. (normative)](#-2 3-real-data-used-as-examples -(normative))
-- [ 2.4  Real data with synthetic modifications used as examples: (normative)](#-2 4--real-data-with-synthetic-modifications-used-as-examples:-(normative))
-- [ 2.5 Wholly Synthetic Data (normative)](#-2 5-wholly-synthetic-data-(normative))
+- [ 2.1 Identifying example data (normative)](#-21-identifying-example-data-(normative))
+- [ 2.2 Data Fragments and Occurrence Data Sets (normative)](#-22-data-fragments-and-occurrence-data-sets-(normative))
+- [ 2.2.1 BDQ Core validation data (informative) ](#-221-bdq-core-validation-data-(informative)-)
+- [ 2.3 Real data used as examples. (normative)](#-23-real-data-used-as-examples-(normative))
+- [ 2.4  Real data with synthetic modifications used as examples: (normative)](#-24--real-data-with-synthetic-modifications-used-as-examples:-(normative))
+- [ 2.5 Wholly Synthetic Data (normative)](#-25-wholly-synthetic-data-(normative))
 
 
 
