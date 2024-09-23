@@ -9,7 +9,7 @@ documentTitle: Data Quality Criterion Controlled Vocabulary List of Terms
 abstract: 'This document is a reference for the (Draft) BDQ Core Standard, documenting vocabulary values for the BDQ Core term Criterion.'
 
 # This value is generally the name of the task group that created the document.
-creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2 (Data Quality Tests and Assertions)'
+creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'
 
 # Current (2023-08-27) practice is to publish documents as Markdown files in a TDWG GitHub repository.
 # These Markdown documents are then converted to HTML by GitHub Pages. To match the TDWG theme, the 
