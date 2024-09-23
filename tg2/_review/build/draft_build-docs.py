@@ -24,7 +24,7 @@ import shutil
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
-directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic'}
+directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -143,7 +143,10 @@ for templatePath, document in directories.items() :
     headerFileName = '{}{}-header.md'.format(sourceDirectory,document)
     footerFileName = '{}{}-footer.md'.format(sourceDirectory,document)
     document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(templatePath)
-    outputDirectory = '../docs/{}/'.format(document)
+    if templatePath.find("guide/") == -1 :
+    	outputDirectory = '../docs/{}/'.format(document)
+    else :
+    	outputDirectory = '../docs/guide/{}/'.format(document)
     outFileName = '{}index.md'.format(outputDirectory)
 
     # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org

@@ -1,22 +1,38 @@
-# BDQ Core Implementer's Guide
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
-**Date version issued**  (Draft)
+Title
+: {document_title}
 
-**Date created** (Draft)
+Date version issued
+: {ratification_date}
 
-**Part of TDWG Standard**
+Date created
+: {created_date}
 
-**This version**
+Part of TDWG Standard
+: <{standard_iri}>
 
-**Latest version**
+{previous_version_slot}
 
-**Previous version**
+Abstract
+: {abstract}
 
-**Contributors**
+Contributors
+: {contributors}
 
-**Creator**
+Creator
+: {creator}
 
-TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions).
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+{comment}
+
+
+### Table of Contents ###
+
+{toc}
 
 ## 1 Introduction (non-normative)
 

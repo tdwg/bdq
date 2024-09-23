@@ -53,8 +53,9 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │   ├── document_configuration.yaml
 │   │   ├── vocabularies-footer.md
 │   │   └── vocabularies-header.md
-│   └── guide to build docs/guide/ pages  **work in progress**
+│   └── guide used by draft_build-docs.py to build docs/guide/ pages
 │       ├── bdqffdq
+│       │   ├── document_configuration.yaml
 │       │   ├── assertions.png
 │       │   ├── bdqffdq_class_diagram.png
 │       │   ├── bdqffdq_data_quality_layers.svg
@@ -63,14 +64,19 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │       │   ├── bdqffdq_data_quality_needs_solutions_report_validation.svg
 │       │   ├── bdqffdq_data_quality_needs_validation.svg
 │       │   ├── dataqualityneeds.png
-│       │   ├── index.md
+│       │   ├── bdqffdq-header.md  **Main text document for the bdqffdq guide**
+│       │   ├── bdqffdq-footer.md
 │       │   └── resource_types.png
 │       ├── implementers
-│       │   ├── index.md
+│       │   ├── document_configuration.yaml
+│       │   ├── implementers-header.md **Main text document for the implementers guide**
+│       │   ├── implementers-footer.md
 │       │   ├── TG2_test_validation_data.csv
 │       │   └── TG2_test_validation_data_nonprintingchars.csv
 │       └── users
-│           └── index.md
+│           ├── document_configuration.yaml
+│           ├── users-footer.md
+│           └── users-header.md **Main text document for the users guide**
 ├── draft_build-termlist.py script to build termlist files for docs/list/ from templates (plus rdf for dist/), draft refers to this being to build a draft standard
 ├── draft_build-docs.py script to fill in template information and copy files that don't include terms from build/templates to docs/
 ├── authors_configuration.yaml  list of authors and contributors

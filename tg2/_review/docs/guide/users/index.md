@@ -1,24 +1,48 @@
+<!--- This file is generated from templates by code, DO NOT EDIT by hand --->
+<!--- Template for header, values provided from yaml configuration --->
 # BDQ Core User's Guide
 
-**Date version issued**  (Draft)
+Title
+: BDQ Core User's Guide
 
-**Date created** (Draft)
+Date version issued
+: 2024-09-10
 
-**Part of TDWG Standard**
+Date created
+: 2024-09-10
 
-**This version**
+Part of TDWG Standard
+: <http://example.org/to_be_determined>
 
-**Latest version**
+Abstract
+: This document is a reference for the (Draft) BDQ Core Standard, describing the BDQ Core tests for consumers of data quality reports produced from the BDQ Core tests.
 
-**Previous version**
+Contributors
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [Antonio Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([University of São Paulo, Research Center on Biodiversity and Computing](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) , [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), David Lowery 
 
-**Contributors**
+Creator
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
-**Creator**
+Bibliographic citation
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core User's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
-TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions).
+Draft Standard for Submission
 
-## Introduction
+
+### Table of Contents ###
+
+
+- [ 1 Introduction](#1-introduction)
+- [ 1.1 Kinds of Tests and what they do (non-normative)](#11-kinds-of-tests-and-what-they-do-(non-normative))
+- [ 1.2 Inputs to a test ](#12-inputs-to-a-test-)
+- [ 1.3 Parts of a Response from a test. (normative) ](#13-parts-of-a-response-from-a-test-(normative)-)
+- [ 2 Reading the Quick Reference Guide to the tests (non-normative)](#2-reading-the-quick-reference-guide-to-the-tests-(non-normative))
+- [ 2.1 Amendments only propose changes (normative)](#21-amendments-only-propose-changes-(normative))
+- [ 2.2 Time and TimeZone (non-normative)](#22-time-and-timezone-(non-normative))
+
+
+
+# 1 Introduction
 
 This users guide describes how consumers of data quality reports can interpret the content of those reports.  
 
@@ -26,7 +50,7 @@ See also the [Implementer's Guide](BDQ_Core_Implementers_guide.md) for those wri
 
 Each test is intended to examine just one specific aspect of data quality.   Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
-## Kinds of Tests and what they do (non-normative)
+## 1.1 Kinds of Tests and what they do (non-normative)
 
 There are four kinds of kinds of tests: Validations, Amendments, Measures, and Issues.
 
@@ -38,13 +62,13 @@ Issues are like Validations, but they can identify potential problems in the dat
 
 Measures either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  
 
-## Inputs to a test 
+## 1.2 Inputs to a test 
 
 Each test is defined to take a specific set of input terms (InformationElements, generally Darwin Core terms), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the Validations, Amendments, and Issues currently defined in BDQ Core examine a set of Darwin Core terms from a single record, e.g. from a single Occurrence record, rather than looking at the input term(s) over multiple records.  
 
 Consider the test VALIDATION_EVENTDATE_STANDARD, it takes as input the InformationElement dwc:eventDate from a single record, and then asks "Is the value of dwc:eventDate a valid ISO date?".  It will then produce a Response describing the conclusion it reached in asking that question for that record.
 
-## Parts of a Response from a test. (normative) 
+## 1.3 Parts of a Response from a test. (normative) 
 
 Reports SHOULD identify tests to you using at least the skos:prefLabel for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
@@ -76,7 +100,7 @@ Issues
 Issues result in a Response.status of "RUN_HAS_RESULT" and a Response.status of ISSUE, "POTENTIAL_ISSUE" or "NOT_ISSUE".  Potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POSSIBLE_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.   An issue that reports ISSUE is making an assertions that is the same as a Validation reporting a Response.result of NOT_COMPLIANT, in this sense, Issues are the converse of Validations.  The meaning, however, of NOT_ISSUE from an Issue is not the same as COMPLIANT from a Validation.  NOT_ISSUE means that no issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisify some critierion for fitness for some use.  POTENTIAL_ISSUE has no analog in validations, it marks the presence of something in the data that will need evaluation by a human to determine whether or not the data are fit for their use or not.  One Issue in BDQ Core evaluates whether dwc:dataGeneralizations contains any value, if it does, then it reports POTENTIAL_ISSUE, meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose.  See: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../bdqcore/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY)  Very few Issues are defined in BDQ Core.
 
 
-### Reading the Quick Reference Guide to the tests (non-normative)
+# 2 Reading the Quick Reference Guide to the tests (non-normative)
 
 The BDQ Core Quick Reference Guide lists the tests by a subset of Descriptors. This subset provides a summary of the nature of each of the tests, and some Descriptors can be used to filter the tests to those that may be applicable to an application.   An index is provided for each test by UseCase.  Both SingleRecord tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
@@ -88,11 +112,37 @@ A list of UseCases describing data quality needs to which each test is seen to b
 
 [Quick Reference Guide to the tests](../bdqcore/index.md)
 
-## Amendments only propose changes (normative)
+# 2.1 Amendments only propose changes (normative)
 
 Amendments only propose changes to data.  It is up to the consumers of data quality reports to choose whether or not to accept those changes, particularly into authoritative databases of record.  Consumers of data quality reports MAY choose to change data based on assertions made by Ammendments, or consumers of data quality reports MAY choose to not change their data based on assertions made by Amendments.  Databases of record SHOULD NOT automatically alter data based on assertions made by Amendments without human evaluation.   
 
-## Time and TimeZone (non-normative)
+# 2.2 Time and TimeZone (non-normative)
 
 Time is not considered in any of the bdqcore: test descriptions.  This means that some cases where time zone data is important, dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced.  If this would make such data unfit for your purposes, you will need to introduce additional tests. 
+
+
+## Cite BDQ Core
+
+**To cite BDQ Core in general, use the peer-reviewed article:**
+
+Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
+M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
+Benson A, Schigel D (2020). Developing Standards for Improved Data
+Quality and for Selecting Fit for Use Biodiversity Data.
+Biodiversity Information Science and Standards 4: e50889.
+https://doi.org/10.3897/biss.4.50889
+
+**To cite the standard document upon which this page is built, use
+the following:**
+
+BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
+
+**To cite this document specifically, use the following:**
+
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core User's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+
+**Biodiversity Information Standards (TDWG)**
+
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
+
 

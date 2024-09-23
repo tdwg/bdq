@@ -23,17 +23,18 @@ Work in progress description of files in this directory:
 │       ├── bdqcore test documentation build files, work in progress
 │       ├── bdqcore_qrg quick reference guide build files (for docs/terms/bdqcore), work in progress
 │       └── guide directory for templates for guides (users, implementors, bdqffdq).
-│           ├── bdqffdq  source files for bdqffdq guide, work in progress
-│           ├── implementers source files for implementers guide, work in progress
-│           └── users source files for users guide, work in progress.
+│           ├── bdqffdq  source files for bdqffdq guide
+│           ├── implementers source files for implementers guide
+│           └── users source files for users guide.
 ├── dist Generated csv distribution files for building other artifacts
 │   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py)
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py)
 │   ├── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py)
 │   ├── bdqcrit.xml  Generated RDF for bdqcrit vocabulary (built with draft_build-termlist.py)
 │   └── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name, purpose?
-├── docs  human readable documentation files ultimately to be built from files in build
+├── docs  human readable documentation files built from files in build/
 │   ├── intro 
+│   │   ├── .svg files, copied here from build, do not edit. 
 │   │   └── index.md Generated file, do not edit..
 │   ├── vocabularies
 │   │   └── index.md Generated file, do not edit.
@@ -51,9 +52,13 @@ Work in progress description of files in this directory:
 │   │   │   └── index.md  Generated term list document Do not edit.
 │   │   └── bdqffdq
 │   ├── guide descriptive document build targets Do not edit here 
-│   │   ├── bdqffdq  build target for bdqffdq guide
-│   │   ├── implementers build target for implementors guide
-│   │   └── users build target for users guide
+│   │   ├── bdqffdq 
+│   │   │   ├── various .svg and png files, copied here from build, do not edit. 
+│   │   │   └── index.md Generated file, do not edit..
+│   │   ├── implementers
+│   │   │   └── index.md Generated file, do not edit..
+│   │   └── users
+│   │       └── index.md Generated file, do not edit..
 │   ├── synthetic
 │   │   └── index.md Generated file, do not edit.
 │   ├── maintenance
