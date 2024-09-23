@@ -325,7 +325,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/sourceAuthority"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal Patterns-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Spatial-TemporalPatterns-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -334,10 +334,10 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:prefLabel xml:lang="en">Spatial-Temporal Patterns</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
      <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) where the information elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</skos:definition>
-     <rdf:value>Spatial-Temporal Patterns</rdf:value>
+     <rdf:value>Spatial-TemporalPatterns</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/e"/>
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
-     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Spatial-Temporal Patterns"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Spatial-TemporalPatterns"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/spatialBufferInMeters-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>

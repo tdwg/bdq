@@ -115,7 +115,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 [bdq:NotEmpty](#bdq_NotEmpty) |
 [bdq:Record-Management](#bdq_Record-Management) |
 [bdq:sourceAuthority](#bdq_sourceAuthority) |
-[bdq:Spatial-Temporal Patterns](#bdq_Spatial-Temporal Patterns) |
+[bdq:Spatial-TemporalPatterns](#bdq_Spatial-TemporalPatterns) |
 [bdq:spatialBufferInMeters](#bdq_spatialBufferInMeters) |
 [bdq:targetCRS](#bdq_targetCRS) |
 [bdq:Taxon-Management](#bdq_Taxon-Management) |
@@ -135,7 +135,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 [Empty](#Empty) |
 [NotEmpty](#NotEmpty) |
 [Record-Management](#Record-Management) |
-[Spatial-Temporal Patterns](#Spatial-Temporal Patterns) |
+[Spatial-Temporal Patterns](#Spatial-TemporalPatterns) |
 [Taxon-Management](#Taxon-Management) |
 [annotationAlertIf](#annotationAlertIf) |
 [annotationSystem](#annotationSystem) |
@@ -1083,13 +1083,13 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Spatial-Temporal Patterns"></a>Term Name  bdq:Spatial-Temporal Patterns</th>
+			<th colspan="2"><a id="bdq_Spatial-TemporalPatterns"></a>Term Name  bdq:Spatial-TemporalPatterns</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms/Spatial-Temporal Patterns">https://rs.tdwg.org/bdq/terms/Spatial-Temporal Patterns</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/Spatial-TemporalPatterns">https://rs.tdwg.org/bdq/terms/Spatial-TemporalPatterns</a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -1097,7 +1097,7 @@ Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), controlled valu
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal Patterns-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal Patterns-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms//version/Spatial-TemporalPatterns-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Spatial-TemporalPatterns-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
