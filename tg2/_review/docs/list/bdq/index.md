@@ -15,7 +15,7 @@ Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
-: bdqdim
+: bdq
 
 This version
 : <http://rs.tdwg.org/bdq/bdq/terms/2024-09-10>
