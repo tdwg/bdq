@@ -14,14 +14,15 @@ Work in progress description of files in this directory:
 │   ├── temp_namespaces.yaml File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
 │   ├── temp_term-lists.csv File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
 │   └── templates template files used by build scripts 
-│       ├── terms templates for term list documents and dist rdf files 
+│       ├── list templates for term list documents and dist rdf files 
 │       │   ├── bdq templates and configuration files for bdq vocabulary
 │       │   ├── bdqdim templates and configuration files for bdqdim vocabulary
 │       │   ├── bdqcrit templates and configuration files for bdqcrit vocabulary
 │       │   └── bdqenh templates and configuration files for bdqenh vocabulary
+│       ├── terms templates for quick reference guide
+│       │   └── bdqcore_qrg quick reference guide build files (for docs/terms/bdqcore), work in progress
 │       ├── bdqffdq ontology documentation build files, work in progress
 │       ├── bdqcore test documentation build files, work in progress
-│       ├── bdqcore_qrg quick reference guide build files (for docs/terms/bdqcore), work in progress
 │       └── guide directory for templates for guides (users, implementors, bdqffdq).
 │           ├── bdqffdq  source files for bdqffdq guide
 │           ├── implementers source files for implementers guide

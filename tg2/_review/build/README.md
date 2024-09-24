@@ -8,7 +8,10 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── make_bdq_tests_vertical.py  builds an artifact containing a list of tests, purpose unclear.
 ├── README.md this file.
 ├── templates  for various docs files.
-│   ├── terms  files that produce /docs/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
+│   ├── list  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
+│   │   ├── bdqcore  **work in progress** won't use draft_build-termlisty.py
+│   │   │   ├── bdqcore_termlist-footer.md
+│   │   │   └── bdqcore_termlist-header.md
 │   │   ├── bdq
 │   │   │   ├── bdq_termlist-footer.md
 │   │   │   ├── bdq_termlist-header.md
@@ -25,12 +28,10 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │       ├── bdqenh_termlist-footer.md
 │   │       ├── bdqenh_termlist-header.md
 │   │       └── document_configuration.yaml
-│   ├── bdqcore  **work in progress**
-│   │   ├── bdqcore_termlist-footer.md
-│   │   └── bdqcore_termlist-header.md
-│   ├── bdqcore_qrg  **work in progress**  to build docs/terms/bdqcore/index.md quick reference guide.
-│   │   ├── bdqcore_quickreference-footer.md
-│   │   └── bdqcore_quickreference-header.md
+│   ├── terms  files that produce /docs/terms/{term}/index.md 
+│	│   └── bdqcore_qrg  **work in progress**  to build docs/terms/bdqcore/index.md quick reference guide using draft_build_bdqcore_qrg.py
+│   │       ├── bdqcore_quickreference-footer.md
+│   │       └── bdqcore_quickreference-header.md
 │   ├── bdqffdq **work in progress**
 │   │   ├── bdqffdq_termlist-footer.md
 │   │   └── bdqffdq_termlist-header.md
@@ -79,6 +80,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │           └── users-header.md **Main text document for the users guide**
 ├── draft_build-termlist.py script to build termlist files for docs/list/ from templates (plus rdf for dist/), draft refers to this being to build a draft standard
 ├── draft_build-docs.py script to fill in template information and copy files that don't include terms from build/templates to docs/
+├── draft_build_bdqcore_qrg.py to build bdqcore quick reference guide
 ├── authors_configuration.yaml  list of authors and contributors
 ├── temp_namespaces.yaml used by draft_build-termlist.py to replace a rs.tdwg.org resource unavailable for a draft standard
 └── temp_term-lists.csv used by draft_build-termlist.py to replace a rs.tdwg.org resource unavailable for a draft standard
