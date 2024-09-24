@@ -44,7 +44,7 @@ This document includes terms that are part of the BDQ vocabulary (<http://rs.tdw
 
 ### 1.1 Data Quality Vocabulary terms.
 
-The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; A list of bdqffdq:Parameters used in the bdqcore:tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; A list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:empty and bdq:notEmpty.
+The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; a list of bdqffdq:Parameters used in the bdqcore: tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; a list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:Empty and bdq:NotEmpty.
 
 ### 1.2 Status of the content of this document
 
