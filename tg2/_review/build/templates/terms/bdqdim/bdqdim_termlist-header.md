@@ -39,7 +39,7 @@ Bibliographic citation
 {comment}
 
 
-## 1 Introduction
+## 1 Introduction (non-normative)
 
 This document includes terms intended to be used as a controlled value for BDQ Core tests with local name `Dimension`. For details and rationale, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731.
 
@@ -53,7 +53,7 @@ Section 2 is normative.
 
 In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. The values of `Term Name` and `skos:prefLabel` are non-normative. 
 
-### 1.3 Namespace Abbreviations
+### 1.3 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
