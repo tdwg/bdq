@@ -101,20 +101,6 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/assumptionOnUnknownBiome"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30">
-     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
-     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
-     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
-     <rdfs:label xml:lang="en">bdq:includeEventDate</rdfs:label>
-     <skos:prefLabel xml:lang="en">bdq:includeEventDate</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</rdfs:comment>
-     <skos:definition xml:lang="en">Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</skos:definition>
-     <rdf:value>bdq:includeEventDate</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/e"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
-     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/bdq:includeEventDate"/>
-</rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Biotic-Relationships-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -212,6 +198,20 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/e"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/geospatialLand"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30">
+     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">includeEventDate</rdfs:label>
+     <skos:prefLabel xml:lang="en">includeEventDate</skos:prefLabel>
+     <rdfs:comment xml:lang="en">Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</rdfs:comment>
+     <skos:definition xml:lang="en">Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</skos:definition>
+     <rdf:value>includeEventDate</rdf:value>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/e"/>
+     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/includeEventDate"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/latestValidDate-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>

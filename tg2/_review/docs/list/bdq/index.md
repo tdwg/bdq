@@ -95,12 +95,12 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [bdq:annotationAlertIf](#bdq_annotationAlertIf) |
 [bdq:annotationSystem](#bdq_annotationSystem) |
 [bdq:assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
-[bdq:bdq:includeEventDate](#bdq_bdq_includeEventDate) |
 [bdq:defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
 [bdq:DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
 [bdq:defaultValue](#bdq_defaultValue) |
 [bdq:earliestValidDate](#bdq_earliestValidDate) |
 [bdq:geospatialLand](#bdq_geospatialLand) |
+[bdq:includeEventDate](#bdq_includeEventDate) |
 [bdq:latestValidDate](#bdq_latestValidDate) |
 [bdq:maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
 [bdq:maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
@@ -140,11 +140,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [annotationAlertIf](#bdq_annotationAlertIf) |
 [annotationSystem](#bdq_annotationSystem) |
 [assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
-[bdq:includeEventDate](#bdq_bdq_includeEventDate) |
 [defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
 [defaultValue](#bdq_defaultValue) |
 [earliestValidDate](#bdq_earliestValidDate) |
 [geospatialLand](#bdq_geospatialLand) |
+[includeEventDate](#bdq_includeEventDate) |
 [latestValidDate](#bdq_latestValidDate) |
 [maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
 [maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
@@ -412,48 +412,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Controlled value</td>
 			<td>assumptionOnUnknownBiome</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdq_bdq_includeEventDate"></a>Term Name  bdq:bdq:includeEventDate</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms/bdq:includeEventDate">https://rs.tdwg.org/bdq/terms/bdq:includeEventDate</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2024-09-30</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30">https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>bdq:includeEventDate</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>bdq:includeEventDate</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -748,6 +706,48 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Controlled value</td>
 			<td>geospatialLand</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdq_includeEventDate"></a>Term Name  bdq:includeEventDate</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Term IRI</td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/bdq:includeEventDate">https://rs.tdwg.org/bdq/terms/bdq:includeEventDate</a></td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2024-09-30</td>
+		</tr>
+		<tr>
+			<td>Term version IRI</td>
+			<td><a href="https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30">https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30</a></td>
+		</tr>
+		<tr>
+			<td>Label</td>
+			<td>includeEventDate</td>
+		</tr>
+		<tr>
+			<td>Definition</td>
+			<td>Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</td>
+		</tr>
+		<tr>
+			<td>Comments</td>
+			<td>Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
+		</tr>
+		<tr>
+			<td>Controlled value</td>
+			<td>bdq:includeEventDate</td>
 		</tr>
 		<tr>
 			<td>Type</td>
