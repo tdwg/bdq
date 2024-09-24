@@ -29,7 +29,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │       ├── bdqenh_termlist-header.md
 │   │       └── document_configuration.yaml
 │   ├── terms  files that produce /docs/terms/{term}/index.md 
-│	│   └── bdqcore_qrg to build docs/terms/bdqcore/index.md quick reference guide using draft_build_bdqcore_qrg.py
+│   │   └── bdqcore_qrg to build docs/terms/bdqcore/index.md quick reference guide using draft_build_bdqcore_qrg.py
 │   │       ├── bdqcore_quickreference-footer.md
 │   │       └── bdqcore_quickreference-header.md
 │   ├── bdqffdq **work in progress**
