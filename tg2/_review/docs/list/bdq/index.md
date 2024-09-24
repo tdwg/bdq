@@ -43,7 +43,7 @@ This document includes terms that are part of the BDQ vocabulary (<http://rs.tdw
 
 ### 1.1 Data Quality Vocabulary terms.
 
-The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; A list of bdqffdq:Parameters used in the bdqcore:tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; A list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:empty and bdq:notEmpty.
+The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; a list of bdqffdq:Parameters used in the bdqcore: tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; a list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:Empty and bdq:NotEmpty.
 
 ### 1.2 Status of the content of this document
 
@@ -78,7 +78,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 ### 2.1 RFC 2119 key words (normative)
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
-## 3 Term indices
+## 3 Term index
 ### 3.1 Index By Term Name
 
 (See also [3.2 Index By Label](#32-index-by-label))

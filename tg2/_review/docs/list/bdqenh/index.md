@@ -37,10 +37,10 @@ Bibliographic citation
 
 Draft Standard for Submission
 
-## 1 Introduction
-This document includes terms intended to be used as a controlled value for BDQ Core tests with local name `Enhancement`.  For details and rationale, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>
+## 1 Introduction (non-normative)
+This document includes terms intended to be used as a controlled value for BDQ Core tests with local name `Enhancement`.  For details and rationale, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731.
 
-### 1.1 Data Quality Criteria
+### 1.1 Data Quality Enhancement
 
 The scope of the standard is the fundamental information about core tests of type bdqffdq:Amendment. The Enhancement describes, in abstract terms, how proposals can modify data to improve fitness.  An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Enhancements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
 
