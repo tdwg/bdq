@@ -70,7 +70,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 	dataFrame = dataFrame[~dataFrame['Label'].str.startswith('MULTIRECORD_MEASURE',na=False)]
 	header_names = list(dataFrame.columns)
 	try: 
-		# TODO: Load header, replace fields
+		# Load header, replace fields
 
 		# Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 		# load from local file
@@ -86,7 +86,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				aHeading = re.search(regexHeadings,line)
 				if (aHeading) : 
 					headingText = aHeading.group().replace("#","")
-					headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+					headingAnchor = headingText.replace(" ","-").lower().replace(".","").replace(":","")[1:]
 					toc = toc + separator + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")"
 					separator = "\n"
 			headerFile.close()
