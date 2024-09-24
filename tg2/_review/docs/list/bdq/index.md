@@ -85,34 +85,43 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 **Classes**
 
-**Vocabulary**
+**Data**
 
-[bdq:Alien-Species](#bdq_Alien-Species) |
-[bdq:AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
-[bdq:AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) |
+[bdq:Empty](#bdq_Empty) |
+[bdq:NotEmpty](#bdq_NotEmpty) 
+
+**bdq:Parameter**
+
 [bdq:annotationAlertIf](#bdq_annotationAlertIf) |
 [bdq:annotationSystem](#bdq_annotationSystem) |
 [bdq:assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
 [bdq:bdq:includeEventDate](#bdq_bdq_includeEventDate) |
-[bdq:Biotic-Relationships](#bdq_Biotic-Relationships) |
 [bdq:defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
 [bdq:DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
 [bdq:defaultValue](#bdq_defaultValue) |
 [bdq:earliestValidDate](#bdq_earliestValidDate) |
-[bdq:Empty](#bdq_Empty) |
 [bdq:geospatialLand](#bdq_geospatialLand) |
 [bdq:latestValidDate](#bdq_latestValidDate) |
 [bdq:maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
 [bdq:maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
 [bdq:minimumValidDepthInMeters](#bdq_minimumValidDepthInMeters) |
 [bdq:minimumValidElevationInMeters](#bdq_minimumValidElevationInMeters) |
-[bdq:NotEmpty](#bdq_NotEmpty) |
-[bdq:Record-Management](#bdq_Record-Management) |
 [bdq:sourceAuthority](#bdq_sourceAuthority) |
-[bdq:Spatial-TemporalPatterns](#bdq_Spatial-TemporalPatterns) |
 [bdq:spatialBufferInMeters](#bdq_spatialBufferInMeters) |
-[bdq:Taxon-Management](#bdq_Taxon-Management) |
 [bdq:taxonIsMarine](#bdq_taxonIsMarine) 
+
+**bdqffdq:UseCase**
+
+[bdq:Alien-Species](#bdq_Alien-Species) |
+[bdq:Biotic-Relationships](#bdq_Biotic-Relationships) |
+[bdq:Record-Management](#bdq_Record-Management) |
+[bdq:Spatial-TemporalPatterns](#bdq_Spatial-TemporalPatterns) |
+[bdq:Taxon-Management](#bdq_Taxon-Management) 
+
+**bdqffdq:InformationElement**
+
+[bdq:AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
+[bdq:AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) 
 
 ### 3.2 Index By Label
 
@@ -120,16 +129,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 **Classes**
 
-[Alien-Species](#bdq_Alien-Species) |
-[AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
-[AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) |
-[Biotic-Relationships](#bdq_Biotic-Relationships) |
-[DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
+**Data**
+
 [Empty](#bdq_Empty) |
-[NotEmpty](#bdq_NotEmpty) |
-[Record-Management](#bdq_Record-Management) |
-[Spatial-Temporal Patterns](#bdq_Spatial-TemporalPatterns) |
-[Taxon-Management](#bdq_Taxon-Management) |
+[NotEmpty](#bdq_NotEmpty) 
+
+**bdq:Parameter**
+
+[DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
 [annotationAlertIf](#bdq_annotationAlertIf) |
 [annotationSystem](#bdq_annotationSystem) |
 [assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
@@ -146,6 +153,19 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [sourceAuthority](#bdq_sourceAuthority) |
 [spatialBufferInMeters](#bdq_spatialBufferInMeters) |
 [taxonIsMarine](#bdq_taxonIsMarine) 
+
+**bdqffdq:UseCase**
+
+[Alien-Species](#bdq_Alien-Species) |
+[Biotic-Relationships](#bdq_Biotic-Relationships) |
+[Record-Management](#bdq_Record-Management) |
+[Spatial-Temporal Patterns](#bdq_Spatial-TemporalPatterns) |
+[Taxon-Management](#bdq_Taxon-Management) 
+
+**bdqffdq:InformationElement**
+
+[AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
+[AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) 
 
 ## 4 Vocabulary
 <table>

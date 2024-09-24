@@ -48,8 +48,8 @@ Draft Standard for Submission
 - [ 1.1 Key to terms](#11-key-to-terms)
 - [ 1.2 Further information](#12-further-information)
 - [ 2 Indexes to the Tests](#2-indexes-to-the-tests)
-
-
+- [ 2.1 Index of Tests by UseCase](#21-index-of-tests-by-usecase)
+- [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
 
 # 1. Introduction
 
