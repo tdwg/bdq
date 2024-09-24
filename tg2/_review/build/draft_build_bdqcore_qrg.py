@@ -29,6 +29,7 @@ import sys		# input/output
 import yaml		# Library to parse yaml files
 
 # Configuration 
+
 # Vocabulary file
 inputTermsCsvFilename = "../vocabulary/bdqcore_terms.csv"
 # output file 
@@ -41,6 +42,10 @@ sourceDirectory = 'templates/terms/bdqcore_qrg/'
 headerFileName = '{}bdqcore_quickreference-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqcore_quickreference-footer.md'.format(sourceDirectory)
 document_configuration_yaml_file = '{}/document_configuration.yaml'.format(sourceDirectory)
+
+has_namespace = True
+namespace_uri = 'https://rs.tdwg.org/bdqcore'
+pref_namespace_prefix = "bdqcore"
 
 # Setup for header/footer templates
 
@@ -72,11 +77,62 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		with open(document_configuration_yaml_file) as dcfy:
 			document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
-		print ("---")
-		print ("title:  TDWG BDQ Core Tests Quick Reference")
-		print ("geometry: margin=1cm")
-		print ("titlepage: true")
-		print ("---")
+		## Produce a table of contents from the headings 
+		toc = ""
+		regexHeadings = "^#+ [0-9]+.*"
+		with open(headerFileName) as headerFile:
+			for line in headerFile:
+			   aHeading = re.search(regexHeadings,line)
+			   if (aHeading) : 
+				   headingText = aHeading.group().replace("#","")
+				   headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+				   toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+			headerFile.close()
+	
+		# read in header and footer, merge with terms table, and output
+		headerObject = open(headerFileName, 'rt', encoding='utf-8')
+		header = headerObject.read()
+		headerObject.close()
+		
+		text = ""
+	
+		# Build the Markdown for the contributors list
+		contributors = ''
+		separator = ''
+		for contributor in contributors_yaml:
+			if contributor['contributor_iri'] :
+				contributors += separator + '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
+			else : 
+				contributors += separator + contributor['contributor_literal'] + ' '
+			if contributor['affiliation'] :
+				if contributor['affiliation_uri'] :
+					contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + '))'
+				else :
+					contributors += '(' + contributor['affiliation'] + ')'
+			separator = ", "
+		
+		# Substitute values of ratification_date and contributors into the header template
+		header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
+		header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+		header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
+		header = header.replace('{contributors}', contributors)
+		header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
+		header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])
+		header = header.replace('{abstract}', document_configuration_yaml['abstract'])
+		header = header.replace('{creator}', document_configuration_yaml['creator'])
+		header = header.replace('{publisher}', document_configuration_yaml['publisher'])
+		header = header.replace('{comment}', document_configuration_yaml['comment'])
+		header = header.replace('{toc}','\n{}\n'.format(toc))
+		year = document_configuration_yaml['doc_modified'].split('-')[0]
+		header = header.replace('{year}', year)
+		if has_namespace:
+			header = header.replace('{namespace_uri}', namespace_uri)
+			header = header.replace('{pref_namespace_prefix}', pref_namespace_prefix)
+	
+		warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
+		print(warning)
+		print(header)
+		print()
 		usecaseDict = dict()
 		for index, row in dataFrame.iterrows():
 			usecasesTerm = str(row["UseCases"])
@@ -204,5 +260,22 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print("********************")
 			print()
+		print()
+
+		# Footer
+		footerObject = open(footerFileName, 'rt', encoding='utf-8')
+		footer = footerObject.read()
+		footerObject.close()
+		footer = footer.replace('{license_statement}', document_configuration_yaml['license_statement'])
+		footer = footer.replace('{publisher}', document_configuration_yaml['publisher'])
+		footer = footer.replace('{license_uri}', document_configuration_yaml['license_uri'])
+		footer = footer.replace('{publisher}', document_configuration_yaml['publisher'])
+		footer = footer.replace('{creator}', document_configuration_yaml['creator'])
+		footer = footer.replace('{year}', year)
+		footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
+		footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
+		footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+		print(footer)
+
 	except pandas.errors.ParserError as e:
 		sys.exit("Error reading core test csv file: {}".format(e)) 

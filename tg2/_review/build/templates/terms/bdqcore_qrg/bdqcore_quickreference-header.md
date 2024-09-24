@@ -1,22 +1,54 @@
-# Quick Reference Guide to BDQ Core Tests
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
-**Title**: Quick Reference Guide to BDQ Core Tests
+Title
+: {document_title}
 
-**Date version issued**: {ratification_date}
+Date version issued
+: {ratification_date}
 
-**Date created**: {created_date}
+Date created
+: {created_date}
 
-**Part of TDWG Standard**: <{standard_iri}>
+Part of TDWG Standard
+: <{standard_iri}>
 
-**This version**: <{current_iri}{ratification_date}>
+Preferred namespace abbreviation
+: {pref_namespace_prefix}
 
-**Latest version**: <{current_iri}>
+This version
+: <{current_iri}{ratification_date}>
 
-**Audience** This document is intended to be an easy-to-read quick reference to the current BDQ Core Tests using a subset of Descriptors maintained as part of the BDQ Core standard.
+Latest version
+: <{current_iri}>
+
+{previous_version_slot}
+
+Abstract
+: {abstract}
+
+Contributors
+: {contributors}
+
+Creator
+: {creator}
+
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+{comment}
+
+
+### Table of Contents ###
+
+{toc}
 
 **Need help?** See "Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889", the BDQ Core Introduction (link), BDQ Core Users Guide (link), BDQ Core Implementers Guide (link) and BDQ Core Vocabularies (link). Still have questions? Submit a new issue to the Issues form page (link) in GitHub. See the bottom of this document for how to cite BDQ Core.
 
 **Want to contribute?** For information about how to contribute to the BDQ Core Standard, including how to propose changes, see the BDQ Core Guidelines for contributing.
+
+# 1. Introduction
+
 
 This page lists the BDQ Core tests by key descriptors defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., “dwc:”). These are included to show that the meaning for the word it is attached to, specifically means the term as defined in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
@@ -39,8 +71,5 @@ This page lists the BDQ Core tests by key descriptors defined below. Definitions
 **Use Cases** [non-normative]: For Consumers and Implementors. Descriptions of data example quality needs that this test helps to support. Example: "bdq:Record-Management", "bdq:alien-species"
 **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."\
 
-## The Tests (normative)
+## 2 The Tests (normative)
 
-TODO: When this becomes template, product will embed quick reference guide here instead of linking.
-
-[List of Tests to go in Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/core_tests_quick_reference.md)
