@@ -20,6 +20,9 @@ cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_term_versi
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_terms.csv
 cp ../core/TG2_tests.xml ../_review/vocabulary/bdqcore_terms.xml
 
+# append multi-record measures to csv list of core tests
+grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqcore_terms.csv
+
 # CSV files of test validation data
 
 cp ../core/TG2_test_validation_data.csv  ../_review/build/templates/guide/implementers/TG2_test_validation_data.csv 
