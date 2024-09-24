@@ -42,6 +42,8 @@ Bibliographic citation
 ### Table of Contents ###
 
 {toc}
+- [ 2.1 Index of Tests by UseCase](#21-index-of-tests-by-usecase)
+- [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
 
 # 1. Introduction
 

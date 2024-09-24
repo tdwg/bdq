@@ -81,12 +81,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		toc = ""
 		regexHeadings = "^#+ [0-9]+.*"
 		with open(headerFileName) as headerFile:
+			separator = ""
 			for line in headerFile:
-			   aHeading = re.search(regexHeadings,line)
-			   if (aHeading) : 
-				   headingText = aHeading.group().replace("#","")
-				   headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-				   toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+				aHeading = re.search(regexHeadings,line)
+				if (aHeading) : 
+					headingText = aHeading.group().replace("#","")
+					headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+					toc = toc + separator + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")"
+					separator = "\n"
 			headerFile.close()
 	
 		# read in header and footer, merge with terms table, and output
@@ -122,7 +124,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		header = header.replace('{creator}', document_configuration_yaml['creator'])
 		header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 		header = header.replace('{comment}', document_configuration_yaml['comment'])
-		header = header.replace('{toc}','\n{}\n'.format(toc))
+		header = header.replace('{toc}','\n{}'.format(toc))
 		year = document_configuration_yaml['doc_modified'].split('-')[0]
 		header = header.replace('{year}', year)
 		if has_namespace:

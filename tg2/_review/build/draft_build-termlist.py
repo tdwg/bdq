@@ -171,6 +171,14 @@ for term in termLists:
     outFileName = '../docs/list/{}/index.md'.format(term)
     outRDFFileName = '../dist/{}.xml'.format(term)
     term_history_csv = "../vocabulary/{}_term_versions.csv".format(term)
+    if term == 'bdq' : 
+        organized_in_categories = True
+        display_order = ['Data','bdq:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
+        display_label = ['Data','bdq:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
+    else : 
+        organized_in_categories = False
+        display_order = ['']
+        display_label = ['Vocabulary']
 
     # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
     # load from local file
@@ -277,7 +285,7 @@ for term in termLists:
         text += '**' + display_label[category] + '**\n'
         text += '\n'
         if organized_in_categories:
-            filtered_table = terms_sorted_by_localname[terms_sorted_by_localname['tdwgutility_organizedInClass']==display_order[category]]
+            filtered_table = terms_sorted_by_localname[terms_sorted_by_localname['organized_in']==display_order[category]]
             filtered_table.reset_index(drop=True, inplace=True)
         else:
             filtered_table = terms_sorted_by_localname
@@ -324,7 +332,7 @@ for term in termLists:
         if organized_in_categories:
             text += '**' + display_label[category] + '**\n'
             text += '\n'
-            filtered_table = terms_sorted_by_label[terms_sorted_by_label['tdwgutility_organizedInClass']==display_order[category]]
+            filtered_table = terms_sorted_by_label[terms_sorted_by_label['organized_in']==display_order[category]]
             filtered_table.reset_index(drop=True, inplace=True)
         else:
             filtered_table = terms_sorted_by_label
