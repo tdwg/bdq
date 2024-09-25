@@ -7,22 +7,8 @@ Title
 Date version issued
 : {ratification_date}
 
-Date created
-: {created_date}
-
 Part of TDWG Standard
 : <{standard_iri}>
-
-Preferred namespace abbreviation
-: {pref_namespace_prefix}
-
-This version
-: <{current_iri}{ratification_date}>
-
-Latest version
-: <{current_iri}>
-
-{previous_version_slot}
 
 Abstract
 : {abstract}
@@ -33,11 +19,7 @@ Contributors
 Creator
 : {creator}
 
-Bibliographic citation
-: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
-
 {comment}
-
 
 ### Table of Contents ###
 {toc}
@@ -96,40 +78,12 @@ See the bottom of this document for how to cite BDQ Core.
 
 **Want to contribute?** For information about how to contribute to the BDQ Core Standard, including how to propose changes, see the BDQ Core Guidelines for contributing.
 
-### 1.2.2 Term List Distributions for bdqcore:
-
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list  | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.xml | RDF/XML  | 
-| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.csv | CSV list of tests | 
 
 ### 1.2 Status of the content of this document
 
 Sections 1 and 2 are non-normative.
 
 In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resource Type, Specification, Information Elements ActedUpon, Information Elements Consulted, and Parameters are normative.  The values of Description, Examples, Use Cases, and Notes are non-normative. 
-
-### 1.3 Namespace abbreviations
-
-The following namespace abbreviations are used in this document:
-
-| Prefix |  IRI |
-| ------ |  --- |
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dc           | https://purl.org/dc/elements/1.1/                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
-| owl          | http://www.w3.org/2002/07/owl#                   |
 
 # 2 Indexes to the Tests
 
