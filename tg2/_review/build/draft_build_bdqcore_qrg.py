@@ -27,13 +27,18 @@ import pandas	# provides data frames
 import re		# regular expression library
 import sys		# input/output
 import yaml		# Library to parse yaml files
+# To copy files from build/templates/ to /docs/
+import glob
+import shutil
 
 # Configuration 
 
 # Vocabulary file
 inputTermsCsvFilename = "../vocabulary/bdqcore_terms.csv"
 # output file 
-outputFilename = "../docs/terms/bdqcore/index.md"
+outputDirectory = "../docs/terms/bdqcore/"
+outputFilename = "{}index.md".format(outputDirectory)
+outputUseCaseIndexFilename = "../docs/terms/bdqcore/qrg_index_by_usecase.md"
 # Files for header/footer
 contributors_yaml_file = 'authors_configuration.yaml'
 term_list_document = "temp_term-lists.csv"
@@ -61,6 +66,7 @@ with open ("../vocabulary/bdq_term_versions.csv") as vocabfile:
 
 with open (inputTermsCsvFilename, newline='') as csvfile:
 	sys.stdout = open(outputFilename,"w")
+	outputUseCaseIndex = open(outputUseCaseIndexFilename,"w")
 	rawDataFrame = pandas.read_csv(csvfile)
 	dataFrame = rawDataFrame.sort_values(by=['Type','IE Class', 'Label'],ascending=[False,True,True])
 	# Filter out multirecord mesures into one data frame
@@ -142,22 +148,26 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundUseCases = [val.strip() for val in usecasesTerm.split(',')]
 			for useCase in foundUseCases: 
 				usecaseDict.setdefault(useCase,[]).append(test)
-		print("## 2.1 Index of Tests by UseCase")
+		outputUseCaseIndex.write("## Index of Tests by UseCase\n")
 		for useCase in usecaseDict.keys(): 
-			print("## ",useCase)
-			print()
+			outputUseCaseIndex.write("## "+useCase)
+			outputUseCaseIndex.write("\n")
 			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
 			try: 
 				definitionCell = definitionRow.iloc[0]["definition"]
-				print(definitionCell)
+				outputUseCaseIndex.write(definitionCell)
+				outputUseCaseIndex.write("\n")
 			except: 
-				print("error extracting definition")
-			print()
+				outputUseCaseIndex.write("error extracting definition\n")
+			outputUseCaseIndex.write("\n")
 			for test in usecaseDict[useCase]:
-				print("- [",test,"](#",test,")", sep="")
-			print()
-			print()
-		# TODO: index by information element/information element class
+				outputUseCaseIndex.write("- [" + test + "](index.md#" + test +")\n")
+			outputUseCaseIndex.write("\n\n")
+		# TODO: Index by information element/information element class
+		#
+		# Base alphabetical index.
+		for index, row in dataFrame.sort_values('Label').iterrows():
+			print("- [{}](#{})".format(row['Label'],row['Label']))
 		print()
 		print("********************")
 		print()
@@ -280,6 +290,11 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 		footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 		print(footer)
+	
+		# Temporary solution to list of definitions not in quick reference guide.
+		# Copy list of definitions file bdqcore_qrg_term_descriptions.md
+		for file in glob.glob('{}bdqcore_qrg_term_descriptions.md'.format(sourceDirectory)):
+			shutil.copy(file, outputDirectory)
 
 	except pandas.errors.ParserError as e:
 		sys.exit("Error reading core test csv file: {}".format(e)) 

@@ -59,5 +59,6 @@ In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resour
 
 ## 2.1 Linked Indexes
 
-<!--- Link out to indexes of the tests by:  Information Element ActedUpon, Dimension, Information Element Category, Use Case --->
+Index by: [UseCase](qrg_index_by_usecase.md), 
 
+<!--- Link out to indexes of the tests by:  Information Element ActedUpon, Dimension, Information Element Category --->
