@@ -143,6 +143,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		print(warning)
 		print(header)
 		print()
+
 		# Index by UseCase
 		usecaseDict = dict()
 		for index, row in dataFrame.iterrows():
@@ -173,14 +174,15 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			for test in usecaseDict[useCase]:
 				outputUseCaseIndex.write("- [" + test + "](index.md#" + test +")\n")
 			outputUseCaseIndex.write("\n\n")
+
 		# Index by information element
 		informationelementDict = dict()
 		for index, row in dataFrame.iterrows():
 			informationelementsTerm = str(row['InformationElement:ActedUpon'])
 			test = row['Label']
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
-			for useCase in foundInformationElements: 
-				informationelementDict.setdefault(useCase,[]).append(test)
+			for ie in foundInformationElements: 
+				informationelementDict.setdefault(ie,[]).append(test)
 		outputInformationElementIndex.write("# InformationElement ActedUpon Index to the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputInformationElementIndex.write("\n")
 		outputInformationElementIndex.write("Title\n")
@@ -189,20 +191,13 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		outputInformationElementIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
 		outputInformationElementIndex.write("\n")
 		outputInformationElementIndex.write("## Index of Tests by InformationElement ActedUpon\n")
-		for useCase in informationelementDict.keys(): 
-			outputInformationElementIndex.write("## "+useCase)
-			outputInformationElementIndex.write("\n")
-			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
-			try: 
-				definitionCell = definitionRow.iloc[0]["definition"]
-				outputInformationElementIndex.write(definitionCell)
-				outputInformationElementIndex.write("\n")
-			except: 
-				outputInformationElementIndex.write("error extracting definition\n")
-			outputInformationElementIndex.write("\n")
-			for test in informationelementDict[useCase]:
-				outputInformationElementIndex.write("- [" + test + "](index.md#" + test +")\n")
+		for ie in informationelementDict.keys(): 
+			outputInformationElementIndex.write("## "+ie)
 			outputInformationElementIndex.write("\n\n")
+			for test in informationelementDict[ie]:
+				outputInformationElementIndex.write("- [" + test + "](index.md#" + test +")\n")
+			outputInformationElementIndex.write("\n")
+
 		#
 		# Base alphabetical index.
 		for index, row in dataFrame.sort_values('Label').iterrows():
