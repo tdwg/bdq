@@ -9,22 +9,8 @@ Title
 Date version issued
 : 2024-09-10
 
-Date created
-: 2024-09-10
-
 Part of TDWG Standard
 : <http://example.org/to_be_determined>
-
-Preferred namespace abbreviation
-: bdqcore
-
-This version
-: <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
-
-Latest version
-: <http://rs.tdwg.org/bdqcore/terms/>
-
-{previous_version_slot}
 
 Abstract
 : This document is intended to be an easy-to-read quick reference to the current BDQ Core Tests using a subset of Descriptors maintained as part of the BDQ Core standard.
@@ -35,11 +21,7 @@ Contributors
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
-Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Quick Reference Guide to BDQ Core Tests. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
-
 Draft Standard for Submission
-
 
 ### Table of Contents ###
 
@@ -47,9 +29,7 @@ Draft Standard for Submission
 - [ 1.1 Key to terms](#11-key-to-terms)
 - [ 1.2 Further information](#12-further-information)
 - [ 1.2.1 Questions, Contributing](#121-questions,-contributing)
-- [ 1.2.2 Term List Distributions for bdqcore:](#122-term-list-distributions-for-bdqcore)
 - [ 1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [ 1.3 Namespace abbreviations](#13-namespace-abbreviations)
 - [ 2 Indexes to the Tests](#2-indexes-to-the-tests)
 - [ 2.1 Index of Tests by UseCase](#21-index-of-tests-by-usecase)
 - [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
@@ -83,7 +63,7 @@ This page lists the BDQ Core tests by terms defined below. Definitions, comments
 **Examples** [non-normative]: 'Pass' and 'Fail' examples of inputs and outputs for the test from the Test Validation Data. Example: "[dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in bdq:sourceAuthority"]
 [dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in bdq:sourceAuthority"]"
 
-**Use Cases** [non-normative]: For Consumers and Implementors. Descriptions of data example quality needs that this test helps to support. Example: "bdq:Record-Management", "bdq:alien-species"
+**Use Cases** [non-normative]: For Consumers and Implementors. Descriptions of data example quality needs that this test helps to support. Example: "bdq:Record-Management", "bdq:Alien-Species"
 
 **Notes** [non-normative]: For implementors and Consumers. Additional, guidance that may be necessary for the accurate implementation of the tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test will fail if there is leading or trailing whitespace or there are leading or trailing non-printing characters."
 
@@ -96,7 +76,7 @@ This page lists the BDQ Core tests by terms defined below. Definitions, comments
 - [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md)
 - [BDQ Core Vocabularies](../../vocabularies/index.md) 
 
-Also see" "Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889", 
+Also see" "Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889". 
 
 ### 1.2.1 Questions, Contributing
 
@@ -106,40 +86,12 @@ See the bottom of this document for how to cite BDQ Core.
 
 **Want to contribute?** For information about how to contribute to the BDQ Core Standard, including how to propose changes, see the BDQ Core Guidelines for contributing.
 
-### 1.2.2 Term List Distributions for bdqcore:
-
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list  | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.xml | RDF/XML  | 
-| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.csv | CSV list of tests | 
 
 ### 1.2 Status of the content of this document
 
 Sections 1 and 2 are non-normative.
 
 In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resource Type, Specification, Information Elements ActedUpon, Information Elements Consulted, and Parameters are normative.  The values of Description, Examples, Use Cases, and Notes are non-normative. 
-
-### 1.3 Namespace abbreviations
-
-The following namespace abbreviations are used in this document:
-
-| Prefix |  IRI |
-| ------ |  --- |
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dc           | https://purl.org/dc/elements/1.1/                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
-| owl          | http://www.w3.org/2002/07/owl#                   |
 
 # 2 Indexes to the Tests
 
