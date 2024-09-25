@@ -1,3 +1,10 @@
+# Terms used in the Quick Reference Guide to BDQ Core Tests
+
+Title
+: Terms used in the Quick Reference Guide to BDQ Core Tests
+
+Part of the [BDQ Core Tests Quick Reference Guide](index.md)
+
 <!-- This is the list of descriptions of bdqcore terms included in the quick reference guide.  It needs to go somewhere, but not within the quick reference guide itself --->
 
 

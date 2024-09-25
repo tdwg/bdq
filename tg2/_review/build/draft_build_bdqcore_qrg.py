@@ -39,6 +39,7 @@ inputTermsCsvFilename = "../vocabulary/bdqcore_terms.csv"
 outputDirectory = "../docs/terms/bdqcore/"
 outputFilename = "{}index.md".format(outputDirectory)
 outputUseCaseIndexFilename = "../docs/terms/bdqcore/qrg_index_by_usecase.md"
+outputInformationElementIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_actedupon.md"
 # Files for header/footer
 contributors_yaml_file = 'authors_configuration.yaml'
 term_list_document = "temp_term-lists.csv"
@@ -67,6 +68,7 @@ with open ("../vocabulary/bdq_term_versions.csv") as vocabfile:
 with open (inputTermsCsvFilename, newline='') as csvfile:
 	sys.stdout = open(outputFilename,"w")
 	outputUseCaseIndex = open(outputUseCaseIndexFilename,"w")
+	outputInformationElementIndex = open(outputInformationElementIndexFilename,"w")
 	rawDataFrame = pandas.read_csv(csvfile)
 	dataFrame = rawDataFrame.sort_values(by=['Type','IE Class', 'Label'],ascending=[False,True,True])
 	# Filter out multirecord mesures into one data frame
@@ -141,6 +143,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		print(warning)
 		print(header)
 		print()
+		# Index by UseCase
 		usecaseDict = dict()
 		for index, row in dataFrame.iterrows():
 			usecasesTerm = str(row["UseCases"])
@@ -148,6 +151,13 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundUseCases = [val.strip() for val in usecasesTerm.split(',')]
 			for useCase in foundUseCases: 
 				usecaseDict.setdefault(useCase,[]).append(test)
+		outputUseCaseIndex.write("# UseCase Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputUseCaseIndex.write("\n")
+		outputUseCaseIndex.write("Title\n")
+		outputUseCaseIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputUseCaseIndex.write("\n")
+		outputUseCaseIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
+		outputUseCaseIndex.write("\n")
 		outputUseCaseIndex.write("## Index of Tests by UseCase\n")
 		for useCase in usecaseDict.keys(): 
 			outputUseCaseIndex.write("## "+useCase)
@@ -163,7 +173,36 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			for test in usecaseDict[useCase]:
 				outputUseCaseIndex.write("- [" + test + "](index.md#" + test +")\n")
 			outputUseCaseIndex.write("\n\n")
-		# TODO: Index by information element/information element class
+		# Index by information element
+		informationelementDict = dict()
+		for index, row in dataFrame.iterrows():
+			informationelementsTerm = str(row['InformationElement:ActedUpon'])
+			test = row['Label']
+			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
+			for useCase in foundInformationElements: 
+				informationelementDict.setdefault(useCase,[]).append(test)
+		outputInformationElementIndex.write("# InformationElement ActedUpon Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputInformationElementIndex.write("\n")
+		outputInformationElementIndex.write("Title\n")
+		outputInformationElementIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputInformationElementIndex.write("\n")
+		outputInformationElementIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
+		outputInformationElementIndex.write("\n")
+		outputInformationElementIndex.write("## Index of Tests by InformationElement ActedUpon\n")
+		for useCase in informationelementDict.keys(): 
+			outputInformationElementIndex.write("## "+useCase)
+			outputInformationElementIndex.write("\n")
+			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
+			try: 
+				definitionCell = definitionRow.iloc[0]["definition"]
+				outputInformationElementIndex.write(definitionCell)
+				outputInformationElementIndex.write("\n")
+			except: 
+				outputInformationElementIndex.write("error extracting definition\n")
+			outputInformationElementIndex.write("\n")
+			for test in informationelementDict[useCase]:
+				outputInformationElementIndex.write("- [" + test + "](index.md#" + test +")\n")
+			outputInformationElementIndex.write("\n\n")
 		#
 		# Base alphabetical index.
 		for index, row in dataFrame.sort_values('Label').iterrows():

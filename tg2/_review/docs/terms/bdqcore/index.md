@@ -32,7 +32,7 @@ Draft Standard for Submission
 - [ 1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
 - [ 2 Indexes to the Tests](#2-indexes-to-the-tests)
 - [ 2.1 Linked Indexes](#21-linked-indexes)
-- [ 2.2 Index of Tests](#22-index-of-tests)
+- [ 2.1 Alphabetical Index to SingleRecord tests](#21-alphabetical-index-to-singlerecord-tests)
 - [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
 
 # 1. Introduction
@@ -43,8 +43,8 @@ This page is a descriptive document, not the full vocabulary definition document
 
 ## 1.1 Key to terms
 
-<!--- pulled out to  templates/terms/bdqcore_qrg/bdqcore_qrg_term_descriptions.md, needs a home to link to --->
-The definitions of the terms used for each test can be found at (link). 
+<!--- pulled out to  templates/terms/bdqcore_qrg/bdqcore_qrg_term_descriptions.md, needs a home to link to, temporary document in place --->
+The definitions of the terms used for each test can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
 
 More details are in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
 
@@ -68,9 +68,10 @@ In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resour
 
 ## 2.1 Linked Indexes
 
-Index by: [UseCase](qrg_index_by_usecase.md), 
+<!--- Link out to indexes of the tests by: Dimension, Information Element Category --->
+Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), 
 
-<!--- Link out to indexes of the tests by:  Information Element ActedUpon, Dimension, Information Element Category --->
+## 2.1 Alphabetical Index to SingleRecord tests
 
 
 - [AMENDMENT_BASISOFRECORD_STANDARDIZED](#AMENDMENT_BASISOFRECORD_STANDARDIZED)
