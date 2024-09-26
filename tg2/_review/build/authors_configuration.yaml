@@ -34,17 +34,17 @@
   affiliation_uri: http://www.wikidata.org/entity/Q16665660
 
 - contributor_iri: https://orcid.org/0000-0003-2283-1123
-  contributor_literal: Antonio Mauro Saraiva
+  contributor_literal: António Mauro Saraiva
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
-  affiliation: University of São Paulo, Research Center on Biodiversity and Computing
+  affiliation: Universidade de São Paulo
   affiliation_uri: https://www.wikidata.org/wiki/Q835960
 
 - contributor_iri: http://orcid.org/0000-0003-2672-8115 
   contributor_literal: Alan Koch Veiga
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
-  affiliation: 
+  affiliation: Universidade de São Paulo
   affiliation_uri: 
 
 - contributor_iri: https://orcid.org/0000-0002-6056-5084
