@@ -42,6 +42,7 @@ outputUseCaseIndexFilename = "../docs/terms/bdqcore/qrg_index_by_usecase.md"
 outputInformationElementIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_actedupon.md"
 outputIEClassIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_class.md"
 outputDimensionIndexFilename = "../docs/terms/bdqcore/qrg_index_by_dimension.md"
+outputMultiRecordMeasureIndexFilename = "../docs/terms/bdqcore/qrg_multirecord_index.md"
 # Files for header/footer
 contributors_yaml_file = 'authors_configuration.yaml'
 term_list_document = "temp_term-lists.csv"
@@ -73,6 +74,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 	outputInformationElementIndex = open(outputInformationElementIndexFilename,"w")
 	outputIEClassIndex = open(outputIEClassIndexFilename,"w")
 	outputDimensionIndex = open(outputDimensionIndexFilename,"w")
+	outputMultiRecordMeasureIndex = open(outputMultiRecordMeasureIndexFilename,"w")
 	rawDataFrame = pandas.read_csv(csvfile)
 	dataFrame = rawDataFrame.sort_values(by=['Type','IE Class', 'Label'],ascending=[False,True,True])
 	# Filter out multirecord mesures into one data frame
@@ -249,8 +251,17 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				outputDimensionIndex.write("- [" + test + "](index.md#" + test +")\n")
 			outputDimensionIndex.write("\n")
 
-		#
-		# Base alphabetical index.
+		# Index for multirecord measures
+		outputMultiRecordMeasureIndex.write("# Index to MultiRecord Measures {}\n".format(document_configuration_yaml['documentTitle']))
+		outputMultiRecordMeasureIndex.write("\n")
+		outputMultiRecordMeasureIndex.write("Title\n")
+		outputMultiRecordMeasureIndex.write(": Index to used in the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputMultiRecordMeasureIndex.write("\n")
+		outputMultiRecordMeasureIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
+		outputMultiRecordMeasureIndex.write("\n")
+		outputMultiRecordMeasureIndex.write("## Index of MultiRecord Measure Tests in the BDQ Core tests.\n")
+		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
+			outputMultiRecordMeasureIndex.write("- [{}](#{})\n".format(row['Label'],row['Label']))
 
 		#
 		# Base alphabetical index.

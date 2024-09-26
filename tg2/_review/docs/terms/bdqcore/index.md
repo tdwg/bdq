@@ -34,6 +34,8 @@ Draft Standard for Submission
 - [ 2.1 Linked Indexes](#21-linked-indexes)
 - [ 2.1 Alphabetical Index to SingleRecord tests](#21-alphabetical-index-to-singlerecord-tests)
 - [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
+- [ 3.1 Validations, Amendments, Measures operating on SingleRecords.](#31-validations-amendments-measures-operating-on-singlerecords")
+- [3.2 Measures operating on test Responses for MultiRecords (data sets).](#32-measures-operating-on-test-responses-for-multirecords-data-sets)
 
 # 1. Introduction
 
@@ -68,7 +70,7 @@ In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resour
 
 ## 2.1 Linked Indexes
 
-Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement category](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md).
+Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement category](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), and [MultiRecord Measures](qrg_multirecord_index.md)
 
 ## 2.1 Alphabetical Index to SingleRecord tests
 
