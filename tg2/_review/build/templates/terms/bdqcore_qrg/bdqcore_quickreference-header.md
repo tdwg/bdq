@@ -58,7 +58,6 @@ In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resour
 
 ## 2.1 Linked Indexes
 
-<!--- Link out to indexes of the tests by: Dimension, Information Element Category --->
-Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), 
+Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement category](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md).
 
 ## 2.1 Alphabetical Index to SingleRecord tests

@@ -6,7 +6,7 @@ Title
 Part of the [Quick Reference Guide to BDQ Core Tests](index.md)
 
 ## Index of Tests by UseCase
-## bdq:Taxon-Management
+### bdq:Taxon-Management
 A bdqffdq:Use Case that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
@@ -55,7 +55,7 @@ A bdqffdq:Use Case that documents the management of the quality of taxonomic nam
 - [AMENDMENT_TAXONRANK_STANDARDIZED](index.md#AMENDMENT_TAXONRANK_STANDARDIZED)
 
 
-## bdq:Alien-Species
+### bdq:Alien-Species
 Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
@@ -104,7 +104,7 @@ Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) 
 - [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
 
-## bdq:Spatial-Temporal_Patterns
+### bdq:Spatial-Temporal_Patterns
 error extracting definition
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
@@ -185,7 +185,7 @@ error extracting definition
 - [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
 
-## bdq:Record-Management
+### bdq:Record-Management
 A bdqffdq:UseCase that documents the management of the quality of biodiversity data records (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
@@ -294,7 +294,7 @@ A bdqffdq:UseCase that documents the management of the quality of biodiversity d
 - [AMENDMENT_TAXONRANK_STANDARDIZED](index.md#AMENDMENT_TAXONRANK_STANDARDIZED)
 
 
-## bdq:Biotic-Relationships
+### bdq:Biotic-Relationships
 Research uses forming a bdqffdq:UseCase for relationships between organisms 1) where the bdqffdq:InformationElements concern what organisms have a relationship and 2) that are used for analysis of the relationship of one organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)

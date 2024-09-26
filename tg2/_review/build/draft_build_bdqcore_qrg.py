@@ -40,6 +40,8 @@ outputDirectory = "../docs/terms/bdqcore/"
 outputFilename = "{}index.md".format(outputDirectory)
 outputUseCaseIndexFilename = "../docs/terms/bdqcore/qrg_index_by_usecase.md"
 outputInformationElementIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_actedupon.md"
+outputIEClassIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_class.md"
+outputDimensionIndexFilename = "../docs/terms/bdqcore/qrg_index_by_dimension.md"
 # Files for header/footer
 contributors_yaml_file = 'authors_configuration.yaml'
 term_list_document = "temp_term-lists.csv"
@@ -69,6 +71,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 	sys.stdout = open(outputFilename,"w")
 	outputUseCaseIndex = open(outputUseCaseIndexFilename,"w")
 	outputInformationElementIndex = open(outputInformationElementIndexFilename,"w")
+	outputIEClassIndex = open(outputIEClassIndexFilename,"w")
+	outputDimensionIndex = open(outputDimensionIndexFilename,"w")
 	rawDataFrame = pandas.read_csv(csvfile)
 	dataFrame = rawDataFrame.sort_values(by=['Type','IE Class', 'Label'],ascending=[False,True,True])
 	# Filter out multirecord mesures into one data frame
@@ -161,7 +165,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		outputUseCaseIndex.write("\n")
 		outputUseCaseIndex.write("## Index of Tests by UseCase\n")
 		for useCase in usecaseDict.keys(): 
-			outputUseCaseIndex.write("## "+useCase)
+			outputUseCaseIndex.write("### "+useCase)
 			outputUseCaseIndex.write("\n")
 			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
 			try: 
@@ -192,11 +196,61 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		outputInformationElementIndex.write("\n")
 		outputInformationElementIndex.write("## Index of Tests by InformationElement ActedUpon\n")
 		for ie in informationelementDict.keys(): 
-			outputInformationElementIndex.write("## "+ie)
+			outputInformationElementIndex.write("### "+ie)
 			outputInformationElementIndex.write("\n\n")
 			for test in informationelementDict[ie]:
 				outputInformationElementIndex.write("- [" + test + "](index.md#" + test +")\n")
 			outputInformationElementIndex.write("\n")
+
+		# Index by information element class
+		informationelementDict = dict()
+		for index, row in dataFrame.iterrows():
+			informationelementsTerm = str(row['IE Class'])
+			test = row['Label']
+			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
+			for ie in foundInformationElements: 
+				informationelementDict.setdefault(ie,[]).append(test)
+		outputIEClassIndex.write("# InformationElement Class Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputIEClassIndex.write("\n")
+		outputIEClassIndex.write("Title\n")
+		outputIEClassIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputIEClassIndex.write("\n")
+		outputIEClassIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
+		outputIEClassIndex.write("\n")
+		outputIEClassIndex.write("## Index of Tests by Class to which InformationElements belong\n")
+		for ie in informationelementDict.keys(): 
+			outputIEClassIndex.write("### "+ie)
+			outputIEClassIndex.write("\n\n")
+			for test in informationelementDict[ie]:
+				outputIEClassIndex.write("- [" + test + "](index.md#" + test +")\n")
+			outputIEClassIndex.write("\n")
+
+		# Index by dimension
+		# TODO: Add definitions of dimensions from bdqdim vocabulary
+		dimensionDict = dict()
+		for index, row in dataFrame.iterrows():
+			dimensionsTerm = str(row['Dimension'])
+			test = row['Label']
+			foundInformationElements = [val.strip() for val in dimensionsTerm.split(',')]
+			for ie in foundInformationElements: 
+				dimensionDict.setdefault(ie,[]).append(test)
+		outputDimensionIndex.write("# Data Quality Dimension Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputDimensionIndex.write("\n")
+		outputDimensionIndex.write("Title\n")
+		outputDimensionIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputDimensionIndex.write("\n")
+		outputDimensionIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
+		outputDimensionIndex.write("\n")
+		outputDimensionIndex.write("## Index of Tests by Data Quality Dimension\n")
+		for ie in dimensionDict.keys(): 
+			outputDimensionIndex.write("### "+ie)
+			outputDimensionIndex.write("\n\n")
+			for test in dimensionDict[ie]:
+				outputDimensionIndex.write("- [" + test + "](index.md#" + test +")\n")
+			outputDimensionIndex.write("\n")
+
+		#
+		# Base alphabetical index.
 
 		#
 		# Base alphabetical index.
