@@ -328,6 +328,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				print()
 				print(row['Notes'])
 				print()
+			print("[↑](#-2-indexes-to-the-tests)")
 			print("********************")
 			print()
 		print()

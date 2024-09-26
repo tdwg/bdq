@@ -24,7 +24,6 @@ Creator
 ### Table of Contents ###
 {toc}
 - [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
-- [ 3.1 Validations, Amendments, Measures operating on SingleRecords.](#31-validations-amendments-measures-operating-on-singlerecords")
 - [3.2 Measures operating on test Responses for MultiRecords (data sets).](#32-measures-operating-on-test-responses-for-multirecords-data-sets)
 
 # 1. Introduction
