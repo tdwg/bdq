@@ -261,7 +261,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		outputMultiRecordMeasureIndex.write("\n")
 		outputMultiRecordMeasureIndex.write("## Index of MultiRecord Measure Tests in the BDQ Core tests.\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
-			outputMultiRecordMeasureIndex.write("- [{}](#{})\n".format(row['Label'],row['Label'].lower()))
+			outputMultiRecordMeasureIndex.write("- [{}](index.md#{})\n".format(row['Label'],row['Label'].lower()))
 
 		#
 		# Base alphabetical index.
