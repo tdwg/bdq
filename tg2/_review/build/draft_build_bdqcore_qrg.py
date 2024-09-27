@@ -138,6 +138,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		header = header.replace('{creator}', document_configuration_yaml['creator'])
 		header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 		header = header.replace('{comment}', document_configuration_yaml['comment'])
+		header = header.replace('{maintainer}', document_configuration_yaml['maintainer'])
 		header = header.replace('{doc_modified}', document_configuration_yaml['doc_modified'])
 		header = header.replace('{toc}','\n{}'.format(toc))
 		year = document_configuration_yaml['doc_modified'].split('-')[0]
