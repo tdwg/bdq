@@ -9,7 +9,7 @@ This document is intended to be an easy-to-read reference (as of {doc_modified})
 
 The definitions of the terms used for tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
 
-This page is not part of the standard. It combines the normative test names and terms with non-normative comments and examples that are meant to help people to use the tests confidently and consistently. Further details are in the overview of document at [BDQ Core Introduction](../../intro/index.md), in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md), [BDQ Core Implementers Guide](../../guide/implementers/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
+This page is a descriptive document, not the full vocabulary definition document for bdqcore: terms.  It combines the normative test names and terms with non-normative comments and examples that are meant to help people to use the tests confidently and consistently. Further details are in the overview of document at [BDQ Core Introduction](../../intro/index.md), in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md), [BDQ Core Implementers Guide](../../guide/implementers/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
 
 If you have questions or suggestions, submit these to the [BDQ Core Issues](https://github.com/tdwg/bdq/issues) page in GitHub. See the bottom of this document for how to cite BDQ Core.
 
