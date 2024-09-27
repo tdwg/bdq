@@ -21,44 +21,18 @@ Creator
 
 {comment}
 
-### Table of Contents ###
-{toc}
-- [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
-- [3.2 Measures operating on test Responses for MultiRecords (data sets).](#32-measures-operating-on-test-responses-for-multirecords-data-sets)
+This document is intended to be an easy-to-read reference (as of date) of the tests maintained as part of the BDQ Core standard (link) and is maintained by the BDQ Core Maintenance Group (link). This document lists the BDQ Core tests by terms defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., "bdq:", “dwc:”). These are reequired as the meaning for the word is defined specifically in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-# 1. Introduction
+The definitions of the terms used for tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
 
-This page lists the BDQ Core tests by terms defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., “dwc:”). These are included to show that the meaning for the word it is attached to, specifically means the term as defined in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
+This page is not part of the standard. It combines the normative test names and terms with non-normative comments and examples that are meant to help people to use the tests confidently and consistently. Further details are in the overview of document at [BDQ Core Introduction](../../intro/index.md), in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md), [BDQ Core Implementers Guide](../../guide/implementers/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
 
-This page is a descriptive document, not the full vocabulary definition document for bdqcore: terms.  This page combines the normative test names and terms with non-normative comments and examples that are meant to help people to use the tests confidently and consistently.  Definitions, comments, and examples include namespace abbreviations (e.g., “bdq:”, “dwc:”). These abbreviations are included to show that the meaning for the term it is attached to specifically means the term as defined in that namespace. Thus, bdq:Empty means that the value of the term "Empty" specifically as defined within the bdq: namespace. 
+If you have questions or suggestions, submit these to the [BDQ Core Issues](https://github.com/tdwg/bdq/issues) page in GitHub. See the bottom of this document for how to cite BDQ Core.
 
-## 1.1 Key to terms
+# Indexes to the Tests
 
-<!--- pulled out to  templates/terms/bdqcore_qrg/bdqcore_qrg_term_descriptions.md, needs a home to link to, temporary document in place --->
-The definitions of the terms used for each test can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
-
-More details are in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
-
-## 1.2 Further information
-
-**Need help?** Read more about the BDQ Core tests in the [BDQ Core Users Guide](../../guide/users/index.md) or about how to implement the tests in the [BDQ Core Implementers Guide](../../guide/implementers/index.md).  An overview of BDQ Core can be found in the [BDQ Core Introduction](../../intro/index.md) 
-
-### 1.2.1 Questions, Contributing
-
-Still have questions or suggestions? Submit these to the [BDQ Core Issues](https://github.com/tdwg/bdq/issues) page in GitHub. 
-
-See the bottom of this document for how to cite BDQ Core.
-
-### 1.2 Status of the content of this document
-
-Sections 1 and 2 are non-normative.
-
-In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resource Type, Specification, Information Elements ActedUpon, Information Elements Consulted, and Parameters are normative.  The values of Description, Examples, Use Cases, and Notes are non-normative. 
-
-# 2 Indexes to the Tests
-
-## 2.1 Linked Indexes
+## Linked Indexes
 
 Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement category](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), and [MultiRecord Measures](qrg_multirecord_index.md)
 
-## 2.1 Alphabetical Index to SingleRecord tests
+## Alphabetical Index to SingleRecord tests
