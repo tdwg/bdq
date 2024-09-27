@@ -1703,7 +1703,7 @@ DataProperty
 
 ### Comment
 
-'Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.'
+'Details of the bdq:sourceAuthority listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.'
 
 
 ********************
@@ -1919,7 +1919,7 @@ NamedIndividual
 
 ### Definition
 
-'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result.'
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result.'
 
 
 ********************
@@ -1977,7 +1977,7 @@ NamedIndividual
 
 ### Definition
 
-'A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response.'
+'A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdqffdq:Response.'
 
 
 ********************
@@ -2163,7 +2163,7 @@ NamedIndividual
 
 ### Definition
 
-'A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected.'
+'A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.'
 
 ### Comment
 
@@ -2824,7 +2824,7 @@ ObjectProperty
 
 ### Comment
 
-'Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
+'Used in the DQ Report concept to describe response result objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
 
  If Response.results are not objects, use the datatype property hasResponseResultValue'
 
@@ -2855,7 +2855,7 @@ ObjectProperty
 
 ### Comment
 
-'Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET, or bdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdq:AMENDED or bdq:FILLED_IN.  
+'Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdqffdq:RUN_HAS_RESULT or bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.  
 
 ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.'
 
@@ -3195,7 +3195,7 @@ https://rs.tdwg.org/bdqffdq/terms/targetedValidation
 
 ### Label
 
-'targeted Validatiohn'
+'targeted Validation'
 
 ### Type
 

@@ -229,7 +229,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResult
 :hasResponseResult rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :reportProperty ;
-                   rdfs:comment """Used in the DQ Report concept to describe response result objects. For example, values could be bdq:COMPLIANT or bdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
+                   rdfs:comment """Used in the DQ Report concept to describe response result objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
 
  If Response.results are not objects, use the datatype property hasResponseResultValue"""@en ;
                    rdfs:label "has Response Result" ;
@@ -240,7 +240,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus
 :hasResponseStatus rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :reportProperty ;
-                   rdfs:comment """Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdq:RUN_HAS_RESULT or bdq:INTERNAL_PREREQUISITES_NOT_MET, or bdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdq:AMENDED or bdq:FILLED_IN.  
+                   rdfs:comment """Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdqffdq:RUN_HAS_RESULT or bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.  
 
 ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.""" ;
                    rdfs:label "has Response Status" ;
@@ -367,7 +367,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
                                   owl:someValuesFrom :Validation
                                 ] ;
                     rdfs:comment "Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation."@en ;
-                    rdfs:label "targeted Validatiohn"@en ;
+                    rdfs:label "targeted Validation"@en ;
                     skos:definition "Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
                     skos:prefLabel "targeted Validation"@en .
 
@@ -395,7 +395,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 ###  https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
 :hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
                         rdfs:range xsd:string ;
-                        rdfs:comment "Details of the bdq:sourceAuthoritiy listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
+                        rdfs:comment "Details of the bdq:sourceAuthority listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
                         rdfs:label "has Authorities and Defaults"@en ;
                         skos:definition "Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response." ;
                         skos:prefLabel "has Authorities and Defaults" .
@@ -982,7 +982,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
                                 owl:differentFrom :INTERNAL_PREREQUISITES_NOT_MET ;
                                 rdf:value "EXTERNAL_PREREQUISITES_NOT_MET" ;
                                 rdfs:label "EXTERNAL_PREREQUISITES_NOT_MET" ;
-                                skos:definition "A bdq:Response.status used to indicate that a bdq:Response.result was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result." ;
+                                skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not available or was off-line. If the test is run at a later time, it may produce a different result." ;
                                 skos:prefLabel "EXTERNAL_PREREQUISITES_NOT_MET" .
 
 
@@ -1001,7 +1001,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
                                          :ResponseStatus ;
                                 rdf:value "INTERNAL_PREREQUISITES_NOT_MET" ;
                                 rdfs:label "INTERNAL_PREREQUISITES_NOT_MET" ;
-                                skos:definition "A bdq:Response.status used to indicate that a bdq:Response.result was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdq:Response." ;
+                                skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdqffdq:Response." ;
                                 skos:prefLabel "INTERNAL_PREREQUISITES_NOT_MET" .
 
 
@@ -1062,7 +1062,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
            rdf:value "NOT_ISSUE" ;
            rdfs:comment "This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality." ;
            rdfs:label "NOT_ISSUE" ;
-           skos:definition "A bdq:Response.result of a bdqffdq:Issue where no potential problems were detected." ;
+           skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected." ;
            skos:prefLabel "NOT_ISSUE" .
 
 
