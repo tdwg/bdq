@@ -3,76 +3,27 @@
 <!--- Template for header, values provided from yaml configuration --->
 # Quick Reference Guide to BDQ Core Tests
 
-Title
-: Quick Reference Guide to BDQ Core Tests
-
-Date version issued
-: 2024-09-10
-
-Part of TDWG Standard
-: <http://example.org/to_be_determined>
-
-Abstract
-: This document is intended to be an easy-to-read quick reference to the current BDQ Core Tests using a subset of Descriptors maintained as part of the BDQ Core standard.
-
-Contributors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [Antonio Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([University of São Paulo, Research Center on Biodiversity and Computing](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) , [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), David Lowery 
-
-Creator
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
-
 Draft Standard for Submission
 
-### Table of Contents ###
+<!--- Note: This document deliberately diverges from many of the SHOULD expecations of section 3.2.3 Layout and style of the SDS for the express purpose of simplicity.  Some header values have been included in the first paragraph of text, others have been omitted, a table of contents has been omitted, the introduction and abstract are combined, the introduction is not given a heading, and, in consequence, headings are not numbered. --->
 
-- [ 1. Introduction](#1-introduction)
-- [ 1.1 Key to terms](#11-key-to-terms)
-- [ 1.2 Further information](#12-further-information)
-- [ 1.2.1 Questions, Contributing](#121-questions,-contributing)
-- [ 1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [ 2 Indexes to the Tests](#2-indexes-to-the-tests)
-- [ 2.1 Linked Indexes](#21-linked-indexes)
-- [ 2.1 Alphabetical Index to SingleRecord tests](#21-alphabetical-index-to-singlerecord-tests)
-- [ 3 The BDQ Core Tests](#3-the-bdq-core-tests)
-- [3.2 Measures operating on test Responses for MultiRecords (data sets).](#32-measures-operating-on-test-responses-for-multirecords-data-sets)
+This document is intended to be an easy-to-read reference (as of 2024-09-10) of the tests maintained as part of the TDWG standard [BDQ Core](http://example.org/to_be_determined) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Core Maintenance Group (link). This document lists the BDQ Core tests by terms defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., "bdq:", “dwc:”). These are reequired as the meaning for the word is defined specifically in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-# 1. Introduction
+The definitions of the terms used for tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
 
-This page lists the BDQ Core tests by terms defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., “dwc:”). These are included to show that the meaning for the word it is attached to, specifically means the term as defined in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
+This page is not part of the standard. It combines the normative test names and terms with non-normative comments and examples that are meant to help people to use the tests confidently and consistently. Further details are in the overview of document at [BDQ Core Introduction](../../intro/index.md), in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md), [BDQ Core Implementers Guide](../../guide/implementers/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
 
-This page is a descriptive document, not the full vocabulary definition document for bdqcore: terms.  This page combines the normative test names and terms with non-normative comments and examples that are meant to help people to use the tests confidently and consistently.  Definitions, comments, and examples include namespace abbreviations (e.g., “bdq:”, “dwc:”). These abbreviations are included to show that the meaning for the term it is attached to specifically means the term as defined in that namespace. Thus, bdq:Empty means that the value of the term "Empty" specifically as defined within the bdq: namespace. 
+If you have questions or suggestions, submit these to the [BDQ Core Issues](https://github.com/tdwg/bdq/issues) page in GitHub. See the bottom of this document for how to cite BDQ Core.
 
-## 1.1 Key to terms
+# Indexes to the Tests
 
-<!--- pulled out to  templates/terms/bdqcore_qrg/bdqcore_qrg_term_descriptions.md, needs a home to link to, temporary document in place --->
-The definitions of the terms used for each test can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
+## Linked Indexes
 
-More details are in the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md) and [BDQ Core Vocabularies](../../vocabularies/index.md) 
+Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement category](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), 
 
-## 1.2 Further information
+This document also includes [Measures operating on test Responses for MultiRecords (data sets).](#measures-operating-on-test-responses-for-multirecords-data-sets) indexed in [MultiRecord Measures](qrg_multirecord_index.md)
 
-**Need help?** Read more about the BDQ Core tests in the [BDQ Core Users Guide](../../guide/users/index.md) or about how to implement the tests in the [BDQ Core Implementers Guide](../../guide/implementers/index.md).  An overview of BDQ Core can be found in the [BDQ Core Introduction](../../intro/index.md) 
-
-### 1.2.1 Questions, Contributing
-
-Still have questions or suggestions? Submit these to the [BDQ Core Issues](https://github.com/tdwg/bdq/issues) page in GitHub. 
-
-See the bottom of this document for how to cite BDQ Core.
-
-### 1.2 Status of the content of this document
-
-Sections 1 and 2 are non-normative.
-
-In Section 3 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resource Type, Specification, Information Elements ActedUpon, Information Elements Consulted, and Parameters are normative.  The values of Description, Examples, Use Cases, and Notes are non-normative. 
-
-# 2 Indexes to the Tests
-
-## 2.1 Linked Indexes
-
-Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement category](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), and [MultiRecord Measures](qrg_multirecord_index.md)
-
-## 2.1 Alphabetical Index to SingleRecord tests
-
+## Alphabetical Index to SingleRecord tests
 
 - [AMENDMENT_BASISOFRECORD_STANDARDIZED](#AMENDMENT_BASISOFRECORD_STANDARDIZED)
 - [AMENDMENT_COORDINATES_FROM_VERBATIM](#AMENDMENT_COORDINATES_FROM_VERBATIM)
@@ -187,9 +138,9 @@ Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg
 
 ********************
 
-# 3 The BDQ Core Tests
+# The BDQ Core Tests
 
-## 3.1 Validations, Amendments, Measures operating on SingleRecords.
+## Validations, Amendments, Measures operating on SingleRecords.
 
 ###  VALIDATION_BASISOFRECORD_NOTEMPTY
 
@@ -221,7 +172,7 @@ dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_BASISOFRECORD_STANDARD
@@ -266,7 +217,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DCTYPE_NOTEMPTY
@@ -299,7 +250,7 @@ dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Resp
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DCTYPE_STANDARD
@@ -340,7 +291,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.   EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a test implementation without an external call
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_LICENSE_NOTEMPTY
@@ -377,7 +328,7 @@ bdq:Record-Management
 
 The license at the record level might be derived from the license of the data set from which the record is retrieved
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_LICENSE_STANDARD
@@ -422,7 +373,7 @@ bdq:Record-Management
 
 The license at the record level might be derived from the license of the data set from which the record is retrieved. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.   The  canonical form of the Creative Commons license IRI has nothing after the version  e.g. https://creativecommons.org/licenses/by/4.0/, but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code.   However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI.  As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT
@@ -469,7 +420,7 @@ bdq:Spatial-Temporal_Patterns
 
 dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country.  Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT
@@ -514,7 +465,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The geographic determination service is expected to return a list of names of first-level administrative divisions for geometries that the geographic point falls on or within, including a 3 km buffer around the administrative geometry. A match on any of those names should constitute a consistency, and dwc:countryCode should not be needed to make this determination, that is, this test does not attempt to disambiguate potential duplicate first-level administrative division names. The level of buffering may be related to the scale of the underlying GIS layer being used. At a global scale, typical map scales used for borders and coastal areas are either 1:3M or 1:1M (Dooley 2005, Chapter 4). Horizontal accuracy at those scales is around 1.5-2.5km and 0.5-0.85 km respectively (Chapman & Wieczorek 2020).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT
@@ -562,7 +513,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation tests treat "brackish" in WoRMS as both marine and terrestrial.   Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COORDINATES_NOTZERO
@@ -599,7 +550,7 @@ bdq:Spatial-Temporal_Patterns
 
 A record with 0.0 is interpreted as the string "0"
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COORDINATEUNCERTAINTY_INRANGE
@@ -636,7 +587,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The upper limit is one half the equatorial circumference of the earth.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COUNTRYCODE_NOTEMPTY
@@ -669,7 +620,7 @@ dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIAN
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COUNTRYCODE_STANDARD
@@ -710,7 +661,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT
@@ -751,7 +702,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The country code determination service should be able to match the name of a country in the original or any language in the source authority.   When countryCode=XZ to mark the high seas, country should be empty.  This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
@@ -796,7 +747,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values.  This test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this test. @tucotuco: "Of #200 and #201, #201 is the strongest test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level".
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COUNTRY_FOUND
@@ -841,7 +792,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Non-country information such as "high seas" will fail this test (High Seas should use dwc:countryCode = "XZ" and have dwc:country empty).  Getty Place Types for administrative level "nation"  are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation.  Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are  same). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_COUNTRY_NOTEMPTY
@@ -878,7 +829,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Country is expected to be empty if material comes from the high seas, or from those portions of Antartica outside of any sovereign nation.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DECIMALLATITUDE_INRANGE
@@ -911,7 +862,7 @@ dwc:decimalLatitude="121.0534": Response.status=RUN_HAS_RESULT, Response.result=
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DECIMALLATITUDE_NOTEMPTY
@@ -944,7 +895,7 @@ dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DECIMALLONGITUDE_INRANGE
@@ -977,7 +928,7 @@ dwc:decimalLongitude="181.0554": Response.status=RUN_HAS_RESULT, Response.result
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DECIMALLONGITUDE_NOTEMPTY
@@ -1010,7 +961,7 @@ dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_CO
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_GEODETICDATUM_NOTEMPTY
@@ -1043,7 +994,7 @@ dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_GEODETICDATUM_STANDARD
@@ -1084,7 +1035,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_LOCATION_NOTEMPTY
@@ -1121,7 +1072,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Only fails if all of the relevant fields of the Darwin Core Location class are EMPTY or do not exist.  Relevant Darwin Core fields include dwc:locationID, dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:waterBody, dwc:islandGroup, dwc:island, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:locality, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT. Elevation and/or depth alone are deemed insufficient to meaningfully locate a position on the earth.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MAXDEPTH_INRANGE
@@ -1166,7 +1117,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MAXELEVATION_INRANGE
@@ -1211,7 +1162,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MINDEPTH_INRANGE
@@ -1256,7 +1207,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
@@ -1289,7 +1240,7 @@ dwc:minimumDepthInMeters="1", dwc:maximumDepthInMeters="0": Response.status=RUN_
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MINELEVATION_INRANGE
@@ -1334,7 +1285,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
@@ -1367,7 +1318,7 @@ dwc:minimumElevationInMeters="1", dwc:maximumElevationInMeters="0": Response.sta
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_STATEPROVINCE_FOUND
@@ -1412,7 +1363,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Multiple values in the dwc:stateProvince field (whether to signify on a border or in a list of possibilities) will fail this test. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DAY_INRANGE
@@ -1449,7 +1400,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 This test must take into account the given month and year, if present, to account for leap years. This is part of a group of similar tests (VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e, #VALIDATION_STARTDAYOFYEAR_INRANGE (85803c7e-2a5a-42e1-b8d3-299a44cafc46), VALIDATION_ENDDAYOFYEAR_INRANGE9a39d88c-7eee-46df-b32a-c109f9f81fb8)).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DAY_STANDARD
@@ -1486,7 +1437,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 This is part of a group of similar tests (VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e), VALIDATION_STARTDAYOFYEAR_INRANGE (85803c7e-2a5a-42e1-b8d3-299a44cafc46), VALIDATION_ENDDAYOFYEAR_INRANGE (9a39d88c-7eee-46df-b32a-c109f9f81fb8)).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_ENDDAYOFYEAR_INRANGE
@@ -1526,7 +1477,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This test only asks if dwc:endDayOfYear is a valid value for the relevant year, not if it is consistent with the end day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This test should be run after the series of tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_EVENTDATE_INRANGE
@@ -1571,7 +1522,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 This test provides for a default earliest date, which is 1582-11-15 by convention. That date was chosen because ISO 8601-1 asserts that "the use of proleptic Gregorian calendar dates prior are not allowed in ISO 8601-1 without prior agreement of the parties exchanging data", and Darwin Core does not comment on this.  Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date, and metadata may or not be present to even identify such records. Given the complexity, and ongoing nature of transitions between calendars, we do not advocate using this test for quality assurance by selecting a transition date and using it as a threshold.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_EVENTDATE_NOTEMPTY
@@ -1604,7 +1555,7 @@ dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_EVENTDATE_STANDARD
@@ -1641,7 +1592,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 This test should also pick up issues such as 29 Feb in a non leap year.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_EVENTTEMPORAL_NOTEMPTY
@@ -1678,7 +1629,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear.  The terms dwc:eventID (if populated may or may not point to temporal information accessible to user of the data) and dwc:eventTime (which is rare) are not included.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_EVENT_CONSISTENT
@@ -1715,7 +1666,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 This test does not take a position on whether the value in dwc:eventDate, or the values in the atomic terms are correct, it simply points out the presence of inconsistencies.  For this test, dwc:eventTime is explicitly ignored. It may be useful to consider an additional test that does evaluate dwc:eventTime and dwc:eventDate. In that case, but not in this test, if the time is present in both dwc:eventDate and dwc:eventTime, and it is inconsistent, it may indicate an error in the dwc:eventDate, thus making it a problem that someone needs to evaluate.   This test will only assert consistency if the data are both internally consistent and are compliant with the term definitions, for example dwc:day, by its definition, can only be the day  of an dwc:eventDate that has a precision of a day or better and is not a range that spans more than a single day.   A dwc:day that was internally consistent with the first day of the year (that is, 1) of an dwc:eventDate that only had precision to a year would be consistent internally, but not consistent with the Darwin Core term definitions, and would not return COMPLIANT from this test.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_MONTH_STANDARD
@@ -1748,7 +1699,7 @@ dwc:month="v": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Re
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_STARTDAYOFYEAR_INRANGE
@@ -1788,7 +1739,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e).  This test only asks if dwc:startDayOfYear is a valid value for the relevant year, not if it is consistent with the start day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This test should be run after the series of tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_YEAR_INRANGE
@@ -1833,7 +1784,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The results of this test are time-dependent. Next year is not valid now. Next year it will be. This test provides the option to designate lower and upper limits to the year. The upper limit, if not provided, should default to the year when the test is run. This test provides for a default earliest date (year), of 1582 by convention. That value was chosen because ISO 8601-1 asserts that "the use of proleptic Gregorian calendar dates prior are not allowed in ISO 8601-1 without prior agreement of the parties exchanging data", and Darwin Core provides no such prior agreement.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_YEAR_NOTEMPTY
@@ -1866,7 +1817,7 @@ dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Resp
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DATEIDENTIFIED_INRANGE
@@ -1914,7 +1865,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 There may be valid identifications prior to Linnaeus, but this test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DATEIDENTIFIED_STANDARD
@@ -1947,7 +1898,7 @@ dwc:dateIdentified="1963-03-08X14:07-0600": Response.status=RUN_HAS_RESULT, Resp
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
@@ -1992,7 +1943,7 @@ bdq:Alien-Species
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_ESTABLISHMENTMEANS_STANDARD
@@ -2037,7 +1988,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_OCCURRENCEID_NOTEMPTY
@@ -2070,7 +2021,7 @@ dwc:occurrenceID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIA
 
 bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_OCCURRENCESTATUS_NOTEMPTY
@@ -2103,7 +2054,7 @@ dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_OCCURRENCESTATUS_STANDARD
@@ -2148,7 +2099,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_PATHWAY_STANDARD
@@ -2193,7 +2144,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_SEX_STANDARD
@@ -2238,7 +2189,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_TYPESTATUS_STANDARD
@@ -2283,7 +2234,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_CLASSIFICATION_CONSISTENT
@@ -2328,7 +2279,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 A fail condition may arise either from the taxon terms being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of classification values. Additional tests could be devised against a taxonomic authority to report the distinct failure conditions. This test specifically does not consider the content of dwc:higherClassification.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_CLASS_FOUND
@@ -2373,7 +2324,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_FAMILY_FOUND
@@ -2418,7 +2369,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_GENUS_FOUND
@@ -2463,7 +2414,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against which to check. The same test might return distinct results when using distinct source authorities.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_KINGDOM_FOUND
@@ -2508,7 +2459,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_KINGDOM_NOTEMPTY
@@ -2541,7 +2492,7 @@ dwc:kingdom="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, R
 
 bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY
@@ -2574,7 +2525,7 @@ dwc:namePublishedInYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_
 
 bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_ORDER_FOUND
@@ -2619,7 +2570,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_PHYLUM_FOUND
@@ -2664,7 +2615,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_POLYNOMIAL_CONSISTENT
@@ -2701,7 +2652,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 If dwc:specificEpithet is populated then this test expects that the value dwc:specificEpithet is the name of the second or species epithet of the scientificName.  If dwc:genericName is populated, this test expects that the value of dwc:genus is the first word of the value of dwc:scientificName.  If dwc:specificEpithet is populated then this test expects that the value dwc:specificEpithet is the name of the first or species epithet of the scientificName.  If dwc:infraspecificEpithet is populated, then this test expects that the value of dwc:infraspecificEpithet is the name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
@@ -2734,7 +2685,7 @@ dwc:scientificNameAuthorship="": Response.status=RUN_HAS_RESULT, Response.result
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_SCIENTIFICNAMEID_COMPLETE
@@ -2771,7 +2722,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.  Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
@@ -2804,7 +2755,7 @@ dwc:scientificNameID=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_CO
 
 bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_SCIENTIFICNAME_FOUND
@@ -2849,7 +2800,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 The purpose of this test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdq:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of data sets doing quality control, this test provides a specific subset of targeted data cleaning, making it a valuable test to include for the quality control case.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_SCIENTIFICNAME_NOTEMPTY
@@ -2882,7 +2833,7 @@ dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_TAXONRANK_NOTEMPTY
@@ -2915,7 +2866,7 @@ dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT
 
 bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_TAXONRANK_STANDARD
@@ -2960,7 +2911,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_TAXON_NOTEMPTY
@@ -2997,7 +2948,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 This tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  VALIDATION_TAXON_UNAMBIGUOUS
@@ -3042,7 +2993,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 There are any number of potential controlled vocabularies that might be used for this test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon.  If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record.   The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty.  Note that test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific test for a subset of Information Elements from this test.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MEASURE_AMENDMENTS_PROPOSED
@@ -3072,7 +3023,7 @@ Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 tests
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MEASURE_VALIDATIONTESTS_COMPLIANT
@@ -3106,7 +3057,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
@@ -3140,7 +3091,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
@@ -3174,7 +3125,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MEASURE_EVENTDATE_DURATIONINSECONDS
@@ -3211,7 +3162,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The duration of a day is 86400 seconds. Implementations should treat all days as 86400 seconds, but should include leap days (but not leap seconds) in durations that encompass them.  Consumers should treat assertions about event date duration as approximations, see: https://xkcd.com/2867/
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  ISSUE_DATAGENERALIZATIONS_NOTEMPTY
@@ -3248,7 +3199,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  ISSUE_COORDINATES_CENTEROFCOUNTRY
@@ -3296,7 +3247,7 @@ bdq:Spatial-Temporal_Patterns
 
 We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  ISSUE_ESTABLISHMENTMEANS_NOTEMPTY
@@ -3329,7 +3280,7 @@ dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_I
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  ISSUE_ANNOTATION_NOTEMPTY
@@ -3373,7 +3324,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records.  While implementation of this test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this test as a placeholder in the hope of future developments.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_BASISOFRECORD_STANDARDIZED
@@ -3418,7 +3369,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen.  For tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_DCTYPE_STANDARDIZED
@@ -3459,7 +3410,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 dc:type holds literals (e.g. PhysicalObject), while dcterms:type holds an IRI for the resource (e.g. http://purl.org/dc/dcmitype/PhysicalObject), see the Darwin Core RDF guide https://dwc.tdwg.org/rdf/#32-imported-dublin-core-terms-for-which-only-literal-objects-are-appropriate-normative.   Implementations of this Amendment are expected be able to amend IRI values to the literals, as well as removing leading/trailing whitespace and correcting case errors in the literal.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_LICENSE_STANDARDIZED
@@ -3504,7 +3455,7 @@ bdq:Record-Management
 
 The license at the record level might be derived from the license of the data set from which the record is retrieved.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_COORDINATES_FROM_VERBATIM
@@ -3544,7 +3495,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Transformations between coordinate reference systems should not be made as a part of this test. Though coordinate precision of the verbatim coordinates could also be interpreted during the process of amending decimal coordinates from verbatim coordinates, that amendment is recommended to be an independent test. Note that dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimCoordinates might all be populated, and they may or not be perfectly consistent with each other. An ideal implementation should check for the consistency of these three fields and not amend them if they are inconsistent.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_COORDINATES_TRANSPOSED
@@ -3588,7 +3539,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The dwc:geodeticDatum is not necessary for this test. The maximum positional shift between any geographic coordinate reference system and WGS84 is less than 6 km, so any hemisphere test that relies on a country code for consistency would not be affected by the potential shift.  The prior VALIDATION for this test is VALIDATION_COORDINATE_COUNTRYCODE_CONSISTENT (adb27d29-9f0d-4d52-b760-a77ba57a69c9).
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_COUNTRYCODE_FROM_COORDINATES
@@ -3633,7 +3584,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related tests. In this test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_COUNTRYCODE_STANDARDIZED
@@ -3670,7 +3621,7 @@ dwc:countryCode="Aust.": Response.status=NOT_AMENDED, Response.result=, Response
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
@@ -3715,7 +3666,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_GEODETICDATUM_STANDARDIZED
@@ -3756,7 +3707,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM
@@ -3796,7 +3747,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 If dwc:verbatimDepth has a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform fathoms to meters by multiplying by 1.8288 and retaining added significant digits (verbatim depth of 10 fathoms to minimum and maximum depths in meters of 18.288). Implementations should be capable of interpreting verbatim data in at least meters, fathoms, and feet, in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM
@@ -3836,7 +3787,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 If the dwc:verbatimElevation as a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform yards to meters by multiplying by 0.9144 and retaining added significant digits (verbatim elevation of 10 yards to minimum and maximum depths in meters of 9.144). Implementations should be capable of interpreting verbatim data in at least meters,  yards, feet, and kilometers in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_DAY_STANDARDIZED
@@ -3873,7 +3824,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 If dwc:day contains text that may be interpreted as Roman numerals, the result will be NOT_AMENDED as this is not standard. Values such as "3rd" or "12th" can be interpreted as the integers "3" and "12".  Text such as "5th Friday" is ambiguous.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_EVENTDATE_FROM_VERBATIM
@@ -3913,7 +3864,7 @@ bdq:Record-Management
 
 If the proposed eventDate is prior to 1918-02-14, the Response.comment will include a note that the "verbatimDate was assumed to be in the Gregorian calendar". When running the test, the original precision, e.g. year=1980, month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-31.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
@@ -3953,7 +3904,7 @@ bdq:Record-Management
 
 An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment.   This test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-3.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
@@ -3993,7 +3944,7 @@ bdq:Record-Management
 
 An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this test is run.   While year=1999, startDayOfYear=123  could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This test is only for cases that fall within the one year (as given in dwc:year) and hence "dwc:startDayOfYear will always be less than dwc:endDayOfYear". [or do we just leave this as being obvious from the Expected Response.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_EVENTDATE_STANDARDIZED
@@ -4030,7 +3981,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 The intent of the amended range is to capture the original uncertainty where possible. As in the example, we amend "1999-11" instead of "1999-11-01/1999-11-31".  An AMBIGUOUS response is possible.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_EVENT_FROM_EVENTDATE
@@ -4070,7 +4021,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,  dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component.  Note, see sequencing tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_MONTH_STANDARDIZED
@@ -4107,7 +4058,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order. In these cases, the result will be AMENDED numeric equivalents.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_DATEIDENTIFIED_STANDARDIZED
@@ -4144,7 +4095,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 We reference Wikipedia for the ISO standard because the standard documents are not free.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED
@@ -4189,7 +4140,7 @@ bdq:Alien-Species
 
 For reference, synonyms for values of dwc:degreeOfEstablishment can be found at https://registry.gbif.org/vocabulary/DegreeOfEstablishment/concepts.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
@@ -4230,7 +4181,7 @@ dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.resul
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
@@ -4274,7 +4225,7 @@ dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Res
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
@@ -4319,7 +4270,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_PATHWAY_STANDARDIZED
@@ -4364,7 +4315,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 For reference, synonyms for values of dwc:pathway can be found at https://registry.gbif.org/vocabulary/Pathway/concepts.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_SEX_STANDARDIZED
@@ -4409,7 +4360,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_TYPESTATUS_STANDARDIZED
@@ -4454,7 +4405,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 Valuable for data quality needs related to voucher specimens in natural science collections.   Almost all occurrence data will have no value in dwc:typeStatus.  For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
@@ -4502,7 +4453,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
@@ -4550,7 +4501,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority.   When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.   Implementors can be aware of the current  GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122  The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records.   Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementors will need to support at least the "gbif:" pseudo-namespace.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  AMENDMENT_TAXONRANK_STANDARDIZED
@@ -4595,11 +4546,11 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For reference, information about possible values of dwc:taxonRank can be found at https://registry.gbif.org/vocabulary/TaxonRank/concepts
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 
-## 3.2 Measures operating on test Responses for MultiRecords (data sets).
+## Measures operating on test Responses for MultiRecords (data sets).
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 
@@ -4628,7 +4579,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD
@@ -4658,7 +4609,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY
@@ -4688,7 +4639,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD
@@ -4718,7 +4669,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY
@@ -4748,7 +4699,7 @@ bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
@@ -4778,7 +4729,7 @@ bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY
@@ -4808,7 +4759,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
@@ -4838,7 +4789,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY
@@ -4868,7 +4819,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD
@@ -4898,7 +4849,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY
@@ -4928,7 +4879,7 @@ bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
@@ -4958,7 +4909,7 @@ bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
@@ -4988,7 +4939,7 @@ bdq:Spatial-Temporal_Patterns
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
@@ -5018,7 +4969,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
@@ -5048,7 +4999,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO
@@ -5078,7 +5029,7 @@ bdq:Spatial-Temporal_Patterns
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
@@ -5108,7 +5059,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
@@ -5138,7 +5089,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD
@@ -5168,7 +5119,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
@@ -5198,7 +5149,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
@@ -5228,7 +5179,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND
@@ -5258,7 +5209,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY
@@ -5288,7 +5239,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
@@ -5318,7 +5269,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY
@@ -5348,7 +5299,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
@@ -5378,7 +5329,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY
@@ -5408,7 +5359,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY
@@ -5438,7 +5389,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
@@ -5468,7 +5419,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY
@@ -5498,7 +5449,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE
@@ -5528,7 +5479,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE
@@ -5558,7 +5509,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE
@@ -5588,7 +5539,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
@@ -5618,7 +5569,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE
@@ -5648,7 +5599,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
@@ -5678,7 +5629,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND
@@ -5708,7 +5659,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
@@ -5738,7 +5689,7 @@ bdq:Spatial-Temporal_Patterns
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
@@ -5768,7 +5719,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
@@ -5798,7 +5749,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO
@@ -5828,7 +5779,7 @@ bdq:Spatial-Temporal_Patterns
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
@@ -5858,7 +5809,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
@@ -5888,7 +5839,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD
@@ -5918,7 +5869,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
@@ -5948,7 +5899,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
@@ -5978,7 +5929,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_FOUND
@@ -6008,7 +5959,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY
@@ -6038,7 +5989,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
@@ -6068,7 +6019,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY
@@ -6098,7 +6049,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
@@ -6128,7 +6079,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY
@@ -6158,7 +6109,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY
@@ -6188,7 +6139,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
@@ -6218,7 +6169,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY
@@ -6248,7 +6199,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE
@@ -6278,7 +6229,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE
@@ -6308,7 +6259,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE
@@ -6338,7 +6289,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
@@ -6368,7 +6319,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE
@@ -6398,7 +6349,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
@@ -6428,7 +6379,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND
@@ -6458,7 +6409,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE
@@ -6488,7 +6439,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD
@@ -6518,7 +6469,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE
@@ -6548,7 +6499,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE
@@ -6578,7 +6529,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY
@@ -6608,7 +6559,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
@@ -6638,7 +6589,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
@@ -6668,7 +6619,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT
@@ -6698,7 +6649,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD
@@ -6728,7 +6679,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE
@@ -6758,7 +6709,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
@@ -6788,7 +6739,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY
@@ -6818,7 +6769,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DAY_INRANGE
@@ -6848,7 +6799,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DAY_STANDARD
@@ -6878,7 +6829,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE
@@ -6908,7 +6859,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE
@@ -6938,7 +6889,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY
@@ -6968,7 +6919,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
@@ -6998,7 +6949,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
@@ -7028,7 +6979,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT
@@ -7058,7 +7009,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_MONTH_STANDARD
@@ -7088,7 +7039,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE
@@ -7118,7 +7069,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_YEAR_INRANGE
@@ -7148,7 +7099,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY
@@ -7178,7 +7129,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE
@@ -7208,7 +7159,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD
@@ -7238,7 +7189,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE
@@ -7268,7 +7219,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD
@@ -7298,7 +7249,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
@@ -7328,7 +7279,7 @@ bdq:Alien-Species
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD
@@ -7358,7 +7309,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY
@@ -7388,7 +7339,7 @@ bdq:Record-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY
@@ -7418,7 +7369,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
@@ -7448,7 +7399,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD
@@ -7478,7 +7429,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD
@@ -7508,7 +7459,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
@@ -7538,7 +7489,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
@@ -7568,7 +7519,7 @@ bdq:Alien-Species
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD
@@ -7598,7 +7549,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY
@@ -7628,7 +7579,7 @@ bdq:Record-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY
@@ -7658,7 +7609,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
@@ -7688,7 +7639,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD
@@ -7718,7 +7669,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_SEX_STANDARD
@@ -7748,7 +7699,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
@@ -7778,7 +7729,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT
@@ -7808,7 +7759,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND
@@ -7838,7 +7789,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND
@@ -7868,7 +7819,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND
@@ -7898,7 +7849,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND
@@ -7928,7 +7879,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY
@@ -7958,7 +7909,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY
@@ -7988,7 +7939,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND
@@ -8018,7 +7969,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND
@@ -8048,7 +7999,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT
@@ -8078,7 +8029,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
@@ -8108,7 +8059,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE
@@ -8138,7 +8089,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY
@@ -8168,7 +8119,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
@@ -8198,7 +8149,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY
@@ -8228,7 +8179,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY
@@ -8258,7 +8209,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD
@@ -8288,7 +8239,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY
@@ -8318,7 +8269,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS
@@ -8348,7 +8299,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT
@@ -8378,7 +8329,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_CLASS_FOUND
@@ -8408,7 +8359,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_FAMILY_FOUND
@@ -8438,7 +8389,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_GENUS_FOUND
@@ -8468,7 +8419,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_KINGDOM_FOUND
@@ -8498,7 +8449,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY
@@ -8528,7 +8479,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY
@@ -8558,7 +8509,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_ORDER_FOUND
@@ -8588,7 +8539,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_PHYLUM_FOUND
@@ -8618,7 +8569,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT
@@ -8648,7 +8599,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
@@ -8678,7 +8629,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE
@@ -8708,7 +8659,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY
@@ -8738,7 +8689,7 @@ bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
@@ -8768,7 +8719,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY
@@ -8798,7 +8749,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY
@@ -8828,7 +8779,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD
@@ -8858,7 +8809,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY
@@ -8888,7 +8839,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 ###  MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS
@@ -8918,7 +8869,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 For Quality Assurance, filter record set until this measure is COMPLETE.
 
-[↑](#2-indexes-to-the-tests)
+[↑](#indexes-to-the-tests)
 ********************
 
 

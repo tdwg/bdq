@@ -138,6 +138,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		header = header.replace('{creator}', document_configuration_yaml['creator'])
 		header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 		header = header.replace('{comment}', document_configuration_yaml['comment'])
+		header = header.replace('{doc_modified}', document_configuration_yaml['doc_modified'])
 		header = header.replace('{toc}','\n{}'.format(toc))
 		year = document_configuration_yaml['doc_modified'].split('-')[0]
 		header = header.replace('{year}', year)
@@ -148,7 +149,6 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
 		print(warning)
 		print(header)
-		print()
 
 		# Index by UseCase
 		usecaseDict = dict()
@@ -270,9 +270,9 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		print()
 		print("********************")
 		print()
-		print("# 3 The BDQ Core Tests")
+		print("# The BDQ Core Tests")
 		print()
-		print("## 3.1 Validations, Amendments, Measures operating on SingleRecords.")
+		print("## Validations, Amendments, Measures operating on SingleRecords.")
 		print()
 		for index, row in dataFrame.iterrows():
 			print("### ",row['Label'])
@@ -328,11 +328,11 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				print()
 				print(row['Notes'])
 				print()
-			print("[↑](#2-indexes-to-the-tests)")
+			print("[↑](#indexes-to-the-tests)")
 			print("********************")
 			print()
 		print()
-		print("## 3.2 Measures operating on test Responses for MultiRecords (data sets).")
+		print("## Measures operating on test Responses for MultiRecords (data sets).")
 		print()
 		for index, row in multirecordDataFrame.iterrows():
 			print("### ",row['Label'])
@@ -372,7 +372,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print(row['Notes'])
 			print()
-			print("[↑](#2-indexes-to-the-tests)")
+			print("[↑](#indexes-to-the-tests)")
 			print("********************")
 			print()
 		print()
