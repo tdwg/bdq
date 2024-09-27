@@ -81,7 +81,7 @@ The definition of bdq:Empty is not applicable to a discussion of what value to i
 
 The evaluation of bdq:Empty MUST be at the point of evaluation of the test.  This allows the tests to be independent of data serializations for transport and the representation of data in test execution environments. 
 
-In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by  the test bdq:CriterionInContext to be agnostic about the strucuture presented to a framework for executing the tests. 
+In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by the test bdqffdq:DataQualityNeed to be agnostic about the strucuture presented to a framework for executing the tests. 
 
 For csv data a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that.
 

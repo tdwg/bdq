@@ -9,6 +9,6 @@ List of files:
     ├── bdqcrit_term_versions.csv Term version file Criterion vocabulary, copied from bdq/tg2/vocabularies/bdqcrit_terms.csv
     ├── bdqcore_terms.csv  CSV list of test descriptions, copied from bdq/tg2/core/TG2_tests.csv
     ├── bdqcore_terms.xml rdf/xml representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml
-    ├── bdqffdq_terms.csv 
+    ├── bdqffdq.owl The bdqffdq owl ontology.
     └── README.md this file
 
