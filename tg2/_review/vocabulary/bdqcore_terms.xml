@@ -208,7 +208,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f"/>
 </rdf:Description>
 
@@ -361,7 +361,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04"/>
 </rdf:Description>
 
@@ -574,7 +574,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8"/>
 </rdf:Description>
 
@@ -584,9 +584,17 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is there a value in dwc:country? Validation for SingleRecord</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALIDATION_COUNTRY_NOTEMPTY</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d24a7b73-972a-4fdd-a790-91acb5fcf725"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:d24a7b73-972a-4fdd-a790-91acb5fcf725">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element Consulted dwc:countryCode</rdfs:label>
+	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/countryCode"/>
+	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element Consulted dwc:countryCode</prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff">
@@ -599,10 +607,10 @@
 
 <rdf:Description rdf:about="urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:country is bdq:NotEmpty; otherwise NOT_COMPLIANT</rdfs:comment>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</rdfs:comment>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_COUNTRY_NOTEMPTY</rdfs:label>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasAuthoritiesDefaults>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:country is bdq:NotEmpty; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45">
@@ -688,7 +696,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a"/>
 </rdf:Description>
 
@@ -844,7 +852,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b"/>
 </rdf:Description>
 
@@ -865,18 +873,11 @@
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:d24a7b73-972a-4fdd-a790-91acb5fcf725">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element Consulted dwc:countryCode</rdfs:label>
-	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/countryCode"/>
-	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element Consulted dwc:countryCode</prefLabel>
-</rdf:Description>
-
 <rdf:Description rdf:about="urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e"/>
 </rdf:Description>
 
@@ -903,7 +904,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d"/>
 </rdf:Description>
 
@@ -996,7 +997,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:566faded-60b6-44bf-a335-dc78d5013582"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:566faded-60b6-44bf-a335-dc78d5013582"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:566faded-60b6-44bf-a335-dc78d5013582"/>
 </rdf:Description>
 
@@ -1083,7 +1084,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10"/>
 </rdf:Description>
 
@@ -1102,7 +1103,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment of the value of dwc:eventDate to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment of the value of dwc:eventDate to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4"/>
 </rdf:Description>
 
@@ -1135,10 +1136,10 @@
 
 <rdf:Description rdf:about="urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the value of the country code determined from the value of dwc:country in the bdq:sourceAuthority is equal to the value of dwc:countryCode; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</rdfs:comment>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</rdfs:comment>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</rdfs:label>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the value of the country code determined from the value of dwc:country in the bdq:sourceAuthority is equal to the value of dwc:countryCode; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</hasAuthoritiesDefaults>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27">
@@ -1156,7 +1157,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27"/>
 </rdf:Description>
 
@@ -1257,7 +1258,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2"/>
 </rdf:Description>
 
@@ -1375,7 +1376,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57"/>
 </rdf:Description>
 
@@ -1406,8 +1407,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssueMethod: Is there a value in dwc:dataGeneralizations? Criterion for SingleRecord with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssueMethod: Is there a value in dwc:dataGeneralizations? Criterion for SingleRecord with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</skos:prefLabel>
+	<forIssue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b"/>
-	<issueInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff">
@@ -1425,7 +1426,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff"/>
 </rdf:Description>
 
@@ -1465,7 +1466,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946"/>
 </rdf:Description>
 
@@ -1742,7 +1743,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2"/>
 </rdf:Description>
 
@@ -1870,7 +1871,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d"/>
 </rdf:Description>
 
@@ -1896,8 +1897,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssueMethod: Is there a value in dwc:establishmentMeans? Criterion for SingleRecord with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssueMethod: Is there a value in dwc:establishmentMeans? Criterion for SingleRecord with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</skos:prefLabel>
+	<forIssue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7"/>
-	<issueInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a">
@@ -1948,10 +1949,10 @@
 
 <rdf:Description rdf:about="urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</rdfs:comment>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</rdfs:comment>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</rdfs:label>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasAuthoritiesDefaults>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849">
@@ -2043,7 +2044,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997"/>
 </rdf:Description>
 
@@ -2303,7 +2304,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7"/>
 </rdf:Description>
 
@@ -2584,7 +2585,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff"/>
 </rdf:Description>
 
@@ -2603,7 +2604,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38"/>
 </rdf:Description>
 
@@ -2702,7 +2703,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:647bf697-e432-4b31-9a69-778396e14a82"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:647bf697-e432-4b31-9a69-778396e14a82"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:647bf697-e432-4b31-9a69-778396e14a82"/>
 </rdf:Description>
 
@@ -2721,7 +2722,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88"/>
 </rdf:Description>
 
@@ -2882,7 +2883,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0"/>
 </rdf:Description>
 
@@ -3158,7 +3159,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808"/>
 </rdf:Description>
 
@@ -3211,7 +3212,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758"/>
 </rdf:Description>
 
@@ -3264,7 +3265,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3"/>
 </rdf:Description>
 
@@ -3317,7 +3318,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322"/>
 </rdf:Description>
 
@@ -3370,7 +3371,7 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</skos:prefLabel>
-	<enhancementInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a"/>
 </rdf:Description>
 
@@ -3397,8 +3398,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssueMethod: Are the supplied geographic coordinates within a defined buffer of the center of the country? Criterion for SingleRecord with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</rdfs:label>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssueMethod: Are the supplied geographic coordinates within a defined buffer of the center of the country? Criterion for SingleRecord with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</skos:prefLabel>
+	<forIssue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b"/>
-	<issueInContext xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Taxon-Management">
