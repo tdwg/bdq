@@ -196,6 +196,7 @@ In Section 4, the values of the `Term IRI` and `Definition` are normative. The v
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list  | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.xml | RDF/XML  | 
+| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.ttl | Turtle  | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.csv | CSV list of tests | 
 
 ### 1.7 Namespace abbreviations
