@@ -34,6 +34,8 @@ Draft Standard for Submission
 
 - [ 1 BDQ Core Vocabularies](#1-bdq-core-vocabularies)
 - [ 1.1 Vocabularies central to BDQ Core](#11-vocabularies-central-to-bdq-core)
+- [ 1.1.1 The Quick Reference Guide to the Tests](#111-the-quick-reference-guide-to-the-tests)
+- [ 1.1.2 Vocabularies](#112-vocabularies)
 - [ 1.2 Vocabularies supporting to BDQ Core](#12-vocabularies-supporting-to-bdq-core)
 
 
@@ -43,6 +45,12 @@ Draft Standard for Submission
 This page provides an introduction and index to the six vocabularies introduced by this standard. The vocabularies are distinguished by their roles within applications of the standard to biodiversity data quality (BDQ) use cases. Each vocabulary has its own namespace and term list document. 
 
 ## 1.1 Vocabularies central to BDQ Core
+
+## 1.1.1 The Quick Reference Guide to the Tests
+
+- [BDQ Core Tests and Assertions Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqcore/index.md) -  An easy to read guide to the Tests (a descriptive document, not the full vocabulary definition document found in the BDQ Core Tests And Assertions List of Terms).
+
+## 1.1.2 Vocabularies
 
 - [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore_list/index.md) - this vocabulary is likely to be the focus of interest for both implementors and consumers of the outputs of implementations of tests and assertions.  This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
 - [Fitness For Use Framework Ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) - this vocabulary, in the form of an ontology, provides the semantics of terms that describe data quality and fitness for use in the namespace `https://rs.tdwg.org/bdqffdq` (abbreviated `bdqffdq:`), these are the terms used to describe the tests in bdqcore:.
