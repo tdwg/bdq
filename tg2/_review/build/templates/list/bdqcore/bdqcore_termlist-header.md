@@ -45,6 +45,7 @@ Bibliographic citation
 
 This document lists the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, bdqenh:, and bdqcrit as well as the focus of this document the `bdqcore` terms. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
+<!--- start of information that probably goes in the users or implementers guides --->
 ### 1.1 Introductory
 
 [!--- suggest "Single record (bdqffdq:SingleRecord) tests apply to a single observation or event structured under Darwin Core terms (Wieczorek et al 2012). The one exception to this is the test ISSUE_ANNOTATION_NOTEMPTY where this standard encourages the implementation of a standard for annotating occurrence records supported by Darwin Core. Multi record (bdqffdq:MultiRecord) tests sum up results across all records for each single record test."   AC - PAUL to check?  ---]
@@ -112,7 +113,7 @@ For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure
 
 Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE. The vast majority of the Core tests are Validations, phrased in the positive sense, intended as a core suite, to identify biodiversity data that are fit for the Core purposes, as identified in the user scenario analyses performed by BDQ Task Group 3.   
 
-### 1.4 Test Descriptors (non-normative) 
+### 1.4 Test Descriptors
 
 <!--- **TODO: What do we call this as "Specification is being used generally and specifically?** --->
 <!--- We can use Descriptor for Specification plus related metadata (the rows in the Markdown tables), Specification for the framework concept. --->
@@ -137,6 +138,8 @@ The framework expects that Quality Assurance is provided for through specificati
 For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
 For a simplied list of current terms, see the BDQ Core Quick Reference Guide {http://..........}.
+
+<!--- end of information that probably goes in the users or implementers guides --->
 
 ### 1.6 Example RDF (non-normative) 
 
