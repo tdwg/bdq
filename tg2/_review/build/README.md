@@ -11,7 +11,8 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   ├── list  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
 │   │   ├── bdqcore  **work in progress** won't use draft_build-termlisty.py
 │   │   │   ├── bdqcore_termlist-footer.md
-│   │   │   └── bdqcore_termlist-header.md
+│   │   │   ├── bdqcore_termlist-header.md
+│   │   │   └── document_configuration.yaml
 │   │   ├── bdq
 │   │   │   ├── bdq_termlist-footer.md
 │   │   │   ├── bdq_termlist-header.md
@@ -79,6 +80,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │           ├── users-footer.md
 │           └── users-header.md **Main text document for the users guide**
 ├── draft_build-termlist.py script to build termlist files for docs/list/ from templates (plus rdf for dist/), draft refers to this being to build a draft standard
+├── draft_build-termlist_bdqcore.py script to build bdqcore termlist for docs/list/ from templates, needs more complete input list,  draft refers to this being to build a draft standard
 ├── draft_build-docs.py script to fill in template information and copy files that don't include terms from build/templates to docs/
 ├── draft_build_bdqcore_qrg.py to build bdqcore quick reference guide
 ├── authors_configuration.yaml  list of authors and contributors

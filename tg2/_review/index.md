@@ -25,7 +25,7 @@ Preferred Citation
 - [BDQ Core Introduction](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/intro/index.md)
 - [BDQ Core Tests Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore/index.md)
 - [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
-  -  [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore_list/index.md):
+  -  [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcore/index.md):
      - File: [CSV List of Tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
      - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
      - File: [Tests in Turtle](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.ttl "Turtle serialization of OWL representation of the tests descriptors.")
