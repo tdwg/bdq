@@ -37,31 +37,14 @@ Bibliographic citation
 
 Draft Standard for Submission
 
-# List of BDQ Core Tests and Assertions
-
-**Title**: List of BDQ Core Tests and Assertions
-
-**Date version issued**: 2024-09-10
-
-**Date created**: 2024-09-10
-
-**Part of TDWG Standard**: <http://example.org/to_be_determined>
-
-**This version**: <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
-
-**Latest version**: <http://rs.tdwg.org/bdqcore/terms/>
-
-**Abstract**: The BDQ Core list of data quality tests. Test Types, Descriptors, 
-
-**Contributors**: Lee Belbin, Paul Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Antonio M Saraiva, Alex Thompson, Miles Nicholls, Emily R Rees, Christian Gendreau, Dmitry Schigel, Yi Ming Gan
-
-**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 2 (Data Quality Tests and Assertions)
-
-**Bibliographic citation**: TDWG Biodiversity Data Quality Interest Group. 2024. BDQ Dimensions Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+# Table of Contents 
+{toc}
 
 ## 1 Introduction
 
-This document lists the BDQ Core tests. The document includes terms in four namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:` and `bdq:core`. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+This document lists the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, bdqenh:, and bdqcrit as well as the focus of this document the `bdqcore` terms. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+
+### 1.1 Introductory
 
 [!--- suggest "Single record (bdqffdq:SingleRecord) tests apply to a single observation or event structured under Darwin Core terms (Wieczorek et al 2012). The one exception to this is the test ISSUE_ANNOTATION_NOTEMPTY where this standard encourages the implementation of a standard for annotating occurrence records supported by Darwin Core. Multi record (bdqffdq:MultiRecord) tests sum up results across all records for each single record test."   AC - PAUL to check?  ---]
 
@@ -147,6 +130,17 @@ Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that 
 
 Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values. 
 
+<!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, repeated in 5.2.3 --->
+The framework expects that Quality Assurance is provided for through specification of a set of Measures defined to operate on a MultiRecord, and which specify a Response.result of COMPLETE or NOT_COMPLETE.  A MultiRecord Measure may specify that it is COMPLETE if all instances of a SingleRecord Validation are COMPLIANT.  
+
+For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
+
+For a simplied list of current terms, see the BDQ Core Quick Reference Guide {http://..........}.
+
+### 1.6 Example RDF (non-normative) 
+
+A more complete description of the tests can be found in the RDF representation of this vocabulary.
+
 Example: Formal description of 0493bcfb-652e-4d17-815b-b0cce0742fbe VALIDATION_COUNTRYCODE_STANDARD
 
 	<rdf:Description rdf:about="urn:uuid:0493bcfb-652e-4d17-815b-b0cce0742fbe">
@@ -170,14 +164,8 @@ Example: Formal description of 0493bcfb-652e-4d17-815b-b0cce0742fbe VALIDATION_C
     	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code? Validation for SingleRecord</rdfs:label>
 	</rdf:Description>
 
-<!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, repeated in 5.2.3 --->
-The framework expects that Quality Assurance is provided for through specification of a set of Measures defined to operate on a MultiRecord, and which specify a Response.result of COMPLETE or NOT_COMPLETE.  A MultiRecord Measure may specify that it is COMPLETE if all instances of a SingleRecord Validation are COMPLIANT.  
 
-For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
-
-For a simplied list of current terms, see the BDQ Core Quick Reference Guide {http://..........}.
-
-### 1.6 Status of the content of this document
+### 1.7 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
@@ -187,7 +175,7 @@ In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resour
 
 In Section 4, the values of the `Term IRI` and `Definition` are normative. The values of `Term Name` `skos:pref:Label` are non-normative, although one can expect that the namespace abbreviation prefix is one commonly used for the term namespace.  `Label` and the values of all other properties (such as `Examples` and `Notes`) are non-normative.
 
-### 1.6.1 Term List Distributions for bdqcore:
+### 1.8 Term List Distributions for bdqcore:
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
@@ -196,7 +184,7 @@ In Section 4, the values of the `Term IRI` and `Definition` are normative. The v
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.ttl | Turtle  | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_terms.csv | CSV list of tests | 
 
-### 1.7 Namespace abbreviations
+### 1.9 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
