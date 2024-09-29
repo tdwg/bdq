@@ -277,14 +277,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD](#bdqcore_f5dd74bd-6a22-4792-b675-c7ccf2a2c103) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT](#bdqcore_a56fb342-c8ee-4611-8aab-e6c6357e8875) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND](#bdqcore_7270a362-5f2e-41f0-955a-d7a8eaaf0f17) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_572fafe0-5fb3-444a-94de-72ea59a5bdf2) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_9ada4f19-552e-4b15-943d-69b7b0df6f4e) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_82a2774a-ddbe-4f53-82e3-765ea4ba4419) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_c439952b-fb00-4902-90b3-a9d477c11a0b) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_b89b8424-91eb-4fd1-a6c3-1b0bc92120d0) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_25b5d4bf-c871-4485-a457-68021dce0367) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO](#bdqcore_0e239a55-0f19-4c68-bdbf-20580f27a647) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_2d90d94b-d384-4bac-aa68-c6800d765882) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY](#bdqcore_d71be8d4-1a04-4816-90c5-49808c823651) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD](#bdqcore_38966850-3737-4a67-953c-c231469e0489) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_cb3ba648-3b86-41eb-bccd-d29b40693cd0) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_18b9d086-29ae-42a5-8f0a-4bc86f4e87ad) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_8b73f37d-89ed-479a-8389-9e71ad2ac84d) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND](#bdqcore_f15c38c3-d96d-4e9c-982d-410fb71cf2bc) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY](#bdqcore_6887c881-dc52-409b-8979-9c2f05e55569) |
@@ -304,7 +304,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE](#bdqcore_c8250600-de61-4047-9d7c-6e06a38c7994) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY](#bdqcore_3f62eaa2-747f-456b-85e6-1a6e74086a18) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD](#bdqcore_bffd7499-aca3-423f-bb43-f7bdc9260f4f) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_483b36b4-53fd-4bb9-8448-82f6d9630dc1) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_4a1fa336-dd47-4b60-a7b0-c958e2dc72cd) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT](#bdqcore_1919f212-b7db-4b6e-9697-41a715001bd6) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND](#bdqcore_97928242-11a9-4ab0-9dd7-3f0465834824) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND](#bdqcore_977f7e75-a88e-4e29-a7b1-e8cdd35aa107) |
@@ -349,14 +349,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD](#bdqcore_241a279c-76d5-499b-ab49-a47ad7f8df50) |
 [MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT](#bdqcore_a2be4734-0a93-46dc-af4a-e2125b47dbd4) |
 [MULTIRECORD_MEASURE_QA_CLASS_FOUND](#bdqcore_21541436-641d-45a9-938c-537484d94eb7) |
-[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_0970ea4a-ac74-4074-a4b1-f702dc100662) |
-[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_09c721c9-c678-4e5c-bfe0-e3386984d5d9) |
-[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_2f54b7c7-19cb-4d22-9f5a-6fa5265777ce) |
+[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_1ede76d0-c096-465c-8bbb-08c53bf7e367) |
+[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_9ff65ace-9d16-4393-b90f-9150d9628371) |
+[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_fb3732c6-4199-4767-a263-0363a1fe1766) |
 [MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO](#bdqcore_151b2d29-3460-4ba5-a226-86971dc8ad03) |
 [MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_d94b0130-7a13-4fa8-955c-eff5c47bd9de) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY](#bdqcore_942f63bd-d19d-4214-bf8e-cec0055b8909) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD](#bdqcore_fedf27b2-e01d-459f-98fc-7f0f39e3d4be) |
-[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_2384f645-9e0b-4e59-8054-8cf60f3443cf) |
+[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_c6a62914-f42e-442a-9e2b-38ccff594070) |
 [MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_23aced89-d613-479c-bc4c-837d74b73be0) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_FOUND](#bdqcore_388e74b3-2e18-4d78-8112-3142d1177e25) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY](#bdqcore_9c8df974-8fba-4537-8c67-31466787f732) |
@@ -376,7 +376,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE](#bdqcore_d41a731b-2e2b-4442-9217-4c375ae92926) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY](#bdqcore_c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD](#bdqcore_14a1d51f-16ed-4148-9dc8-1e90157a9868) |
-[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_b2bc28c0-86aa-464f-b654-0b550d847fcd) |
+[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_4cf4fe57-6736-443b-afda-f7ce8ce25471) |
 [MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT](#bdqcore_f375a3fd-4cf5-4ef4-955e-d71762ede2d8) |
 [MULTIRECORD_MEASURE_QA_FAMILY_FOUND](#bdqcore_a07d7147-2db8-48ce-81b8-e47595ad5f17) |
 [MULTIRECORD_MEASURE_QA_GENUS_FOUND](#bdqcore_c5c8db83-3af0-4215-806f-e2f90574b138) |
@@ -505,6 +505,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
 			<td>2024-08-20</td>
 		</tr>
@@ -572,6 +584,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/32</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -585,6 +601,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -666,6 +694,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/54</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -679,6 +711,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2024-08-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -748,6 +792,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/41</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -761,6 +809,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -834,6 +894,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/133</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -847,6 +911,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -916,6 +992,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/63</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -929,6 +1009,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1002,6 +1094,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/73</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1015,6 +1111,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1076,6 +1184,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/48</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1089,6 +1201,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1162,6 +1286,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/26</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1175,6 +1303,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1244,6 +1384,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/127</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1257,6 +1401,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2024-04-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1330,6 +1486,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/276</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1343,6 +1503,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-02-08</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1412,6 +1584,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/269</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1425,6 +1601,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1502,6 +1690,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/52</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1515,6 +1707,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1592,6 +1796,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/86</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1605,6 +1813,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-15</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1682,6 +1902,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/93</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1695,6 +1919,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1772,6 +2008,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/132</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1785,6 +2025,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1858,6 +2110,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/61</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1871,6 +2127,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1944,6 +2212,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/102</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1959,8 +2231,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
 			<td>2024-09-06</td>
+		</tr>
+		<tr>
+			<td>DateLastUpdated</td>
+			<td>2024-7-24</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -2026,6 +2310,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/60</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2039,6 +2327,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-24</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2104,6 +2404,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/55</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2117,6 +2421,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2182,6 +2498,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/68</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2195,6 +2515,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_MONTH_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2264,6 +2596,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/128</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2277,6 +2613,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-08-23</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2346,6 +2694,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/75</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2359,6 +2711,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-07-26</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2428,6 +2792,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/115</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2441,6 +2809,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_PATHWAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2514,6 +2894,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/278</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2527,6 +2911,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2604,6 +3000,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/71</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2617,6 +3017,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2698,6 +3110,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/57</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2711,6 +3127,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_SEX_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-03-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2784,6 +3212,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/284</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2797,6 +3229,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_TAXONRANK_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2870,6 +3314,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/163</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2883,6 +3331,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2024-08-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2956,6 +3416,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/286</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2969,6 +3433,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_ANNOTATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-17</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3042,6 +3518,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/29</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3055,6 +3535,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-08-28</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3132,6 +3624,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/287</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3145,6 +3641,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3210,6 +3718,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/72</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3223,6 +3735,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3280,6 +3804,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/94</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3293,6 +3821,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_AMENDMENTS_PROPOSED</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3346,6 +3886,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/65</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3359,6 +3903,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_EVENTDATE_DURATIONINSECONDS</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3428,6 +3984,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/140</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3441,6 +4001,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_VALIDATIONTESTS_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3498,6 +4070,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/135</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3511,6 +4087,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2024-08-22</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-24</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3568,6 +4156,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/31</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3581,6 +4173,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3638,6 +4242,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/134</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3653,8 +4261,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -3712,6 +4332,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3727,8 +4351,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -3782,6 +4418,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3797,8 +4437,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -3856,13 +4508,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_572fafe0-5fb3-444a-94de-72ea59a5bdf2"></a>Term Name  bdqcore:572fafe0-5fb3-444a-94de-72ea59a5bdf2</th>
+			<th colspan="2"><a id="bdqcore_c439952b-fb00-4902-90b3-a9d477c11a0b"></a>Term Name  bdqcore:c439952b-fb00-4902-90b3-a9d477c11a0b</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3871,8 +4527,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c439952b-fb00-4902-90b3-a9d477c11a0b-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c439952b-fb00-4902-90b3-a9d477c11a0b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-26</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -3930,13 +4598,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_9ada4f19-552e-4b15-943d-69b7b0df6f4e"></a>Term Name  bdqcore:9ada4f19-552e-4b15-943d-69b7b0df6f4e</th>
+			<th colspan="2"><a id="bdqcore_b89b8424-91eb-4fd1-a6c3-1b0bc92120d0"></a>Term Name  bdqcore:b89b8424-91eb-4fd1-a6c3-1b0bc92120d0</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3945,8 +4617,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b89b8424-91eb-4fd1-a6c3-1b0bc92120d0-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b89b8424-91eb-4fd1-a6c3-1b0bc92120d0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4004,6 +4688,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4019,8 +4707,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2023-06-20</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-06-20</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4074,13 +4774,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_82a2774a-ddbe-4f53-82e3-765ea4ba4419"></a>Term Name  bdqcore:82a2774a-ddbe-4f53-82e3-765ea4ba4419</th>
+			<th colspan="2"><a id="bdqcore_25b5d4bf-c871-4485-a457-68021dce0367"></a>Term Name  bdqcore:25b5d4bf-c871-4485-a457-68021dce0367</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4089,8 +4793,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/25b5d4bf-c871-4485-a457-68021dce0367-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/25b5d4bf-c871-4485-a457-68021dce0367</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4148,6 +4864,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4163,8 +4883,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4218,6 +4950,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4233,8 +4969,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4292,6 +5040,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4307,8 +5059,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4362,6 +5126,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4377,8 +5145,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4436,6 +5216,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4451,8 +5235,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4506,6 +5302,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4521,8 +5321,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4576,6 +5388,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4591,8 +5407,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4650,6 +5478,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4665,8 +5497,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4724,6 +5568,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4739,8 +5587,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4794,13 +5654,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_cb3ba648-3b86-41eb-bccd-d29b40693cd0"></a>Term Name  bdqcore:cb3ba648-3b86-41eb-bccd-d29b40693cd0</th>
+			<th colspan="2"><a id="bdqcore_18b9d086-29ae-42a5-8f0a-4bc86f4e87ad"></a>Term Name  bdqcore:18b9d086-29ae-42a5-8f0a-4bc86f4e87ad</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4809,8 +5673,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/18b9d086-29ae-42a5-8f0a-4bc86f4e87ad-2024-09-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/18b9d086-29ae-42a5-8f0a-4bc86f4e87ad</td>
+		</tr>
+		<tr>
+			<td>issued</td>
 			<td>2024-09-27</td>
+		</tr>
+		<tr>
+			<td>DateLastUpdated</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4868,6 +5744,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4883,8 +5763,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -4942,6 +5834,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -4957,8 +5853,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2024-08-19</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-24</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-19</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5016,6 +5924,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5029,6 +5941,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2024-09-27</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5086,6 +6010,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5099,6 +6027,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-09-27</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5156,6 +6096,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5171,8 +6115,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/38966850-3737-4a67-953c-c231469e0489-2024-09-19</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-19</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5230,6 +6186,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5245,8 +6205,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5304,6 +6276,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5319,8 +6295,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5374,6 +6362,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5389,8 +6381,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5444,6 +6448,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5459,8 +6467,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5514,6 +6534,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5529,8 +6553,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5584,6 +6620,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5599,8 +6639,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bceae35a-52ab-4968-846f-069ace766513-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5654,6 +6706,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5669,8 +6725,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5724,6 +6792,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5739,8 +6811,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5794,6 +6878,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5809,8 +6897,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-09</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5868,6 +6968,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5883,8 +6987,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -5938,6 +7054,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -5953,8 +7073,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2024-02-08</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-08</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6012,6 +7144,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6027,8 +7163,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6082,13 +7230,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_483b36b4-53fd-4bb9-8448-82f6d9630dc1"></a>Term Name  bdqcore:483b36b4-53fd-4bb9-8448-82f6d9630dc1</th>
+			<th colspan="2"><a id="bdqcore_4a1fa336-dd47-4b60-a7b0-c958e2dc72cd"></a>Term Name  bdqcore:4a1fa336-dd47-4b60-a7b0-c958e2dc72cd</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -6097,8 +7249,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4a1fa336-dd47-4b60-a7b0-c958e2dc72cd-2023-09-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4a1fa336-dd47-4b60-a7b0-c958e2dc72cd</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6152,6 +7316,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6167,8 +7335,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6226,6 +7406,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6241,8 +7425,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6296,6 +7492,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6311,8 +7511,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6366,6 +7578,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6381,8 +7597,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-17</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6440,6 +7668,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6455,8 +7687,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6514,6 +7758,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6529,8 +7777,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6584,6 +7844,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6599,8 +7863,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6658,6 +7934,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6673,8 +7953,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2024-01-28</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-01-28</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6728,6 +8020,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6743,8 +8039,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6802,6 +8110,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6817,8 +8129,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6876,6 +8200,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6891,8 +8219,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -6950,6 +8290,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -6965,8 +8309,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7024,6 +8380,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7039,8 +8399,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7094,6 +8466,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7109,8 +8485,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7164,6 +8552,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7179,8 +8571,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2024-02-07</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-07</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7234,6 +8638,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7249,8 +8657,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7304,6 +8724,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7319,8 +8743,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7374,6 +8810,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7389,8 +8829,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7448,6 +8900,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7463,8 +8919,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7522,6 +8990,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7537,8 +9009,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-09</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7596,6 +9080,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7611,8 +9099,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2022-03-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2022-03-25</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7670,6 +9170,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7685,8 +9189,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7744,6 +9260,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7759,8 +9279,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7814,6 +9346,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7829,8 +9365,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2024-02-04</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-04</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7884,6 +9432,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7899,8 +9451,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -7954,6 +9518,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -7969,8 +9537,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8024,6 +9604,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8039,8 +9623,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-09</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8098,6 +9694,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8113,8 +9713,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8168,6 +9780,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8183,8 +9799,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8242,6 +9870,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8257,8 +9889,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8312,6 +9956,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8327,8 +9975,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8386,6 +10046,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8401,8 +10065,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8456,6 +10132,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8471,8 +10151,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8530,6 +10222,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8545,8 +10241,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2024-08-03</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-03</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8604,6 +10312,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8619,8 +10331,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2024-08-23</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-23</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8678,6 +10402,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8693,8 +10421,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8748,6 +10488,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8763,8 +10507,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8818,6 +10574,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8833,8 +10593,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8892,6 +10664,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8907,8 +10683,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -8962,6 +10750,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -8977,8 +10769,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9036,13 +10840,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_0970ea4a-ac74-4074-a4b1-f702dc100662"></a>Term Name  bdqcore:0970ea4a-ac74-4074-a4b1-f702dc100662</th>
+			<th colspan="2"><a id="bdqcore_1ede76d0-c096-465c-8bbb-08c53bf7e367"></a>Term Name  bdqcore:1ede76d0-c096-465c-8bbb-08c53bf7e367</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -9051,8 +10859,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1ede76d0-c096-465c-8bbb-08c53bf7e367-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1ede76d0-c096-465c-8bbb-08c53bf7e367</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-26</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9110,13 +10930,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_09c721c9-c678-4e5c-bfe0-e3386984d5d9"></a>Term Name  bdqcore:09c721c9-c678-4e5c-bfe0-e3386984d5d9</th>
+			<th colspan="2"><a id="bdqcore_9ff65ace-9d16-4393-b90f-9150d9628371"></a>Term Name  bdqcore:9ff65ace-9d16-4393-b90f-9150d9628371</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -9125,8 +10949,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9ff65ace-9d16-4393-b90f-9150d9628371-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9ff65ace-9d16-4393-b90f-9150d9628371</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9184,6 +11020,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9199,8 +11039,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2023-06-20</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-06-20</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9254,13 +11106,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_2f54b7c7-19cb-4d22-9f5a-6fa5265777ce"></a>Term Name  bdqcore:2f54b7c7-19cb-4d22-9f5a-6fa5265777ce</th>
+			<th colspan="2"><a id="bdqcore_fb3732c6-4199-4767-a263-0363a1fe1766"></a>Term Name  bdqcore:fb3732c6-4199-4767-a263-0363a1fe1766</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -9269,8 +11125,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fb3732c6-4199-4767-a263-0363a1fe1766-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fb3732c6-4199-4767-a263-0363a1fe1766</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9328,6 +11196,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9343,8 +11215,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9398,6 +11282,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9413,8 +11301,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9472,6 +11372,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9487,8 +11391,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9542,6 +11458,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9557,8 +11477,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9616,6 +11548,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9631,8 +11567,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9686,6 +11634,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9701,8 +11653,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9756,6 +11720,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9771,8 +11739,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9830,6 +11810,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9845,8 +11829,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/21541436-641d-45a9-938c-537484d94eb7-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9904,6 +11900,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -9919,8 +11919,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -9974,13 +11986,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_2384f645-9e0b-4e59-8054-8cf60f3443cf"></a>Term Name  bdqcore:2384f645-9e0b-4e59-8054-8cf60f3443cf</th>
+			<th colspan="2"><a id="bdqcore_c6a62914-f42e-442a-9e2b-38ccff594070"></a>Term Name  bdqcore:c6a62914-f42e-442a-9e2b-38ccff594070</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -9989,8 +12005,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c6a62914-f42e-442a-9e2b-38ccff594070-2024-09-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c6a62914-f42e-442a-9e2b-38ccff594070</td>
+		</tr>
+		<tr>
+			<td>issued</td>
 			<td>2024-09-27</td>
+		</tr>
+		<tr>
+			<td>DateLastUpdated</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10048,6 +12076,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10063,8 +12095,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10122,6 +12166,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10137,8 +12185,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2024-08-19</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-24</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-19</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10196,6 +12256,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10209,6 +12273,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2024-09-27</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10266,6 +12342,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10279,6 +12359,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-09-27</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10336,6 +12428,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10351,8 +12447,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2024-09-19</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-19</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10410,6 +12518,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10425,8 +12537,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10484,6 +12608,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10499,8 +12627,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10554,6 +12694,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10569,8 +12713,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10624,6 +12780,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10639,8 +12799,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10694,6 +12866,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10709,8 +12885,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10764,6 +12952,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10779,8 +12971,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10834,6 +13038,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10849,8 +13057,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10904,6 +13124,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10919,8 +13143,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -10974,6 +13210,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -10989,8 +13229,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-09</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11048,6 +13300,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11063,8 +13319,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11118,6 +13386,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11133,8 +13405,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2024-02-08</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-08</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11192,6 +13476,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11207,8 +13495,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11262,13 +13562,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_b2bc28c0-86aa-464f-b654-0b550d847fcd"></a>Term Name  bdqcore:b2bc28c0-86aa-464f-b654-0b550d847fcd</th>
+			<th colspan="2"><a id="bdqcore_4cf4fe57-6736-443b-afda-f7ce8ce25471"></a>Term Name  bdqcore:4cf4fe57-6736-443b-afda-f7ce8ce25471</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11277,8 +13581,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4cf4fe57-6736-443b-afda-f7ce8ce25471-2023-09-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4cf4fe57-6736-443b-afda-f7ce8ce25471</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-30</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11332,6 +13648,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11347,8 +13667,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11406,6 +13738,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11421,8 +13757,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11476,6 +13824,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11491,8 +13843,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11546,6 +13910,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11561,8 +13929,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-17</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11620,6 +14000,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11635,8 +14019,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11694,6 +14090,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11709,8 +14109,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11764,6 +14176,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11779,8 +14195,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11838,6 +14266,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11853,8 +14285,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2024-01-28</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-01-28</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11908,6 +14352,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11923,8 +14371,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -11982,6 +14442,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -11997,8 +14461,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12056,6 +14532,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12071,8 +14551,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12130,6 +14622,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12145,8 +14641,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12204,6 +14712,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12219,8 +14731,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12274,6 +14798,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12289,8 +14817,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12344,6 +14884,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12359,8 +14903,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2024-02-07</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-07</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12414,6 +14970,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12429,8 +14989,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12484,6 +15056,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12499,8 +15075,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12554,6 +15142,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12569,8 +15161,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12628,6 +15232,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12643,8 +15251,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12702,6 +15322,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12717,8 +15341,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-09</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12776,6 +15412,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12791,8 +15431,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2022-03-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2022-03-25</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12850,6 +15502,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12865,8 +15521,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12924,6 +15592,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -12939,8 +15611,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -12994,6 +15678,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13009,8 +15697,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2024-02-04</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-04</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13064,6 +15764,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13079,8 +15783,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13134,6 +15850,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13149,8 +15869,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13204,6 +15936,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13219,8 +15955,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-02-09</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13278,6 +16026,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13293,8 +16045,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13348,6 +16112,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13363,8 +16131,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13422,6 +16202,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13437,8 +16221,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13492,6 +16288,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13507,8 +16307,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13566,6 +16378,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13581,8 +16397,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13636,6 +16464,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13651,8 +16483,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13710,6 +16554,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13725,8 +16573,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2024-08-03</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-03</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13784,6 +16644,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13799,8 +16663,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2024-08-23</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-08-23</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13858,6 +16734,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13873,8 +16753,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-17</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13928,6 +16820,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -13943,8 +16839,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
+		</tr>
+		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2023-09-18</td>
 		</tr>
 		<tr>
 			<td>prefLabel</td>
@@ -13998,6 +16906,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14011,6 +16923,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14080,6 +17004,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14093,6 +17021,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14154,6 +17094,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/24</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14167,6 +17111,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14240,6 +17196,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/123</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14253,6 +17213,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-26</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14334,6 +17306,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/50</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14347,6 +17323,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14420,6 +17408,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/56</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14433,6 +17425,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2023-06-20</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14498,6 +17502,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14511,6 +17519,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2024-08-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14588,6 +17608,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/51</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14601,6 +17625,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14662,6 +17698,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14675,6 +17715,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14752,6 +17804,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14765,6 +17821,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14826,6 +17894,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14839,6 +17911,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14912,6 +17996,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -14925,6 +18013,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14990,6 +18090,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15003,6 +18107,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15060,6 +18176,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15073,6 +18193,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15142,6 +18274,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15155,6 +18291,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15224,6 +18372,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15237,6 +18389,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15302,6 +18466,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/109</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15315,6 +18483,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15384,6 +18564,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/62</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15397,6 +18581,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15478,6 +18674,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/201</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15491,6 +18691,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-08-19</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-24</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15564,6 +18776,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/21</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15577,6 +18793,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15650,6 +18878,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/42</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15663,6 +18895,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-09-27</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-27</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15732,6 +18976,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15745,6 +18993,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-19</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-18</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15814,6 +19074,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15827,6 +19091,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15912,6 +19188,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/76</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -15925,6 +19205,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15990,6 +19282,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/69</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16003,6 +19299,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16076,6 +19384,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/125</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16089,6 +19401,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16158,6 +19482,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/147</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16171,6 +19499,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16232,6 +19572,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/79</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16245,6 +19589,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16306,6 +19662,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/119</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16319,6 +19679,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16380,6 +19752,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/30</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16393,6 +19769,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16450,6 +19838,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/96</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16463,6 +19855,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16536,6 +19940,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/275</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16549,6 +19957,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16622,6 +20042,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/131</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16635,6 +20059,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-02-08</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16708,6 +20144,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/268</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16721,6 +20161,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16790,6 +20242,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16803,6 +20259,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2023-09-30</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16872,6 +20340,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16885,6 +20357,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16966,6 +20450,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/36</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -16979,6 +20467,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17044,6 +20544,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/33</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17057,6 +20561,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-16</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17130,6 +20646,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/66</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17143,6 +20663,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-17</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17216,6 +20748,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/28</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17229,6 +20765,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17302,6 +20850,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/122</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17315,6 +20867,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17372,6 +20936,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/78</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17385,6 +20953,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17458,6 +21038,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/81</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17471,6 +21055,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-01-28</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17528,6 +21124,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/216</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17541,6 +21141,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17614,6 +21226,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/187</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17627,6 +21243,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17700,6 +21328,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/112</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17713,6 +21345,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17786,6 +21430,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/107</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17799,6 +21447,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17872,6 +21532,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/39</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17885,6 +21549,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17946,6 +21622,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/108</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -17959,6 +21639,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18024,6 +21716,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/126</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18037,6 +21733,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-02-07</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18094,6 +21802,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/259</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18107,6 +21819,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18164,6 +21888,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/47</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18177,6 +21905,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18234,6 +21974,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/117</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18247,6 +21991,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18324,6 +22080,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/116</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18337,6 +22097,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18410,6 +22182,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/83</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18423,6 +22199,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18496,6 +22284,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/277</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18509,6 +22301,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2022-03-25</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18582,6 +22386,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/22</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18595,6 +22403,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18672,6 +22492,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18685,6 +22509,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18746,6 +22582,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18759,6 +22599,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-02-04</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18816,6 +22668,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/244</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18829,6 +22685,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18894,6 +22762,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/212</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18907,6 +22779,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18968,6 +22852,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/120</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -18981,6 +22869,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2024-02-09</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19054,6 +22954,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/283</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19067,6 +22971,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19140,6 +23056,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/130</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19153,6 +23073,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-25</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19226,6 +23158,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/199</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19239,6 +23175,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19300,6 +23248,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/105</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19313,6 +23265,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19386,6 +23350,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/70</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19399,6 +23367,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19460,6 +23440,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/161</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19473,6 +23457,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19546,6 +23542,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/162</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19559,6 +23559,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-08-03</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19632,6 +23644,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/285</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19645,6 +23661,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-08-23</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19722,6 +23750,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/84</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19735,6 +23767,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-04</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19800,6 +23844,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>UseCases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/49</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -19813,6 +23861,18 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>term_iri</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b</td>
+		</tr>
+		<tr>
+			<td>issued</td>
+			<td>2024-09-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19885,6 +23945,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>UseCases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>skos:historyNote</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 	</tbody>
 </table>

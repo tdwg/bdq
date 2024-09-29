@@ -182,7 +182,7 @@ for term in termLists:
 
     # Create column list - custom list for bdqcore terms.
     # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-    column_list = ["#","GUID","DateLastUpdated","Label","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","Specification","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases"]
+    column_list = ["Label","#","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","Specification","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases"]
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
@@ -211,7 +211,7 @@ for term in termLists:
             for index,row in frame.iterrows():
             # PJM: TODO: just use column list?
                 # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-                row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['Specification'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
+                row_list = [ row['Label'], row['#'], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['Specification'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
                 # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
         
                 table_list.append(row_list)
@@ -288,7 +288,7 @@ for term in termLists:
     text += '**Tests**\n'
     text += '\n'
     for row_index,row in terms_sorted_by_label.iterrows():
-        curie = "bdqcore:" + row['GUID']
+        curie = "bdqcore:" + row['term_localName']
         curie_anchor = curie.replace(':','_')
         text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
     text = text[:len(text)-2] # remove final trailing vertical bar and newline
@@ -350,7 +350,7 @@ for term in termLists:
         # row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['Specification'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
         for row_index,row in filtered_table.iterrows():
             text += '<table>\n'
-            curie =  "bdqcore:" + row['GUID']
+            curie =  "bdqcore:" + row['term_localName']
             curieAnchor = curie.replace(':','_')
             text += '\t<thead>\n'
             text += '\t\t<tr>\n'
@@ -363,12 +363,16 @@ for term in termLists:
             text += '\t\t\t<td>' + row['Label'] + '</td>\n'
             text += '\t\t</tr>\n'
             for column in column_list : 
-                if column != "GUID" and column != "#" and column != "Label" and column != "IssueState" and column != "IssueLabels" : 
+                if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column != "IssueLabels" and column!="#" : 
                     if row[column] : 
                         text += '\t\t<tr>\n'
                         text += '\t\t\t<td>{}</td>\n'.format(column)
                         text += '\t\t\t<td>{}</td>\n'.format(row[column])
                         text += '\t\t</tr>\n'
+            text += '\t\t<tr>\n'
+            text += '\t\t\t<td>skos:historyNote</td>\n'
+            text += '\t\t\t<td>https://github.com/tdwg/bdq/issues/' + str(row['#']) + '</td>\n'
+            text += '\t\t</tr>\n'
     
             ## PJM: Decisions won't apply for draft standards.
             # Look up decisions related to this term
