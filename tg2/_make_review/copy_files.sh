@@ -18,8 +18,8 @@ cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_term_versi
 # bdqcore files containing test descriptions
 
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_terms.csv
-cp ../core/TG2_tests.xml ../_review/vocabulary/bdqcore_terms.xml
-cp ../core/TG2_tests.ttl ../_review/vocabulary/bdqcore_terms.ttl
+cp ../core/TG2_tests.xml ../_review/dist/bdqcore.xml
+cp ../core/TG2_tests.ttl ../_review/dist/bdqcore.ttl
 
 # append multi-record measures to csv list of core tests
 grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqcore_terms.csv

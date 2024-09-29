@@ -32,6 +32,8 @@ Work in progress description of files in this directory:
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py)
 │   ├── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py)
 │   ├── bdqcrit.xml  Generated RDF for bdqcrit vocabulary (built with draft_build-termlist.py)
+    ├── bdqcore.xml rdf/xml serialization of rdf representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml
+    ├── bdqcore.ttl turtle serialization of rdf representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl
 │   └── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name, purpose?
 ├── docs  human readable documentation files built from files in build/
 │   ├── intro 
@@ -69,13 +71,12 @@ Work in progress description of files in this directory:
 │   │   └── index.md list of references, editable.
 │   └── supplement
 │       └── index.md Generated file, do not edit.
-└── vocabulary ?should this just be the term version files, or do the deriviative vocabulary csv, xml, owl files go here?
+└── vocabulary should just be the term version files, but not all as term version files yet
     ├── bdq_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdq_vocabulary_terms.csv
     ├── bdqdim_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdqdim_terms.csv
     ├── bdqenh_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdqenh_terms.csv
     ├── bdqcrit_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdqcrit_terms.csv
-    ├── {term}\_terms.csv files, pending conversion to term version files.  
-    ├── .xml rdf/xml files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE **
-    └── .csv files for vocabularies that will ultimately be deriviatives of term-version files ** Copy updates to here, DO NOT EDIT HERE ** 
+    ├── bdqcore_terms.csv bdqcore tests as csv file, pending conversion to term version file, copied from tg2/core/TG2_tests.csv, with multirecord measures appended  
+    └── bdqffdq.owl probably goes in dist with no csv file here
 </pre>
 
