@@ -588,6 +588,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/32</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -698,6 +714,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/54</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -795,6 +827,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/41</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -898,6 +946,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/133</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:d040474f-edc7-47b8-80a0-3a3859359897</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -995,6 +1059,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/63</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:3c402f21-5347-419c-a720-8bbad7c38577</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1098,6 +1178,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/73</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1187,6 +1283,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/48</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1290,6 +1402,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/26</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:0836e914-75d8-4cda-a39f-f21a08382732</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1387,6 +1515,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/127</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:c15d57ce-301c-4db0-8146-399cd59382ad</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1490,6 +1634,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/276</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1587,6 +1747,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/269</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1694,6 +1870,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/52</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:2bc15408-d0d0-4166-b6a6-6fdba5704379</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -1799,6 +1991,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/86</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:7c915d24-1fda-4d72-97d4-8bd5e2136c97</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -1906,6 +2114,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/93</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:8ca96a50-f1f5-4a4e-853e-755cc5aa82a7</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2012,6 +2236,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/132</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:cca7732f-c336-47b0-9d69-4514d39f5950</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:647bf697-e432-4b31-9a69-778396e14a82</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2113,6 +2353,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/61</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:381b0edb-0fb4-4a8e-a77b-badcfa286961</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment of the value of dwc:eventDate to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2216,6 +2472,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/102</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2314,6 +2586,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/60</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2408,6 +2696,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/55</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:2f73a662-b833-44ad-942c-a87f82262b7c</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2501,6 +2805,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/68</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:47bdaece-0c20-4ba3-b453-4c78b92b4c94</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2600,6 +2920,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/128</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:c1af0cfd-311e-4982-922a-dc67e0c2c975</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2698,6 +3034,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/75</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -2795,6 +3147,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/115</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2897,6 +3265,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/278</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:5e1ab035-a79f-4048-9330-e073d4b6c2c9</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3003,6 +3387,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/71</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 	</tbody>
 </table>
@@ -3114,6 +3514,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/57</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:316da14e-9477-4319-bd2c-c201f3b0f461</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:566faded-60b6-44bf-a335-dc78d5013582</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3215,6 +3631,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/284</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3318,6 +3750,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/163</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3419,6 +3867,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/286</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:05104b96-267c-432a-9f30-88552404763e</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3628,6 +4092,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/287</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:IssueMethod</td>
+			<td>urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: Are the supplied geographic coordinates within a defined buffer of the center of the country? Criterion for SingleRecord with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3722,6 +4202,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/72</td>
 		</tr>
+		<tr>
+			<td>bdqffdq:IssueMethod</td>
+			<td>urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: Is there a value in dwc:dataGeneralizations? Criterion for SingleRecord with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -3807,6 +4303,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://github.com/tdwg/bdq/issues/94</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:IssueMethod</td>
+			<td>urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: Is there a value in dwc:establishmentMeans? Criterion for SingleRecord with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
