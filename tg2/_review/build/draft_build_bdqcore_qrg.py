@@ -12,7 +12,7 @@
 # prefLabel
 # Label	
 # Resource Type
-# GUID	
+# GUID	-> now term_localName
 # DateLastUpdated	
 # Description
 # InformationElement:ActedUpon
@@ -279,7 +279,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("### ",row['Label'])
 			print()
 			print("#### ",row['prefLabel'])
-			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['GUID'],row['DateLastUpdated']))
+			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['term_localName'],row['DateLastUpdated']))
 			print("Acts upon ",row['Resource Type'])
 			print()
 			print("#### Description")
@@ -339,7 +339,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("### ",row['Label'])
 			print()
 			print("#### ",row['prefLabel'])
-			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['GUID'],row['DateLastUpdated']))
+			print("https://rs.tdwg.org/bdqcore/terms/{}/{}".format(row['term_localName'],row['DateLastUpdated']))
 			print("Acts upon ",row['Resource Type'])
 			print()
 			print("#### Description")
