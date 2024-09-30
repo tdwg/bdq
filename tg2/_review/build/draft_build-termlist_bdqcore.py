@@ -398,8 +398,8 @@ for term in termLists:
 
             sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" bdqcore:"+row['term_localName']+" .  FILTER ( ?predicate = rdfs:label ) }"
             queryResult = graph.query(sparql)
+            print(sparql)
             for r in queryResult : 
-                print(sparql)
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>bdqffdq:'+testType+'Method</td>\n'
                 text += '\t\t\t<td>' + str(r['method']) + '</td>\n'
