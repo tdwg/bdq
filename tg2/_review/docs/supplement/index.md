@@ -238,6 +238,34 @@ A "Warning Type" for each test was originally envisioned to provide insight into
 
 Caption: Data Quality Dimension vs Warning Type (as of 2023) with the number of tests as cell values. 
 
+The following sparql query to count tests by type and data quality dimension: 
+<pre>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+PREFIX bdqcore: <https://rs.tdwg.org/bdqcore/terms/>
+SELECT (count(?test) as ?ct) ?dimension ?testType
+WHERE {
+?test bdqffdq:hasDataQualityDimension ?dimension .
+?test rdf:type ?testType .
+FILTER (?testType != owl:NamedIndividual)
+}
+GROUP BY ?dimension ?testType
+</pre>
+
+Gives the following distribution of test types by Dimension:
+
+| Data Quality Dimension | Validation | Amendment | Issue | Measure | 
+| ---------------------- | ---------- | --------- | ----- | ------- | 
+| Conformance   | 41 | 17 | 1 |   | 
+| Consistency   | 7  | 1  |   |   | 
+| Completeness  | 22 | 11 | 1 | 1 | 
+| Likelyness    | 2  |    |   |   | 
+| Resolution    |    |    | 1 | 1 | 
+| Reiability    |    |    |   | 2 | 
+
 ### 3.2 Types of Test
 
 The types of test in bdqcore are identified by the bdqffdq classes of Validation, Issue, Amendment and Measure. 
