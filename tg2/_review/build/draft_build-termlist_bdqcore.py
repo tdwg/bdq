@@ -13,6 +13,8 @@ import csv        # library to read/write/parse CSV files
 import json       # library to convert JSON to Python data structures
 import pandas as pd  # library to handle data loaded from csv as data frames
 import yaml       # Library to parse yaml files
+import rdflib     # run sparql queries on rdf 
+from rdflib import Graph
 
 # -----------------
 # Configuration section
@@ -21,6 +23,17 @@ import yaml       # Library to parse yaml files
 # This is a Python list of the names of the term lists for which documents are to be produced.
 # One set of documents is produced for each term.  See assumptions below.
 termLists = ['bdqcore']
+
+# The RDF representation of the tests.
+testRdfDocument = 'https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/dist/bdqcore.xml'
+prefixes = """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+PREFIX bdqcore: <https://rs.tdwg.org/bdqcore/terms/>
+"""
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -160,6 +173,13 @@ for termList in termLists:
     term_lists_info.append(term_list_dict)
 print(term_lists_info)
 print()
+
+# ---------------
+# Load rdf
+# ---------------
+
+graph = rdflib.Graph()
+graph.parse(testRdfDocument, format="xml")
 
 # ---------------
 # Create metadata table and populate using data from namespace databases in GitHub
@@ -373,6 +393,31 @@ for term in termLists:
             text += '\t\t\t<td>skos:historyNote</td>\n'
             text += '\t\t\t<td>https://github.com/tdwg/bdq/issues/' + str(row['#']) + '</td>\n'
             text += '\t\t</tr>\n'
+
+            testType = row['Type']
+
+            sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" bdqcore:"+row['term_localName']+" .  FILTER ( ?predicate = rdfs:label ) }"
+            if testType=="Amendment" :
+                print(sparql)
+            queryResult = graph.query(sparql)
+            for r in queryResult : 
+                text += '\t\t<tr>\n'
+                text += '\t\t\t<td>bdqffdq:'+testType+'Method</td>\n'
+                text += '\t\t\t<td>' + str(r['method']) + '</td>\n'
+                text += '\t\t</tr>\n'
+                text += '\t\t<tr>\n'
+                text += '\t\t\t<td>'+testType+'Method label</td>\n'
+                text += '\t\t\t<td>' + str(r['label']) + '</td>\n'
+                text += '\t\t</tr>\n'
+                text += '\t\t<tr>\n'
+                text += '\t\t\t<td>bdqffdq:Specification</td>\n'
+                text += '\t\t\t<td>' + str(r['specification']) + '</td>\n'
+                text += '\t\t</tr>\n'
+                text += '\t\t<tr>\n'
+                text += '\t\t\t<td>Specification label</td>\n'
+                text += '\t\t\t<td>' + str(r['specificationLabel']) + '</td>\n'
+                text += '\t\t</tr>\n'
+               
     
             ## PJM: Decisions won't apply for draft standards.
             # Look up decisions related to this term
