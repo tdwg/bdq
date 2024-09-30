@@ -342,7 +342,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</skos:prefLabel>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
-	<hasDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Reliability"/>
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Reliability"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
@@ -3358,7 +3358,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</skos:prefLabel>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
-	<hasDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
@@ -3388,7 +3388,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEASURE_VALIDATIONTESTS_COMPLIANT</skos:prefLabel>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
-	<hasDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Reliability"/>
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Reliability"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
@@ -3418,7 +3418,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The duration of a day is 86400 seconds. Implementations should treat all days as 86400 seconds, but should include leap days (but not leap seconds) in durations that encompass them.  Consumers should treat assertions about event date duration as approximations, see: https://xkcd.com/2867/</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEASURE_EVENTDATE_DURATIONINSECONDS</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac"/>
-	<hasDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Resolution"/>
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Resolution"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
@@ -4243,40 +4243,6 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:Biotic-Relationships</rdfs:label>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships</rdfs:label>
-	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships</skos:prefLabel>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985"/>
-</rdf:Description>
-
 <rdf:Description rdf:about="urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationPolicy: (69) validations  in UseCase bdq:Record-Management</rdfs:label>
@@ -4353,6 +4319,50 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Alien-Species">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:Alien-Species</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species</rdfs:label>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species</skos:prefLabel>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Taxon-Management">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:Taxon-Management</rdfs:label>
@@ -4396,19 +4406,6 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:10e8008c-c947-4327-867e-7899de98eb2c">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentPolicy: (7) amendments  in UseCase bdq:Biotic-Relationships</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908"/>
-</rdf:Description>
-
 <rdf:Description rdf:about="urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentPolicy: (28) amendments  in UseCase bdq:Record-Management</rdfs:label>
@@ -4443,11 +4440,20 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssuePolicy: (1) issues  in UseCase bdq:Biotic-Relationships</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700"/>
+<rdf:Description rdf:about="urn:uuid:10e8008c-c947-4327-867e-7899de98eb2c">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentPolicy: (10) amendments  in UseCase bdq:Alien-Species</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86">
@@ -4455,6 +4461,13 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssuePolicy: (1) issues  in UseCase bdq:Record-Management</rdfs:label>
 	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Record-Management"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IssuePolicy: (1) issues  in UseCase bdq:Alien-Species</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700"/>
 </rdf:Description>
 
 </rdf:RDF>

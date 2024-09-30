@@ -259,7 +259,7 @@
 	skos:note "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass)." ;
 	skos:prefLabel "MEASURE_VALIDATIONTESTS_NOTCOMPLIANT" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Reliability> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Reliability> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
 <urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd> a <https://rs.tdwg.org/bdqffdq/terms/Consulted> ;
@@ -2474,7 +2474,7 @@
 	skos:note "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass)." ;
 	skos:prefLabel "MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Completeness> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
 <urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
@@ -2498,7 +2498,7 @@
 	skos:note "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass)." ;
 	skos:prefLabel "MEASURE_VALIDATIONTESTS_COMPLIANT" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Reliability> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Reliability> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
 <urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
@@ -2522,7 +2522,7 @@
 	skos:note "The duration of a day is 86400 seconds. Implementations should treat all days as 86400 seconds, but should include leap days (but not leap seconds) in durations that encompass them.  Consumers should treat assertions about event date duration as approximations, see: https://xkcd.com/2867/" ;
 	skos:prefLabel "MEASURE_EVENTDATE_DURATIONINSECONDS" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasDimension> <bdqdim:Resolution> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Resolution> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
 <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
