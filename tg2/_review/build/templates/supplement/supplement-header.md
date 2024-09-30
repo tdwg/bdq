@@ -169,6 +169,43 @@ And another that lists the valuable information elements for a use case:
     
     }
 
+Summary of the distribution of tests by Data Quality Dimension and specific Darwin Core Terms in InformationElements ActedUpon: 
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX bdqcore: <https://rs.tdwg.org/bdqcore/terms/>
+    SELECT (count(?test) as ?ct) ?dimension ?sie
+    WHERE {
+       ?ie bdqffdq:composedOf ?sie .
+       ?test bdqffdq:hasActedUponInformationElement ?ie .
+       ?test bdqffdq:hasDataQualityDimension ?dimension .
+       ?test rdf:type ?testType .
+       FILTER (?testType != owl:NamedIndividual)
+    }
+    GROUP BY ?sie ?dimension
+    ORDER BY ?sie ?dimension
+
+Summary of the distribution of tests by test Type and specific Darwin Core Terms in InformationElements ActedUpon: 
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX bdqcore: <https://rs.tdwg.org/bdqcore/terms/>
+    SELECT (count(?test) as ?ct) ?testType ?sie
+    WHERE {
+        ?ie bdqffdq:composedOf ?sie .
+        ?test bdqffdq:hasActedUponInformationElement ?ie .
+        ?test rdf:type ?testType .
+        FILTER (?testType != owl:NamedIndividual)
+    }
+    GROUP BY ?sie ?testType
+    ORDER BY ?sie ?testType
+
 ## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2 was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized that any software was likely to be far less stable than defining a core suite of tests, so the software component was dropped.
