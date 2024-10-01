@@ -226,11 +226,9 @@ Over the course of the development of the tests, we encountered significant diff
 
 ### 3.1 Tests and Data Dimensions
 
-We identified four categories of information elements of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord).  
+We identified four categories of information elements of biodiversity-related data that we needed to cover with the tests: Name (taxonomic information); space (geographic location); time (temporal terms) and other (all other terms such as dwc:basisOfRecord).  A record without a taxonomic name, a location or a date has limited value for many research uses (but may be fit for use for others).
 
-A record without a taxonomic name, a location or a date has limited value for many research uses (but may be fit for use for others).
-
-Three tests in bdqcore: specifically identify records with no name, space or time values.
+Three tests in this standard specifically target records with no name information, no spatial information or no temporal information.
 
 ### 3.2 Data Quality Dimension and 'Warning Types'
 
@@ -272,9 +270,9 @@ Gives the following distribution of test types by Dimension:
 | Conformance   | 41 | 17 | 1 |   | 
 | Consistency   | 7  | 1  |   |   | 
 | Completeness  | 22 | 11 | 1 | 1 | 
-| Likelyness    | 2  |    |   |   | 
+| Likeliness    | 2  |    |   |   | 
 | Resolution    |    |    | 1 | 1 | 
-| Reiability    |    |    |   | 2 | 
+| Reliability    |    |    |   | 2 | 
 
 ### 3.2 Types of Test
 
@@ -286,25 +284,21 @@ During the development of the tests, there were significant discussions about ho
 
 **Issues** are a form of warning flag where the test is drawing attention to potential problem with the value of a Darwin Core term for at least one use case. Issues can result in a Response.status of "RUN_HAS_RESULT" accompanied by a Response.result of IS_ISSUE, "POTENTIAL_ISSUE" or "NOT_ISSUE".  ISSUE is the equivalent to NOT_COMPLIANT from a Validation.  NOT_ISSUE is similar to COMPLIANT from a Validation, but with slightly different semantics, COMPLIANT means that the data is fit for some use, NOT_ISSUE means that no reason was found for the data not to be fit for use.  POTENTIAL_ISSUE is the reason we incorporated Issues into bdqffdq.   POTENTIAL_ISSUE means that the Issue found a concern in the data that might make it unfit for some use, but that human evaluation of the details of the data and the use are needed.  Data flagged with potential issues require a human review.  For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result of POTENTIAL_ISSUE if dwc:dataGeneralizations contains a value, as the actual value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review in the context of a particular use of the data to determine whether the data are fit for purpose or not.
 
-**Amendments** may propose a change to an existing Darwin Core value or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment is a proposal for a change, not to be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses may choose to (blindly or after analysis) accept all proposed amendments as part of a pipeline in preparing data for an analysis.
+**Amendments** may propose a change to an existing Darwin Core value or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment is a proposal for a change, not to be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses may choose to (blindly - not recommended, or after analysis) accept all proposed amendments as part of a pipeline in preparing data for an analysis. We urge that Amendments not overwrite existing information within a database but to preserve the old information as well as the new.
 
 The Framework also supports Amendments where the Response.result is a proposal to changes in procedures, such as suggesting that a constraint should be placed on a database field to restrict allowed values, or that a mapping of a data set onto Darwin Core terms has transposed a set of fields, or some other process related change.   We have not framed any such tests in this form, nor have we considered how such assertions should be represented in a Response.result. 
 
 **Placeholder for link to annotations as related to AMENDMENTS?**
 
-A Measure returns a numeric value or COMPLETE/NOT_COMPLETE as the Response.result. Most SingleRecord Measures defined here count the number of Validation or Amendment tests with a specifified Response.Result in a SingleRecord.  These are intended to assist in QualityControl.  MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the Validations and Amendments and in one case provides an indication of the length of the period of the value of dwc:eventDate.
+ **Measures** may apply to a single record (bdqffdq:SingleRecord), or can be accumulated across multiple records (bdqffdq:MultiRecords). A Measure returns a numeric value of COMPLETE or NOT_COMPLETE as the Response.result. Most SingleRecord Measures defined here count the number of Validation or Amendment tests with a specifified Response.Result in a SingleRecord.  
+ 
+SingleRecord MEASUREs within bdqcore: are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS.  Of these, MEASURE_EVENTDATE_DURATIONINSECONDS is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases, for example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temoral resolution of about a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  The other SingleRecord measures in bdqcore take the Responses from other tests as their input and are intended for Quality Control uses to group records by number of data quality concerns present.   
 
-**Measures** may apply to a single record (bdqffdq:SingleRecord), or can be accumulated across multiple records (bdqffdq:MultiRecords). 
-
-SingleRecord MEASUREs within bdqcore: are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS.   Of these, MEASURE_EVENTDATE_DURATIONINSECONDS is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases, for example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temoral resolution of about a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  
-
-The other SingleRecord measures in bdqcore take the Responses from other tests as their input and are intended for Quality Control uses to group records by number of data quality concerns present.   
-
-For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not. Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes. Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.
+All tests could be accumulated across multiple records (bdqffdq:MultiRecords). For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.  
 
 Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE. 
 
-All tests could be accumulated across multiple records (bdqffdq:MultiRecords). For each bdqffdq:SingleRecord Validation, there is a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures.    
+ **Placeholder to add information on Multi Record Measure Count Tests **
 
 ### 3.3 Domain Scope of Tests
 
