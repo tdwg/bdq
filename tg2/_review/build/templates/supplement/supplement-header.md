@@ -333,11 +333,11 @@ Tests in bdqcore: are paired in that Amendments have a corresponding Validation 
 
 ### 3.7 Input Data Values for AMENDMENTS
 
-One early conclusion to this project was the need for controlled vocabularies and an early spin-off of the Data Qality Task Group 4 on Best Practice for Development of Vocabularies of Value (https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core encoded data is made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
+One early conclusion to this project was the need for controlled vocabularies and led to an early spin-off of the Data Qality Task Group 4: Best Practice for Development of Vocabularies of Value (https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core encoded data is made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
 
-Testing Darwin Core values against a known Source Authority using a VALIDATION type test is straight forward: A test is either COMPLIANT or NOT COMPLIANT. The BDQ Core standard also includes tests of type AMENDMENT and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a VALIDATION returns COMPLIANT, no AMENDMENT is necessary. For example, if the input value to a test is say dwc:sex="Female", then no AMENDMENT is required. If however, the input value is dwc:sex="f.", can this be interpreted as "Female"? Probably. What about dwc:sex="M"? This could be interpreted as "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. GBIF currently treats this as "Male" but without a comprehensive synonymy with the vocabularies, one cannot always be certain that this is the case. A key phrase within this standard that particularly relates to many of the Expected Responses of tests is " dwc:term can be unambiguously interpreted as ...". In the case above for dwc:sex="M", the determination is that it is ambiguous. In this case, no AMENDMENT can be made.
+Testing Darwin Core values against a known Source Authority using a VALIDATION type test is straight forward: A test is either COMPLIANT or NOT COMPLIANT. The BDQ Core standard also includes tests of type AMENDMENT and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a VALIDATION returns COMPLIANT, no AMENDMENT is necessary. For example, if the input value to a test is say dwc:sex="Female", then no AMENDMENT is required. If however, the input value is dwc:sex="f.", can this be interpreted as "Female"? Probably. What about dwc:sex="M"? This could be interpreted as "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. GBIF currently treats this as "Male" but without a comprehensive synonymy with the vocabularies, one cannot always be certain that this is the case. A key phrase within this standard that particularly relates to many of the Expected Responses of tests is " dwc:term can be unambiguously interpreted as ...". In the case above for dwc:sex="M", the determination is that it is ambiguous, and in this case, no AMENDMENT can be made.
 
-We see an urgent need for a comprehensive, internationally agreed list of Darwin Core (https://dwc.tdwg.org/) term values that are mapped to standard values. GBIF has implemented some unique values, for example https://api.gbif.org/v1/vocabularies/Sex/concepts/Female/hiddenLabels, but such lists are not comprehensive. While there has been a survey of Darwin Core 'distinct' values for GBIF, ALA, iDigBio and VertNet, these are both dated, and where possible, have not been mapped to standard values, if they exist.
+We see an urgent need for a comprehensive, internationally agreed list of Darwin Core (https://dwc.tdwg.org/) term values that are mapped to standard values. GBIF has implemented some unique values, for example https://api.gbif.org/v1/vocabularies/Sex/concepts/Female/hiddenLabels, but such lists are not comprehensive. While there has been a survey of Darwin Core 'distinct' values for GBIF, ALA, iDigBio and VertNet, these are dated, and where possible, have not been mapped to standard values, if they exist.
 
 When carrying out Amendments where numeric vales are concerned (e.g. feet to meters, etc.) the principle of reversability is paramount, and thus rounding up or down or using approximations should be avoided and only exact values used.
 
@@ -345,19 +345,9 @@ In this standard, we have taken an expedient approach in relation to making AMEN
 
 ### 3.8 Amendments and Annotations
 
-This is from @chicoreus last comment on https://github.com/tdwg/bdq/issues/113 and is placed here for completeness and discussion.
+The BDQ Core Standard follows the W3C Annotation Data Model (W3C 2017) for reporting the results from tests, including Amendment Tests. This provides a Response.status, a Response.result and a Response.comment.
 
-"An approach to this is to assert that Amendments only propose changes, and then it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when changes are made into a database of record, the Response.comment from the Amendment is available for them to add to the modified record when they accept the amendment.
-
-This approach is probably broader than appending values into Remarks terms as part of the proposed change, as such metadata in the Response.result would duplicate the metadata found in the Response.comment, but only in a small number of cases where Remarks terms are available, and raising the concerns of order of actions noted above.
-
-Thus most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an amendment, and add that as desired to their representation of the data".
-
-This is from https://github.com/tdwg/bdq/issues/149 last comment by @ymgan as it seems related and, as noted, needs some text...
-
-"Thanks @ArthurChapman ! I think it could helpful to be documented somewhere. We got the same question in the OBIS community and it was also asked during the panel session in TDWG conference last year.
-
-I did got confuse a little whether this is something that the TDWG Annotations IG is working on and whether there is something concrete that people can already do. I remember @chicoreus mentioned about the use of W3C annotation data model about this."
+The AMENDMENT tests in the BDQ Core Standard only propose changes, and it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when and what changes are made into a database of record. The most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an Amendment, and add that to their representation of the data".
 
 ### 3.9 Aspirational Aspects of some Tests
 
