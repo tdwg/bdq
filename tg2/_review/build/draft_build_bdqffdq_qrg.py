@@ -65,12 +65,14 @@ year = document_configuration_yaml['doc_modified'].split('-')[0]
 graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 
-text = "- [Classes](#Class-terms)\n"
-text = text + "- [Named Individuals](#NamedIndividual-terms)\n"
+text = "\n"
+text = text + "- [Classes](#Class-terms)\n"
 text = text + "- [Object Properties](#ObjectProperty-terms)\n"
-text = text + "- [Data Properties](#DataProperty-terms)\n\n"
+text = text + "- [Data Properties](#DataProperty-terms)\n"
+text = text + "- [Named Individuals](#NamedIndividual-terms)\n"
+text = text + "\n"
 
-text = text + "## Alphabetical Index of classes]\n\n"
+text = text + "## Alphabetical Index of classes\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -78,7 +80,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "## Alphabetical Index of object properties]\n\n"
+text = text + "## Alphabetical Index of object properties\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -86,7 +88,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "## Alphabetical Index of data properties]\n\n"
+text = text + "## Alphabetical Index of data properties\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -94,7 +96,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "## Alphabetical Index of named individuals]\n\n"
+text = text + "## Alphabetical Index of named individuals\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -114,7 +116,7 @@ for r in queryResult :
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	text = text + "- Notes: {}\n".format(r.comment.replace("\n","  \n"))
+	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "## ObjectProperty terms\n"
@@ -129,7 +131,7 @@ for r in queryResult :
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	text = text + "- Notes: {}\n".format(r.comment.replace("\n","  \n"))
+	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "## DataProperty terms\n"
@@ -143,7 +145,23 @@ for r in queryResult :
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
-	text = text + "- Notes: {}\n".format(r.comment.replace("\n","  \n"))
+	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "\n********************\n\n"
+
+text = text + "## NamedIndividual terms\n"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?subject"
+queryResult = graph.query(sparql)
+for r in queryResult : 
+	entity = r.subject
+	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+	term = entity.replace("bdqffdq:","");
+	text = text + "### {}\n\n".format(term)
+	text = text + "- Name: {}\n".format(entity)
+	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+	text = text + "- Type: {}\n".format(rtype)
+	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+	text = text + "- Definition: {}\n".format(r.definition)
+	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 # Load footer 
