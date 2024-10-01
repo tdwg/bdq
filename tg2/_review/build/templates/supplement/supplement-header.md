@@ -298,13 +298,11 @@ All tests could be accumulated across multiple records (bdqffdq:MultiRecords). F
 
 Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE. 
 
-**Placeholder to add information on MultiRecord Measure Count Tests**
+We have also defined MultiRecord Measures that take the Response objects from other tests as their input Information Elements, for example, to to return a count of Response.value of COMPLIANT for a Validation across a data set, thus providing a measure of how fit a data set is for some purpose. 
 
 ### 3.3 Domain Scope of Tests
 
 The domain scope of each test is also largely provided by the bdqffdq:DataQualityNeed. The Darwin Core terms evaluated by each test are expressed as specific bdqffdq:InformationElements. The bdqffdq:Specification provides details of how to evaluate values of the information elements, but also includes references to external (to the Darwin Core standard) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource (e.g. API) required for the implementation of the test.
-
-Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not to impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests on data records in parallel, on data records in sequence, as queries on data sets, or on unique values.
 
 ### 3.4 Parameterising the tests
 
@@ -322,15 +320,13 @@ Parameters are not intended to relax the definition of data having quality for C
 
 ### 3.5 Independence and Paired tests
 
-To the best of our abilities, we have designed each test to stand alone.  This is by design to support the mixing and matching of these and other tests to meet particular data quality needs, and not impose any particular model of test execution on implementation frameworks.  The specification of interdependencies among tests would impose constraints upon test execution frameworks.  Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.  For a subset of amendments, we do provide guidance on execution order to produce deterministic results.
+To the best of our abilities, we have designed each test to stand alone.  This is by design to support the mixing and matching of these and other tests to meet particular data quality needs, and not impose any particular model of test execution on implementation frameworks.  The specification of interdependencies among tests would impose constraints upon test execution frameworks.  Implementations of test execution frameworks may execute tests on data records in parallel, on data records in sequence, as queries on data sets, or on unique values.  For a subset of amendments, we do provide guidance on execution order to produce deterministic results.
 
-Tests in bdqcore: are paired in that Amendments have a corresponding Validation that assesses the same aspect of data quality. An Amendment may be able to improve the quality of data with respect to that Validation. The bdqffdq: framework contains terms for expressing such formal relationships among tests, we have chosen not to specify these to allow users to more flexibly mix and match tests to their own data quality needs.  
-
-We have also defined MultiRecord Measures that take the Response objects from other tests as their input information elements, for example, to to return a count of Response.value of COMPLIANT for a Validation across a data set, and thus provide a measure of how fit a data set is for some purpose.  Other than specifying the InformationElements, we do not provide another formal description of how pairs of such tests are related.   
+Tests in bdqcore: are paired in that Amendments have a corresponding Validation that assesses the same aspect of data quality. An Amendment may be able to improve the quality of data with respect to that Validation. The bdqffdq framework contains terms for expressing such formal relationships among tests, we have chosen not to specify these to allow users to more flexibly mix and match tests to their own data quality needs.  
 
 ### 3.6 Considerations for use of MultiRecord Measures
 
-MultiRecord tests examine data across multiple records, a data set. The BDQ Core MultiRecord Measures all take the output of other tests as their input rather than data.  The inputs, that is the InformationElements, for these Measures in bdqcore: are the outputs of SingleRecord Validations.  
+MultiRecord tests examine data across multiple records, a data set. The BDQ Core MultiRecord Measures all take the output of other tests as their input rather than data.  The inputs, that is the Information Elements, for these Measures in bdqcore: are the outputs of SingleRecord Validations.  
 
 One subset of these measures simply counts the Responses from a given Validation that have Response.result of COMPLIANT.  For QualityControl, these numbers identify where work is needed to make more of a data set fit for use for a given UseCase.  These MultiRecord Measures that return counts can be run before an amendment step in a data processing pipeline, and run again after applying all of the proposed changes to the data from the Amendments to the data set.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data for a given UseCase.
 
