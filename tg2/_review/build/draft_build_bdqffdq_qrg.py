@@ -75,19 +75,36 @@ queryResult = graph.query(sparql)
 for r in queryResult : 
 	term = r.subject
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}]({})\n".format(term,term)
+	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "## Class terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:subClassOf ?parent } GROUP BY ?subject ?prefLabel ?definition ORDER BY ?subject"
+text = text + "\n## Class terms\n"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:subClassOf ?parent . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	text = text + "###{}\n\n".format(entity)
+	term = entity.replace("bdqffdq:","");
+	text = text + "### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+	text = text + "- Notes:\n{}\n".format(r.comment)
+	text = text + "\n********************\n\n"
+
+text = text + "## ObjectProperty terms\n"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:subPropertyOf ?parent . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+queryResult = graph.query(sparql)
+for r in queryResult : 
+	entity = r.subject
+	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+	term = entity.replace("bdqffdq:","");
+	text = text + "### {}\n\n".format(term)
+	text = text + "- Name: {}\n".format(entity)
+	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+	text = text + "- Definition: {}\n".format(r.definition)
+	text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+	text = text + "- Notes:\n{}\n".format(r.comment)
 	text = text + "\n********************\n\n"
 
 # Load footer 
