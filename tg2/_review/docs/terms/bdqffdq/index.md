@@ -15,6 +15,10 @@ Further details are in the overview at [BDQ Core Introduction](../../intro/index
 
 If you have questions or suggestions, submit these to the [BDQ Core Issues](https://github.com/tdwg/bdq/issues) page in GitHub. See the bottom of this document for how to cite BDQ Core.
 
+A diagram showing the intended relationships of the main classes and data properties is below, for more diagrams and explanation of the ontology see the [bdqffdq Framework Users Guide](../../guide/bdqffdq/index.md).  
+
+![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
+
 # Indexes 
 
 
