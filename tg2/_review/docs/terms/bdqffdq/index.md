@@ -1011,13 +1011,24 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 ********************
 
 ## NamedIndividual terms
-### AMENDED
+### MultiRecord
 
-- Name: bdqffdq:AMENDED
-- Type: bdqffdq:ResponseStatus
-- Preferred Label: AMENDED
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
-- Notes: AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
+- Name: bdqffdq:MultiRecord
+- Type: bdqffdq:ResourceType
+- Preferred Label: Multi Record
+- Definition: A set of one or more Single Records.
+- Notes: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset
+
+********************
+
+### SingleRecord
+
+- Name: bdqffdq:SingleRecord
+- Type: bdqffdq:ResourceType
+- Preferred Label: Single Record
+- Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need.
+- Notes: A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).  
+A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset
 
 ********************
 
@@ -1038,26 +1049,6 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Preferred Label: IS_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use.
 - Notes: This is a parallel assertion to NOT_COMPLIANT
-
-********************
-
-### MultiRecord
-
-- Name: bdqffdq:MultiRecord
-- Type: bdqffdq:ResourceType
-- Preferred Label: Multi Record
-- Definition: A set of one or more Single Records.
-- Notes: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset
-
-********************
-
-### NOT_AMENDED
-
-- Name: bdqffdq:NOT_AMENDED
-- Type: bdqffdq:ResponseStatus
-- Preferred Label: NOT_AMENDED
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.
-- Notes: No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties.
 
 ********************
 
@@ -1091,6 +1082,26 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
+### AMENDED
+
+- Name: bdqffdq:AMENDED
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: AMENDED
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
+- Notes: AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
+
+********************
+
+### NOT_AMENDED
+
+- Name: bdqffdq:NOT_AMENDED
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: NOT_AMENDED
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.
+- Notes: No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties.
+
+********************
+
 ### RUN_HAS_RESULT
 
 - Name: bdqffdq:RUN_HAS_RESULT
@@ -1098,17 +1109,6 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Preferred Label: RUN_HAS_RESULT
 - Definition: A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.
 - Notes: Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
-
-********************
-
-### SingleRecord
-
-- Name: bdqffdq:SingleRecord
-- Type: bdqffdq:ResourceType
-- Preferred Label: Single Record
-- Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need.
-- Notes: A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).  
-A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset
 
 ********************
 
