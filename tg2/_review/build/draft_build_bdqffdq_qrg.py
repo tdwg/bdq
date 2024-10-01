@@ -105,7 +105,7 @@ for r in queryResult :
 	text = text + "[{}](#{})\n".format(term,term)
 
 text = text + "\n## Class terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:subClassOf ?parent . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -120,7 +120,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "## ObjectProperty terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:subPropertyOf ?parent . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent }  . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -135,7 +135,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "## DataProperty terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment WHERE {  ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment }  ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment }  ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
