@@ -304,7 +304,7 @@ Data are found to be fit for some use if all Validations comprising that Use hav
 
 The domain scope of each test is also largely provided by the bdqffdq:DataQualityNeed. The Darwin Core terms evaluated by each test are expressed as specific bdqffdq:InformationElements. The bdqffdq:Specification provides details of how to evaluate values of the information elements, but also includes references to external (to the Darwin Core standard) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource (e.g. API) required for the implementation of the test.
 
-Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.
+Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not to impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests on data records in parallel, on data records in sequence, as queries on data sets, or on unique values.
 
 ### 3.4 Parameterising the tests
 
