@@ -115,7 +115,8 @@ for r in queryResult :
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
-	text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+	if (r.parents) :
+		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
@@ -130,7 +131,8 @@ for r in queryResult :
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
-	text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+	if (r.parents) :
+		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
@@ -149,7 +151,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "## NamedIndividual terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . OPTIONAL { ?subject owl:differentFrom ?differentFrom }  }  ORDER BY ?type ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -160,6 +162,9 @@ for r in queryResult :
 	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	text = text + "- Type: {}\n".format(rtype)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+	if (r.differentFrom) :
+		different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+		text = text + "- DifferentFrom: {}\n".format(different)
 	text = text + "- Definition: {}\n".format(r.definition)
 	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
