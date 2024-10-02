@@ -188,10 +188,7 @@ Under the original formulation of the Framework, only Measures have Dimensions."
                                           :issueProperty ,
                                           :measurementProperty ,
                                           :validationProperty ;
-                       rdfs:domain [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasInformationElement ;
-                                     owl:someValuesFrom :InformationElement
-                                   ] ;
+                       rdfs:range :InformationElement ;
                        rdfs:comment """Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
 
 Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).""" ;
@@ -202,7 +199,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasParameter
 :hasParameter rdf:type owl:ObjectProperty ;
-              rdfs:domain :Parameter ;
+              rdfs:range :Parameter ;
               rdfs:comment "Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification."@en ;
               rdfs:label "has Parameter"@en ;
               skos:definition "Parameter that can alter the behavior of a Specification."@en ;
@@ -262,7 +259,10 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasUseCase
 :hasUseCase rdf:type owl:ObjectProperty ;
-            rdfs:domain :UseCase ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasUseCase ;
+                          owl:someValuesFrom :UseCase
+                        ] ;
             rdfs:comment "Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase." ;
             rdfs:label "has Use Case" ;
             skos:definition "Relates a Policy to a UseCase." ;
@@ -337,10 +337,10 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedIssue
 :targetedIssue rdf:type owl:ObjectProperty ;
-               rdfs:range [ rdf:type owl:Restriction ;
-                            owl:onProperty :targetedIssue ;
-                            owl:someValuesFrom :ImprovementTarget
-                          ] ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :targetedIssue ;
+                             owl:someValuesFrom :Issue
+                           ] ;
                rdfs:comment "The issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an improvement target and an Issue." ;
                rdfs:label "targeted Issue" ;
                skos:definition "Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget." ;
@@ -412,6 +412,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
 :hasResponseComment rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
                     rdfs:comment "Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment." ;
                     rdfs:label "has Response Comment" ;
                     skos:definition "Free text describing the assertion made in the response and why that conclusion was reached." ;
@@ -420,8 +421,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 :hasResponseResultValue rdf:type owl:DatatypeProperty ;
-                        rdfs:range xsd:double ;
-                        rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input)." ;
+                        rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value." ;
                         rdfs:label "has response result value" ;
                         skos:definition "Data property carrying the value of an Assertion when not an object." ;
                         skos:prefLabel "has response result value" .
