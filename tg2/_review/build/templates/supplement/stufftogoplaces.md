@@ -4,7 +4,7 @@ Much of this goes in supplementary information or the guides.
 
 Delete from here once moved elsewhere.
 
-## 7. Implications for the Darwin Core Standard (John)
+## 7 Implications for the Darwin Core Standard (John)
 
 Early recognition that estimating 'fitness for use'/'quality was made difficult because of the lack of vocabularies...TG4.
 
