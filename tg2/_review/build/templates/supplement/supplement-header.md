@@ -391,7 +391,9 @@ if (DateUtils.isEmpty(eventTime)) {
         }
 }
 
-See: https://xkcd.com/2867/ and  https://www.xkcd.com/1883/
+![image]([https://github.com/user-attachments/assets/84d3f87b-1dc5-4fe2-b0d6-d54f753f0bfb](https://xkcd.com/2867/))
+
+From xkcd (https://xkcd.com/2867/)
 
 ## 5 Rationale Management Documentation
 
