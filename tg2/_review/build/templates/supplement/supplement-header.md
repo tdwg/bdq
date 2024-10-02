@@ -391,7 +391,7 @@ if (DateUtils.isEmpty(eventTime)) {
         }
 }
 
-![image]([https://github.com/user-attachments/assets/84d3f87b-1dc5-4fe2-b0d6-d54f753f0bfb](https://xkcd.com/2867/))
+![image](https://github.com/user-attachments/assets/12fcefcc-6a49-4af8-bf96-60df9a0dcb9d)
 
 From xkcd (https://xkcd.com/2867/)
 
