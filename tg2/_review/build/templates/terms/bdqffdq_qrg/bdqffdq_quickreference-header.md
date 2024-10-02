@@ -5,7 +5,7 @@
 
 <!--- Note: This document deliberately diverges from many of the SHOULD expecations of section 3.2.3 Layout and style of the SDS for the express purpose of simplicity.  Some header values have been included in the first paragraph of text, others have been omitted, a table of contents has been omitted, the introduction and abstract are combined, the introduction is not given a heading, and, in consequence, headings are not numbered. --->
 
-This document is intended to be an easy-to-read reference (as of {doc_modified}) of the bdqffdq ontology for describing biodiversity data quality maintained as part of the TDWG standard [BDQ Core]({standard_iri}) produced by the {creator} and is maintained by the {maintainer}. This document lists the terms in the bdqffdq: namespace below. Definitions, comments, and examples may include namespace abbreviations (e.g., "bdq:", “bdffdq:”). These are reequired as the meaning for the word is defined specifically in that namespace.
+This document is intended to be an easy-to-read reference (as of {doc_modified}) of the bdqffdq ontology, which provides a framework for describing data quality.  The bdqffdq ontology is maintained as part of the TDWG standard [BDQ Core]({standard_iri}) produced by the {creator} and is maintained by the {maintainer}. This document lists the terms in the bdqffdq: namespace below. Definitions, comments, and examples may include namespace abbreviations (e.g., "bdq:", “bdffdq:”). These are reequired as the meaning for the word is defined specifically in that namespace.
 
 The quick reference guide to the BDQ Core tests described with the bdqffdq: ontology can be found at [Terms in bdqcore: Quick Reference Guide](../bdqcore/index.md). 
 
