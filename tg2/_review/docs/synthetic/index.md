@@ -31,7 +31,7 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 
-- [ 1. Introduction](#1-introduction)
+- [ 1 Introduction](#1-introduction)
 - [ 1.1 Audience](#11-audience)
 - [ 1.2. Status of the content of this document](#12-status-of-the-content-of-this-document)
 - [ 1.3 RFC 2119 keywords](#13-rfc-2119-keywords)
@@ -45,7 +45,7 @@ Draft Standard for Submission
 
 
 
-# 1. Introduction
+# 1 Introduction
 
 ## 1.1 Audience
 

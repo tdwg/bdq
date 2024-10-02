@@ -31,7 +31,7 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 
-- [ 1. Introduction](#1-introduction)
+- [ 1 Introduction](#1-introduction)
 - [ 1.1 Audience](#11-audience)
 - [ 1.2. Status of the content of this document](#12-status-of-the-content-of-this-document)
 - [ 1.3 RFC 2119 keywords](#13-rfc-2119-keywords)
@@ -49,12 +49,12 @@ Draft Standard for Submission
 - [ 3.1 Data Quality Control, Data Quality Assurance](#31-data-quality-control,-data-quality-assurance)
 - [ 3.2 When are tests run ](#32-when-are-tests-run-)
 - [ 3.3 Results of test executions ](#33-results-of-test-executions-)
-- [ 4. Acknowledgements](#4-acknowledgements)
-- [ 5. Acronyms](#5-acronyms)
+- [ 4 Acknowledgements](#4-acknowledgements)
+- [ 5 Acronyms](#5-acronyms)
 
  
 
-## 1. Introduction
+## 1 Introduction
 
 Biodiversity Data Quality (BDQ) Core, hereafter referred to as 'BDQ Core', consists of 1) specifications of data quality tests that can be implemented to provide reproducible results from a given set of input data and test parameters, 2) a vocabulary of terms used in the specification of the previously mentioned tests, 3) a controlled vocabulary for the term bdq:dimension from the previously mentioned test specification terms, 4) a generic fitness for use framework whose terms and semantics are embodied in an ontology, 5) an exemplar data set to use as input for implementations of the previously mentioned tests, 6) an exemplar implementation of the tests, in Java(R), which uses the previously mentioned test data set as input and demonstrates the expected responses to each of the tests, 7) a guide to implementation of the tests are included, and 8) a guide to the interpretation of the results of the tests. 
 
@@ -179,13 +179,13 @@ The results of the execution of implementations of the bdqcore: tests MAY be pre
 
 The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.
 
-## 4. Acknowledgements
+## 4 Acknowledgements
 
 Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
 
 <!--- TODO: Where do the acronyms go? --->
 
-## 5. Acronyms
+## 5 Acronyms
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
