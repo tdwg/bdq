@@ -35,7 +35,7 @@ Bibliographic citation
 {toc}
 
 
-## 1. Introduction
+## 1 Introduction
 
 This document contains information that is considered supplemental to the normative and non-normative BDQ Core documentation. 
 
@@ -72,7 +72,7 @@ The following namespace abbreviations are used in this document:
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-## 2. Historical Context
+## 2 Historical Context
 
 An internationally agreed standard suite of core tests and resulting assertions can be used by all data providers, data collectors and data users to improve the quality of the data. This will allow for more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The tests will not correct all issues that exist with the data, but reports from the tests will identify issues that need to be addressed by users of the data. This may require the user to make decisions on the data - i.e., data that may need to be excluded, data that may need examining for possible improvement, and data that can be used as is. It is always the purview of the user to decide what data is of suitable quality for their use.
 
@@ -208,7 +208,7 @@ Summary of the distribution of tests by test Type and specific Darwin Core Terms
     GROUP BY ?sie ?testType
     ORDER BY ?sie ?testType
 
-## 3. Developing the Tests
+## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2: Data Quality Tests and Assertions was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized that any software was likely to be far less stable than defining a core suite of tests, so the software component was dropped.
 
@@ -359,7 +359,7 @@ The flexibility of Darwin Core (on which BDQ Core is based) in relation to vocab
 
 **High Seas.** It was also recognized that a number of BDQ Core tests would assert a 'lack of quality' for records representing events on the high seas/international waters (outside national jurisdictions) where tests will return 'NOT_COMPLIANT' as there is no agreed standard for designating 'high seas' records using Darwin Core (https://dwc.tdwg.org/). Examples of such tests include VALIDATION_COUNTRY_NOTEMPTY and VALIDATION_COUNTRYCODE_NOTEMPTY. The authors recognize the significance of this issue to the marine community, and we have retained these tests to promote an agreement on an international standard. We acknowledge a current user-assigned ISO 3166-alpha-2 country code (dwc:countryCode - https://dwc.tdwg.org/terms/#dwc:countryCode) of "XZ" to infer "international waters" (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#XZ and https://en.wikipedia.org/wiki/UN/LOCODE). While country code "XZ" looks like a much-needed advance, its use has not be standardized. The situation with populating a country value (dwc:country - https://dwc.tdwg.org/terms/#dwc:country) with "high seas" or "international waters" or something else is less advanced, but we have retained the country test, aspirationally. Related tests such as VALIDATION_COUNTRY_FOUND, VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT and VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT don't present as much an issue, due to the Specifications including the phrase "INTERNAL_PREREQUISITES_NOT_MET" if dwc:countryCode or dwc:country are bdq:Empty, as would be currently expected for records in international waters. The Specification says "This test can't be done because a vital piece of information to run this test is absent". While currently acceptable, once a standard for international waters/high seas is established, the tests will need to be revisited.
 
-## 4. Rationale Management Documentation
+## 4 Rationale Management Documentation
 
 ### 4.1 Developing tests with Github Issues
 
