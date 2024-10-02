@@ -36,7 +36,7 @@ Draft Standard for Submission
 - [ 1.2. Status of the content of this document](#12-status-of-the-content-of-this-document)
 - [ 1.3 RFC 2119 keywords](#13-rfc-2119-keywords)
 - [ 1.4 Namespace abbreviations](#14-namespace-abbreviations)
-- [ 2. Parts of the Standard](#2-parts-of-the-standard)
+- [ 2 Parts of the Standard](#2-parts-of-the-standard)
 - [ 2.1 Vocabularies](#21-vocabularies)
 - [ 2.2 Test Guidance](#22-test-guidance)
 - [ 2.3 Implementation Validation Data ](#23-implementation-validation-data-)
@@ -98,7 +98,7 @@ The following namespace abbreviations are used in this document:
 | rdfs         | http://www.w3.org/2000/01/rdf-schema             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-## 2. Parts of the Standard
+## 2 Parts of the Standard
 
 ### 2.1 Vocabularies
 

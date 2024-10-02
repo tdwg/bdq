@@ -77,7 +77,7 @@ The following namespace abbreviations are used in this document:
 | rdfs         | http://www.w3.org/2000/01/rdf-schema             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-## 2. Parts of the Standard
+## 2 Parts of the Standard
 
 ### 2.1 Vocabularies
 
