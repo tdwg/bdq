@@ -67,6 +67,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :forAmendment rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :amendmentProperty ,
                                  :forDataQualityNeed ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :forAmendment ;
+                           owl:someValuesFrom :Amendment
+                         ] ;
               rdfs:comment "Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs)." ;
               rdfs:label "for Amendment" ;
               skos:definition "Relates an AmendmentMethod to an Amendment." ;
@@ -85,10 +89,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :forIssue rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :forDataQualityNeed ,
                              :issueProperty ;
-          rdfs:domain [ rdf:type owl:Restriction ;
-                        owl:onProperty :forIssue ;
-                        owl:someValuesFrom :Issue
-                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :forIssue ;
+                       owl:someValuesFrom :Issue
+                     ] ;
           rdfs:comment "Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmendment, forValidation, forMeasure." ;
           rdfs:label "for Issue" ;
           skos:definition "Relates an IssuetMethod to an Issue." ;
@@ -99,6 +103,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :forMeasure rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :forDataQualityNeed ,
                                :measurementProperty ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :forMeasure ;
+                         owl:someValuesFrom :Measure
+                       ] ;
             rdfs:comment "Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmendment, forValidation, forIssue." ;
             rdfs:label "for Measure" ;
             skos:definition "Relates an MeasurementMethod to a Measure." ;
@@ -109,10 +117,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :forValidation rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :forDataQualityNeed ,
                                   :validationProperty ;
-               rdfs:domain [ rdf:type owl:Restriction ;
-                             owl:onProperty :forValidation ;
-                             owl:someValuesFrom :Validation
-                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :forValidation ;
+                            owl:someValuesFrom :Validation
+                          ] ;
                rdfs:comment "Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmendment, forMeasure, and forIssue."@en ;
                rdfs:label "for Validation"@en ;
                skos:definition "Relates an ValidationMethod to a Validation." ;
@@ -141,10 +149,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 :hasCriterion rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :issueProperty ,
                                  :validationProperty ;
-              rdfs:domain [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasCriterion ;
-                            owl:someValuesFrom :Criterion
-                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCriterion ;
+                           owl:someValuesFrom :Criterion
+                         ] ;
               rdfs:comment "Used to link the derived concept of a Validation to the fundamental concept of a Criterion."@en ;
               rdfs:label "has Criterion"@en ;
               skos:definition "The Criterion under which a Validation or Issue assesses for data quality." ;
@@ -157,10 +165,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                                             :issueProperty ,
                                             :measurementProperty ,
                                             :validationProperty ;
-                         rdfs:domain [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasDataQualityDimension ;
-                                       owl:someValuesFrom :DataQualityDimension
-                                     ] ;
+                         rdfs:range [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasDataQualityDimension ;
+                                      owl:someValuesFrom :DataQualityDimension
+                                    ] ;
                          rdfs:comment """Used to link a derived concept of a DataQualityNeed (a test, that is a Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.  For a Measure, the dimension of data quality measured.   For a Validation or Issue, the dimension of data quality assessed.  For an Amendment, the dimension of data quality to be improved.  
 
 Under the original formulation of the Framework, only Measures have Dimensions.""" ;
@@ -172,10 +180,10 @@ Under the original formulation of the Framework, only Measures have Dimensions."
 ###  https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
 :hasEnhancement rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :amendmentProperty ;
-                rdfs:domain [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasEnhancement ;
-                              owl:someValuesFrom :Enhancement
-                            ] ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasEnhancement ;
+                             owl:someValuesFrom :Enhancement
+                           ] ;
                 rdfs:comment "Used to link the derived property of an Amendment to the Fundamental property of an Enhancement." ;
                 rdfs:label "has Enhancement" ;
                 skos:definition "The Enhancement that describes how an Amendment may propose changes to improve data quality." ;
@@ -188,10 +196,7 @@ Under the original formulation of the Framework, only Measures have Dimensions."
                                           :issueProperty ,
                                           :measurementProperty ,
                                           :validationProperty ;
-                       rdfs:domain [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasInformationElement ;
-                                     owl:someValuesFrom :InformationElement
-                                   ] ;
+                       rdfs:range :InformationElement ;
                        rdfs:comment """Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.
 
 Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).""" ;
@@ -202,7 +207,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasParameter
 :hasParameter rdf:type owl:ObjectProperty ;
-              rdfs:domain :Parameter ;
+              rdfs:range :Parameter ;
               rdfs:comment "Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification."@en ;
               rdfs:label "has Parameter"@en ;
               skos:definition "Parameter that can alter the behavior of a Specification."@en ;
@@ -250,10 +255,10 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasSpecification
 :hasSpecification rdf:type owl:ObjectProperty ;
-                  rdfs:domain [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasSpecification ;
-                                owl:someValuesFrom :Specification
-                              ] ;
+                  rdfs:range [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSpecification ;
+                               owl:someValuesFrom :Specification
+                             ] ;
                   rdfs:comment "Describes the relationship between a derived bdqffdq concept that is a Method and the fundamental concept of a Specification (technical description of a test)." ;
                   rdfs:label "has Specification" ;
                   skos:definition "Relates a Method to a Specification." ;
@@ -262,7 +267,10 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasUseCase
 :hasUseCase rdf:type owl:ObjectProperty ;
-            rdfs:domain :UseCase ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasUseCase ;
+                         owl:someValuesFrom :UseCase
+                       ] ;
             rdfs:comment "Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase." ;
             rdfs:label "has Use Case" ;
             skos:definition "Relates a Policy to a UseCase." ;
@@ -271,10 +279,10 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ###  https://rs.tdwg.org/bdqffdq/terms/implementedBy
 :implementedBy rdf:type owl:ObjectProperty ;
-               rdfs:domain [ rdf:type owl:Restriction ;
-                             owl:onProperty :implementedBy ;
-                             owl:someValuesFrom :Mechanism
-                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :implementedBy ;
+                            owl:someValuesFrom :Mechanism
+                          ] ;
                rdfs:comment "Describes the link between the Implementation concept in bdqffdq and a Mechanism." ;
                rdfs:label "implemented By" ;
                skos:definition "Mechanism that provides an Implementation" ;
@@ -283,10 +291,10 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ###  https://rs.tdwg.org/bdqffdq/terms/improvedBy
 :improvedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain [ rdf:type owl:Restriction ;
-                          owl:onProperty :improvedBy ;
-                          owl:someValuesFrom :Amendment
-                        ] ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :improvedBy ;
+                         owl:someValuesFrom :Amendment
+                       ] ;
             rdfs:comment """Origially had Domain: Amendment and Range: ImprovementTarget.   Asserts that an improvement target could be improved by the Amendment.  
 
 Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of Measures or Validations.  This can be used to determine which Measures and Validations are improved upon by a given Amendment.""" ;
@@ -339,7 +347,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 :targetedIssue rdf:type owl:ObjectProperty ;
                rdfs:range [ rdf:type owl:Restriction ;
                             owl:onProperty :targetedIssue ;
-                            owl:someValuesFrom :ImprovementTarget
+                            owl:someValuesFrom :Issue
                           ] ;
                rdfs:comment "The issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an improvement target and an Issue." ;
                rdfs:label "targeted Issue" ;
@@ -349,10 +357,10 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedMeasure
 :targetedMeasure rdf:type owl:ObjectProperty ;
-                 rdfs:domain [ rdf:type owl:Restriction ;
-                               owl:onProperty :targetedMeasure ;
-                               owl:someValuesFrom :Measure
-                             ] ;
+                 rdfs:range [ rdf:type owl:Restriction ;
+                              owl:onProperty :targetedMeasure ;
+                              owl:someValuesFrom :Measure
+                            ] ;
                  rdfs:comment "Describes the relationship between an improvement target and a Measure."@en ;
                  rdfs:label "targeted Measure"@en ;
                  skos:definition "Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
@@ -362,10 +370,10 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedValidation
 :targetedValidation rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdfs:domain [ rdf:type owl:Restriction ;
-                                  owl:onProperty :targetedValidation ;
-                                  owl:someValuesFrom :Validation
-                                ] ;
+                    rdfs:range [ rdf:type owl:Restriction ;
+                                 owl:onProperty :targetedValidation ;
+                                 owl:someValuesFrom :Validation
+                               ] ;
                     rdfs:comment "Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation."@en ;
                     rdfs:label "targeted Validation"@en ;
                     skos:definition "Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget."@en ;
@@ -374,6 +382,10 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/usesSpecification
 :usesSpecification rdf:type owl:ObjectProperty ;
+                   rdfs:range [ rdf:type owl:Restriction ;
+                                owl:onProperty :usesSpecification ;
+                                owl:someValuesFrom :Specification
+                              ] ;
                    rdfs:comment "Relates an Implementation to the Specification that the Implementation implements." ;
                    rdfs:label "uses Specification" ;
                    skos:definition "Specification that an Implementation implements." ;
@@ -412,6 +424,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
 :hasResponseComment rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
                     rdfs:comment "Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment." ;
                     rdfs:label "has Response Comment" ;
                     skos:definition "Free text describing the assertion made in the response and why that conclusion was reached." ;
@@ -420,8 +433,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 :hasResponseResultValue rdf:type owl:DatatypeProperty ;
-                        rdfs:range xsd:double ;
-                        rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input)." ;
+                        rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value." ;
                         rdfs:label "has response result value" ;
                         skos:definition "Data property carrying the value of an Assertion when not an object." ;
                         skos:prefLabel "has response result value" .

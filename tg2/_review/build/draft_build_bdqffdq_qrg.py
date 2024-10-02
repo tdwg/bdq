@@ -121,7 +121,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "## ObjectProperty terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent }  . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -133,20 +133,24 @@ for r in queryResult :
 	text = text + "- Definition: {}\n".format(r.definition)
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+	if (r.range) :
+		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "## DataProperty terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment }  ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
-	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	term = entity.replace("bdqffdq:","");
+	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
+	term = entity.replace("bdqffdq:","")
 	text = text + "### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
+	if (r.range) :
+		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 

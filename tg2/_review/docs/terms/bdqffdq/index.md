@@ -668,6 +668,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Amendment
 - Definition: Relates an AmendmentMethod to an Amendment.
 - SubClass Of: amendmentProperty; forDataQualityNeed
+- Range n200330b155f24325a874595462e2ebbeb1
 - Notes: Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs).
 
 ********************
@@ -687,6 +688,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Issue
 - Definition: Relates an IssuetMethod to an Issue.
 - SubClass Of: forDataQualityNeed; issueProperty
+- Range n200330b155f24325a874595462e2ebbeb2
 - Notes: Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Paralell concepts are forAmendment, forValidation, forMeasure.
 
 ********************
@@ -697,6 +699,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Measure
 - Definition: Relates an MeasurementMethod to a Measure.
 - SubClass Of: forDataQualityNeed; measurementProperty
+- Range n200330b155f24325a874595462e2ebbeb3
 - Notes: Use to link MeasurementMethods (solutions) to Measures (needs).   Paralell concepts are forAmendment, forValidation, forIssue.
 
 ********************
@@ -707,6 +710,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Validation
 - Definition: Relates an ValidationMethod to a Validation.
 - SubClass Of: forDataQualityNeed; validationProperty
+- Range n200330b155f24325a874595462e2ebbeb4
 - Notes: Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Paralell concepts are forAmendment, forMeasure, and forIssue.
 
 ********************
@@ -737,6 +741,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Criterion
 - Definition: The Criterion under which a Validation or Issue assesses for data quality.
 - SubClass Of: issueProperty; validationProperty
+- Range n200330b155f24325a874595462e2ebbeb5
 - Notes: Used to link the derived concept of a Validation to the fundamental concept of a Criterion.
 
 ********************
@@ -747,6 +752,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Data Quality Dimension
 - Definition: The DataQualityDimension to which a DataQualityNeed Applies.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
+- Range n200330b155f24325a874595462e2ebbeb6
 - Notes: Used to link a derived concept of a DataQualityNeed (a test, that is a Measure, Validation, Amendment, or Issue) to the fundamental concept of a DataQualityDimension.  For a Measure, the dimension of data quality measured.   For a Validation or Issue, the dimension of data quality assessed.  For an Amendment, the dimension of data quality to be improved.    
 Under the original formulation of the Framework, only Measures have Dimensions.
 
@@ -758,6 +764,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 - Preferred Label: has Enhancement
 - Definition: The Enhancement that describes how an Amendment may propose changes to improve data quality.
 - SubClass Of: amendmentProperty
+- Range n200330b155f24325a874595462e2ebbeb7
 - Notes: Used to link the derived property of an Amendment to the Fundamental property of an Enhancement.
 
 ********************
@@ -768,6 +775,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 - Preferred Label: has Information Element
 - Definition: Describes the InformationElements assessed by a DataQualityNeed.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
+- Range bdqffdq:InformationElement
 - Notes: Provides a relationship between DataQualityNeeds concepts and Information elements. For example, Validation uses this property along with hasResourceType to define a criterion in the context of related information elements.  
 Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow data quality needs to be related to specific information element terms in a way that allows data quality reports to distinguish for consumers which information elements a test makes assertions about (and which only informed that assertion).
 
@@ -778,6 +786,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 - Name: bdqffdq:hasParameter
 - Preferred Label: has Parameter
 - Definition: Parameter that can alter the behavior of a Specification.
+- Range bdqffdq:Parameter
 - Notes: Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification.
 
 ********************
@@ -828,6 +837,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 - Name: bdqffdq:hasSpecification
 - Preferred Label: has Specification
 - Definition: Relates a Method to a Specification.
+- Range n200330b155f24325a874595462e2ebbeb8
 - Notes: Describes the relationship between a derived bdqffdq concept that is a Method and the fundamental concept of a Specification (technical description of a test).
 
 ********************
@@ -837,6 +847,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 - Name: bdqffdq:hasUseCase
 - Preferred Label: has Use Case
 - Definition: Relates a Policy to a UseCase.
+- Range n200330b155f24325a874595462e2ebbeb9
 - Notes: Used by concepts in the DQ Needs category to describe the relationship between DQ Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase.
 
 ********************
@@ -846,6 +857,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 - Name: bdqffdq:implementedBy
 - Preferred Label: implemented By
 - Definition: Mechanism that provides an Implementation
+- Range n200330b155f24325a874595462e2ebbeb10
 - Notes: Describes the link between the Implementation concept in bdqffdq and a Mechanism.
 
 ********************
@@ -855,6 +867,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 - Name: bdqffdq:improvedBy
 - Preferred Label: improved By
 - Definition: ImprovementTarget that would have data quality improved by assertions resulting from an Amendment.
+- Range n200330b155f24325a874595462e2ebbeb11
 - Notes: Origially had Domain: Amendment and Range: ImprovementTarget.   Asserts that an improvement target could be improved by the Amendment.    
 Object property that describes an Amenement, as part of the ImprovementTarget, that would improve data acted upon by some set of Measures or Validations.  This can be used to determine which Measures and Validations are improved upon by a given Amendment.
 
@@ -910,6 +923,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:targetedIssue
 - Preferred Label: targeted Issue
 - Definition: Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Range n200330b155f24325a874595462e2ebbeb12
 - Notes: The issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an improvement target and an Issue.
 
 ********************
@@ -919,6 +933,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:targetedMeasure
 - Preferred Label: targeted Measure
 - Definition: Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Range n200330b155f24325a874595462e2ebbeb13
 - Notes: Describes the relationship between an improvement target and a Measure.
 
 ********************
@@ -929,6 +944,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Preferred Label: targeted Validation
 - Definition: Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
 - SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
+- Range n200330b155f24325a874595462e2ebbeb14
 - Notes: Relates an improvement target to a Validation.  Describes the relationship between an improvement target and a Validation.
 
 ********************
@@ -938,6 +954,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:usesSpecification
 - Preferred Label: uses Specification
 - Definition: Specification that an Implementation implements.
+- Range n200330b155f24325a874595462e2ebbeb15
 - Notes: Relates an Implementation to the Specification that the Implementation implements.
 
 ********************
@@ -957,6 +974,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Preferred Label: has Authorities and Defaults
 - Definition: Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.
+- Range http://www.w3.org/2001/XMLSchema#string
 - Notes: Details of the bdq:sourceAuthority listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.
 
 ********************
@@ -966,6 +984,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:hasExpectedResponse
 - Preferred Label: has Expected Response
 - Definition: Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
+- Range http://www.w3.org/2001/XMLSchema#string
 - Notes: The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification
 
 ********************
@@ -975,6 +994,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:hasResponseComment
 - Preferred Label: has Response Comment
 - Definition: Free text describing the assertion made in the response and why that conclusion was reached.
+- Range http://www.w3.org/2001/XMLSchema#string
 - Notes: Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment.
 
 ********************
@@ -984,7 +1004,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:hasResponseResultValue
 - Preferred Label: has response result value
 - Definition: Data property carrying the value of an Assertion when not an object.
-- Notes: Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).
+- Notes: Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value.
 
 ********************
 
