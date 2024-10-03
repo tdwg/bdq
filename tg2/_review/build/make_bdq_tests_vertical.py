@@ -17,6 +17,6 @@ with open ("../vocabulary/bdqcore_terms.csv") as csvfile:
 		# header
 		print('"Label","prefLabel","qualifiedName"');
 		for index, row in dataFrame.iterrows():
-			print('"{}","{}","bdqcore:{}"'.format(row['Label'],row['prefLabel'],row['GUID']))
+			print('"{}","{}","bdqcore:{}"'.format(row['Label'],row['prefLabel'],row['term_localName']))
 	except pandas.errors.ParserError as e:
 		sys.exit("Error reading file: {}".format(e)) 
