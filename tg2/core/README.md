@@ -45,8 +45,3 @@ Maintinance of validation data is easier in this more compact spreadsheet form, 
 - squish_validation_data.py
 - test_validation_maintainer.csv
 
-## Draft workspace 
-
-Used for drafting code for preparation of the \_review directory for the BDQ Core standard submission, and for setting up for maintinance.  Structure follows that of the Darwin Core project.   Expect this to be removed as the \_review/ structure is completed.
-
-- generation/
