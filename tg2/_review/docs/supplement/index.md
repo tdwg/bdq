@@ -52,13 +52,13 @@ Draft Standard for Submission
 - [ 3.7 Input Data Values for AMENDMENTS](#37-input-data-values-for-amendments)
 - [ 3.8 Amendments and Annotations](#38-amendments-and-annotations)
 - [ 3.9 Aspirational Aspects of Select Tests](#39-aspirational-aspects-of-select-tests)
-- [ 4 Rationale Management Documentation](#4-rationale-management-documentation)
-- [ 4.1 Developing tests with Github Issues](#41-developing-tests-with-github-issues)
-- [ 4.2 Github Tags and Categorizing Issues](#42-github-tags-and-categorizing-issues)
-- [ 4.3 Using Markdown Tables in Github Issues to Develop Test Descriptors](#43-using-markdown-tables-in-github-issues-to-develop-test-descriptors)
-- [ 5 Date and Time Issues](#5-date-and-time-issues)
-- [ 5.1 Events and Calendars](#51-events-and-calendars)
-- [ 5.2 Time](#52-time)
+- [ 4 Date and Time Issues](#4-date-and-time-issues)
+- [ 4.1 Dates and Calendars](#41-dates-and-calendars)
+- [ 4.2 Time](#42-time)
+- [ 5 Rationale Management Documentation](#5-rationale-management-documentation)
+- [ 5.1 Developing tests with Github Issues](#51-developing-tests-with-github-issues)
+- [ 5.2 Github Tags and Categorizing Issues](#52-github-tags-and-categorizing-issues)
+- [ 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors](#53-using-markdown-tables-in-github-issues-to-develop-test-descriptors)
 
 
 
@@ -387,15 +387,51 @@ The flexibility of Darwin Core (on which BDQ Core is based) in relation to vocab
 
 **High Seas.** It was also recognized that a number of BDQ Core tests would assert a 'lack of quality' for records representing events on the high seas/international waters (outside national jurisdictions) where tests will return 'NOT_COMPLIANT' as there is no agreed standard for designating 'high seas' records using Darwin Core (https://dwc.tdwg.org/). Examples of such tests include VALIDATION_COUNTRY_NOTEMPTY and VALIDATION_COUNTRYCODE_NOTEMPTY. The authors recognize the significance of this issue to the marine community, and we have retained these tests to promote an agreement on an international standard. We acknowledge a current user-assigned ISO 3166-alpha-2 country code (dwc:countryCode - https://dwc.tdwg.org/terms/#dwc:countryCode) of "XZ" to infer "international waters" (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#XZ and https://en.wikipedia.org/wiki/UN/LOCODE). While country code "XZ" looks like a much-needed advance, its use has not be standardized. The situation with populating a country value (dwc:country - https://dwc.tdwg.org/terms/#dwc:country) with "high seas" or "international waters" or something else is less advanced, but we have retained the country test, aspirationally. Related tests such as VALIDATION_COUNTRY_FOUND, VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT and VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT don't present as much an issue, due to the Specifications including the phrase "INTERNAL_PREREQUISITES_NOT_MET" if dwc:countryCode or dwc:country are bdq:Empty, as would be currently expected for records in international waters. The Specification says "This test can't be done because a vital piece of information to run this test is absent". While currently acceptable, once a standard for international waters/high seas is established, the tests will need to be revisited.
 
-## 4 Rationale Management Documentation
+## 4 Date and Time Issues
 
-### 4.1 Developing tests with Github Issues
+This BDQ Core Standard avoids analysis of two time and date issues, time zones, and geographic and temporal variation in the change from Julian to Gregorian calendars.  
+
+### 4.1 Dates and Calendars
+
+Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date, and metadata may or not be present to even identify such records.
+
+Countries and researchers have changed from the Julian calendar to the Gregorian calendar at different times. For example, Russia adopted the Gregorian Calendar on 1918-02-14, the British Empire in 1752-09-14, different regions in France between 1582 and 1760, with France also adopting the French Republican Calendar 1793-1805. The difference between the Gregorian and Julian calendar has typically been around 10 days. But, the day that is considered the first day of the year has also changed at different times in different countries, meaning that the difference can be as great as 1 year and 10 days. 
+
+Given the complexity, and ongoing nature of transitions between calendars, we do not advocate using VALIDATION_EVENTDATE_INRANGE for quality assurance by selecting a transition date and using it as a threshold.That test can't assess if a date is actually within a Gregorian date interval, except in special cases where the Julian and Gregorian calendars coincide, and even that is ignoring all other possible calendars. Instead, it is able to test that a date following the ISO 8601-1 date specification is within a range specified in that context. 
+
+In general, assessing whether a date in biodiversity data was Julian or Gregorian is treated here as an intractable problem, and the problem of correctly determining the gregorian value for dwc:eventDates is left in the hands of data providers who may have additional knowledge of collectors and their practices to be able to assess how to interpret verbatim date values found in their historical records.  For consumers, this means that historical dates, even into recent times, may have systematic errors in subsets of the data where the date was julian but has been treated as gregorian.  This can, in some cases, introduce errors on the scale of one year differences between reported and correct eventDate value. 
+
+### 4.2 Time
+
+If time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms
+
+Time is treated as out of scope for Core Use Cases.  This means that some cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced. Dor example, the event_date_qc implementation of AMENDMENT_EVENT_FROM_EVENTDATE contains this commented out block of code, pertinent to time zone issues.   It would populate eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should, but may not have, taken account of a local time zone in populating dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear (dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear/dec:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
+
+// Time could also be populated, but it isn't in scope for this issue.
+// Here is a minimal implementation,
+// which illustrates some issues in implementation (using zulu time or not, dealing with time in ranges...)
+if (DateUtils.isEmpty(eventTime)) {
+        if (DateUtils.containsTime(eventDate)) {
+                String newTime = DateUtils.extractZuluTime(eventDate);
+                result.addResult("dwc:eventTime", newTime );
+                result.setResultState(ResultState.FILLED_IN);
+            result.addComment("Added eventTime ["+ newTime +"] from eventDate ["+eventDate+"].");
+        }
+}
+
+![image](https://github.com/user-attachments/assets/12fcefcc-6a49-4af8-bf96-60df9a0dcb9d)
+
+From xkcd (https://xkcd.com/2867/)
+
+## 5 Rationale Management Documentation
+
+### 5.1 Developing tests with Github Issues
 
 The bdqcore: tests were developed in issues in the tdwg/bdq GitHub space. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on github Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the core team, the values within the template could be easily modified.
 
 GitHub's API also provided ample latitude to 'scrape' and filter Issues uisng GitHub tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.
 
-### 4.2 Github Tags and Categorizing Issues
+### 5.2 Github Tags and Categorizing Issues
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each issue has table in markdown format in its Issue.  Each issue was tagged with the following GitHub issue tags to assist in finding, evaluating, and asserting conclusions about each test. 
 
@@ -429,7 +465,7 @@ The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark con
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, idependently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
 
-### 4.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
+### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each issue has a table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below. The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
@@ -457,7 +493,9 @@ The development of each test, with documentation of why particular decisions wer
 
 **Parameter(s)** [normative]: Parameters that modify the behaviour of the test, along with default values or links to source authorities. A parameter value exists only where there are a number of alternate options. For example, "bdq:sourceAuthority default = "GBIF Backbone Taxonomy"" is parameterised as it allows for regional taxonomic authorities; whereas "bdq:sourceAuthority is "EPSG:" [https://epsg.io]"" is not parameterised as there is a single source authority. Example: bdq:defaultGeodeticDatum.	
 
-**Source Authority** [normative]: A reference to an authority required by the test along with a default value where Tests may require reference to external data such as standard vocabularies of terms or names. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (and if available), refer to an API that will assist implementers of the tests.  For example, bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be as the parameter value. In some cases, the API component will refer to a 'third party' site where it is hoped will remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. When a test uses more than one sourceAuthority at the same time, these are given separate names, for example,  bdq:taxonIsMarine, bdq:geospatialLand are the two sourceAuthority Parameters for VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT. A reference to an external (non-Darwin Core) authority required for the test. While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}". 
+**Source Authority** [normative]: A reference to an authority required by the test along with a default value where Tests may require reference to external data such as standard vocabularies of terms or names. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (and if available), refer to an API that will assist implementers of the tests.  For example, bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of api endponts or other resources}. The "Normative String Identifer" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be the parameter value. In some cases, the API component will refer to a 'third party' site which will hopefully remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. When a test uses more than one sourceAuthority at the same time, these are given separate names, for example, bdq:taxonIsMarine, bdq:geospatialLand are the two sourceAuthority Parameters for VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT. 
+
+While applying to a single record, the test results may be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Only a subset of the values of all Darwin Core terms are referenced in the core tests. Each test focuses on a single aspect of data quality, usually a single dimension of a single Darwin Core term or small set of related input Darwin Core terms; the Information Elements which form the input data to the tests. Example: "bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}". 
 
 **Specification Last Updated**: Date of last change to a Normative part of the test, for example to the wording of an Expected Response/Specification. Example 2023-06-23.
 
@@ -472,45 +510,7 @@ The development of each test, with documentation of why particular decisions wer
 **Link to Specification Source Code** [non-normative]: A link to code that implements the test. Example: https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169.
 
 **Notes** [non-normative]: Additional comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. Example: For TAXONID_FROM_TAXON, “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
-
-## 5 Date and Time Issues
-
-### 5.1 Events and Calendars
-
-Different calendars have been used at different times in different places, and the transcription of an
-original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date, and metadata may or not be present to even identify such records.
-
-Countries and researchers have changed from the Julian calendar to the Gregorian calendar at different times. For example, Russia adopted the Gregorian Calendar on 1918-02-14, the British Empire in 1752-09-14, different regions in France between 1582 and 1760, with France also adopting the French Republican Calendar 1793-1805. The difference between the Gregorian and Julian calendar has typically been around 10 days. But, the day that is considered the first day of the year has also changed at different times in different countries, meaning that the difference can be as great as 1 year and 10 days. Given the complexity, and ongoing nature of transitions between calendars, we do not advocate using VALIDATION_EVENTDATE_INRANGE for quality assurance by selecting a transition date and using it as a threshold.
-
-[John’s statement on calendars as a placeholder (https://github.com/tdwg/bdq/issues/76#issuecomment-1591985055): “I don't think we are in any position to posit a date after which the Gregorian calendar assumption is safe. It is still not safe today, it's just that its use for civil purposes has ever fewer exceptions as time goes on (so far). Making a statement about a particular date (other than the date of its origin) for a date of special mention necessarily has discriminatory implications. We do NOT want that.
-
-In this particular issue, and perhaps in all others where this has come up, I do not see that the uncertainty associated with the date actually has anything to do with what we are testing. This test can't assess if a date is actually within a Gregorian date interval, except in special cases where the Julian and Gregorian calendars coincide, and even that is ignoring all other possible calendars. Instead, it is able to test that a date following the ISO 8601-1 date specification is within a range specified in that context. We can't effectively do anything else because Darwin Core doesn't even provide for stating the original calendar used - it's forcing people to use the Gregorian calendar without describing the responsibility for doing so and the consequences of not doing so. I think the place for awareness of the implications of dates with unknown calendars is in the Darwin Core date terms.]
-
-### 5.2 Time
-
-See: https://xkcd.com/2867/ and  https://www.xkcd.com/1883/
-
-**If time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms**
-
-This standard avoids analysis of two time and date issues, time zones, and geographic and temporal variation in the change from Julian to Gregorian calendars.  
-
-Time is treated as out of scope for CORE Use Cases.  This means that some cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced.    
-
-The event_date_qc implementation of AMENDMENT_EVENT_FROM_EVENTDATE contains this commented out block of code, pertinent to time zone issues.   It would popluated eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should but may not have taken account of a local time zone in populating dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear (dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear/dec:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
-
-// Time could also be populated, but it isn't in scope for this issue.
-// Here is a minimal implementation,
-// which illustrates some issues in implementation (using zulu time or not, dealing with time in ranges...)
-if (DateUtils.isEmpty(eventTime)) {
-        if (DateUtils.containsTime(eventDate)) {
-                String newTime = DateUtils.extractZuluTime(eventDate);
-                result.addResult("dwc:eventTime", newTime );
-                result.setResultState(ResultState.FILLED_IN);
-            result.addComment("Added eventTime ["+ newTime +"] from eventDate ["+eventDate+"].");
-        }
-}
-
-In general, assessing whether a date in biodiversity data was Julian or Gregorian is treated here as an intractable problem, and the problem of correctly determining the gregorian value for dwc:eventDates is left in the hands of data providers who may have additional knowledge of collectors and their practices to be able to assess how to interpret verbatim date values found in their historical records.  For consumers, this means that historical dates, even into recent times, may have systematic errors in subsets of the data where the date was julian but has been treated as gregorian.  This can, in some cases, introduce errors on the scale of one year differences between reported and correct eventDate value.     
+    
 
 ## Cite BDQ Core
 
