@@ -249,12 +249,38 @@ The Framework also supports Amendments where the Response.result is a proposal t
 **Measures** 
  A Measure returns a numeric value of COMPLETE or NOT_COMPLETE as the Response.result. Most SingleRecord Measures defined here count the number of Validation or Amendment tests with a specifified Response.Result in a SingleRecord.  
  
-Measures defined in bdqcore: may apply to a single record (bdqffdq:SingleRecord), or can be accumulated across multiple records (bdqffdq:MultiRecords).  See [3.7 Considerations for use of MultiRecord Measures](#37-Considerations-for-use-of-MultiRecord-Measures) for discussion of MultiRecord Measures.
+Measures defined in bdqcore: may apply to a single record (bdqffdq:SingleRecord), or can be accumulated across multiple records (bdqffdq:MultiRecords).  See [3.3.2 Considerations for use of MultiRecord Measures](#332-Considerations-for-use-of-MultiRecord-Measures) for discussion of MultiRecord Measures.
 
 SingleRecord MEASUREs within bdqcore: are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS.  Of these, MEASURE_EVENTDATE_DURATIONINSECONDS is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases, for example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temoral resolution of about a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  The other SingleRecord measures in bdqcore take the Responses from other tests as their input and are intended for Quality Control uses to group records by number of data quality concerns present.   
 
+### 3.3 MultiRecord Tests
 
-### 3.3 Data Quality Dimension and 'Warning Types'
+When defining a test, the test type (Validation, Amendment, Measure, Issue) is composed with a ResourceType (SingleRecord or MultiRecord).  This determines if the test results in assertions about a single record or a data set as a whole.
+
+#### 3.3.1 MultiRecord Validations, Amendments, Issues
+
+We do not define any of these in BDQ Core, though these are allowed by bdqffdq.
+
+#### 3.3.2 Considerations for use of MultiRecord Measures
+
+MultiRecord tests examine data across multiple records, a data set. The BDQ Core MultiRecord Measures all take the output of other tests as their input rather than data.  The inputs, that is the Information Elements, for these Measures in bdqcore: are the outputs of SingleRecord Validations.  
+
+In the BDQ Core suite of tests, for each bdqffdq:SingleRecord Validation, there is defined a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures. 
+
+Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE. 
+
+We have also defined MultiRecord Measures that take the Response objects from other tests as their input Information Elements, for example, to to return a count of Response.value of COMPLIANT for a Validation across a data set, thus providing a measure of how ft a data set is for some purpose.  
+This subset of possible measures simply counts the Responses from a given Validation that have Response.result of COMPLIANT.  For QualityControl, these numbers identify where work is needed to make more of a data set fit for use for a given UseCase.  These MultiRecord Measures that return counts can be run before an amendment step in a data processing pipeline, and run again after applying all of the proposed changes to the data from the Amendments to the data set.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data for a given UseCase.
+
+The other subset of MultiRecord Measures defined in BDQ Core are intended for QualityAssurance.  These QA measures return a Response.result of COMPLETE if all of a given Validation on SingleRecords in a MultiRecord have a response that indicates that the data are fit for use.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord QA Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord QA measures return COMPLETE.  The MultiRecord QA measures are the formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase.  
+
+Some Validations return Response.status=INTERNAL_PREREQUISITES_NOT_MET when one or more of the input InformationElements contain empty values.  For some UseCases, empty values in some fields make the data not fit for use (these are usually tested directly for with VALIDATION...NOTEMPTY tests), however, some Validations operate on sparse data or other cases where the data is fit for use even without values, but when values are present, they must comply with some restriction.  For example, dwc:minimumDepth and dwc:maximumDepth are not expected to be populated for terrestrial data, but are expected to be within range when values are supplied (for freshwater and marine data).  A subset of the MultiRecord QA Measures accomodate such cases by returning Response.result=COMPLETE for validations that are either Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET.  Thus they can measure that all of the SingleRecords in a MultiRecord either have, for example, no value in dwc:minimumDepth or have an in-range value for dwc:minimumDepth.   
+It is possible, but less flexible, to frame Validations to return Result.response=COMPLIANT for either empty values or non-empty values that satisfy other validation criteria.  Concerns are better separated, and individual tests are better composed to fit particular user needs, by having the Validations treat empty data as INTERNAL_PREREQUISITES_NOT_MET, and then framing MultiRecord QA Measures as appropriate for a given UseCase.
+
+MultiRecord measures can also operate directly on the data, for example, a MultiRecord Measure could be framed to measure the average number of individuals reported in dwc:individualCount in a data set.
+
+
+### 3.4 Data Quality Dimension and 'Warning Types'
 
 A "Warning Type" for each test was originally envisioned to provide insight into the nature of the issues associated the negative results of tests. Initially, we had a concept of 'severity' where a failed test could be considered either a "Warning" or an "Error". We subsequently elaborated the warnings into "Warning Types" that had a value of "Ambiguous", "Amended", "Incomplete", "Inconsistent", "Invalid", "Issue", "Report" or "Unlikely". In 2023, a cross tabulation of 'Data Quality Dimension' from the Framework (Veiga et al. 2017) against 'Warning Type' demonstrated that they were highly correlated (see table below). Subsequently, 'Warning Type' was removed as a test Descriptor.
 
@@ -298,12 +324,11 @@ Gives the following distribution of test types by Dimension:
 | Resolution    |    |    | 1 | 1 | 
 | Reliability    |    |    |   | 2 | 
 
-
-### 3.4 Domain Scope of Tests
+### 3.5 Domain Scope of Tests
 
 The domain scope of each test is also largely provided by the bdqffdq:DataQualityNeed. The Darwin Core terms evaluated by each test are expressed as specific bdqffdq:InformationElements. The bdqffdq:Specification provides details of how to evaluate values of the information elements, but also includes references to external (to the Darwin Core standard) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource (e.g. API) required for the implementation of the test.
 
-### 3.5 Parameterising the tests
+### 3.6 Parameterising the tests
 
 Parameterized tests are those for which we saw the high likelihood of different data quality needs within the community of CORE users and CORE needs. The existence of national requirements for spatial data to be represented with a particular datum lead us to identify a requirement for tests to be adjusted to the needs of particular communities. When we identified that within Core data quality needs, different portions of the community have different authorities that they are required to adopt for particular terms, we define Parameters for tests, where the Parameter values allow a particular test to behave differently when given different parameter values.  This allows us to define general tests that provide support for non functional requirements that vary within the community. 
 
@@ -317,30 +342,11 @@ Since value supplied for a parameter for the test is an attribute of the Mechani
 
 Parameters are not intended to relax the definition of data having quality for Core needs. The specifications deliberately do not include parameters that would relax tests on secondary terms for downstream research users or tighten them for upstream data capture. Some tests which would serve the needs of users engaged in data capture or preparing data for aggregation, but not of downstream aggregators or research users were considered, but deemed non-Core and are not specified here. We have similarly resisted the temptation to parameterize tests to meet the needs of different portions of the data life cycle.
 
-### 3.6 Independence and Paired tests
+### 3.7 Independence and Paired tests
 
 To the best of our abilities, we have designed each test to stand alone.  This is by design to support the mixing and matching of these and other tests to meet particular data quality needs, and not impose any particular model of test execution on implementation frameworks.  The specification of interdependencies among tests would impose constraints upon test execution frameworks.  Implementations of test execution frameworks may execute tests on data records in parallel, on data records in sequence, as queries on data sets, or on unique values.  For a subset of amendments, we do provide guidance on execution order to produce deterministic results.
 
 Tests in bdqcore: are paired in that Amendments have a corresponding Validation that assesses the same aspect of data quality. An Amendment may be able to improve the quality of data with respect to that Validation. The bdqffdq framework contains terms for expressing such formal relationships among tests, we have chosen not to specify these to allow users to more flexibly mix and match tests to their own data quality needs.  
-
-### 3.7 Considerations for use of MultiRecord Measures
-
-MultiRecord tests examine data across multiple records, a data set. The BDQ Core MultiRecord Measures all take the output of other tests as their input rather than data.  The inputs, that is the Information Elements, for these Measures in bdqcore: are the outputs of SingleRecord Validations.  
-
-In the BDQ Core suite of tests, for each bdqffdq:SingleRecord Validation, there is defined a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for Core purposes.  Under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measures for completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures. 
-
-Data are found to be fit for some use if all Validations comprising that Use have a Response.result of COMPLIANT, and all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE. 
-
-We have also defined MultiRecord Measures that take the Response objects from other tests as their input Information Elements, for example, to to return a count of Response.value of COMPLIANT for a Validation across a data set, thus providing a measure of how ft a data set is for some purpose.  
-This subset of possible measures simply counts the Responses from a given Validation that have Response.result of COMPLIANT.  For QualityControl, these numbers identify where work is needed to make more of a data set fit for use for a given UseCase.  These MultiRecord Measures that return counts can be run before an amendment step in a data processing pipeline, and run again after applying all of the proposed changes to the data from the Amendments to the data set.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data for a given UseCase.
-
-The other subset of MultiRecord Measures defined in BDQ Core are intended for QualityAssurance.  These QA measures return a Response.result of COMPLETE if all of a given Validation on SingleRecords in a MultiRecord have a response that indicates that the data are fit for use.  A MultiRecord is fit for use for a given UseCase if each of the MultiRecord QA Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord QA measures return COMPLETE.  The MultiRecord QA measures are the formal means the Fitness for Use Framework provides for ensuring that a data set is fit for use for a given UseCase.  
-
-Some Validations return Response.status=INTERNAL_PREREQUISITES_NOT_MET when one or more of the input InformationElements contain empty values.  For some UseCases, empty values in some fields make the data not fit for use (these are usually tested directly for with VALIDATION...NOTEMPTY tests), however, some Validations operate on sparse data or other cases where the data is fit for use even without values, but when values are present, they must comply with some restriction.  For example, dwc:minimumDepth and dwc:maximumDepth are not expected to be populated for terrestrial data, but are expected to be within range when values are supplied (for freshwater and marine data).  A subset of the MultiRecord QA Measures accomodate such cases by returning Response.result=COMPLETE for validations that are either Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET.  Thus they can measure that all of the SingleRecords in a MultiRecord either have, for example, no value in dwc:minimumDepth or have an in-range value for dwc:minimumDepth.   
-It is possible, but less flexible, to frame Validations to return Result.response=COMPLIANT for either empty values or non-empty values that satisfy other validation criteria.  Concerns are better separated, and individual tests are better composed to fit particular user needs, by having the Validations treat empty data as INTERNAL_PREREQUISITES_NOT_MET, and then framing MultiRecord QA Measures as appropriate for a given UseCase.
-
-MultiRecord measures can also operate directly on the data, for example, a MultiRecord Measure could be framed to measure the average number of individuals reported in dwc:individualCount in a data set.
-
 
 ### 3.8 Input Data Values for AMENDMENTS
 
