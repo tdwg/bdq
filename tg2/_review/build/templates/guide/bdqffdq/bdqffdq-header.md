@@ -236,21 +236,11 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 ## 4 Term index
 
-TODO:  Generate and include these sections here.
+{term_index}
 
-### 4.1 Classes
+## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 2.1)
 
-### 4.2 Object Properties
-
-### 4.3 Data Properties
-
-TODO: Also index by concept.
-
-## 5 List of Terms in the bdqffdq ontology (portions normative, see 2.1)
-
-TODO:  Generate and include here.
-
-[Rough cut at generated list of ontology terms](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/bdqffdq.md)
+{term_list}
 
 ## 6 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 

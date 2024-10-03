@@ -7,6 +7,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 <pre>
 ├── make_bdq_tests_vertical.py  builds an artifact containing a list of tests, purpose unclear.
 ├── README.md this file.
+├── unused  place for unused code and templates likely to be removed
 ├── templates  for various docs files.
 │   ├── list  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
 │   │   ├── bdqcore  **work in progress** won't use draft_build-termlisty.py
