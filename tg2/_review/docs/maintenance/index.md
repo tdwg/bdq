@@ -1,4 +1,4 @@
-**NOTE** This is a placeholder for the BDQ Core Maintenance document, which has it's source in tg2/core/generation/Maintainance.md.
+**NOTE** This is the BDQ Core Maintenance document, it may be edited, it is not built from a template.
 
 # Preliminary suggested guidance for maintainers
 
@@ -10,6 +10,8 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 # Proposals for New Issues 
 
 Templates for proposals of new and change issues are available at https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE
+
+**Note** These templates need to be updated to conform with production of term-version file entries (e.g. GUID->term_localName
 
 ## Suggested Lifecycle for a proposal,
 
