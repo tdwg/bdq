@@ -3,14 +3,20 @@
 ## Charter 
 -    [Task Group 2 - Biodiversity Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/)
 
-## Link to tests: 
--    https://github.com/tdwg/bdq/projects/2
+## Link to draft BDQ Core standard
+- https://github.com/tdwg/bdq/tg2/_review/index.md
 
-## Link to vocabulary: 
--    https://github.com/tdwg/bdq/issues/152
+## Link to Quick Reference Guide to the tests
+- https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqcore/index.md
+
+## Link to vocabularies:
+- https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md
 
 ## Link to testdata:
 -    https://github.com/tdwg/bdq/tree/master/tg2/core/testdata
+
+## Link to github issues used to develop the tests: 
+-    https://github.com/tdwg/bdq/projects/2
 
 ## Link to OLD Version of draft Standard:
 -    https://github.com/tdwg/bdq/wiki/OLD-BDQ-CORE-Standards-Document-%E2%80%90-NO-LONGER-IN-USE

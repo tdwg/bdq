@@ -2,6 +2,8 @@
 
 See [_review/vocabulary/](../_review/vocabulary/) for vocabulary files.
 
+You probbly want the [Draft BDQ Core standard](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) 
+
 # Work in progress files
 
 glossary_terms.csv -- not formal vocabularies, will become tables or glossary entries in markdown documents
