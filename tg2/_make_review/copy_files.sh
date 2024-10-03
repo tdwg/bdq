@@ -3,18 +3,6 @@
 #
 # Run from within the bdq/tg2/_make_review/ directory of a git checkout of the tdwg/bdq repository.
 
-# bdqffdq files for the framework
-
-cp ../vocabularies/bdqffdq.owl ../_review/vocabulary/bdqffdq.owl
-
-# bdq, bdqdim and related vocabulary
-
-cp ../vocabularies/bdqdim_terms.csv ../_review/vocabulary/bdqdim_term_versions.csv
-cp ../vocabularies/bdqenh_terms.csv ../_review/vocabulary/bdqenh_term_versions.csv
-cp ../vocabularies/bdqcrit_terms.csv ../_review/vocabulary/bdqcrit_term_versions.csv
-
-cp ../vocabularies/bdq_vocabulary_terms.csv ../_review/vocabulary/bdq_term_versions.csv
-
 # bdqcore files containing test descriptions
 
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_terms.csv

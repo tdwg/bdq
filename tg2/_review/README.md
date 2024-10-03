@@ -2,7 +2,6 @@ Files in this folder are for submission of BDQ Core for review for standard trac
 
 Start on the [BDQ Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) landing page.
 
-
 Work in progress description of files in this directory: 
 
 <pre>
@@ -72,10 +71,10 @@ Work in progress description of files in this directory:
 │   └── supplement
 │       └── index.md Generated file, do not edit.
 └── vocabulary should just be the term version files, but not all as term version files yet
-    ├── bdq_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdq_vocabulary_terms.csv
-    ├── bdqdim_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdqdim_terms.csv
-    ├── bdqenh_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdqenh_terms.csv
-    ├── bdqcrit_term_versions.csv Term version file for bdq vocabulary copied from tg2/vocabularies/bdqcrit_terms.csv
+    ├── bdq_term_versions.csv Term version file for bdq vocabulary
+    ├── bdqdim_term_versions.csv Term version file for bdqdim vocabulary
+    ├── bdqenh_term_versions.csv Term version file for bdqenh vocabulary
+    ├── bdqcrit_term_versions.csv Term version file for bdqcrit vocabulary
     ├── bdqcore_terms.csv bdqcore tests as csv file, pending conversion to term version file, copied from tg2/core/TG2_tests.csv, with multirecord measures appended  
     └── bdqffdq.owl probably goes in dist with no csv file here
 </pre>
