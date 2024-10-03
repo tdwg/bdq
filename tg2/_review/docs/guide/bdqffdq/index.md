@@ -405,12 +405,12 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 - Name: bdqffdq:Amendment
 - Preferred Label: Amendment
-- Definition: A data quality need that expresses how proposals may be made to improve the fittnes for use of data.
+- Definition: A data quality need that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
 - Notes: ContextualizedEnhacement in the original framework.   Describes an instance of the enhancement concept in the context of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.    
 Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example: Recommends valid value for taxon name in a single record.    
 Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.    
-An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.     
+An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmendmentAssertion at the report level.     
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
 ********************
@@ -465,7 +465,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 - Preferred Label: Acted Upon
 - Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element.
 - SubClass Of: InformationElement
-- Notes: An Information Element the content of which is examined to assert a result on one or more other Information Elements
+- Notes: An Information Element the content of which is examined to assert a result on one or more other Information Elements.
 
 ********************
 
@@ -548,7 +548,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 - Preferred Label: Enhancement
 - Definition: Description of a means by which data could be improved.
 - SubClass Of: AmendmentConcept; FundamentalConcept; NeedConcept
-- Notes: General statement, for example: Recommend replacement value from a controlled vocabulary
+- Notes: General statement, for example: Recommend replacement value from a controlled vocabulary.
 
 ********************
 
@@ -729,7 +729,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 - Preferred Label: Policy
 - Definition: The set of data quality Needs for a UseCase
 - SubClass Of: NeedConcept
-- Notes: Composition of data quality Needs into UseCases
+- Notes: Composition of data quality Needs into UseCases.
 
 ********************
 
@@ -748,7 +748,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 - Preferred Label: Resource Type
 - Definition: Category of things that are data objects about which data quality assertions may be made.
 - SubClass Of: FundamentalConcept
-- Notes: In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord
+- Notes: In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord.
 
 ********************
 
@@ -779,7 +779,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 - Preferred Label: Response.status
 - Definition: A report concept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an implementation.
 - SubClass Of: ReportConcept
-- Notes: The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier
+- Notes: The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier.
 
 ********************
 
@@ -921,7 +921,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Name: bdqffdq:forDataQualityNeed
 - Preferred Label: for Data Quality Need
 - Definition: Category of properties that relates specific Data Quality Needs to specific Methods.
-- Notes: Category of properties that link tests to their Methods
+- Notes: Category of properties that link tests to their Methods.
 
 ********************
 
@@ -1228,7 +1228,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Preferred Label: has Expected Response
 - Definition: Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
 - Range xsd:string
-- Notes: The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification
+- Notes: The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification.
 
 ********************
 
@@ -1258,7 +1258,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Type: bdqffdq:ResourceType
 - Preferred Label: Multi Record
 - Definition: A set of one or more Single Records.
-- Notes: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset
+- Notes: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset.
 
 ********************
 
@@ -1602,12 +1602,12 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
 - Name: bdqffdq:Amendment
 - Preferred Label: Amendment
-- Definition: A data quality need that expresses how proposals may be made to improve the fittnes for use of data.
+- Definition: A data quality need that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
 - Notes: ContextualizedEnhacement in the original framework.   Describes an instance of the enhancement concept in the context of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.    
 Describes a proposal for enhancement of original data, which if accepted, would improve the quality of the data for some use. For example: Recommends valid value for taxon name in a single record.    
 Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.    
-An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.     
+An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmendmentAssertion at the report level.     
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
 ********************
@@ -1662,7 +1662,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 - Preferred Label: Acted Upon
 - Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element.
 - SubClass Of: InformationElement
-- Notes: An Information Element the content of which is examined to assert a result on one or more other Information Elements
+- Notes: An Information Element the content of which is examined to assert a result on one or more other Information Elements.
 
 ********************
 
@@ -1745,7 +1745,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 - Preferred Label: Enhancement
 - Definition: Description of a means by which data could be improved.
 - SubClass Of: AmendmentConcept; FundamentalConcept; NeedConcept
-- Notes: General statement, for example: Recommend replacement value from a controlled vocabulary
+- Notes: General statement, for example: Recommend replacement value from a controlled vocabulary.
 
 ********************
 
@@ -1926,7 +1926,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 - Preferred Label: Policy
 - Definition: The set of data quality Needs for a UseCase
 - SubClass Of: NeedConcept
-- Notes: Composition of data quality Needs into UseCases
+- Notes: Composition of data quality Needs into UseCases.
 
 ********************
 
@@ -1945,7 +1945,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 - Preferred Label: Resource Type
 - Definition: Category of things that are data objects about which data quality assertions may be made.
 - SubClass Of: FundamentalConcept
-- Notes: In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord
+- Notes: In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord.
 
 ********************
 
@@ -1976,7 +1976,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 - Preferred Label: Response.status
 - Definition: A report concept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an implementation.
 - SubClass Of: ReportConcept
-- Notes: The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier
+- Notes: The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier.
 
 ********************
 
@@ -2118,7 +2118,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Name: bdqffdq:forDataQualityNeed
 - Preferred Label: for Data Quality Need
 - Definition: Category of properties that relates specific Data Quality Needs to specific Methods.
-- Notes: Category of properties that link tests to their Methods
+- Notes: Category of properties that link tests to their Methods.
 
 ********************
 
@@ -2425,7 +2425,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Preferred Label: has Expected Response
 - Definition: Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
 - Range xsd:string
-- Notes: The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification
+- Notes: The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification.
 
 ********************
 
@@ -2455,7 +2455,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Type: bdqffdq:ResourceType
 - Preferred Label: Multi Record
 - Definition: A set of one or more Single Records.
-- Notes: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset
+- Notes: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset.
 
 ********************
 

@@ -79,7 +79,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed
 :forDataQualityNeed rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Category of properties that link tests to their Methods" ;
+                    rdfs:comment "Category of properties that link tests to their Methods." ;
                     rdfs:label "for Data Quality Need" ;
                     skos:definition "Category of properties that relates specific Data Quality Needs to specific Methods." ;
                     skos:prefLabel "for Data Quality Need" .
@@ -416,7 +416,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 ###  https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse
 :hasExpectedResponse rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:string ;
-                     rdfs:comment "The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification"@en ;
+                     rdfs:comment "The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification."@en ;
                      rdfs:label "has Expected Response"@en ;
                      skos:definition "Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements." ;
                      skos:prefLabel "has Expected Response"@en .
@@ -471,11 +471,11 @@ Describes a proposal for enhancement of original data, which if accepted, would 
 
 Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example an Amendment on a SingleRecord may provide criteria for proposing that latitude and longitude are transposed in that record, or a similar Amendment on a MultiRecord may provide critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.  
 
-An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmmendmentAssertion at the report level.   
+An Amendment is the data quality needs concept that parallels an AmendmentMethod at the solutions level, and an AmendmentAssertion at the report level.   
 
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
            rdfs:label "Amendment"@en ;
-           skos:definition "A data quality need that expresses how proposals may be made to improve the fittnes for use of data." ;
+           skos:definition "A data quality need that expresses how proposals may be made to improve the fitness for use of data." ;
            skos:prefLabel "Amendment"@en .
 
 
@@ -536,7 +536,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/Consulted
 :Consulted rdf:type owl:Class ;
            rdfs:subClassOf :InformationElement ;
-           rdfs:comment "An Information Element the content of which is examined to assert a result on one or more other Information Elements"@en ;
+           rdfs:comment "An Information Element the content of which is examined to assert a result on one or more other Information Elements."@en ;
            rdfs:label "Consulted"@en ;
            skos:definition "An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element." ;
            skos:prefLabel "Acted Upon" .
@@ -618,7 +618,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
              rdfs:subClassOf :AmendmentConcept ,
                              :FundamentalConcept ,
                              :NeedConcept ;
-             rdfs:comment "General statement, for example: Recommend replacement value from a controlled vocabulary"@en ;
+             rdfs:comment "General statement, for example: Recommend replacement value from a controlled vocabulary."@en ;
              rdfs:label "Enhancement"@en ;
              skos:definition "Description of a means by which data could be improved."@en ;
              skos:prefLabel "Enhancement"@en .
@@ -810,7 +810,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 ###  https://rs.tdwg.org/bdqffdq/terms/Policy
 :Policy rdf:type owl:Class ;
         rdfs:subClassOf :NeedConcept ;
-        rdfs:comment "Composition of data quality Needs into UseCases" ;
+        rdfs:comment "Composition of data quality Needs into UseCases." ;
         rdfs:label "Policy" ;
         skos:definition "The set of data quality Needs for a UseCase" ;
         skos:prefLabel "Policy" .
@@ -827,7 +827,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 ###  https://rs.tdwg.org/bdqffdq/terms/ResourceType
 :ResourceType rdf:type owl:Class ;
               rdfs:subClassOf :FundamentalConcept ;
-              rdfs:comment "In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord" ;
+              rdfs:comment "In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord." ;
               rdfs:label "Resource Type"@en ;
               skos:definition "Category of things that are data objects about which data quality assertions may be made." ;
               skos:prefLabel "Resource Type"@en .
@@ -856,7 +856,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 ###  https://rs.tdwg.org/bdqffdq/terms/ResponseStatus
 :ResponseStatus rdf:type owl:Class ;
                 rdfs:subClassOf :ReportConcept ;
-                rdfs:comment "The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier" ;
+                rdfs:comment "The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier." ;
                 rdfs:label "Response.status"@en ;
                 skos:definition "A report concept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an implementation." ;
                 skos:prefLabel "Response.status"@en .
@@ -1032,7 +1032,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 :MultiRecord rdf:type owl:NamedIndividual ,
                       :ResourceType ;
-             rdfs:comment "A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset" ;
+             rdfs:comment "A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset." ;
              rdfs:label "Multi Record"@en ;
              skos:definition "A set of one or more Single Records." ;
              skos:prefLabel "Multi Record" .
