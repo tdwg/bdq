@@ -13,26 +13,30 @@ Work in progress description of files in this directory:
 │   ├── temp_namespaces.yaml File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
 │   ├── temp_term-lists.csv File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
 │   └── templates template files used by build scripts 
+│       ├── intro templates and configuration files for introduction page (docs/intro/index.md)
+│       ├── supplement templates and configuration files for supplement page (docs/supplement/index.md)
+│       ├── synthetic templates and configuration files for synthetic data page (docs/synthetic/index.md)
+│       ├── vocabularies templates and configuration files for vocabularies landing page (docs/vocabularies/index.md)
 │       ├── list templates for term list documents and dist rdf files 
-│       │   ├── bdq templates and configuration files for bdq vocabulary
-│       │   ├── bdqcore test documentation build files, work in progress
-│       │   ├── bdqdim templates and configuration files for bdqdim vocabulary
-│       │   ├── bdqcrit templates and configuration files for bdqcrit vocabulary
-│       │   └── bdqenh templates and configuration files for bdqenh vocabulary
-│       ├── terms templates for quick reference guide
-│       │   └── bdqcore_qrg quick reference guide build files (for docs/terms/bdqcore)
+│       │   ├── bdq templates and configuration files for bdq vocabulary (docs/list/bdq/index.md)
+│       │   ├── bdqcore test documentation build files, work in progress (docs/list/bdqcore/index.md)
+│       │   ├── bdqdim templates and configuration files for bdqdim vocabulary (docs/list/bdqdim/index.md)
+│       │   ├── bdqcrit templates and configuration files for bdqcrit vocabulary (docs/list/bdqcrit/index.md)
+│       │   └── bdqenh templates and configuration files for bdqenh vocabulary (docs/list/bdqenh/index.md)
+│       ├── terms templates for quick reference guide 
+│       │   └── bdqcore_qrg quick reference guide build files (for docs/terms/bdqcore/index.md)
 │       ├── bdqffdq ontology documentation build files, work in progress
 │       └── guide directory for templates for guides (users, implementors, bdqffdq).
-│           ├── bdqffdq  source files for bdqffdq guide
-│           ├── implementers source files for implementers guide
-│           └── users source files for users guide.
+│           ├── bdqffdq  source files for bdqffdq guide (docs/guide/bdqffdq/index.md)
+│           ├── implementers source files for implementers guide (docs/guide/implementers/index.md)
+│           └── users source files for users guide. (docs/guide/implemeters/index.md)
 ├── dist Generated csv distribution files for building other artifacts
 │   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py)
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py)
 │   ├── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py)
 │   ├── bdqcrit.xml  Generated RDF for bdqcrit vocabulary (built with draft_build-termlist.py)
-    ├── bdqcore.xml rdf/xml serialization of rdf representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml
-    ├── bdqcore.ttl turtle serialization of rdf representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl
+│   ├── bdqcore.xml rdf/xml serialization of rdf representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml
+│   ├── bdqcore.ttl turtle serialization of rdf representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl
 │   └── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name, purpose?
 ├── docs  human readable documentation files built from files in build/
 │   ├── intro 
@@ -65,16 +69,16 @@ Work in progress description of files in this directory:
 │   ├── synthetic
 │   │   └── index.md Generated file, do not edit.
 │   ├── maintenance
-│   │   └── index.md  suggestions for maintinance group, editable.
+│   │   └── index.md  suggestions for maintinance group, **editable.**
 │   ├── references
-│   │   └── index.md list of references, editable.
+│   │   └── index.md list of references, **editable.**
 │   └── supplement
 │       └── index.md Generated file, do not edit.
 └── vocabulary should just be the term version files, but not all as term version files yet
-    ├── bdq_term_versions.csv Term version file for bdq vocabulary
-    ├── bdqdim_term_versions.csv Term version file for bdqdim vocabulary
-    ├── bdqenh_term_versions.csv Term version file for bdqenh vocabulary
-    ├── bdqcrit_term_versions.csv Term version file for bdqcrit vocabulary
+    ├── bdq_term_versions.csv Term version file for bdq vocabulary **editable**
+    ├── bdqdim_term_versions.csv Term version file for bdqdim vocabulary **editable**
+    ├── bdqenh_term_versions.csv Term version file for bdqenh vocabulary **editable**
+    ├── bdqcrit_term_versions.csv Term version file for bdqcrit vocabulary **editable**
     ├── bdqcore_terms.csv bdqcore tests as csv file, pending conversion to term version file, copied from tg2/core/TG2_tests.csv, with multirecord measures appended  
     └── bdqffdq.owl probably goes in dist with no csv file here
 </pre>
