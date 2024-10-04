@@ -51,6 +51,19 @@ Each test is designed to stand in isolation. This is by design to both support t
 
 Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that assesses some aspect of data quality. An AMENDMENT may be able to improve the quality of data with respect to that VALIDATION. 
 
+### 1.1 Structure of Response (normative)
+
+Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags,  The Response from a test is an assertion which can form part of a data quality report 
+or be wrapped in an annotation, and MUST include the following three components: 
+
+1. Value is the returned result for the test, i.e. numeric for measures, a controlled vocabulary (consisting of exactly COMPLIANT or NOT_COMPLIANT) for validations or Issues (NOT_ISSUE,
+ POTENTIAL_ISSUE, ISSUE), either a numeric value or a controlled vocabulary (consisting of exactly COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value 
+pairs) for proposed changes for Amendments. 
+2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the test. The Status also serves as a link to information about warning type value
+s and where in the future, probabilistic assertions about the likeliness of the value could be made. 
+3. Remark supplies human-readable text describing reasons for the test result output.
+
+
 ## 2.0 Types of Tests
 There are four types of tests: Validations, Amendments, Measures, and Issues.
 
@@ -67,6 +80,7 @@ An **Amendment** examines the values of Darwin Core terms to identify potential 
 The Test Descriptors are terms that are necessary to comprehensively describe the test. Some terms, such as the GUID are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded. 
 
 **I'll work on this next as it needs at least a table of test terms and definitions as used in the csv dump below**
+**Probably Not Needed, the terms here will be bdqffdq terms, and thus defined in that ontology.** 
 
 ## 4.0 Example RDF (non-normative) 
 
@@ -99,6 +113,7 @@ Example: Formal description of 0493bcfb-652e-4d17-815b-b0cce0742fbe VALIDATION_C
 ## 5.0 Status of the content of this document
 
 **left as is for now**
+**Needs work, 1.2 is normative, current section 2 is non-normative**
 Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
