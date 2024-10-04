@@ -23,23 +23,23 @@ Preferred Citation
 ## Parts of the Standard
 
 - [BDQ Core Introduction](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/intro/index.md)
-- [BDQ Core Tests Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqcore/index.md)
+- [BDQ Core Tests Quick Reference Guide](docs/terms/bdqcore/index.md)
+- [BDQ Core User's Guide](docs/guide/users/index.md)
 - [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
   -  [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcore/index.md):
      - File: [CSV List of Tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
      - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
      - File: [Tests in Turtle](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.ttl "Turtle serialization of OWL representation of the tests descriptors.")
-  - [Fitness For Use Framework Ontology List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md):
+  - [Fitness For Use Framework Ontology List of Terms](docs/list/bdqffdq/index.md):
     - File [bdqffdq: Owl](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl "Owl ontology for the bdqffdq framework.")
-  - [Test Specification Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdq/index.md)
+  - [Biodiversity Data Quality Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdq/index.md)
   - [Data Quality Dimension Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqdim/index.md)
   - [Data Quality Criterion Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcrit/index.md)
   - [Data Quality Enhancement Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqenh/index.md)
-- [BDQ Core User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/users/index.md)
-- [BDQ Core Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md)
-  - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/TG2_test_validation_data.csv "Test validation data csv file")
-  - File: [Test Validation Data for non-printing characters](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/TG2_test_validation_data_nonprintingchars.csv "Test validation data csv file for testing implementations of EMPTY, containing non-printing characters")
-- [BDQ Core Fitness For Use Framework Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq_guide/index.md):
+- [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
+  - File: [Test Validation Data](docs/guide/implementers/TG2_test_validation_data.csv "Test validation data csv file")
+  - File: [Test Validation Data for non-printing characters](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv "Test validation data csv file for testing implementations of EMPTY, containing non-printing characters")
+- [BDQ Core Fitness For Use Framework Guide](docs/guide/bdqffdq/index.md):
 - [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 - [References](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/references/index.md)
 - [BDQ Core Supplemental Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)

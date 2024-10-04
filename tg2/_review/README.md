@@ -5,6 +5,7 @@ Start on the [BDQ Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/inde
 Work in progress description of files in this directory: 
 
 <pre>
+├── index.md  Landing page for the standard. **editable**
 ├── build  build scripts and templates to assemble pages
 │   ├── authors_configuration.yaml list of authors and contributors used by build scripts
 │   ├── .md files are working files that are to become templates but are not yet
