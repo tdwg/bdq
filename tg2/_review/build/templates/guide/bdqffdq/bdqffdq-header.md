@@ -34,8 +34,6 @@ Bibliographic citation
 
 {toc}
 
-**Contributors**: Lee Belbin, Paul J. Morris, Arthur Chapman, John Wieczorek, Alan Koch Veiga, Paula F Zermoglio, Alex Thompson, David Lowry, Antonio M Saraiva, Yi Ming Gan, Christian Gendreau, Dmitry Schigel, Tim Robertson, Robert A. Morris 
-
 
 ## 1 Introduction
 [!--- JRW finished first draft to here ---]
