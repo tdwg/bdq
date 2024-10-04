@@ -89,9 +89,9 @@
   affiliation: Global Biodiversity Information Facility
   affiliation_uri: https://www.wikidata.org/wiki/Q1531570
 
-  - contributor_iri: https://orcid.org/
+- contributor_iri: https://orcid.org/0000-0002-6992-9446
   contributor_literal: Robert A. Morris
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
-  affiliation: 
-  affiliation_uri: https://www.wikidata.org/wiki/xxxxxxxx
+  affiliation:
+  affiliation_uri:
