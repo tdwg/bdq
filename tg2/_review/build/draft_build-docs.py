@@ -402,11 +402,19 @@ for templatePath, document in directories.items() :
 	outputObject.write(output)
 	outputObject.close()
 
+	# Run 
+	# tree templates | grep -v yaml | grep -v "\.md" 
+	# to find file types that should be copied over
+
 	# Find image files to copy from templates and copy them over to docs
 	for file in glob.glob('{}*.svg'.format(sourceDirectory)):
 		print(file)
 		shutil.copy(file, outputDirectory)
 	for file in glob.glob('{}*.png'.format(sourceDirectory)):
+		print(file)
+		shutil.copy(file, outputDirectory)
+	# Find csv files (with test validation data) to copy from templates and copy them over to docs
+	for file in glob.glob('{}*.csv'.format(sourceDirectory)):
 		print(file)
 		shutil.copy(file, outputDirectory)
 
