@@ -40,7 +40,7 @@ Preferred Citation
 - [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
   - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/TG2_test_validation_data.csv)
   - File: [Test Validation Data for non-printing characters](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
-  - File: [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
+  - [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 - [References](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/references/index.md)
 
 ## Appendix
