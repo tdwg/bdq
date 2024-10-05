@@ -24,6 +24,7 @@ Preferred Citation
 
 - [BDQ Core Introduction](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/intro/index.md)
 - [BDQ Core Tests Quick Reference Guide](docs/terms/bdqcore/index.md)
+- [BDQ Core Fitness For Use Framework Guide](docs/guide/bdqffdq/index.md)
 - [BDQ Core User's Guide](docs/guide/users/index.md)
 - [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
   -  [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcore/index.md):
@@ -39,7 +40,6 @@ Preferred Citation
 - [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
   - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/TG2_test_validation_data.csv)
   - File: [Test Validation Data for non-printing characters](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
-- [BDQ Core Fitness For Use Framework Guide](docs/guide/bdqffdq/index.md):
 - [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 - [References](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/references/index.md)
 - [BDQ Core Supplemental Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)
