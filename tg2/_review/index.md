@@ -40,11 +40,11 @@ Preferred Citation
 - [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
   - File: [Test Validation Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/TG2_test_validation_data.csv)
   - File: [Test Validation Data for non-printing characters](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
-  - [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
+- [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
+- [BDQ Core Supplemental Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)
 - [References](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/references/index.md)
 
 ## Appendix
 
-- [BDQ Core Supplemental Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)
 - [BDQ Core Maintenance Guide (draft)](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/maintenance/index.md)
 - [GitHub repository](https://github.com/tdwg/bdq): where BDQ Core is maintained
