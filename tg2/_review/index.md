@@ -33,7 +33,7 @@ Preferred Citation
      - File: [Tests in Turtle](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
   - [Fitness For Use Framework Ontology List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqffdq/index.md):
     - File [bdqffdq: Owl](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl "Owl ontology for the bdqffdq framework.")
-  - [Biodiversity Data Quality Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdq/index.md)
+  - [Biodiversity Data Quality Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdq/index.md)
   - [Data Quality Dimension Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqdim/index.md)
   - [Data Quality Criterion Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcrit/index.md)
   - [Data Quality Enhancement Controlled Vocabulary List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqenh/index.md)
