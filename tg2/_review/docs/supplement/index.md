@@ -489,11 +489,19 @@ The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable
 
 ![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.jpg "NAME by InformationElements")
 
+Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon
+
 ![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.jpg "SPACE by InformationElements")
+
+Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
 
 ![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.jpg "TIME by InformationElements")
 
+Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.
+
 ![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.jpg "OTHER by InformationElements")
+
+Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon
 
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
