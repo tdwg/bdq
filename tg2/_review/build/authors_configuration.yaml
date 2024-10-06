@@ -45,7 +45,7 @@
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
   affiliation: Universidade de São Paulo
-  affiliation_uri: 
+  affiliation_uri: https://www.wikidata.org/wiki/Q835960
 
 - contributor_iri: https://orcid.org/0000-0002-6056-5084
   contributor_literal: Paula F Zermoglio 
