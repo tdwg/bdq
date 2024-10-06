@@ -413,6 +413,9 @@ for templatePath, document in directories.items() :
 	for file in glob.glob('{}*.png'.format(sourceDirectory)):
 		print(file)
 		shutil.copy(file, outputDirectory)
+	for file in glob.glob('{}*.jpg'.format(sourceDirectory)):
+		print(file)
+		shutil.copy(file, outputDirectory)
 	# Find csv files (with test validation data) to copy from templates and copy them over to docs
 	for file in glob.glob('{}*.csv'.format(sourceDirectory)):
 		print(file)

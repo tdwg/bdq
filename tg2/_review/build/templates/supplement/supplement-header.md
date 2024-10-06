@@ -455,6 +455,22 @@ The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark con
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, idependently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
 
+![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.jpg "NAME by InformationElements")
+
+Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon
+
+![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.jpg "SPACE by InformationElements")
+
+Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
+
+![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.jpg "TIME by InformationElements")
+
+Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.
+
+![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.jpg "OTHER by InformationElements")
+
+Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon
+
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
 The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each issue has a table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below. The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
