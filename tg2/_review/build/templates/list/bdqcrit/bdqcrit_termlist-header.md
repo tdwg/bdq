@@ -69,6 +69,10 @@ The following namespace abbreviations are used in this document:
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
 
+### 1.5 Key to Vocabulary Terms
+
+{term_key}
+
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used values of `bdqffdq:Criterion`.

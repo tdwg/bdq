@@ -68,6 +68,25 @@ The following namespace abbreviations are used in this document:
 | HTML file   | http://rs.tdwg.org/bdq/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcrit/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcrit.xml | Example for submission, to be generated | 
 
+### 1.5 Key to Vocabulary Terms
+
+| Label | Term | Definition | Example |
+| ----- | ---- | ---------- | ------- |
+| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30 |
+| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqcrit/terms/Complete |
+| Term Name | rdf:value |  | Complete |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Complete |
+| Label | rdfs:label |  | Complete |
+| Comments | rdfs:comment |  | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness |
+| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Data are present and sufficiently comprehensive for use. |
+| Type | rdf:type |  | bdqffdq:Criterion |
+|  |  |  | https://rs.tdwg.org/bdqcrit/terms/ |
+| Modified | dcterms:issued |  | 2024-09-30 |
+| Status | tdwgutility:status |  | recommended |
+|  |  |  |  |
+| Controlled Value |  |  | Complete |
+
+
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used values of `bdqffdq:Criterion`.

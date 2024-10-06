@@ -71,6 +71,25 @@ The following namespace abbreviations are used in this document:
 | HTML file   | http://rs.tdwg.org/bdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdq/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdq.xml | Example for submission, to be generated | 
 
+### 1.5 Key to Vocabulary Terms
+
+| Label | Term | Definition | Example |
+| ----- | ---- | ---------- | ------- |
+| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30 |
+| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdq/terms/Alien-Species |
+| Term Name | rdf:value |  | Alien-Species |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Alien-Species |
+| Label | rdfs:label |  | Alien-Species |
+| Comments | rdfs:comment |  |  |
+| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
+| Type | rdf:type |  | bdqffdq:UseCase |
+|  |  |  | bdqffdq:UseCase |
+| Modified | dcterms:issued |  | 2024-09-30 |
+| Status | tdwgutility:status |  | recommended |
+|  |  |  |  |
+| Controlled Value |  |  | Alien-Species |
+
+
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values from the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.

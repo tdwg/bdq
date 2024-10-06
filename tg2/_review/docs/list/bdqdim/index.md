@@ -70,6 +70,25 @@ The following namespace abbreviations are used in this document:
 | HTML file   | http://rs.tdwg.org/bdq/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqdim/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqdim.xml | Example for submission, to be generated | 
 
+### 1.5 Key to Vocabulary Terms
+
+| Label | Term | Definition | Example |
+| ----- | ---- | ---------- | ------- |
+| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30 |
+| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqdim/terms/Completeness |
+| Term Name | rdf:value |  | Completeness |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Completeness |
+| Label | rdfs:label |  | Completeness |
+| Comments | rdfs:comment |  | Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. |
+| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. |
+| Type | rdf:type |  | bdqffdq:DataQualityDimension |
+|  |  |  | https://rs.tdwg.org/bdqdim/terms/ |
+| Modified | dcterms:issued |  | 2024-09-30 |
+| Status | tdwgutility:status |  | recommended |
+|  |  |  |  |
+| Controlled Value |  |  | Completeness |
+
+
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of `bdqffdq:dataQualityDimension`.
