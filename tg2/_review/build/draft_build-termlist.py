@@ -440,18 +440,19 @@ for term in termLists:
     definitionTable = definitionTable + "| ----- | ---- | ---------- | ------- |\n"
     termrow = terms_sorted_by_localname.iloc[0]
     for key, value in term_concept_dictionary.items() :
-        label = value['label']
-        termname = value['term']
-        definition = ""
-        if termname.startswith("skos:") : 
-            graph = rdflib.Graph()
-            graph.parse("https://www.w3.org/2009/08/skos-reference/skos.rdf", format="xml")
-            sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
-            queryResult = graph.query(sparql)
-            for r in queryResult : 
-               definition = r.object
-        example = termrow[key]
-        definitionTable = definitionTable + "| {} | {} | {} | {} |\n".format(label,termname,definition,example)
+        if value['label'] : 
+            label = value['label']
+            termname = value['term']
+            definition = ""
+            if termname.startswith("skos:") : 
+                graph = rdflib.Graph()
+                graph.parse("https://www.w3.org/2009/08/skos-reference/skos.rdf", format="xml")
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            example = termrow[key]
+            definitionTable = definitionTable + "| {} | {} | {} | {} |\n".format(label,termname,definition,example)
 
     print('Generating terms table')
     # generate the Markdown for the terms table
