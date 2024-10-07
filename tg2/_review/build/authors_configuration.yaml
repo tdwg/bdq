@@ -95,3 +95,24 @@
   role_uri: http://www.wikidata.org/entity/Q20204892
   affiliation:
   affiliation_uri:
+
+- contributor_iri: https://orcid.org/0000-0002-3302-0070
+  contributor_literal: Miles Nicholls
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: Atlas of Living Australia
+  affiliation_uri: https://www.wikidata.org/wiki/Q16335177
+
+- contributor_iri: 
+  contributor_literal: Emily Rose Rees
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: Atlas of Living Australia
+  affiliation_uri: https://www.wikidata.org/wiki/Q16335177
+
+- contributor_iri: https://orcid.org/0000-0002-4391-107X
+  contributor_literal: Abigail Benson
+  contributor_role: contributor
+  role_uri: http://www.wikidata.org/entity/Q20204892
+  affiliation: U.S. Geological Survey
+  affiliation_uri: https://www.wikidata.org/wiki/Q193755
