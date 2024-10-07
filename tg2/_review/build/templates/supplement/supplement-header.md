@@ -78,8 +78,6 @@ An internationally agreed standard suite of core tests and resulting assertions 
 
 ### 2.1 Definition of CORE
 
-**Rewrite to cover initial product of TG3 shaping what became Temporal-Spatial use case, then expansion to other use cases**
-
 'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). 
 
 The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what place and time, and a subset of Darwin Core terms that we considered to be critical metadata about occurrence records.
@@ -88,13 +86,15 @@ A number of tests were framed, but considered out of scope for CORE data quality
 
 ### 2.2 Use case development
 
-A Task Group, the Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020), was established early to look at what use cases were in use. From the use cases in use, they identified several fundamental use cases, including "bdq:Spatial-Temporal Patterns", "bdq:Record-Management", and "bdq:Taxon-Management". We later added "bdq:Alien-Species" and "bdq:Biotic-Relationships".
+A Task Group, the Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020), was established early to review what use cases were common. Task Group 4 identified several fundamental use cases, including "bdq:Spatial-Temporal Patterns", "bdq:Record-Management", and "bdq:Taxon-Management". We later added "bdq:Alien-Species" and "bdq:Biotic-Relationships". 
 
-These are only a sample of the many possible use cases used in the biological sciences, but they provide an initial set to which all the tests have been linked. The relationship between Use Cases and Tests is a many to many relationship - with most tests being relatable to many use cases and vice versa.
+These are only a sample of the many possible use cases used in the biological sciences, but they provide an initial set to which all the tests have been linked. Note that the relationship between Use Cases and Tests is a many to many relationship - with most tests being relatable to many use cases and vice versa.
+
+Note that the evaluation of a test can only take place within the context of a specific use case, even if that use is broad. For example, the test VALIDATION_COUNTRY_FOUND could test the value of dwc:country against a source authority for the use case bdq:Record-Management.
 
 ### 2.3 Data Quality Control and Data Quality Assurance
 
-The framework (bdqffdq:) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
+The framework (bdqffdq: namespace) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
 
 The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
@@ -376,6 +376,20 @@ The flexibility of Darwin Core (on which BDQ Core is based) in relation to vocab
 **Annotations.** Similarly, the authors valued the the significance of an annotation standard to BDQ Core and have one test specifically targeting record annoations: ISSUE_ANNOTATION_NOTEMPTY, even though no TDWG standard exists. We do however acknowledge the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) which has identified the W3C Web Annotation Data Model (W3C 2017) as the likely way forward.  We understood that the annotation test will be difficult, if not impossible for many to implement, but we considered this issue of such significance, that we have included it to promote the use of the W3C web annotation data model by the international biodiversity community. We also acknowledge that data aggregators such as the Atlas of Living Australia (https://ala.org.au) have had an operational annotation service for many years (see https://support.ala.org.au/support/solutions/articles/6000262125-flagging-an-issue-with-a-record) but like other implementations, this service is a subset of what is required for a comprehensive service (e.g., annotations on annoations for one).
 
 **High Seas.** It was also recognized that a number of BDQ Core tests would assert a 'lack of quality' for records representing events on the high seas/international waters (outside national jurisdictions) where tests will return 'NOT_COMPLIANT' as there is no agreed standard for designating 'high seas' records using Darwin Core (https://dwc.tdwg.org/). Examples of such tests include VALIDATION_COUNTRY_NOTEMPTY and VALIDATION_COUNTRYCODE_NOTEMPTY. The authors recognize the significance of this issue to the marine community, and we have retained these tests to promote an agreement on an international standard. We acknowledge a current user-assigned ISO 3166-alpha-2 country code (dwc:countryCode - https://dwc.tdwg.org/terms/#dwc:countryCode) of "XZ" to infer "international waters" (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#XZ and https://en.wikipedia.org/wiki/UN/LOCODE). While country code "XZ" looks like a much-needed advance, its use has not be standardized. The situation with populating a country value (dwc:country - https://dwc.tdwg.org/terms/#dwc:country) with "high seas" or "international waters" or something else is less advanced, but we have retained the country test, aspirationally. Related tests such as VALIDATION_COUNTRY_FOUND, VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT and VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT don't present as much an issue, due to the Specifications including the phrase "INTERNAL_PREREQUISITES_NOT_MET" if dwc:countryCode or dwc:country are bdq:Empty, as would be currently expected for records in international waters. The Specification says "This test can't be done because a vital piece of information to run this test is absent". While currently acceptable, once a standard for international waters/high seas is established, the tests will need to be revisited.
+
+### 3.11 Tests and Vocabularies
+The development of the tests (and assertions from the tests) was the core business for Task Group 2. To achieve that outcome, we needed to describe the tests in a comprehensive and consistent manner and hence a vocabulary was developed (https://github.com/tdwg/bdq/issues/152). While the Data Quality Framework (Veiga et al. 2017) had developed an ontology for 'data quality'/'fitness for use' (link), it would be fair to say that Task Group 2 initially took an independent, 'bottom-up'approach, examining what tests agencies were using, filling gaps and establishing criteria for test inclusion or exclusion. The tests and vocabulary evolved: Tests refined our vocabulary and our vocabulary refined our tests. 
+
+After some years of work, our vocabulary and tests were effectively merged with the Framework ontology. A good example of the evolution is illustrated in all of our tests being rendered in the 'negative' - identifying issues/problems, while the Framework took the opposite approach - evaluating quality. Thus tests like VALIDATION_COUNTRY_NOTFOUND became VALIDATION_COUNTRT_FOUND.
+
+Once most of the vocabulary terms were in place, it was split into more specific namespace components-
+
+bdq	https://rs.tdwg.org/bdq/terms/ for terms xxx
+bdqcore	https://rs.tdwg.org/bdqcore/terms/ for terms xxx
+bdqcrit	https://rs.tdwh.org/bdqcrit/terms/ for the Criteria of the tests
+bdqdim	https://rs.tdwg.org/bdqdim/terms/ for the data quality dimension of the tests
+bdqenh	https://rs.tdwg.org/bdqenh/terms/ for the enhancement types of the AMENDMENT test types
+bdqffdq	https://rs.tdwg.org/bdqffdq/terms for the Framework ontology
 
 ## 4 Date and Time Issues
 
