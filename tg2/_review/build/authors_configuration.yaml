@@ -68,12 +68,12 @@
   affiliation: 
   affiliation_uri: 
 
-- contributor_iri: https://orcid.org/000-0003-4898-4291
+- contributor_iri: https://orcid.org/0000-0003-4898-4291
   contributor_literal: Christian Gendreau
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
-  affiliation: XXXXXXXX
-  affiliation_uri: https://www.wikidata.org/wiki/XXXXXXX
+  affiliation: Agriculture and Agri-Food Canada
+  affiliation_uri: http://www.wikidata.org/entity/Q1046164
 
 - contributor_iri: https://orcid.org/0000-0001-6215-3617
   contributor_literal: Tim Roberston
