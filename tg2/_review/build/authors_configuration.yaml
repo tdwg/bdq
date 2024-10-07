@@ -61,7 +61,7 @@
   affiliation: Google
   affiliation_uri: https://www.wikidata.org/wiki/Q95
 
-- contributor_iri: 
+- contributor_iri: https://github.com/lowery
   contributor_literal: David Lowery
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
