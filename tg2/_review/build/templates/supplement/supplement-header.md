@@ -384,12 +384,12 @@ After some years of work, our vocabulary and tests were effectively merged with 
 
 Once most of the vocabulary terms were in place, it was split into more specific namespace components-
 
-bdq	https://rs.tdwg.org/bdq/terms/ for terms xxx
-bdqcore	https://rs.tdwg.org/bdqcore/terms/ for terms xxx
-bdqcrit	https://rs.tdwh.org/bdqcrit/terms/ for the Criteria of the tests
-bdqdim	https://rs.tdwg.org/bdqdim/terms/ for the data quality dimension of the tests
-bdqenh	https://rs.tdwg.org/bdqenh/terms/ for the enhancement types of the AMENDMENT test types
-bdqffdq	https://rs.tdwg.org/bdqffdq/terms for the Framework ontology
+- bdq	https://rs.tdwg.org/bdq/terms/ for terms xxx
+- bdqcore	https://rs.tdwg.org/bdqcore/terms/ for terms xxx
+- bdqcrit	https://rs.tdwh.org/bdqcrit/terms/ for the Criteria of the tests
+- bdqdim	https://rs.tdwg.org/bdqdim/terms/ for the data quality dimension of the tests
+- bdqenh	https://rs.tdwg.org/bdqenh/terms/ for the enhancement types of the AMENDMENT test types
+- bdqffdq	https://rs.tdwg.org/bdqffdq/terms for the Framework ontology
 
 ## 4 Date and Time Issues
 
