@@ -15,6 +15,8 @@ import pandas as pd  # library to handle data loaded from csv as data frames
 import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
+import function_lib # library of reusable functions for TDWG build scripts
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown
 
 # -----------------
 # Configuration section
@@ -98,57 +100,6 @@ if has_namespace:
     metadata_config = yaml.load(metadata_config_text, Loader=yaml.FullLoader)
     namespace_uri = metadata_config['namespaces'][0]['namespace_uri']
     pref_namespace_prefix = metadata_config['namespaces'][0]['pref_namespace_prefix']
-
-# ---------------
-# Function definitions
-# ---------------
-
-# replace URL with link (function used with Audubon Core list of terms build script)
-# Does not correctly handle URLs with close parens ) characters, so no longer used.
-#
-def createLinks(text):
-    def repl(match):
-        if match.group(1)[-1] == '.':
-            return '<a href="' + match.group(1)[:-1] + '">' + match.group(1)[:-1] + '</a>.'
-        return '<a href="' + match.group(1) + '">' + match.group(1) + '</a>'
-
-    pattern = '(https?://[^\s,;\)"<]*)'
-    result = re.sub(pattern, repl, text)
-    return result
-
-# 2021-08-06 Replace the createLinks() function with functions copied from the QRG build script written by S. Van Hoey
-def convert_code(text_with_backticks):
-    """Takes all back-quoted sections in a text field and converts it to
-    the html tagged version of code blocks <code>...</code>
-    """
-    return re.sub(r'`([^`]*)`', r'<code>\1</code>', text_with_backticks)
-
-def convert_link(text_with_urls):
-    """Takes all links in a text field and converts it to the html tagged
-    version of the link
-    """
-    def _handle_matched(inputstring):
-        """quick hack version of url handling on the current prime versions data"""
-        url = inputstring.group()
-        return "<a href=\"{}\">{}</a>".format(url, url)
-
-    regx = "(http[s]?://[\w\d:#@%/;$()~_?\+-;=\\\.&]*)(?<![\)\.,])"
-    return re.sub(regx, _handle_matched, text_with_urls)
-
-# Hack the code taken from the terms.tmpl template to insert the HTML necessary to make the semicolon-separated
-# lists of examples into an HTML list.
-# {% set examples = term.examples.split("; ") %}
-# {% if examples | length == 1 %}{{ examples | first }}{% else %}<ul class="list-group list-group-flush">{% for example in examples %}<li class="list-group-item">{{ example }}</li>{% endfor %}</ul>{% endif %}
-def convert_examples(text_with_list_of_examples: str) -> str:
-    examples_list = text_with_list_of_examples.split('; ')
-    if len(examples_list) == 1:
-        return examples_list[0]
-    else:
-        output = '<ul class="list-group list-group-flush">\n'
-        for example in examples_list:
-            output += '  <li class="list-group-item">' + example + '</li>\n'
-        output += '</ul>'
-        return output
 
 # ---------------
 # Retrieve term list metadata from GitHub
@@ -451,26 +402,15 @@ for term in termLists:
     header = headerObject.read()
     headerObject.close()
     
-    # Build the Markdown for the contributors list
-    contributors = ''
-    separator = ''
-    for contributor in contributors_yaml:
-        if contributor['contributor_iri'] :
-            contributors += separator + '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
-        else : 
-            contributors += separator + contributor['contributor_literal'] + ' '
-        if contributor['affiliation'] :
-            if contributor['affiliation_uri'] :
-                contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + '))'
-            else :
-                contributors += '(' + contributor['affiliation'] + ')'
-        separator = ", "
-    
     # Substitute values of ratification_date and contributors into the header template
     print(document_configuration_yaml)
     header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
     header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
     header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
+    # Build the Markdown for the authors and contributors lists or the contributors list
+    contributors = build_authors_contributors_markdown(contributors_yaml)
+    header = header.replace('{authors_contributors}', contributors)
+    contributors = build_contributors_markdown(contributors_yaml)
     header = header.replace('{contributors}', contributors)
     header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
     header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])

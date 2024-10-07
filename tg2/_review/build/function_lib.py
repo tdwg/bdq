@@ -20,7 +20,8 @@
 #
 # @return a text string representing the list of authors and contributors in the form specfied by section 3.2.3.1 of the
 #  standards documentation section, that is [contributor_literal](contributor_iri) ([affiliation](affiliation_uri)), but
-#  providing separate lists for authors and contributors following the semantics of role_uri
+#  providing separate lists for authors and contributors following the semantics of role_uri, with these lists
+#  being rendered as separate (Authors\n: authors and Contributors\n: contributors) markdown definition list lists: 
 #
 # @see build_contributors_markdown(contributors_object)
 def build_authors_contributors_markdown(contributors_object) : 
@@ -65,7 +66,8 @@ def build_authors_contributors_markdown(contributors_object) :
 
 # Function build_contributors_markdown builds a markdown list of contributors from 
 # an object expected to be loaded from an authors_configuration.yaml file.
-# a template file used with this function would be expected to contain the lines : 
+# a template file used with this function would be expected to contain the lines (
+# in the form of a markdown definition list): 
 # Contibutors
 # : {contributors}  
 # preceeded and followed by blank lines 

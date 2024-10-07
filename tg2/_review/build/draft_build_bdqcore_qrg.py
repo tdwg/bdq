@@ -30,6 +30,8 @@ import yaml		# Library to parse yaml files
 # To copy files from build/templates/ to /docs/
 import glob
 import shutil
+import function_lib # library of reusable functions for TDWG build scripts
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown
 
 # Configuration 
 
@@ -112,25 +114,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		
 		text = ""
 	
-		# Build the Markdown for the contributors list
-		contributors = ''
-		separator = ''
-		for contributor in contributors_yaml:
-			if contributor['contributor_iri'] :
-				contributors += separator + '[' + contributor['contributor_literal'] + '](' + contributor['contributor_iri'] + ') '
-			else : 
-				contributors += separator + contributor['contributor_literal'] + ' '
-			if contributor['affiliation'] :
-				if contributor['affiliation_uri'] :
-					contributors += '([' + contributor['affiliation'] + '](' + contributor['affiliation_uri'] + '))'
-				else :
-					contributors += '(' + contributor['affiliation'] + ')'
-			separator = ", "
-		
 		# Substitute values of ratification_date and contributors into the header template
 		header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
 		header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 		header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
+		# Build the Markdown for the authors and contributors lists or the contributors list
+		contributors = build_authors_contributors_markdown(contributors_yaml)
+		header = header.replace('{authors_contributors}', contributors)
+		contributors = build_contributors_markdown(contributors_yaml)
 		header = header.replace('{contributors}', contributors)
 		header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
 		header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])
