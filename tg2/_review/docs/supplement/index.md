@@ -18,7 +18,7 @@ Abstract
 : This document provides information supplementary to the (Draft) BDQ Core Standard, describing some of the history of the development of the standard, and rationale management  for decisions made while describing the tests..
 
 Contributors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) (Universidade de São Paulo), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), David Lowery , [Christian Gendreau](https://orcid.org/000-0003-4898-4291) ([XXXXXXXX](https://www.wikidata.org/wiki/XXXXXXX)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) 
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028)), [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), David Lowery , [Christian Gendreau](https://orcid.org/000-0003-4898-4291) ([XXXXXXXX](https://www.wikidata.org/wiki/XXXXXXX)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) 
 
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
@@ -56,6 +56,7 @@ Draft Standard for Submission
 - [ 3.8 Input Data Values for AMENDMENTS](#38-input-data-values-for-amendments)
 - [ 3.9 Amendments and Annotations](#39-amendments-and-annotations)
 - [ 3.10 Aspirational Aspects of Select Tests](#310-aspirational-aspects-of-select-tests)
+- [ 3.11 Tests and Vocabularies](#311-tests-and-vocabularies)
 - [ 4 Date and Time Issues](#4-date-and-time-issues)
 - [ 4.1 Dates and Calendars](#41-dates-and-calendars)
 - [ 4.2 Time](#42-time)
@@ -110,8 +111,6 @@ An internationally agreed standard suite of core tests and resulting assertions 
 
 ### 2.1 Definition of CORE
 
-**Rewrite to cover initial product of TG3 shaping what became Temporal-Spatial use case, then expansion to other use cases**
-
 'CORE' in the context of this standard implies that the tests are informative, simple to implement, are mandatory for enhancements/amendments, have ‘power’ in that they will not likely result in 0% or 100% of all records failing or passing, are widely applicable across sub-disciplines within the biodiversity domain, may elevate the significance of an issue (e.g., no value for dcterms:license) or they may be 'aspirational' in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record). 
 
 The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE tests largely cover data quality with regards to what organism has occurred where, at what place and time, and a subset of Darwin Core terms that we considered to be critical metadata about occurrence records.
@@ -120,13 +119,15 @@ A number of tests were framed, but considered out of scope for CORE data quality
 
 ### 2.2 Use case development
 
-A Task Group, the Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020), was established early to look at what use cases were in use. From the use cases in use, they identified several fundamental use cases, including "bdq:Spatial-Temporal Patterns", "bdq:Record-Management", and "bdq:Taxon-Management". We later added "bdq:Alien-Species" and "bdq:Biotic-Relationships".
+A Task Group, the Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020), was established early to review what use cases were common. Task Group 4 identified several fundamental use cases, including "bdq:Spatial-Temporal Patterns", "bdq:Record-Management", and "bdq:Taxon-Management". We later added "bdq:Alien-Species" and "bdq:Biotic-Relationships". 
 
-These are only a sample of the many possible use cases used in the biological sciences, but they provide an initial set to which all the tests have been linked. The relationship between Use Cases and Tests is a many to many relationship - with most tests being relatable to many use cases and vice versa.
+These are only a sample of the many possible use cases used in the biological sciences, but they provide an initial set to which all the tests have been linked. Note that the relationship between Use Cases and Tests is a many to many relationship - with most tests being relatable to many use cases and vice versa.
+
+Note that the evaluation of a test can only take place within the context of a specific use case, even if that use is broad. For example, the test VALIDATION_COUNTRY_FOUND could test the value of dwc:country against a source authority for the use case bdq:Record-Management.
 
 ### 2.3 Data Quality Control and Data Quality Assurance
 
-The framework (bdqffdq:) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
+The framework (bdqffdq: namespace) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
 
 The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
@@ -409,6 +410,26 @@ The flexibility of Darwin Core (on which BDQ Core is based) in relation to vocab
 
 **High Seas.** It was also recognized that a number of BDQ Core tests would assert a 'lack of quality' for records representing events on the high seas/international waters (outside national jurisdictions) where tests will return 'NOT_COMPLIANT' as there is no agreed standard for designating 'high seas' records using Darwin Core (https://dwc.tdwg.org/). Examples of such tests include VALIDATION_COUNTRY_NOTEMPTY and VALIDATION_COUNTRYCODE_NOTEMPTY. The authors recognize the significance of this issue to the marine community, and we have retained these tests to promote an agreement on an international standard. We acknowledge a current user-assigned ISO 3166-alpha-2 country code (dwc:countryCode - https://dwc.tdwg.org/terms/#dwc:countryCode) of "XZ" to infer "international waters" (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#XZ and https://en.wikipedia.org/wiki/UN/LOCODE). While country code "XZ" looks like a much-needed advance, its use has not be standardized. The situation with populating a country value (dwc:country - https://dwc.tdwg.org/terms/#dwc:country) with "high seas" or "international waters" or something else is less advanced, but we have retained the country test, aspirationally. Related tests such as VALIDATION_COUNTRY_FOUND, VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT and VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT don't present as much an issue, due to the Specifications including the phrase "INTERNAL_PREREQUISITES_NOT_MET" if dwc:countryCode or dwc:country are bdq:Empty, as would be currently expected for records in international waters. The Specification says "This test can't be done because a vital piece of information to run this test is absent". While currently acceptable, once a standard for international waters/high seas is established, the tests will need to be revisited.
 
+### 3.11 Tests and Vocabularies
+
+The development of the tests (and assertions from the tests) was the core business for Task Group 2. To achieve that outcome, we needed to describe the tests in a comprehensive and consistent manner and hence a unified vocabulary was developed (https://github.com/tdwg/bdq/issues/152).  While the Data Quality Framework (Veiga et al. 2017) had developed a formal model for describing data quality and fittness for use (ontology for 'data quality'/'fitness for use' (link), it would be fair to say that while Task Group 2 committed to representing tests using this model, it initially took an independent, 'bottom-up'approach.  Task Group 2 started by examining what tests agencies and others in the community were using to assess data quality, then filling gaps and establishing criteria for test inclusion or exclusion, and then started framing each of the included tests in a common format.  Both the tests and the vocabulary evolved: Tests refined our vocabulary and our vocabulary refined our tests.  The single vocabulary, represented as a markdown table in the github issue, became a single central place for evaluating and refining term definitions.  
+
+After some years of work, our vocabulary and tests were effectively merged with the Framework ontology. A good example of the evolution is illustrated in all of our tests being initially formulated in the 'negative' - identifying issues/problems, while the Framework took the opposite approach - evaluating the presence of quality.  The  then converged on the framework, thus tests like VALIDATION_COUNTRY_NOTFOUND became VALIDATION_COUNTRT_FOUND.  The independence of development of the tests lead to improvements and clarifications in the framework ontology.  The test development process identified very clear needs for tests to be able to be parameterized and for tests to be able to identify elements of the data that might be problematic for some use.  This lead to the introduction of the concepts of bdqffdq:Parameter and bdqffdq:Issue.  The names of some terms in the ontology was very opaque, and names were not entirely consistent, so elements were renamed for clarity (e.g. ContextualizedEnhancement became bdqffdq:Amendment) and to follow consistent naming patterns.  
+
+Once the vocabulary terms and their definitions had become stable, they were assigned (or ported back into) to specific namespaces: 
+
+- bdqffdq	https://rs.tdwg.org/bdqffdq/terms for the ontology that forms the Framework for defining data quality. 
+- bdqdim	https://rs.tdwg.org/bdqdim/terms/ for the Data Quality Dimension of (Measures and all) the tests
+- bdqcrit	https://rs.tdwh.org/bdqcrit/terms/ for the Criteria of the Validation and Issue tests
+- bdqenh	https://rs.tdwg.org/bdqenh/terms/ for the Enhancements of the Amendment tests
+- bdq	https://rs.tdwg.org/bdq/terms/ for terms used to construct Specifications: source authorities, parameters, information elements, and the concepts bdq:Empty and bdq:NotEmpty
+
+These vocabularies all fed into a formal description of the tests as terms in in the bdqcore: namespace.
+
+- bdqcore	https://rs.tdwg.org/bdqcore/terms/ the tests with their descriptions framed using the other vocabularies.
+
+A few terms in the vocabulary table were seen as glossary terms (e.g. "geodetic datum") for which a formal vocabulary is not required.  These are presented in tables as a glossary in relevant descriptive documents. 
+
 ## 4 Date and Time Issues
 
 This BDQ Core Standard avoids analysis of two time and date issues, time zones, and geographic and temporal variation in the change from Julian to Gregorian calendars.  
@@ -549,6 +570,7 @@ While applying to a single record, the test results may be accumulated across mu
 
 **Notes** [non-normative]: Additional comments that the Task Group believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. Example: For TAXONID_FROM_TAXON, “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
     
+
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**
