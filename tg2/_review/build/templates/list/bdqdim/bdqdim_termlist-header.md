@@ -41,17 +41,23 @@ Bibliographic citation
 
 ## 1 Introduction (non-normative)
 
-This document includes terms intended to be used as a controlled value for BDQ Core tests with local name `Dimension`. For details and rationale, see Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731.
+This document includes terms that are individuals of type bdqffdq:DataQualityDimension intended to be used as a controlled value for bdqffdq:hasDataQualityDimension in the BDQ Core tests.
 
 ### 1.1 Data Quality Dimensions 
 
-The scope of the standard is the fundamental information about core tests applied to occurrence type Darwin Core records. These tests evaluate one of Data Quality Dimension of the Fitness for Use Framework (Chapman et al., 2020): Measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
+DataQualityDimension as used in the context of BDQ Core, was originally defined by Viega 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a test examines to assess 'quality' for a given use case.
+
+DataQualityDimensions are measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
+
+Each test in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) against a single bdqffdq:DataQualityDimension. For example, the test VALIDATION_COUNTRY_FOUND tests the value of dwc:country against a source authority for a use case, (e.g.  bdq:Record-Management).  The appropriate type of bdqffq:DataQualityDimension in this case is bdqdim:Conformance: i.e. how well does the country value conform to an appropriate reference standard when you are evaluating the quality of a Darwin Core record (in the context of the use case with which VALIDATION_COUNTRY_FOUND is composed)?
+
+DataQualityDimension applies to all Test Types (all subclasses of bsqffdq:DataQualityNeed that is, bdqffdq:VALIDATION, bdqffdq:ISSUE, bdqffdq:MEASURE and bdqffdq:AMENDMENT).
 
 ### 1.2 Status of the content of this document
 
 Section 2 is normative.
 
-In Section 4, the values of the `Term IRI`, `Definition` and `Controlled value` are normative. The values of `Term Name` and `skos:prefLabel` are non-normative. 
+In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
 
 ### 1.3 Namespace abbreviations
 
@@ -78,6 +84,8 @@ The following namespace abbreviations are used in this document:
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of `bdqffdq:dataQualityDimension`.
+
+Each bdqffdq:DataQualityNeed SHOULD have exactly one bdqffdq:hasDataQualityDimension property relating it to a term in this bdqdim: vocabulary.
 
 ### 2.1 RFC 2119 key words (normative)
 
