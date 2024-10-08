@@ -30,7 +30,7 @@ Authors
 : [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
 
 Contributors
-: [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), [David Lowery](https://github.com/lowery) , [Christian Gendreau](https://orcid.org/0000-0003-4898-4291) ([Agriculture and Agri-Food Canada](http://www.wikidata.org/entity/Q1046164)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) 
+: [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), [David Lowery](https://github.com/lowery) , [Christian Gendreau](https://orcid.org/0000-0003-4898-4291) ([Agriculture and Agri-Food Canada](http://www.wikidata.org/entity/Q1046164)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) , [Miles Nicholls](https://orcid.org/0000-0002-3302-0070) ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), Emily Rose Rees ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), [Abigail Benson](https://orcid.org/0000-0002-4391-107X) ([U.S. Geological Survey](https://www.wikidata.org/wiki/Q193755))
 
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
@@ -80,19 +80,19 @@ The following namespace abbreviations are used in this document:
 
 ### 1.5 Key to Vocabulary Terms
 
-| Label | Term | Definition | Example |
-| ----- | ---- | ---------- | ------- |
-| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30 |
-| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqenh/terms/AssumedDefault |
-| Term Name | rdf:value |  | AssumedDefault |
-| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Assumed Default |
-| Label | rdfs:label |  | Assumed Default |
-| Comments | rdfs:comment |  | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness |
-| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Data could be improved by setting an empty value to a default value |
-| Type | rdf:type |  | bdqffdq:Enhancement |
-| Modified | dcterms:issued |  | 2024-09-30 |
-| Status | tdwgutility:status |  | recommended |
-| Controlled Value |  |  | AssumedDefault |
+| Label | Term | Definition | Example | Normative | 
+| ----- | ---- | ---------- | ------- | --------- |
+| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30 | normative |
+| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqenh/terms/AssumedDefault | normative |
+| Term Name | rdf:value |  | AssumedDefault | normative |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Assumed Default | non-normative |
+| Label | rdfs:label |  | Assumed Default | normative |
+| Comments | rdfs:comment |  | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness | non-normative |
+| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Data could be improved by setting an empty value to a default value | normative |
+| Type | rdf:type |  | bdqffdq:Enhancement | normative |
+| Modified | dcterms:issued |  | 2024-09-30 |  |
+| Status | tdwgutility:status |  | recommended |  |
+| Controlled Value |  |  | AssumedDefault | normative |
 
 
 ## 2 Use of Terms (normative) 

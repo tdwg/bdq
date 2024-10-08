@@ -15,7 +15,7 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown
+from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown
 
 # -----------------
 # Configuration section
@@ -373,38 +373,21 @@ for term in termLists:
     # PJM: TODO: map from row column headers 
     # Dictionary of column heading: dictionary of label:, term, (could include normative}
     term_concept_dictionary = {
-        "iri": {"label":"Term Version IRI","term":"rdf:about"}, 
-        "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf"}, 
-        "term_localName": {"label":"Term Name","term":"rdf:value"}, 
-        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel"}, 
-        "label": {"label":"Label","term":"rdfs:label"}, 
-        "comments": {"label":"Comments","term":"rdfs:comment"}, 
-        "definition": {"label":"Definition","term":"skos:definition"}, 
-        "rdf_type": {"label":"Type","term":"rdf:type"}, 
-        "organized_in": {"label":"","term":""}, 
-        "issued": {"label":"Modified","term":"dcterms:issued"}, 
-        "status": {"label":"Status","term":"tdwgutility:status"}, 
-        "flags": {"label":"","term":""}, 
-        "controlled_value_string": {"label":"Controlled Value","term":""}
+        "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
+        "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
+        "term_localName": {"label":"Term Name","term":"rdf:value","normative":"true"}, 
+        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false"}, 
+        "label": {"label":"Label","term":"rdfs:label","normative":"true"}, 
+        "comments": {"label":"Comments","term":"rdfs:comment","normative":"false"}, 
+        "definition": {"label":"Definition","term":"skos:definition","normative":"true"}, 
+        "rdf_type": {"label":"Type","term":"rdf:type","normative":"true"}, 
+        "organized_in": {"label":"","term":"","normative":""}, 
+        "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
+        "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
+        "flags": {"label":"","term":"","normative":""}, 
+        "controlled_value_string": {"label":"Controlled Value","term":"","normative":"true"}
     }
-    definitionTable = ""
-    definitionTable = definitionTable + "| Label | Term | Definition | Example |\n"
-    definitionTable = definitionTable + "| ----- | ---- | ---------- | ------- |\n"
-    termrow = terms_sorted_by_localname.iloc[0]
-    for key, value in term_concept_dictionary.items() :
-        if value['label'] : 
-            label = value['label']
-            termname = value['term']
-            definition = ""
-            if termname.startswith("skos:") : 
-                graph = rdflib.Graph()
-                graph.parse("https://www.w3.org/2009/08/skos-reference/skos.rdf", format="xml")
-                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
-                queryResult = graph.query(sparql)
-                for r in queryResult : 
-                    definition = r.object
-            example = termrow[key]
-            definitionTable = definitionTable + "| {} | {} | {} | {} |\n".format(label,termname,definition,example)
+    definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
 
     print('Generating terms table')
     # generate the Markdown for the terms table

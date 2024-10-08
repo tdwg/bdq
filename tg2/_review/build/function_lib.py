@@ -3,6 +3,45 @@
 # 2024-10-07
 # This script contains a library of reusable functions to support scripts to build of documents and term lists for tdwg standards and draft standards
 
+import rdflib     # run sparql queries on rdf 
+from rdflib import Graph
+
+# Function build_term_key builds a markdown table of terms and examples for each term used to describe terms in a term-list document
+def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
+    # prefixes for sparql queries
+    prefixes = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
+    """
+    definitionTable = ""
+    definitionTable = definitionTable + "| Label | Term | Definition | Example | Normative | \n"
+    definitionTable = definitionTable + "| ----- | ---- | ---------- | ------- | --------- |\n"
+    termrow = terms_sorted_by_localname.iloc[0]
+    for key, value in term_concept_dictionary.items() :
+        if value['label'] : 
+            label = value['label']
+            termname = value['term']
+            definition = ""
+            if termname.startswith("skos:") : 
+                graph = rdflib.Graph()
+                graph.parse("https://www.w3.org/2009/08/skos-reference/skos.rdf", format="xml")
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            example = termrow[key]
+            normative = value['normative']
+            if normative == "true" :
+                 normative = "normative"
+            elif normative == "false" :
+                 normative = "non-normative"
+            definitionTable = definitionTable + "| {} | {} | {} | {} | {} |\n".format(label,termname,definition,example,normative)
+    return definitionTable
 
 # Function build_authors_contributors_markdown builds a markdown list of authors and contributors from 
 # an object expected to be loaded from an authors_configuration.yaml file.

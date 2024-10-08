@@ -30,7 +30,7 @@ Authors
 : [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
 
 Contributors
-: [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), [David Lowery](https://github.com/lowery) , [Christian Gendreau](https://orcid.org/0000-0003-4898-4291) ([Agriculture and Agri-Food Canada](http://www.wikidata.org/entity/Q1046164)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) 
+: [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), [David Lowery](https://github.com/lowery) , [Christian Gendreau](https://orcid.org/0000-0003-4898-4291) ([Agriculture and Agri-Food Canada](http://www.wikidata.org/entity/Q1046164)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) , [Miles Nicholls](https://orcid.org/0000-0002-3302-0070) ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), Emily Rose Rees ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), [Abigail Benson](https://orcid.org/0000-0002-4391-107X) ([U.S. Geological Survey](https://www.wikidata.org/wiki/Q193755))
 
 
 Creator
@@ -77,19 +77,19 @@ The following namespace abbreviations are used in this document:
 
 ### 1.5 Key to Vocabulary Terms
 
-| Label | Term | Definition | Example |
-| ----- | ---- | ---------- | ------- |
-| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30 |
-| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdq/terms/Alien-Species |
-| Term Name | rdf:value |  | Alien-Species |
-| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Alien-Species |
-| Label | rdfs:label |  | Alien-Species |
-| Comments | rdfs:comment |  |  |
-| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
-| Type | rdf:type |  | bdqffdq:UseCase |
-| Modified | dcterms:issued |  | 2024-09-30 |
-| Status | tdwgutility:status |  | recommended |
-| Controlled Value |  |  | Alien-Species |
+| Label | Term | Definition | Example | Normative | 
+| ----- | ---- | ---------- | ------- | --------- |
+| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30 | normative |
+| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdq/terms/Alien-Species | normative |
+| Term Name | rdf:value |  | Alien-Species | normative |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Alien-Species | non-normative |
+| Label | rdfs:label |  | Alien-Species | normative |
+| Comments | rdfs:comment |  |  | non-normative |
+| Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). | normative |
+| Type | rdf:type |  | bdqffdq:UseCase | normative |
+| Modified | dcterms:issued |  | 2024-09-30 |  |
+| Status | tdwgutility:status |  | recommended |  |
+| Controlled Value |  |  | Alien-Species | normative |
 
 
 ## 2 Use of Terms (normative)
