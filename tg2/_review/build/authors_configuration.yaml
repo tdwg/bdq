@@ -103,7 +103,7 @@
   affiliation: Atlas of Living Australia
   affiliation_uri: https://www.wikidata.org/wiki/Q16335177
 
-- contributor_iri: 
+- contributor_iri: https://orcid.org/0000-0003-0112-6716
   contributor_literal: Emily Rose Rees
   contributor_role: contributor
   role_uri: http://www.wikidata.org/entity/Q20204892
