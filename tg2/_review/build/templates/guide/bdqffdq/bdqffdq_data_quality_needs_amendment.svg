@@ -27,7 +27,7 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="0.52921828"
-     inkscape:cx="1123.355"
+     inkscape:cx="1124.2998"
      inkscape:cy="478.06361"
      inkscape:window-width="1738"
      inkscape:window-height="1002"
@@ -2262,6 +2262,76 @@
            id="feMergeNode4964-5-6-7-6-8" />
       </feMerge>
     </filter>
+    <filter
+       inkscape:label="Fill Background"
+       inkscape:menu="Fill and Transparency"
+       inkscape:menu-tooltip="Adds a colorizable opaque background"
+       style="color-interpolation-filters:sRGB"
+       id="filter4968-3-3"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feFlood
+         result="result1"
+         flood-color="rgb(255,255,255)"
+         flood-opacity="1"
+         id="feFlood4956-6-6" />
+      <feImage
+         xlink:href=""
+         result="result2"
+         id="feImage4958-1-7" />
+      <feBlend
+         result="result4"
+         in2="result1"
+         mode="multiply"
+         id="feBlend4960-0-5" />
+      <feMerge
+         result="result3"
+         id="feMerge4966-6-3">
+        <feMergeNode
+           in="result1"
+           id="feMergeNode4962-3-5" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode4964-2-6" />
+      </feMerge>
+    </filter>
+    <filter
+       inkscape:label="Fill Background"
+       inkscape:menu="Fill and Transparency"
+       inkscape:menu-tooltip="Adds a colorizable opaque background"
+       style="color-interpolation-filters:sRGB"
+       id="filter4968-3-3-3"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feFlood
+         result="result1"
+         flood-color="rgb(255,255,255)"
+         flood-opacity="1"
+         id="feFlood4956-6-6-7" />
+      <feImage
+         xlink:href=""
+         result="result2"
+         id="feImage4958-1-7-5" />
+      <feBlend
+         result="result4"
+         in2="result1"
+         mode="multiply"
+         id="feBlend4960-0-5-9" />
+      <feMerge
+         result="result3"
+         id="feMerge4966-6-3-2">
+        <feMergeNode
+           in="result1"
+           id="feMergeNode4962-3-5-2" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode4964-2-6-8" />
+      </feMerge>
+    </filter>
   </defs>
   <g
      id="surface31859"
@@ -2542,26 +2612,6 @@
          id="tspan30624"
          x="394.54974"
          y="325.51984">forAmendment</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#020202;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-opacity:1;filter:url(#filter4968-37)"
-       x="463.77313"
-       y="458.01163"
-       id="text4277-4"><tspan
-         sodipodi:role="line"
-         id="tspan11950"
-         x="463.77313"
-         y="458.01163">type</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#020202;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-opacity:1;filter:url(#filter4968-37-3)"
-       x="590.80505"
-       y="455.04404"
-       id="text4277-4-4"><tspan
-         sodipodi:role="line"
-         id="tspan11950-3"
-         x="590.80505"
-         y="455.04404">type</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-3)"
@@ -3171,5 +3221,25 @@
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 547.27313,155.0191 -5,10 5,-2.5 5,2.5 z m 0,0"
        id="path1915-9" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-3-3)"
+       x="464.16818"
+       y="455.6575"
+       id="text4277-0-2"><tspan
+         sodipodi:role="line"
+         id="tspan3965"
+         x="464.16818"
+         y="455.6575">type</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-3-3-3)"
+       x="592.50153"
+       y="449.95969"
+       id="text4277-0-2-9"><tspan
+         sodipodi:role="line"
+         id="tspan3965-7"
+         x="592.50153"
+         y="449.95969">type</tspan></text>
   </g>
 </svg>
