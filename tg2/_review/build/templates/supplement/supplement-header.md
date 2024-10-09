@@ -220,7 +220,7 @@ Summary of the distribution of tests by test Type and specific Darwin Core Terms
     GROUP BY ?sie ?testType
     ORDER BY ?sie ?testType
 
-## 3.0 Developing the Tests
+## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2: Data Quality Tests and Assertions was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized however, that any software was likely to be far less stable than defining a CORE suite of tests and an associated framework, so the software component was quickly dropped. We also limitied the scope of the tests to apply only to data encoded using the Darwin Core standard (Weiczorek et al. 2012). This gave us a specific target, but also associated problems noted below.
 
@@ -268,6 +268,8 @@ When defining a test, the test Type (Validation, Amendment, Measure, Issue) is c
 We do not define MultiRecord Validations, Amendments or Issues in BDQ Core, though these are allowed within the namepsace bdqffdq.  A MultiRecord Validation, for example, could evaluate all instances of dwc:occurrenceID in a data set and assert COMPLIANT if they are unique.  A MultiRecord Amendment, could, for example, evaluate all values of dwc:decimalLatitude and dwc:decimalLongitude in a dataset, assert that they are probably transposed, and that the consumer of the data quality report should check that the two terms do not have their values transposed, and if that is the error, switch their values.  
 
 #### 3.2.2 MultiRecord Measures
+
+MultiRecord tests examine data across multiple records, a dataset.
 
 The BDQ Core MultiRecord Measures all take the output of other tests as their input rather than from the data records. The inputs (Information Elements) for these Measures in bdqcore: are the outputs of SingleRecord Validations. We have defined two sets of MultiRecord Measures in BDQ Core.  One of these sets consists of Measures that return COMPLETE or NOT_COMPLETE, the other set consists of Measures that return numeric values.  These are intended for Quality Control and Quality Assurance (sensu Viega, et al.  2017).  
 
@@ -359,7 +361,7 @@ Testing Darwin Core values against a known Source Authority using a VALIDATION t
 
 ### 3.8 Amendments and Annotations
 
-The BDQ Core Standard follows the W3C Annotation Data Model (W3C 2017) for reporting the results from tests, including Amendment Type Tests. This provides a Response.status, a Response.result and a Response.comment.
+The BDQ Core Standard supports the W3C Annotation Data Model (W3C 2017) for reporting the results from tests, including Amendment Type Tests. The bdqffdq:Assertion, with its Response.status, Response.result, and a Response.comment can form the body of an annotation, that is be related to an oa:Annotation through oa:hasBody.
 
 The AMENDMENT tests in the BDQ Core only propose changes, and it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when and what changes are made to records. The most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an Amendment, and add that to their representation of the data.
 
