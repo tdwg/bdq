@@ -413,9 +413,9 @@ In general, assessing whether a date in biodiversity data was Julian or Gregoria
 
 ### 4.2 Time
 
-If time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms
+If a time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms
 
-Time is treated as out of scope for Core Use Cases.  This means that some cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced. Dor example, the event_date_qc implementation of AMENDMENT_EVENT_FROM_EVENTDATE contains this commented out block of code, pertinent to time zone issues.   It would populate eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should, but may not have, taken account of a local time zone in populating dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear (dwc:day/dwc:month/dwc:year/dwc:startDayOfYear/dwc:endDayOfYear/dec:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
+Time is treated as out of scope for BDQ Core Use Cases.  In cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced. For example, the event_date_qc implementation of AMENDMENT_EVENT_FROM_EVENTDATE contains the commented out block of code below that is pertinent to time zone issues.   It would populate eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should, but may not have, taken account of a local time zone in populating dwc:day, dwc:month, dwc:year, dwc:startDayOfYear and dwc:endDayOfYear. dwc:day, dwc:month, dwc:year, dwc:startDayOfYear, dwc:endDayOfYear and dwc:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
 
 // Time could also be populated, but it isn't in scope for this issue.
 // Here is a minimal implementation,
@@ -437,15 +437,13 @@ From xkcd (https://xkcd.com/2867/)
 
 ### 5.1 Developing tests with Github Issues
 
-The bdqcore: tests were developed in issues in the tdwg/bdq GitHub space. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on github Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the core team, the values within the template could be easily modified.
+The BDQ Core tests were developed as issues in the tdwg/bdq GitHub environment. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on github Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the Authors, the values within the template could be easily modified and documented.
 
 GitHub's API also provided ample latitude to 'scrape' and filter Issues uisng GitHub tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.
 
 ### 5.2 Github Tags and Categorizing Issues
 
-The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each issue has table in markdown format in its Issue.  Each issue was tagged with the following GitHub issue tags to assist in finding, evaluating, and asserting conclusions about each test. 
-
-The following list of github Tags were used on all Test Issues: 
+The development of each Test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each Test issue was tagged with the following GitHub issue tags to assist in finding, evaluating, and asserting conclusions about each Test. 
 
 | tag | definition | comment |
 | --- | ---------- | ------- |
@@ -471,7 +469,7 @@ The following list of github Tags were used on all Test Issues:
 | Validation | A label to indicate a test of type VALIDATION that describes a run of a test for validity against a set of criteria. | See bdqffdq:Validation |
 | VOCABULARY | A label to indicate that a Test requires a controlled Vocabulary |  |
 
-The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark conclusions made about each proposed test.
+The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark conclusions made about each proposed Test.
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, idependently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
 
@@ -493,9 +491,9 @@ Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon
 
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
-The development of each test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each issue has a table in markdown format in its Issue.  The terminology in this markdown table differs slightly from the Framework, so to support understanding of the rationale management the non-standard terminology used there is documented below. The Test Descriptors are a simplified set of the bdqffdq: terms to describe a test. Some descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable for consumers of biodiversity data quality reports while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
+Each Test issue beings with a table in markdown format.  The terminology of the Test Descriptors in this markdown table is documented below as it differs slightly from the terms used in the Framework. Some Descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable for consumers of biodiversity data quality reports while Descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
-**Title** [non-normative]: A standardised, human readable name of the test-assertion based roughly on the template OUTPUTTYPE_TERMS_RESPONSE. There are 15 tests that only loosely conform to this template due to the difficulty of rendering them otherwise, for example "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION". <!---Note that there are 15 tests that don't strictly follow this - e.g. #132, #108, #93, #88, #86, #73, #71, #68, #62, #57, #56, #52, #50, #32, #24 - Should we mention the exception types here?--->. <!---NB #132, #93, #86, #73, #71, #68, #57, #52,  #32 are all "FROM" Type AMENDMENTS; #108 and #24 are both Less Than VALIDATIONS, #88, #62, #56 and #50 - should be removed (#88 should not be in this list) as they have been converted to the standard format(AC)...>These names were considered helpful for human-human communication and to assist with code implementation, maintenance and searches. Example: VALIDATION_BASISOFRECORD_STANDARD.  
+**Title** [non-normative]: A standardised, human readable name of the test-assertion based roughly on the template OUTPUTTYPE_TERMS_RESPONSE. There are 15 tests that loosely conform to this template due to the difficulty of rendering them otherwise, for example "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION". <!---Note that there are 15 tests that don't strictly follow this - e.g. #132, #108, #93, #88, #86, #73, #71, #68, #62, #57, #56, #52, #50, #32, #24 - Should we mention the exception types here?--->. <!---NB #132, #93, #86, #73, #71, #68, #57, #52,  #32 are all "FROM" Type AMENDMENTS; #108 and #24 are both Less Than VALIDATIONS, #88, #62, #56 and #50 - should be removed (#88 should not be in this list) as they have been converted to the standard format(AC)...>These names were considered helpful for human-human communication and to assist with code implementation, maintenance and searches. Example: VALIDATION_BASISOFRECORD_STANDARD.  
 
 **GUID** [normative]: A globally unique identifier which allows software to uniquely identify each test (and in combination with parameter values, allows for specification of the expectations for the behaviour of a test implementation). Example: 8f1e6e58-544b-4365-a569-fb781341644e.   The GUID in the markdown table becomes the local part of the IRI for the test (for example https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e) when translated to RDF.
 
