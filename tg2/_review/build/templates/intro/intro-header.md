@@ -132,11 +132,12 @@ Expanding on this single validation step, amendments can be run and their result
 
 **Needs Text**
 
-### 2.8 Bibliography
+### 2.9 Bibliography
 
 <!--- PJM: Select list here, or is this where the references go, or just link to References page? --->
 
 [References File](../docs/references/index.md)
+
 
 ## 3 Design of the Tests
 
@@ -160,11 +161,73 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 ## 4 Acknowledgements
 
-Antonio Mauro Saraiva, Allan Koch Veiga, Tim Robertson, Ian Engelbrecht, GBIF, IDigBio, ALA, CRIA, TDWG...
+Ian Engelbrecht, ?? Add to contributors list ??
 
-<!--- TODO: Where do the acronyms go? --->
+GBIF, IDigBio, ALA, CRIA, TDWG...
+
+Funding from TDWG, Sao Paulo, ALA, GBIF, The Museum of Comparative Zoology, and the US NSF has contributed to the development of BDQ Core.
+
+### 4.1 Contributors
+
+Many people have contributed to the development of the BDQ Core standard.  
+
+We recognize 4 people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation.  
+
+Lee Belbin (Blatant Fabrications)
+: Test Descriptions, Test Validation Data, Author of BDQ Core documents, 
+
+Arthur D. Chapman (Australian Biodiversity Information Services)
+: Test Descriptions, Author of BDQ Core Documents, Vocabulary and definition development, convener of the BDQ Interest group.
+
+Paul J. Morris (Museum of Comparative Zoology, Harvard University), 
+: Test Descriptions, bdqffdq ontology, java test implementations in filteredpush packages.  Author of BDQ Core Documents.
+
+John Wieczorek (VertNet)
+: Test Descriptions, test implementations, Author of BDQ Core Documents.
+
+The following people have also contributed substantally to the development what has become BDQ Core over the last decade.
+
+Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)
+: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core Documents
+
+António Mauro Saraiva (Universidade de São Paulo)
+: Development of the framework, TG1, Facilitated test development workshop.
+
+Alan Koch Veiga (Universidade de São Paulo)
+: Developed the framework as his disertation, TG1
+
+Paula F Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche), 
+: Contributions to multiple test descriptions and vocabulary development
+
+Alexander Thompson (iDigBio)
+: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues.
+
+David Lowery (Museum of Comparative Zoology, Harvard University)
+: Initial development of ontology reprentation of the framework, developer of kurator-ffdq java class representation of the framework.
+
+Christian Gendreau (Agriculture and Agri-Food Canada)
+: 
+
+Tim Roberston (Global Biodiversity Information Facility)
+: Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests.
+
+Dmitry Schigel (Global Biodiversity Information Facility)
+: 
+
+Robert A. Morris (late, of UMass Boston)
+: Competency Questions for the framework as an ontology, guided intital development of the ontology representation of the framework.
+
+Miles Nicholls (Atlas of Living Australia)
+: Use Case analysis in TG3 
+
+Emily Rose Rees (Atlas of Living Australia)
+: Use Case analysis in TG3
+
+Abigail Benson (U.S. Geological Survey)
+: 
 
 ## 5 Acronyms
+<!--- TODO: Where do the acronyms go? --->
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
