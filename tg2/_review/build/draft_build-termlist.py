@@ -417,7 +417,7 @@ for term in termLists:
             outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(row['comments'])
             outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(row['definition'])
             outputRdf += '     <rdf:value>{}</rdf:value>\n'.format(row['term_localName'])
-            outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/e"/>\n'.format(term)
+            outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
             outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(row['rdf_type'])
             outputRdf += '     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
             outputRdf += '</rdf:Description>\n'
