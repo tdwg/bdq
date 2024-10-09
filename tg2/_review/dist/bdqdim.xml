@@ -27,7 +27,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</rdfs:comment>
      <skos:definition xml:lang="en">The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.</skos:definition>
      <rdf:value>Completeness</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/"/>
      <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqdim/terms/Completeness"/>
 </rdf:Description>
@@ -41,7 +41,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</rdfs:comment>
      <skos:definition xml:lang="en">Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard.</skos:definition>
      <rdf:value>Conformance</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/"/>
      <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqdim/terms/Conformance"/>
 </rdf:Description>
@@ -55,7 +55,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</rdfs:comment>
      <skos:definition xml:lang="en">Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test bdq:Inconsistent.</skos:definition>
      <rdf:value>Consistency</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/"/>
      <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqdim/terms/Consistency"/>
 </rdf:Description>
@@ -69,7 +69,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</rdfs:comment>
      <skos:definition xml:lang="en">The likelihood of Darwin Core Term(s) having true or expected values.</skos:definition>
      <rdf:value>Likeliness</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/"/>
      <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqdim/terms/Likeliness"/>
 </rdf:Description>
@@ -83,7 +83,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</rdfs:comment>
      <skos:definition xml:lang="en">A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing').</skos:definition>
      <rdf:value>Reliability</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/"/>
      <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqdim/terms/Reliability"/>
 </rdf:Description>
@@ -97,7 +97,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</rdfs:comment>
      <skos:definition xml:lang="en">The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment.</skos:definition>
      <rdf:value>Resolution</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqdim/terms/"/>
      <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqdim/terms/Resolution"/>
 </rdf:Description>

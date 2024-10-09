@@ -15,7 +15,7 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown
+from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown
 
 # -----------------
 # Configuration section
@@ -562,11 +562,13 @@ for term in termLists:
     header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
     header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
     header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
-    # Build the Markdown for the authors and contributors lists or the contributors list
+    # Build the Markdown for the authors and contributors lists or the contributors list or the authors list
     contributors = build_authors_contributors_markdown(contributors_yaml)
     header = header.replace('{authors_contributors}', contributors)
     contributors = build_contributors_markdown(contributors_yaml)
-    header = header.replace('{contributors}', contributors)
+    header = header.replace('{authors_contributors}', contributors)
+    contributors = build_authors_markdown(contributors_yaml)
+    header = header.replace('{authors}', contributors)
     header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
     header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])
     header = header.replace('{abstract}', document_configuration_yaml['abstract'])

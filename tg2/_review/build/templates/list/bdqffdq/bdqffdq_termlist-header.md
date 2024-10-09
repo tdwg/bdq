@@ -40,11 +40,10 @@ Bibliographic citation
 
 ## 1 Introduction (non-normative)
 
-This document includes terms that are part of the BDQ vocabulary (<http://rs.tdwg.org/version/bdq/{ratification_date}>). For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+This document includes terms that are part of the bdqffdq vocabulary.
 
-### 1.1 Data Quality Vocabulary terms.
+### 1.1 Fittness for Use Framework Vocabulary terms.
 
-The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; a list of bdqffdq:Parameters used in the bdqcore: tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; a list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:Empty and bdq:NotEmpty.
 
 ### 1.2 Status of the content of this document
 
@@ -52,7 +51,9 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
+In Section 4, the values of following terms are normative: Term IRI, Name, Type, Definition.
+
+In Section 4, the values of the following term are non-normative: Comment, skos:prefLabel, rdfs:label
 
 ### 1.3 Namespace abbreviations
 
@@ -70,7 +71,7 @@ The following namespace abbreviations are used in this document:
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
+| Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
 ### 1.5 Key to Vocabulary Terms
 

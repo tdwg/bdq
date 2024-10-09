@@ -18,7 +18,9 @@ Part of TDWG Standard
 Abstract
 : {abstract}
 
-{authors_contributors}
+Authors:
+: {authors}
+
 Creator
 : {creator}
 

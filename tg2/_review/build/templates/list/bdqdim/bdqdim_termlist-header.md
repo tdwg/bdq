@@ -27,7 +27,8 @@ Latest version
 Abstract
 : {abstract}
 
-{authors_contributors}
+Authors
+: {authors}
 
 Creator
 : {creator}

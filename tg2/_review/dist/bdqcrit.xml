@@ -27,7 +27,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness</rdfs:comment>
      <skos:definition xml:lang="en">Data are present and sufficiently comprehensive for use.</skos:definition>
      <rdf:value>Complete</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Complete"/>
 </rdf:Description>
@@ -41,7 +41,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.   Corresponding dimension is bdqdim:Consistency</rdfs:comment>
      <skos:definition xml:lang="en">Data are internally consistent and consistent with any authorities consulted. </skos:definition>
      <rdf:value>Consistent</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Consistent"/>
 </rdf:Description>
@@ -55,7 +55,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
      <skos:definition xml:lang="en">Data conform to the values in an authority.</skos:definition>
      <rdf:value>Found</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Found"/>
 </rdf:Description>
@@ -69,7 +69,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement conform to an expected range of values.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
      <skos:definition xml:lang="en">Data conform to an expected range of values.</skos:definition>
      <rdf:value>InRange</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/InRange"/>
 </rdf:Description>
@@ -83,7 +83,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement is likely to be true or expected values.  Corresponding dimension is bdqdim:Likeliness</rdfs:comment>
      <skos:definition xml:lang="en">Data are likely to be true or expected values.</skos:definition>
      <rdf:value>Likely</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Likely"/>
 </rdf:Description>
@@ -97,7 +97,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Some value is present in a bdqffdq:InformationElement.  Corresponding dimension is bdqdim:Completeness.   See also bdq:EMPTY and bdq:NOT_EMPTY</rdfs:comment>
      <skos:definition xml:lang="en">Some data value is present.</skos:definition>
      <rdf:value>NotEmpty</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
 </rdf:Description>
@@ -111,7 +111,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
      <skos:definition xml:lang="en">Data conform to a format, syntax, data type, or standard.</skos:definition>
      <rdf:value>Standard</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Standard"/>
 </rdf:Description>
@@ -125,7 +125,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement adequately identifies a unique entity.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
      <skos:definition xml:lang="en">Data adequately identify a unique entity.</skos:definition>
      <rdf:value>Unambiguous</rdf:value>
-     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/e"/>
+     <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqcrit/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Criterion"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqcrit/terms/Unambiguous"/>
 </rdf:Description>
