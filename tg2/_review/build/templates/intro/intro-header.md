@@ -192,7 +192,7 @@ António Mauro Saraiva (Universidade de São Paulo)
 : Development of the framework, TG1, Facilitated test development workshop, co-convenor of Data Quality Interest Group until 2022.
 
 Alan Koch Veiga (Universidade de São Paulo)
-: Developed the framework as his disertation, Task Group 1: Framework on Data Quality.
+: Developed the framework as his disertation, convenor of Task Group 1: Framework on Data Quality.
 
 Paula F Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche), 
 : Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value.
