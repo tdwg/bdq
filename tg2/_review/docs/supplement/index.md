@@ -537,9 +537,9 @@ Each Test issue in GitHub begins with a table in markdown format describing the 
 
 **Darwin Core Class** [non-normative]: The Darwin Core class that contains the Information Elements, for example: dwc:Taxon.
 
-**Information Elements Consulted** [normative]: The Darwin Core terms that the Test takes as input, for example: dwc:basisOfRecord.
+**Information Elements Consulted** [normative]: The Darwin Core terms that the Test takes as input, for example: dwc:countryCode for the Test VALIDATION_COUNTRYCODE_STANDARD
 
-**Information Elements ActedUpon** [normative]: The Darwin Core terms that is the focus of the Test, for example: dwc:basisOfRecord.
+**Information Elements ActedUpon** [normative]: The Darwin Core terms that is the focus of the Test, for example:dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:verbatimCoordinateSystem, dwc:verbatimSRS for the Test AMENDMENT_COORDINATES_FROM_VERBATIM.
 
 **Expected Response (Specification)** [normative]: A concise description of the logic of the Test to clarify its implementation. The Expected Response takes the form (for a VALIDATION) of: EXTERNAL_PREREQUISITES_NOT_MET if <condition>; INTERNAL_PREREQUESITES_NOT_MET if <condition>; COMPLIANT if <condition>; otherwise NOT_COMPLIANT. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED".
 
