@@ -59,7 +59,7 @@ The bdqffdq: vocabulary is an ontology, it includes:
 - A [term list](../list/bdqffdq/index.md) for the vocabulary, containing just the vocabulary terms.
 - Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
 - Normative guidance on the use of this ontology is provided in this landing page document.
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../vocabulary/bdqffdq.owl) 
 
 An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
