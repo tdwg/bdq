@@ -18,6 +18,8 @@ Work in progress description of files in this directory:
 │       ├── supplement templates and configuration files for supplement page (docs/supplement/index.md)
 │       ├── synthetic templates and configuration files for synthetic data page (docs/synthetic/index.md)
 │       ├── vocabularies templates and configuration files for vocabularies landing page (docs/vocabularies/index.md)
+│       ├── extension templates for vocabulary extension files, additional axioms added to vocabularies 
+│       │   └── bdqffdq templates and configuration files for bdqffdq extension list (docs/extension/bdqenh/index.md)
 │       ├── list templates for term list documents and dist rdf files 
 │       │   ├── bdq templates and configuration files for bdq vocabulary (docs/list/bdq/index.md)
 │       │   ├── bdqcore test documentation build files, work in progress (docs/list/bdqcore/index.md)
@@ -26,7 +28,8 @@ Work in progress description of files in this directory:
 │       │   └── bdqenh templates and configuration files for bdqenh vocabulary (docs/list/bdqenh/index.md)
 │       ├── terms templates for quick reference guide 
 │       │   └── bdqcore_qrg quick reference guide build files (for docs/terms/bdqcore/index.md)
-│       ├── bdqffdq ontology documentation build files, work in progress
+│       ├── bdqffdq ontology landing page build files (for docs/bdqffdq/index.md
+│       ├── bdqcore TODO: Test landing page build files (for docs/bdqcore/index.md
 │       └── guide directory for templates for guides (users, implementors, bdqffdq).
 │           ├── bdqffdq  source files for bdqffdq guide (docs/guide/bdqffdq/index.md)
 │           ├── implementers source files for implementers guide (docs/guide/implementers/index.md)
@@ -43,6 +46,10 @@ Work in progress description of files in this directory:
 │   ├── intro 
 │   │   ├── .svg files, copied here from build, do not edit. 
 │   │   └── index.md Generated file, do not edit..
+│   ├── bdqcore landing page for bdqcore, with normative statements
+│   │   └── TODO
+│   ├── bdqffdq landing page for bdqffdq, with normative statements
+│   │   └── index.md Generated file, do not edit.
 │   ├── vocabularies
 │   │   └── index.md Generated file, do not edit.
 │   ├── terms  Build targets for Quick reference guides Do not edit here
@@ -59,6 +66,10 @@ Work in progress description of files in this directory:
 │   │   ├── bdqenh
 │   │   │   └── index.md  Generated term list document Do not edit.
 │   │   └── bdqffdq
+│   │   │   └── index.md  Generated term list document Do not edit.
+│   ├── extension  Build targets for Human readable vocabulary extension documents Do not edit here
+│   │   └── bdqffdq
+│   │       └── index.md  Generated extension document Do not edit.
 │   ├── guide descriptive document build targets Do not edit here 
 │   │   ├── bdqffdq 
 │   │   │   ├── various .svg and png files, copied here from build, do not edit. 

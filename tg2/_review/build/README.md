@@ -9,7 +9,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── README.md this file.
 ├── unused  place for unused code and templates likely to be removed
 ├── templates  for various docs files.
-│   ├── list  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
+│   ├── list Term lists  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
 │   │   ├── bdqcore  **work in progress** won't use draft_build-termlisty.py
 │   │   │   ├── bdqcore_termlist-footer.md
 │   │   │   ├── bdqcore_termlist-header.md
@@ -30,13 +30,21 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │       ├── bdqenh_termlist-footer.md
 │   │       ├── bdqenh_termlist-header.md
 │   │       └── document_configuration.yaml
+│   ├── extension  files that produce /docs/extension/{term}/index.md vocabulary extension list files
+│   │   └── bdqffdq used by draft_build_bdqffdq.py to build docs/extension/bdqffdq/index.md extension list with additional axioms
+│   │       ├── bdqffdq_extension-footer.md
+│   │       ├── bdqffdq_extension-header.md
+│   │       └── document_configuration.yaml
 │   ├── terms  files that produce /docs/terms/{term}/index.md 
 │   │   └── bdqcore_qrg to build docs/terms/bdqcore/index.md quick reference guide using draft_build_bdqcore_qrg.py
+│   │       ├── document_configuration.yaml
 │   │       ├── bdqcore_quickreference-footer.md
 │   │       └── bdqcore_quickreference-header.md
-│   ├── bdqffdq **work in progress**
-│   │   ├── bdqffdq_termlist-footer.md
-│   │   └── bdqffdq_termlist-header.md
+│   ├── bdqffdq used by draft_buid_bdqffdq.py to produce landing page for bdqffdq /docs/bdqffdq/index.md
+│   │   ├── document_configuration.yaml
+│   │   ├── bdqffdq_landing-footer.md **Main text document for landing page**
+│   │   └── bdqffdq_landing-header.md **Includes Mathematical Forumulation**
+│   ├── bdqcore **TODO:** Landing pad page for bdqcore.
 │   ├── intro templates used by draft_build-docs.py to build docs/intro/
 │   │   ├── document_configuration.yaml
 │   │   ├── intro-footer.md
