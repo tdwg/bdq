@@ -135,8 +135,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## 3 Axiom Index (non-normative)
 
-- [Range Axioms](#41-Range Axioms]
-- [Different From Axioms](#41-Different From Axipms]
+- [Range Axioms](#41-Range Axioms)
+- [Different From Axioms](#41-Different From Axipms)
 
 ## 4 Vocabulary Extension
 

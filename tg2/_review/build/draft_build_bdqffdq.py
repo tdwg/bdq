@@ -611,8 +611,8 @@ header = header.replace('{term_key}', definitionTable)
 ## Page content
 
 text = "\n"
-text = text + "- [Range Axioms](#41-Range Axioms]\n"
-text = text + "- [Different From Axioms](#41-Different From Axipms]\n"
+text = text + "- [Range Axioms](#41-Range Axioms)\n"
+text = text + "- [Different From Axioms](#41-Different From Axipms)\n"
 text = text + "\n## 4 Vocabulary Extension\n"
 text = text + "\n### 4.1 Range Axioms\n"
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
