@@ -169,8 +169,8 @@ Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffd
 
 
 ### 3.2 Indexes
-
 <!--- NOTE: The mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
+
 
 - [Classes](#41-Class-terms)
 - [Object Properties](#42-ObjectProperty-terms)

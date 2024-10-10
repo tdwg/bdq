@@ -136,5 +136,5 @@ Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffd
 {term_key}
 
 ### 3.2 Indexes
-
 <!--- NOTE: The mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
+
