@@ -83,8 +83,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The bdqffdq: vocabulary is an ontology, it includes: 
 
-- A [landing page](../../budffdq/index.md) with normative guidance on the use of this ontology.
-- A [basic vocabulary](../../list/bdqffdq/index.md)
+- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
+- The [term list](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
 - Additional axioms that can be found in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
 - The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../vocabulary/bdqffdq.owl) 
 
