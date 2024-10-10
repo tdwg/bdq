@@ -39,6 +39,19 @@ Bibliographic citation
 
 Draft Standard for Submission
 
+### Table of Contents ###
+
+- [ 1 Introduction (non-normative)](#1-introduction-(non-normative))
+- [ 1.1 Fittness for Use Framework Vocabulary terms.](#11-fittness-for-use-framework-vocabulary-terms)
+- [ 1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
+- [ 1.3 Namespace abbreviations](#13-namespace-abbreviations)
+- [ 1.4 Term List Distributions](#14-term-list-distributions)
+- [ 1.5 Key to Vocabulary Terms](#15-key-to-vocabulary-terms)
+- [ 2 Use of Terms (normative)](#2-use-of-terms-(normative))
+- [ 2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-(normative))
+- [ 3 Term index (non-normative)](#3-term-index-(non-normative))
+
+
 ## 1 Introduction (non-normative)
 
 This document includes terms that extend the basic bdqffdq vocabulary and are integral to bdqffdq as an ontology..

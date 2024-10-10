@@ -38,6 +38,10 @@ Bibliographic citation
 
 {comment}
 
+### Table of Contents ###
+
+{toc}
+
 ## 1 Introduction (non-normative)
 
 This document includes terms that extend the basic bdqffdq vocabulary and are integral to bdqffdq as an ontology..

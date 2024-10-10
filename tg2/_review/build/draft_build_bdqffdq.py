@@ -281,7 +281,34 @@ footer = footer.replace('{year}', year)
 footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
-    
+   
+## Produce a table of contents from the headings 
+toc = ""
+regexHeadings = "^#+ [0-9]+.*"
+with open(headerFileName) as headerFile:
+	for line in headerFile:
+		aHeading = re.search(regexHeadings,line)
+		if (aHeading) : 
+			headingText = aHeading.group().replace("#","")
+			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+	headerFile.close()
+for line in iter(text.splitlines()) : 
+	aHeading = re.search(regexHeadings,line)
+	if (aHeading) : 
+		headingText = aHeading.group().replace("#","")
+		headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+		toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+with open(footerFileName) as footerFile:
+	for line in footerFile:
+		aHeading = re.search(regexHeadings,line)
+		if (aHeading) : 
+			headingText = aHeading.group().replace("#","")
+			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+	footerFile.close()
+header = header.replace('{toc}', toc)
+
 warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
 print("writing to {}".format(outputFilename))
@@ -497,6 +524,25 @@ for r in queryResult :
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
+## Produce a table of contents from the headings 
+toc = ""
+regexHeadings = "^#+ [0-9]+.*"
+with open(headerFileName) as headerFile:
+	for line in headerFile:
+		aHeading = re.search(regexHeadings,line)
+		if (aHeading) : 
+			headingText = aHeading.group().replace("#","")
+			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+	headerFile.close()
+for line in iter(text.splitlines()) : 
+	aHeading = re.search(regexHeadings,line)
+	if (aHeading) : 
+		headingText = aHeading.group().replace("#","")
+		headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+		toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+header = header.replace('{toc}', toc)
+
 # Load footer 
 footerObject = open(footerFileName, 'rt', encoding='utf-8')
 footer = footerObject.read()
@@ -572,8 +618,29 @@ if has_namespace:
     header = header.replace('{pref_namespace_prefix}', term)
 header = header.replace('{term_key}', definitionTable)
 
+## Page content
+
 text = ""
 text = "\nTODO: SPARQL Query for additional axioms, output as table\n"
+
+## Produce a table of contents from the headings 
+toc = ""
+regexHeadings = "^#+ [0-9]+.*"
+with open(headerFileName) as headerFile:
+	for line in headerFile:
+		aHeading = re.search(regexHeadings,line)
+		if (aHeading) : 
+			headingText = aHeading.group().replace("#","")
+			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+	headerFile.close()
+for line in iter(text.splitlines()) : 
+	aHeading = re.search(regexHeadings,line)
+	if (aHeading) : 
+		headingText = aHeading.group().replace("#","")
+		headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
+		toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+header = header.replace('{toc}', toc)
 
 # Load footer 
 footerObject = open(footerFileName, 'rt', encoding='utf-8')
