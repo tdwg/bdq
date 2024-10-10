@@ -79,7 +79,7 @@ Other sections of this document are marked as normative or non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.1 Documents about the bdqffdq: ontology.
+### 1.1 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, it includes: 
 

@@ -36,7 +36,7 @@ Draft Standard for Submission
 - [1.1 Namespace abbreviations](#11-namespace-abbreviations)
 - [1.1 Status of the content of this document](#11-status-of-the-content-of-this-document)
 - [1.2 RFC 2119 key words (normative)](#12-rfc-2119-key-words-(normative))
-- [1.1 Documents about the bdqffdq: ontology.](#11-documents-about-the-bdqffdq-ontology)
+- [1.1 Documents about the bdqffdq: ontology](#11-documents-about-the-bdqffdq-ontology)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
 - [3 Framework for describing data quality](#3-framework-for-describing-data-quality-)
 - [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-(non-normative))
@@ -98,7 +98,7 @@ Other sections of this document are marked as normative or non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.1 Documents about the bdqffdq: ontology.
+### 1.1 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, it includes: 
 

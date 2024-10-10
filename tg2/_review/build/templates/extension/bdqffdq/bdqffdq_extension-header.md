@@ -57,7 +57,7 @@ or objects of predicates bearing the restrictions.  Some types of restrictions l
 available to tools that reason on the ontology and on data stores that include the ontology.  See the landing page 
 and the bdqffdq: guide for expected uses of the properties that are not provided by these axioms.  
 
-### 1.1 Documents about the bdqffdq: ontology (non-normative)
+### 1.1 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
 
@@ -66,7 +66,7 @@ The bdqffdq: vocabulary is an ontology, documentation for it can be found in:
 - This page, additional axioms that extend the vocabulary terms.
 - The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
 
-An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../.../guide/bdqffdq/index.md) 
+An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../../guide/bdqffdq/index.md) 
 
 The [supplement](../../supplement/index.md) includes competency questions providing rationalle for 
 the use of framework in the form of an ontology with additional axioms as a vocabulary for 

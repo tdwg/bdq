@@ -54,7 +54,7 @@ The TDWG Standards Documentation Specification requires that the human readable 
 as a term list with additional axioms included in a vocabulary extension.  A [vocabulary extension](../../extension/bdqffdq/index.md) 
 documents additional axioms.  
 
-### 1.1 Documents about the bdqffdq: ontology (non-normative)
+### 1.1 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
 
