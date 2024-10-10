@@ -111,7 +111,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The diagram below is intended to help understand the normative statements in section 2 below.
 
-![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
+![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
 ## 2 Use of Terms (normative) 
 
@@ -149,7 +149,7 @@ Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffd
 
 ### 3.2 Indexes
 
-
+<!--- NOTE: The mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
 
 - [Classes](#41-Class-terms)
 - [Object Properties](#42-ObjectProperty-terms)
@@ -1257,6 +1257,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 ********************
 
 ## 5 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
+<!--- NOTE: The source for the mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
 
 This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo.  Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
 
