@@ -42,7 +42,7 @@ local_metadata_config_file = 'temp_namespaces.yaml'
 has_namespace = True
 namespace_uri = 'https://rs.tdwg.org/bdqffdq'
 pref_namespace_prefix = "bdqffdq"
-term = "bdqffdq"
+#term = "bdqffdq"
 
 # Note: Each of the three documents has a configuration section below.
 
@@ -143,7 +143,7 @@ year = document_configuration_yaml['doc_modified'].split('-')[0]
 header = header.replace('{year}', year)
 if has_namespace:
     header = header.replace('{namespace_uri}', namespace_uri)
-    header = header.replace('{pref_namespace_prefix}', term)
+    header = header.replace('{pref_namespace_prefix}', pref_namespace_prefix)
 header = header.replace('{term_key}', definitionTable)
 
 # ---------------
@@ -398,7 +398,7 @@ year = document_configuration_yaml['doc_modified'].split('-')[0]
 header = header.replace('{year}', year)
 if has_namespace:
     header = header.replace('{namespace_uri}', namespace_uri)
-    header = header.replace('{pref_namespace_prefix}', term)
+    header = header.replace('{pref_namespace_prefix}', pref_namespace_prefix)
 header = header.replace('{term_key}', definitionTable)
 
 # ---------------
@@ -615,13 +615,48 @@ year = document_configuration_yaml['doc_modified'].split('-')[0]
 header = header.replace('{year}', year)
 if has_namespace:
     header = header.replace('{namespace_uri}', namespace_uri)
-    header = header.replace('{pref_namespace_prefix}', term)
+    header = header.replace('{pref_namespace_prefix}', pref_namespace_prefix)
 header = header.replace('{term_key}', definitionTable)
 
 ## Page content
 
-text = ""
-text = "\nTODO: SPARQL Query for additional axioms, output as table\n"
+text = "\n"
+text = text + "- [Range Axioms](#41-Range Axioms]\n"
+text = text + "- [Different From Axioms](#41-Different From Axipms]\n"
+text = text + "\n## 4 Vocabulary Extension\n"
+text = text + "\n### 4.1 Range Axioms\n"
+sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
+queryResult = graph.query(sparql)
+for r in queryResult : 
+	entity = r.subject
+	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+	term = entity.replace("bdqffdq:","");
+	text = text + "#### {}\n\n".format(term)
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Name | {} |\n".format(entity)
+	text = text + "| Type | {} |\n".format(r.type.replace("http://www.w3.org/2002/07/owl#","owl:"))
+	if (r.range) :
+		if (r.restriction) :
+			text = text + "| Range | [ {} {} ] |\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+		else :
+			text = text + "| Range | {} |\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
+	text = text + "\n\n"
+
+text = text + "### 4.2 Different From Axioms\n"
+sparql = prefixes + "SELECT DISTINCT ?subject ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  }  ORDER BY ?type ?subject"
+queryResult = graph.query(sparql)
+for r in queryResult : 
+	entity = r.subject
+	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+	term = entity.replace("bdqffdq:","");
+	text = text + "#### {}\n\n".format(term)
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Name | {} |\n".format(entity)
+	text = text + "| Type | {} |\n".format(r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+	text = text + "| Different From | {} |\n".format(r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+	text = text + "\n\n"
 
 ## Produce a table of contents from the headings 
 toc = ""

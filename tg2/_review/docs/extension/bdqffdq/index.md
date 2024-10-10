@@ -15,7 +15,7 @@ Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
-: RUN_HAS_RESULT
+: bdqffdq
 
 This version
 : <http://rs.tdwg.org/bdqffdq/extension/2024-09-10>
@@ -49,7 +49,10 @@ Draft Standard for Submission
 - [ 1.5 Key to Vocabulary Terms](#15-key-to-vocabulary-terms)
 - [ 2 Use of Terms (normative)](#2-use-of-terms-(normative))
 - [ 2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-(normative))
-- [ 3 Term index (non-normative)](#3-term-index-(non-normative))
+- [ 3 Axiom Index (non-normative)](#3-axiom-index-(non-normative))
+- [ 4 Vocabulary Extension](#4-vocabulary-extension)
+- [ 4.1 Range Axioms](#41-range-axioms)
+- [ 4.2 Different From Axioms](#42-different-from-axioms)
 
 
 ## 1 Introduction (non-normative)
@@ -105,7 +108,7 @@ The following namespace abbreviations are used in this document:
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdqffdq/extension/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/extension/RUN_HAS_RESULT/index.md | This file | 
+| HTML file   | http://rs.tdwg.org/bdqffdq/extension/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/extension/bdqffdq/index.md | This file | 
 | Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
 ### 1.5 Key to Vocabulary Terms
@@ -130,9 +133,267 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 ### 2.1 RFC 2119 key words (normative)
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
-## 3 Term index (non-normative)
+## 3 Axiom Index (non-normative)
 
-TODO: SPARQL Query for additional axioms, output as table
+- [Range Axioms](#41-Range Axioms]
+- [Different From Axioms](#41-Different From Axipms]
+
+## 4 Vocabulary Extension
+
+### 4.1 Range Axioms
+#### hasAuthoritiesDefaults
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasAuthoritiesDefaults |
+| Type | owl:DatatypeProperty |
+| Range | xsd:string |
+
+
+#### hasExpectedResponse
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasExpectedResponse |
+| Type | owl:DatatypeProperty |
+| Range | xsd:string |
+
+
+#### hasResponseComment
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasResponseComment |
+| Type | owl:DatatypeProperty |
+| Range | xsd:string |
+
+
+#### forAmendment
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:forAmendment |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:forAmendment ] |
+
+
+#### forIssue
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:forIssue |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:forIssue ] |
+
+
+#### forMeasure
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:forMeasure |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:forMeasure ] |
+
+
+#### forValidation
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:forValidation |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:forValidation ] |
+
+
+#### hasCriterion
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasCriterion |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:hasCriterion ] |
+
+
+#### hasDataQualityDimension
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasDataQualityDimension |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ] |
+
+
+#### hasEnhancement
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasEnhancement |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:hasEnhancement ] |
+
+
+#### hasInformationElement
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasInformationElement |
+| Type | owl:ObjectProperty |
+| Range | bdqffdq:InformationElement |
+
+
+#### hasParameter
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasParameter |
+| Type | owl:ObjectProperty |
+| Range | bdqffdq:Parameter |
+
+
+#### hasSpecification
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasSpecification |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:hasSpecification ] |
+
+
+#### hasUseCase
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasUseCase |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:hasUseCase ] |
+
+
+#### implementedBy
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:implementedBy |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:implementedBy ] |
+
+
+#### improvedBy
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:improvedBy |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:improvedBy ] |
+
+
+#### targetedIssue
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:targetedIssue |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:targetedIssue ] |
+
+
+#### targetedMeasure
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:targetedMeasure |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:targetedMeasure ] |
+
+
+#### targetedValidation
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:targetedValidation |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:targetedValidation ] |
+
+
+#### usesSpecification
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:usesSpecification |
+| Type | owl:ObjectProperty |
+| Range | [ owl:someValuesFrom bdqffdq:usesSpecification ] |
+
+
+### 4.2 Different From Axioms
+#### COMPLETE
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:COMPLETE |
+| Type | bdqffdq:ResponseResult |
+| Different From | bdqffdq:NOT_COMPLETE |
+
+
+#### COMPLIANT
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:COMPLIANT |
+| Type | bdqffdq:ResponseResult |
+| Different From | bdqffdq:NOT_COMPLIANT |
+
+
+#### IS_ISSUE
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:IS_ISSUE |
+| Type | bdqffdq:ResponseResult |
+| Different From | bdqffdq:NOT_ISSUE |
+
+
+#### IS_ISSUE
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:IS_ISSUE |
+| Type | bdqffdq:ResponseResult |
+| Different From | bdqffdq:POTENTIAL_ISSUE |
+
+
+#### NOT_ISSUE
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:NOT_ISSUE |
+| Type | bdqffdq:ResponseResult |
+| Different From | bdqffdq:POTENTIAL_ISSUE |
+
+
+#### AMENDED
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:AMENDED |
+| Type | bdqffdq:ResponseStatus |
+| Different From | bdqffdq:NOT_AMENDED |
+
+
+#### EXTERNAL_PREREQUISITES_NOT_MET
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET |
+| Type | bdqffdq:ResponseStatus |
+| Different From | bdqffdq:INTERNAL_PREREQUISITES_NOT_MET |
+
+
+#### FILLED_IN
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:FILLED_IN |
+| Type | bdqffdq:ResponseStatus |
+| Different From | bdqffdq:NOT_AMENDED |
+
+
 
 ## Cite BDQ Core
 

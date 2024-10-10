@@ -15,7 +15,7 @@ Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
-: RUN_HAS_RESULT
+: bdqffdq
 
 This version
 : <http://rs.tdwg.org/bdqffdq/terms/2024-09-10>
@@ -109,7 +109,7 @@ The following namespace abbreviations are used in this document:
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdqffdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/RUN_HAS_RESULT/index.md | This file | 
+| HTML file   | http://rs.tdwg.org/bdqffdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqffdq/index.md | This file | 
 | Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
 ### 1.5 Key to Vocabulary Terms
