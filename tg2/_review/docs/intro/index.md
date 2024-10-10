@@ -199,13 +199,13 @@ Many people have contributed to the development of the BDQ Core standard.
 We recognize 4 people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation.  
 
 Lee Belbin (Blatant Fabrications)
-: Test Descriptions, Test Validation Data, Author of BDQ Core documents, 
+: Test Descriptions, Test Validation Data, Author of BDQ Core documents. Convenor of Task Group 2: Data Quality Tests and Assertions. 
 
 Arthur D. Chapman (Australian Biodiversity Information Services)
 : Test Descriptions, Author of BDQ Core Documents, Vocabulary and definition development, convener of the BDQ Interest group.
 
 Paul J. Morris (Museum of Comparative Zoology, Harvard University), 
-: Test Descriptions, bdqffdq ontology, java test implementations in filteredpush packages.  Author of BDQ Core Documents.
+: Test Descriptions, bdqffdq ontology, java test implementations in filteredpush packages, Author of BDQ Core Documents.
 
 John Wieczorek (VertNet)
 : Test Descriptions, test implementations, Author of BDQ Core Documents.
@@ -213,16 +213,16 @@ John Wieczorek (VertNet)
 The following people have also contributed substantally to the development what has become BDQ Core over the last decade.
 
 Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)
-: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core Documents
+: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core Documents.
 
 António Mauro Saraiva (Universidade de São Paulo)
-: Development of the framework, TG1, Facilitated test development workshop.
+: Development of the framework, TG1, Facilitated test development workshop, co-convenor of Data Quality Interest Group until 2022.
 
 Alan Koch Veiga (Universidade de São Paulo)
-: Developed the framework as his disertation, TG1
+: Developed the framework as his disertation, convenor of Task Group 1: Framework on Data Quality.
 
-Paula F Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche), 
-: Contributions to multiple test descriptions and vocabulary development
+Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche), 
+: Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value.
 
 Alexander Thompson (iDigBio)
 : Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues.
@@ -231,25 +231,25 @@ David Lowery (Museum of Comparative Zoology, Harvard University)
 : Initial development of ontology reprentation of the framework, developer of kurator-ffdq java class representation of the framework.
 
 Christian Gendreau (Agriculture and Agri-Food Canada)
-: 
+: Intitial contribitions to data quality discussions, vocabulary definitions and early test development.
 
 Tim Roberston (Global Biodiversity Information Facility)
 : Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests.
 
 Dmitry Schigel (Global Biodiversity Information Facility)
-: 
+: Intitial contribitions to data quality discussions and vocabulary definitions.
 
 Robert A. Morris (late, of UMass Boston)
 : Competency Questions for the framework as an ontology, guided intital development of the ontology representation of the framework.
 
 Miles Nicholls (Atlas of Living Australia)
-: Use Case analysis in TG3 
+: Use Case analysis, convenor of Task Group 3: Data Quality Use Cases.
 
 Emily Rose Rees (Atlas of Living Australia)
-: Use Case analysis in TG3
+: Use Case analysis in Task Group 3: Data Quality Use cases.
 
 Abigail Benson (U.S. Geological Survey)
-: 
+: Intitial contribitions to data quality discussions and vocabulary definitions.
 
 ## 5 Acronyms
 <!--- TODO: Where do the acronyms go? --->
