@@ -31,7 +31,7 @@ import yaml		# Library to parse yaml files
 import glob
 import shutil
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
 
 # Configuration 
 
@@ -101,9 +101,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			for line in headerFile:
 				aHeading = re.search(regexHeadings,line)
 				if (aHeading) : 
-					headingText = aHeading.group().replace("#","")
-					headingAnchor = headingText.replace(" ","-").lower().replace(".","").replace(":","")[1:]
-					toc = toc + separator + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")"
+					toc = toc + separator + "- " + markdown_heading_to_link(aHeading.group())
 					separator = "\n"
 			headerFile.close()
 	
@@ -123,6 +121,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		header = header.replace('{authors_contributors}', contributors)
 		contributors = build_contributors_markdown(contributors_yaml)
 		header = header.replace('{contributors}', contributors)
+		contributors = build_authors_markdown(contributors_yaml)
+		header = header.replace('{authors}', contributors)
 		header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
 		header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])
 		header = header.replace('{abstract}', document_configuration_yaml['abstract'])

@@ -15,7 +15,7 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown
+from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
 
 # Configuration: common configuration
 
@@ -289,23 +289,17 @@ with open(headerFileName) as headerFile:
 	for line in headerFile:
 		aHeading = re.search(regexHeadings,line)
 		if (aHeading) : 
-			headingText = aHeading.group().replace("#","")
-			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 	headerFile.close()
 for line in iter(text.splitlines()) : 
 	aHeading = re.search(regexHeadings,line)
 	if (aHeading) : 
-		headingText = aHeading.group().replace("#","")
-		headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-		toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 with open(footerFileName) as footerFile:
 	for line in footerFile:
 		aHeading = re.search(regexHeadings,line)
 		if (aHeading) : 
-			headingText = aHeading.group().replace("#","")
-			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 	footerFile.close()
 header = header.replace('{toc}', toc)
 
@@ -531,16 +525,12 @@ with open(headerFileName) as headerFile:
 	for line in headerFile:
 		aHeading = re.search(regexHeadings,line)
 		if (aHeading) : 
-			headingText = aHeading.group().replace("#","")
-			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 	headerFile.close()
 for line in iter(text.splitlines()) : 
 	aHeading = re.search(regexHeadings,line)
 	if (aHeading) : 
-		headingText = aHeading.group().replace("#","")
-		headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-		toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 header = header.replace('{toc}', toc)
 
 # Load footer 
@@ -665,16 +655,12 @@ with open(headerFileName) as headerFile:
 	for line in headerFile:
 		aHeading = re.search(regexHeadings,line)
 		if (aHeading) : 
-			headingText = aHeading.group().replace("#","")
-			headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-			toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 	headerFile.close()
 for line in iter(text.splitlines()) : 
 	aHeading = re.search(regexHeadings,line)
 	if (aHeading) : 
-		headingText = aHeading.group().replace("#","")
-		headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-		toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 header = header.replace('{toc}', toc)
 
 # Load footer 

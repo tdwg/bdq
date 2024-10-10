@@ -32,11 +32,11 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 
-- [ 1 BDQ Core Vocabularies](#1-bdq-core-vocabularies)
-- [ 1.1 Vocabularies central to BDQ Core](#11-vocabularies-central-to-bdq-core)
-- [ 1.1.1 The Quick Reference Guide to the Tests](#111-the-quick-reference-guide-to-the-tests)
-- [ 1.1.2 Vocabularies](#112-vocabularies)
-- [ 1.2 Vocabularies supporting BDQ Core](#12-vocabularies-supporting-bdq-core)
+- [1 BDQ Core Vocabularies](#1-bdq-core-vocabularies)
+- [1.1 Vocabularies central to BDQ Core](#11-vocabularies-central-to-bdq-core)
+- [1.1.1 The Quick Reference Guide to the Tests](#111-the-quick-reference-guide-to-the-tests)
+- [1.1.2 Vocabularies](#112-vocabularies)
+- [1.2 Vocabularies supporting BDQ Core](#12-vocabularies-supporting-bdq-core)
 
 
 

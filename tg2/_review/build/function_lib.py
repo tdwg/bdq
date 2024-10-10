@@ -7,6 +7,15 @@
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 
+# Given a string containing a markdown heading, construct markdown for a link to that heading
+def markdown_heading_to_link(input_heading) :
+    retval = ""
+    if (input_heading and input_heading.strip().startswith("#")) : 
+        headingText = input_heading.replace("#","")
+        headingAnchor = headingText.replace(" ","-").replace(":","").lower().replace(".","")[1:]
+        retval = "[" + headingText.strip() + "](#" + headingAnchor + ")"
+    return retval
+
 # Function build_term_key builds a markdown table of terms and examples 
 # for each term used to describe terms in a term-list document.
 #

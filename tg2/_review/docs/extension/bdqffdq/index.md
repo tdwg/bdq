@@ -41,18 +41,18 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-- [ 1 Introduction (non-normative)](#1-introduction-(non-normative))
-- [ 1.1 Documents about the bdqffdq: ontology (non-normative)](#11-documents-about-the-bdqffdq:-ontology-(non-normative))
-- [ 1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [ 1.3 Namespace abbreviations](#13-namespace-abbreviations)
-- [ 1.4 Term List Distributions](#14-term-list-distributions)
-- [ 1.5 Key to Vocabulary Terms](#15-key-to-vocabulary-terms)
-- [ 2 Use of Terms (normative)](#2-use-of-terms-(normative))
-- [ 2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-(normative))
-- [ 3 Axiom Index (non-normative)](#3-axiom-index-(non-normative))
-- [ 4 Vocabulary Extension](#4-vocabulary-extension)
-- [ 4.1 Range Axioms](#41-range-axioms)
-- [ 4.2 Different From Axioms](#42-different-from-axioms)
+- [1 Introduction (non-normative)](#1-introduction-(non-normative))
+- [1.1 Documents about the bdqffdq: ontology (non-normative)](#11-documents-about-the-bdqffdq-ontology-(non-normative))
+- [1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
+- [1.3 Namespace abbreviations](#13-namespace-abbreviations)
+- [1.4 Term List Distributions](#14-term-list-distributions)
+- [1.5 Key to Vocabulary Terms](#15-key-to-vocabulary-terms)
+- [2 Use of Terms (normative)](#2-use-of-terms-(normative))
+- [2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-(normative))
+- [3 Axiom Index (non-normative)](#3-axiom-index-(non-normative))
+- [4 Vocabulary Extension](#4-vocabulary-extension)
+- [4.1 Range Axioms](#41-range-axioms)
+- [4.2 Different From Axioms](#42-different-from-axioms)
 
 
 ## 1 Introduction (non-normative)

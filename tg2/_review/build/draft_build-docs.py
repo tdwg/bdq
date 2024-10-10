@@ -20,7 +20,7 @@ import shutil
 import rdflib     
 from rdflib import Graph 
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
 
 
 # -----------------
@@ -128,9 +128,7 @@ for templatePath, document in directories.items() :
 		for line in headerFile:
 			aHeading = re.search(regexHeadings,line)
 			if (aHeading) : 
-				headingText = aHeading.group().replace("#","")
-				headingAnchor = headingText.replace(" ","-").lower().replace(".","")[1:]
-				toc = toc + "- [" + aHeading.group().replace("#","") + "](#" + headingAnchor + ")\n"
+				toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 		headerFile.close()
 	
 	# read in header and footer, merge with terms table, and output

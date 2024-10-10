@@ -32,13 +32,13 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 
-- [ 1 Introduction](#1-introduction)
-- [ 1.1 Kinds of Tests and what they do (non-normative)](#11-kinds-of-tests-and-what-they-do-(non-normative))
-- [ 1.2 Inputs to a test ](#12-inputs-to-a-test-)
-- [ 1.3 Parts of a Response from a test. (normative) ](#13-parts-of-a-response-from-a-test-(normative)-)
-- [ 2 Reading the Quick Reference Guide to the tests (non-normative)](#2-reading-the-quick-reference-guide-to-the-tests-(non-normative))
-- [ 2.1 Amendments only propose changes (normative)](#21-amendments-only-propose-changes-(normative))
-- [ 2.2 Time and TimeZone (non-normative)](#22-time-and-timezone-(non-normative))
+- [1 Introduction](#1-introduction)
+- [1.1 Kinds of Tests and what they do (non-normative)](#11-kinds-of-tests-and-what-they-do-(non-normative))
+- [1.2 Inputs to a test](#12-inputs-to-a-test-)
+- [1.3 Parts of a Response from a test. (normative)](#13-parts-of-a-response-from-a-test-(normative)-)
+- [2 Reading the Quick Reference Guide to the tests (non-normative)](#2-reading-the-quick-reference-guide-to-the-tests-(non-normative))
+- [2.1 Amendments only propose changes (normative)](#21-amendments-only-propose-changes-(normative))
+- [2.2 Time and TimeZone (non-normative)](#22-time-and-timezone-(non-normative))
 
 
 
