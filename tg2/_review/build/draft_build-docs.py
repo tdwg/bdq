@@ -166,7 +166,7 @@ for templatePath, document in directories.items() :
 		header = header.replace('{pref_namespace_prefix}', term)
 
 	if document == 'bdqffdq' : 
-		# Special handling of bqffdq, load ontology documentation
+		# Special handling of bqffdq, load minimal ontology documentation
 		# ---------------
 		# Load rdf
 		# ---------------
@@ -229,11 +229,11 @@ for templatePath, document in directories.items() :
 			term = entity.replace("bdqffdq:","");
 			text = text + "### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
-			text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
 				text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-			text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
 		text = text + "### 5.2 ObjectProperty terms\n"
@@ -245,7 +245,7 @@ for templatePath, document in directories.items() :
 			term = entity.replace("bdqffdq:","");
 			text = text + "### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
-			text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
 				text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
@@ -254,7 +254,7 @@ for templatePath, document in directories.items() :
 					text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 				else :
 					text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-			text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
 		text = text + "### 5.3 DataProperty terms\n"
@@ -266,11 +266,11 @@ for templatePath, document in directories.items() :
 			term = entity.replace("bdqffdq:","")
 			text = text + "### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
-			text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.range) :
 				text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
-			text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
 		text = text + "### 5.4 NamedIndividual terms\n"
@@ -284,12 +284,12 @@ for templatePath, document in directories.items() :
 			text = text + "- Name: {}\n".format(entity)
 			rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			text = text + "- Type: {}\n".format(rtype)
-			text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			if (r.differentFrom) :
 				different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 				text = text + "- DifferentFrom: {}\n".format(different)
 			text = text + "- Definition: {}\n".format(r.definition)
-			text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 
 		# put terms into header.

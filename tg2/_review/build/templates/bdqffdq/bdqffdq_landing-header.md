@@ -1,32 +1,50 @@
-# Fitness For Use Framework Ontology
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
-**Title**: Fitness For Use Framework Ontology
+Title
+: {document_title}
 
-**Namespace URI**: http://rs.tdwg.org/bdqffdq
+Date version issued
+: {ratification_date}
 
-**Preferred namespace abbreviation**: bdqffdq:
+Date created
+: {created_date}
 
-**Date version issued**: {ratification_date}
+Part of TDWG Standard
+: <{standard_iri}>
 
-**Date created**: {created_date}
+Preferred namespace abbreviation
+: {pref_namespace_prefix}
 
-**Part of TDWG Standard**: http://www.tdwg.org/standards/[*******]
+This version
+: <{current_iri}{ratification_date}>
 
-**This document version**: <{current_iri}{ratification_date}>
-
-**Latest version of document**: http://rs.tdwg.org/bdq/doc/ffdq/
+Latest version
+: <{current_iri}>
 
 {previous_version_slot}
 
-**Abstract**: The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies. 
+Abstract
+: {abstract}
 
-{authors_contributors}
+Authors
+: {authors}
 
-**Creator**: TDWG Biodiversity Data Quality Interest Group: Task Group 1 (Framework on Data Quality) and Task Group 2 (Data Quality Tests and Assertions)
+Creator
+: {creator}
 
-**Bibliographic citation**: TDWG Biodiversity Data Quality Tests and Assertions Task Group Interest Group. <{current_iri}{ratification_date}>
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+{comment}
+
+### Table of Contents ###
+
+{toc}
 
 ## 1 Introduction
+
+The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies. 
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
@@ -34,11 +52,18 @@ The framework considers data to have quality with respect to some specified use.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
-For more explanation, see the [Guide to the bdqffdq: framework](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq_guide/index.md)
+### 1.1 Documents about the bdqffdq: ontology.
 
-The bdqffdq: vocabulary is a Vocabulary Extension List, it includes the basic properties listed in this document, and additional axioms that can be found in its [Owl Ontology Distribution](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl)
+The bdqffdq: vocabulary is an ontology, it includes: 
 
-### 1.1 Namespace abbreviations
+- A [basic vocabulary](../terms/bdqffdq/index.md)
+- Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
+- Normative guidance on the use of this ontology is provided in this document.
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
+
+An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
+
+### 1.2 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -59,36 +84,58 @@ The following namespace abbreviations are used in this document:
 | skos         | http://www.w3.org/2004/02/skos/core#             | |
 | owl          | http://www.w3.org/2002/07/owl#                   | |
 
-### 1.1 Status of the content of this document
+### 1.2 Status of the content of this document
 
-In Section 4, the values of following terms are normative: Term IRI, Name, rdfs:label, skos:prefLabel, Type, Superclass, Definition.
+Sections 2 and 5 are normative.
 
-In Section 4, the values of the following term are non-normative: Comment.
+Section 3 is non-normative
+
+Section 3.1 lists which which terms in section 4 have normative values and which non-normative.
 
 Other sections of this document are marked as normative or non-normative.
 
-### 1.2 RFC 2119 key words (normative)
+### 1.3 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.3 Distributions (normative)
+### 1.4 Distributions (normative)
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/bdqffdq/index.md](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) | 
-| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl) |
+| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../terms/bdqffdq/index.md) | 
+| Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
+| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
+
+### 1.5 Diagram of classes and properties (non-normative) 
+
+The diagram below is intended to help understand the normative statements in section 2 below.
+
+![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
 ## 2 Use of Terms (normative) 
 
 When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
 
-## 3 Term index
+### 2.1 Use of propertiess (normative) 
 
-{term_index}
+The bdqffdq:hasUseCase object property SHOULD have an individual with a type that is a subclass of bdqffdq:Policy as its subject.  
+The bdqffdq:hasUseCase object property MAY have an individual from the bdq: vocabulary that representa UseCase as its object.  
+An axiom types the range of bdqffdq:hasUseCase as a bdqffdq:UseCase.  
 
-## 4 Terms in the bdqffdq ontology (portions normative, see 2.1)
+User communites MAY provide new use cases, and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways.  
 
-TODO:  Generate and include here.
+The bdqffdq:hasDataQualityDimension object property SHOULD have an individual with a type that is a subclass of bdqffdq:DataQualityNeed as its subject and an individual in the bdqdim: vocabulary is its object.  An axiom types the range of bdqffdq:hasDataQualityDimension as a bdqffdq:DataQualityDimension.
 
-[Rough cut at generated list of ontology terms](https://github.com/tdwg/bdq/blob/master/tg2/core/generation/docs/bdqffdq.md)
+The bdqffdq:hasCriterion object property SHOULD have an individual with a type of bdqffdq:Validation as its subject and an individual in the bdqcrit: vocabulary is its object.  
+
+Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdffdq:Criterion property.
+
+## 3 Term Index
+
+### 3.1 Key to Vocabulary Terms
+
+{term_key}
+
+### 3.2 Indexes
+
 

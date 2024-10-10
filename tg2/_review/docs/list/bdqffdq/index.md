@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 <!--- Template for header, values provided from yaml configuration --->
-# Fittness for Use Ontology Landing Page
+# Fitness For Use Framework Ontology Term List
 
 Title
-: Fittness for Use Ontology Landing Page
+: Fitness For Use Framework Ontology Term List
 
 Date version issued
 : 2024-09-10
@@ -15,18 +15,18 @@ Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
-: bdqffdq
+: RUN_HAS_RESULT
 
 This version
-: <http://rs.tdwg.org/bdqffdq/2024-09-10>
+: <http://rs.tdwg.org/bdqffdq/terms/2024-09-10>
 
 Latest version
-: <http://rs.tdwg.org/bdqffdq/>
+: <http://rs.tdwg.org/bdqffdq/terms/>
 
 {previous_version_slot}
 
 Abstract
-: This document is a reference for the (Draft) BDQ Core Standard, forming the landing page for the bdqffdq ontology, describing the ontology, its uses, its vocabulary, and its vocabulary extension.
+: This document is a reference for the (Draft) BDQ Core Standard, documenting vocabulary values in the Fittness For Use Framework Ontology, excluding additional axioms.
 
 Authors
 : [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
@@ -35,128 +35,75 @@ Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Fittness for Use Ontology Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Fitness For Use Framework Ontology Term List. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2024-09-10>
 
 Draft Standard for Submission
 
-### Table of Contents ###
+## 1 Introduction (non-normative)
 
-{toc}
+This document includes terms that are part of the bdqffdq vocabulary.
 
-## 1 Introduction
+### 1.1 Fittness for Use Framework Vocabulary terms.
 
-The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies. 
-
-The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
-
-The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
-
-This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
-
-### 1.1 Documents about the bdqffdq: ontology.
-
-The bdqffdq: vocabulary is an ontology, it includes: 
-
-- A [basic vocabulary](../terms/bdqffdq/index.md)
-- Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
-- Normative guidance on the use of this ontology is provided in this document.
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
-
-An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
-
-### 1.2 Namespace abbreviations
-
-The following namespace abbreviations are used in this document:
-
-
-| **Prefix**   | **Namespace**                                    | **Note** |
-|--------------|--------------------------------------------------|----------|
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                | Framework for Describing Data Quality |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms                | Tests described using the bdqffdq Framework |
-| bdq          | https://rs.tdwg.org/bdq/terms/                   | Supporting Vocabulary for Data Quality |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 | Data Quality Dimension Vocabulary |
-| bdqcrit      | https://rs.tdwg.org/bdqcrit/terms                | Data Quality Criteria Vocabulary | 
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms                 | Data Quality Enhancement Vocabulary | 
-| dc           | https://purl.org/dc/elements/1.1/                | | 
-| dcterms      | https://purl.org/dc/elements/1.1/                | |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    | Darwin Core |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      | |
-| oa           | https://www.w3.org/TR/annotation-vocab/          | |
-| skos         | http://www.w3.org/2004/02/skos/core#             | |
-| owl          | http://www.w3.org/2002/07/owl#                   | |
 
 ### 1.2 Status of the content of this document
 
-Sections 2 and 5 are normative.
+Sections 1 and 3 are non-normative.
 
-Section 3 is non-normative
+Section 2 is normative.
 
-Section 3.1 lists which which terms in section 4 have normative values and which non-normative.
+In Section 4, the values of following terms are normative: Term IRI, Name, Type, Definition.
 
-Other sections of this document are marked as normative or non-normative.
+In Section 4, the values of the following term are non-normative: Comment, skos:prefLabel, rdfs:label
 
-### 1.3 RFC 2119 key words (normative)
+### 1.3 Namespace abbreviations
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+The following namespace abbreviations are used in this document:
 
-### 1.4 Distributions (normative)
+| Prefix | IRI |
+| --- | --- |
+| bdq:     | https://rs.tdwg.org/bdq/terms/   |
+| bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
+| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
+| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
-| Description | IRI | Download URL |
-| ----------- | --- | ------------ |
-| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../terms/bdqffdq/index.md) | 
-| Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
-| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
+### 1.4 Term List Distributions
 
-### 1.5 Diagram of classes and properties (non-normative) 
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | http://rs.tdwg.org/bdqffdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/RUN_HAS_RESULT/index.md | This file | 
+| Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
-The diagram below is intended to help understand the normative statements in section 2 below.
-
-![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
-
-## 2 Use of Terms (normative) 
-
-When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
-
-### 2.1 Use of propertiess (normative) 
-
-The bdqffdq:hasUseCase object property SHOULD have an individual with a type that is a subclass of bdqffdq:Policy as its subject.  
-The bdqffdq:hasUseCase object property MAY have an individual from the bdq: vocabulary that representa UseCase as its object.  
-An axiom types the range of bdqffdq:hasUseCase as a bdqffdq:UseCase.  
-
-User communites MAY provide new use cases, and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways.  
-
-The bdqffdq:hasDataQualityDimension object property SHOULD have an individual with a type that is a subclass of bdqffdq:DataQualityNeed as its subject and an individual in the bdqdim: vocabulary is its object.  An axiom types the range of bdqffdq:hasDataQualityDimension as a bdqffdq:DataQualityDimension.
-
-The bdqffdq:hasCriterion object property SHOULD have an individual with a type of bdqffdq:Validation as its subject and an individual in the bdqcrit: vocabulary is its object.  
-
-Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdffdq:Criterion property.
-
-## 3 Term Index
-
-### 3.1 Key to Vocabulary Terms
+### 1.5 Key to Vocabulary Terms
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
 | Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
 | Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Name | rdf:value |  | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
+| Term Name | rdf:value |  | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Abstract Information Element | non-normative |
+| Label | rdfs:label |  | Abstract Information Element | normative |
 | Comments | rdfs:comment |  | Information elements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete Acted Upon or Consulted information elements. | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | An InformationElement described in abstract terms and not linked with one or more concrete terms. | normative |
 | Type | rdf:type |  | http://www.w3.org/2002/07/owl#Class | normative |
-| SubClass Of | rdfs:subClassOf |  | https://rs.tdwg.org/bdqffdq/terms/InformationElement | normative |
+| Superclass | rdfs:subClassOf |  | https://rs.tdwg.org/bdqffdq/terms/InformationElement | normative |
 
 
-### 3.2 Indexes
+## 2 Use of Terms (normative)
 
+Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values from the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.
 
+### 2.1 RFC 2119 key words (normative)
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
+
+## 3 Term index (non-normative)
 
 - [Classes](#41-Class-terms)
 - [Object Properties](#42-ObjectProperty-terms)
 - [Data Properties](#43-DataProperty-terms)
 - [Named Individuals](#44-NamedIndividual-terms)
 
-#### 3.2.1 Alphabetical Index of classes
+#### 3.1 Alphabetical Index of classes
 
 [AbstractInformationElement](#AbstractInformationElement)
 [ActedUpon](#ActedUpon)
@@ -206,7 +153,7 @@ Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffd
 [ValidationConcept](#ValidationConcept)
 [ValidationMethod](#ValidationMethod)
 [ValidationPolicy](#ValidationPolicy)
-#### 3.2.2 Alphabetical Index of object properties
+#### 3.2 Alphabetical Index of object properties
 
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
@@ -242,13 +189,13 @@ Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffd
 [targetedValidation](#targetedValidation)
 [usesSpecification](#usesSpecification)
 [validationProperty](#validationProperty)
-#### 3.2.3 Alphabetical Index of data properties
+#### 3.3 Alphabetical Index of data properties
 
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
-#### 3.2.4 Alphabetical Index of named individuals
+#### 3.4 Alphabetical Index of named individuals
 
 [AMENDED](#AMENDED)
 [COMPLETE](#COMPLETE)
@@ -267,6 +214,8 @@ Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffd
 [SingleRecord](#SingleRecord)
 
 ## 4 Vocabulary
+
+**TODO: term-list terms, formatted as table**
 
 ### 4.1 Class terms
 ### AbstractInformationElement
@@ -1256,212 +1205,6 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-## 5 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
-
-This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo.  Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
-
-The following changes have been made to the original formulation: 
-
-- dcmitype:Dataset replaced with MultiRecord.  
-- Improvement Method changed to Enhancement Method.
-- Improvement Policy changed to Enhancement Policy.
-- Data Quality Improvement changed to Data QualityAmendment.
-- Issue, IssuePolicy, IssueMethod, and IssueAssertion added as converse of Validation.
-- Dimension in Context renamed Measure.
-- Criterion in Context renamed Validation.
-- Enhancement in Context renamed Amendment.
-
-The bdqffdq ontology is framed with limited constraints and no rdfs:range axioms.  Under open world principles, it could be use in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase assertions using bdqffdq: terms, and how a set of assertions made with those terms SHOULD be queried.  
-
-## Fundamental Concepts
-* U = Use Case
-* D = Dimension (e.g. Completeness)  
-* IE = Information Element (e.g. coordinates)
-* M = Mechanism 
-* C = Criterion (e.g. “in controlled vocabulary”)
-* E = Enhancement (description of a means by which data could be improved e.g. recommend replacement value from a controlled vocabulary).
-* S = Specification (specification of how a criterion is to be evaluated e.g. “Iterate records and calculate the proportion of records with scientific name different from null”)
-
-## Properties
-* US = Usages 
-* ID = Identifier for a resource
-* RT = Resource Type {SingleRecord, MultiRecord}
-* sr = instance of Single Records 
-* ds = instance of Dataset.
-* V = Data Resource Value
-* R = Assertion (result from a mechanism, of Validation, Measurement, Improvement on Resource)
-
-## Notation
-* X: Domain (Upper case symbols) 
-* x: instance (lower case symbols)
-* { } set
-* < > tuple	
-* ⋃ union
-* ∁ complement
-* ⋀ and (logical conjunction)
-* ∈ is a member of
-
-TODO: Update Domain/instance letters to reflect class name changes.
-
-## Derived Concepts
-### General
-#### Measure
-    ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
-
-    me1 = < ie1, d1, rt1 >
-
-* “coordinate precision of single records”
-
-#### Validation
-     VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }   
-
-     va1 = < ie1, c1, rt1 >
-
-* “The value of Basis of Records of single records must be in the controlled vocabulary”
-
-#### Amendment
-
-    AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
-
-    am1 = { < ie1, e1, rt1 >}
-
-*“Recommend valid value for taxon name in single record”
-
-#### Issue
-
-    IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
-
-    is1 = { < ie1, c1, rt1 >}
-
-* “Potential issue if geographic coordinate is at 0,0”
-
-Note: Issue concepts would parallel Validation concepts, but are not shown further here.
-
-### Data Quality Needs
-#### Measurement Policy
-
-    MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
-
-    mp(u1) = {me1, me2, me3, me4}
-    mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
-
-#### Validation Policy
-
-    VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
-
-    vp(u1) = {va1, va2}
-    vp(u1) = {< ie1, c1, rt1>, < ie2, c2, rt2> }
-
-#### Enhancement Policy
-
-     EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
-
-     ep(u1) = {am1, am2}
-
-#### Data Quality Profile
-
-      DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }
-
-      dqp(u1) = {mp(u1), vp(u1), ep(u1)}
-
-#### Use Case Coverage 
-   
-     UC(u) = { us | u ∈ U ⋀ us ⊂ US}
-
-     uc(u1) = {us1, us2}
-
-* “A Use Case for Niche Modeling covers MAXENT and GARP modeling”
-
-#### Valuable Information Elements
-
-     VIE(u) = {ie | ie ⊂ I E ⋀ u ∈ U }
-
-* For a Use Case, what information elements are valuable.
-
-#### Acceptable Data Quality Measure 
-
-     MEaq(me) = {va | me ∈ C D ⋀ va ⊂ C C}
-
-     meaq(me1) = {va1, va2}
-
-* For the dimension in context coordinate completeness in a dataset, acceptable quality is met by all records having coordinates complete.
-
-Note: This is a representation of the MultiRecord Measures that return COMPLETE/NOT_COMPLETE
-
-#### Improvement Target
-
-    IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
-
-    it(am1) = {me1, va2}
-
-* Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion data set must have all records with coordinates.
-
-### Data Quality Solutions
-
-#### Measurement Method
-    MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
-
-#### Validation Method
-    VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
-
-#### Enhancement Method
-    EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
-
-#### Implementation 
-     I (s) = {m | m ⊂ M ⋀ s ∈ S}
-
-     i(s1) = {m1, m2}
-
-#### Mechanism Coverage
-    MC(m) = {s | s ⊂ S ⋀ m ∈ M }
-
-    mc(m1) = {s1, s2}
-
-### Data Quality Reports
-
-#### Data Resource
-    DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
-
-    dr1 =< id1, rt1, v1 >
-
-* “dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records” 
-
-#### MeasurementAssertion 
-     DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
-     
-     dqm(dr1) = {< me1, s1, m1, r1 >}
-
-* Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
-
-#### ValidationAssertion 
-
-     DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
-
-     dqv(dr1) = {< va1, s1, m1, r1 >}
-
-* A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was not empty.
-
-#### AmendmentAssertion
-     DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
-
-     dqa(dr1) = {< am1, s1, m1, r1 >}
-
-* An amendment is proposed to replace the current value of the scientific name by the value “Apis” because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
-
-#### Data Quality Assessment
-     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}
-
-     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqa1}
-
-#### Quality Control
-     QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQI ⋀ dr ∈ DR}
-
-     qc(dr1) = {dqv1, dqa1}
-
-#### Quality Assurance
-     QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}
-
-     qa(dr1) = {dqv1, dqv2}
 
 ## Cite BDQ Core
 
@@ -1481,7 +1224,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Fittness for Use Ontology Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Fitness For Use Framework Ontology Term List. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2024-09-10>
 
 **Biodiversity Information Standards (TDWG)**
 
