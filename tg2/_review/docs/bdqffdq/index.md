@@ -79,7 +79,7 @@ This document lists terms used to describe 'data quality' / 'fitness for use' in
 
 The bdqffdq: vocabulary is an ontology, it includes: 
 
-- A [basic vocabulary](../terms/bdqffdq/index.md)
+- A [basic vocabulary](../list/bdqffdq/index.md)
 - Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
 - Normative guidance on the use of this ontology is provided in this document.
 - The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 

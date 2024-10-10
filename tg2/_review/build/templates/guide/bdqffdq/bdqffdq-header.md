@@ -65,6 +65,10 @@ The following namespace abbreviations are used in this document:
 
 ### 1.1 Status of the content of this document
 
+Section 1 is non-normative.
+
+Section 2 is normative.
+
 In Section 4, the values of following terms are normative: Term IRI, Name, Type, Superclass, Definition.
 
 Figures are non-normative.
@@ -74,6 +78,17 @@ Other sections of this document are marked as normative or non-normative.
 ### 1.2 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+
+### 1.1 Documents about the bdqffdq: ontology.
+
+The bdqffdq: vocabulary is an ontology, it includes: 
+
+- A [landing page](../../budffdq/index.md) with normative guidance on the use of this ontology.
+- A [basic vocabulary](../../list/bdqffdq/index.md)
+- Additional axioms that can be found in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../vocabulary/bdqffdq.owl) 
+
+This document provides an illustrated guide to the use of the bdqffdq ontology.
 
 ## 2 Use of Terms (normative) 
 

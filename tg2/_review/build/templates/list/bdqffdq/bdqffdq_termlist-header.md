@@ -42,12 +42,28 @@ Bibliographic citation
 
 {toc}
 
-## 1 Introduction (non-normative)
+## 1 Introduction
 
-This document includes terms that are part of the bdqffdq vocabulary.
+This document includes terms that form the bdqffdq: vocabulary.  The bdqffdq: vocabulary is used to describe the the BDQ Core tests.
 
-### 1.1 Fittness for Use Framework Vocabulary terms.
+The bdqffdq: terms include classes, object properties, datatype properties, and named individuals.  
+This document only lists the terms, it does not provide additional axioms or normative guidance needed for their use.
 
+The bdqffdq framework is represented as an owl ontology.  The basic terms for that framework are listed in this document.  
+The TDWG Standards Documentation Specification requires that the human readable documentation for ontologies be presented 
+as a term list with additional axioms included in a vocabulary extension.  A [vocabulary extension](../../extension/bdqffdq/index.md) 
+documents additional axioms.  
+
+### 1.1 Documents about the bdqffdq: ontology (non-normative)
+
+The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
+
+- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
+- This page, the list of vocabulary terms in the ontology.
+- Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../extension/bdqffdq/index.md) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
+
+An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
 ### 1.2 Status of the content of this document
 

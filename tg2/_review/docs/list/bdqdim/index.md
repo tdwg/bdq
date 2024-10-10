@@ -97,7 +97,7 @@ The following namespace abbreviations are used in this document:
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of `bdqffdq:dataQualityDimension`.
 
-Each bdqffdq:DataQualityNeed SHOULD have exactly one bdqffdq:hasDataQualityDimension property relating it to a term in this bdqdim: vocabulary.
+Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have exactly one bdqffdq:hasDataQualityDimension property relating it to a term in this bdqdim: vocabulary.
 
 ### 2.1 RFC 2119 key words (normative)
 
