@@ -71,7 +71,7 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies. 
+The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies. 
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
@@ -128,7 +128,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../terms/bdqffdq/index.md) | 
+| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/list/bdqffdq/index.md](../list/bdqffdq/index.md) | 
 | Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
 | Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
 
@@ -144,9 +144,9 @@ The use of classes and properties in [bdqcore:](../../dist/bdqcore.ttl) also fol
 
 When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
 
-### 2.1 Use of propertiess (normative) 
+### 2.1 Use of properties (normative) 
 
-This section describes normative expectaions for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative defintions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
+This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative defintions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
 
 #### 2.1.1 Properties relating data quality needs
 
@@ -202,11 +202,11 @@ A subproperty of the bdqffdq:hasInformationElement object property SHOULD have a
 
 Each instance of a subclass of bdqffdq:DataQualityNeed SHOULD have exactly one bdqffdq:hasActedUponInformationElement property linking it to a bdqffdq:ActedUpon. 
 
-Each instance of bdqffdq:ActedUpon SHOULD have one to many bdqffdq;composedOf object properties linking it to specific information elements.
+Each instance of bdqffdq:ActedUpon SHOULD have one to many bdqffdq:composedOf object properties linking it to specific information elements.
 
 Each instance of a subclass of bdqffdq:DataQualityNeed MAY have exactly one bdqffdq:hasConsultedInformationElement property linking it to a bdqffdq:Consulted.
 
-Each instance of bdqffdq:Consulted SHOULD have one to many bdqffdq;composedOf object properties linking it to specific information elements.
+Each instance of bdqffdq:Consulted SHOULD have one to many bdqffdq:composedOf object properties linking it to specific information elements.
 
 Each instance of a subclass of bdqffdq:DataQualityNeed MAY have a bdqffdq:hasInformationElement property linking it to a bdqffdq:AbstractInformationElement.
 
@@ -240,11 +240,11 @@ Each bdqffdq:Issue method SHOULD have exactly one bdqffdq:forIssue object proper
 
 #### 2.1.3 Properties relating to data quality solutions
 
-The bdqffdq:hasSpecification object property should have an instance of a subclass of bdqffdq:DataQualityMethod as its subject.
+The bdqffdq:hasSpecification object property SHOULD have an instance of a subclass of bdqffdq:DataQualityMethod as its subject.
 
 An axiom places an owl:restriction on the object of the bdqffdq:hasSpecification object property as a bdqffdq:Specification.
 
-The bdqffdq:hasParameter object property should have a bdqffdq:Specificaiton as its subject.
+The bdqffdq:hasParameter object property SHOULD have a bdqffdq:Specificaiton as its subject.
 
 An axiom types the object of the bdqffdq:hasParameter object property as a Parameter.
 
