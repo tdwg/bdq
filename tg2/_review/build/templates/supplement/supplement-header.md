@@ -497,7 +497,7 @@ Each Test issue in GitHub begins with a table in markdown format describing the 
 
 **GUID** [normative]: A globally unique identifier which allows software to uniquely identify each Test, for example 8f1e6e58-544b-4365-a569-fb781341644e. The GUID in the markdown table becomes the local part of the IRI for the test (for example https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e) when translated to RDF.
 
-**Label** [normative]: A human readable label identifying the Test. The labels are TESTTYPE_INFORMATIONELEMENT_CRITERIA part of the Title, for example "VALIDATION_COUNTRYCODE_STANDARD"  The Label becomes the skos:prefLabel when translated to RDF.
+**Label** [normative]: A human readable label identifying the Test. The labels are TESTTYPE_INFORMATIONELEMENT_CRITERIA part of the Title, for example "VALIDATION_COUNTRYCODE_STANDARD"  The Label becomes the rdfs:label when translated to RDF.
  
 **Description** [non-normative]: A brief English language description of what the Test does, for example "Does the value of dwc:basisOfRecord occur in bdq:sourceAuthority?"  
 
