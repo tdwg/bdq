@@ -47,28 +47,28 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 bdqffdq:amendmentProperty rdf:type owl:ObjectProperty ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment "Sub properties of this type group object properties that apply to amendment concepts such as AmendmentPolicy (DQ Needs), AmendmentMethod (DQ Solutions) and Amendment (DQ Reports)." ;
                           rdfs:label "amendment Property" ;
                           skos:definition "Category of object properties that apply to Amendmentts" ;
-                          dcterms:issued "2024-09-30"^^xsd:date ;
                           skos:prefLabel "amendment Property" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/appliesTo
 bdqffdq:appliesTo rdf:type owl:ObjectProperty ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:comment "If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.  If Assertions are composed in DataQualityReports, the appliesTo DataResource is an item examined as part of the report.  Expectation for SingleRecord test Assertions on Darwin Core data in BDQ Core is that appliesTo would point at an Occurrence." ;
                   rdfs:label "applies To" ;
                   skos:definition "Describes the DataResource about which an Assertion is made." ;
-                  dcterms:issued "2024-09-30"^^xsd:date ;
                   skos:prefLabel "applies To" .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/composedOf
 bdqffdq:composedOf rdf:type owl:ObjectProperty ;
+                   dcterms:issued "2024-09-30"^^xsd:date ;
                    rdfs:comment "Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year." ;
                    rdfs:label "composed Of" ;
                    skos:definition "Specific vocabulary term that comprises a non-abstract Information Element." ;
-                   dcterms:issued "2024-09-30"^^xsd:date ;
                    skos:prefLabel "composed Of" .
 
 
@@ -153,6 +153,15 @@ bdqffdq:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
                                        skos:prefLabel "has Acted Upon Information Element" .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/hasArgument
+bdqffdq:hasArgument rdf:type owl:ObjectProperty ;
+                    rdfs:range bdqffdq:Argument ;
+                    rdfs:comment "Expected to be a relationship between a Specification and an Argument, where the Argument provides a value for a Paramter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification may provide a default value for the Parameter under that specification." ;
+                    rdfs:label "has Argument" ;
+                    skos:definition "Relates a Specification to an Argument" ;
+                    skos:prefLabel "has Argument" .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement
 bdqffdq:hasConsultedInformationElement rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf bdqffdq:hasInformationElement ;
@@ -227,7 +236,7 @@ bdqffdq:hasParameter rdf:type owl:ObjectProperty ;
                      rdfs:range bdqffdq:Parameter ;
                      rdfs:comment "Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification."@en ;
                      rdfs:label "has Parameter"@en ;
-                     skos:definition "Parameter that can alter the behavior of a Specification."@en ;
+                     skos:definition "Relates an Argument to a Parameter."@en ;
                      skos:prefLabel "has Parameter"@en .
 
 
@@ -421,6 +430,13 @@ bdqffdq:validationProperty rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue
+bdqffdq:hasArgumentValue rdf:type owl:DatatypeProperty ;
+                         rdfs:label "has Argument value" ;
+                         skos:definition "The value of an Argument which is used in a Specification to replace a formal Parameter to determine the behavior of the Specification." ;
+                         skos:prefLabel "has Argument value" .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
 bdqffdq:hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
                                rdfs:range xsd:string ;
@@ -540,6 +556,15 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }""" ;
                         rdfs:label "Amendment Policy"@en ;
                         skos:definition "A need concept that relates a UseCase to a set of supporting Amendments."@en ;
                         skos:prefLabel "Amendment Policy"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/Argument
+bdqffdq:Argument rdf:type owl:Class ;
+                 rdfs:subClassOf bdqffdq:SolutionsConcept ;
+                 rdfs:comment "The argument is an Actual Parameter, for which a Parameter is the corresponding Formal Parameter.  An extension to the original fitness for use framework as described in Veiga et al., 2017."@en ;
+                 rdfs:label "Argument" ;
+                 skos:definition "A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner." ;
+                 skos:prefLabel "Argument"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Assertion
@@ -819,9 +844,9 @@ bdqffdq:NeedConcept rdf:type owl:Class ;
 ###  https://rs.tdwg.org/bdqffdq/terms/Parameter
 bdqffdq:Parameter rdf:type owl:Class ;
                   rdfs:subClassOf bdqffdq:SolutionsConcept ;
-                  rdfs:comment "An extension to the original fitness for use framework as described in Veiga et al., 2017." ;
+                  rdfs:comment "A Parameter is a Formal Parameter for which an Argument is an Actual Parameter that replaces it to determine the behavior of a Specification.  An extension to the original fitness for use framework as described in Veiga et al., 2017." ;
                   rdfs:label "Parameter"@en ;
-                  skos:definition "A value that, when provided to a test Specification changes the behavior of the test in a defined manner."@en ;
+                  skos:definition "A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner."@en ;
                   skos:prefLabel "Parameter"@en .
 
 

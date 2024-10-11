@@ -282,6 +282,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 [AmendmentConcept](#AmendmentConcept)
 [AmendmentMethod](#AmendmentMethod)
 [AmendmentPolicy](#AmendmentPolicy)
+[Argument](#Argument)
 [Assertion](#Assertion)
 [Consulted](#Consulted)
 [Criterion](#Criterion)
@@ -336,6 +337,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 [forMeasure](#forMeasure)
 [forValidation](#forValidation)
 [hasActedUponInformationElement](#hasActedUponInformationElement)
+[hasArgument](#hasArgument)
 [hasConsultedInformationElement](#hasConsultedInformationElement)
 [hasCriterion](#hasCriterion)
 [hasDataQualityDimension](#hasDataQualityDimension)
@@ -363,6 +365,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 ### 4.3 Alphabetical Index of data properties
 
+[hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
@@ -437,6 +440,14 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 - Name: bdqffdq:AmendmentPolicy
 - Definition: A need concept that relates a UseCase to a set of supporting Amendments.
 - SubClass Of: AmendmentConcept; Policy
+
+********************
+
+### Argument
+
+- Name: bdqffdq:Argument
+- Definition: A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner.
+- SubClass Of: SolutionsConcept
 
 ********************
 
@@ -640,7 +651,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 ### Parameter
 
 - Name: bdqffdq:Parameter
-- Definition: A value that, when provided to a test Specification changes the behavior of the test in a defined manner.
+- Definition: A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner.
 - SubClass Of: SolutionsConcept
 
 ********************
@@ -834,6 +845,14 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 ********************
 
+### hasArgument
+
+- Name: bdqffdq:hasArgument
+- Definition: Relates a Specification to an Argument
+- Range bdqffdq:Argument
+
+********************
+
 ### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
@@ -881,7 +900,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 ### hasParameter
 
 - Name: bdqffdq:hasParameter
-- Definition: Parameter that can alter the behavior of a Specification.
+- Definition: Relates an Argument to a Parameter.
 - Range bdqffdq:Parameter
 
 ********************
@@ -1202,6 +1221,14 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 ********************
 
+### Argument
+
+- Name: bdqffdq:Argument
+- Definition: A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner.
+- SubClass Of: SolutionsConcept
+
+********************
+
 ### Assertion
 
 - Name: bdqffdq:Assertion
@@ -1402,7 +1429,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 ### Parameter
 
 - Name: bdqffdq:Parameter
-- Definition: A value that, when provided to a test Specification changes the behavior of the test in a defined manner.
+- Definition: A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner.
 - SubClass Of: SolutionsConcept
 
 ********************
@@ -1596,6 +1623,14 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 ********************
 
+### hasArgument
+
+- Name: bdqffdq:hasArgument
+- Definition: Relates a Specification to an Argument
+- Range bdqffdq:Argument
+
+********************
+
 ### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
@@ -1643,7 +1678,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 ### hasParameter
 
 - Name: bdqffdq:hasParameter
-- Definition: Parameter that can alter the behavior of a Specification.
+- Definition: Relates an Argument to a Parameter.
 - Range bdqffdq:Parameter
 
 ********************

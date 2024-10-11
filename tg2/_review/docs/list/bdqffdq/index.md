@@ -150,6 +150,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [AmendmentConcept](#AmendmentConcept)
 [AmendmentMethod](#AmendmentMethod)
 [AmendmentPolicy](#AmendmentPolicy)
+[Argument](#Argument)
 [Assertion](#Assertion)
 [Consulted](#Consulted)
 [Criterion](#Criterion)
@@ -203,6 +204,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [forMeasure](#forMeasure)
 [forValidation](#forValidation)
 [hasActedUponInformationElement](#hasActedUponInformationElement)
+[hasArgument](#hasArgument)
 [hasConsultedInformationElement](#hasConsultedInformationElement)
 [hasCriterion](#hasCriterion)
 [hasDataQualityDimension](#hasDataQualityDimension)
@@ -229,6 +231,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [validationProperty](#validationProperty)
 #### 3.3 Alphabetical Index of data properties
 
+[hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
@@ -321,6 +324,16 @@ EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 - SubClass Of: AmendmentConcept; Policy
 - Comments: A Data Quality needs level concept that describes how some Amendment relates to a UseCase. This relationship defines which amendments are supported by a given UseCase.  
 EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
+
+********************
+
+### Argument
+
+- Name: bdqffdq:Argument
+- Preferred Label: Argument
+- Definition: A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner.
+- SubClass Of: SolutionsConcept
+- Comments: The argument is an Actual Parameter, for which a Parameter is the corresponding Formal Parameter.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
 
 ********************
 
@@ -592,9 +605,9 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 - Name: bdqffdq:Parameter
 - Preferred Label: Parameter
-- Definition: A value that, when provided to a test Specification changes the behavior of the test in a defined manner.
+- Definition: A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner.
 - SubClass Of: SolutionsConcept
-- Comments: An extension to the original fitness for use framework as described in Veiga et al., 2017.
+- Comments: A Parameter is a Formal Parameter for which an Argument is an Actual Parameter that replaces it to determine the behavior of a Specification.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
 
 ********************
 
@@ -843,6 +856,16 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
+### hasArgument
+
+- Name: bdqffdq:hasArgument
+- Preferred Label: has Argument
+- Definition: Relates a Specification to an Argument
+- Range bdqffdq:Argument
+- Comments: Expected to be a relationship between a Specification and an Argument, where the Argument provides a value for a Paramter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification may provide a default value for the Parameter under that specification.
+
+********************
+
 ### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
@@ -903,7 +926,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 - Name: bdqffdq:hasParameter
 - Preferred Label: has Parameter
-- Definition: Parameter that can alter the behavior of a Specification.
+- Definition: Relates an Argument to a Parameter.
 - Range bdqffdq:Parameter
 - Comments: Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification.
 

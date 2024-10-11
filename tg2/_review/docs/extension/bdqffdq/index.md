@@ -204,6 +204,15 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 | Range | [ owl:someValuesFrom bdqffdq:forValidation ] |
 
 
+#### hasArgument
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasArgument |
+| Type | owl:ObjectProperty |
+| Range | bdqffdq:Argument |
+
+
 #### hasCriterion
 
 | Property | Value |
