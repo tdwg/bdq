@@ -49,7 +49,7 @@ Draft Standard for Submission
 - [1.4 Distributions (normative)](#14-distributions-(normative))
 - [1.5 Diagram of classes and properties (non-normative)](#15-diagram-of-classes-and-properties-(non-normative)-)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
-- [2.1 Use of propertiess (normative)](#21-use-of-propertiess-(normative)-)
+- [2.1 Use of properties (normative)](#21-use-of-properties-(normative)-)
 - [2.1.1 Properties relating data quality needs](#211-properties-relating-data-quality-needs)
 - [2.1.2 Properties relating data quality needs to data quality solutions](#212-properties-relating-data-quality-needs-to-data-quality-solutions)
 - [2.1.3 Properties relating to data quality solutions](#213-properties-relating-to-data-quality-solutions)
@@ -71,7 +71,7 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies. 
+The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies.
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
@@ -86,7 +86,7 @@ The bdqffdq: vocabulary is an ontology, it includes:
 - A [term list](../list/bdqffdq/index.md) for the vocabulary, containing just the vocabulary terms.
 - Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
 - Normative guidance on the use of this ontology is provided in this landing page document.
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../vocabulary/bdqffdq.owl) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
 
 An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
@@ -128,7 +128,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/list/bdqffdq/index.md](../list/bdqffdq/index.md) | 
+| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
 | Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
 | Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
 
@@ -288,6 +288,7 @@ Each bdqffdq:Specification MAY have zero to many bdqffdq:hasParameter object pro
 [AmendmentConcept](#AmendmentConcept)
 [AmendmentMethod](#AmendmentMethod)
 [AmendmentPolicy](#AmendmentPolicy)
+[Argument](#Argument)
 [Assertion](#Assertion)
 [Consulted](#Consulted)
 [Criterion](#Criterion)
@@ -341,6 +342,7 @@ Each bdqffdq:Specification MAY have zero to many bdqffdq:hasParameter object pro
 [forMeasure](#forMeasure)
 [forValidation](#forValidation)
 [hasActedUponInformationElement](#hasActedUponInformationElement)
+[hasArgument](#hasArgument)
 [hasConsultedInformationElement](#hasConsultedInformationElement)
 [hasCriterion](#hasCriterion)
 [hasDataQualityDimension](#hasDataQualityDimension)
@@ -367,6 +369,7 @@ Each bdqffdq:Specification MAY have zero to many bdqffdq:hasParameter object pro
 [validationProperty](#validationProperty)
 #### 3.2.3 Alphabetical Index of data properties
 
+[hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
@@ -457,6 +460,16 @@ EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 - SubClass Of: AmendmentConcept; Policy
 - Comments: A Data Quality needs level concept that describes how some Amendment relates to a UseCase. This relationship defines which amendments are supported by a given UseCase.  
 EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
+
+********************
+
+### Argument
+
+- Name: bdqffdq:Argument
+- Preferred Label: Argument
+- Definition: A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner.
+- SubClass Of: SolutionsConcept
+- Comments: The argument is an Actual Parameter, for which a Parameter is the corresponding Formal Parameter.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
 
 ********************
 
@@ -728,9 +741,9 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 - Name: bdqffdq:Parameter
 - Preferred Label: Parameter
-- Definition: A value that, when provided to a test Specification changes the behavior of the test in a defined manner.
+- Definition: A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner.
 - SubClass Of: SolutionsConcept
-- Comments: An extension to the original fitness for use framework as described in Veiga et al., 2017.
+- Comments: A Parameter is a Formal Parameter for which an Argument is an Actual Parameter that replaces it to determine the behavior of a Specification.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
 
 ********************
 
@@ -979,6 +992,16 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
+### hasArgument
+
+- Name: bdqffdq:hasArgument
+- Preferred Label: has Argument
+- Definition: Relates a Specification to an Argument
+- Range bdqffdq:Argument
+- Comments: Expected to be a relationship between a Specification and an Argument, where the Argument provides a value for a Paramter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification may provide a default value for the Parameter under that specification.
+
+********************
+
 ### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
@@ -1039,7 +1062,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 - Name: bdqffdq:hasParameter
 - Preferred Label: has Parameter
-- Definition: Parameter that can alter the behavior of a Specification.
+- Definition: Relates an Argument to a Parameter.
 - Range bdqffdq:Parameter
 - Comments: Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification.
 
