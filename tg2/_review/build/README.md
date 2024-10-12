@@ -9,7 +9,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── README.md this file.
 ├── templates  for various docs files.
 │   ├── list Term lists  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
-│   │   ├── bdqcore  **work in progress** won't use draft_build-termlisty.py
+│   │   ├── bdqcore  **work in progress** uses draft_build-termlist_bdqcore.py for build
 │   │   │   ├── bdqcore_termlist-footer.md  
 │   │   │   ├── bdqcore_termlist-header.md
 │   │   │   └── document_configuration.yaml

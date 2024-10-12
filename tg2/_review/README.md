@@ -45,9 +45,9 @@ Work in progress description of files in this directory:
 ├── docs  human readable documentation files built from files in build/
 │   ├── intro 
 │   │   ├── .svg files, copied here from build, do not edit. 
-│   │   └── index.md Generated file, do not edit..
+│   │   └── index.md Generated file, do not edit.
 │   ├── bdqcore landing page for bdqcore, with normative statements
-│   │   └── TODO
+│   │   └── index.md Generated file, do not edit.
 │   ├── bdqffdq landing page for bdqffdq, with normative statements
 │   │   └── index.md Generated file, do not edit.
 │   ├── vocabularies
