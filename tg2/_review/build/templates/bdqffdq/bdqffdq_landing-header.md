@@ -243,12 +243,31 @@ An axiom types the object of the bdqffdq:hasParameter object property as a bdqff
 
 Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
 
+The bdqffdq:usesSpecification object property SHOULD have a bdqffdq:Implementation as its subject.
+
+An axiom places an owl:restriction on the object of the bdqffdq:usesSpecification object property as a bdqffdq:Specification.
+
+**Review direction and cardinality, these don't seem right** Need competency question.
+
+Each bdqffdq:Implementation MAY have zero to many bdqffdq:usesSpecification object properties.
+
+The bdqffdq:implementedBy object property SHOULD have a bdqffdq:Implementation as its subject.
+
+An axiom places an owl:restriction on the object of the bdqffdq:implementedBy object property as a bdqffdq:Mechanism.
+
+Each bdqffdq:Implementation SHOULD have a bdqffdq:implementedBy object property.
+
+A bdqffdq:Implementation MAY have more than one bdqffdq:implementedBy object property.
 
 #### 2.1.5 Properties relating data quality reports
 
 Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
 
 Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guid concering the expression of data quality responses in forms other than RDF.  Each data quality mechanism MUST produce results coresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specfied in those guides.   
+
+The bdqffdq:producesAssertion object property SHOULD have a bdqffdq:Implementation as its subject.
+
+The bdqffdq:producesAssertion object property SHOULD have a bdqffdq:Assertion as its object.
 
 ## 3 Term Index
 
