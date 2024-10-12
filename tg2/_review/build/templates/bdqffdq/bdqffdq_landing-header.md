@@ -121,7 +121,11 @@ When not represented as objects, controlled value strings MUST be used as values
 
 This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative defintions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
 
+This guidance describes the use of the bdqffdq: framework terms in an RDF context.  This guidance MAY be used to develop models of the bdqffdq data quality framework in more constrained forms including UML object models, information models, classes in a programing language, or database schemas.  
+
 #### 2.1.1 Properties relating data quality needs
+
+Each description of a data quality test SHOULD include the following properties and related instances.
 
 The bdqffdq:hasUseCase object property SHOULD have an individual with a type that is a subclass of bdqffdq:Policy as its subject.  
 
@@ -187,6 +191,8 @@ Each instance of bdqffdq:AbstractInformationElement SHOULD have rdfs:label and r
 
 #### 2.1.2 Properties relating data quality needs to data quality solutions
 
+Each description of a data quality test SHOULD include the following properties and related instances.
+
 The bdqffdq:forValidation object property SHOULD have have an individual with a type that is a subclass of bdqffdq:ValidationMethod as its subject.
 
 An axiom places an owl:restriction on the object of the bdqffdq:forValidation object property as a bdqffdq:Validation
@@ -211,21 +217,38 @@ An axiom places an owl:restriction on the object of the bdqffdq:forIssue object 
 
 Each bdqffdq:Issue method SHOULD have exactly one bdqffdq:forIssue object property.
 
-#### 2.1.3 Properties relating to data quality solutions
+#### 2.1.3 Properties relating to data quality solutions provided in a test description
+
+Each description of a data quality test SHOULD include the following properties and related instances.
 
 The bdqffdq:hasSpecification object property SHOULD have an instance of a subclass of bdqffdq:DataQualityMethod as its subject.
 
 An axiom places an owl:restriction on the object of the bdqffdq:hasSpecification object property as a bdqffdq:Specification.
 
-The bdqffdq:hasParameter object property SHOULD have a bdqffdq:Specificaiton as its subject.
+The bdqffdq:hasArgument object property SHOULD have a bdqffdq:Specification as its subject.
 
-An axiom types the object of the bdqffdq:hasParameter object property as a Parameter.
+An axiom types the object of the bdqffdq:hasArgument object as a bdqffdq:Argument.
 
-Each bdqffdq:Specification MAY have zero to many bdqffdq:hasParameter object properties.
+An instance of bdqffdq:Argument SHOULD have exactly one bdqffdq:hasArgumentValue data property holding the value of the argument that replaces the bdqffdq:Parameter in the bdqffdq:hasExpectedResponse of the bdqffdq:Specification.  An instance of bdqffdq:Argument SHOULD have exactly one bdqffdq:hasParameter object property that denotes the parameter within the bdqffdq:hasExpectedResponse that is to be replace by the value of the bdqffdq:hasArgumentValue.  An instance of bdqffdq:Argument SHOULD be related to exactly one instance of a bdqffdq:Specification with the bdqffdq:hasArgument object property.
+
+Each instance of a bdqffdq:Specification MAY have zero to many bdqffdq:hasArgument object properties relating it to zero to many bdqffdq:Argument instances.
+
+Each instance of a bdqffdq:Specification with a bdqffdq:hasAuthoritiesDefaults value that references at least one parameter MUST have a corresponding bdqffdq:hasArgument object property.  The related instances bdqffdq:Argument through these bdqffdq:hasArgument object properties SHOULD have appropriate bdqffdq:hasArgumentValue and bdqffdq:hasParameter triples to express the actual and formal parameters for the bdqffdq:Specification instance.
+
+The bdqffdq:hasParameter object property SHOULD have a bdqffdq:Argument as its subject.
+
+An axiom types the object of the bdqffdq:hasParameter object property as a bdqffdq:Parameter.
+
+#### 2.1.4 Properties relating to data quality solutions provided by an implementation
+
+Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
 
 
-#### 2.1.4 Properties relating data quality reports
+#### 2.1.5 Properties relating data quality reports
 
+Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
+
+Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guid concering the expression of data quality responses in forms other than RDF.  Each data quality mechanism MUST produce results coresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specfied in those guides.   
 
 ## 3 Term Index
 
