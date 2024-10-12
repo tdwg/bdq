@@ -49,9 +49,10 @@ This document provides introductory explanatory information and normative guidan
 
 The bdqcore: vocabulary includes: 
 
+- A [Quick Reference Guide](../terms/bdqcore/index.md) to the tests.
 - A [term list](../list/bdqffdq/index.md) for the vocabulary, containing the vocabulary terms and their metadata.
 - Normative guidance on the use of the bdqcore vocabulary is provided in this landing page document.
-- The bdqcore tests have several distribution files
+- The bdqcore tests have several distribution files:
   - A csv file listing the tests  [CSV list of tests](../vocabulary/bdqcore_terms.csv) 
   - An rdf representation of the tests in a [Turtle Serialization of bdqcore](../dist/bdqcore.ttl) 
   - An rdf representation of the tests in an [RDF/XML Serialization of bdqcore](../dist/bdqcore.xml) 
@@ -233,9 +234,13 @@ The following namespace abbreviations are used in this document:
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of classes and object properties in the `bdqffdq:` namespace.
+
 Due to the requirements of [bdq](https://rs.tdwg.org/bdqdim/terms), resources MUST be used as values of the `bdqdim:` namespace.
+
 Due to the requirements of [bdq](https://rs.tdwg.org/bdqenh/terms), resources MUST be used as values of the `bdqenh:` namespace.
+
 Due to the requirements of [bdq](https://rs.tdwg.org/bdqcrit/terms), resources MUST be used as values of the `bdqcrit:` namespace.
+
 Due to the requirements of [bdq](https://rs.tdwg.org/bdq/terms), resources MUST be used as values of the `bdq:` namespace.
 
 ### 2.1 RFC 2119 key words (normative)
