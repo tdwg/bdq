@@ -8,7 +8,7 @@ Work in progress description of files in this directory:
 ├── index.md  Landing page for the standard. **editable**
 ├── build  build scripts and templates to assemble pages
 │   ├── authors_configuration.yaml list of authors and contributors used by build scripts
-│   ├── .md files are working files that are to become templates but are not yet
+│   ├── README.md provides more details on build scripts and templates.
 │   ├── .py files build other artifacts
 │   ├── draft_build-termlist.py builds the docs/{term}/index.md files and dist/{term}.xml files from templates, builds for draft standard
 │   ├── temp_namespaces.yaml File for draft standard only, provides metadata for build scripts that comes from rs.tdwg.org for approved standards
