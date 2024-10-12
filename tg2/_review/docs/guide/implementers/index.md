@@ -45,7 +45,7 @@ Draft Standard for Submission
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-(normative))
 - [4 Extension points (normative)](#4-extension-points-(normative))
 - [3 Responses from tests](#3-responses-from-tests)
-- [3.1 The Response Object (normative)](#31-the-response-object-(normative)-)
+- [3.1 The Response Object (normative)](#31-the-response-object-(normative))
 - [3.2 Framework elements not included in bdqcore test descriptions (normative)](#32-framework-elements-not-included-in-bdqcore-test-descriptions-(normative))
 - [4 Guidelines for Implementers](#4-guidelines-for-implementers)
 - [5 Validating Test Implementations (normative)](#5-validating-test-implementations-(normative))
@@ -162,13 +162,14 @@ etc.
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
 
-
 #### 2.2.3 Interpreted As
 
 In the Specifications the phrase "interpreted as" means for Implementors, (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
 
 ## 3 Compliant Implementation (normative)
+
+This section is normative.
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
 
@@ -210,7 +211,7 @@ MultiRecord Measues that return counts where the input InformationElement is Res
 
 ## 3 Responses from tests
 
-### 3.1 The Response Object (normative) 
+### 3.1 The Response Object (normative)
 
 The four test types, Validation, Issue, Amendment, and Measure all provide a Response from the execution of the test.
 The Response from a test is an assertion which MAY form part of a data quality report or MAY be wrapped in an annotation. 
