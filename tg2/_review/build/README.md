@@ -10,7 +10,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── templates  for various docs files.
 │   ├── list Term lists  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
 │   │   ├── bdqcore  **work in progress** won't use draft_build-termlisty.py
-│   │   │   ├── bdqcore_termlist-footer.md
+│   │   │   ├── bdqcore_termlist-footer.md  
 │   │   │   ├── bdqcore_termlist-header.md
 │   │   │   └── document_configuration.yaml
 │   │   ├── bdq
@@ -43,7 +43,10 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │   ├── document_configuration.yaml
 │   │   ├── bdqffdq_landing-footer.md **Main text document for landing page**
 │   │   └── bdqffdq_landing-header.md **Includes Mathematical Forumulation**
-│   ├── bdqcore **TODO:** Landing pad page for bdqcore.
+│   ├── bdqcore Landing pad page for bdqcore.
+│   │   ├── document_configuration.yaml
+│   │   ├── bdqcore_landing-footer.md **Main text document for landing page**
+│   │   └── bdqcore_landing-header.md
 │   ├── intro templates used by draft_build-docs.py to build docs/intro/
 │   │   ├── document_configuration.yaml
 │   │   ├── intro-footer.md
