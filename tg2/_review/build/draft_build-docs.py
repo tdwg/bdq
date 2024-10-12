@@ -30,7 +30,7 @@ from function_lib import build_authors_contributors_markdown, build_contributors
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
-directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq'}
+directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqcore':'bdqcore_landing'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -110,11 +110,14 @@ for templatePath, document in directories.items() :
 	headerFileName = '{}{}-header.md'.format(sourceDirectory,document)
 	footerFileName = '{}{}-footer.md'.format(sourceDirectory,document)
 	document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(templatePath)
-	if templatePath.find("guide/") == -1 :
+	if document.find("_landing") > -1 :
+		outputDirectory = '../docs/{}/'.format(templatePath)
+	elif templatePath.find("guide/") == -1 :
 		outputDirectory = '../docs/{}/'.format(document)
 	else :
 		outputDirectory = '../docs/guide/{}/'.format(document)
 	outFileName = '{}index.md'.format(outputDirectory)
+	print('Generating files as {}.'.format(outFileName))
 
 	# Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 	# load from local file
