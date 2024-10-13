@@ -559,6 +559,7 @@ for term in termLists:
     
     # Substitute values of ratification_date and contributors into the header template
     print(document_configuration_yaml)
+    header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
     header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
     header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
     header = header.replace('{created_date}', document_configuration_yaml['doc_created'])

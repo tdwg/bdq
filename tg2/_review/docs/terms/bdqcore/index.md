@@ -1,7 +1,11 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-<!--- Template for header, values provided from yaml configuration --->
+---
+layout: home
+---
+
 # Quick Reference Guide to BDQ Core Tests
+{:.lead}
 
 Draft Standard for Submission
 

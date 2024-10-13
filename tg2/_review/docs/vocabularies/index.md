@@ -1,5 +1,5 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
-<!--- Template for header, values provided from yaml configuration --->
+
 # Biodiversity Data Quality List of Vocabularies
 
 Title
