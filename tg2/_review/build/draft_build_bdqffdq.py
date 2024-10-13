@@ -208,7 +208,7 @@ for r in queryResult :
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
-	text = text + "- View in: [term-list](../docs/list/bdqffdq/index.md#{})\n".format(entity)
+	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(entity)
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.2 ObjectProperty terms\n"
