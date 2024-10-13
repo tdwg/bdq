@@ -202,12 +202,13 @@ for r in queryResult :
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
 	text = text + "### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
+	text = text + "- Name: [{}]({})\n".format(entity,r.subject)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- View in: [term-list](../docs/list/bdqffdq/index.md#{})\n".format(entity)
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.2 ObjectProperty terms\n"
