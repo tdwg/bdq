@@ -184,21 +184,23 @@ for templatePath, document in directories.items() :
 		text = '### 3.1 Index By Test Label\n\n'
 		text += '\n'
 		for row_index,row in terms_sorted_by_label.iterrows():
-			curie = "bdqcore:" + row['term_localName']
-			curie_anchor = curie.replace(':','_')
-			text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
+			if row['Label'].find('MULTIRECORD') == -1 : 
+				curie = "bdqcore:" + row['term_localName']
+				curie_anchor = curie.replace(':','_')
+				text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
 		text = text[:len(text)-2] # remove final trailing vertical bar and newline
 
 		# Vocabulary terms with minimal data
 		text += '\n## 4 Vocabulary Summary\n'
 		for row_index,row in terms_sorted_by_label.iterrows():
-			curie =  "bdqcore:" + row['term_localName']
-			curieAnchor = curie.replace(':','_')
-			text += '- <a id="' + curieAnchor + '"></a>' + row['Label'] + '\n'
-			text += '  - Description: ' + row['Description'] + '\n'
-			text += '  - View in Quick Reference Guide: [Link](../terms/bdqcore/index.md#' + row['Label'] + ')\n'
-			text += '  - View in Term-List: [Link](../list/bdqcore/index.md#' + curie + ')\n'
-			text += '\n'
+			if row['Label'].find('MULTIRECORD') == -1 :
+				curie =  "bdqcore:" + row['term_localName']
+				curieAnchor = curie.replace(':','_')
+				text += '- <a id="' + curieAnchor + '"></a>' + row['Label'] + '\n'
+				text += '  - Description: ' + row['Description'] + '\n'
+				text += '  - View in Quick Reference Guide: [Link](../terms/bdqcore/index.md#' + row['Label'] + ')\n'
+				text += '  - View in Term-List: [Link](../list/bdqcore/index.md#' + curieAnchor + ')\n'
+				text += '\n'
 
 		# Append to end of header
 		header = header + '\n' + text
