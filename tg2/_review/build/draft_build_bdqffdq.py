@@ -208,7 +208,7 @@ for r in queryResult :
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
-	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(entity)
+	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.2 ObjectProperty terms\n"
@@ -230,6 +230,7 @@ for r in queryResult :
 		else :
 			text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 	text = text + "\n********************\n\n"
 
 
@@ -247,6 +248,7 @@ for r in queryResult :
 	if (r.range) :
 		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.4 NamedIndividual terms\n"
@@ -266,6 +268,7 @@ for r in queryResult :
 		text = text + "- DifferentFrom: {}\n".format(different)
 	text = text + "- Definition: {}\n".format(r.definition)
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 	text = text + "\n********************\n\n"
 
 
