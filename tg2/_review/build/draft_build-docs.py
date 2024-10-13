@@ -166,8 +166,45 @@ for templatePath, document in directories.items() :
 		header = header.replace('{namespace_uri}', namespace_uri)
 		header = header.replace('{pref_namespace_prefix}', term)
 
+	if document == 'bdqcore_landing' : 
+		# Special handling of bdqcore landing page, load minimal test list
+		
+		# Load data
+		data_url = "../vocabulary/bdqcore_terms.csv"
+		frame = pd.read_csv(data_url, na_filter=False)
+		table_list = []
+		column_list = ["Label","#","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","Specification","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases"]
+		for index,row in frame.iterrows():
+			row_list = [ row['Label'], row['#'], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['Specification'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
+			table_list.append(row_list)
+		terms_df = pd.DataFrame(table_list, columns = column_list)
+		terms_sorted_by_label = terms_df.sort_values(by='Label')
+
+		# Index
+		text = '### 3.1 Index By Test Label\n\n'
+		text += '\n'
+		for row_index,row in terms_sorted_by_label.iterrows():
+			curie = "bdqcore:" + row['term_localName']
+			curie_anchor = curie.replace(':','_')
+			text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
+		text = text[:len(text)-2] # remove final trailing vertical bar and newline
+
+		# Vocabulary terms with minimal data
+		text += '\n## 4 Vocabulary Summary\n'
+		for row_index,row in terms_sorted_by_label.iterrows():
+			curie =  "bdqcore:" + row['term_localName']
+			curieAnchor = curie.replace(':','_')
+			text += '- <a id="' + curieAnchor + '"></a>' + row['Label'] + '\n'
+			text += '  - Description: ' + row['Description'] + '\n'
+			text += '  - View in Quick Reference Guide: [Link](../guide/bdqcore/index.md#' + curie + ')\n'
+			text += '  - View in Term-List: [Link](../list/bdqcore/index.md#' + curie + ')\n'
+			text += '\n'
+
+		# Append to end of header
+		header = header + '\n' + text
+
 	if document == 'bdqffdq' : 
-		# Special handling of bqffdq, load minimal ontology documentation
+		# Special handling of bdqffdq, load minimal ontology documentation
 		# ---------------
 		# Load rdf
 		# ---------------
