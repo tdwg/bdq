@@ -196,7 +196,7 @@ for templatePath, document in directories.items() :
 			curieAnchor = curie.replace(':','_')
 			text += '- <a id="' + curieAnchor + '"></a>' + row['Label'] + '\n'
 			text += '  - Description: ' + row['Description'] + '\n'
-			text += '  - View in Quick Reference Guide: [Link](../guide/bdqcore/index.md#' + curie + ')\n'
+			text += '  - View in Quick Reference Guide: [Link](../terms/bdqcore/index.md#' + curie + ')\n'
 			text += '  - View in Term-List: [Link](../list/bdqcore/index.md#' + curie + ')\n'
 			text += '\n'
 
