@@ -6,7 +6,6 @@ The following references have been extracted from the "References" descriptor on
 **To Add**
 Paul J. Morris, & David Lowery. (2023). FilteredPush/event_date_qc: Release version 3.0.2 of the event_date_qc library, compliant implementation of all the TG2 Core Time Tests. (v3.0.2). Zenodo. https://doi.org/10.5281/zenodo.8136725
 
-
 Paul J. Morris. (2023). FilteredPush/sci_name_qc: Release vesion 1.0.1 of the sci_name_qc library implementing TG2 core NAME tests. (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.8165105
 
 **To Add, but need updated releases**
@@ -64,6 +63,7 @@ David Lowery, Paul J. Morris, & Bob Morris. (2018). kurator-org/kurator-ffdq: Re
 <li>Leiba B (2017) IETF Key words for use in RFCs to Indicate Requirement Levels (RFC 8174). https://tools.ietf.org/html/rfc8174</li>
 <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li>
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li> 
+<li>Morris PJ (2024). FilteredPush/bdqtestrunner: Release of bdqtestrunner version v1.0.0 (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13932178</li>
 <li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
 <li>Natural Earth (2009)  Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
