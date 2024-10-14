@@ -3,6 +3,18 @@ Date Last Updated 2024-08-24
 
 The following references have been extracted from the "References" descriptor on the BDQ Core tests and supporting documents. We have used the formatting as used by Pensoft, see https://checklist.pensoft.net/about#AuthorsGuidelines. 
 
+**To Add**
+Paul J. Morris, & David Lowery. (2023). FilteredPush/event_date_qc: Release version 3.0.2 of the event_date_qc library, compliant implementation of all the TG2 Core Time Tests. (v3.0.2). Zenodo. https://doi.org/10.5281/zenodo.8136725
+
+
+Paul J. Morris. (2023). FilteredPush/sci_name_qc: Release vesion 1.0.1 of the sci_name_qc library implementing TG2 core NAME tests. (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.8165105
+
+**To Add, but need updated releases**
+
+Paul J. Morris, & David Lowery. (2018). kurator-org/ffdq-api: Release of Kurator's FFDQ-API library version 1.0.4 (v1.0.4). Zenodo. https://doi.org/10.5281/zenodo.1253052
+
+David Lowery, Paul J. Morris, & Bob Morris. (2018). kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v1.0.4 (v1.0.4). Zenodo. https://doi.org/10.5281/zenodo.1253045
+
 <ul>
 <li>ALA (2013) Data Processing. https://www.ala.org.au/blogs-news/data-processing/</li>
 <li>ALA (2020) Locations - Species distributions as areas. https://support.ala.org.au/support/solutions/articles/6000234834-locations-species-distributions-as-areas</li>
