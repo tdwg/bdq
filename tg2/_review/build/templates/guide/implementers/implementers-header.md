@@ -653,4 +653,7 @@ Response.status and Response.value constants SHOULD be given internationalized l
 
 For each test in an implementation, that test MUST produce the same results as are specified in a row of the validation data for that test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that test.
 
+### Tools for validating test implementations with the validation data (non-normative) 
+
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core tests in various FilteredPush data quality libraries against the test validation data.  See: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) or [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  It uses java annotations on methods that implement tests in order to match inputs from the validation data to methods under test that implement individual tests.  It could be reused to validate implementations in other java classes that follow the same use of ffdq-api (**TODO: Cite**) java annotations.
 
