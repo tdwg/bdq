@@ -200,7 +200,7 @@ dwc:basisOfRecord
 
 #### Parameters
 
-dwc:basisOfRecord vocabulary
+bdq:sourceAuthority
 
 #### Default Parameter Values
 
@@ -360,7 +360,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\
+bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\
 
 #### Examples
 
@@ -1516,7 +1516,7 @@ bdq:earliestValidDate,bdq:latestValidDate
 
 #### Default Parameter Values
 
-bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year
+bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"
 
 #### Examples
 
@@ -1778,7 +1778,7 @@ bdq:earliestValidDate,bdq:latestValidDate
 
 #### Default Parameter Values
 
-bdq:earliestValidDate="1582",bdq:latestValidDate=current year
+bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"
 
 #### Examples
 
@@ -1859,7 +1859,7 @@ bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate
 
 #### Default Parameter Values
 
-,bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true
+,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"
 
 #### Examples
 
@@ -2089,7 +2089,7 @@ dwc:occurrenceStatus
 
 #### Parameters
 
-dwc:occurrenceStatus vocabulary
+bdq:sourceAuthority
 
 #### Default Parameter Values
 
@@ -3359,7 +3359,7 @@ dwc:basisOfRecord
 
 #### Parameters
 
-dwc:basisOfRecord vocabulary
+bdq:sourceAuthority
 
 #### Default Parameter Values
 
@@ -3660,7 +3660,7 @@ bdq:defaultGeodeticDatum
 
 #### Default Parameter Values
 
-bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}
+bdq:defaultGeodeticDatum default = "EPSG:4326"
 
 #### Examples
 
@@ -3675,7 +3675,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
+The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system.  If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
 
 [↑](#indexes-to-the-tests)
 ********************
@@ -4926,7 +4926,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/c439952b-fb00-4902-90b3-a9d477c11a0b/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/9d061523-2182-482a-82f2-6246f3c51cf5/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -4956,7 +4956,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/b89b8424-91eb-4fd1-a6c3-1b0bc92120d0/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/1f425807-4f8a-4e1b-b17f-c81004417f38/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -4986,7 +4986,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/25b5d4bf-c871-4485-a457-68021dce0367/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5136,7 +5136,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/18b9d086-29ae-42a5-8f0a-4bc86f4e87ad/2024-09-25
+https://rs.tdwg.org/bdqcore/terms/efc57a09-b9c8-4622-a799-41c435b096dd/2024-09-25
 Acts upon  MultiRecord
 
 #### Description
@@ -5676,7 +5676,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/1ede76d0-c096-465c-8bbb-08c53bf7e367/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/a2e0b9b4-fc3c-448d-87eb-e032b8d91456/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5706,7 +5706,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/9ff65ace-9d16-4393-b90f-9150d9628371/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/ae2c89af-d46b-4cbf-926c-43eb157e0016/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5736,7 +5736,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/fb3732c6-4199-4767-a263-0363a1fe1766/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/6c276a60-eb23-438a-b86e-db8d2a3755f1/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5886,7 +5886,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/c6a62914-f42e-442a-9e2b-38ccff594070/2024-09-25
+https://rs.tdwg.org/bdqcore/terms/bd73ce7b-aa25-44eb-bc11-62debba85351/2024-09-25
 Acts upon  MultiRecord
 
 #### Description
@@ -6606,7 +6606,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/4a1fa336-dd47-4b60-a7b0-c958e2dc72cd/2023-09-30
+https://rs.tdwg.org/bdqcore/terms/39ffc749-ba12-4891-806d-fba61ec9a90d/2023-09-30
 Acts upon  MultiRecord
 
 #### Description
@@ -6966,7 +6966,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/4cf4fe57-6736-443b-afda-f7ce8ce25471/2023-09-30
+https://rs.tdwg.org/bdqcore/terms/4210c56a-d64b-4698-ad92-ef44015c3179/2023-09-30
 Acts upon  MultiRecord
 
 #### Description

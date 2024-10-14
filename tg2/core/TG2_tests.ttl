@@ -88,11 +88,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
 	rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND" ;
 	skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is a valid country name in the bdq:sourceAuthority\"" , "dwc:country=\"Tasmania\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Tasmania is not found at the level of national in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:5bea3269-c5bd-4a78-b64f-8090476a89ed> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:1333bf86-d687-4af5-abed-11aec6df072e> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:5bea3269-c5bd-4a78-b64f-8090476a89ed> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:1333bf86-d687-4af5-abed-11aec6df072e> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "The Getty Thesaurus of Geographic Names (TGN)" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -124,11 +124,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_PHYLUM_FOUND" ;
 	skos:example "dwc:phylum=\"Tracheophyta\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns\"" , "dwc:phylum=\"Trachyophyta\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:phylum does not have an equivalent at the rank of Phylum in the bdq:sourceAuthority.\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:c0733181-4dfd-4603-a7cc-2f7eecbb6641> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:f0e73b6a-95a7-4d17-9536-016958491305> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:c0733181-4dfd-4603-a7cc-2f7eecbb6641> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:f0e73b6a-95a7-4d17-9536-016958491305> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -226,11 +226,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_FAMILY_FOUND" ;
 	skos:example "dwc:family=\"Agaricacae\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"bdq:family does not have an equivalent at the rank of Family in the Parameterized Source Authority\"" , "dwc:family=\"Agaricaceae\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"bdq:family has an equivalent at the rank of Family in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e8aff733-ea82-49e9-8f52-a1c87e09a607> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:f1f1a8e8-400d-42ba-8237-e9e2f4dcdc22> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:e8aff733-ea82-49e9-8f52-a1c87e09a607> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:f1f1a8e8-400d-42ba-8237-e9e2f4dcdc22> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -397,23 +397,23 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f> .
 
+<urn:uuid:22284273-8bcb-44db-b616-6683347e7596> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:latestValidDate:\"{current year}\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "{current year}" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:latestValidDate> .
+
 <urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
-	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT bdq:earliestValidDate default =\"1582-11-15\",bdq:latestValidDate default = current year" ;
+	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT bdq:earliestValidDate default =\"1582-11-15\",bdq:latestValidDate default = \"{current year}\"" ;
 	rdfs:label "Specification for: VALIDATION_EVENTDATE_INRANGE" ;
 	skos:example "dwc:eventDate=\"1962-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:eventDate is IN_RANGE\"" , "dwc:eventDate=\"2300-11-01T10:00\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:eventDate is NOT_IN_RANGE\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:7661fc7f-ef36-47f1-9588-8d7c08dfac23> , <urn:uuid:e16e86fa-7d0a-44b2-87c6-d4c6ec9a954c> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:earliestValidDate default =\"1582-11-15\",bdq:latestValidDate default = current year" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:22284273-8bcb-44db-b616-6683347e7596> , <urn:uuid:6f1054b7-5b04-4603-99ff-45a639e6db69> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:earliestValidDate default =\"1582-11-15\",bdq:latestValidDate default = \"{current year}\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT" .
 
-<urn:uuid:7661fc7f-ef36-47f1-9588-8d7c08dfac23> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:6f1054b7-5b04-4603-99ff-45a639e6db69> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:earliestValidDate:\"1582-11-15\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "1582-11-15" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:earliestValidDate> .
-
-<urn:uuid:e16e86fa-7d0a-44b2-87c6-d4c6ec9a954c> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:latestValidDate" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:latestValidDate> .
 
 <https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1> dcterms:bibliographicCitation "Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/; Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -439,16 +439,16 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030> .
 
 <urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
-	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\\" ;
+	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\\" ;
 	rdfs:label "Specification for: VALIDATION_LICENSE_STANDARD" ;
 	skos:example "dcterms:license=\"GPL\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dcterms:license does not match a term in the bdq:sourceAuthority\"" , "dcterms:license=\"https://creativecommons.org/licenses/by/4.0/\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,  Response.comment=\"dcterms:license matches a term in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:6c4f5171-47ba-40fb-bceb-031e90f06d65> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\\" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e75daf01-642d-42ab-a262-964d2dc966ac> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\\" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:6c4f5171-47ba-40fb-bceb-031e90f06d65> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
+<urn:uuid:e75daf01-642d-42ab-a262-964d2dc966ac> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"Creative Commons 4.0 Licenses or CC0\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Creative Commons 4.0 Licenses or CC0" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> dcterms:bibliographicCitation "Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_; Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica; Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853" ;
@@ -478,23 +478,23 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6> .
 
+<urn:uuid:1e00489c-cf54-4417-b49a-aecad4de6a95> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:minimumValidElevationInMeters:\"-430\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "-430" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidElevationInMeters> .
+
 <urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidElevationInMeters default = \"-430\",bdq:maximumValidElevationInMeters default = \"8850\"" ;
 	rdfs:label "Specification for: VALIDATION_MINELEVATION_INRANGE" ;
 	skos:example "dwc:minimumElevationInMeters=\"-500\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is NOT_IN_RANGE (<-430)\"" , "dwc:minimumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is IN_RANGE\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:4c2d0db4-31b0-4e98-912e-fcc49f35ce02> , <urn:uuid:fa4115d3-cce5-486b-901c-c0c409e7eb15> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:1e00489c-cf54-4417-b49a-aecad4de6a95> , <urn:uuid:7cd0ce40-8fe4-4f57-8924-4b5c07b7a62d> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:minimumValidElevationInMeters default = \"-430\",bdq:maximumValidElevationInMeters default = \"8850\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:4c2d0db4-31b0-4e98-912e-fcc49f35ce02> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:7cd0ce40-8fe4-4f57-8924-4b5c07b7a62d> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:maximumValidElevationInMeters:\"8850\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "8850" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:maximumValidElevationInMeters> .
-
-<urn:uuid:fa4115d3-cce5-486b-901c-c0c409e7eb15> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:minimumValidElevationInMeters:\"-430\",bdq:maximumValidElevationInMeters default = \"8850\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "-430\",bdq:maximumValidElevationInMeters default = \"8850" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidElevationInMeters> .
 
 <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9> dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -604,6 +604,11 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:scientificName ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:scientificName" .
 
+<urn:uuid:005e4107-c6da-40d8-94a0-671d4c2b9329> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
 <urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND" ;
@@ -614,14 +619,9 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_SCIENTIFICNAME_FOUND" ;
 	skos:example "dwc:scientificName=\"Capulus intort\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName was not found in the bdq:sourceAuthority\"" , "dwc:scientificName=\"Eucalyptus camaldulensis\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:scientificName found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:c4d9cc37-6251-4b40-8cd2-3dd54d0d99c5> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:005e4107-c6da-40d8-94a0-671d4c2b9329> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
-
-<urn:uuid:c4d9cc37-6251-4b40-8cd2-3dd54d0d99c5> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4> dcterms:bibliographicCitation "" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -730,11 +730,6 @@
 
 <bdq:spatialBufferInMeters> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
-<urn:uuid:141f93f7-4fed-4cef-9bf2-c80fb9315dbf> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = \"3000\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = \"3000" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT" ;
@@ -745,14 +740,19 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = \"3000\"" ;
 	rdfs:label "Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT" ;
 	skos:example "dwc:countryCode=\"AR\", dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"Coordinates match dwc:countryCode\"" , "dwc:countryCode=\"CL\", dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Coordinates are in Argentina, not Chile\"" , "dwc:countryCode=\"ZX\", dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\": Response.status=INTERNAL_PREREQUISTES_NOT_MET, Response.comment=\"Input field contains invalid values - ZX is not a valid ISO 3166-1-alpha-2 country code\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:141f93f7-4fed-4cef-9bf2-c80fb9315dbf> , <urn:uuid:d195cc63-68cc-47c8-87c2-a070862bce06> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:59675797-4d0a-4464-9e8b-e8887fc3810e> , <urn:uuid:b82a1dcf-f723-4d01-9154-ab0cf45ef52f> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = \"3000\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:d195cc63-68cc-47c8-87c2-a070862bce06> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:59675797-4d0a-4464-9e8b-e8887fc3810e> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:spatialBufferInMeters:\"3000\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "3000" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:spatialBufferInMeters> .
+
+<urn:uuid:b82a1dcf-f723-4d01-9154-ab0cf45ef52f> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries UNION with Exclusive Economic Zones" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380> dcterms:bibliographicCitation "WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org/</li> <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org/; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org/ ; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; Natural Earth (2009) Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip; Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -783,9 +783,9 @@
 
 <bdq:taxonIsMarine> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
-<urn:uuid:1799a2ef-2696-4417-b92a-ccc991f736e9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:geospatialLand:\"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = \"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = \"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption" ;
+<urn:uuid:111a57c0-8c65-4d73-839e-078a48b5853a> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:geospatialLand:\"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:geospatialLand> .
 
 <urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
@@ -794,25 +794,25 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305> .
 
-<urn:uuid:328c0a8a-43b8-4f2e-8161-b7a12d706483> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:spatialBufferInMeters:\"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "3000\",bdq:assumptionOnUnknownBiome default = \"noassumption" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:spatialBufferInMeters> .
-
 <urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:taxonIsMarine default = \"World Register of Marine Species (WoRMS)\" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = \"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = \"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption\"" ;
 	rdfs:label "Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
 	skos:example "dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\", dwc:scientificName=\"Aegla neuquensis\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"The species is freshwater aquatic and the coordinates fall in a lake and thus COMPLIANT\"" , "dwc:decimalLatitude=\"20.0\", dwc:decimalLongitude=\"-30.0\", dwc:scientificName=\"Viviparus contectus (Millet, 1813)\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName is non-marine according to dwc:taxonIsMarine but coordinates are marine\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:1799a2ef-2696-4417-b92a-ccc991f736e9> , <urn:uuid:328c0a8a-43b8-4f2e-8161-b7a12d706483> , <urn:uuid:b1a970f2-e693-4e5d-b378-433c4078bb29> , <urn:uuid:ee5e60fc-df89-4bfe-9f73-bc82acf7ac78> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:111a57c0-8c65-4d73-839e-078a48b5853a> , <urn:uuid:4de30226-6b6d-4f83-9f4f-15651ae20b22> , <urn:uuid:77a2ba5a-d9dc-454a-b07e-de2db54cc650> , <urn:uuid:85c9f879-ccdc-4cbb-a249-c5947ecd96d6> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:taxonIsMarine default = \"World Register of Marine Species (WoRMS)\" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = \"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = \"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:b1a970f2-e693-4e5d-b378-433c4078bb29> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:taxonIsMarine:\"World Register of Marine Species (WoRMS)\" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = \"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = \"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "World Register of Marine Species (WoRMS)\" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = \"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = \"3000\",bdq:assumptionOnUnknownBiome default = \"noassumption" ;
+<urn:uuid:4de30226-6b6d-4f83-9f4f-15651ae20b22> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:spatialBufferInMeters:\"3000\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "3000" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:spatialBufferInMeters> .
+
+<urn:uuid:77a2ba5a-d9dc-454a-b07e-de2db54cc650> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:taxonIsMarine:\"World Register of Marine Species (WoRMS)\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "World Register of Marine Species (WoRMS)" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:taxonIsMarine> .
 
-<urn:uuid:ee5e60fc-df89-4bfe-9f73-bc82acf7ac78> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:85c9f879-ccdc-4cbb-a249-c5947ecd96d6> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:assumptionOnUnknownBiome:\"noassumption\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "noassumption" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:assumptionOnUnknownBiome> .
@@ -930,6 +930,11 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:decimalLatitude , dwc:decimalLongitude , dwc:stateProvince ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:stateProvince, dwc:decimalLatitude, dwc:decimalLongitude" .
 
+<urn:uuid:1d8e74f4-6e7a-40b2-b9db-c05badbd3418> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:spatialBufferInMeters:\"3000\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "3000" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:spatialBufferInMeters> .
+
 <urn:uuid:315a198d-3811-40dd-918a-756f598f3294> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT" ;
@@ -940,19 +945,14 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"10m-admin-1 boundaries\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = \"3000\"" ;
 	rdfs:label "Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT" ;
 	skos:example "dwc:stateProvince=\"Córdoba\", dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Input fields contain interpretable values but coordinates don't match dwc:stateProvince with buffer\"" , "dwc:stateProvince=\"Tasmania\", dwc:decimalLatitude=\"-42.85\", dwc:decimalLongitude=\"146.75\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"Input fields contain interpretable values\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:702d7aab-d65d-436f-8927-909d446b9a7d> , <urn:uuid:c7f10a1f-e6f2-43ce-aa73-71a6795b874b> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:1d8e74f4-6e7a-40b2-b9db-c05badbd3418> , <urn:uuid:ded12137-d893-496d-a5f9-cd3e808ca953> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"10m-admin-1 boundaries\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = \"3000\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT." .
 
-<urn:uuid:702d7aab-d65d-436f-8927-909d446b9a7d> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = \"3000\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = \"3000" ;
+<urn:uuid:ded12137-d893-496d-a5f9-cd3e808ca953> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
-<urn:uuid:c7f10a1f-e6f2-43ce-aa73-71a6795b874b> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:spatialBufferInMeters:\"3000\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "3000" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:spatialBufferInMeters> .
 
 <https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889> dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Amendment> ;
@@ -987,11 +987,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON" ;
 	skos:example "dwc:scientificNameID=\"\", dwc:taxonID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Graphis\", dwc:higherClassification=\"\", dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"\", dwc:family=\"\", dwc:subfamily=\"\", dwc:genus=\"\", dwc:genericName=\"\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"\", dwc:taxonRank=\"\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:scientificName=\"Graphis\" is ambiguous as could be either a lichen or a gastropod.\"" , "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Chicoreus palmarosae (Lamarck, 1822)\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"Mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Chicoreus\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"palmarosae\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"(Lamarck, 1822)\", dwc:taxonRank=\"\", bdq:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID=\"urn:lsid:marinespecies.org:taxname:208134\", Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship.  Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e89e66dd-1bc0-4693-8138-6198aa644f20> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:efbed352-5ff0-4e52-8bad-12b14a74c162> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED" .
 
-<urn:uuid:e89e66dd-1bc0-4693-8138-6198aa644f20> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:efbed352-5ff0-4e52-8bad-12b14a74c162> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -1158,13 +1158,14 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
 	rdfs:label "Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED" ;
 	skos:example "dwc:basisOfRecord=\"FossilSpecimen\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED\"" , "dwc:basisOfRecord=\"Human obs\": Response.status=AMENDED, Response.result=dwc:basisOfRecord=\"HumanObservation\", Response.comment=\"dwc:basisOfRecord contains interpretable value\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:88b555b6-847b-49de-8c25-a2906f26b471> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:be9a2584-4eed-4a60-900f-a4a306f463ba> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
 
-<urn:uuid:88b555b6-847b-49de-8c25-a2906f26b471> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for dwc:basisOfRecord vocabulary" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Default" .
+<urn:uuid:be9a2584-4eed-4a60-900f-a4a306f463ba> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"Darwin Core basisOfRecord\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Darwin Core basisOfRecord" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803> dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -1312,11 +1313,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_TAXON_UNAMBIGUOUS" ;
 	skos:example "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Graphis\", dwc:higherClassification=\"\", dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"\", dwc:family=\"\", dwc:subfamily=\"\", dwc:genus=\"\", dwc:genericName=\"\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"\", dwc:taxonRank=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName=\"Graphis\" is ambiguous as could be either a lichen or a gastropod.\"" , "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Triplex rosaria Perry, 1811\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Triplex\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"rosarium\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"Perry, 1811\", dwc:taxonRank=\"\",bdq:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship.  \"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:da4eee73-9cfd-4419-a6be-d6ec0cbb11a3> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:a9d5250c-bb3e-4b09-9d06-de8ca9af24a7> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:da4eee73-9cfd-4419-a6be-d6ec0cbb11a3> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:a9d5250c-bb3e-4b09-9d06-de8ca9af24a7> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -1339,11 +1340,6 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:scientificNameID ;
 	<skos:prefLabel> "Information Element Consulted dwc:scientificNameID" .
 
-<urn:uuid:4da646ac-f611-40fe-98b4-28fcf1ee1666> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> ;
 	rdfs:label "AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID" ;
 	skos:prefLabel "AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID" ;
@@ -1354,9 +1350,14 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID" ;
 	skos:example "dwc:scientificNameID=\"gbif:8102122\", dwc:scientificName=\"\": Response.status=FILLED_IN, Response.result=dwc:scientificName=\"Harpullia pendula F.Muell.\", Response.comment=\"dwc:scientificNameID contains an interpretable value\"" , "dwc:scientificNameID=\"gbif:8a\", dwc:scientificName=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:scientificNameID does not contain an interpretable value\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:4da646ac-f611-40fe-98b4-28fcf1ee1666> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:fee909b5-cdd7-4581-95ed-6263c814c879> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
+
+<urn:uuid:fee909b5-cdd7-4581-95ed-6263c814c879> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <bdqdim:Resolution> a <https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension> ;
 	rdfs:label "Resolution" .
@@ -1403,7 +1404,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
-<urn:uuid:3c53db7d-62fb-4e81-919f-79db7e0ce817> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:53d7ff4f-93f6-48fe-a67b-56f2a0ad10cf> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries UNION with Exclusive Economic Zones" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -1418,7 +1419,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}" ;
 	rdfs:label "Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES" ;
 	skos:example "dwc:decimalLatitude=\"-25.23\", dwc:decimalLongitude=\"135.43\", dwc:countryCode=\"\": Response.status=FILLED_IN, Response.result=dwc:countryCode=\"AU\", Response.comment=\"dwc:decimalLatitude and dwc:decimalLongitude contain interpretable values\"" , "dwc:decimalLatitude=\"-38.280937\", dwc:decimalLongitude=\"72.047790\", dwc:countryCode=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"Coordinates do not fall in the boundary of any country\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:3c53db7d-62fb-4e81-919f-79db7e0ce817> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:53d7ff4f-93f6-48fe-a67b-56f2a0ad10cf> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED." .
 
@@ -1458,13 +1459,13 @@
 	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED dwc:defaultOccurrenceStatus default = \"present\"" ;
 	rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT" ;
 	skos:example "dwc:occurrenceStatus=\"\", dwc:individualCount=\"\", dwc:organismQuantity=\"\": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"dwc:occurrenceStatus is bdq:Empty; assumed \"present\"\"" , "dwc:occurrenceStatus=\"X\", dwc:individualCount=\"10\", dwc:organismQuantity=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:occurrenceStatus is bdq:NotEmpty\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:fbe80cbf-bd65-4367-abde-97c33a5938e5> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:a89a054a-c043-4804-b97d-78af8057b7fa> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "dwc:defaultOccurrenceStatus default = \"present\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED" .
 
-<urn:uuid:fbe80cbf-bd65-4367-abde-97c33a5938e5> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:a89a054a-c043-4804-b97d-78af8057b7fa> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for dwc:defaultOccurrenceStatus" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Default" .
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "present" .
 
 <bdqdim:Likeliness> a <https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension> ;
 	rdfs:label "Likeliness" .
@@ -1484,34 +1485,34 @@
 
 <bdq:includeEventDate> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
+<urn:uuid:337f628a-fee8-41d4-bc3b-4bbea700662c> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:includeEventDate:\"true\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "true" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:includeEventDate> .
+
 <urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b> .
 
-<urn:uuid:7f58b8dd-3e09-49ad-bbac-d66a44bdca7e> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:includeEventDate" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:includeEventDate> .
-
 <urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
-	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT ,bdq:earliestValidDate default=\"1753-01-01\",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true" ;
+	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT ,bdq:earliestValidDate default = \"1753-01-01\",bdq:latestValidDate default = \"{current day}\",bdq:includeEventDate default = \"true\"" ;
 	rdfs:label "Specification for: VALIDATION_DATEIDENTIFIED_INRANGE" ;
 	skos:example "dwc:dateIdentified=\"1963-03-08T14:07-0600\", dwc:eventDate=\"1962-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:dateIdentified is in range\"" , "dwc:dateIdentified=\"1963-03-08T14:07-0600\", dwc:eventDate=\"1964-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:dateIdentified before dwc:eventDate\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:7f58b8dd-3e09-49ad-bbac-d66a44bdca7e> , <urn:uuid:ae5e0e08-8ce2-4dbd-b39e-f31804197cf3> , <urn:uuid:d50fa5cd-cd7f-42d4-aab3-741e85ed77e1> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> ",bdq:earliestValidDate default=\"1753-01-01\",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:337f628a-fee8-41d4-bc3b-4bbea700662c> , <urn:uuid:acffe0ba-43ea-4855-a4ae-8109c5f5bfaa> , <urn:uuid:dc27dfd1-03f4-4202-a7f2-202770f27b41> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> ",bdq:earliestValidDate default = \"1753-01-01\",bdq:latestValidDate default = \"{current day}\",bdq:includeEventDate default = \"true\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:ae5e0e08-8ce2-4dbd-b39e-f31804197cf3> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:latestValidDate" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:latestValidDate> .
-
-<urn:uuid:d50fa5cd-cd7f-42d4-aab3-741e85ed77e1> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:acffe0ba-43ea-4855-a4ae-8109c5f5bfaa> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:earliestValidDate:\"1753-01-01\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "1753-01-01" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:earliestValidDate> .
+
+<urn:uuid:dc27dfd1-03f4-4202-a7f2-202770f27b41> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:latestValidDate:\"{current day}\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "{current day}" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:latestValidDate> .
 
 <https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b> dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -1530,11 +1531,6 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:class ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:class" .
 
-<urn:uuid:5150daa7-e366-4fcd-ba8b-96c5a0f25d65> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND" ;
@@ -1545,9 +1541,14 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_CLASS_FOUND" ;
 	skos:example "dwc:class=\"Insecta\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority\"" , "dwc:class=\"Magnoleopsida\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,  Response.comment=\"dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:5150daa7-e366-4fcd-ba8b-96c5a0f25d65> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e42a5d49-b423-4280-9a88-e9217ddf783e> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
+
+<urn:uuid:e42a5d49-b423-4280-9a88-e9217ddf783e> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44> dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li>  </ul>" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -1621,11 +1622,6 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:kingdom ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:kingdom" .
 
-<urn:uuid:6fd12000-8f22-4956-8dad-ce0b4a1b5bd9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND" ;
@@ -1636,9 +1632,14 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_KINGDOM_FOUND" ;
 	skos:example "dwc:kingdom=\"Animalia\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:kingdom has an equivalent at the rank of Kingdom in the bdq:sourceAuthority\"" , "dwc:kingdom=\"Metazoa\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:kingdom does not strictly have an equivalent at the rank of Kingdom in the Parameterized Source Authority (Metazoa is synonym of Animalia)\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:6fd12000-8f22-4956-8dad-ce0b4a1b5bd9> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:de3f6e5c-275c-47ba-87e0-23f217839b9e> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
+
+<urn:uuid:de3f6e5c-275c-47ba-87e0-23f217839b9e> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595> dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -1692,11 +1693,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_ORDER_FOUND" ;
 	skos:example "dwc:order=\"Lepidoptera\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:order has an equivalent at the rank of Order in the bdq:sourceAuthority\"" , "dwc:order=\"Nymphalidae\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:order does not have an equivalent at the rank of Order in the bdq:sourceAuthority. Nymphalidae is a family, not an order\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:b02e8d74-f4da-4d55-8647-c75673eb4fc8> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:f294835f-9c19-449d-8bd9-76e470194352> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:b02e8d74-f4da-4d55-8647-c75673eb4fc8> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:f294835f-9c19-449d-8bd9-76e470194352> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -1713,15 +1714,15 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
-<urn:uuid:00a3f5e7-6fb9-4ccc-88ea-8892baca775d> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:earliestValidDate" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:earliestValidDate> .
-
-<urn:uuid:50b7f548-34b4-4032-831c-143cc12aa517> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:latestValidDate" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
+<urn:uuid:4f2345b1-8e88-4985-901d-9519fd0437a8> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:latestValidDate:\"{current year}\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "{current year}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:latestValidDate> .
+
+<urn:uuid:621c6266-6d2b-442f-8dcf-6ce58597835f> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:earliestValidDate:\"1582\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "1582" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:earliestValidDate> .
 
 <urn:uuid:7922ab56-6eae-4257-9691-d55d24842274> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE" ;
@@ -1730,11 +1731,11 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1> .
 
 <urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
-	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT bdq:earliestValidDate=\"1582\",bdq:latestValidDate=current year" ;
+	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT bdq:earliestValidDate default = \"1582\",bdq:latestValidDate default = \"{current year}\"" ;
 	rdfs:label "Specification for: VALIDATION_YEAR_INRANGE" ;
 	skos:example "dwc:year=\"1952\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:year is in RANGE\"" , "dwc:year=\"9999\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:year is not in RANGE. The value in year has not yet come to pass.\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:00a3f5e7-6fb9-4ccc-88ea-8892baca775d> , <urn:uuid:50b7f548-34b4-4032-831c-143cc12aa517> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:earliestValidDate=\"1582\",bdq:latestValidDate=current year" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:4f2345b1-8e88-4985-901d-9519fd0437a8> , <urn:uuid:621c6266-6d2b-442f-8dcf-6ce58597835f> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:earliestValidDate default = \"1582\",bdq:latestValidDate default = \"{current year}\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812> dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/" ;
@@ -2022,7 +2023,7 @@
 	rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty." ;
 	rdfs:label "AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
 	skos:historyNote "https://github.com/tdwg/bdq/issues/102" ;
-	skos:note "If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84." ;
+	skos:note "The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system.  If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84." ;
 	skos:prefLabel "Amendment dwc:geodeticDatum Assumed Default for SingleRecord" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness> ;
@@ -2036,23 +2037,23 @@
 
 <bdq:defaultGeodeticDatum> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
+<urn:uuid:424cdf71-9f4e-4b2e-af81-a0ab3f9466b9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:defaultGeodeticDatum:\"EPSG:4326\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "EPSG:4326" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:defaultGeodeticDatum> .
+
 <urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> ;
 	rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
 	skos:prefLabel "AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997> .
 
-<urn:uuid:a98f085d-68d4-4d3e-bc8d-ca22f4fbe828> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:defaultGeodeticDatum" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "DEFAULT" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:defaultGeodeticDatum> .
-
 <urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
-	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. bdq:defaultGeodeticDatum = \"EPSG:4326\" {[https://epsg.org/crs_4326/WGS-84.html]}" ;
+	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. bdq:defaultGeodeticDatum default = \"EPSG:4326\"" ;
 	rdfs:label "Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
 	skos:example "dwc:geodeticDatum=\"WGS84\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:geodeticDatum contains an interpretable value\"" , "dwc:geodeticDatum=\"[null]\", dwc:decimalLatitude=\"-30.00\", dwc:decimalLongitude=\"130.00\", dwc:coordinateUncertaintyInMeters=\"50\": Response.status=AMENDED, Response.result=dwc:geodeticDatum=\"EPSG:4326\", dwc:coordinateUncertaintyInMeters=\"2836\", Response.comment=\"dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:a98f085d-68d4-4d3e-bc8d-ca22f4fbe828> ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:defaultGeodeticDatum = \"EPSG:4326\" {[https://epsg.org/crs_4326/WGS-84.html]}" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:424cdf71-9f4e-4b2e-af81-a0ab3f9466b9> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:defaultGeodeticDatum default = \"EPSG:4326\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED." .
 
 <https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169> dcterms:bibliographicCitation "Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/" ;
@@ -2092,21 +2093,22 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
+<urn:uuid:484d9dd2-f494-42b1-8c37-a138c3b7d9db> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"Darwin Core basisOfRecord\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Darwin Core basisOfRecord" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
 <urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4> .
 
-<urn:uuid:e5a14607-913c-4b20-b833-af956f80d483> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for dwc:basisOfRecord vocabulary" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Default" .
-
 <urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
 	rdfs:label "Specification for: VALIDATION_BASISOFRECORD_STANDARD" ;
 	skos:example "dwc:basisOfRecord=\"Specimen\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:basisOfRecord does not exactly match a standard label of one of the Darwin Core classes\"" , "dwc:basisOfRecord=\"Taxon\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:basisOfRecord matches a standard label of one of the Darwin Core classes\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e5a14607-913c-4b20-b833-af956f80d483> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:484d9dd2-f494-42b1-8c37-a138c3b7d9db> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
@@ -2161,10 +2163,10 @@
 
 <bdq:minimumValidDepthInMeters> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
-<urn:uuid:3ea444dc-d7ae-45aa-98ed-44ce844ad0e6> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:maximumValidDepthInMeters:\"11000\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "11000" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:maximumValidDepthInMeters> .
+<urn:uuid:61cb3912-2608-43bd-8260-5005fcdf54e9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:minimumValidDepthInMeters:\"0\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "0" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidDepthInMeters> .
 
 <urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE" ;
@@ -2172,16 +2174,16 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> .
 
-<urn:uuid:c0ba246a-d13d-4be6-ba40-aa93584e9e0b> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:minimumValidDepthInMeters:\"0\",bdq:maximumValidDepthInMeters default=\"11000\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "0\",bdq:maximumValidDepthInMeters default=\"11000" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidDepthInMeters> .
+<urn:uuid:d8009b36-ab3c-4e73-842e-be231daa5a56> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:maximumValidDepthInMeters:\"11000\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "11000" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:maximumValidDepthInMeters> .
 
 <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidDepthInMeters default=\"0\",bdq:maximumValidDepthInMeters default=\"11000\"" ;
 	rdfs:label "Specification for: VALIDATION_MINDEPTH_INRANGE" ;
 	skos:example "dwc:minimumDepthInMeters=\"1\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumDepthInMeters is in range\"" , "dwc:minimumDepthInMeters=\"12000\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:minimumDepthInMeters is not in range\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:3ea444dc-d7ae-45aa-98ed-44ce844ad0e6> , <urn:uuid:c0ba246a-d13d-4be6-ba40-aa93584e9e0b> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:61cb3912-2608-43bd-8260-5005fcdf54e9> , <urn:uuid:d8009b36-ab3c-4e73-842e-be231daa5a56> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:minimumValidDepthInMeters default=\"0\",bdq:maximumValidDepthInMeters default=\"11000\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT" .
 
@@ -2257,12 +2259,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:maximumElevationInMeters ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:maximumElevationInMeters" .
 
-<urn:uuid:787ecaf2-018b-458e-8d2a-681132641c21> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:minimumValidElevationInMeters:\"-430\",bdq:maximumValidElevationInMeters default = \"8850\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "-430\",bdq:maximumValidElevationInMeters default = \"8850" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidElevationInMeters> .
-
-<urn:uuid:90122b65-5925-40c4-84dc-b325deeb3bbc> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:2fdf372b-cdc4-4a70-8996-48d62563f8f7> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:maximumValidElevationInMeters:\"8850\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "8850" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:maximumValidElevationInMeters> .
@@ -2273,11 +2270,16 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a> .
 
+<urn:uuid:d9452dab-7d59-4643-ab13-713f4602c9bd> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:minimumValidElevationInMeters:\"-430\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "-430" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidElevationInMeters> .
+
 <urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidElevationInMeters default = \"-430\",bdq:maximumValidElevationInMeters default = \"8850\"" ;
 	rdfs:label "Specification for: VALIDATION_MAXELEVATION_INRANGE" ;
 	skos:example "dwc:maximumElevationInMeters=\"-500\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:maximumElevation is not in range, i.e. is <-430\"" , "dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumElevation is in is range\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:787ecaf2-018b-458e-8d2a-681132641c21> , <urn:uuid:90122b65-5925-40c4-84dc-b325deeb3bbc> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:2fdf372b-cdc4-4a70-8996-48d62563f8f7> , <urn:uuid:d9452dab-7d59-4643-ab13-713f4602c9bd> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:minimumValidElevationInMeters default = \"-430\",bdq:maximumValidElevationInMeters default = \"8850\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT" .
 
@@ -2293,22 +2295,22 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
-<urn:uuid:343b81cc-741f-42b6-9da0-851e0fdde9c1> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> ;
 	rdfs:label "AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED" ;
 	skos:prefLabel "AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7> .
 
+<urn:uuid:e007e049-bf4f-41de-8c6c-2f94aee64d30> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF OccurrenceStatus Vocabulary\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF OccurrenceStatus Vocabulary" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
 <urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}" ;
 	rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED" ;
 	skos:example "dwc:occurrenceStatus=\"1\": Response.status=AMENDED, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent\"" , "dwc:occurrenceStatus=\"X\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"Input field contains uninterpretable value \"X\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:343b81cc-741f-42b6-9da0-851e0fdde9c1> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e007e049-bf4f-41de-8c6c-2f94aee64d30> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
 
@@ -2324,21 +2326,22 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
+<urn:uuid:054218bc-edc0-4734-8056-7ab39cefdb3c> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF OccurrenceStatus Vocabulary\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF OccurrenceStatus Vocabulary" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
 <urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f> .
 
-<urn:uuid:c9dc9534-094a-4a5f-996e-dad626aebc24> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for dwc:occurrenceStatus vocabulary" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Default" .
-
 <urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}" ;
 	rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD" ;
 	skos:example "dwc:occurrenceStatus=\"presence\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority\"" , "dwc:occurrenceStatus=\"present\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:occurrenceStatus matches a term in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:c9dc9534-094a-4a5f-996e-dad626aebc24> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:054218bc-edc0-4734-8056-7ab39cefdb3c> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
@@ -2438,11 +2441,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_GENUS_FOUND" ;
 	skos:example "dwc:genus=\"Egernea\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:genus does not have an equivalent at the rank of Genus in the bdq:sourceAuthority. This may be fixed using fuzzy matching at the AMENDMENT stage\"" , "dwc:genus=\"Egernia\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:genus has an equivalent at the rank of Genus in the Parameterized Source Authority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:2b7352fa-689f-41cc-996d-74f4436da715> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:771e6be5-b4b6-4151-9a9b-c1fd015b6034> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:2b7352fa-689f-41cc-996d-74f4436da715> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:771e6be5-b4b6-4151-9a9b-c1fd015b6034> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2474,20 +2477,20 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	rdfs:label "Specification for: VALIDATION_CLASSIFICATION_CONSISTENT" ;
 	skos:example "dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"Myrtales\", dwc:superfamily=\"\", dwc:family=\"Myrtaceae\", dwc:subfamily=\"\", dwc:tribe=\"\", dwc:subtribe=\"\",  dwc:genus=\"Punica\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdq:sourceAuthority\"" , "dwc:kingdom=\"\", dwc:phylum=\"Chordata\", dwc:class=\"\", dwc:order=\"Rhopalocera\", dwc:superfamly=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:tribe=\"\", dwc:subtribe=\"\", dwc:genus=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:686368e6-fff7-497d-a3a7-cafe1af8e446> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:bb512849-e49f-41c2-90d6-854034eef86c> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
-
-<urn:uuid:686368e6-fff7-497d-a3a7-cafe1af8e446> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT" ;
 	skos:prefLabel "ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a> .
+
+<urn:uuid:bb512849-e49f-41c2-90d6-854034eef86c> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Backbone Taxonomy" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e> dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -2713,11 +2716,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"Creative Commons\" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}" ;
 	rdfs:label "Specification for: AMENDMENT_LICENSE_STANDARDIZED" ;
 	skos:example "dcterms:license=\"CC0\": Response.status=AMENDED, Response.result=dcterms:license=\"https://creativecommons.org/publicdomain/zero/1.0/legalcode\", Response.comment=\"Input field contains interpretable value\"" , "dcterms:license=\"X\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dcterms:license contains uninterpretable value \"X\"\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:89c07c15-b4a3-474d-98f5-bd5dbb06d0e3> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:abf94c21-af5f-4dcc-9bb8-8f6a62395b55> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Creative Commons\" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED." .
 
-<urn:uuid:89c07c15-b4a3-474d-98f5-bd5dbb06d0e3> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:abf94c21-af5f-4dcc-9bb8-8f6a62395b55> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Creative Commons\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Creative Commons" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2867,18 +2870,18 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
+<urn:uuid:600671bc-da20-4c3e-8ed6-eae2406bc009> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TaxonRank Vocabulary\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TaxonRank Vocabulary" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
 <urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
 	rdfs:label "Specification for: VALIDATION_TAXONRANK_STANDARD" ;
 	skos:example "dwc:taxonRank=\"kingdom\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:taxonRank has an equivalent in the bdq:sourceAuthority\"" , "dwc:taxonRank=\"sp.\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:taxonRank does not have an equivalent in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:de641cfc-e474-4dae-91ca-d2cea5103e31> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:600671bc-da20-4c3e-8ed6-eae2406bc009> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT." .
-
-<urn:uuid:de641cfc-e474-4dae-91ca-d2cea5103e31> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD" ;
@@ -2898,18 +2901,18 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
-<urn:uuid:96b5d057-70b0-49ab-b589-8cc1f9c931bf> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}" ;
 	rdfs:label "Specification for: AMENDMENT_TAXONRANK_STANDARDIZED" ;
 	skos:example "dwc:taxonRank=\"sic.\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:taxonRank does not contain an interpretable value in the bdq:sourceAuthority\"" , "dwc:taxonRank=\"sp.\": Response.status=AMENDED, Response.result=dwc:taxonRank=\"species\", Response.comment=\"dwc:taxonRank contains an interpretable value in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:96b5d057-70b0-49ab-b589-8cc1f9c931bf> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e4b587ee-5fdb-45a4-987d-e11f53cdcc16> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
+
+<urn:uuid:e4b587ee-5fdb-45a4-987d-e11f53cdcc16> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TaxonRank Vocabulary\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TaxonRank Vocabulary" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> ;
 	rdfs:label "AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED" ;
@@ -2934,20 +2937,20 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:maximumDepthInMeters ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:maximumDepthInMeters" .
 
-<urn:uuid:ca5fba4c-cdcc-41c3-8c5c-3592aca84f65> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:minimumValidDepthInMeters:\"0\",bdq:maximumValidDepthInMeters default=\"11000\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "0\",bdq:maximumValidDepthInMeters default=\"11000" ;
+<urn:uuid:740d1eee-b595-4a98-b0a6-aa70ae607fe2> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:minimumValidDepthInMeters:\"0\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "0" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidDepthInMeters> .
 
 <urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdq:minimumValidDepthInMeters default=\"0\",bdq:maximumValidDepthInMeters default=\"11000\"" ;
 	rdfs:label "Specification for: VALIDATION_MAXDEPTH_INRANGE" ;
 	skos:example "dwc:maximumDepthInMeters=\"1200\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumDepthInMeters is in range (<11,000)\"" , "dwc:maximumDepthInMeters=\"99999\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:maximumDepthInMeters is not in range (>11,000)\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ca5fba4c-cdcc-41c3-8c5c-3592aca84f65> , <urn:uuid:e73d1357-ac35-442e-b007-c36bbe5d24d2> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:740d1eee-b595-4a98-b0a6-aa70ae607fe2> , <urn:uuid:e774cb57-f60d-4a0d-bacd-2f433effb3ad> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:minimumValidDepthInMeters default=\"0\",bdq:maximumValidDepthInMeters default=\"11000\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT" .
 
-<urn:uuid:e73d1357-ac35-442e-b007-c36bbe5d24d2> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:e774cb57-f60d-4a0d-bacd-2f433effb3ad> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:maximumValidDepthInMeters:\"11000\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "11000" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:maximumValidDepthInMeters> .
@@ -2975,7 +2978,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:stateProvince ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:stateProvince" .
 
-<urn:uuid:6c52eb63-54aa-4b04-8d76-e3a250cdede3> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:bb8f86d2-2952-47c9-9b0b-8ffcf39ffeb5> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "The Getty Thesaurus of Geographic Names (TGN)" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2984,7 +2987,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
 	rdfs:label "Specification for: VALIDATION_STATEPROVINCE_FOUND" ;
 	skos:example "dwc:stateProvince=\"Florida\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:stateProvince found in bdq:sourceAuthority\"" , "dwc:stateProvince=\"Taswegian\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:stateProvince not found in bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:6c52eb63-54aa-4b04-8d76-e3a250cdede3> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:bb8f86d2-2952-47c9-9b0b-8ffcf39ffeb5> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
 
@@ -3011,18 +3014,18 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:country , dwc:stateProvince ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:country, dwc:stateProvince" .
 
-<urn:uuid:6c8c58b4-df21-4a14-82c1-73332148b526> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "The Getty Thesaurus of Geographic Names (TGN)" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
-
 <urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
 	rdfs:label "Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS" ;
 	skos:example "dwc:country=\"\", dwc:stateProvince=\"WA\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:country and dwc:stateProvince are ambiguous. Matches Western Australia, Washington State (US)\"" , "dwc:country=\"Argentina\", dwc:stateProvince=\"Rio Negro\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country and dwc:stateProvince are unambiguous\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:6c8c58b4-df21-4a14-82c1-73332148b526> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ee503ef2-9302-49dd-93fd-849811902556> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
+
+<urn:uuid:ee503ef2-9302-49dd-93fd-849811902556> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "The Getty Thesaurus of Geographic Names (TGN)" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> ;
 	rdfs:label "ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS" ;
@@ -3155,7 +3158,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
-<urn:uuid:2db576c3-7e4e-4423-89c9-91757f0ef152> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:12994f8c-3ba7-4eb7-9272-cb73f0de3de2> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Establishment Means Controlled Vocabulary List of Terms\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Establishment Means Controlled Vocabulary List of Terms" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3164,7 +3167,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
 	rdfs:label "Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD" ;
 	skos:example "dwc:establishmentMeans=\"cultivated\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:establishmentMeans not found in the bdq:sourceAuthority\"" , "dwc:establishmentMeans=\"native\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:establishmentMeans found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:2db576c3-7e4e-4423-89c9-91757f0ef152> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:12994f8c-3ba7-4eb7-9272-cb73f0de3de2> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT." .
 
@@ -3186,7 +3189,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
-<urn:uuid:def0bf72-06e1-4231-be52-ee882b950bf9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:ce642cc8-fcf2-404c-93a0-c07adddfb339> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Establishment Means Controlled Vocabulary List of Terms\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Establishment Means Controlled Vocabulary List of Terms" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3195,7 +3198,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
 	rdfs:label "Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED" ;
 	skos:example "dwc:establishmentMeans=\"cultivated\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:establishmentMeans is not an interpretable value in the bdq:sourceAuthority\"" , "dwc:establishmentMeans=\"vag.\": Response.status=AMENDED, Response.result=dwc:establishmentMeans=\"vagrant\", Response.comment=\"dwc:establishmentMeans contains an interpretable value in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:def0bf72-06e1-4231-be52-ee882b950bf9> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ce642cc8-fcf2-404c-93a0-c07adddfb339> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
 
@@ -3222,7 +3225,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:degreeOfEstablishment ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:degreeOfEstablishment" .
 
-<urn:uuid:b300b2ee-dc02-46be-8224-c77f4440f1ee> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:d34cb96d-3e33-470e-ae37-4bcbf0fe00a7> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Degree of Establishment Controlled Vocabulary List of Terms\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Degree of Establishment Controlled Vocabulary List of Terms" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3237,7 +3240,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"Degree of Establishment Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}" ;
 	rdfs:label "Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD" ;
 	skos:example "dwc:degreeOfEstablishment=\"cultivated\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:degreeOfEstablishment found in the bdq:sourceAuthority\"" , "dwc:degreeOfEstablishment=\"grown in garden\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:degreeOfEstablishment not found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:b300b2ee-dc02-46be-8224-c77f4440f1ee> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:d34cb96d-3e33-470e-ae37-4bcbf0fe00a7> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Degree of Establishment Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT." .
 
@@ -3253,18 +3256,18 @@
 	<https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord> .
 
+<urn:uuid:ae17ae17-03ee-4ca7-ab5f-f6bbb4adf5a2> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"Degree of Establishment Controlled Vocabulary List of Terms\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Degree of Establishment Controlled Vocabulary List of Terms" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
 <urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Degree of Establishment Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}" ;
 	rdfs:label "Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED" ;
 	skos:example "dwc:degreeOfEstablishment=\"capt.\": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment=\"captive\", Response.comment=\"dwc:degreeOfEstablishment contains an interpretable value in the bdq:sourceAuthority\"" , "dwc:degreeOfEstablishment=\"tree\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:degreeOfEstablishment does not contain an interpretable value in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ef869212-f601-4f6a-aef0-ace8e2dfdc91> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ae17ae17-03ee-4ca7-ab5f-f6bbb4adf5a2> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Degree of Establishment Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
-
-<urn:uuid:ef869212-f601-4f6a-aef0-ace8e2dfdc91> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"Degree of Establishment Controlled Vocabulary List of Terms\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Degree of Establishment Controlled Vocabulary List of Terms" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> ;
 	rdfs:label "AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED" ;
@@ -3289,7 +3292,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:pathway ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:pathway" .
 
-<urn:uuid:b6705d41-0090-4b94-95ee-06a3b2c5edb9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:847cedb8-9212-4eac-809b-c84434e3a895> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Pathway Controlled Vocabulary List of Terms\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Pathway Controlled Vocabulary List of Terms" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3298,7 +3301,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"Pathway Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}" ;
 	rdfs:label "Specification for: VALIDATION_PATHWAY_STANDARD" ;
 	skos:example "dwc:pathway=\"escapee\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:pathway not found in the bdq:sourceAuthority\"" , "dwc:pathway=\"transportStowaway\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:pathway found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:b6705d41-0090-4b94-95ee-06a3b2c5edb9> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:847cedb8-9212-4eac-809b-c84434e3a895> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Pathway Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT." .
 
@@ -3326,7 +3329,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3> .
 
-<urn:uuid:89b583bc-b5a3-4276-a6b9-751f18c4a1ab> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:ce527448-a339-46e7-9bc0-843e10961211> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Pathway Controlled Vocabulary List of Terms\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Pathway Controlled Vocabulary List of Terms" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3335,7 +3338,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Pathway Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}" ;
 	rdfs:label "Specification for: AMENDMENT_PATHWAY_STANDARDIZED" ;
 	skos:example "dwc:pathway=\"escapeee\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:pathway not found in the bdq:sourceAuthority\"" , "dwc:pathway=\"transportStowaway\": Response.status=AMENDED, Response.result=dwc:pathway=\"transportStowaway\", Response.comment=\"dwc:pathway found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:89b583bc-b5a3-4276-a6b9-751f18c4a1ab> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ce527448-a339-46e7-9bc0-843e10961211> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Pathway Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
 
@@ -3360,7 +3363,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
 	rdfs:label "Specification for: VALIDATION_SEX_STANDARD" ;
 	skos:example "dwc:sex=\"Male\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:sex found in the bdq:sourceAuthority\"" , "dwc:sex=\"f\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:sex not found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:b1425b5b-8fe7-45d6-9fe5-b9d62733fde9> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e584b4e8-fd1a-46b2-8da1-44ba7e952f31> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT." .
 
@@ -3370,9 +3373,9 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834> .
 
-<urn:uuid:b1425b5b-8fe7-45d6-9fe5-b9d62733fde9> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API" ;
+<urn:uuid:e584b4e8-fd1a-46b2-8da1-44ba7e952f31> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Sex Vocabulary\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Sex Vocabulary" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6> dcterms:bibliographicCitation "<ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml" ;
@@ -3391,20 +3394,20 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
 	rdfs:label "Specification for: AMENDMENT_SEX_STANDARDIZED" ;
 	skos:example "dwc:sex=\"f\": Response.status=AMENDED, Response.result=dwc:sex=\"Female\", Response.comment=\"dwc:sex found in the bdq:sourceAuthority\"" , "dwc:sex=\"x\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:sex not found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:2ff776e4-d3aa-4953-a9bb-d0422058739f> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:ea325e49-ee22-4c37-b548-5a62db309011> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED" .
-
-<urn:uuid:2ff776e4-d3aa-4953-a9bb-d0422058739f> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod> ;
 	rdfs:label "AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED" ;
 	skos:prefLabel "AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED" ;
 	<https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322> .
+
+<urn:uuid:ea325e49-ee22-4c37-b548-5a62db309011> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Sex Vocabulary\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Sex Vocabulary" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048> dcterms:bibliographicCitation "<ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul>" ;
 	a <https://rs.tdwg.org/bdqffdq/terms/Validation> ;
@@ -3423,7 +3426,7 @@
 	<https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:typeStatus ;
 	<skos:prefLabel> "Information Element ActedUpon dwc:typeStatus" .
 
-<urn:uuid:0f4fa510-edeb-48b5-9825-41360ed96039> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:bd91456f-8d94-42a1-937e-f724ac6fdfd8> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Darwin Core typeStatus\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Darwin Core typeStatus" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3432,7 +3435,7 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \\ bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}" ;
 	rdfs:label "Specification for: VALIDATION_TYPESTATUS_STANDARD" ;
 	skos:example "dwc:typeStatus=\"Holotype\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:typeStatus found in the bdq:sourceAuthority\"" , "dwc:typeStatus=\"cleptotype\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:typeStatus not found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:0f4fa510-edeb-48b5-9825-41360ed96039> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:bd91456f-8d94-42a1-937e-f724ac6fdfd8> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \\" .
 
@@ -3464,11 +3467,11 @@
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \\ bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}" ;
 	rdfs:label "Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED" ;
 	skos:example "dwc:typeStatus=\"Holo.\": Response.status=AMENDED, Response.result=dwc:typeStatus=\"Holotype\", Response.comment=\"dwc:typeStatus found in the bdq:sourceAuthority\"" , "dwc:typeStatus=\"x\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:typeStatus not found in the bdq:sourceAuthority\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:a21b1b25-fca8-4e0a-b544-9f5142ca5a21> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e448af5a-c4de-43d3-98a6-72ee04395486> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \\" .
 
-<urn:uuid:a21b1b25-fca8-4e0a-b544-9f5142ca5a21> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+<urn:uuid:e448af5a-c4de-43d3-98a6-72ee04395486> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
 	rdfs:label "Default value for bdq:sourceAuthority:\"Darwin Core typeStatus\"" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Darwin Core typeStatus" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3497,23 +3500,23 @@
 	<https://rs.tdwg.org/bdqffdq/terms/forIssue> <https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b> .
 
-<urn:uuid:0cd88387-6aa2-42e7-a2d4-d3be335fd6e0> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:spatialBufferInMeters:\"5000\",bdq:sourceAuthority default = \"GBIF Catalogue of Country Centroides\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "5000\",bdq:sourceAuthority default = \"GBIF Catalogue of Country Centroides" ;
+<urn:uuid:3e5bda65-633a-4374-a58e-5f2c8c910e26> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Catalogue of Country Centroides\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Catalogue of Country Centroides" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
+
+<urn:uuid:54e6686a-d339-4e37-8e5a-0b4d79939ecd> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
+	rdfs:label "Default value for bdq:spatialBufferInMeters:\"5000\"" ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "5000" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:spatialBufferInMeters> .
 
 <urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b> a <https://rs.tdwg.org/bdqffdq/terms/Specification> ;
 	rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE. bdq:spatialBufferInMeters default = \"5000\",bdq:sourceAuthority default = \"GBIF Catalogue of Country Centroides\" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}" ;
 	rdfs:label "Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY" ;
 	skos:example "dwc:decimalLatitude=\"-34.184199\", dwc:decimalLongitude=\"-65.509403\", dwc:countryCode=\"AR\": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment=\"coordinates fall outside buffered distance in the bdq:sourceAuthority for dwc:countryCode\"" , "dwc:decimalLatitude=\"-35.38804\", dwc:decimalLongitude=\"-65.154964\", dwc:countryCode=\"AR\": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment=\"coordinates fall within buffered distance in the bdq:sourceAuthority for dwc:countryCode\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:0cd88387-6aa2-42e7-a2d4-d3be335fd6e0> , <urn:uuid:89e98f16-4f66-45ed-8a22-d3358018b377> ;
+	<https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:3e5bda65-633a-4374-a58e-5f2c8c910e26> , <urn:uuid:54e6686a-d339-4e37-8e5a-0b4d79939ecd> ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:spatialBufferInMeters default = \"5000\",bdq:sourceAuthority default = \"GBIF Catalogue of Country Centroides\" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}" ;
 	<https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE." .
-
-<urn:uuid:89e98f16-4f66-45ed-8a22-d3358018b377> a <https://rs.tdwg.org/bdqffdq/terms/Argument> ;
-	rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Catalogue of Country Centroides\"" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF Catalogue of Country Centroides" ;
-	<https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
 <https://rs.tdwg.org/bdqffdq/terms/Record-Management> a <https://rs.tdwg.org/bdqffdq/terms/UseCase> ;
 	rdfs:label "bdq:Record-Management" .

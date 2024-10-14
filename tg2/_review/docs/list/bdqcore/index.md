@@ -255,14 +255,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD](#bdqcore_f5dd74bd-6a22-4792-b675-c7ccf2a2c103) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT](#bdqcore_a56fb342-c8ee-4611-8aab-e6c6357e8875) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND](#bdqcore_7270a362-5f2e-41f0-955a-d7a8eaaf0f17) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_c439952b-fb00-4902-90b3-a9d477c11a0b) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_b89b8424-91eb-4fd1-a6c3-1b0bc92120d0) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_25b5d4bf-c871-4485-a457-68021dce0367) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_9d061523-2182-482a-82f2-6246f3c51cf5) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_1f425807-4f8a-4e1b-b17f-c81004417f38) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO](#bdqcore_0e239a55-0f19-4c68-bdbf-20580f27a647) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_2d90d94b-d384-4bac-aa68-c6800d765882) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY](#bdqcore_d71be8d4-1a04-4816-90c5-49808c823651) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD](#bdqcore_38966850-3737-4a67-953c-c231469e0489) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_18b9d086-29ae-42a5-8f0a-4bc86f4e87ad) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_efc57a09-b9c8-4622-a799-41c435b096dd) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_8b73f37d-89ed-479a-8389-9e71ad2ac84d) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND](#bdqcore_f15c38c3-d96d-4e9c-982d-410fb71cf2bc) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY](#bdqcore_6887c881-dc52-409b-8979-9c2f05e55569) |
@@ -282,7 +282,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE](#bdqcore_c8250600-de61-4047-9d7c-6e06a38c7994) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY](#bdqcore_3f62eaa2-747f-456b-85e6-1a6e74086a18) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD](#bdqcore_bffd7499-aca3-423f-bb43-f7bdc9260f4f) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_4a1fa336-dd47-4b60-a7b0-c958e2dc72cd) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_39ffc749-ba12-4891-806d-fba61ec9a90d) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT](#bdqcore_1919f212-b7db-4b6e-9697-41a715001bd6) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND](#bdqcore_97928242-11a9-4ab0-9dd7-3f0465834824) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND](#bdqcore_977f7e75-a88e-4e29-a7b1-e8cdd35aa107) |
@@ -327,14 +327,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD](#bdqcore_241a279c-76d5-499b-ab49-a47ad7f8df50) |
 [MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT](#bdqcore_a2be4734-0a93-46dc-af4a-e2125b47dbd4) |
 [MULTIRECORD_MEASURE_QA_CLASS_FOUND](#bdqcore_21541436-641d-45a9-938c-537484d94eb7) |
-[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_1ede76d0-c096-465c-8bbb-08c53bf7e367) |
-[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_9ff65ace-9d16-4393-b90f-9150d9628371) |
-[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_fb3732c6-4199-4767-a263-0363a1fe1766) |
+[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_a2e0b9b4-fc3c-448d-87eb-e032b8d91456) |
+[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_ae2c89af-d46b-4cbf-926c-43eb157e0016) |
+[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_6c276a60-eb23-438a-b86e-db8d2a3755f1) |
 [MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO](#bdqcore_151b2d29-3460-4ba5-a226-86971dc8ad03) |
 [MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_d94b0130-7a13-4fa8-955c-eff5c47bd9de) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY](#bdqcore_942f63bd-d19d-4214-bf8e-cec0055b8909) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD](#bdqcore_fedf27b2-e01d-459f-98fc-7f0f39e3d4be) |
-[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_c6a62914-f42e-442a-9e2b-38ccff594070) |
+[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_bd73ce7b-aa25-44eb-bc11-62debba85351) |
 [MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_23aced89-d613-479c-bc4c-837d74b73be0) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_FOUND](#bdqcore_388e74b3-2e18-4d78-8112-3142d1177e25) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY](#bdqcore_9c8df974-8fba-4537-8c67-31466787f732) |
@@ -354,7 +354,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 [MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE](#bdqcore_d41a731b-2e2b-4442-9217-4c375ae92926) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY](#bdqcore_c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD](#bdqcore_14a1d51f-16ed-4148-9dc8-1e90157a9868) |
-[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_4cf4fe57-6736-443b-afda-f7ce8ce25471) |
+[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_4210c56a-d64b-4698-ad92-ef44015c3179) |
 [MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT](#bdqcore_f375a3fd-4cf5-4ef4-955e-d71762ede2d8) |
 [MULTIRECORD_MEASURE_QA_FAMILY_FOUND](#bdqcore_a07d7147-2db8-48ce-81b8-e47595ad5f17) |
 [MULTIRECORD_MEASURE_QA_GENUS_FOUND](#bdqcore_c5c8db83-3af0-4215-806f-e2f90574b138) |
@@ -572,7 +572,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -698,7 +698,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -812,7 +812,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -930,7 +930,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -964,7 +964,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-06</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -984,7 +984,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>dwc:basisOfRecord vocabulary</td>
+			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>Specification</td>
@@ -1044,7 +1044,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1162,7 +1162,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1268,7 +1268,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.Amedment for SingleRecord with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1386,7 +1386,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1500,7 +1500,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1618,7 +1618,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1732,7 +1732,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1854,7 +1854,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -1976,7 +1976,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2098,7 +2098,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2220,7 +2220,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2338,7 +2338,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment of the value of dwc:eventDate to a valid ISO date.Amedment for SingleRecord with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2372,7 +2372,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-08</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2400,7 +2400,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:defaultGeodeticDatum = "EPSG:4326" {[https://epsg.org/crs_4326/WGS-84.html]}</td>
+			<td>bdq:defaultGeodeticDatum default = "EPSG:4326"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -2440,7 +2440,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
+			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system.  If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
 		</tr>
 		<tr>
 			<td>UseCases</td>
@@ -2456,7 +2456,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2570,7 +2570,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2680,7 +2680,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2790,7 +2790,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -2904,7 +2904,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.Amedment for SingleRecord with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3018,7 +3018,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3132,7 +3132,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3250,7 +3250,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3372,7 +3372,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3498,7 +3498,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3616,7 +3616,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3734,7 +3734,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -3852,7 +3852,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.Amedment for SingleRecord with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -4076,7 +4076,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: Are the supplied geographic coordinates within a defined buffer of the center of the country? Criterion for SingleRecord with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -4186,7 +4186,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: Is there a value in dwc:dataGeneralizations? Criterion for SingleRecord with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -4288,7 +4288,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: Is there a value in dwc:establishmentMeans? Criterion for SingleRecord with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -5008,7 +5008,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_c439952b-fb00-4902-90b3-a9d477c11a0b"></a>Term Name  bdqcore:c439952b-fb00-4902-90b3-a9d477c11a0b</th>
+			<th colspan="2"><a id="bdqcore_9d061523-2182-482a-82f2-6246f3c51cf5"></a>Term Name  bdqcore:9d061523-2182-482a-82f2-6246f3c51cf5</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5018,11 +5018,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c439952b-fb00-4902-90b3-a9d477c11a0b-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9d061523-2182-482a-82f2-6246f3c51cf5-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c439952b-fb00-4902-90b3-a9d477c11a0b</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9d061523-2182-482a-82f2-6246f3c51cf5</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -5098,7 +5098,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_b89b8424-91eb-4fd1-a6c3-1b0bc92120d0"></a>Term Name  bdqcore:b89b8424-91eb-4fd1-a6c3-1b0bc92120d0</th>
+			<th colspan="2"><a id="bdqcore_1f425807-4f8a-4e1b-b17f-c81004417f38"></a>Term Name  bdqcore:1f425807-4f8a-4e1b-b17f-c81004417f38</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5108,11 +5108,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b89b8424-91eb-4fd1-a6c3-1b0bc92120d0-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1f425807-4f8a-4e1b-b17f-c81004417f38-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b89b8424-91eb-4fd1-a6c3-1b0bc92120d0</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1f425807-4f8a-4e1b-b17f-c81004417f38</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -5274,7 +5274,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_25b5d4bf-c871-4485-a457-68021dce0367"></a>Term Name  bdqcore:25b5d4bf-c871-4485-a457-68021dce0367</th>
+			<th colspan="2"><a id="bdqcore_5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035"></a>Term Name  bdqcore:5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5284,11 +5284,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/25b5d4bf-c871-4485-a457-68021dce0367-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/25b5d4bf-c871-4485-a457-68021dce0367</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -5644,7 +5644,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-04</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5668,7 +5668,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -5906,7 +5906,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-18</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6154,7 +6154,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_18b9d086-29ae-42a5-8f0a-4bc86f4e87ad"></a>Term Name  bdqcore:18b9d086-29ae-42a5-8f0a-4bc86f4e87ad</th>
+			<th colspan="2"><a id="bdqcore_efc57a09-b9c8-4622-a799-41c435b096dd"></a>Term Name  bdqcore:efc57a09-b9c8-4622-a799-41c435b096dd</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -6164,11 +6164,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/18b9d086-29ae-42a5-8f0a-4bc86f4e87ad-2024-09-25</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/efc57a09-b9c8-4622-a799-41c435b096dd-2024-09-25</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/18b9d086-29ae-42a5-8f0a-4bc86f4e87ad</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/efc57a09-b9c8-4622-a799-41c435b096dd</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -6704,7 +6704,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-16</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6728,7 +6728,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>,bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true</td>
+			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7730,7 +7730,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_4a1fa336-dd47-4b60-a7b0-c958e2dc72cd"></a>Term Name  bdqcore:4a1fa336-dd47-4b60-a7b0-c958e2dc72cd</th>
+			<th colspan="2"><a id="bdqcore_39ffc749-ba12-4891-806d-fba61ec9a90d"></a>Term Name  bdqcore:39ffc749-ba12-4891-806d-fba61ec9a90d</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -7740,11 +7740,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4a1fa336-dd47-4b60-a7b0-c958e2dc72cd-2023-09-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/39ffc749-ba12-4891-806d-fba61ec9a90d-2023-09-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4a1fa336-dd47-4b60-a7b0-c958e2dc72cd</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/39ffc749-ba12-4891-806d-fba61ec9a90d</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -7834,7 +7834,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-16</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7858,7 +7858,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year</td>
+			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -9328,7 +9328,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-05</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10830,7 +10830,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-05</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10854,7 +10854,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:earliestValidDate="1582",bdq:latestValidDate=current year</td>
+			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -11340,7 +11340,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_1ede76d0-c096-465c-8bbb-08c53bf7e367"></a>Term Name  bdqcore:1ede76d0-c096-465c-8bbb-08c53bf7e367</th>
+			<th colspan="2"><a id="bdqcore_a2e0b9b4-fc3c-448d-87eb-e032b8d91456"></a>Term Name  bdqcore:a2e0b9b4-fc3c-448d-87eb-e032b8d91456</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11350,11 +11350,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1ede76d0-c096-465c-8bbb-08c53bf7e367-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a2e0b9b4-fc3c-448d-87eb-e032b8d91456-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1ede76d0-c096-465c-8bbb-08c53bf7e367</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a2e0b9b4-fc3c-448d-87eb-e032b8d91456</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -11430,7 +11430,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_9ff65ace-9d16-4393-b90f-9150d9628371"></a>Term Name  bdqcore:9ff65ace-9d16-4393-b90f-9150d9628371</th>
+			<th colspan="2"><a id="bdqcore_ae2c89af-d46b-4cbf-926c-43eb157e0016"></a>Term Name  bdqcore:ae2c89af-d46b-4cbf-926c-43eb157e0016</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11440,11 +11440,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9ff65ace-9d16-4393-b90f-9150d9628371-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ae2c89af-d46b-4cbf-926c-43eb157e0016-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9ff65ace-9d16-4393-b90f-9150d9628371</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ae2c89af-d46b-4cbf-926c-43eb157e0016</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -11606,7 +11606,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_fb3732c6-4199-4767-a263-0363a1fe1766"></a>Term Name  bdqcore:fb3732c6-4199-4767-a263-0363a1fe1766</th>
+			<th colspan="2"><a id="bdqcore_6c276a60-eb23-438a-b86e-db8d2a3755f1"></a>Term Name  bdqcore:6c276a60-eb23-438a-b86e-db8d2a3755f1</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11616,11 +11616,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fb3732c6-4199-4767-a263-0363a1fe1766-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6c276a60-eb23-438a-b86e-db8d2a3755f1-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fb3732c6-4199-4767-a263-0363a1fe1766</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6c276a60-eb23-438a-b86e-db8d2a3755f1</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -11976,7 +11976,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-04</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12000,7 +12000,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -12238,7 +12238,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-18</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12486,7 +12486,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_c6a62914-f42e-442a-9e2b-38ccff594070"></a>Term Name  bdqcore:c6a62914-f42e-442a-9e2b-38ccff594070</th>
+			<th colspan="2"><a id="bdqcore_bd73ce7b-aa25-44eb-bc11-62debba85351"></a>Term Name  bdqcore:bd73ce7b-aa25-44eb-bc11-62debba85351</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12496,11 +12496,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c6a62914-f42e-442a-9e2b-38ccff594070-2024-09-25</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bd73ce7b-aa25-44eb-bc11-62debba85351-2024-09-25</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c6a62914-f42e-442a-9e2b-38ccff594070</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bd73ce7b-aa25-44eb-bc11-62debba85351</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -13036,7 +13036,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-16</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13060,7 +13060,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>,bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true</td>
+			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14062,7 +14062,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_4cf4fe57-6736-443b-afda-f7ce8ce25471"></a>Term Name  bdqcore:4cf4fe57-6736-443b-afda-f7ce8ce25471</th>
+			<th colspan="2"><a id="bdqcore_4210c56a-d64b-4698-ad92-ef44015c3179"></a>Term Name  bdqcore:4210c56a-d64b-4698-ad92-ef44015c3179</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14072,11 +14072,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4cf4fe57-6736-443b-afda-f7ce8ce25471-2023-09-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4210c56a-d64b-4698-ad92-ef44015c3179-2023-09-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4cf4fe57-6736-443b-afda-f7ce8ce25471</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4210c56a-d64b-4698-ad92-ef44015c3179</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -14166,7 +14166,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-16</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14190,7 +14190,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year</td>
+			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -15660,7 +15660,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-05</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17162,7 +17162,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-05</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17186,7 +17186,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:earliestValidDate="1582",bdq:latestValidDate=current year</td>
+			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17504,7 +17504,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -17610,7 +17610,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters? Validation for SingleRecord with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -17728,7 +17728,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -17854,7 +17854,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Do the geographic coordinates fall on or within the boundaries of the territory given in dwc:countryCode or its Exclusive Economic Zone? Validation for SingleRecord with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -17972,7 +17972,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary? Validation for SingleRecord with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18082,7 +18082,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0? Validation for SingleRecord with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
+			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18204,7 +18204,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates? Validation for SingleRecord with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18310,7 +18310,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dc:type? Validation for SingleRecord with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18432,7 +18432,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value in dc:type occur as a value in the DCMI type vocabulary? Validation for SingleRecord with Specification for: VALIDATION_DCTYPE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18538,7 +18538,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dcterms:license? Validation for SingleRecord with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18572,7 +18572,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-04</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18600,7 +18600,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0 {[https://creativecommons.org/]} { Regular Expression [((http(s){0,1}://creativecommons.org/licenses/(by\</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -18656,7 +18656,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dcterms:license occur in bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_LICENSE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18766,7 +18766,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in any of the Darwin Core spatial terms that could specify a location? Validation for SingleRecord with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18868,7 +18868,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:basisOfRecord? Validation for SingleRecord with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -18902,7 +18902,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-18</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18922,7 +18922,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>dwc:basisOfRecord vocabulary</td>
+			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>Specification</td>
@@ -18982,7 +18982,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19096,7 +19096,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_CLASS_FOUND</td>
+			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19206,7 +19206,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509? Validation for SingleRecord with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19320,7 +19320,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode? Validation for SingleRecord with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19446,7 +19446,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19564,7 +19564,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19682,7 +19682,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:country? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19796,7 +19796,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:countryCode? Validation for SingleRecord with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19910,7 +19910,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code? Validation for SingleRecord with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -19944,7 +19944,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-16</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19976,7 +19976,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>,bdq:earliestValidDate default="1753-01-01",bdq:latestValidDate default=[current day],bdq:includeEventDate default=true</td>
+			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -20040,7 +20040,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:dateIdentified within Parameter ranges and either overlap or is later than dwc:eventDate? Validation for SingleRecord with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20150,7 +20150,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:dateIdentified a valid ISO date? Validation for SingleRecord with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20268,7 +20268,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive or 29, 30 or 31 given the relative month and year? Validation for SingleRecord with Specification for: VALIDATION_DAY_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification for: VALIDATION_DAY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20382,7 +20382,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:day an integer between 1 and 31 inclusive? Validation for SingleRecord with Specification for: VALIDATION_DAY_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20488,7 +20488,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive? Validation for SingleRecord with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20594,7 +20594,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:decimalLatitude? Validation for SingleRecord with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20700,7 +20700,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive? Validation for SingleRecord with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20802,7 +20802,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:decimalLongitude? Validation for SingleRecord with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -20920,7 +20920,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21038,7 +21038,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year? Validation for SingleRecord with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21156,7 +21156,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21270,7 +21270,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear? Validation for SingleRecord with Specification for: VALIDATION_EVENT_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21384,7 +21384,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate? Validation for SingleRecord with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21418,7 +21418,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-16</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21446,7 +21446,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = current year</td>
+			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -21510,7 +21510,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:eventDate entirely with the Parameter Range? Validation for SingleRecord with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21620,7 +21620,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:eventDate? Validation for SingleRecord with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21738,7 +21738,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:eventDate a valid ISO date? Validation for SingleRecord with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21856,7 +21856,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_FAMILY_FOUND</td>
+			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -21974,7 +21974,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_GENUS_FOUND</td>
+			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22076,7 +22076,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:geodeticDatum? Validation for SingleRecord with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22194,7 +22194,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_KINGDOM_FOUND</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22296,7 +22296,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:kingdom? Validation for SingleRecord with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22414,7 +22414,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:maximumDepthInMeters within the Parameter range? Validation for SingleRecord with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22532,7 +22532,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:maximumElevationInMeters of a single record within a valid range? Validation for SingleRecord with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22650,7 +22650,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:minimumDepthInMeters within the Parameter range? Validation for SingleRecord with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22768,7 +22768,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:minimumElevationInMeters within the Parameter range? Validation for SingleRecord with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22874,7 +22874,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters? Validation for SingleRecord with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -22984,7 +22984,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive? Validation for SingleRecord with Specification for: VALIDATION_MONTH_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23086,7 +23086,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:namePublishedInYear? Validation for SingleRecord with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23188,7 +23188,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:occurrenceID? Validation for SingleRecord with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23290,7 +23290,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:occurrenceStatus? Validation for SingleRecord with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23324,7 +23324,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-05</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23344,7 +23344,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>dwc:occurrenceStatus vocabulary</td>
+			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>Specification</td>
@@ -23412,7 +23412,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23530,7 +23530,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_ORDER_FOUND</td>
+			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23648,7 +23648,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:pathway occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_PATHWAY_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23766,7 +23766,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_PHYLUM_FOUND</td>
+			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23888,7 +23888,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -23994,7 +23994,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:scientificName? Validation for SingleRecord with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24096,7 +24096,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:scientificNameAuthorship? Validation for SingleRecord with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24206,7 +24206,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:scientificNameID contain a complete identifier? Validation for SingleRecord with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24312,7 +24312,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:scientificNameID? Validation for SingleRecord with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24430,7 +24430,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:sex occur in bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_SEX_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24548,7 +24548,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year? Validation for SingleRecord with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24666,7 +24666,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:stateProvince occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
+			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24772,7 +24772,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in any of the terms needed to determine that the taxon exists? Validation for SingleRecord with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24890,7 +24890,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms? Validation for SingleRecord with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
+			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -24996,7 +24996,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:taxonRank? Validation for SingleRecord with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -25114,7 +25114,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:taxonRank occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -25232,7 +25232,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Does the value of dwc:typeStatus occur in bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -25266,7 +25266,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>issued</td>
-			<td>2024-09-05</td>
+			<td>2024-10-14</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25294,7 +25294,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>AuthoritiesDefaults</td>
-			<td>bdq:earliestValidDate="1582",bdq:latestValidDate=current year</td>
+			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -25354,7 +25354,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the value of dwc:year within the Parameter range? Validation for SingleRecord with Specification for: VALIDATION_YEAR_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -25464,7 +25464,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is there a value in dwc:year? Validation for SingleRecord with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
@@ -25582,7 +25582,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet? Validation for SingleRecord with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:Specification</td>
