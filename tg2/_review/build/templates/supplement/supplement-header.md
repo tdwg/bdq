@@ -41,9 +41,9 @@ This document contains information that is considered supplemental to the normat
 
 ### 1.1 Audience
 
-Supplemental information is included for those seeking further historical context, or the technical details of components of the BDQ Core standard. This information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to evaluate and/or improve the quality of the biodiversity data within their domain. THis sup[plemental information may be of value to some research users or consumers of data who may be looking for possible tests that are additional to the existing tests for their purpose.
+Supplemental information is included for those seeking further historical context, or the technical details of components of the BDQ Core standard. This information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to evaluate and/or improve the quality of the biodiversity data within their domain. This supplemental information may be of value to some research users or consumers of data who may be looking for possible tests that are additional to the existing tests for their purpose.
 
-his document also provides practical information to those who wish to implement the BDQ Core standard/
+This document also provides practical information to those who wish to implement the BDQ Core standard.
 
 This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
 
