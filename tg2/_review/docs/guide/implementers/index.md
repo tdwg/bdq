@@ -33,15 +33,18 @@ Draft Standard for Submission
 
 
 - [1 Introduction (non-normative)](#1-introduction-(non-normative))
-- [1.1 Independence (normative)](#11-independence-(normative)-)
+- [1.1 Target Audience](#11-target-audience)
+- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
+- [1.4 Namespace abbreviations](#14-namespace-abbreviations)
 - [2 About the Tests and their Implementation](#2-about-the-tests-and-their-implementation)
+- [2.1 Independence (normative)](#21-independence-(normative)-)
 - [2.1 The Concept of "EMPTY" in BDQ Core (normative)](#21-the-concept-of-"empty"-in-bdq-core-(normative))
 - [2.1.1 Concerns of Empty (normative)](#211-concerns-of-empty-(normative))
 - [2.1.2 Example implementation of a function to assess Empty (non-normative)](#212-example-implementation-of-a-function-to-assess-empty-(non-normative))
 - [2.2 Reading Test Descriptors (non-normative)](#22-reading-test-descriptors-(non-normative))
 - [2.2.1 Key Parts of a descriptor](#221-key-parts-of-a-descriptor)
 - [2.2.2 Reading a Specification](#222-reading-a-specification)
-- [2.2.3 Interpreted As](#223-interpreted-as)
+- [2.2.3 Interpreted As (normative)](#223-interpreted-as-(normative))
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-(normative))
 - [4 Extension points (normative)](#4-extension-points-(normative))
 - [3 Responses from tests](#3-responses-from-tests)
@@ -55,14 +58,28 @@ Draft Standard for Submission
 
 ## 1 Introduction (non-normative)
 
-This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
+Purpose
+: This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
 
-## 1.1 Independence (normative) 
+### 1.1 Target Audience
 
-Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
+This document is for software developers needing a technical understanding of the BDQ Core Tests.
+
+### 1.3 Status of the content of this document
+
+Section 1 is non-normative.
+
+Other sections are marked as normative or non-normative.
+
+### 1.4 Namespace abbreviations
+
+The following namespace abbreviations are used in this document:
 
 ## 2 About the Tests and their Implementation
 
+## 2.1 Independence (normative) 
+
+Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
 
 ### 2.1 The Concept of "EMPTY" in BDQ Core (normative)
 
@@ -162,10 +179,9 @@ etc.
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
 
-#### 2.2.3 Interpreted As
+#### 2.2.3 Interpreted As (normative)
 
-In the Specifications the phrase "interpreted as" means for Implementors, (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
-
+In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
 ## 3 Compliant Implementation (normative)
 
@@ -672,6 +688,9 @@ Response.status and Response.value constants SHOULD be given internationalized l
 
 For each test in an implementation, that test MUST produce the same results as are specified in a row of the validation data for that test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that test.
 
+### Tools for validating test implementations with the validation data (non-normative) 
+
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core tests in various FilteredPush data quality libraries against the test validation data.  See: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) or [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  It uses java annotations on methods that implement tests in order to match inputs from the validation data to methods under test that implement individual tests.  It could be reused to validate implementations in other java classes that follow the same use of ffdq-api (**TODO: Cite**) java annotations.
 
 
 ## Cite BDQ Core

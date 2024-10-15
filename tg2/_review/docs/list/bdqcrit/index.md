@@ -41,7 +41,14 @@ Draft Standard for Submission
 
 This document includes terms that are individuals of type bdqffdq:Criterion intended to be used as a controlled value for bdqffdq:hasCriterion in the BDQ Core tests.
 
-### 1.1 Data Quality Criteria
+Purpose
+: This is the term-list document for the bdqcrit: vocabulary.
+
+### 1.1 Target Audience
+
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the bdqffdq: Framework vocabulary.
+
+### 1.2 Data Quality Criteria
 
 Criterion as used in the context of BDQ Core, was originally defined by Viega 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:Criterion (Complete, Consistent, Found, InRange, Likely, NotEmpty, Standard, Unambiguous) describes, in abstract terms how data can be evaluated for quality for a given use case.
   
@@ -51,13 +58,22 @@ Each bdqffdq:Validation and bdqffdq:Issue in bdqcore: is expected to evaluate on
 
 Criterion applies only Test Types bdqffdq:Validation and bdqffdq:Issue.
 
-### 1.2 Status of the content of this document
+### 1.3 Term List Distributions
+
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | http://rs.tdwg.org/bdq/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcrit/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcrit.xml | Example for submission, to be generated | 
+
+### 1.4 Status of the content of this document
+
+Section 1 is non-normative.
 
 Section 2 is normative.
 
 In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
 
-### 1.3 Namespace abbreviations
+### 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -68,14 +84,7 @@ The following namespace abbreviations are used in this document:
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
-### 1.4 Term List Distributions
-
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcrit/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcrit.xml | Example for submission, to be generated | 
-
-### 1.5 Key to Vocabulary Terms
+### 1.6 Key to Vocabulary Terms
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |

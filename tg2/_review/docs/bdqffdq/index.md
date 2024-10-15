@@ -42,11 +42,12 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 - [1 Introduction](#1-introduction)
-- [1.1 Documents about the bdqffdq: ontology.](#11-documents-about-the-bdqffdq-ontology)
+- [1.1 Target Audience](#11-target-audience)
+- [1.2 Documents about the bdqffdq: ontology](#12-documents-about-the-bdqffdq-ontology)
+- [1.2.1 Distributions (normative)](#121-distributions-(normative))
 - [1.2 Namespace abbreviations](#12-namespace-abbreviations)
 - [1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
 - [1.3 RFC 2119 key words (normative)](#13-rfc-2119-key-words-(normative))
-- [1.4 Distributions (normative)](#14-distributions-(normative))
 - [1.5 Diagram of classes and properties (non-normative)](#15-diagram-of-classes-and-properties-(non-normative)-)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
 - [2.1 Use of properties (normative)](#21-use-of-properties-(normative)-)
@@ -74,22 +75,41 @@ Draft Standard for Submission
 
 The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies.
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
+The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
 The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
-### 1.1 Documents about the bdqffdq: ontology.
 
-The bdqffdq: vocabulary is an ontology, it includes: 
+Purpose
+: This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
+The ontology follows open world principles and has limited restrictions.
+This document gathers normative statements about how to use the Frameowrk in a meaningful way. 
 
-- A [term list](../list/bdqffdq/index.md) for the vocabulary, containing just the vocabulary terms.
-- Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
-- Normative guidance on the use of this ontology is provided in this landing page document.
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
+### 1.1 Target Audience
 
-An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
+Technical users.
+
+### 1.2 Documents about the bdqffdq: ontology
+
+The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
+
+- This page, the landing page with normative guidance on the use of this ontology.
+- A [term list](../list/bdqffdq/index.md) the list of vocabulary terms.
+- Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
+
+In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
+
+### 1.2.1 Distributions (normative)
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
+| Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
+| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
+
 
 ### 1.2 Namespace abbreviations
 
@@ -125,13 +145,6 @@ Other sections of this document are marked as normative or non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.4 Distributions (normative)
-
-| Description | IRI | Download URL |
-| ----------- | --- | ------------ |
-| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
-| Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
-| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
 
 ### 1.5 Diagram of classes and properties (non-normative) 
 

@@ -41,7 +41,14 @@ Draft Standard for Submission
 
 This document includes terms that are individuals of type bdqffdq:Enhancement intended to be used as a controlled value for bdqffdq:hasEnhancement in the BDQ Core tests.
 
-### 1.1 Data Quality Enhancement
+Purpose
+: This is the term-list document for the bdqenh: vocabulary.
+
+### 1.1 Target Audience
+
+This document is for those needing a technical understanding of the BDQ Core Tests and application of the bdqffdq: Framework. 
+
+### 1.2 Data Quality Enhancement
 
 Enhancement as used in the context of BDQ Core, was originally defined by Viega 2016 and Veiga et at. 2017, where it is a fundamental concept. The concept of bdqffdq:Enhancement (AssumedDefault, Converted, From, Standardized, and Transposed)  describes how a bdqffdq:Amendment may act to produce proposals to improve data quality for a given use case.
 
@@ -51,13 +58,22 @@ Each Amendment in bdqcore: is expected to evaluate one or more data values (one 
 
 Enhancement only applies to tests of type bdqffdq:Amendment.
 
-### 1.2 Status of the content of this document
+### 1.2 Term List Distributions
+
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | http://rs.tdwg.org/bdq/bdqenh/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqenh/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqenh.xml | Example for submission, to be generated | 
+
+### 1.4 Status of the content of this document
+
+Section 1 is non-normative.
 
 Section 2 is normative.
 
 In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
 
-### 1.3 Namespace abbreviations
+### 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -68,14 +84,7 @@ The following namespace abbreviations are used in this document:
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
-### 1.4 Term List Distributions
-
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdqenh/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqenh/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqenh.xml | Example for submission, to be generated | 
-
-### 1.5 Key to Vocabulary Terms
+### 1.6 Key to Vocabulary Terms
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |

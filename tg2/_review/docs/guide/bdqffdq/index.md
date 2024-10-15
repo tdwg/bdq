@@ -33,11 +33,12 @@ Draft Standard for Submission
 
 
 - [1 Introduction](#1-introduction)
-- [1.1 Namespace abbreviations](#11-namespace-abbreviations)
-- [1.1 Status of the content of this document](#11-status-of-the-content-of-this-document)
-- [1.2 RFC 2119 key words (normative)](#12-rfc-2119-key-words-(normative))
-- [1.1 Documents about the bdqffdq: ontology](#11-documents-about-the-bdqffdq-ontology)
+- [1.1 Target Audience](#11-target-audience)
+- [1.2 Documents about the bdqffdq: ontology](#12-documents-about-the-bdqffdq-ontology)
+- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
+- [1.4 Namespace abbreviations](#14-namespace-abbreviations)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
+- [2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-(normative))
 - [3 Framework for describing data quality](#3-framework-for-describing-data-quality-)
 - [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-(non-normative))
 - [3.2 Description of the bdqffdq ontology (non-normative)](#32-description-of-the-bdqffdq-ontology-(non-normative)-)
@@ -50,13 +51,12 @@ Draft Standard for Submission
 - [3.7 Example representation of a bdqcore test](#37-example-representation-of-a-bdqcore-test)
 - [3.8 Cardinality of bdqffdq terms](#38-cardinality-of-bdqffdq-terms-)
 - [4 Term index](#4-term-index)
-- [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 2.1)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-(portions-normative,-see-21))
+- [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.3)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-(portions-normative,-see-13))
 
 
 
 
 ## 1 Introduction
-[!--- JRW finished first draft to here ---]
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary has been designed using this framework and is framed in the terms and concepts from the framework.  
 
@@ -64,10 +64,39 @@ The framework considers data to have quality with respect to some specified use.
 
 This document describes the use of a set of terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These terms are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
-### 1.1 Namespace abbreviations
+Purpose
+: This is a guide to the use of the bdqffdq: Framework vocabulary.
+
+### 1.1 Target Audience
+
+This document is for those needing a technical understanding of the bdqffdq: Framework vocabulary.
+
+### 1.2 Documents about the bdqffdq: ontology
+
+The bdqffdq: vocabulary is an ontology, it includes: 
+
+- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
+- The [term list](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
+- Additional axioms that can be found in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
+
+This document provides an illustrated guide to the use of the bdqffdq ontology.
+
+### 1.3 Status of the content of this document
+
+Section 1 is non-normative.
+
+Section 2 is normative.
+
+In Section 4, the values of following terms are normative: Term IRI, Name, Type, Superclass, Definition.
+
+Figures are non-normative.
+
+Other sections of this document are marked as normative or non-normative.
+
+### 1.4 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
-
 
 | **Prefix**   | **Namespace**                                    |
 |--------------|--------------------------------------------------|
@@ -83,33 +112,6 @@ The following namespace abbreviations are used in this document:
 | skos         | http://www.w3.org/2004/02/skos/core#             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-### 1.1 Status of the content of this document
-
-Section 1 is non-normative.
-
-Section 2 is normative.
-
-In Section 4, the values of following terms are normative: Term IRI, Name, Type, Superclass, Definition.
-
-Figures are non-normative.
-
-Other sections of this document are marked as normative or non-normative.
-
-### 1.2 RFC 2119 key words (normative)
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
-
-### 1.1 Documents about the bdqffdq: ontology
-
-The bdqffdq: vocabulary is an ontology, it includes: 
-
-- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
-- The [term list](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
-- Additional axioms that can be found in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
-
-This document provides an illustrated guide to the use of the bdqffdq ontology.
-
 ## 2 Use of Terms (normative) 
 
 The content of this section is normative.
@@ -117,6 +119,10 @@ The content of this section is normative.
 When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
 
 IRIs MUST be use for values for all individual class instances and object properties when using bdqffdq: terms.
+
+### 2.1 RFC 2119 key words (normative)
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ### 3 Framework for describing data quality 
 
@@ -442,7 +448,7 @@ Each Implementation ***fix***
 
 
 
-## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 2.1)
+## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.3)
 
 
 ### 5.1 Class terms
