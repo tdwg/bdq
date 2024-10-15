@@ -58,7 +58,7 @@ The BDQ Core vocabulary includes the following documents and files
       - File: [Tests in Turtle](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
 - [BDQ Core User's Guide](docs/guide/users/index.md)
 - [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
-- 
+
 ### 1.1.1 Term List Distributions for BDQ Core
 
 | Description | IRI | Download URL | Note | 
