@@ -115,10 +115,10 @@ The concept of 'tests' in the context of this standard include four distinct typ
 
 Validation Tests evaluate values in one or more Darwin Core terms (https://dwc.tdwg.org/list/) for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga et al. 2017). For example, VALIDATION_TAXONRANK_NOTEMPTY will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". The formal response of Validation Tests take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service (bdq:sourceAuthority) is unavailable, and the test might return a different response when run at again later on the same data.
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same test on the same data at a different time may result in a different result.
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met.
-  -When Response.status="RUN_HAS_RESULT", a Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not.
+3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation:
+  - A Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not.
 
 #### 1.3.2 Issue
 
