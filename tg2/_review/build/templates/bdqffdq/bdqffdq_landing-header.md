@@ -59,7 +59,7 @@ This document provides a technical understanding of the Framework (bdqffdq:) ont
 - A [term list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) for the vocabulary terms.
 - Additional axioms can be found in the [vocabulary extension list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/extension/bdqffdq/index.md)
 - The bdqffdq Framework ontology is best technically understood as an [Owl Ontology Distribution](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl)
-- An illustrated guide to Framework bdqffdq ontology is provided in the [Guide to the Framwork ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md)
+- An illustrated guide to Framework bdqffdq ontology is provided in the [Guide to the Framework ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md)
 
 ### 1.2 Namespace abbreviations
 
