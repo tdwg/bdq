@@ -56,7 +56,7 @@ This document lists terms used to describe 'data quality' / 'fitness for use' in
 
 This document provides a technical understanding of the Framework (bdqffdq:) ontology.  This document gathers normative statements about how to use the Frameowrk in a meaningful way. The ontology follows open world principles and has limited restrictions. Relevant documents include 
 
-- A [term list](../docs/bdqffdq/index.md) for the vocabulary, containing just the vocabulary terms.
+- A [term list](../docs/bdqffdq/index.md)) for the vocabulary terms.
 - Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
 - The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
 
