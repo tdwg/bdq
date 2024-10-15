@@ -45,23 +45,21 @@ Bibliographic citation
 
 This document provides introductory explanatory information and normative guidance for the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
-### 1.1 Documents about the bdqcore: test descriptions.
+### 1.1 BDQ Core Test Documents
 
-The bdqcore: vocabulary includes: 
+The BDQ Core vocabulary includes the following documents and files
 
-- A [Quick Reference Guide](../terms/bdqcore/index.md) to the tests.
-- A [term list](../list/bdqffdq/index.md) for the vocabulary, containing the vocabulary terms and their metadata.
-- Normative guidance on the use of the bdqcore vocabulary is provided in this landing page document.
-- The bdqcore tests have several distribution files:
-  - A csv file listing the tests  [CSV list of tests](../vocabulary/bdqcore_terms.csv) 
-  - An rdf representation of the tests in a [Turtle Serialization of bdqcore](../dist/bdqcore.ttl) 
-  - An rdf representation of the tests in an [RDF/XML Serialization of bdqcore](../dist/bdqcore.xml) 
-
-An users guide to the use of the bdqcore tests is provided in the [Users Guide](../guide/users/index.md) 
-
-An guide to implemetation of the bdqcore tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
-
-### 1.1.1 Term List Distributions for bdqcore:
+- [BDQ Core Tests Quick Reference Guide](docs/terms/bdqcore/index.md)
+- [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
+- Normative guidance on the use of the BDQ Core vocabulary is provided in **this document**.
+- The BDQ Core Tests have several distribution files:
+      - File: [CSV List of Tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
+      - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
+      - File: [Tests in Turtle](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
+- [BDQ Core User's Guide](docs/guide/users/index.md)
+- [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
+- 
+### 1.1.1 Term List Distributions for BDQ Core
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
