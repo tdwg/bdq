@@ -47,18 +47,23 @@ This document provides introductory explanatory information and normative guidan
 
 ### 1.1 Target Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementors. BDQ Core also includes the following documents and files
+This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementors. 
 
-- [BDQ Core Tests Quick Reference Guide](docs/terms/bdqcore/index.md)
-- [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
+### 1.2 Documents about the BDQ Core Tests
+
+The BDQ Core vocabulary includes the following documents and files: 
+
+- [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md)
+- [BDQ Core Vocabularies](../..//vocabularies/index.md)
+- This document provides Normative guidance on the use of the BDQ Core vocabulary.
 - The BDQ Core Tests have several distribution files:
-    - File: [CSV List of Tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
-    - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
-    - File: [Tests in Turtle](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
-- [BDQ Core User's Guide](docs/guide/users/index.md)
-- [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
+    - File: [CSV List of Tests](../../vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
+    - File: [Tests in RDF/XML](../../dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
+    - File: [Tests in Turtle](../../dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
+- [BDQ Core User's Guide](../guide/users/index.md)
+- [BDQ Core Implementer's Guide](../guide/implementers/index.md)
 
-### 1.1.1 Term List Distributions for BDQ Core
+### 1.2.1 Term List Distributions for BDQ Core
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
@@ -90,7 +95,7 @@ For a simplied list of current terms, see the BDQ Core Quick Reference Guide {ht
 
 <!--- end of information that probably goes in the users or implementers guides --->
 
-### 1.2 Characteristics of the tests (non-normative)
+### 1.3 Characteristics of the tests (non-normative)
 
 Each test is defined as a SingleRecord test. No CORE tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord. The framework allows for MultiRecord tests able to identify outliers within a data set, or other tests that look across a MultiRecord to evaluate data quality, but we have not specified any such tests here.
 

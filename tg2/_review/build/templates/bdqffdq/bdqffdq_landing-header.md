@@ -52,14 +52,30 @@ The framework considers data to have quality with respect to some specified use.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
-### 1.1 Target Audience
 
-This document provides a technical understanding of the Framework (bdqffdq:) ontology.  This document gathers normative statements about how to use the Frameowrk in a meaningful way. The ontology follows open world principles and has limited restrictions. Relevant documents include 
 
-- A [term list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) for the vocabulary terms.
-- Additional axioms can be found in the [vocabulary extension list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/extension/bdqffdq/index.md)
-- The bdqffdq Framework ontology is best technically understood as an [Owl Ontology Distribution](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl)
-- An illustrated guide to Framework bdqffdq ontology is provided in the [Guide to the Framework ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md)
+### 1.1 Target Audience and Purpose
+
+#### 1.1.1 Target Audience
+
+Technical users.
+
+#### 1.1.2 Purpose
+
+This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
+The ontology follows open world principles and has limited restrictions.
+This document gathers normative statements about how to use the Frameowrk in a meaningful way. 
+
+### 1.2 Documents about the bdqffdq: ontology
+
+The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
+
+- This page, the landing page with normative guidance on the use of this ontology.
+- A [term list](../list/bdqffdq/index.md) the list of vocabulary terms.
+- Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
+- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
+
+In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
 ### 1.2 Namespace abbreviations
 
