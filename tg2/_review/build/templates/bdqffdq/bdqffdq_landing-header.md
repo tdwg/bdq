@@ -56,11 +56,10 @@ This document lists terms used to describe 'data quality' / 'fitness for use' in
 
 This document provides a technical understanding of the Framework (bdqffdq:) ontology.  This document gathers normative statements about how to use the Frameowrk in a meaningful way. The ontology follows open world principles and has limited restrictions. Relevant documents include 
 
-- A [term list](../docs/bdqffdq/index.md)) for the vocabulary terms.
-- Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
-
-An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
+- A [term list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) for the vocabulary terms.
+- Additional axioms can be found in the [vocabulary extension list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/extension/bdqffdq/index.md)
+- The bdqffdq Framework ontology is best technically understood as an [Owl Ontology Distribution][(../vocabulary/bdqffdq.owl)](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl)
+- An illustrated guide to Framework bdqffdq ontology is provided in the [Guide to the Framwork ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md)
 
 ### 1.2 Namespace abbreviations
 
