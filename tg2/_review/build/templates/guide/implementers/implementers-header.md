@@ -226,6 +226,11 @@ An Amendment Response.result SHOULD consist of a set of key:value pairs, where t
 
 Under bdqffdq: Amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Response.result, and implementors MAY develop their own structures and serialisations for such Amendment Response.results.
 
+Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses.   Implementations MAY serialize Assertions in any appropriate form. 
+
+Nothing in this section should be taken as a requirement to how bdqffdq:Assertions or Responses are to be presented to consumers of data quality reports.  Implementations MAY present the results of tests in any form appropriate for their consumers.  
+
+
 ### 3.2 Framework elements not included in bdqcore test descriptions (normative)
 
 Implementors SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of test implementations.
