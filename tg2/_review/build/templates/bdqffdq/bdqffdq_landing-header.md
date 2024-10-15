@@ -46,7 +46,7 @@ Bibliographic citation
 
 The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies.
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
+The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
 
 The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
 
@@ -58,7 +58,7 @@ This document provides a technical understanding of the Framework (bdqffdq:) ont
 
 - A [term list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/bdqffdq/index.md) for the vocabulary terms.
 - Additional axioms can be found in the [vocabulary extension list](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/extension/bdqffdq/index.md)
-- The bdqffdq Framework ontology is best technically understood as an [Owl Ontology Distribution][(../vocabulary/bdqffdq.owl)](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl)
+- The bdqffdq Framework ontology is best technically understood as an [Owl Ontology Distribution](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqffdq.owl)
 - An illustrated guide to Framework bdqffdq ontology is provided in the [Guide to the Framwork ontology](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md)
 
 ### 1.2 Namespace abbreviations
