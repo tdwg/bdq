@@ -52,13 +52,12 @@ The framework considers data to have quality with respect to some specified use.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
-### 1.1 Documents about the bdqffdq: ontology.
+### 1.1 Target Audience
 
-The bdqffdq: vocabulary is an ontology, it includes: 
+This document provides a technical understanding of the Framework (bdqffdq:) ontology.  This document gathers normative statements about how to use the Frameowrk in a meaningful way. The ontology follows open world principles and has limited restrictions. Relevant documents include 
 
-- A [term list](../list/bdqffdq/index.md) for the vocabulary, containing just the vocabulary terms.
+- A [term list](../docs/bdqffdq/index.md) for the vocabulary, containing just the vocabulary terms.
 - Additional axioms that can be found in the [vocabulary extension list](../extension/bdqffdq/index.md) 
-- Normative guidance on the use of this ontology is provided in this landing page document.
 - The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../vocabulary/bdqffdq.owl) 
 
 An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
