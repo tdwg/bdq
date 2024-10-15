@@ -27,7 +27,7 @@ Preferred Citation
 - [BDQ Core Fitness For Use Framework Guide](docs/guide/bdqffdq/index.md)
 - [BDQ Core User's Guide](docs/guide/users/index.md)
 - [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
-  - [BDQ Core Tests and Assertions Normative Landing Page](docs/bdqcore/index.md):
+  - [BDQ Core Tests and Assertions Landing Page](docs/bdqcore/index.md):
     - [BDQ Core Tests and Assertions List of Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqcore/index.md):
       - File: [CSV List of Tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
       - File: [Tests in RDF/XML](https://github.com/tdwg/bdq/blob/master/tg2/_review/dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
