@@ -42,11 +42,25 @@ Bibliographic citation
 
 This document includes terms that are part of the BDQ vocabulary (<http://rs.tdwg.org/version/bdq/{ratification_date}>). For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
-### 1.1 Data Quality Vocabulary terms.
+Purpose
+: This is the term-list document for the bdq: vocabulary.
+
+### 1.1 Target Audience
+
+This document is for those needing a technical understanding of the BDQ Core Tests. 
+
+### 1.2 Data Quality Vocabulary terms.
 
 The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; a list of bdqffdq:Parameters used in the bdqcore: tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; a list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:Empty and bdq:NotEmpty.
 
-### 1.2 Status of the content of this document
+### 1.3 Term List Distributions
+
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
+
+### 1.4 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
@@ -54,7 +68,7 @@ Section 2 is normative.
 
 In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
 
-### 1.3 Namespace abbreviations
+### 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -65,14 +79,8 @@ The following namespace abbreviations are used in this document:
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
-### 1.4 Term List Distributions
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
-
-### 1.5 Key to Vocabulary Terms
+### 1.6 Key to Vocabulary Terms
 
 {term_key}
 

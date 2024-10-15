@@ -43,7 +43,14 @@ Bibliographic citation
 
 This document includes terms that are individuals of type bdqffdq:DataQualityDimension intended to be used as a controlled value for bdqffdq:hasDataQualityDimension in the BDQ Core tests.
 
-### 1.1 Data Quality Dimensions 
+Purpose
+: This is the term-list document for the bdqdim: vocabulary.
+
+### 1.1 Target Audience
+
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the bdqffdq: Framework vocabulary.
+
+### 1.2 Data Quality Dimensions 
 
 DataQualityDimension as used in the context of BDQ Core, was originally defined by Viega 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a test examines to assess 'quality' for a given use case.
 
@@ -53,13 +60,22 @@ Each test in bdqcore: is expected to evaluate one or more data values (one or mo
 
 DataQualityDimension applies to all Test Types (all subclasses of bsqffdq:DataQualityNeed that is, bdqffdq:VALIDATION, bdqffdq:ISSUE, bdqffdq:MEASURE and bdqffdq:AMENDMENT).
 
-### 1.2 Status of the content of this document
+### 1.3 Term List Distributions
+
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
+
+### 1.4 Status of the content of this document
+
+Section 1 is non-normative.
 
 Section 2 is normative.
 
 In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
 
-### 1.3 Namespace abbreviations
+### 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -70,14 +86,7 @@ The following namespace abbreviations are used in this document:
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 | bdq:     | https://rs.tdwg.org/bdq/terms/   |
 
-### 1.4 Term List Distributions
-
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
-
-### 1.5 Key to Vocabulary Terms
+### 1.6 Key to Vocabulary Terms
 
 {term_key}
 

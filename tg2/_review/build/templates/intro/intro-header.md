@@ -41,6 +41,9 @@ The BDQ tests support the determination of whether data resources will be fit fo
 
 The BDQ tests were initially targeted specifically to [Darwin Core](https://dwc.tdwg.org/terms/) classes and properties against which they operate. This is not a limitation on the scope of the standard, but rather a choice of original scope against which to develop the tests.
 
+Purpose
+: An introduction to and overview of BDQ Core.
+
 ### 1.1 Target Audience
 This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](docs/terms/bdqcore/index.md). Those interested in more detail on the interpretation of test results should consult the [BDQ Core User Guide](../users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../implementation/index.md "BDQ Core Implementation Guide").
 

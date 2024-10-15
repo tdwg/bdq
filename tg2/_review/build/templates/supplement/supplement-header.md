@@ -39,11 +39,14 @@ Bibliographic citation
 
 This document contains information that is considered supplemental to the normative and non-normative BDQ Core standard documentation. 
 
-### 1.1 Audience
+Purpose
+: This document provides supplement to BDQ Core including historical context and lessons learned during the development of BDQ Core.
+
+### 1.1 Target Audience
 
 This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within this this standard. This document may also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain.
 
-This document also provides practical information to those who wish to implement the BDQ Core standard.
+This document also provides practical information that goes beyond the normative guidance in the [implemeters guide](../guide/implementers/index.md) to those who wish to implement the BDQ Core standard.
 
 This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
 

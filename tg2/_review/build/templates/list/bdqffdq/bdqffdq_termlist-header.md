@@ -54,7 +54,14 @@ The TDWG Standards Documentation Specification requires that the human readable 
 as a term list with additional axioms included in a vocabulary extension.  A [vocabulary extension](../../extension/bdqffdq/index.md) 
 documents additional axioms.  
 
-### 1.1 Documents about the bdqffdq: ontology
+Purpose
+: This is the term-list document for the bdqffdq: vocabulary.
+
+### 1.1 Target Audience
+
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the bdqffdq: Framework vocabulary.
+
+### 1.2 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
 
@@ -65,7 +72,14 @@ The bdqffdq: vocabulary is an ontology, documentation for it can be found in:
 
 An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../../guide/bdqffdq/index.md) 
 
-### 1.2 Status of the content of this document
+### 1.2.1 Term List Distributions
+
+| Description | IRI | Download URL | Note | 
+| ----------- | --- | -----------  | ---- | 
+| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
+| Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
+
+### 1.3 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
@@ -85,13 +99,6 @@ The following namespace abbreviations are used in this document:
 | bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
-
-### 1.4 Term List Distributions
-
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
-| Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
 ### 1.5 Key to Vocabulary Terms
 

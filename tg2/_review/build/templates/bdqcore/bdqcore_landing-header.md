@@ -43,7 +43,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-This document provides introductory explanatory information and normative guidance for the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+This document provides explanatory information and normative guidance for the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
 ### 1.1 Target Audience
 
@@ -113,11 +113,11 @@ The concept of 'tests' in the context of this standard include four distinct typ
 
 Each bdqcore: test is an instance of a subclass of bdqffdq:DataQualityNeed composed with an instance of a subclass of bdqffdq:Method composed with an instance of bdqffdq:Specification.  When run by an implementation, each bdqcore: test can produce a data quality report consisting of bdqffdq:Assertions.
 
-#### 1.3.1 Validation 
+#### 1.3.1 Validation (normative)
 
 Each Validation Test is composed of an instance of bdqffdq:Validation (which expresses a data quality need in the abstract) with an instance of bdqffdq:ValidationMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
 
-Validation Tests in BDQ Core evaluate values in one or more Darwin Core terms (https://dwc.tdwg.org/list/) for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga et al. 2017). For example, VALIDATION_TAXONRANK_NOTEMPTY will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". The formal response of Validation Tests take one of three forms. 
+Validation Tests in BDQ Core evaluate values in one or more Darwin Core terms (https://dwc.tdwg.org/list/) for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga et al. 2017). For example, VALIDATION_TAXONRANK_NOTEMPTY will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". The formal response of Validation Tests MUST take one of three forms. 
 
 1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same test on the same data at a different time may result in a different result.
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run.
@@ -142,11 +142,15 @@ An Amendment Test may propose a change to one or more Darwin Core term  values, 
 
 Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses how measure fittnes of data for a data quality need in the abstract) with an instance of bdqffdq:MeasurementMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality is to be measured).
 
+The only Measure defined in BDQ Core that directly examines data is MEASURE_EVENTDATE_DURATIONINSECONDS.  It returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the VALIDATIONs and AMENDMENTs and in one case provides an indication of the length of the period of the value of dwc:eventDate.
+
+Of these, MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate and is the only numeric response Test. This Test is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases. For example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temporal resolution of a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  
+
 Most SingleRecord Measure Tests defined in BDQ Core count the number of Validation or Amendment Tests with a specified Response.Result in a bdqffdq:SingleRecord. Measure Tests return a Response.result as either a numeric value or "COMPLETE" or "NOT_COMPLETE".  Measure Tests can also be accumulated across multiple records (bdqffdq:MultiRecord).
 
 Data are found to be fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". The majority of BDQ Core Tests are Validations phrased in the positive sense to identify biodiversity data that are fit for the Use Case, as identified in the user scenario analyses performed by BDQ Task Group 3 (https://github.com/tdwg/bdq/tree/master/tg3).   
 
-bdqffdq:SingleRecord MEASUREs within BDQ Core are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS. Of these, MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate and is the only numeric response Test. This Test is intended to provide an estimator for the duration of an event date that can be used as a criterion for Quality Assurance for some use cases. For example, a phenology use may need temporal resolution of records to within about a day, while a use involving long term patterns of spatial change may be satisfied by temporal resolution of a year or better.  Rather than providing specific measures for each possible duration, we chose to provide just this one generic measure that could be used as a filter criterion for any Use Case.  
+bdqffdq:SingleRecord MEASUREs within BDQ Core are MEASURE_VALIDATIONTESTS_COMPLIANT, MEASURE_VALIDATIONTESTS_NOTCOMPLIANT, MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET, MEASURE_AMENDMENTS_PROPOSED and MEASURE_EVENTDATE_DURATIONINSECONDS. 
 
 For each bdqffdq:SingleRecord Validation Test, there is a bdqffdq:MultiRecord Measure Test that returns a Response.result="COMPLETE" when all records in the bdqffdq:MultiRecord have a Response.result="COMPLIANT", and a Response.result="NOT_COMPLETE" when they are not. Under Quality Assurance, these Measure Tests are the key criterion for identifying data which have quality for a Use Case. Under Quality Assurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measure Tests for completeness, such that a filtered bdqffdq:MultiRecord has Response.result="COMPLETE" for all bdqffdq:MultiRecord Measure Tests.
 
@@ -162,9 +166,13 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
+Section 3.1 lists which which terms in section 4 have normative values and which non-normative.
+
+**Text to align with configuration to build 3.1**
 In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resource Type, Specification, Information Elements ActedUpon, Information Elements Consulted, and Parameters are normative.  The values of Description, Examples, Use Cases, and Notes are non-normative. 
 
 In Section 4, the values of the `Term IRI` and `Definition` are normative. The values of `Term Name` `skos:pref:Label` are non-normative, although one can expect that the namespace abbreviation prefix is one commonly used for the term namespace.  `Label` and the values of all other properties (such as `Examples` and `Notes`) are non-normative.
+**End text for alignment**
 
 ### 1.6 Namespace abbreviations
 

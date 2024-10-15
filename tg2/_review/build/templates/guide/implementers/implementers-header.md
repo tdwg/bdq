@@ -36,14 +36,28 @@ Bibliographic citation
 
 ## 1 Introduction (non-normative)
 
-This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
+Purpose
+: This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
 
-## 1.1 Independence (normative) 
+### 1.1 Target Audience
 
-Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
+This document is for software developers needing a technical understanding of the BDQ Core Tests.
+
+### 1.3 Status of the content of this document
+
+Section 1 is non-normative.
+
+Other sections are marked as normative or non-normative.
+
+### 1.4 Namespace abbreviations
+
+The following namespace abbreviations are used in this document:
 
 ## 2 About the Tests and their Implementation
 
+## 2.1 Independence (normative) 
+
+Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
 
 ### 2.1 The Concept of "EMPTY" in BDQ Core (normative)
 
@@ -143,10 +157,9 @@ etc.
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
 
-#### 2.2.3 Interpreted As
+#### 2.2.3 Interpreted As (normative)
 
-In the Specifications the phrase "interpreted as" means for Implementors, (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
-
+In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
 ## 3 Compliant Implementation (normative)
 

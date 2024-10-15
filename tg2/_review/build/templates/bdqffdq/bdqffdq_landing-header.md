@@ -53,18 +53,14 @@ The framework considers data to have quality with respect to some specified use.
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
 
-
-### 1.1 Target Audience and Purpose
-
-#### 1.1.1 Target Audience
-
-Technical users.
-
-#### 1.1.2 Purpose
-
-This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
+Purpose
+: This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
 The ontology follows open world principles and has limited restrictions.
 This document gathers normative statements about how to use the Frameowrk in a meaningful way. 
+
+### 1.1 Target Audience
+
+Technical users.
 
 ### 1.2 Documents about the bdqffdq: ontology
 
@@ -76,6 +72,15 @@ The bdqffdq: vocabulary is an ontology, documentation for it can be found in:
 - The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
 
 In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
+
+### 1.2.1 Distributions (normative)
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
+| Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
+| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
+
 
 ### 1.2 Namespace abbreviations
 
@@ -111,13 +116,6 @@ Other sections of this document are marked as normative or non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.4 Distributions (normative)
-
-| Description | IRI | Download URL |
-| ----------- | --- | ------------ |
-| Human Readable Term List |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
-| Human Readable Vocabulary Extension |  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
-| Owl Ontology | | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../vocabulary/bdqffdq.owl) |
 
 ### 1.5 Diagram of classes and properties (non-normative) 
 
