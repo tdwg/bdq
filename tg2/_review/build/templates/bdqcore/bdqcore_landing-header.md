@@ -105,14 +105,11 @@ The test specifications are agnostic about where in the biodiversity data lifecy
 
 ### 1.3 Types of tests (non-normative)
 
-[!---check out the wording Paul put in the BDQ_Core_Users_Guide.md - that is nice and simple wording---AC]
-
-The concept of 'tests' in the context of this standard include four distinct types: VALIDATION; ISSUE; AMENDMENT and MEASURE.
-
+The concept of 'tests' in the context of this standard include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure).
 
 #### 1.3.1 Validation 
 
-alidation Tests evaluates values in one or more Darwin Core terms (https://dwc.tdwg.org/list/)for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga et al. 2017). For example, VALIDATION_TAXONRANK_NOTEMPTY will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". The formal response of Validation Tests take one of four forms. 
+Validation Tests evaluates values in one or more Darwin Core terms (https://dwc.tdwg.org/list/)for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga et al. 2017). For example, VALIDATION_TAXONRANK_NOTEMPTY will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". The formal response of Validation Tests take one of four forms. 
 
 1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external authority service (bdq:sourceAuthority) is unavailable
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run
@@ -139,7 +136,7 @@ When carrying out Amendments where numeric vales are concerned (e.g. feet to met
 
 #### 1.3.4 Measure 
 
-Most SingleRecord Measure Tests defined in BDQ Core count the number of Validation or Amendment Tests with a specified Response.Result in a bdqffdq:SingleRecord. Measure Tests return a Response.result as either a numeric value or "COMPLETE" or "NOT_COMPLETE".  Measure Tests can also be accumulated across multiple records (bdqffdq:MultiRecord).
+Measure Tests defined in BDQ Core generally count the number of Validation or Amendment Tests with a specified Response.Result in a bdqffdq:SingleRecord. Measure Tests return a Response.result as either a numeric value or "COMPLETE" or "NOT_COMPLETE".  Measure Tests can also be accumulated across multiple records (bdqffdq:MultiRecord).
 
 Data are found to be fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". The majority of BDQ Core Tests are Validations phrased in the positive sense to identify biodiversity data that are fit for the Use Case, as identified in the user scenario analyses performed by BDQ Task Group 3 (https://github.com/tdwg/bdq/tree/master/tg3).   
 
