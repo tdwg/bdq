@@ -158,7 +158,7 @@ etc.
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
 
-#### 2.3.3 The Cocept of "interpreted as" (normative)
+#### 2.3.3 The Concept of "interpreted as" (normative)
 
 In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: (1) where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
