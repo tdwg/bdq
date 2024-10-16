@@ -256,9 +256,9 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
      
      TODO: Add diagram
 
-### 3.8 Cardinality of bdqffdq terms 
+### 3.8 Cardinality of bdqffdq terms (non-normative)
 
-The content of this section is non-normative.
+The content of this section is non-normative, see the [bdqffdq: landing page](../../bdqffdq/index.md) for related normative guidance. 
 
 The expected relationships between classes in bdqffdq can be expressed as cardinality statements.  Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in bdqffdq are expected to be related to each other through object properties.  Examples here are given for terms related to Validations.
 
@@ -277,12 +277,12 @@ Each Validation has zero or one Consulted InformationElement
 Each Consulted InformationElement is composedOf one to many concrete information element terms.
 Each Validation has one and only one ResourceType.
 
-Methods are associative entities relating DataQualityNeeds to Specifications.
+Methods look like, but are not, associative entities relating DataQualityNeeds to Specifications.
 
-Each Validation has one to many ValidationMethods.
+Each Validation has one and only one ValidationMethod.
 Each ValidationMethod is for one and only one Validation.
 Each ValidationMethod is for one and only one Specification.
-Each Specification has one to many related ValidationMethods.
+Each Specification has one and only one related ValidationMethod.
 
 Each Specification has one and only one hasExpectedResponse.
 Each Specification has zero or one hasAuthoritiesDefaults.
@@ -290,15 +290,16 @@ Each Specification has zero to many Arguments.
 Each Argument has one and only one Parameter.
 Each Argument has one and only one hasArgumentValue.
 
-Implementations are associative entities relating Specifications, Mechanisms, and Assertions.
+Implementations look like, but are not, associative entities relating Specifications, Mechanisms, and Assertions.
 
 Each Specification is used in zero to many Implementations.
 Each Mechanism implements one to many Implementations.
 Each Assertion is produced by one and only one Implementation.
 Each Implementation uses one and only one Specification.
 Each Implementation is implemented by one and only one Mechansism.
-Each Implementation ***fix***
+Each Implementation produces one to many Assertions.
 
+It is important that the chain of relationships from an instance of a bdqffdq:Assertion to a DataQualityNeed (e.g. an instance of a bdqffdq:Validation) be a chain of one to one relationships.  To identify what test with what parameters made an assertion, it must be possible to follow the chain of relationships from an assertion to a single implementation to a single specification (with zero to many parameters) to a single method to a single DataQualityNeed (e.g. a validation, with one to many information elements).  Multiplicity should only be possible following on through policy to use cases (an assertion may pertain to multiple use cases), or when going from a DataQualityNeed to assertions.  It is expected that an instance of a Validation would produce many instances of ValidationAssertions, each of those ValidationAssertions must be able to be related to the sole Validation that produced it.  
 
 ## 4 Term index
 
