@@ -49,7 +49,7 @@ Draft Standard for Submission
 - [3.5 Responses](#35-responses)
 - [3.6 Organization of the bdqcore classes](#36-organization-of-the-bdqcore-classes-)
 - [3.7 Example representation of a bdqcore test](#37-example-representation-of-a-bdqcore-test)
-- [3.8 Cardinality of bdqffdq terms](#38-cardinality-of-bdqffdq-terms-)
+- [3.8 Cardinality of bdqffdq terms (non-normative)](#38-cardinality-of-bdqffdq-terms-(non-normative))
 - [4 Term index](#4-term-index)
 - [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.3)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-(portions-normative,-see-13))
 
@@ -196,7 +196,7 @@ Formally, in the Data Quality Needs level, the framework starts with a Use Case,
 
 The framework expects that Quality Assurance is provided for through specification of a set of Measures defined to operate on a MultiRecord, and which specify a Response.result of COMPLETE or NOT_COMPLETE.  A MultiRecord Measure may specify that it is COMPLETE if all instances of a SingleRecord Validation are COMPLIANT.  
 
-For Quality Control, MultiRecord Measures may be defined to return a count of Response.value of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
+For Quality Control, MultiRecord Measures may be defined to return a count of Response.result of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
 ![Diagram of ValidationAssertion, AmendmentAssertion, MeasureAssertion and IssueAssertion classes as subtype of Assertion class, with Assertion as a rectangular node, ReportConcepts as its parent above it, and the other 4 classes below the Assertion and linked to it. ](assertions.png "Report concept paralels to the 4 central assertion types in the framework.")
 
@@ -277,9 +277,9 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
      
      TODO: Add diagram
 
-### 3.8 Cardinality of bdqffdq terms 
+### 3.8 Cardinality of bdqffdq terms (non-normative)
 
-The content of this section is non-normative.
+The content of this section is non-normative, see the [bdqffdq: landing page](../../bdqffdq/index.md) for related normative guidance. 
 
 The expected relationships between classes in bdqffdq can be expressed as cardinality statements.  Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in bdqffdq are expected to be related to each other through object properties.  Examples here are given for terms related to Validations.
 
@@ -298,12 +298,12 @@ Each Validation has zero or one Consulted InformationElement
 Each Consulted InformationElement is composedOf one to many concrete information element terms.
 Each Validation has one and only one ResourceType.
 
-Methods are associative entities relating DataQualityNeeds to Specifications.
+Methods look like, but are not, associative entities relating DataQualityNeeds to Specifications.
 
-Each Validation has one to many ValidationMethods.
+Each Validation has one and only one ValidationMethod.
 Each ValidationMethod is for one and only one Validation.
 Each ValidationMethod is for one and only one Specification.
-Each Specification has one to many related ValidationMethods.
+Each Specification has one and only one related ValidationMethod.
 
 Each Specification has one and only one hasExpectedResponse.
 Each Specification has zero or one hasAuthoritiesDefaults.
@@ -311,15 +311,16 @@ Each Specification has zero to many Arguments.
 Each Argument has one and only one Parameter.
 Each Argument has one and only one hasArgumentValue.
 
-Implementations are associative entities relating Specifications, Mechanisms, and Assertions.
+Implementations look like, but are not, associative entities relating Specifications, Mechanisms, and Assertions.
 
 Each Specification is used in zero to many Implementations.
 Each Mechanism implements one to many Implementations.
 Each Assertion is produced by one and only one Implementation.
 Each Implementation uses one and only one Specification.
 Each Implementation is implemented by one and only one Mechansism.
-Each Implementation ***fix***
+Each Implementation produces one to many Assertions.
 
+It is important that the chain of relationships from an instance of a bdqffdq:Assertion to a DataQualityNeed (e.g. an instance of a bdqffdq:Validation) be a chain of one to one relationships.  To identify what test with what parameters made an assertion, it must be possible to follow the chain of relationships from an assertion to a single implementation to a single specification (with zero to many parameters) to a single method to a single DataQualityNeed (e.g. a validation, with one to many information elements).  Multiplicity should only be possible following on through policy to use cases (an assertion may pertain to multiple use cases), or when going from a DataQualityNeed to assertions.  It is expected that an instance of a Validation would produce many instances of ValidationAssertions, each of those ValidationAssertions must be able to be related to the sole Validation that produced it.  
 
 ## 4 Term index
 

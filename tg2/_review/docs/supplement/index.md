@@ -265,6 +265,46 @@ Summary of the distribution of tests by test Type and specific Darwin Core Terms
     GROUP BY ?sie ?testType
     ORDER BY ?sie ?testType
 
+Given a Specification (as would be known when starting with a bdqffdq:Assertion and following bdqffdq:producesAssertion to a bdqffdq:Implementation then bdqffdq:usesSpecification), what test was run with which argument values for which parameters: 
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) 
+    WHERE { 
+      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test . 
+      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      OPTIONAL { 
+         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter . 
+         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
+      } .
+      FILTER (STR(?specification) = "urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544")
+    }
+    GROUP BY ?test ?label ?description
+
+Given an Assertion, what test was run with which argument values for which parameters by which mechanism to produce it: 
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism
+    WHERE { 
+      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test . 
+      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      OPTIONAL { 
+         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter . 
+         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
+      } .
+      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
+      ?implementation bdqffdq:implementedBy ?mechanism .
+      FILTER (STR(?assertion) = "{id of assertion to look up}")
+    }
+    GROUP BY ?test ?label ?description ?mechanism
+
 ## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2: Data Quality Tests and Assertions was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized however, that any software was likely to be far less stable than defining a CORE suite of tests and an associated framework, so the software component was quickly dropped. We also limitied the scope of the tests to apply only to data encoded using the Darwin Core standard (Weiczorek et al. 2012). This gave us a specific target, but also associated problems noted below.
@@ -336,7 +376,7 @@ The BDQ Core MultiRecord Measures all take the output of other tests as their in
 
 In the BDQ Core suite of tests, for each bdqffdq:SingleRecord Validation, there is defined a bdqffdq:MultiRecord Measure that returns COMPLETE when all records in the bdqffdq:MultiRecord have a Response.result of COMPLIANT, and NOT_COMPLETE when they are not.  Under QualityAssurance, these measures serve as the key criterion for identifying data which have quality for the relevant UseCase.  Data are found to be fit for some Use if all Validations comprising that Use have a Response.result of COMPLIANT, and if such are included, all (non-numeric) Measures comprising that Use have a Response.result of COMPLETE.  A MultiRecord dataset is fit for use for a given UseCase if each of the MultiRecord Quality Aassurance Measures on that MultiRecord returns COMPLETE.  If this is not the case, SingleRecords where the Validations are other than COMPLIANT are filtered out until all of the MultiRecord Quality Assurance measures return COMPLETE. The MultiRecord Quality Assurance Measures are the formal means the Fitness for Use Framework provides for ensuring that a dataset is fit for use for a given Use Case.  Thus, under QualityAssurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the criteria of bdqffdq:MultiRecord Measures for Completeness, such that a filtered bdqffdq:MultiRecord has Response.result values of COMPLETE for all bdqffdq:MultiRecord Measures. 
 
-We have also defined MultiRecord Measures that count the number of instances of some state for the Response objects from some SingleRecord Validation run over all the records in a dataset.  For example, to return a count of Response.value of COMPLIANT for a particular Validation across a data set, thus providing a numeric measure of how fit a dataset is for some purpose.  This subset of measures in BDQ Core simply counts the Responses from a given Validation that have Response.result of COMPLIANT.  For Quality Control, these numbers identify where (and how much) work is needed to make more of a dataset fit for use for a given Use Case.  These MultiRecord Measures that return counts can also be run before an Amendment step in a data processing pipeline, and then run again after applying all of the proposed changes to the data from the Amendments to the data in the pipeline.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data for a given Use Case.  We have chosen to phrase these as returning a count of COMPLIANT (but see note in [3.2.3](#333-considerations-for-use-of-multirecord-measures) below), and let consumers calculate percentages of compliant from the number of records in the dataset. Other statistics are possbile, but under the constraint of the Framework (bdqffdq:), a Measure may only return a single numeric value or COMPLETE/NOT_COMPLETE.
+We have also defined MultiRecord Measures that count the number of instances of some state for the Response objects from some SingleRecord Validation run over all the records in a dataset.  For example, to return a count of Response.result of COMPLIANT for a particular Validation across a data set, thus providing a numeric measure of how fit a dataset is for some purpose.  This subset of measures in BDQ Core simply counts the Responses from a given Validation that have Response.result of COMPLIANT.  For Quality Control, these numbers identify where (and how much) work is needed to make more of a dataset fit for use for a given Use Case.  These MultiRecord Measures that return counts can also be run before an Amendment step in a data processing pipeline, and then run again after applying all of the proposed changes to the data from the Amendments to the data in the pipeline.  A comparison of these pre-amendment and post-amendment phases will identify how much accepting all of the proposed changes from the amendments will improve the quality of the data for a given Use Case.  We have chosen to phrase these as returning a count of COMPLIANT (but see note in [3.2.3](#333-considerations-for-use-of-multirecord-measures) below), and let consumers calculate percentages of compliant from the number of records in the dataset. Other statistics are possbile, but under the constraint of the Framework (bdqffdq:), a Measure may only return a single numeric value or COMPLETE/NOT_COMPLETE.
 
 MultiRecord measures can also operate directly on the data, that is, to use data terms as the input InformationElements. For example, a MultiRecord Measure could be framed to measure the average number of individuals reported in dwc:individualCount in a dataset, or could be framed to report another statistic on that or another term.  We have defined no Measures of this form in BDQ Core.
 

@@ -181,15 +181,20 @@ Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_
 
 A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementors SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first.  Implementors MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
-Responses in a Specification are expressed in an abbreviated form for readability by implementors.
+Responses in a Specification are expressed in an abbreviated form for readability by implementors, expanding these to string properties on a Response object gives:.
 
-EXTERNAL_PREREQUISITES_NOT_MET means Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.value=null, Response.comment={some non-null description of the failure condition}
+EXTERNAL_PREREQUISITES_NOT_MET means Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some non-null description of the failure condition}
 
-INTERNAL_PREREQUISITES_NOT_MET means Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.value=null, Response.comment={some non-null description of the failure condition}.
+INTERNAL_PREREQUISITES_NOT_MET means Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some non-null description of the failure condition}.
 
-COMPLIANT means Response.status=RUN_HAS_RESULT, Response.value=COMPLIANT, Response.comment={some non-null description of the failure condition}.
+COMPLIANT means Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some non-null description of the failure condition}.
 
 etc.
+
+Expressed with bdqffdq terms, as would be if Assertions are expressed in RDF, the first of these would be:
+
+EXTERNAL_PREREQUISITES_NOT_MET means some bdqffdq:Assertion bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, that Assertion bdqffdq:hasResponseResult Response.null,  that Assertion bdqffdq:hasResponseComment "{some non-null description of the failure condition}"
+
 
 | Concept | bdqffdq Term(s) | Description |
 | ------- | ------- | ----------- |
@@ -202,7 +207,11 @@ etc.
 
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
-In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: (1) where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
+In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: 
+
+1. where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
+2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
+3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
 ## 3 Compliant Implementation (normative)
 
@@ -220,7 +229,7 @@ The standard is agnostic as to how data are presented and piped within some fram
 
 <!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, Repeated in 1.7 --->
 
-For each core SingleRecord Validation, an implementation intended for Quality Control SHOULD include a corresponding MultiRecord Measure that counts the number of Response.result values that are COMPLIANT.  An implementation MAY provide similar MultiRecord Measures that report aggregated counts of other Response.status and Response.value values.  
+For each core SingleRecord Validation, an implementation intended for Quality Control SHOULD include a corresponding MultiRecord Measure that counts the number of Response.result values that are COMPLIANT.  An implementation MAY provide similar MultiRecord Measures that report aggregated counts of other Response.status and Response.result values.  
 
 For each core SingleRecord Validation, an implementation intended for Quality Assurance SHOULD include a corresponding MultiRecord Measure that returns COMPLETE when all pertenent Response.result values are COMPLIANT (or for some Measures also INTERNAL_PREREQUSISITES_NOT_MET).
 
@@ -242,7 +251,7 @@ Implementations MAY identify InformationElements as ActedUpon or Consulted. Pres
 
 Tests MAY specify that information elements are ActedUpon or Consulted. We do not do so here, but ActedUpon and Consulted properties of an Information Element are an extension point that may be included when specifying the Information Elements pertinent to a Test
 
-MultiRecord Measues that return counts where the input InformationElement is Response values from Tests on SingleRecords MUST report only a single count as the Response.value, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percents), the number of each value of Response.status encountered, and the number of each Response.value encountered.  Measures under the framework are only allowed to return COMPLETE/NOT_COMPLETE, or a single number, if it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use for this. 
+MultiRecord Measues that return counts where the input InformationElement is Response values from Tests on SingleRecords MUST report only a single count as the Response.result, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percents), the number of each value of Response.status encountered, and the number of each Response.result encountered.  Measures under the framework are only allowed to return COMPLETE/NOT_COMPLETE, or a single number, if it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use for this. 
 
 ## 5 Responses from Tests
 
@@ -601,7 +610,7 @@ If validation data could be conflated with actual data, see: [Identifying Synthe
 
 Accompanying the Core Test descriptors is a set of Test validation data.  This Test validation data is intended for implementors to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test.  Each Test specification could be graphed as a flow chart with several paths, the Test validation data are intended to cover each node and each path within each Test specification with at least a single case.  These are not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviour.  
 
-The Test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single Test.  The file has columns identifying the validation case, the Test that the row is intended to validate, the expected Response.status, Response.value, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given Test).   
+The Test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single Test.  The file has columns identifying the validation case, the Test that the row is intended to validate, the expected Response.status, Response.result, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given Test).   
 
 The Test validation records are all fragmentary flat Darwin Core Occurrence records.  Each row contains values for only those Darwin Core terms that are relevant input to the particular validation.   The validation records are all fragmentary, consisting of a mixture of real and artificial data with most of the records being synthetic.  The validation data are a set of 1191 records, with about 10 validation cases for each Test.  The set of rows for a particular Test are designed to validate that an implementation of that particular Test performs as expected against the specifications.   This data set is referred to as the 'Test Validation Data'.   The set of about 10 validation records for each Test are designed to exercise all of the decision pathways in the specification of the Test.  
 
@@ -660,11 +669,11 @@ A validation Test case evaluating empty, where no dwc: term columns contain a va
 
 "2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-A validation Test case for a validation where the input data result in a Response.value of NOT_COMPLIANT (dataID=7)
+A validation Test case for a validation where the input data result in a Response.result of NOT_COMPLIANT (dataID=7)
 
 "8","7","7","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","NOT_COMPLIANT","dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value ","","","","","","","","","","","","Austria","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-A validation Test case for a validation where the input data result in a Response.value of COMPLIANT (dataID=8)
+A validation Test case for a validation where the input data result in a Response.result of COMPLIANT (dataID=8)
 
 "9","8","8","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","COMPLIANT","dwc countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value","","","","","","","","","","","","US","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
@@ -697,15 +706,15 @@ Darwin Core input columns are specified as "dc:type","dcterms:license","dwc:acce
 
 Implementations SHOULD provide support for each parameter value specified in the example data. 
 
-Implementations MUST produce structured Response values with a Response.status, Response.value, and Response.comment.  
+Implementations MUST produce structured Response values with a Response.status, Response.result, and Response.comment.  
 
 In order to be considered as compliant with this standard, an implementation of the Core Tests MUST fulfill all of the REQUIRED elements of this section.
 
-Human readable Data Quality Reports for Quality Control MAY take any appropriate form, they MAY aggregate Response values and comments, they MAY present results organized by Test, or by data record, or by frequency of problem, or any other form suitable for presentation.  Data Quality Reports for Quality Control SHOULD allow users to access individual Response.status Response.value Response.comment results.  
+Human readable Data Quality Reports for Quality Control MAY take any appropriate form, they MAY aggregate Response values and comments, they MAY present results organized by Test, or by data record, or by frequency of problem, or any other form suitable for presentation.  Data Quality Reports for Quality Control SHOULD allow users to access individual Response.status Response.result Response.comment results.  
 
 Response.comment values SHOULD be internationalized as appropriate for the the consumers of data quality reports.  
 
-Response.status and Response.value constants SHOULD be given internationalized labels as appropriate for the the consumers of data quality reports.  
+Response.status and Response.result constants SHOULD be given internationalized labels as appropriate for the the consumers of data quality reports.  
 
 For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the validation data for that Test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that Test.
 
