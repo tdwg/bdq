@@ -60,7 +60,7 @@ This document gathers normative statements about how to use the Frameowrk in a m
 
 ### 1.1 Target Audience
 
-Technical users.
+Technical users who need to understand how to describe data quality with the framework.
 
 ### 1.2 Documents about the bdqffdq: ontology
 
