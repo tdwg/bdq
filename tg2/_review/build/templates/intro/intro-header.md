@@ -162,13 +162,11 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 ## 4 Acknowledgements
 
-Ian Engelbrecht, ?? Add to contributors list ??
+We acknowldge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend the two face-to-face meetings for the development of BDQ Core. We also acknowledge the support of Paul Morris by The Museum of Comparative Zoology.
 
-GBIF, IDigBio, ALA, CRIA, TDWG...
+The authors also gratefully acknowledge all those who have commented on the issues during the development of BDQ Core.
 
-Funding from TDWG, Sao Paulo, ALA, GBIF, The Museum of Comparative Zoology, and the US NSF has contributed to the development of BDQ Core.
-
-### 4.1 Contributors
+### 4.1 Contributor Roles
 
 Many people have contributed to the development of the BDQ Core standard.  
 
