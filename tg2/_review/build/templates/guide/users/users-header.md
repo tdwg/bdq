@@ -117,7 +117,9 @@ Some Tests are parameterized.
 
 When a Test is Parameterized, and a value other than the default value is used for some Parameter, reports SHOULD identify the Tests to you using at least the Label (rdfs:Label) for the Test class, e.g. VALIDATION_MINDEPTH_INRANGE in combination with the Parameter (e.g. bdq:maximumValidDepthInMeters) and the value of the argument that replaced the Parameter in this specific case (e.g. 1642).
 
-    VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642  
+    VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642 
+
+So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
 
 # 3 Reading the Quick Reference Guide to the Tests (non-normative)
 
