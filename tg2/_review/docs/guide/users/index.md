@@ -33,9 +33,10 @@ Draft Standard for Submission
 
 
 - [1 Introduction](#1-introduction)
-- [1.1 Target Audience](#11-target-audience)
-- [1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [1.3 RFC 2119 key words (normative)](#13-rfc-2119-key-words-(normative))
+- [1.1 Purpose](#11-purpose)
+- [1.2 Audience](#12-audience)
+- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
+- [1.4 RFC 2119 key words (normative)](#14-rfc-2119-key-words-(normative))
 - [2 A Guide to the Tests](#2-a-guide-to-the-tests)
 - [2.1 Test Types (non-normative)](#21-test-types-(non-normative))
 - [2.2 Test Inputs and Outputs](#22-test-inputs-and-outputs)
@@ -55,18 +56,19 @@ This users guide describes how consumers of data quality reports can interpret t
 
 See also the [Implementer's Guide](BDQ_Core_Implementers_guide.md) for those writing sofware to implement the tests.
 
-Purpose
-: This is a users guide to the BDQ Core tests and assertions that they make.
+### 1.1 Purpose
 
-### 1.1 Target Audience
+This is a users guide to the BDQ Core tests and assertions that they make.
+
+### 1.2 Audience
 
 This document is for consumers of data quality reports.
 
-### 1.2 Status of the content of this document
+### 1.3 Status of the content of this document
 
 Each sections of this document is marked as normative or non-normative.
 
-### 1.3 RFC 2119 key words (normative)
+### 1.4 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
@@ -74,13 +76,13 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## 2.1 Test Types (non-normative)
 
-TThere are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
+There are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
-**Validation Tests** examine the values of one or more Darwin Core terms (https://dwc.tdwg.org/list/) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
+**Validation Tests** examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
 
 **Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
 
-**Amendment Tests** examine the values of Darwin Core terms to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
+**Amendment Tests** examine the values of Darwin Core terms to identify potential changes or additions to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
 
 **Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
 
@@ -117,9 +119,9 @@ Validation Tests can also have a response of RUN_HAS_RESULT which tells you that
 
 Amendment Tests can have a response of INTERNAL_PREREQUISITES_NOT_MET or FILLED_IN, AMENDED, or NOT_AMENDED. FILLED_IN tells you that the Amendment is proposing that a value that was empty in the data under test can be filled in with a non empty value.  This proposal will be found in the Response.result. A Response.status="AMENDED" tells you that the Amendment is proposing a change to an existing value, and this proposal will be found in the Response.result.  "NOT_AMENDED" tells you that the prerequisites for running the Amendment were met, but that it did not propose any change to the data.
 
-Mesure Tests generally summarise the results of running the Validations and Amendments and in one case provides an indication of the length of the period of the value of dwc:eventDate. Measure Tests MUST return either a numeric value or a Response.status="INTERNAL_PREREQUISITES_NOT_MET". Most Measure Tests count the number of Validation or Amendment Tests that have a specifified Response.Result. For example, MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs. For example, an event date to at least one day for phenology studies or to at least one year for other purposes.  
+Mesure Tests generally summarise the results of running the Validations and Amendments and in one case provides an indication of the length of the period of the value of dwc:eventDate. Measure Tests MUST return either a numeric value or a Response.status="INTERNAL_PREREQUISITES_NOT_MET". Most Measure Tests count the number of Validation or Amendment Tests that have a specified Response.Result. For example, MEASURE_EVENTDATE_DURATIONINSECONDS returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs. For example, an event date to at least one day for phenology studies or to at least one year for other purposes.  
 
-Issues Tests result in a response of INTERNAL_PREREQUISITES_NOT_MET or RUN_HAS_RESULT and a result of POTENTIAL_ISSUE or NOT_ISSUE.  Potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result="POTENTIAL_ISSUE" if dwc:dataGeneralizations contains a value. The value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review for any Use Case to determine if the data are fit for purpose or not.   An Issue Test that has a Response.result="POTENTIAL_ISSUE" is making an assertions that is the same as a Validation Test reporting a Response.result="NOT_COMPLIANT". Issue Tests are the converse of Validation Tests.  The meaning, however, of a Response.result="NOT_ISSUE" is not the same as a Response.result="COMPLIANT" from a Validation Test. NOT_ISSUE means that no issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisify some critierion for fitness for some Use Case.  A Response.result="POTENTIAL_ISSUE" has no analog in Validation Tests; it marks the presence of something in the data that will need evaluation by a human to determine whether or not the data are fit for their use or not.  One Issue Test in BDQ Core evaluates whether dwc:dataGeneralizations contains any value. If it does, then the Test reports a Response.result="POTENTIAL_ISSUE", meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose.  See: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../bdqcore/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY)  
+Issues Tests result in a response of INTERNAL_PREREQUISITES_NOT_MET or RUN_HAS_RESULT and a result of POTENTIAL_ISSUE or NOT_ISSUE.  Potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result="POTENTIAL_ISSUE" if dwc:dataGeneralizations contains a value. The value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other Darwin Core terms will require human review for any Use Case to determine if the data are fit for purpose or not.   An Issue Test that has a Response.result="POTENTIAL_ISSUE" is making an assertion that is the same as a Validation Test reporting a Response.result="NOT_COMPLIANT". Issue Tests are the converse of Validation Tests.  The meaning, however, of a Response.result="NOT_ISSUE" is not the same as a Response.result="COMPLIANT" from a Validation Test. NOT_ISSUE means that no issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisify some critierion for fitness for some Use Case.  A Response.result="POTENTIAL_ISSUE" has no analog in Validation Tests; it marks the presence of something in the data that will need evaluation by a human to determine whether or not the data are fit for their use or not.  One Issue Test in BDQ Core evaluates whether dwc:dataGeneralizations contains any value. If it does, then the Test reports a Response.result="POTENTIAL_ISSUE", meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose.  See: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../bdqcore/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY)  
 
 # 2.3 Amendments Only Propose Changes (normative)
 
@@ -135,15 +137,14 @@ When a Test is Parameterized, and a value other than the default value is used f
 
 # 3 Reading the Quick Reference Guide to the Tests (non-normative)
 
-The BDQ Core Quick Reference Guide lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
+The BDQ Core [Quick Reference Guide](../bdqcore/index.md) lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
-For each Test, the Quick Reference Guide lists ways to identify the Test (Label: the brief human readable means for identifying a Test; skos:prefLabel: A human readable label spelled out in words; Versioned IRI: the means for software to identify the Test). Does the Test operates on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do is provided, with a more detailed description for implementors (consisting of Specification, InformationElements ActedIpon and Consulted, any Paramters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
+For each Test, the [Quick Reference Guide](../bdqcore/index.md) lists ways to identify the Test (Label: the brief human readable means for identifying a Test; skos:prefLabel: A human readable label spelled out in words; Versioned IRI: the means for software to identify the Test). Does the Test operate on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
 
-Two examples of Test data input and outpout are provided to illustrate opposing behaviors of the test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other of "NOT_COMPLIANT".  See the implementation guide for information about the set of test validation data.   
+Two examples of Test data input and output are provided to illustrate opposing behaviors of the test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other of "NOT_COMPLIANT".  See the implementation guide for information about the set of test validation data.   
 
 Each Test lists UseCases describing data quality needs to which each Test is applicable. Notes provide additional guidance for understanding test results and for implementation.  
 
-[Quick Reference Guide to the tests](../bdqcore/index.md)
 
 # 4 Time and TimeZones (non-normative)
 

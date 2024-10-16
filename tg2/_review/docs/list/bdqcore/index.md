@@ -4,47 +4,25 @@
 
 ## 1 Introduction
 
-This document lists the BDQ Core tests. It includes terms from the
-namespaces `bdqcore:` (the core tests), `bdq:` (parent namespace),
-`bdqffdq:` (framework for data quality), `bdqdim:` (data quality dimension
-from xxx), `bdqenh:` (test enhancements) and `bdqcrit:` (test criteria).
-For background details see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J,
-Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA,
-Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved
-Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity
-Information Science and Standards 4: e50889.
-https://doi.org/10.3897/biss.4.50889.
+This document lists the BDQ Core tests. It includes terms from the namespaces `bdqcore:` (the core tests), `bdq:` (parent namespace), `bdqffdq:` (framework for data quality), `bdqdim:` (data quality dimension from Veiga et al. 2017), `bdqenh:` (test enhancements) and `bdqcrit:` (test criteria). For background details see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
 
-The focus of this standard are a suite of tests that operate on a single
-(SingleRecord) Darwin Core (https://dwc.tdwg.org/) encoded record, for
-example VALIDATION_COUNTRYCODE_STANDARD. This test checks the value of
-dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country
-Code using https://www.iso.org/obp/ui/#search. The data quality framework
-(ref) on which these tests are based, allows for MultiRecord tests that
-could identify outliers within a data set or could accumulate results of a
-SingleRecord tests, such as above, for example 70% of records in a dataset
-had a valid dwc:countryCode.
+The focus of this standard are a suite of tests that operate on a single (SingleRecord) Darwin Core (https://dwc.tdwg.org/) encoded record, for example VALIDATION_COUNTRYCODE_STANDARD. This test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search. The data quality framework (ref) on which these tests are based, allows for MultiRecord tests that could identify outliers within a data set or could accumulate results of a
+SingleRecord tests, such as above, for example 70% of records in a dataset had a valid dwc:countryCode.
 
-Each test is designed to stand in isolation. This is by design to both
-support the mixing and matching of these and other tests to meet particular
-data quality needs, and so as not impose any particular model of test
-execution on implementation frameworks. Implementations of test execution
-frameworks may execute tests in on data records in parallel, on data
+Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data
 records in sequence, as queries on data sets, on unique values.
 
-Tests are paired in that all AMENDMENTs require a corresponding VALIDATION
-that assesses some aspect of data quality. An AMENDMENT may be able to
-improve the quality of data with respect to that VALIDATION.
+Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that assesses some aspect of data quality. An AMENDMENT may be able to improve the quality of data with respect to that VALIDATION.
 
 ## 1.1 Types of Tests
 
 There are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
-**Validation Tests** examine the values of one or more Darwin Core terms (https://dwc.tdwg.org/list/) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
+**Validation Tests** examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
 
 **Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
 
-**Amendment Tests** examine the values of Darwin Core terms to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
+**Amendment Tests** examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
 
 **Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
 
@@ -116,9 +94,9 @@ ensure that implementers have no ambiguity about how the test should be coded.
 
 **IE Class**. The Darwin Core Information Element class, for example "Record-level"
 
-**InformationElement:ActedUpon**. The Darwin Core term(s) that are the focus of the test, for example "dwc:country, dwc:countryCode"
+**InformationElement:ActedUpon**. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are the focus of the test, for example "dwc:country, dwc:countryCode"
 
-**InformationElement:Consulted**. The Darwin Core term(s) that are required to be consulted in the process of evaluating the InformationElements:ActedUpon, for example "dwc:countryCode"
+**InformationElement:Consulted**. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are required to be consulted in the process of evaluating the InformationElements:ActedUpon, for example "dwc:countryCode"
 
 **Specification**. The formal definition of how the test must be implemented, for example "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT"
 
