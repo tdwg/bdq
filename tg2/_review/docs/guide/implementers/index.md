@@ -34,54 +34,74 @@ Draft Standard for Submission
 
 - [1 Introduction (non-normative)](#1-introduction-(non-normative))
 - [1.1 Target Audience](#11-target-audience)
-- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
-- [1.4 Namespace abbreviations](#14-namespace-abbreviations)
+- [1.3 Status of the Content of this document](#13-status-of-the-content-of-this-document)
+- [1.4 Namespace Abbreviations](#14-namespace-abbreviations)
 - [2 About the Tests and their Implementation](#2-about-the-tests-and-their-implementation)
 - [2.1 Independence (normative)](#21-independence-(normative)-)
-- [2.1 The Concept of "EMPTY" in BDQ Core (normative)](#21-the-concept-of-"empty"-in-bdq-core-(normative))
-- [2.1.1 Concerns of Empty (normative)](#211-concerns-of-empty-(normative))
-- [2.1.2 Example implementation of a function to assess Empty (non-normative)](#212-example-implementation-of-a-function-to-assess-empty-(non-normative))
-- [2.2 Reading Test Descriptors (non-normative)](#22-reading-test-descriptors-(non-normative))
-- [2.2.1 Key Parts of a descriptor](#221-key-parts-of-a-descriptor)
-- [2.2.2 Reading a Specification](#222-reading-a-specification)
-- [2.2.3 Interpreted As (normative)](#223-interpreted-as-(normative))
+- [2.2 The Concept of "EMPTY" in BDQ Core (normative)](#22-the-concept-of-"empty"-in-bdq-core-(normative))
+- [2.2.1 The Concept of Empty (normative)](#221-the-concept-of-empty-(normative))
+- [2.2.2 Example implementation of a Function to Assess Empty (non-normative)](#222-example-implementation-of-a-function-to-assess-empty-(non-normative))
+- [2.3 Reading Test Descriptors (non-normative)](#23-reading-test-descriptors-(non-normative))
+- [2.3.1 Key Parts of a Test Descriptor](#231-key-parts-of-a-test-descriptor)
+- [2.3.2 Reading a Specification](#232-reading-a-specification)
+- [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-"interpreted-as"-(normative))
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-(normative))
-- [4 Extension points (normative)](#4-extension-points-(normative))
-- [3 Responses from tests](#3-responses-from-tests)
-- [3.1 The Response Object (normative)](#31-the-response-object-(normative))
-- [3.2 Framework elements not included in bdqcore test descriptions (normative)](#32-framework-elements-not-included-in-bdqcore-test-descriptions-(normative))
-- [4 Guidelines for Implementers](#4-guidelines-for-implementers)
-- [5 Validating Test Implementations (normative)](#5-validating-test-implementations-(normative))
-- [5.1 Introduction (non-normative)](#51-introduction-(non-normative))
+- [4 Extension Points (normative)](#4-extension-points-(normative))
+- [5 Responses from Tests](#5-responses-from-tests)
+- [5.1 The Response Object (normative)](#51-the-response-object-(normative))
+- [5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)](#52-framework-elements-not-included-in-bdq-core-test-descriptions-(normative))
+- [6 Guidelines for Implementers](#6-guidelines-for-implementers)
+- [6.1 Parameters and Changing the Behavior of a Test (normative)](#61-parameters-and-changing-the-behavior-of-a-test-(normative))
+- [6.2 Execution Process are Agnostic (non-normative)](#62-execution-process-are-agnostic-(non-normative))
+- [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-(normative))
+- [6.4 Order of Test Execution.](#64-order-of-test-execution)
+- [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment](#641-phases-pre-amendment,-amendment,-post-amendment)
+- [6.4.2 Test Dependencies](#642-test-dependencies)
+- [6.4.3 Implementing a concrete Test](#643-implementing-a-concrete-test-)
+- [6.4.4 Presenting Darwin Core Data to a Method that Implements a Test](#644-presenting-darwin-core-data-to-a-method-that-implements-a-test)
+- [6.4.5 Example Test Implementation (non-normative)](#645-example-test-implementation-(non-normative))
+- [6.4.6 Implementing an Abstract Test](#646-implementing-an-abstract-test-)
+- [6.4.7 Implementing a Test in a Specific Environment](#647-implementing-a-test-in-a-specific-environment)
+- [7 Presentation of Results](#7-presentation-of-results)
+- [7.1 Data Quality Reports](#71-data-quality-reports)
+- [7.1.1 Example (non-normative)](#711-example-(non-normative))
+- [7.2 Annotations (normative)](#72-annotations-(normative))
+- [8 Validating Test Implementations (normative)](#8-validating-test-implementations-(normative))
+- [8.1 Introduction (non-normative)](#81-introduction-(non-normative))
+- [8.2 Structure of the Validation Data](#82-structure-of-the-validation-data-)
+- [8.3 Examples of the Data for Validating Tests (Informative)](#83-examples-of-the-data-for-validating-tests-(informative))
+- [8.4 Where to Get the Validation Data (non-normative)](#84-where-to-get-the-validation-data-(non-normative))
+- [8.5 Implementation and the Validation Data (normative)](#85-implementation-and-the-validation-data-(normative))
+- [8.6 Tools for Validating Test Implementations with the Validation Data (non-normative)](#86-tools-for-validating-test-implementations-with-the-validation-data-(non-normative)-)
 
 
 
 ## 1 Introduction (non-normative)
 
 Purpose
-: This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
+: This document provides guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core Tests.
 
 ### 1.1 Target Audience
 
 This document is for software developers needing a technical understanding of the BDQ Core Tests.
 
-### 1.3 Status of the content of this document
+### 1.3 Status of the Content of this document
 
 Section 1 is non-normative.
 
 Other sections are marked as normative or non-normative.
 
-### 1.4 Namespace abbreviations
+### 1.4 Namespace Abbreviations
 
 The following namespace abbreviations are used in this document:
 
 ## 2 About the Tests and their Implementation
 
-## 2.1 Independence (normative) 
+### 2.1 Independence (normative) 
 
-Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the tests are being executed.   
+Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed.   
 
-### 2.1 The Concept of "EMPTY" in BDQ Core (normative)
+### 2.2 The Concept of "EMPTY" in BDQ Core (normative)
 
 Empty and NotEmpty are defined as: 
 
@@ -94,36 +114,37 @@ Empty and NotEmpty are defined as:
 
 <!--- end load --->
 
-Data that has passed through arbitrary serializations and transformations can contain many anomolies.  Empty is defined to allow tests to clearly separate concerns.  An information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and are the concern of tests that evaluate bdqdim:Conformance.  Presence or absence of data is a concern for tests evaluating bdqdim:Completeness.  
+Data that has passed through arbitrary serializations and transformations can contain many anomalies.  Empty is defined to allow Tests to clearly separate concerns.  An information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and are the concern of Tests that evaluate bdqdim:Conformance.  Presence or absence of data is a concern for Tests evaluating bdqdim:Completeness.  
 
-A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NotEmpty, identifying that they are invalid is a concern of other tests evaluating bdqdim:Completeness.
+A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY, identifying that they are invalid is a concern of other Tests evaluating bdqdim:Completeness.
 
-#### 2.1.1 Concerns of Empty (normative)
+#### 2.2.1 The Concept of Empty (normative)
 
 (1) Spaces, tabs, and other non-printing characters, treated as Empty.
 
-Objects that are null, or null values in a relational database, at the point of test execution, MUST be treated as bdq:Empty.
+Objects that are null, or null values in a relational database, at the point of Test execution, MUST be treated as bdq:Empty.
 
-(2) Serializations of NULL, treated as NotEmpty.
+(2) Serializations of NULL, treated as NNOTEMPTY.
 
-Data serialized from relational database systems may contain string representations of NULL, 
-We considered, and explicitly rejected, treating common string serializations of null such as "\N" and "NULL" as empty values.  String serializations of NULL outside of a database, present at the point of evaluation of a test, MUST be treated as bdq:NotEmpty.  A test execution environment MAY deserialize these string serializations of NULL
+Data serialized from relational database systems may contain string representations of NULL.
 
-(3) Data values indicating an unknown, treated as NotEmpty.
+We considered, and explicitly rejected, treating common string serializations of null such as "\N" and "NULL" as empty values.  String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as bdq:NotEmpty.  A Test execution environment MAY deserialize these string serializations of NULL
+
+(3) Data values indicating an unknown, treated as NOTEMPTY.
 
 The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
-(4) Independence of tests from the execution framework. 
+(4) Independence of Tests from the execution framework. 
 
-The evaluation of bdq:Empty MUST be at the point of evaluation of the test.  This allows the tests to be independent of data serializations for transport and the representation of data in test execution environments. 
+The evaluation of bdq:Empty MUST be at the point of evaluation of the Test.  This allows the Tests to be independent of data serializations for transport and the representation of data in Test execution environments. 
 
-In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by the test bdqffdq:DataQualityNeed to be agnostic about the strucuture presented to a framework for executing the tests. 
+In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by the Test bdqffdq:DataQualityNeed to be agnostic about the strucuture presented to a framework for executing the Tests. 
 
-For csv data a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the tests are independent of that.
+For csv data a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
 
-#### 2.1.2 Example implementation of a function to assess Empty (non-normative)
+#### 2.2.2 Example implementation of a Function to Assess Empty (non-normative)
 
-Here is a java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty.  Test implementations can reuse a function like this for tests that evaluate bdq:Empty in their specification.
+Here is a java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty.  Test implementations can reuse a function like this for Tests that evaluate bdq:Empty in their specification.
 
     public boolean isEmpty(String aString)  {
         boolean result = true;
@@ -145,9 +166,9 @@ Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_
          length(trim(kingdom)) == 0
     ;
 
-### 2.2 Reading Test Descriptors (non-normative)
+### 2.3 Reading Test Descriptors (non-normative)
 
-#### 2.2.1 Key Parts of a descriptor
+#### 2.3.1 Key Parts of a Test Descriptor
 
 - termLocalName
 - skos:prefLabel
@@ -156,7 +177,7 @@ Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_
 - information elements
 - parameters
 
-#### 2.2.2 Reading a Specification
+#### 2.3.2 Reading a Specification
 
 A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementors SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first.  Implementors MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
@@ -172,32 +193,30 @@ etc.
 
 | Concept | bdqffdq Term(s) | Description |
 | ------- | ------- | ----------- |
-| Response | bdqffdq:Assertion | The report from a single execution of a single test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
-| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue) was able to be performed or not.| 
-| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue)|
-| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the test.|
+| Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
+| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue) was able to be performed or not.| 
+| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue)|
+| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
 
-#### 2.2.3 Interpreted As (normative)
+#### 2.3.3 The Concept of "interpreted as" (normative)
 
-In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: (1) where Darwin Core data are serialized as strings, but the test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
+In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: (1) where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), (2) matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), or (3) interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
 ## 3 Compliant Implementation (normative)
 
-This section is normative.
-
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
 
-We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality test is intended to do, along with the consistent structure for reporting the results from the execution of a test upon some data.  We expect that implementors will implement sets of these tests that fit their data quality needs, and will also implement other tests.  The CORE tests provide a coherent library of tests that can be applied to the set of defined UseCases, and considerable thought has gone into describing tests that isolate particular data quality issues, and that work together as a conherent suite.   
+We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementors will implement sets of these Tests that fit their data quality needs, and will also implement other Tests.  The BDQ Core Tests provide a coherent library of tests that can be applied to the set of defined UseCases, and considerable thought has gone into describing tests that isolate particular data quality issues, and that work together as a conherent suite.   
 
-An implementation MUST include all bdqcore: SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional tests and additional UseCases.
+An implementation MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional Tests and additional UseCases.
 
-Results from each test MUST be produced in the form Response.status, Response.result, and Response.comment, with one test producing one Response.   Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.
+Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response.   Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.
 
-Where implementors add additional tests as part of a test suite compliant with this standard, they MUST describe those tests using the bdqffdq framework, those tests MUST use the same Response structures, and those tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
+Where implementors add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq framework, those Tests MUST use the same Response structures, and those Tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
 
-The standard is agnostic as to how data are presented and piped within some framework to and from test implementations.  An implementation framework MAY present SingleRecords to tests and report results, or an implementation MAY find unique values for InformationElements, execute test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
+The standard is agnostic as to how data are presented and piped within some framework to and from Test implementations.  An implementation framework MAY present SingleRecords to Tests and report results, or an implementation MAY find unique values for InformationElements, execute Test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
 
 <!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, Repeated in 1.7 --->
 
@@ -205,52 +224,56 @@ For each core SingleRecord Validation, an implementation intended for Quality Co
 
 For each core SingleRecord Validation, an implementation intended for Quality Assurance SHOULD include a corresponding MultiRecord Measure that returns COMPLETE when all pertenent Response.result values are COMPLIANT (or for some Measures also INTERNAL_PREREQUSISITES_NOT_MET).
 
-Implementations MUST provide implementations of parameterized tests that support the default parameter values. Implementations SHOULD provide for parameterized tests to take parameters, but MAY produce an implementation of a parameterized test that takes no parameters but only uses the default parameter value.
+Implementations MUST provide implementations of parameterized Tests that support the default parameter values. Implementations SHOULD provide for parameterized Tests to take parameters, but MAY produce an implementation of a parameterized Test that takes no parameters but only uses the default parameter value.
 
-How a test responds when given a parameter value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless specified in the Specification, implementations MUST_NOT use Response.status=EXTERNAL_PREREQUISITES_NOT_MET to indicate a non-supported parameter value.
+How a Test responds when given a parameter value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless specified in the Specification, implementations MUST_NOT use Response.status=EXTERNAL_PREREQUISITES_NOT_MET to indicate a non-supported parameter value.
 
 Implementors are free to, and are encouraged to, in addition to framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-framework implementations MUST NOT assert compliance with this standard.
 
 Within the Response.result for an Amendment, the order of key-value pairs is not specified and MAY vary.
 
-### 4 Extension points (normative)
+## 4 Extension Points (normative)
 
 A response MAY include a Response.qualifier.  This is intended as a place to include structured assertions concerning uncertainty in a response.  This is also intended as a place to include structured assertions about the details of Ammendments (e.g. TRANSPOSED MAY be attached to a Response.qualifier for some Amendments).
 
-<!--- Bit about ActedUpon/Consulted Needs to move, we have added these to the test descriptors and the framework --->
+<!--- Bit about ActedUpon/Consulted Needs to move, we have added these to the Test descriptors and the framework --->
 
-Implementations MAY identify InformationElements as ActedUpon or Consulted. Presentations of data quality results may use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon information elements are those for which a Validation is asserting compliance/non-compliance, or an Amendment is proposing a change. Consulted information elements are those which inform such decisions, but are not themselves the subject of the decision. For example, in AMENDMENT_EVENTDATE_FROM_VERBATIM, the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted. We do not  identify Information Elements as ActedUpon or Consulted here, but implementers may wish to do so to more clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular tests are making assertions about.
+Implementations MAY identify InformationElements as ActedUpon or Consulted. Presentations of data quality results may use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon information elements are those for which a Validation is asserting compliance/non-compliance, or an Amendment is proposing a change. Consulted information elements are those which inform such decisions, but are not themselves the subject of the decision. For example, in AMENDMENT_EVENTDATE_FROM_VERBATIM, the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted. We do not  identify Information Elements as ActedUpon or Consulted here, but implementers may wish to do so to more clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
 
-Tests MAY specify that information elements are ActedUpon or Consulted. We do not do so here, but ActedUpon and Consulted properties of an Information Element are an extension point that may be included when specifying the Information Elements pertinent to a test
+Tests MAY specify that information elements are ActedUpon or Consulted. We do not do so here, but ActedUpon and Consulted properties of an Information Element are an extension point that may be included when specifying the Information Elements pertinent to a Test
 
-MultiRecord Measues that return counts where the input InformationElement is Response values from tests on SingleRecords MUST report only a single count as the Response.value, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percents), the number of each value of Response.status encountered, and the number of each Response.value encountered.  Measures under the framework are only allowed to return COMPLETE/NOT_COMPLETE, or a single number, if it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use for this. 
+MultiRecord Measues that return counts where the input InformationElement is Response values from Tests on SingleRecords MUST report only a single count as the Response.value, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percents), the number of each value of Response.status encountered, and the number of each Response.value encountered.  Measures under the framework are only allowed to return COMPLETE/NOT_COMPLETE, or a single number, if it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use for this. 
 
-## 3 Responses from tests
+## 5 Responses from Tests
 
-### 3.1 The Response Object (normative)
+### 5.1 The Response Object (normative)
 
-The four test types, Validation, Issue, Amendment, and Measure all provide a Response from the execution of the test.
-The Response from a test is an assertion which MAY form part of a data quality report or MAY be wrapped in an annotation. 
+The four Test types, Validation, Issue, Amendment, and Measure all provide a Response from the execution of the Test. The Response from a Test is an assertion which MAY form part of a data quality report or MAY be wrapped in an annotation. 
 
-Responses from each of the tests MUST be structured data, and MUST NOT be simple pass fail flags. 
+Responses from each of the Tests MUST be structured data, and MUST NOT be simple pass fail flags. 
 
 The Response MUST include the following three components: 
 
-1. Value is the returned result for the test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
+1. Value is the returned result for the Test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
 
-2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
+2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
 
-3. The Remark supplies human-readable text describing reasons for the test result output.
+3. The Remark supplies human-readable text describing reasons for the Test result output.
 
-An Amendment may propose a change to an exisitng Darwin Core value or a set of Darwin Core terms or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  The Framework also supports changes to procedures but we have not framed any such tests in this form.  
+An Amendment may propose a change to an exisitng Darwin Core value or a set of Darwin Core terms or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  The Framework also supports changes to procedures but we have not framed any such Tests in this form.  
 
 An Amendment Response.result SHOULD consist of a set of key:value pairs, where the key is the information element to be modified, and the value is the proposed new value for that information element.   The Response.result key:value pairs SHOULD be a JSON serialization of the proposed changes.
 
 Under bdqffdq: Amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Response.result, and implementors MAY develop their own structures and serialisations for such Amendment Response.results.
 
-### 3.2 Framework elements not included in bdqcore test descriptions (normative)
+Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses.   Implementations MAY serialize Assertions in any appropriate form. 
 
-Implementors SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of test implementations.
+Nothing in this section should be taken as a requirement to how bdqffdq:Assertions or Responses are to be presented to consumers of data quality reports.  Implementations MAY present the results of Tests in any form appropriate for their consumers.  
+
+
+### 5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)
+
+Implementors SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of Test implementations.
 
 Implementations producing data quality reports SHOULD create instances of bdqffdq:Assertions grouped in bdqffdq:DataQualityReports that also specify the bdqffdq:DataResource that the bdqffdq:DataQualityReport concerns.
 
@@ -258,37 +281,37 @@ Implementors MUST provide bdq:Response data in data quality reports consisting o
 
 Implementations MAY perform data Quality Control, data Quality Assurance, or both.  
 
-## 4 Guidelines for Implementers
+## 6 Guidelines for Implementers
 
-### Parameters and changing the behavior of a test (normative)
+### 6.1 Parameters and Changing the Behavior of a Test (normative)
 
-Many tests specify bdqffdq:Parameters in addition to bdqffdq:InformationElements.  Parameters are intended to change the behavior of a test to fit local data quality needs without changing the specification of the test.  
+Many Tests specify bdqffdq:Parameters in addition to bdqffdq:InformationElements.  Parameters are intended to change the behavior of a Test to fit local data quality needs without changing the specification of the Test.  
 
-A parameterized test will behave differently on the same data when given different parameter values. 
+A parameterized Test will behave differently on the same data when given different parameter values. 
 
-Implementors SHOULD only present non-default parameter values to a test implementation if needed for local data quality needs.
+Implementors SHOULD only present non-default parameter values to a Test implementation if needed for local data quality needs.
 
-Implemenentors MUST NOT produce test implementations identified by the same identifiers that only implement non-default parameter values.  An implementation of a test MUST support the test execution with the default parameter values, and MAY optionally support other parameter values.   Provided parameters MUST NOT change the behavior of the test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the test as specified in the bdqffdq:Specification.expectedResponse.
+Implemenentors MUST NOT produce Test implementations identified by the same identifiers that only implement non-default parameter values.  An implementation of a Test MUST support the Test execution with the default parameter values, and MAY optionally support other parameter values.   Provided parameters MUST NOT change the behavior of the Test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the Test as specified in the bdqffdq:Specification.expectedResponse.
 
-### Execution Process Agnostic (non-normative)
+### 6.2 Execution Process are Agnostic (non-normative)
 
-The test descriptions in bdqcore are designed to be able to be implemented anywhere in the lifecycle of biodiversity data, and are designed to be independent of the environment in which the tests are run.   Tests may be run in the abstract within, for example, relational databases, they may be run individually on single Darwin Core records, or fragments of Darwin Core records within a data capture interface, or may be run in sequence in a processing pipleine of Darwin Core records, or they may be run in paralell in a processing pipeline of Darwin Core records, or they may be run in a workflow environment that produces lists of unique values of Information Elements for each test, executes the test on the unique values, and then maps the results back out onto rows in the data set.  Data may be presented to an execution framework as Flat Darwin Core, or as Structured Darwin Core, or in another structure that can be mapped to the information elements of relevant tests.
+The Test descriptions in BDQ Core are designed to be able to be implemented anywhere in the lifecycle of biodiversity data, and are designed to be independent of the environment in which the Tests are run.   Tests may be run in the abstract within, for example, relational databases, they may be run individually on single Darwin Core records, or fragments of Darwin Core records within a data capture interface, or may be run in sequence in a processing pipleine of Darwin Core records, or they may be run in paralell in a processing pipeline of Darwin Core records, or they may be run in a workflow environment that produces lists of unique values of Information Elements for each Test, executes the Test on the unique values, and then maps the results back out onto rows in the data set.  Data may be presented to an execution framework as Flat Darwin Core, or as Structured Darwin Core, or in another structure that can be mapped to the information elements of relevant Tests.
 
-The tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation.
+The Tests are designed to be run at any point in the life cycle of biodiversity data. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation.
 
-### Considerations for execution (normative)
+### 6.3 Considerations for Test Execution (normative)
 
-Many tests invoke external bdq:sourceAuthorities, some of these are downloadable vocabulary files, others are webservices over continually changing data.
+Many Tests invoke external bdq:sourceAuthorities, some of these are downloadable vocabulary files, others are webservices over continually changing data.
 
 Implementations SHOULD locally cache the results of calls to remote web services, particularly if they operate on a sequence of SingleRecords instead of operating on distinct values of InformationElements.  Data sets typically contain many repeated values, and remote web services SHOULD NOT be subject to repeated requests asking the same question over and over. 
 
-Some source authorities are highly stable small vocabularies.  Implementors MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a test.  Implementors SHOULD monitor for changes to that vocabulary and update if it changes. 
+Some source authorities are highly stable small vocabularies.  Implementors MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a Test.  Implementors SHOULD monitor for changes to that vocabulary and update if it changes. 
 
-### Order of test execution.
+### 6.4 Order of Test Execution.
 
-#### Phases: Pre-Amendment, Amendment, Post-Amendment.
+#### 6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment
 
-Recommended process with the current suite of BDQ Core tests is to run all pertinent single record validations and measures, then run all pertinent multirecord measures, from these calculate some measure of quality, then execute all pertinent amendments, then to run all pertinent single record validations and measures again in a post-amendment phase on the data as if the proposed changes from each amendment were accepted, and then run all multirecord meaures.  A comparison of the multirecord measures from the pre-amendment phase with those from the post-amendment phase will quantify how much accepting the proposals from amendments would improve the data, with respect to the aspects measured by the tests.
+Recommended process with the current suite of BDQ Core Tests is to run all pertinent single record validations and measures, then run all pertinent multirecord measures, from these calculate some measure of quality, then execute all pertinent amendments, then to run all pertinent single record validations and measures again in a post-amendment phase on the data as if the proposed changes from each amendment were accepted, and then run all multirecord meaures.  A comparison of the multirecord measures from the pre-amendment phase with those from the post-amendment phase will quantify how much accepting the proposals from amendments would improve the data, with respect to the aspects measured by the Tests.
 
 Under Quality Assurance, MultiRecord measures that return COMPLETE/NOT_COMPLETE MAY be used as filters for quality for purpose, exclude records from the data set untill all MultiRecord measures of this sort are returning COMPLETE, this under the mathematical forumuation of the framework, is the assertion that the data are fit for the purpose of the selected UseCase.
 
@@ -297,13 +320,13 @@ Under Quality Control, MultiRecord measures that return numeric values MAY be us
 
 <!--- Ming: Execution sequence of the tests , repeated in 1.6, but more detail than 1.6 --->
 
-A good practice for executing the tests is to execute all of the validations and measures in a pre-amendment phase, then to execute all of the amendments in an amendment phase, then to execute all of the validations again on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the validations and measures are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for tests is to aggregate the unique values of applicable Information Elements within a bdqffdq:MultiRecord for each Validation or Measure, then to execute the Validation or Measure on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing tests as SQL queries.
+A good practice for executing the Tests is to execute all of the validations and measures in a pre-amendment phase, then to execute all of the amendments in an amendment phase, then to execute all of the validations again on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the validations and measures are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for Tests is to aggregate the unique values of applicable Information Elements within a bdqffdq:MultiRecord for each Validation or Measure, then to execute the Validation or Measure on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing Tests as SQL queries.
 
-#### Test dependencies
+#### 6.4.2 Test Dependencies
 
-Individual tests are designed to be as indepenent of each other as possible, but given the by design redundancies in Darwin Core, some amendments have potential interactions.
+Individual Tests are designed to be as indepenent of each other as possible, but given the by design redundancies in Darwin Core, some amendments have potential interactions.
 
-The tests are agnostic to the framework within which they are run. The tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular tests are run. An exception is certain of the amendments, where the order of execution can be important.
+The Tests are agnostic to the framework within which they are run. The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. An exception is certain of the amendments, where the order of execution can be important.
 
 <!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
 
@@ -323,25 +346,24 @@ Where multiple Amendments on secondary terms could propose conflicting changes t
 
 The following Amendments SHOULD be composed to run in an ordered sequence:
 
-| order       | test                                                       |
+| order       | Test                                                       |
 |-------------|------------------------------------------------------------|
 | first       | AMENDMENT_EVENTDATE_FROM_VERBATIM                          | 
 | second      | AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR    |
 | and finally | AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY                      |
 
-BDQ Core does not specify how these ordering of these tests should be accomplished.   This could be done by describing an Amendment with an expected response that specifies the execution of each of these tests in order.  Such a composition of Amendments would be the preferred method of sequencing under the framework, but to keep tests as granular a possible, and to allow the maxiumum flexibility for the composition of tests in Profiles to support UseCases, BDQ Core does not currently provide such tests.   Ordering could also could be done by providing a configuration file for a test execution framework specifying test dependencies.  Ordering could be supported in a workflow environment by composing a workflow to execute these tests in sequence.  
+BDQ Core does not specify how these ordering of these Tests should be accomplished.   This could be done by describing an Amendment with an expected response that specifies the execution of each of these Tests in order.  Such a composition of Amendments would be the preferred method of sequencing under the framework, but to keep Tests as granular a possible, and to allow the maxiumum flexibility for the composition of Tests in Profiles to support UseCases, BDQ Core does not currently provide such Tests.   Ordering could also could be done by providing a configuration file for a Test execution framework specifying Test dependencies.  Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence.  
 
 The bdqffdq: ontology does not include a property to describe sequence interdependencies among amendments.  
 
-The bdqffdq: ontology provides terms: bdqffdq:targetedMeasure, bdqffdq:targetedValidation, bdqffdq:TargetedIssue, that could be used, together with bdqffdq:improvedBy to relate Amendments to Validations, Measures, and Issues.  BDQ Core does not, at this time, use these terms to describe test interrelationships.  
+The bdqffdq: ontology provides terms: bdqffdq:targetedMeasure, bdqffdq:targetedValidation, bdqffdq:TargetedIssue, that could be used, together with bdqffdq:improvedBy to relate Amendments to Validations, Measures, and Issues.  BDQ Core does not, at this time, use these terms to describe Test interrelationships.  
 
-#### Implementing a concrete Test 
+#### 6.4.3 Implementing a concrete Test 
 
 
+#### 6.4.4 Presenting Darwin Core Data to a Method that Implements a Test
 
-#### Presenting Darwin Core data to a method that implements a test.
-
-One complexity introduced by the abstraction of tests into essentially APIs that take Darwin Core terms as input, and output Response objects is correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method.   Consider an implementation of VALIDATION_ENDDAYOFYEAR_INRANGE that has a method signature: 
+One complexity introduced by the abstraction of Tests into essentially APIs that take Darwin Core terms as input, and output Response objects is correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method.   Consider an implementation of VALIDATION_ENDDAYOFYEAR_INRANGE that has a method signature: 
     
     public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate) 
 
@@ -349,13 +371,13 @@ If an implementation framework calls this method reversing the binding of dwc:st
 
     Response endDayTestResponse = validationEnddayofyearInrange(eventDate, startDayOfYear);
 
-Then the test will not return the desired result, even if the implementation is correct.  Thus correct matching of input terms to the implementation of each test is critical. 
+Then the Test will not return the desired result, even if the implementation is correct.  Thus correct matching of input terms to the implementation of each Test is critical. 
 
-Multiple approaches are possible to correctly matching input Darwin Core terms onto method signatures for methods that implement tests. 
+Multiple approaches are possible to correctly matching input Darwin Core terms onto method signatures for methods that implement Tests. 
 
-BDQ Core is entirely agnostic as to how this binding is done.  Implementors MAY freely implement in any appropriate way for their environment. However, test implementations MUST return structured Responses containing Response.status, Response.result, and Response.comment.   
+BDQ Core is entirely agnostic as to how this binding is done.  Implementors MAY freely implement in any appropriate way for their environment. However, Test implementations MUST return structured Responses containing Response.status, Response.result, and Response.comment.   
 
-In java, annotating method parameters and using reflection to bind between the execution framework and test implementations works well, here is a simplified code snippet from the FilteredPush event_date_qc library that uses java annotations, e.g. @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which Information Element. 
+In java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well, here is a simplified code snippet from the FilteredPush event_date_qc library that uses java annotations, e.g. @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which Information Element. 
 
     public Response validationEnddayofyearInrange(
             @ActedUpon(value="dwc:endDayOfYear") String endDay,
@@ -363,7 +385,7 @@ In java, annotating method parameters and using reflection to bind between the e
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
-Additional metadata can be added in java annotations, here, from the FilteredPush event_date_qc library annotations enable an implementation framework to look a test implemenation by the test GUID, and can provide metadata about the test to users, and for maintinance, can be used to determine if an implementation is up to date with the latest version of a test specification.
+Additional metadata can be added in java annotations, here, from the FilteredPush event_date_qc library annotations enable an implementation framework to look a Test implemenation by the Test GUID, and can provide metadata about the Test to users, and for maintinance, can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
     @Validation(label="VALIDATION_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
@@ -396,9 +418,9 @@ It is also possible to implement in an object oriented manner as methods on a cl
 
     } 
 
-Other approaches are possible.  Implementors MAY use any approach to passing data into test implementations appropriate for their language(s) and environment.
+Other approaches are possible.  Implementors MAY use any approach to passing data into Test implementations appropriate for their language(s) and environment.
 
-#### Example test implementation (non-normative)
+#### 6.4.5 Example Test Implementation (non-normative)
 
 Given the specification: 
 
@@ -434,9 +456,9 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
 Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input countryCode contains a value.  This deviation from the logical sequence implied by the Specification (EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
-#### Implementing an abstract Test 
+#### 6.4.6 Implementing an Abstract Test 
 
-In some environments, implementations MAY be lightweight implementations of an abstract test.
+In some environments, implementations MAY be lightweight implementations of an abstract Test.
 
 Consider the validation: 
 
@@ -465,9 +487,9 @@ A SQL query that implements this abstract concept, that the enddayofyear is in r
           )
         );
 
-#### Implementing a test in a specific environment
+#### 6.4.7 Implementing a Test in a Specific Environment
 
-Given data stored in a known and controlled environment, test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. 
+Given data stored in a known and controlled environment, Test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. 
 
 Consider the validation: 
 
@@ -506,28 +528,28 @@ Given a hypothetical Event table with fields including a primary key event_id an
 
 This implementation is dependent on the schema the data is stored in, in particular, the definition of event.day as a field holding integers.  
 
-This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the test specification, which requires day to be an integer), for values of day such as "8.5"
+This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test specification, which requires day to be an integer), for values of day such as "8.5"
 
-Implementations should carefully consider the assumptions inherent in the environment on which tests are being run.  For example, the FilteredPush implementations in event_date_qc, sci_name_qc, rec_occur_qc, and geo_ref_qc, expect that all data will be presented to the test methods as strings.  Therefore each test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation (and can use the failure to convert the data type as a means to identify internal prerequisites not met).
+Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run.  For example, the FilteredPush implementations in event_date_qc, sci_name_qc, rec_occur_qc, and geo_ref_qc, expect that all data will be presented to the Test methods as strings.  Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation (and can use the failure to convert the data type as a means to identify internal prerequisites not met).
 
-## Presentation of Results
+## 7 Presentation of Results
 
 We are agnostic about how reports from BDQ Core can be reported, e.g. as aggregated results, on web pages for individual records, as spreadsheets of results with issues for quality control, etc.  
 
-Reports SHOULD identify tests to consumers of those reports using at least the skos:prefLabel for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
+Reports SHOULD identify Tests to consumers of those reports using at least the skos:prefLabel for the Test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
-### Data Quality Reports
+### 7.1 Data Quality Reports
 
-#### Example (non-normative)
+#### 7.1.1 Example (non-normative)
 
-Below is an example, taken from MCZbase, of a portion of a data quality report, run on demand, for a single specimen using an implementation of bdqcore tests integrated into that collection management system.
+Below is an example, taken from MCZbase, of a portion of a data quality report, run on demand, for a single specimen using an implementation of BDQ Core Tests integrated into that collection management system.
 
-This example shows tests that were run, using the rdfs:comment on the bdqffdq:Validation to identify the action taken by the test to the collection management staff reading the report. Then in columsn for a pre-amendment phase, the result (Response.status or Response.result) of the test, and the Response.comment explaining why the test returned the result it did.  Below this report are listed any proposed changes from Amendments, then in the table, the result and comment from repeating the Validations in a post-amendment phase, treating the data as if the results of any amendments had been accepted (which is not done automatically, users must explicitly change the data if they want to accept the proposals from the Amendments).   In the presentation, COMPLIANT values are styled in green and NOT_COMPLIANT values in red.  A subset of the results are shown here (so compliant result percentages included values not shown).
+This example shows Tests that were run, using the rdfs:comment on the bdqffdq:Validation to identify the action taken by the Test to the collection management staff reading the report. Then in columsn for a pre-amendment phase, the result (Response.status or Response.result) of the Test, and the Response.comment explaining why the Test returned the result it did.  Below this report are listed any proposed changes from Amendments, then in the table, the result and comment from repeating the Validations in a post-amendment phase, treating the data as if the results of any amendments had been accepted (which is not done automatically, users must explicitly change the data if they want to accept the proposals from the Amendments).   In the presentation, COMPLIANT values are styled in green and NOT_COMPLIANT values in red.  A subset of the results are shown here (so compliant result percentages included values not shown).
 
 ** QC Taxon Name for MCZ:Herp:R-1440**
 
 Results of the TDWG Biodiversity Data Quality IG TG2 Taxon Name related
-tests.
+Tests.
 
 Tests run using (mechanism): Kurator: Scientific Name Validator -
 DwCSciNameDQ:v1.0.1.
@@ -559,36 +581,35 @@ Compliant Results Pre-amendment: 75%; Post-amendment: 94%
     > taxon in WORMS with exact match on authorship. \|Exact match to
     > provided taxon found in WORMS.
 
+### 7.2 Annotations (normative)
 
-### Annotations (normative)
-
-The bdqffdq: owl framework, and the framing of the tests in bdqcore: as rdf using that ontology makes, by design, tests results particularly amenable to being wrapped in annotations following the W3C Web Annotation Data Model (Sanderson et al. 2017). 
+The bdqffdq: owl framework, and the framing of the Tests in BDQ Core as rdf using that ontology makes, by design, Tests results particularly amenable to being wrapped in annotations following the W3C Web Annotation Data Model (Sanderson et al. 2017). 
 
 Test responses MAY be represented as annotations.
 
-The responses from tests could be structured as elements that can be wrapped in the body annotation document along with metadata from the Framework to describe which test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
+The responses from Tests could be structured as elements that can be wrapped in the body annotation document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
-When test responses are being returned as annotations, they SHOULD use the W3C Web Annotation Data Model for the annotations, and SHOULD place test responses within the body of the annotation.  Such annotations SHOULD include reference to the source test by the versioned fully qualified name of the test (e.g. bdqcore:47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18) and the test skos:prefLabel (e.g. VALIDATION_DAY_STANDARD).  Such annotations SHOULD also provide the bdqffdq:Mechanism that generated the test response. 
+When Test responses are being returned as annotations, they SHOULD use the W3C Web Annotation Data Model for the annotations, and SHOULD place Test responses within the body of the annotation.  Such annotations SHOULD include reference to the source Test by the versioned fully qualified name of the Test (e.g. bdqcore:47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18) and the Test skos:prefLabel (e.g. VALIDATION_DAY_STANDARD).  Such annotations SHOULD also provide the bdqffdq:Mechanism that generated the Test response. 
 
-## 5 Validating Test Implementations (normative)
+## 8 Validating Test Implementations (normative)
 
-Implementors of tests SHOULD validate the behaviour of the internals of their test implementations with unit tests, and MUST validate that each test implementation is capable of taking relevant input from a set of standard test validation data, and returning the expected responses.
+Implementors of Tests SHOULD validate the behaviour of the internals of their Test implementations with unit Tests, and MUST validate that each Test implementation is capable of taking relevant input from a set of standard Test validation data, and returning the expected responses.
 
 If validation data could be conflated with actual data, see: [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 
-### 5.1 Introduction (non-normative)
+### 8.1 Introduction (non-normative)
 
-Accompanying the Core test descriptors is a set of test validation data.  This test validation data is intended for implementors to use to evaluate whether or not their test implementations produced the expected Response values for a set of cases for each test.  Each test specification could be graphed as a flow chart with several paths, the test validation data are intended to cover each node and each path within each test specification with at least a single case.  These are not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of tests for expected behaviour.  
+Accompanying the Core Test descriptors is a set of Test validation data.  This Test validation data is intended for implementors to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test.  Each Test specification could be graphed as a flow chart with several paths, the Test validation data are intended to cover each node and each path within each Test specification with at least a single case.  These are not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviour.  
 
-The test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single test.  The file has columns identifying the validation case, the test that the row is intended to validate, the expected Response.status, Response.value, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given test).   
+The Test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single Test.  The file has columns identifying the validation case, the Test that the row is intended to validate, the expected Response.status, Response.value, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given Test).   
 
-The test validation records are all fragmentary flat Darwin Core Occurrence records.  Each row contains values for only those Darwin Core terms that are relevant input to the particular validation.   The validation records are all fragmentary, consisting of a mixture of real and artificial data with most of the records being synthetic.  The validation data are a set of 1191 records, with about 10 validation cases for each test.  The set of rows for a particular test are designed to validate that an implementation of that particular test performs as expected against the specifications.   This data set is referred to as the 'Test Validation Data'.   The set of about 10 validation records for each test are designed to exercise all of the decision pathways in the specification of the test.  
+The Test validation records are all fragmentary flat Darwin Core Occurrence records.  Each row contains values for only those Darwin Core terms that are relevant input to the particular validation.   The validation records are all fragmentary, consisting of a mixture of real and artificial data with most of the records being synthetic.  The validation data are a set of 1191 records, with about 10 validation cases for each Test.  The set of rows for a particular Test are designed to validate that an implementation of that particular Test performs as expected against the specifications.   This data set is referred to as the 'Test Validation Data'.   The set of about 10 validation records for each Test are designed to exercise all of the decision pathways in the specification of the Test.  
 
-This is a minimalist suite of test data. Additional test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the DataID values MUST uniquely identify a validation case for each additional test data record and the resulting data added to the GitHub repository.
+This is a minimalist suite of Test data. Additional Test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the DataID values MUST uniquely identify a validation case for each additional Test data record and the resulting data added to the GitHub repository.
 
-### Structure of the Validation Data 
+### 8.2 Structure of the Validation Data 
 
-The validation data are intended as input into a testing system that can implementations of validation tests independently, presenting them with a validation case for input, and assessing whether the test Response conforms to the expected values in the validation data.  It could be processed as input for unit tests.   It could be used as the basis for presenting synthetic records to a larger test execution system, but is designed to be used at a level where individual tests are being assessed.  This may fit into integration tests of a larger system.  The structure of the validation data attempts to be at a level of abstraction somewhat above the method signature specificity needed in unit tests, but still at a level that is examining individual test implementations, below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
+The validation data are intended as input into a testing system that can implementations of validation Tests independently, presenting them with a validation case for input, and assessing whether the Test Response conforms to the expected values in the validation data.  It could be processed as input for unit Tests.   It could be used as the basis for presenting synthetic records to a larger Test execution system, but is designed to be used at a level where individual Tests are being assessed.  This may fit into integration Tests of a larger system.  The structure of the validation data attempts to be at a level of abstraction somewhat above the method signature specificity needed in unit Tests, but still at a level that is examining individual Test implementations, below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
 
 <!--- Start: PJM Added the terms from "bdqValidationData" glossary terms 2024 Aug 24 --->
 
@@ -597,7 +618,7 @@ The following column header for the data are used for the validation data files.
 | header | definition |
 | ------ | ---------- |
 | dataID | A local to the validation data unique integer to indentify each Validation Data record | 
-| LineForTest | A local to bdq:ValidationData identifier for test records within one test. An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular test. | 
+| LineForTest | A local to bdq:ValidationData identifier for Test records within one Test. An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular Test. | 
 | LineNumber | The sequence number of the data record in the bdq:ValidationData. An integer for maintaining the sort order of the file. |
 
 <!--- End: PJM Added the terms from "bdqValidationData" glossary terms 2024 Aug 24 --->
@@ -606,17 +627,17 @@ The following column header for the data are used for the validation data files.
 
 * Line Number: An integer for maintaining the sort order of the file.
 * dataID: A unique identifier (within the validation data) of the validation data record, e.g., "123"
-* LineForTest: An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular test,
-* GitHubIssueNo: The GitHub issue where rationale management of the test under validation is maintained, can be use to form a link to the discussion history for the development of the relevant test, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20
-* GUID: the machine readable identifier for the test under validation, e.g. 69b2efdc-6269-45a4-aecb-4cb99c2ae134
-* Label: The human-readable name of the test, e.g., "VALIDATION_COUNTRY_FOUND"
-* Response.status: The status on applying the test to the test data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET".
-* Response.result: The result of running the test on the test data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED".
-* Response.comment: An example human-readable statement identifying the reason for the test result given the input data, implementations are not expected to produce this exact value, it is given as an example.
+* LineForTest: An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular Test,
+* GitHubIssueNo: The GitHub issue where rationale management of the Test under validation is maintained, can be use to form a link to the discussion history for the development of the relevant Test, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20
+* GUID: the machine readable identifier for the Test under validation, e.g. 69b2efdc-6269-45a4-aecb-4cb99c2ae134
+* Label: The human-readable name of the Test, e.g., "VALIDATION_COUNTRY_FOUND"
+* Response.status: The status on applying the Test to the Test data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET".
+* Response.result: The result of running the Test on the Test data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED".
+* Response.comment: An example human-readable statement identifying the reason for the Test result given the input data, implementations are not expected to produce this exact value, it is given as an example.
 * IssuesWithThisRow: Temporary working column for recording problems while developing validation data, to be removed.
-* bdq:annotation placeholder for an annotation when testing for their presence.
-* bdq:sourceAuthority input parameter for some parameterized tests.
-* dwc: (77 columns)  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant test and pertinent to the test case at hand contain values.
+* bdq:annotation placeholder for an annotation when Testing for their presence.
+* bdq:sourceAuthority input parameter for some parameterized Tests.
+* dwc: (77 columns)  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant Test and pertinent to the Test case at hand contain values.
 
 NOTE: We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the Input.Data structure of
 
@@ -625,7 +646,7 @@ bdq:sourceAuthority="https://invalid/invalidservice", dwc:inputDataValue1="", dw
 bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
 
 
-### Examples of the data for validating tests (Informative)
+### 8.3 Examples of the Data for Validating Tests (Informative)
 
 The validation files contain one column for each of 77 Darwin Core terms that are referenced as an Information Element somewhere in Core, but only terms relevant to the particular validation case for the row are populated, therefore the validation files are sparse.  They contain fragments of Flat Darwin Core records. 
 
@@ -635,19 +656,19 @@ The header line for each of the validation files:
 
 The data are sparse, as most dwc: term columns do not contain a value for each individual case.
 
-A validation test case evaluating empty, where no dwc: term columns contain a value (dataID=1):  
+A validation Test case evaluating empty, where no dwc: term columns contain a value (dataID=1):  
 
 "2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-A validation test case for a validation where the input data result in a Response.value of NOT_COMPLIANT (dataID=7)
+A validation Test case for a validation where the input data result in a Response.value of NOT_COMPLIANT (dataID=7)
 
 "8","7","7","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","NOT_COMPLIANT","dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value ","","","","","","","","","","","","Austria","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-A validation test case for a validation where the input data result in a Response.value of COMPLIANT (dataID=8)
+A validation Test case for a validation where the input data result in a Response.value of COMPLIANT (dataID=8)
 
 "9","8","8","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","COMPLIANT","dwc countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value","","","","","","","","","","","","US","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-### Where to get the validation data (non-normative)
+### 8.4 Where to Get the Validation Data (non-normative)
 
 The validation data is in two files, one containing normal data values, the other containing validation cases using non-printing characters.
 
@@ -660,7 +681,7 @@ Validation file containing data values that would be expected to be encountered 
 Validation data file containing non-printing characters for testing implementation of EMPTY: 
  https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data_nonprintingchars.csv
 
-This file is a csv file with the same set of columns as the above, but with rows that contain input values for selected Darwin Core terms consisting of either the 0x00 null character (e.g. dwc:scientificName="0x00"), or a pair of ASCII control characters (shift out 0x0E and shift in 0x0F, e.g. dwc:day="0x0E0x0F"). This file is intended to validate that implementations of tests are consistently evaluating inputs as EMPTY as expected by the definition of EMPTY.  
+This file is a csv file with the same set of columns as the above, but with rows that contain input values for selected Darwin Core terms consisting of either the 0x00 null character (e.g. dwc:scientificName="0x00"), or a pair of ASCII control characters (shift out 0x0E and shift in 0x0F, e.g. dwc:day="0x0E0x0F"). This file is intended to validate that implementations of Tests are consistently evaluating inputs as EMPTY as expected by the definition of EMPTY.  
 
 The non-printing characters file MUST only be edited with a tool that will maintain the non-printing characters.  
 
@@ -672,25 +693,25 @@ Parameter values are specified in a bdq:sourceAuthority column, when more than o
 
 Darwin Core input columns are specified as "dc:type","dcterms:license","dwc:acceptedNameUsageID",...
 
-### Implementation and the validation data (normative)
+### 8.5 Implementation and the Validation Data (normative)
 
 Implementations SHOULD provide support for each parameter value specified in the example data. 
 
 Implementations MUST produce structured Response values with a Response.status, Response.value, and Response.comment.  
 
-In order to be considered as compliant with this standard, an implementation of the Core tests MUST fulfill all of the REQUIRED elements of this section.
+In order to be considered as compliant with this standard, an implementation of the Core Tests MUST fulfill all of the REQUIRED elements of this section.
 
-Human readable Data Quality Reports for Quality Control MAY take any appropriate form, they MAY aggregate Response values and comments, they MAY present results organized by test, or by data record, or by frequency of problem, or any other form suitable for presentation.  Data Quality Reports for Quality Control SHOULD allow users to access individual Response.status Response.value Response.comment results.  
+Human readable Data Quality Reports for Quality Control MAY take any appropriate form, they MAY aggregate Response values and comments, they MAY present results organized by Test, or by data record, or by frequency of problem, or any other form suitable for presentation.  Data Quality Reports for Quality Control SHOULD allow users to access individual Response.status Response.value Response.comment results.  
 
 Response.comment values SHOULD be internationalized as appropriate for the the consumers of data quality reports.  
 
 Response.status and Response.value constants SHOULD be given internationalized labels as appropriate for the the consumers of data quality reports.  
 
-For each test in an implementation, that test MUST produce the same results as are specified in a row of the validation data for that test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that test.
+For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the validation data for that Test, except when a bdq:sourceAuthority parameter specifies a web service other than the default sourceAuthority specified for that Test.
 
-### Tools for validating test implementations with the validation data (non-normative) 
+### 8.6 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core tests in various FilteredPush data quality libraries against the test validation data.  See: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) or [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  It uses java annotations on methods that implement tests in order to match inputs from the validation data to methods under test that implement individual tests.  It could be reused to validate implementations in other java classes that follow the same use of ffdq-api (**TODO: Cite**) java annotations.
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data.  See: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) or [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  It uses java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests.  It could be reused to validate implementations in other java classes that follow the same use of ffdq-api (**TODO: Cite**) java annotations.
 
 
 ## Cite BDQ Core

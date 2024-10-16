@@ -38,27 +38,16 @@ improve the quality of data with respect to that VALIDATION.
 
 ## 1.1 Types of Tests
 
-There are four types of tests: Validations, Amendments, Measures, and Issues.
+There are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
-A **Validation** examines the values of Darwin Core terms against a
-criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where
-dwc:countryCode is checked against a source authority for validity.
+**Validation Tests** examine the values of one or more Darwin Core terms (https://dwc.tdwg.org/list/) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
 
-An **Amendment** examines the values of Darwin Core terms to identify
-potential changes to improve the quality. An example is
-AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be
-inferred.
+**Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
 
-**Issues** are like Validations in identifying potential problems in the
-data that may or may not be problems for all users. For example,
-ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that
-should be examined against their data quality needs. Issues are a 'warning
-flag' while Validations assert that the data are fit for use or not.
+**Amendment Tests** examine the values of Darwin Core terms to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
 
-**Measures** either count things, or assert that data evaluate as fit for
-some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is
-MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of
-Type Validation that had a response of "Not Compliant".
+**Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
+
 
 ### 1.1 Documents about the bdqcore: test descriptions.
 
