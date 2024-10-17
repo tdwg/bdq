@@ -136,9 +136,25 @@ Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_
 - information elements
 - parameters
 
-#### 2.3.2 Reading a Specification
+#### 2.3.2 Reading a Specification 
 
-A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementers SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
+#### 2.3.2.1 Response as shorthand for a set of bdqffdq concepts (non-normative)
+
+We regularly use Response, Response.status, Response.result, and Response.comment as shorthand for a more complicated set of bdqffdq: classes, object properties and datatype properties.  The table below describes how these concepts are related.
+
+| Concept | bdqffdq Term(s) | Description |
+| ------- | ------- | ----------- |
+| Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
+| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue) was able to be performed or not.| 
+| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue)|
+| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
+| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
+
+#### 2.3.2.2 Guidance for Reading a Specification (normative)
+
+A bdqffdq:hasExpectedResponse property of a bdqffdq:Specification provides expectations for the behavior of an implemenation of a test.  A bdqffdq:hasExpectedResponse consists of a sequence of blocks of "RESPONSE, criteria;"   In a few cases (a few AMENDMENTS that can propose values for multiple terms) the "criteria" is a sequence of options for that RESPONSE.  When reading a Specification, implementers SHOULD read each block in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
+
+#### 2.3.2.3 Further guidance for Reading a Specification (non-normative)
 
 Responses in a Specification are expressed in an abbreviated form for readability by implementers, expanding these to string properties on a Response object gives:
 
@@ -154,15 +170,44 @@ Expressed with bdqffdq terms, as would be if Assertions are expressed in RDF, th
 
 EXTERNAL_PREREQUISITES_NOT_MET means some bdqffdq:Assertion bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, that Assertion bdqffdq:hasResponseResult Response.null,  that Assertion bdqffdq:hasResponseComment "{some non-null description of the failure condition}"
 
+For example, the bdqffdq:hasExpectedResponse for the Specification for: VALIDATION_COUNTRYCODE_STANDARD states:
 
-| Concept | bdqffdq Term(s) | Description |
-| ------- | ------- | ----------- |
-| Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
-| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue) was able to be performed or not.| 
-| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue)|
-| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
-| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
+    EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
+To understand the meaning of bdq:sourceAuthority in the expected response, see the the bdqffdq:hasAuthoritiesDefaults for the Specification: 
+
+    bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+
+The specification is thus to be read as: 
+
+1. Return EXTERNAL_PREREQUISITES_NOT_MET if the ISO Country codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search)  is not available; 
+2. else Return INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; 
+3. else Return COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the ISO Country Codes list; 
+4. otherwise NOT_COMPLIANT
+
+This could be implemented with a local copy of the ISO 3166 Country Codes (likely the better choice for this small stable list), or with a web service call. 
+
+Any EXTERNAL_PREREQUISITES_NOT_MET can also be read as exception handling, thus: 
+
+1. Return INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; 
+2. else 
+  - try :
+    - Return COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the ISO Country Codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search);
+  - catch :   
+    - Return EXTERNAL_PREREQUISITES_NOT_MET (as the the ISO Country codes list is not available; 
+3. otherwise NOT_COMPLIANT
+
+Where a test is parameterized or when a source authority (bdq:sourceAuthority) is specified in the text of the expected response the Specification should include a bdqffdq:hasAuthoritiesDefaults data type property containing the parameters, default values, and references to resources, including API enpoints that would provide access to values in authority.   
+
+Values of bdqffdq:hasAuthoritiesDefaults are text strings listing parameters in the form of a semicolon delimited list of one or more of the following: 
+     
+- parameter default = "default value" 
+- parameter default = "default value" {[resource]}
+- parameter default = "default value" {[resource]} {API endpoint [resource]}
+
+The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make the expected response easier to read) as in the VALIDATION_COUNTRYCODE_STANDARD example above when a test is not parameterized, or when a test is parameterized, with corresponding bdqffdq:Arguments and bdqffdq:Parameters.  
+
+See section [# 2.3 Parameterising the tests (normative)](../../bdqcore/index.md#23-Parameterising-the-tests-normative) of the bdqcore landing page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
 
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
@@ -171,6 +216,8 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 1. where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
+
+When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test should be explicit about this meaning.  For example, the skos:note for AMENDMENT_MONTH_STANDARDIZED states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the expected response for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
 ## 3 Compliant Implementation (normative)
 
@@ -185,8 +232,6 @@ Results from each Test MUST be produced in the form Response.status, Response.re
 Where implementers add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq framework, those Tests MUST use the same Response structures, and those Tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
 
 The standard is agnostic as to how data are presented and piped within some framework to and from Test implementations.  An implementation framework MAY present SingleRecords to Tests and report results, or an implementation MAY find unique values for InformationElements, execute Test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
-
-<!--- Ming: Use of MultiRecord measures to measure improvement in QA and QC, Repeated in 1.7 --->
 
 For each core SingleRecord Validation, an implementation intended for Quality Control SHOULD include a corresponding MultiRecord Measure that counts the number of Response.result values that are COMPLIANT. An implementation MAY provide similar MultiRecord Measures that report aggregated counts of other Response.status and Response.result values.  
 
