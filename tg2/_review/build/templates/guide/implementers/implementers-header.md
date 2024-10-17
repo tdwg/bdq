@@ -138,9 +138,9 @@ Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_
 
 #### 2.3.2 Reading a Specification
 
-A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementors SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first.  Implementors MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
+A specification consists of a sequence of RESPONSE, criteria; with a few AMENDMENTS that can propose values for multiple terms having a sequence of options within the criteria.  When reading a Specification, implementers SHOULD read each Response in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
-Responses in a Specification are expressed in an abbreviated form for readability by implementors, expanding these to string properties on a Response object gives:
+Responses in a Specification are expressed in an abbreviated form for readability by implementers, expanding these to string properties on a Response object gives:
 
 EXTERNAL_PREREQUISITES_NOT_MET means Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some non-null description of the failure condition}
 
@@ -166,7 +166,7 @@ EXTERNAL_PREREQUISITES_NOT_MET means some bdqffdq:Assertion bdqffdq:hasResponseS
 
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
-In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementors to mean: 
+In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
 
 1. where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
@@ -176,13 +176,13 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
 
-We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementors will implement sets of these Tests that fit their data quality needs, and will also implement other Tests.  The BDQ Core Tests provide a coherent library of tests that can be applied to the set of defined UseCases, and considerable thought has gone into describing tests that isolate particular data quality issues, and that work together as a conherent suite.   
+We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementers will implement sets of these Tests that fit their data quality needs, and will also implement other Tests.  The BDQ Core Tests provide a coherent library of tests that can be applied to the set of defined UseCases, and considerable thought has gone into describing tests that isolate particular data quality issues, and that work together as a conherent suite.   
 
 An implementation MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional Tests and additional UseCases.
 
 Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response.   Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.
 
-Where implementors add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq framework, those Tests MUST use the same Response structures, and those Tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
+Where implementers add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq framework, those Tests MUST use the same Response structures, and those Tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
 
 The standard is agnostic as to how data are presented and piped within some framework to and from Test implementations.  An implementation framework MAY present SingleRecords to Tests and report results, or an implementation MAY find unique values for InformationElements, execute Test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
 
@@ -196,7 +196,7 @@ Implementations MUST provide implementations of parameterized Tests that support
 
 How a Test responds when given a parameter value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless specified in the Specification, implementations MUST_NOT use Response.status=EXTERNAL_PREREQUISITES_NOT_MET to indicate a non-supported parameter value.
 
-Implementors are free to, and are encouraged to, in addition to framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-framework implementations MUST NOT assert compliance with this standard.
+Implementers are free to, and are encouraged to, in addition to framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-framework implementations MUST NOT assert compliance with this standard.
 
 Within the Response.result for an Amendment, the order of key-value pairs is not specified and MAY vary.
 
@@ -232,7 +232,7 @@ An Amendment may propose a change to an exisiting Darwin Core value or a set of 
 
 An Amendment Response.result SHOULD consist of a set of key:value pairs, where the key is the information element to be modified, and the value is the proposed new value for that information element. The Response.result key:value pairs SHOULD be a JSON serialization of the proposed changes.
 
-Under bdqffdq: Amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Response.result, and implementors MAY develop their own structures and serialisations for such Amendment Response.results.
+Under bdqffdq: Amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Response.result, and implementers MAY develop their own structures and serialisations for such Amendment Response.results.
 
 Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses.   Implementations MAY serialize Assertions in any appropriate form. 
 
@@ -241,11 +241,11 @@ Nothing in this section should be taken as a requirement to how bdqffdq:Assertio
 
 ### 5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)
 
-Implementors SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of Test implementations.
+Implementers SHOULD create an instance of bdqffdq:Mechanism to uniquely identify their suite of Test implementations.
 
 Implementations producing data quality reports SHOULD create instances of bdqffdq:Assertions grouped in bdqffdq:DataQualityReports that also specify the bdqffdq:DataResource that the bdqffdq:DataQualityReport concerns.
 
-Implementors MUST provide bdq:Response data in data quality reports consisting of bdq:Response.status, bdq:Response.result, and bdq:Response.comment.  
+Implementers MUST provide bdq:Response data in data quality reports consisting of bdq:Response.status, bdq:Response.result, and bdq:Response.comment.  
 
 Implementations MAY perform data Quality Control, data Quality Assurance, or both.  
 
@@ -257,9 +257,9 @@ Many Tests specify bdqffdq:Parameters in addition to bdqffdq:InformationElements
 
 A parameterized Test will behave differently on the same data when given different parameter values. 
 
-Implementors SHOULD only present non-default parameter values to a Test implementation if needed for local data quality needs.
+Implementers SHOULD only present non-default parameter values to a Test implementation if needed for local data quality needs.
 
-Implementors MUST NOT produce Test implementations identified by the same identifiers that only implement non-default parameter values.  An implementation of a Test MUST support the Test execution with the default parameter values, and MAY optionally support other parameter values.   Provided parameters MUST NOT change the behavior of the Test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the Test as specified in the bdqffdq:Specification.expectedResponse.
+Implementers MUST NOT produce Test implementations identified by the same identifiers that only implement non-default parameter values.  An implementation of a Test MUST support the Test execution with the default parameter values, and MAY optionally support other parameter values.   Provided parameters MUST NOT change the behavior of the Test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the Test as specified in the bdqffdq:Specification.expectedResponse.
 
 ### 6.2 Execution Process are Agnostic (non-normative)
 
@@ -273,7 +273,7 @@ Many Tests invoke external bdq:sourceAuthorities, some of these are downloadable
 
 Implementations SHOULD locally cache the results of calls to remote web services, particularly if they operate on a sequence of SingleRecords instead of operating on distinct values of InformationElements.  Data sets typically contain many repeated values, and remote web services SHOULD NOT be subject to repeated requests asking the same question over and over. 
 
-Some source authorities are highly stable small vocabularies.  Implementors MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a Test.  Implementors SHOULD monitor for changes to that vocabulary and update if it changes. 
+Some source authorities are highly stable small vocabularies.  Implementers MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a Test.  Implementers SHOULD monitor for changes to that vocabulary and update if it changes. 
 
 ### 6.4 Order of Test Execution.
 
@@ -343,7 +343,7 @@ Then the Test will not return the desired result, even if the implementation is 
 
 Multiple approaches are possible to correctly match input Darwin Core terms onto method signatures for methods that implement Tests. 
 
-BDQ Core is entirely agnostic as to how this binding is done.  Implementors MAY freely implement in any appropriate way for their environment. However, Test implementations MUST return structured Responses containing Response.status, Response.result, and Response.comment.   
+BDQ Core is entirely agnostic as to how this binding is done.  Implementers MAY freely implement in any appropriate way for their environment. However, Test implementations MUST return structured Responses containing Response.status, Response.result, and Response.comment.   
 
 In Java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well, here is a simplified code snippet from the FilteredPush event_date_qc library that uses Java annotations, e.g. @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which Information Element. 
 
@@ -386,7 +386,7 @@ It is also possible to implement in an object oriented manner as methods on a cl
 
     } 
 
-Other approaches are possible.  Implementors MAY use any approach to passing data into Test implementations appropriate for their language(s) and environment.
+Other approaches are possible.  Implementers MAY use any approach to passing data into Test implementations appropriate for their language(s) and environment.
 
 #### 6.4.5 Example Test Implementation (non-normative)
 
@@ -561,13 +561,13 @@ When Test responses are being returned as annotations, they SHOULD use the W3C W
 
 ## 8 Validating Test Implementations (normative)
 
-Implementors of Tests SHOULD validate the behaviour of the internals of their Test implementations with unit Tests, and MUST validate that each Test implementation is capable of taking relevant input from a set of standard Test validation data, and returning the expected responses.
+Implementers of Tests SHOULD validate the behaviour of the internals of their Test implementations with unit Tests, and MUST validate that each Test implementation is capable of taking relevant input from a set of standard Test validation data, and returning the expected responses.
 
 If validation data could be conflated with actual data, see: [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
 
 ### 8.1 Introduction (non-normative)
 
-Accompanying the Core Test descriptors is a set of Test validation data.  This Test validation data is intended for implementors to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test.  Each Test specification could be graphed as a flow chart with several paths, the Test validation data are intended to cover each node and each path within each Test specification with at least a single case.  These are not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviour.  
+Accompanying the Core Test descriptors is a set of Test validation data.  This Test validation data is intended for implementers to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test.  Each Test specification could be graphed as a flow chart with several paths, the Test validation data are intended to cover each node and each path within each Test specification with at least a single case.  These are not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviour.  
 
 The Test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single Test.  The file has columns identifying the validation case, the Test that the row is intended to validate, the expected Response.status, Response.result, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given Test).   
 
