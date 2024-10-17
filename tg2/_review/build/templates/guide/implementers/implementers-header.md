@@ -44,11 +44,17 @@ This document provides guidance for those wishing to create sofware implementati
 
 This document is for software developers needing a technical understanding of the BDQ Core Tests.
 
-### 1.3 Status of the Content of this document
+### 1.3 Associated Documents
+
+- [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md)
+- [BDQ Core Vocabularies](../..//vocabularies/index.md)
+- [BDQ Core User's Guide](../guide/users/index.md)
+
+### 1.4 Status of the Content of this document
 
 Section 1 is non-normative. Other sections are marked as normative or non-normative.
 
-### 1.4 Namespace Abbreviations
+### 1.5 Namespace Abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -60,7 +66,7 @@ Test implementations SHOULD be independent of how data are stored and transporte
 
 ### 2.2 The Concept of "EMPTY" in BDQ Core (normative)
 
-Empty and NotEmpty are defined as: 
+Empty and NotEmpty in the context of BDQ Core are defined as follows: 
 
 <!--- Load definition of Empty and NotEmpty from bdq vocabulary here into template --->
 
@@ -71,23 +77,23 @@ Empty and NotEmpty are defined as:
 
 <!--- end load --->
 
-Data that has passed through arbitrary serializations and transformations can contain many anomalies.  Empty is defined to allow Tests to clearly separate concerns.  An Information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY and are the concern of Tests that evaluate bdqdim:Conformance.  Presence or absence of data is a concern for Tests evaluating bdqdim:Completeness.  
+Data that has passed through arbitrary serializations and transformations can contain anomalies. bdq:Empty is defined to allow Tests to clearly separate concerns.  An Information Element containing invalid characters, (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and are the concern of Tests that evaluate bdqdim:Conformance.  Presence or absence of data is a concern for Tests evaluating bdqdim:Completeness.  
 
-A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOTEMPTY, identifying that they are invalid is a concern of other Tests evaluating bdqdim:Completeness.
+A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty, identifying that they are invalid is a concern of other Tests evaluating bdqdim:Completeness.
 
 #### 2.2.1 The Concept of Empty (normative)
 
-(1) Spaces, tabs, and other non-printing characters, are treated as Empty.
+(1) Spaces, tabs, and other non-printing characters, are treated as bdq:Empty.
 
 Objects that are null, or null values in a relational database, at the point of Test execution, MUST be treated as bdq:Empty.
 
-(2) Serializations of NULL, treated as NOTEMPTY.
+(2) Serializations of NULL, treated as bdq:NotEmpty.
 
 Data serialized from relational database systems may contain string representations of NULL.
 
 We considered, and explicitly rejected, treating common string serializations of null such as "\N" and "NULL" as empty values.  String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as bdq:NotEmpty.  A Test execution environment MAY deserialize these string serializations of NULL
 
-(3) Data values indicating an unknown, treated as NOTEMPTY.
+(3) Data values indicating an unknown, treated as bdq:NotEmpty.
 
 The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "Null", "Unknown", "Not Recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
@@ -97,7 +103,7 @@ The evaluation of bdq:Empty MUST be at the point of evaluation of the Test.  Thi
 
 In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   This is to allow the application programing interface expressed by the Test bdqffdq:DataQualityNeed to be agnostic about the strucuture presented to a framework for executing the Tests. 
 
-For csv data a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
+For csv data, a column is either there or not in a data set, but in an rdf representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
 
 #### 2.2.2 Example implementation of a Function to Assess Empty (non-normative)
 
@@ -150,11 +156,11 @@ We regularly use Response, Response.status, Response.result, and Response.commen
 
 #### 2.3.2.2 Guidance for Reading a Specification (normative)
 
-A bdqffdq:hasExpectedResponse property of a bdqffdq:Specification provides expectations for the behavior of an implemenation of a test.  A bdqffdq:hasExpectedResponse consists of a sequence of blocks of "RESPONSE, criteria;"   In a few cases (a few AMENDMENTS that can propose values for multiple terms) the "criteria" is a sequence of options for that RESPONSE.  When reading a Specification, implementers SHOULD read each block in sequence, evaluating each of the criteria in sequence, and returning the first response that for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
+A bdqffdq:hasExpectedResponse property of a bdqffdq:Specification provides expectations for the behavior of an implemenation of a test.  A bdqffdq:hasExpectedResponse consists of a sequence of blocks of "RESPONSE, criteria;"   Where a few Amendment Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), the "criteria" is a sequence of options for that RESPONSE.  When reading a Specification, implementers SHOULD read each block in sequence, evaluating each of the criteria in sequence, and returning the first response for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification. This does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
 #### 2.3.2.3 Further guidance for Reading a Specification (non-normative)
 
-Responses in a Specification are expressed in an abbreviated form for readability by implementers, expanding these to string properties on a Response object gives:
+Responses in a Specification are expressed in a concise and abbreviated form for readability by implementers, expanding these to string properties on a Response object gives:
 
 EXTERNAL_PREREQUISITES_NOT_MET means Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some non-null description of the failure condition}
 
@@ -211,35 +217,35 @@ See section [# 2.3 Parameterising the tests (normative)](../../bdqcore/index.md#
 
 In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
 
-1. where Darwin Core data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
+1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test should be explicit about this meaning.  For example, the skos:note for AMENDMENT_MONTH_STANDARDIZED states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the expected response for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for AMENDMENT_MONTH_STANDARDIZED states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
 ## 3 Compliant Implementation (normative)
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
 
-We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementers will implement sets of these Tests that fit their data quality needs, and will also implement other Tests.  The BDQ Core Tests provide a coherent library of tests that can be applied to the set of defined UseCases, and considerable thought has gone into describing tests that isolate particular data quality issues, and that work together as a conherent suite.   
+We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementers will implement sets of these Tests that fit their data quality needs, and may also implement other Tests suited for their domain. The BDQ Core Tests provide a coherent library of Tests that can be applied to the set of defined bdqffdq:UseCases, and considerable thought has gone into describing Tests that isolate particular data quality issues and work together as a conherent suite.   
 
-An implementation MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional Tests and additional UseCases.
+An implementation MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one bdqffdq:UseCase, and MAY provide implementations for more or all of the bdqffdq:UseCases.   Implementations MAY include additional Tests and additional UseCases.
 
-Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response.   Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.  See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#21-Structure-of-Response-normative) for further normative guidance on Responses as RDF or as data structures.
+Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response. Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified. This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.  See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#21-Structure-of-Response-normative) for further normative guidance on Responses as RDF or as data structures.
 
-Where implementers add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq framework, those Tests MUST use the same Response structures, and those Tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
+Where implementers add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq Framework, those Tests MUST use the same Response structures, and those Tests MUST be related to bdqffdq:UseCases, either those defined in the standard or additional use cases.  
 
-The standard is agnostic as to how data are presented and piped within some framework to and from Test implementations.  An implementation framework MAY present SingleRecords to Tests and report results, or an implementation MAY find unique values for InformationElements, execute Test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
+The standard is agnostic as to how data are presented and piped within some framework to and from Test implementations.  An implementation framework MAY present bdqffdq:SingleRecords to Tests and report results, or an implementation MAY find unique values for bdqffdq:InformationElements, execute Test implementations on those unique values, and then map the results back onto SingleRecord reports, or an implementation MAY operate on data in other ways.
 
-For each core SingleRecord Validation, an implementation intended for Quality Control SHOULD include a corresponding MultiRecord Measure that counts the number of Response.result values that are COMPLIANT. An implementation MAY provide similar MultiRecord Measures that report aggregated counts of other Response.status and Response.result values.  
+For each bdqffdq:SingleRecord Validation, an implementation intended for Quality Control SHOULD include a corresponding bdqffdq:MultiRecord Measure that counts the number of Response.result values that are COMPLIANT. An implementation MAY provide similar MultiRecord Measures that report aggregated counts of other Response.status and Response.result values.  
 
-For each core SingleRecord Validation, an implementation intended for Quality Assurance SHOULD include a corresponding MultiRecord Measure that returns COMPLETE when all pertinent Response.result values are COMPLIANT (or for some Measures also INTERNAL_PREREQUSISITES_NOT_MET).
+For each bdqffdq:SingleRecord Validation, an implementation intended for Quality Assurance SHOULD include a corresponding bdqffdq:MultiRecord Measure that returns COMPLETE when all pertinent Response.result values are COMPLIANT, or for some Measures, also INTERNAL_PREREQUSISITES_NOT_MET.
 
-Implementations MUST provide implementations of parameterized Tests that support the default parameter values. Implementations SHOULD provide for parameterized Tests to take parameters, but MAY produce an implementation of a parameterized Test that takes no parameters but only uses the default parameter value.
+Implementations MUST provide implementations of Parameterized Tests that support the default Parameter values. Implementations SHOULD provide for Parameterized Tests to take parameters, but MAY produce an implementation of a Parameterized Test that takes no parameters but only uses the default parameter value.
 
-How a Test responds when given a parameter value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless specified in the Specification, implementations MUST_NOT use Response.status=EXTERNAL_PREREQUISITES_NOT_MET to indicate a non-supported parameter value.
+How a Test responds when given a parameter value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless specified in the Specification, implementations MUST_NOT use Response.status="EXTERNAL_PREREQUISITES_NOT_MET" to indicate a non-supported parameter value.
 
-Implementers are free to, and are encouraged to, in addition to framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-framework implementations MUST NOT assert compliance with this standard.
+Implementers are free to, and are encouraged to, in addition to Framework compliant implementations, produce means of testing data quality in bulk in settings such as SQL queries on relational data stores where construction of Response objects is not feasable, but the logic of a Specification can be framed as a question on a data store.  Such non-Framework implementations MUST NOT assert compliance with BDQ Core.
 
 Within the Response.result for an Amendment, the order of key-value pairs is not specified and MAY vary.
 
