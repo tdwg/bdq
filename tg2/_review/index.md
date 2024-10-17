@@ -33,7 +33,7 @@ Preferred Citation
       - File: [Tests in RDF/XML](dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
       - File: [Tests in Turtle](dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
   - [Fitness For Use Ontology Landing Page](docs/bdqffdq/index.md):
-    - [Fitness For Use Framework Ontology List of Terms](list/bdqffdq/index.md):
+    - [Fitness For Use Framework Ontology List of Terms](docs/list/bdqffdq/index.md):
     - [Fitness For Use Framework Ontology Extension List](docs/extension/bdqffdq/index.md):
     - File [bdqffdq: Owl](vocabulary/bdqffdq.owl "Owl ontology for the bdqffdq framework.")
   - [Biodiversity Data Quality Controlled Vocabulary List of Terms](docs/list/bdq/index.md)

@@ -111,7 +111,7 @@ The bdqffdq: portion of BDQ Core is a specification for a framework for describi
 
 This document provides a background for understanding the bdqcore: test descriptions.  Each of the tests in the bdqcore: namespace have been designed and described within this framework and are framed using the terms and concepts from the framework.  The bdqffdq: framework provides the context for each test, and has shaped decisions made about each test.  
 
-See the [bdqffdq: landing page](../bdqffdq/index.md) for a concise description and normative information about the bdqffdq: ontology, the [bdqffdq: Term List](../list/bdqffdq/index.md) for the list of terms in the bdqffdq: vocabulary, the [extension term list](../extension/bdqffdq/index.md) for documentation additional axioms, and the [owl ontology](../../vocabluary/bdqffdq.owl) for the formal representation of the vocabulary as an owl ontology.
+See the [bdqffdq: landing page](../bdqffdq/index.md) for a concise description and normative information about the bdqffdq: ontology, the [bdqffdq: Term List](../../list/bdqffdq/index.md) for the list of terms in the bdqffdq: vocabulary, the [extension term list](../../extension/bdqffdq/index.md) for documentation additional axioms, and the [owl ontology](../../vocabluary/bdqffdq.owl) for the formal representation of the vocabulary as an owl ontology.
 
 #### 3.2 Description of the bdqffdq ontology (non-normative) 
 
