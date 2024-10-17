@@ -132,18 +132,18 @@ Test specifications consist of the metadata (e.g., identifier, preferred label, 
 
 The specifications for expected responses from tests consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the test that was run, whether the information elements were those consulted or those acted upon.
 
-The [BDQ User's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run. 
+The [BDQ User's Guide](../guide/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run. 
 
-The [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
+The [BDQ Implementer's Guide](../guide/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
 
 [!--- JRW first pass finished to here ---]
 
-[Synthetic and Modified Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
+[Synthetic and Modified Data](../synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
 
 
 ### 2.3 Implementation Validation Data 
 
-See the [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/implementers/index.md) for information on a set of data for validating test implementations.. 
+See the [BDQ Implementer's Guide](../guide/implementers/index.md) for information on a set of data for validating test implementations.. 
 
 ### 2.4 Exemplar Tests Implementation
 
@@ -151,7 +151,7 @@ See the [BDQ Implementer's Guide](https://github.com/tdwg/bdq/blob/master/tg2/_r
 
 ### 2.6 Test Lists
 
-The [BDQ Core Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqcore/index.md) is a quick reference guide to the tests defined in BDQ Core. 
+The [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) is a quick reference guide to the tests defined in BDQ Core. 
 
 ### 2.7 Test Execution Environments and Workflows
 
