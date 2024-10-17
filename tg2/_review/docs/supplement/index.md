@@ -33,10 +33,12 @@ Draft Standard for Submission
 
 
 - [1 Introduction](#1-introduction)
-- [1.1 Target Audience](#11-target-audience)
-- [1.2. Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [1.3 RFC 2119 keywords](#13-rfc-2119-keywords)
-- [1.4 Namespace abbreviations](#14-namespace-abbreviations)
+- [1.1 Purpose](#11-purpose-)
+- [1.2 Audience](#12-audience)
+- [1.3 Associated Documents](#13-associated-documents)
+- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
+- [1.5 RFC 2119 keywords](#15-rfc-2119-keywords)
+- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
 - [2 Historical Context](#2-historical-context)
 - [2.1 Definition of CORE](#21-definition-of-core)
 - [2.2 Use Case Development](#22-use-case-development)
@@ -79,26 +81,26 @@ Draft Standard for Submission
 
 This document contains information that is considered supplemental to the normative and non-normative BDQ Core standard documentation. 
 
-Purpose
-: This document provides supplement to BDQ Core including historical context and lessons learned during the development of BDQ Core.
+### 1.1 Purpose 
+This document provides a historical context and lessons learned during the development of BDQ Core. This document will also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain. 
 
-### 1.1 Target Audience
+### 1.2 Audience
 
-This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within this this standard. This document may also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain.
+This sdocument is relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document. This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
 
-This document also provides practical information that goes beyond the normative guidance in the [implemeters guide](../guide/implementers/index.md) to those who wish to implement the BDQ Core standard.
+### 1.3 Associated Documents
 
-This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
+This document provides practical information that goes beyond the normative guidance in the [Users Guide](../guide/users/index.md) and [Implemeters Guide](../guide/implementers/index.md) for those who wish to use or implement BDQ Core.
 
-### 1.2. Status of the content of this document
+### 1.4 Status of the content of this document
 
 This document is non-normative.
 
-### 1.3 RFC 2119 keywords
+### 1.5 RFC 2119 keywords
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
-## 1.4 Namespace abbreviations
+## 1.6 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 

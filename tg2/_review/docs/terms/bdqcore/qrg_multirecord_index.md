@@ -1,9 +1,9 @@
-# Index to MultiRecord Measures Quick Reference Guide to BDQ Core Tests
+# Index to MultiRecord Measures BDQ Core Quick Reference Guide
 
 Title
-: Index to used in the Quick Reference Guide to BDQ Core Tests
+: Index to used in the BDQ Core Quick Reference Guide
 
-Part of the [Quick Reference Guide to BDQ Core Tests](index.md)
+Part of the [BDQ Core Quick Reference Guide](index.md)
 
 ## Index of MultiRecord Measure Tests in the BDQ Core tests.
 - [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](index.md#multirecord_measure_count_compliant_basisofrecord_notempty)

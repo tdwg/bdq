@@ -4,7 +4,7 @@
 layout: home
 ---
 
-# Quick Reference Guide to BDQ Core Tests
+# BDQ Core Quick Reference Guide
 {:.lead}
 
 Draft Standard for Submission
@@ -8900,7 +8900,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 <!--- TODO: move citation elements to document_configuration.yaml --->
 BDQ Core Maintenance Group. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://bdq.tdwg.org/terms/
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Quick Reference Guide to BDQ Core Tests. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
 
 **Biodiversity Information Standards (TDWG)**
 

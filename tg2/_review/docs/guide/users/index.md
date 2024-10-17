@@ -35,8 +35,9 @@ Draft Standard for Submission
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
-- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
-- [1.4 RFC 2119 key words (normative)](#14-rfc-2119-key-words-(normative))
+- [1.3 Associated Documents](#13-associated-documents)
+- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
+- [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-(normative))
 - [2 A Guide to the Tests](#2-a-guide-to-the-tests)
 - [2.1 Test Types (non-normative)](#21-test-types-(non-normative))
 - [2.2 Test Inputs and Outputs](#22-test-inputs-and-outputs)
@@ -45,16 +46,14 @@ Draft Standard for Submission
 - [2.2.3 Responses From Different Types of Test (normative)](#223-responses-from-different-types-of-test-(normative)-)
 - [2.3 Amendments Only Propose Changes (normative)](#23-amendments-only-propose-changes-(normative))
 - [2.4 Test Parameters (normative)](#24-test-parameters-(normative)-)
-- [3 Using the BDQ Core Tests Quick Reference Guide (non-normative)](#3-using-the-bdq-core-tests-quick-reference-guide-(non-normative))
+- [3 Using the BDQ Core Quick Reference Guide (non-normative)](#3-using-the-bdq-core-quick-reference-guide-(non-normative))
 - [4 Time and TimeZones (non-normative)](#4-time-and-timezones-(non-normative))
 
 
 
 # 1 Introduction
 
-This users guide describes how consumers of data quality reports can interpret the content of those reports.  
-
-See also the [Implementer's Guide](BDQ_Core_Implementers_guide.md) for those writing sofware to implement the tests.
+This document describes how consumers of BDQ Core data quality reports can interpret the content of those reports.  
 
 ### 1.1 Purpose
 
@@ -64,11 +63,16 @@ This is a users guide to the BDQ Core tests and assertions that they make.
 
 This document is for consumers of data quality reports.
 
-### 1.3 Status of the content of this document
+### 1.3 Associated Documents
+
+- The [BDQ Core Quick Reference Guide](../bdqcore/index.md) provides a brief summary of the tests in BDQ Core
+- The [BDQ Core Implementer's Guide](../guide/implementers/index.md) provides a more detailed view for those seeking to implement BDQ Core
+
+### 1.4 Status of the content of this document
 
 Each sections of this document is marked as normative or non-normative.
 
-### 1.4 RFC 2119 key words (normative)
+### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
@@ -137,11 +141,11 @@ When a Test is Parameterized, and a value other than the default value is used f
 
 So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
 
-# 3 Using the BDQ Core Tests Quick Reference Guide (non-normative)
+# 3 Using the BDQ Core Quick Reference Guide (non-normative)
 
-The BDQ Core [Quick Reference Guide](../bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
+The [BDQ Core Quick Reference Guide](../bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
-For each Test, the [Quick Reference Guide](../bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test). Does the Test operate on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
+For each Test, the [BDQ Core Quick Reference Guide](../bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test). Does the Test operate on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
 
 Two examples of Test data input and output are provided to illustrate opposing behaviors of the test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other of "NOT_COMPLIANT".  See the implementation guide for information about the set of test validation data.   
 

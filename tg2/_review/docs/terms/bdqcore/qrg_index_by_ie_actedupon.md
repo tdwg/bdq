@@ -1,9 +1,9 @@
-# InformationElement ActedUpon Index to the Quick Reference Guide to BDQ Core Tests
+# InformationElement ActedUpon Index to the BDQ Core Quick Reference Guide
 
 Title
-: Terms used in the Quick Reference Guide to BDQ Core Tests
+: Terms used in the BDQ Core Quick Reference Guide
 
-Part of the [Quick Reference Guide to BDQ Core Tests](index.md)
+Part of the [BDQ Core Quick Reference Guide](index.md)
 
 ## Index of Tests by InformationElement ActedUpon
 ### dwc:basisOfRecord

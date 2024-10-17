@@ -40,19 +40,21 @@ Draft Standard for Submission
 # Table of Contents 
 
 - [1 Introduction](#1-introduction)
-- [1.1 Target Audience](#11-target-audience)
-- [1.2 Documents about the BDQ Core Tests](#12-documents-about-the-bdq-core-tests)
-- [1.2.1 Term List Distributions for BDQ Core](#121-term-list-distributions-for-bdq-core)
-- [1.3 Characteristics of the tests (non-normative)](#13-characteristics-of-the-tests-(non-normative))
-- [1.3 Types of tests (non-normative)](#13-types-of-tests-(non-normative))
-- [1.3.1 Validation (normative)](#131-validation-(normative))
-- [1.3.2 Issue](#132-issue)
-- [1.3.3 Amendment](#133-amendment)
-- [1.3.4 Measure](#134-measure-)
+- [1.1 Purpose](#11-purpose)
+- [1.2 Audience](#12-audience)
+- [1.3 Associated Documents](#13-associated-documents)
+- [1.3.1 Term List Distributions for BDQ Core](#131-term-list-distributions-for-bdq-core)
 - [1.4 RFC 2119 key words (normative)](#14-rfc-2119-key-words-(normative))
-- [1.5 Status of the content of this document](#15-status-of-the-content-of-this-document)
-- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
-- [1.7 Example RDF (non-normative)](#17-example-rdf-(non-normative)-)
+- [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
+- [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
+- [1.7 Text to move or rewrite](#17-text-to-move-or-rewrite)
+- [1.8 Characteristics of the tests (non-normative)](#18-characteristics-of-the-tests-(non-normative))
+- [1.9 Types of Tests (non-normative)](#19-types-of-tests-(non-normative))
+- [1.9.1 Validation Tests](#191-validation-tests-)
+- [1.9.2 Issue Tests](#192-issue-tests)
+- [1.9.3 Amendment Tests](#193-amendment-tests)
+- [1.9.4 Measure Tests](#194-measure-tests-)
+- [1.10 Example RDF (non-normative)](#110-example-rdf-(non-normative)-)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative))
 - [2.1 Structure of Response (normative)](#21-structure-of-response-(normative))
 - [2.2 Resource Types (normative)](#22-resource-types-(normative))
@@ -63,18 +65,22 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-This document provides explanatory information and normative guidance for the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+This document provides explanatory information and normative guidance for the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman et al. (2017).
 
-### 1.1 Target Audience
+### 1.1 Purpose
 
-This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementors. 
+The document provides the context in which the BDQ Core tests exist.
 
-### 1.2 Documents about the BDQ Core Tests
+### 1.2 Audience
+
+This document is for Users and Implementors of BDQ Core who require a technical context for the Tests.
+
+### 1.3 Associated Documents
 
 The BDQ Core vocabulary includes the following documents and files: 
 
 - [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md)
-- [BDQ Core Vocabularies](../..//vocabularies/index.md)
+- [BDQ Core Vocabularies](../vocabularies/index.md)
 - This document provides Normative guidance on the use of the BDQ Core vocabulary.
 - The BDQ Core Tests have several distribution files:
     - File: [CSV List of Tests](../../vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
@@ -83,7 +89,7 @@ The BDQ Core vocabulary includes the following documents and files:
 - [BDQ Core User's Guide](../guide/users/index.md)
 - [BDQ Core Implementer's Guide](../guide/implementers/index.md)
 
-### 1.2.1 Term List Distributions for BDQ Core
+### 1.3.1 Term List Distributions for BDQ Core
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
@@ -92,7 +98,39 @@ The BDQ Core vocabulary includes the following documents and files:
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | Turtle  | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV list of tests | 
 
-### Text to move or rewrite
+### 1.4 RFC 2119 key words (normative)
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+
+### 1.5 Status of the Content of this Document
+
+Sections 1 and 3 are non-normative.
+Section 2 is normative.
+Section 3.1 lists which which terms in section 4 have normative values and which non-normative.
+
+### 1.6 Namespace Abbreviations
+
+The following namespace abbreviations are used in this document:
+
+| Prefix |  IRI |
+| ------ |  --- |
+| bdq          | https://rs.tdwg.org/bdq/terms/                   |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
+| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| dc           | https://purl.org/dc/elements/1.1/                |
+| dcterms      | https://purl.org/dc/elements/1.1/                |
+| dwc          | http://rs.tdwg.org/dwc/terms/                    |
+| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
+| oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
+| owl          | http://www.w3.org/2002/07/owl#                   |
+
+
+### 1.7 Text to move or rewrite
 
 <!--- Material here probably goes into the implementers or users guide --->
 
@@ -115,20 +153,20 @@ For a simplied list of current terms, see the BDQ Core Quick Reference Guide {ht
 
 <!--- end of information that probably goes in the users or implementers guides --->
 
-### 1.3 Characteristics of the tests (non-normative)
+### 1.8 Characteristics of the tests (non-normative)
 
 Each test is defined as a SingleRecord test. No CORE tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord. The framework allows for MultiRecord tests able to identify outliers within a data set, or other tests that look across a MultiRecord to evaluate data quality, but we have not specified any such tests here.
 
 The scope of each test is also largely provided by the bdqffdq:Specification. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the Specification are included in the "Information Elements". The "Specification" also includes references to external (to the Darwin Core standard: Wieczorek et al. 2012) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test.
 
 
-### 1.3 Types of tests (non-normative)
+### 1.9 Types of Tests (non-normative)
 
 The concept of 'tests' in the context of this standard include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure).
 
 Each bdqcore: test is an instance of a subclass of bdqffdq:DataQualityNeed composed with an instance of a subclass of bdqffdq:Method composed with an instance of bdqffdq:Specification.  When run by an implementation, each bdqcore: test can produce a data quality report consisting of bdqffdq:Assertions.
 
-#### 1.3.1 Validation (normative)
+#### 1.9.1 Validation Tests 
 
 Each Validation Test is composed of an instance of bdqffdq:Validation (which expresses a data quality need in the abstract) with an instance of bdqffdq:ValidationMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
 
@@ -141,7 +179,7 @@ The formal response of Validation Tests (an instance of a bdqffdq:ValidationAsse
 3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation:
   - A Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not.
 
-#### 1.3.2 Issue
+#### 1.9.2 Issue Tests
 
 Each Issue Test is composed of an instance of bdqffdq:Issue (which expresses a data quality need in the abstract) with an instance of bdqffdq:IssueMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
 
@@ -160,13 +198,13 @@ In each case, a Response.comment MUST be present with text explaining to consume
 
 None of the currently defined BDQ Core Issue tests return a Response.result of IS_ISSUE
 
-#### 1.3.3 Amendment
+#### 1.9.3 Amendment Tests
 
 Each Amendment Test is composed of an instance of bdqffdq:Amendment (which expresses how to improve data to fit a data quality need in the abstract) with an instance of bdqffdq:AmendmentMethod which links it to an instance of a bdqffdq:Specification (which gives details of how proposals could be made to improve data for that need).
 
 An Amendment Test may propose a change to one or more Darwin Core Term values, or propose to fill in missing values.  The Assertion produced by an Amendment is intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in these tests.
 
-#### 1.3.4 Measure 
+#### 1.9.4 Measure Tests 
 
 Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses how measure fittnes of data for a data quality need in the abstract) with an instance of bdqffdq:MeasurementMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality is to be measured).
 
@@ -182,48 +220,13 @@ bdqffdq:SingleRecord MEASUREs within BDQ Core are MEASURE_VALIDATIONTESTS_COMPLI
 
 For each bdqffdq:SingleRecord Validation Test, there is a bdqffdq:MultiRecord Measure Test that returns a Response.result="COMPLETE" when all records in the bdqffdq:MultiRecord have a Response.result="COMPLIANT", and a Response.result="NOT_COMPLETE" when they are not. Under Quality Assurance, these Measure Tests are the key criterion for identifying data which have quality for a Use Case. Under Quality Assurance, a bdqffdq:MultiRecord is filtered to remove records that do not fit the bdqffdq:MultiRecord Measure Tests for completeness, such that a filtered bdqffdq:MultiRecord has Response.result="COMPLETE" for all bdqffdq:MultiRecord Measure Tests.
 
-
-### 1.4 RFC 2119 key words (normative)
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
-
-
-### 1.5 Status of the content of this document
-
-Sections 1 and 3 are non-normative.
-
-Section 2 is normative.
-
-Section 3.1 lists which which terms in section 4 have normative values and which non-normative.
-
 **Text to align with configuration to build 3.1**
 In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI, Resource Type, Specification, Information Elements ActedUpon, Information Elements Consulted, and Parameters are normative.  The values of Description, Examples, Use Cases, and Notes are non-normative. 
 
 In Section 4, the values of the `Term IRI` and `Definition` are normative. The values of `Term Name` `skos:pref:Label` are non-normative, although one can expect that the namespace abbreviation prefix is one commonly used for the term namespace.  `Label` and the values of all other properties (such as `Examples` and `Notes`) are non-normative.
 **End text for alignment**
 
-### 1.6 Namespace abbreviations
-
-The following namespace abbreviations are used in this document:
-
-| Prefix |  IRI |
-| ------ |  --- |
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dc           | https://purl.org/dc/elements/1.1/                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
-| owl          | http://www.w3.org/2002/07/owl#                   |
-
-### 1.7 Example RDF (non-normative) 
+### 1.10 Example RDF (non-normative) 
 
 A more complete description of the tests can be found in the RDF representation of this vocabulary.  Following the bdqffdq: Framework, a test is composed of an instance of a subclass of a bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation), an instance of a bdqffdq:ActedUpon information element, optionally an instance of a bdqffdq:Consulted information element, an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod), and an instance of a bdqffdq:Specification.  Most of the information associated with a bdqffdq:term is expressed in other vocabularies, in particular bdqffdq:.   This structure and dependence on other vocabularies can be seen in the example below of https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe VALIDATION_COUNTRYCODE_STANDARD
 
