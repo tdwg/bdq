@@ -41,21 +41,27 @@ The BDQ tests support the determination of whether data resources will be fit fo
 
 The BDQ tests were initially targeted specifically to [Darwin Core](https://dwc.tdwg.org/terms/) classes and properties against which they operate. This is not a limitation on the scope of the standard, but rather a choice of original scope against which to develop the tests.
 
-Purpose
-: An introduction to and overview of BDQ Core.
+### 1.1 Purpose
 
-### 1.1 Target Audience
-This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md). Those interested in more detail on the interpretation of test results should consult the [BDQ Core User Guide](../users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../implementation/index.md "BDQ Core Implementation Guide").
+This document introduces BDQ Core.
 
-### 1.2. Status of the content of this document
+### 1.2 Audience
+
+This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. 
+
+### 1.3 Associated Documents
+
+Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md). Those interested in more detail on the interpretation of test results should consult the [BDQ Core User Guide](../users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../implementation/index.md "BDQ Core Implementation Guide").
+
+### 1.4. Status of the Content of This Document
 
 All sections of this document are non-normative unless explicitly noted as normative.
 
-### 1.3 RFC 2119 keywords
+### 1.5 RFC 2119 Keywords
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
-### 1.4 Namespace abbreviations
+### 1.6 Namespace Abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -148,11 +154,11 @@ Expanding on this single validation step, amendments can be run and their result
 
 BDQ Core draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.  Implementations of the bdqcore tests MAY be used to perform Quality Control, Quality Assurance, or both.
 
-### 3.2 When are tests run 
+### 3.2 When are Tests Run 
 
 The bdqcore tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of records from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data.  They MAY be run in workflows for analysis of data for research purposes.
 
-### 3.3 Results of test executions 
+### 3.3 Results of Test Executions 
 
 BDQ Core is agnostic about how reports from BDQ Core can be reported.  It does, however, specify that test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.  Responses MAY also contain more information in Response.qualifier.
 
@@ -245,11 +251,11 @@ Abigail Benson (U.S. Geological Survey)
 | TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases                                  |
 | TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
 
-## 6 Audience for each document in BDQ Core
+## 6 Audience for Each Document in BDQ Core
 
 - [Introduction](../docs/intro/index.md) This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. 
 - Guides
-  - [Quick Reference Guide to the BDQ Core Tests](../docs/guide/users/index.md) This document is for all users.
+  - [Quick Reference Guide](../docs/guide/users/index.md) This document is for all users.
   - [Users Guide](../docs/guide/users/index.md) This document is for consumers of data quality reports.
   - [Implementers Guide](../docs/guide/implementers/index.md) This document is for software developers needing a technical understanding of the BDQ Core Tests.
   - [bdqffdq Framework Guide](../docs/guide/bdqffdq/index.md) This document is for those needing a technical understanding of the bdqffdq: Framework vocabulary.
