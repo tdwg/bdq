@@ -33,24 +33,29 @@ Bibliographic citation
 
 {toc}
 
-# 1 Introduction
+## 1 Introduction
 
 Purpose
-: This is a specification for the marking and identification of synthetic data that does not represent real world occurrences.
 
-### 1.1 Target Audience
+### 1.1 Purpose
 
-This document is designed for creators of data sets for the validation of implementations of BDQ Core tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines . 
+This document specifies the marking and identification of synthetic data, not real world occurrences.
 
-## 1.2. Status of the content of this document
+### 1.2 Audience
+
+This document is designed for creators of data sets for the validation of implementations of BDQ Core Tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines . 
+
+### 1.3 Associated Documents
+
+Link to Test Data?
+
+### 1.4 Status of the content of this document
 
 Section 1 is non-normative.
-
 Section 2 is normative.  
-
 Section 3 is non-normative.
 
-## 1.3 RFC 2119 keywords
+## 1.4 RFC 2119 Keywords
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
@@ -58,7 +63,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 Implementors of BDQ Core tests, and other tests of biodiversity data quality may wish to use data sets containing known errors and issues for the purposes of testing the behavior of their test implementations and to validate that those test implementations perform as expected.  To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if test implementations correctly identify those errors).  To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analysies, such data SHOULD BE marked in a consistent manner known to consumers of such data.
 
-## 2.1 Identifying example data (normative)
+## 2.1 Identifying Example Data (normative)
 
 Data sets consisting of partly or wholly synthetic data, including data sets into which errors have been deliberately introduced may be used to test, validate, and demonstrate the operation of implementations of data quality tests.  It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses.  The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
 
@@ -66,11 +71,11 @@ Data sets consisting of partly or wholly synthetic data, including data sets int
 
 Inputs to unit tests and testing frameworks for individual test implementations are likely to be organized as fragments of Occurrence data not easily mistaken for actual occurrence data.  A record forming a fragment of an Occurrence record for validating the behaviour of the implementation of a particular test SHOULD only contain the set of terms that form the Information Element for a particular test, along with test parameters, expected outputs, and related metadata, and SHOULD_NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4  Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers of Occurrence data.
 
-## 2.3 Real data used as examples. (normative)
+## 2.3 Real Data Used as Examples (normative)
 
 Use the values in the original source, without modification except:  If no dwc:datasetID is provided, a value for dwc:datasetID MAY be added, this SHOULD be the doi of the source data set in which the example record was found.   
 
-## 2.4  Real data with synthetic modifications used as examples: (normative)
+## 2.4  Real Data with Synthetic Modifications Used as Examples (normative)
 
 A. The data set MUST set values for record level terms to unambiguously mark the record as modified.
 
@@ -110,7 +115,7 @@ B.  Each modified record MUST provide a GUID for the synthetic record.
 
 dwc:occurrenceID = urn:uuid: + a random type 4 UUID
 
-# 3 BDQ Core validation data (non-normative) 
+# 3 BDQ Core Validation Data (non-normative) 
 
 BDQ Core includes two data sets for the validation of test implemetations.  These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
