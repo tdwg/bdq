@@ -166,70 +166,27 @@ The results of the execution of implementations of the bdqcore: tests MAY be pre
 
 The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.
 
-## 4 Acknowledgements
+## 4 Contributions and Acknowledgements
 
-We acknowldge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend the two face-to-face meetings for the development of BDQ Core. We also acknowledge the support of Paul Morris by The Museum of Comparative Zoology.
+### 4.1 Acknowledgements
 
-The authors also gratefully acknowledge all those who have commented on the issues during the development of BDQ Core.
+The authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops (in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, Florida, USA; and Seattle, Washington, USA) and TDWG annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Tasmania, Australia; and Ginowa, Okinawa, Japan; and the various Virtual meetings). Also all those that have answered our many email questions.
 
-### 4.1 Contributor Roles
+We'd also aknowledge the support of the TDWG (Biodiversity Information Standards) Executive over the 10 years of the project.
+
+#### 4.1.1 Funding and Support
+
+We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of BDQ Core, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthflor LLC provided support of John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
+
+The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP) provided facilities, and with the Global Biodiversity Information Facility and others, supported participants to attend the meeting in São Paulo, Brazil. The US National Science Foundation through iDigBio provided support for the meeting in Gainesville, Florida.
+
+### 4.2 Contributions
 
 Many people have contributed to the development of the BDQ Core standard.  
 
-We recognize 4 people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation.  
+We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, test validation data, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents; **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
 
-Lee Belbin (Blatant Fabrications)
-: Test Descriptions, Test Validation Data, Author of BDQ Core documents. Convenor of Task Group 2: Data Quality Tests and Assertions. 
-
-Arthur D. Chapman (Australian Biodiversity Information Services)
-: Test Descriptions, Author of BDQ Core Documents, Vocabulary and definition development, convener of the BDQ Interest group.
-
-Paul J. Morris (Museum of Comparative Zoology, Harvard University), 
-: Test Descriptions, bdqffdq ontology, java test implementations in filteredpush packages, Author of BDQ Core Documents.
-
-John Wieczorek (VertNet)
-: Test Descriptions, test implementations, Author of BDQ Core Documents.
-
-The following people have also contributed substantally to the development what has become BDQ Core over the last decade.
-
-Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)
-: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core Documents.
-
-António Mauro Saraiva (Universidade de São Paulo)
-: Development of the framework, TG1, Facilitated test development workshop, co-convenor of Data Quality Interest Group until 2022.
-
-Alan Koch Veiga (Universidade de São Paulo)
-: Developed the framework as his disertation, convenor of Task Group 1: Framework on Data Quality.
-
-Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche), 
-: Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value.
-
-Alexander Thompson (iDigBio)
-: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues.
-
-David Lowery (Museum of Comparative Zoology, Harvard University)
-: Initial development of ontology reprentation of the framework, developer of kurator-ffdq java class representation of the framework.
-
-Christian Gendreau (Agriculture and Agri-Food Canada)
-: Intitial contribitions to data quality discussions, vocabulary definitions and early test development.
-
-Tim Roberston (Global Biodiversity Information Facility)
-: Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests.
-
-Dmitry Schigel (Global Biodiversity Information Facility)
-: Intitial contribitions to data quality discussions and vocabulary definitions.
-
-Robert A. Morris (late, of UMass Boston)
-: Competency Questions for the framework as an ontology, guided intital development of the ontology representation of the framework.
-
-Miles Nicholls (Atlas of Living Australia)
-: Use Case analysis, convenor of Task Group 3: Data Quality Use Cases.
-
-Emily Rose Rees (Atlas of Living Australia)
-: Use Case analysis in Task Group 3: Data Quality Use cases.
-
-Abigail Benson (U.S. Geological Survey)
-: Intitial contribitions to data quality discussions and vocabulary definitions.
+There were many people who have contributed substantially at various times over the last decade to the development of BDQ Core. **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents; **António Mauro Saraiva (Universidade de São Paulo)**: Development of the Fitness for Use Framework (Task Group 1), facilitated test development workshop, Co-convenor of Data Quality Interest Group until 2022; **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation, Convenor of Task Group 1: Framework on Data Quality; **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value; **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues; **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of the Fitness for Use Framework, developer of kurator-ffdq java class representation of the framework; **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions, vocabulary definitions and early test development; **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests; **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions, GBIF Representative to the Data Quality Interest Group in early years; **Robert A. Morris (late, of UMass Boston)**: Competency questions for the Fitness for Use Framework as an ontology, guided intital development of the ontology representation of the framework; **Miles Nicholls (Atlas of Living Australia)**: Use Case analysis, Convenor of Task Group 3: Data Quality Use Cases; **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in Task Group 3: Data Quality Use cases; **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
 
 ## 5 Acronyms
 <!--- TODO: Where do the acronyms go? --->
