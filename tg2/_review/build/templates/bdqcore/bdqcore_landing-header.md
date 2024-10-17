@@ -58,7 +58,7 @@ This document is for Users and Implementors of BDQ Core who require a technical 
 The BDQ Core vocabulary includes the following documents and files: 
 
 - [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md)
-- [BDQ Core Vocabularies](../..//vocabularies/index.md)
+- [BDQ Core Vocabularies](../vocabularies/index.md)
 - This document provides Normative guidance on the use of the BDQ Core vocabulary.
 - The BDQ Core Tests have several distribution files:
     - File: [CSV List of Tests](../../vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
