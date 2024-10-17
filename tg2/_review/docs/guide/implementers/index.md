@@ -223,7 +223,7 @@ We view the most important elements of this standard as being the structure that
 
 An implementation MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one UseCase, and MAY provide implementations for more or all of the UseCases.   Implementations MAY include additional Tests and additional UseCases.
 
-Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response.   Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.
+Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response.   Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified.   This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.  See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#21-Structure-of-Response-normative) for further normative guidance on Responses as RDF or as data structures.
 
 Where implementers add additional Tests as part of a Test suite compliant with this standard, they MUST describe those Tests using the bdqffdq framework, those Tests MUST use the same Response structures, and those Tests MUST be related to UseCases (either those defined in the standard or additional use cases).  
 
@@ -265,11 +265,11 @@ Responses from each of the Tests MUST be structured data, and MUST NOT be simple
 
 The Response MUST include the following three components: 
 
-1. Value is the returned result for the Test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
+1. Response.result is the returned result for the Test, i.e. numeric for measures, a controlled vocabulary consisting of exactly COMPLIANT or NOT_COMPLIANT for Validations, NOT_ISSUE, POTENTIAL_ISSUE or ISSUE for Issues, either a numeric value or a controlled vocabulary consisting of COMPLETE or NOT_COMPLETE for Measures, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendments.
 
-2. Status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
+2. Response.status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
 
-3. The Remark supplies human-readable text describing reasons for the Test result output.
+3. The Response.omment supplies human-readable text describing reasons for the Test result output.
 
 An Amendment may propose a change to an exisiting Darwin Core value or a set of Darwin Core terms or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  The Framework also supports changes to procedures but we have not framed any such Tests in this form.  
 
@@ -277,10 +277,11 @@ An Amendment Response.result SHOULD consist of a set of key:value pairs, where t
 
 Under bdqffdq: Amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Response.result, and implementers MAY develop their own structures and serialisations for such Amendment Response.results.
 
-Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses.   Implementations MAY serialize Assertions in any appropriate form. 
+Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses. Implementations MAY serialize Assertions in any appropriate form. 
 
 Nothing in this section should be taken as a requirement to how bdqffdq:Assertions or Responses are to be presented to consumers of data quality reports.  Implementations MAY present the results of Tests in any form appropriate for their consumers.  
 
+See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#21-Structure-of-Response-normative) for further normative guidance on representing Responses as RDF or in data structures.
 
 ### 5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)
 
