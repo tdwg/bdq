@@ -143,15 +143,15 @@ So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while w
 
 # 3 Using the BDQ Core Quick Reference Guide (non-normative)
 
-The [BDQ Core Quick Reference Guide](../bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
+The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
-For each Test, the [BDQ Core Quick Reference Guide](../bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test). Does the Test operate on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
+For each Test, the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test). Does the Test operate on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
 
 Two examples of Test data input and output are provided to illustrate opposing behaviors of the test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other of "NOT_COMPLIANT".  See the implementation guide for information about the set of test validation data.   
 
 Each Test lists UseCases describing data quality needs to which each Test is applicable. Notes provide additional guidance for understanding test results and for implementation.  
 
-The definitions of the terms used for the tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md).
+The definitions of the terms used for the tests can be found at [Terms in bdqcore: Quick Reference Guide](../../terms/bdqcore/bdqcore_qrg_term_descriptions.md).
 
 # 4 Time and TimeZones (non-normative)
 
