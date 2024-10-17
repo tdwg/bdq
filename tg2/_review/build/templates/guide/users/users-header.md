@@ -48,7 +48,7 @@ This document is for consumers of data quality reports.
 
 ### 1.3 Associated Documents
 
-- The [BDQ Core Quick Reference Guide](../bdqcore/index.md) provides a brief summary of the tests in BDQ Core
+- The [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) provides a brief summary of the tests in BDQ Core
 - The [BDQ Core Implementer's Guide](../guide/implementers/index.md) provides a more detailed view for those seeking to implement BDQ Core
 
 ### 1.4 Status of the content of this document
