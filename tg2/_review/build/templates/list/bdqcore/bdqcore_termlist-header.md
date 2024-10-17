@@ -3,9 +3,9 @@
 
 ## 1 Introduction
 
-This document lists the BDQ Core tests. It includes terms from the namespaces `bdqcore:` (the core tests), `bdq:` (parent namespace), `bdqffdq:` (framework for data quality), `bdqdim:` (data quality dimension from Veiga et al. 2017), `bdqenh:` (test enhancements) and `bdqcrit:` (test criteria). For background details see Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C, Benson A, Schigel D (2020). Developing Standards for Improved Data Quality and for Selecting Fit for Use Biodiversity Data. Biodiversity Information Science and Standards 4: e50889. https://doi.org/10.3897/biss.4.50889.
+This document lists the BDQ Core tests. It includes terms from the namespaces `bdqcore:` (the core tests), `bdq:` (parent namespace), `bdqffdq:` (framework for data quality), `bdqdim:` (data quality dimension from Veiga et al. 2017), `bdqenh:` (test enhancements) and `bdqcrit:` (test criteria). For background details see Chapman et al. (2017).
 
-The focus of this standard are a suite of tests that operate on a single (SingleRecord) Darwin Core (https://dwc.tdwg.org/) encoded record, for example VALIDATION_COUNTRYCODE_STANDARD. This test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search. The data quality framework (ref) on which these tests are based, allows for MultiRecord tests that could identify outliers within a data set or could accumulate results of a
+The focus of this standard are a suite of tests that operate on a single (SingleRecord) Darwin Core (Wieczorek et al. 2012) encoded record, for example VALIDATION_COUNTRYCODE_STANDARD. This test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search. The data quality framework (ref) on which these tests are based, allows for MultiRecord tests that could identify outliers within a data set or could accumulate results of a
 SingleRecord tests, such as above, for example 70% of records in a dataset had a valid dwc:countryCode.
 
 Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data
@@ -13,20 +13,15 @@ records in sequence, as queries on data sets, on unique values.
 
 Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that assesses some aspect of data quality. An AMENDMENT may be able to improve the quality of data with respect to that VALIDATION.
 
-## 1.1 Types of Tests
+### 1.1 Purpose
 
-There are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
+This document lists the BDQ Core Tests and provides an explanation of the terms needed to describe those Tests.
 
-**Validation Tests** examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
+### 1.2 Audience
 
-**Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
+Users who need to understand the tests, but not all technical detials required in the standard. The focus is on description of each test with key elements necessary for understanding. This is the most important page for anyone needing to undertand what each test does.
 
-**Amendment Tests** examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
-
-**Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
-
-
-### 1.1 Documents about the bdqcore: test descriptions.
+### 1.3 Asociated Documents
 
 The bdqcore: vocabulary includes: 
 
@@ -39,21 +34,7 @@ The bdqcore: vocabulary includes:
   - An rdf representation of the tests in an [RDF/XML Serialization of bdqcore](../dist/bdqcore.xml) 
 
 An users guide to the use of the bdqcore tests is provided in the [Users Guide](../guide/users/index.md) 
-
 An guide to implemetation of the bdqcore tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
-
-### 1.2 Status of the content of this document
-
-Sections 1 and 3 are non-normative.
-
-Section 2 is normative.
-
-Section 1.5 identifies which values in Section 4 are normative.
-
-In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
-Resource Type, Specification, Information Elements ActedUpon, Information
-Elements Consulted, and Parameters are normative.  The values of
-Description, Examples, Use Cases, and Notes are non-normative.
 
 ### 1.4 Term List Distributions
 
@@ -64,7 +45,53 @@ Description, Examples, Use Cases, and Notes are non-normative.
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | Turtle  |
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV list of tests |
 
-### 1.5 Test Descriptors 
+
+### 1.5 Status of the Content of this Document
+
+Sections 1 and 3 are non-normative.
+Section 2 is normative.
+Section 1.5 identifies which values in Section 4 are normative.
+
+In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
+Resource Type, Specification, Information Elements ActedUpon, Information
+Elements Consulted, and Parameters are normative.  The values of
+Description, Examples, Use Cases, and Notes are non-normative.
+
+## 1.6 Namespace abbreviations
+
+The following namespace abbreviations are used in this document:
+
+| Prefix |  IRI |
+| ------ |  --- |
+| bdq          | https://rs.tdwg.org/bdq/terms/                   |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
+| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| dc           | https://purl.org/dc/elements/1.1/                |
+| dcterms      | https://purl.org/dc/elements/1.1/                |
+| dwc          | http://rs.tdwg.org/dwc/terms/                    |
+| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
+| oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
+| owl          | http://www.w3.org/2002/07/owl#                   |
+
+
+## 1.7 Types of Tests
+
+There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
+
+**Validation Tests** examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
+
+**Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
+
+**Amendment Tests** examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
+
+**Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
+
+### 1.8 Test Descriptors 
 
 The Test Descriptors are terms that are necessary to comprehensively
 describe each test. Some terms, such as the IRI and term_localName are 
@@ -134,34 +161,12 @@ ensure that implementers have no ambiguity about how the test should be coded.
 **Specification label**. A descriptive label for the specification of an AMENDMENT, for example "Specification for: AMENDMENT_LICENSE_STANDARDIZED"
 --->
 
-## 1.6 Namespace abbreviations
-
-The following namespace abbreviations are used in this document:
-
-| Prefix |  IRI |
-| ------ |  --- |
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dc           | https://purl.org/dc/elements/1.1/                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
-| owl          | http://www.w3.org/2002/07/owl#                   |
-
-
 ## 2 Normative Guidance
 
 See the [landing page](../../bdqcore/index.md) for normative guidance on the use of bdqcore terms.
 
-### 2.1 RFC 2119 key words (normative)
+### 2.1 RFC 2119 Keywords (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-## 3 Term indices
+## 3 Term Indices
