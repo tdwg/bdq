@@ -38,7 +38,7 @@ Bibliographic citation
 This page provides an introduction and index to the six vocabularies introduced by this standard. The vocabularies are distinguished by their roles within applications of the standard to biodiversity data quality (BDQ) use cases. Each vocabulary has its own namespace and term list document. 
 
 ### 1.1 Purpose
-This document is an index to the all vocabularies in BDQ Core.
+This document is an index to all the vocabularies in BDQ Core.
 
 ### 1.2 Audience
 
