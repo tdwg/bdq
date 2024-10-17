@@ -36,9 +36,7 @@ Bibliographic citation
 
 # 1 Introduction
 
-This users guide describes how consumers of data quality reports can interpret the content of those reports.  
-
-See also the [Implementer's Guide](BDQ_Core_Implementers_guide.md) for those writing sofware to implement the tests.
+This document describes how consumers of BDQ Core data quality reports can interpret the content of those reports.  
 
 ### 1.1 Purpose
 
@@ -48,11 +46,16 @@ This is a users guide to the BDQ Core tests and assertions that they make.
 
 This document is for consumers of data quality reports.
 
-### 1.3 Status of the content of this document
+### 1.3 Associated Documents
+
+- The [BDQ Core Quick Reference Guide](../bdqcore/index.md) provides a brief summary of the tests in BDQ Core
+- The [BDQ Core Implementer's Guide](../guide/implementers/index.md) provides a more detailed view for those seeking to implement BDQ Core
+
+### 1.4 Status of the content of this document
 
 Each sections of this document is marked as normative or non-normative.
 
-### 1.4 RFC 2119 key words (normative)
+### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
