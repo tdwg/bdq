@@ -13,7 +13,7 @@ Draft Standard for Submission
 
 This document is intended to be an easy-to-read reference (as of 2024-09-10) of the tests maintained as part of the TDWG standard [BDQ Core](http://example.org/to_be_determined) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Core Maintenance Group. This document lists the BDQ Core tests by terms defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., "bdq:", “dwc:”). These are reequired as the meaning for the word is defined specifically in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-For a guide to using the Quick Reference Guide see [Using the BDQ CORE Tests Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/build/templates/guide/users/users-header.md#3-using-the-bdq-core-tests-quick-reference-guide-non-normative)
+For a guide to using the Quick Reference Guide see [Using the BDQ CORE Tests Quick Reference Guide](../../guide/users/users-header.md#3-using-the-bdq-core-tests-quick-reference-guide-non-normative)
 
 The definitions of the terms used for tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
 

@@ -11,7 +11,7 @@ layout: home
 
 This document is intended to be an easy-to-read reference (as of {doc_modified}) of the tests maintained as part of the TDWG standard [BDQ Core]({standard_iri}) produced by the {creator} and is maintained by the {maintainer}. This document lists the BDQ Core tests by terms defined below. Definitions, comments, and examples may include namespace abbreviations (e.g., "bdq:", “dwc:”). These are reequired as the meaning for the word is defined specifically in that namespace. Thus, dwc:Event means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-For a guide to using the Quick Reference Guide see [Using the BDQ CORE Tests Quick Reference Guide](https://github.com/tdwg/bdq/blob/master/tg2/_review/build/templates/guide/users/users-header.md#3-using-the-bdq-core-tests-quick-reference-guide-non-normative)
+For a guide to using the Quick Reference Guide see [Using the BDQ CORE Tests Quick Reference Guide](../../guide/users/users-header.md#3-using-the-bdq-core-tests-quick-reference-guide-non-normative)
 
 The definitions of the terms used for tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md). 
 

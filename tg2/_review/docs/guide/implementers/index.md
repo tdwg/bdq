@@ -606,7 +606,7 @@ When Test responses are being returned as annotations, they SHOULD use the W3C W
 
 Implementers of Tests SHOULD validate the behaviour of the internals of their Test implementations with unit Tests, and MUST validate that each Test implementation is capable of taking relevant input from a set of standard Test validation data, and returning the expected responses.
 
-If validation data could be conflated with actual data, see: [Identifying Synthetic and Example Data](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/synthetic/index.md)
+If validation data could be conflated with actual data, see: [Identifying Synthetic and Example Data](../../synthetic/index.md)
 
 ### 8.1 Introduction (non-normative)
 
