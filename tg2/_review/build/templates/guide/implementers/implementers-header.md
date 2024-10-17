@@ -46,9 +46,7 @@ This document is for software developers needing a technical understanding of th
 
 ### 1.3 Status of the Content of this document
 
-Section 1 is non-normative.
-
-Other sections are marked as normative or non-normative.
+Section 1 is non-normative. Other sections are marked as normative or non-normative.
 
 ### 1.4 Namespace Abbreviations
 
@@ -271,7 +269,7 @@ The Response MUST include the following three components:
 
 2. Response.status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where in the future, probabilistic assertions about the likeliness of the value could be made. 
 
-3. The Response.omment supplies human-readable text describing reasons for the Test result output.
+3. The Response.comment supplies human-readable text describing reasons for the Test result output.
 
 An Amendment may propose a change to an exisiting Darwin Core value or a set of Darwin Core terms or fill in a missing value. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  The Framework also supports changes to procedures but we have not framed any such Tests in this form.  
 
@@ -613,56 +611,54 @@ If validation data could be conflated with actual data, see: [Identifying Synthe
 
 ### 8.1 Introduction (non-normative)
 
-Accompanying the Core Test descriptors is a set of Test validation data.  This Test validation data is intended for implementers to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test.  Each Test specification could be graphed as a flow chart with several paths, the Test validation data are intended to cover each node and each path within each Test specification with at least a single case.  These are not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviour.  
+Accompanying the Core Test descriptors is a set of Test validation data.  This data is intended for implementers to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test.  Each Test specification could be graphed as a flow chart with several paths, the Test validation data are intended to cover each node and each path within each Test specification with at least a single case.  These are however, not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for the expected behaviour.  
 
-The Test validation data are organized as two flat CSV files.  Each row in each file is intended for a single validation of a single Test.  The file has columns identifying the validation case, the Test that the row is intended to validate, the expected Response.status, Response.result, an example Response.comment, parameter values, if any, and a set of Darwin Core terms (most of which are empty for a given Test).   
+The Test validation data are organized as two flat CSV files.  Each row in each file is intended for the single validation of a single Test.  The file has columns identifying the Test, the input data, the expected Response.status, Response.result, an example Response.comment, parameter values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms are empty for a given Test.
 
-The Test validation records are all fragmentary flat Darwin Core Occurrence records.  Each row contains values for only those Darwin Core terms that are relevant input to the particular validation.   The validation records are all fragmentary, consisting of a mixture of real and artificial data with most of the records being synthetic.  The validation data are a set of 1191 records, with about 10 validation cases for each Test.  The set of rows for a particular Test are designed to validate that an implementation of that particular Test performs as expected against the specifications.   This data set is referred to as the 'Test Validation Data'.   The set of about 10 validation records for each Test are designed to exercise all of the decision pathways in the specification of the Test.  
+The Test validation records are all fragmentary flat Darwin Core (Wieczorek et al. 2012) Occurrence records.  Each row contains values for only those Darwin Core terms that are relevant input to the particular validation.   The validation records are all fragmentary, consisting of a mixture of real and artificial data with most of the records being synthetic.  The validation data are a set of 1191 records, with about 10 validation cases for each Test.  The set of rows for a particular Test are designed to validate that an implementation of that particular Test performs as expected against the specification.  This data set is referred to as the 'Test Validation Data'.  The set of about 10 validation records for each Test are designed to exercise all of the decision pathways in the specification of the Test.  
 
 This is a minimalist suite of Test data. Additional Test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the DataID values MUST uniquely identify a validation case for each additional Test data record and the resulting data added to the GitHub repository.
 
 ### 8.2 Structure of the Validation Data 
 
-The validation data are intended as input into a testing system that can validate implementations of validation Tests independently, presenting them with a validation case for input, and assessing whether the Test Response conforms to the expected values in the validation data.  It could be processed as input for unit Tests.   It could be used as the basis for presenting synthetic records to a larger Test execution system, but is designed to be used at a level where individual Tests are being assessed.  This may fit into integration Tests of a larger system.  The structure of the validation data attempts to be at a level of abstraction somewhat above the method signature specificity needed in unit Tests, but still at a level that is examining individual Test implementations, below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
-
-<!--- Start: PJM Added the terms from "bdqValidationData" glossary terms 2024 Aug 24 --->
+The validation Test data are intended as input into a testing system that can evaluate the implementations of Tests independently. Each Test data record is contains only the values of REQUIRED Information Elements ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) as input, and assesses whether the Test Response conforms to the expected responses in the Test data.  The data could be processed as input for unit Tests or it could be used as the basis for presenting synthetic records to a larger Test execution system. The test data is designed to be used at a level where individual Tests are being assessed.  The structure of the validation data attempts to be at a level of abstraction above **the method signature specificity needed in unit Tests ??**, but still at a level that is examining individual Test implementations below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
 
 The following column header for the data are used for the validation data files.
 
 | header | definition |
 | ------ | ---------- |
-| dataID | A local to the validation data unique integer to indentify each Validation Data record | 
-| LineForTest | A local to bdq:ValidationData identifier for Test records within one Test. An integer for maintaining the sort order of the validation case with in the set of validation cases for a particular Test. | 
-| LineNumber | The sequence number of the data record in the bdq:ValidationData. An integer for maintaining the sort order of the file. |
+| Last Updated | The date on which this record was last updated |
+| GitHub Issue | The URL of the GitHub issue number where rationale management of the Test under validation is maintained |
+| GitHubIssueNo | The last section of the GitHub Issue URL - a number, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20. |
+| GUID | The machine readable identifier for the Test under validation, e.g., 69b2efdc-6269-45a4-aecb-4cb99c2ae134 |
+| Test Type | The type of the test, either Validation, Issue, Amendment or Measure |
+| Label | The second two components of the full english test label, for example COUNTRYCODE_STANDARD |
+| Data Dimension | Does the Test apply to data that is essentially NAME, SPACE, TIME or OTHER? |
+| dataID | A local to bdq:ValidationData unique integer to indentify each Validation Data record | 
+| LineForTest | A local to bdq:ValidationData integer identifier for Test records within one Test. For maintaining the sort order within a test, and with two special cases: "88" when Input.data contains a NULL character and "99" when Input.data contains non-printers characters. | 
+| Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, e.g., for VALIDATION_COUNTRY_COUNTRCODE_CONSISTENT, dwc:country="México", dwc:countryCode="MX" |
+| Output.data | For Amendments only and when Response.status="AMENDED", suggested changes to the Input.data to improve quality, in the same format as Input.data |
+| Response.status | The status on applying the Test to the data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET". |
+| Response.result | The result of running the Test on the data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED". |
+|Response.comment | A human-readable example statement identifying the reason for the Test result given the input data. Implementations are not expected to produce this exact value | IssuesWithThisRow | A working column for recording issues while developing validation data, to be removed. |
 
-<!--- End: PJM Added the terms from "bdqValidationData" glossary terms 2024 Aug 24 --->
+<!---Additional ?? fields from PJM --->
 
-<!--- TODO: consistent format with list below, which describes each header and is what is needed here --->
+| header | definition |
+| ------ | ---------- |
+| bdq:annotation | A placeholder for an annotation when Testing for their presence. |
+| bdq:sourceAuthority | Input parameter for some parameterized Tests. |
+| dwc: (77 columns) |  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant Test and pertinent to the Test case at hand contain values. |
 
-* Line Number: An integer for maintaining the sort order of the file.
-* dataID: A unique identifier (within the validation data) of the validation data record, e.g., "123".
-* LineForTest: An integer for maintaining the sort order of the validation case within the set of validation cases for a particular Test.
-* GitHubIssueNo: The GitHub issue where rationale management of the Test under validation is maintained, can be use to form a link to the discussion history for the development of the relevant Test, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20.
-* GUID: the machine readable identifier for the Test under validation, e.g. 69b2efdc-6269-45a4-aecb-4cb99c2ae134.
-* Label: The human-readable name of the Test, e.g., "VALIDATION_COUNTRY_FOUND".
-* Response.status: The status on applying the Test to the Test data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET".
-* Response.result: The result of running the Test on the Test data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED".
-* Response.comment: An example human-readable statement identifying the reason for the Test result given the input data, implementations are not expected to produce this exact value, it is given as an example.
-* IssuesWithThisRow: Temporary working column for recording problems while developing validation data, to be removed.
-* bdq:annotation placeholder for an annotation when Testing for their presence.
-* bdq:sourceAuthority input parameter for some parameterized Tests.
-* dwc: (77 columns)  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant Test and pertinent to the Test case at hand contain values.
+**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the Input.Data structure of
 
-NOTE: We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the Input.Data structure of
-
-bdq:sourceAuthority="https://invalid/invalidservice", dwc:inputDataValue1="", dwc:inputDataValue 2... or as an example.
+bdq:sourceAuthority="https://invalid/invalidservice", dwc:inputDataValue1="", dwc:inputDataValue 2... . As an example:
 
 bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
 
-
 ### 8.3 Examples of the Data for Validating Tests (Informative)
 
-The validation files contain one column for each of 77 Darwin Core terms that are referenced as an InformationElement somewhere in Core, but only terms relevant to the particular validation case for the row are populated, therefore the validation files are sparse.  They contain fragments of Flat Darwin Core records. 
+The validation files contain one column for each of 77 [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are referenced as an InformationElement somewhere in Core, but only terms relevant to the particular validation case for the row are populated, therefore the validation files are sparse.  They contain fragments of Flat Darwin Core records. 
 
 The header line for each of the validation files:  
 
