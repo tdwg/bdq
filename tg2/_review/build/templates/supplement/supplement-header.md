@@ -40,7 +40,7 @@ Bibliographic citation
 This document contains information that is considered supplemental to the normative and non-normative BDQ Core standard documentation. 
 
 ### 1.1 Purpose 
-This document provides a historical context and lessons learned during the development of BDQ Core. This document will be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain. 
+This document provides a historical context and lessons learned during the development of BDQ Core. This document will also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain. 
 
 ### 1.2 Audience
 
