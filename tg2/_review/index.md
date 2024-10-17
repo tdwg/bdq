@@ -23,7 +23,7 @@ Preferred Citation
 ## Parts of the Standard
 
 - [BDQ Core Introduction](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/intro/index.md)
-- [BDQ Core Tests Quick Reference Guide](docs/terms/bdqcore/index.md)
+- [BDQ Core Quick Reference Guide](docs/terms/bdqcore/index.md)
 - [BDQ Core Fitness For Use Framework Guide](docs/guide/bdqffdq/index.md)
 - [BDQ Core User's Guide](docs/guide/users/index.md)
 - [BDQ Core Vocabularies](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md)
