@@ -47,9 +47,11 @@ This document provides explanatory information and normative guidance for the BD
 
 ### 1.1 Purpose
 
+The document provides the context in which the BDQ Core tests exist.
+
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementors. 
+This document is for Users and Implementors of BDQ Core who require a technical context for the Tests.
 
 ### 1.3 Associated Documents
 
