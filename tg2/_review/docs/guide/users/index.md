@@ -147,6 +147,7 @@ Two examples of Test data input and output are provided to illustrate opposing b
 
 Each Test lists UseCases describing data quality needs to which each Test is applicable. Notes provide additional guidance for understanding test results and for implementation.  
 
+The definitions of the terms used for the tests can be found at [Terms in bdqcore: Quick Reference Guide](bdqcore_qrg_term_descriptions.md).
 
 # 4 Time and TimeZones (non-normative)
 
