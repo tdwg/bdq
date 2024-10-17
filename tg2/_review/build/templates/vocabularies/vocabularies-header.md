@@ -46,7 +46,7 @@ This document is for those needing a general contextual, or a technical understa
 
 ### 1.3 Associated Documents
 
-Maybe none?
+The [landing page for BDQ Core](../../../index.md) provides an index to all documents in the standard.
 
 ### 1.4 Status of the content of this document
 

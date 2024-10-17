@@ -3,7 +3,7 @@
 # ----------------
 
 # Official title of the document assigned by authors.
-documentTitle: 'Quick Reference Guide to BDQ Core Tests'
+documentTitle: 'BDQ Core Quick Reference Guide'
 
 # Abstract of document written by authors.
 abstract: 'This document is intended to be an easy-to-read quick reference to the current BDQ Core Tests using a subset of Descriptors maintained as part of the BDQ Core standard.'
