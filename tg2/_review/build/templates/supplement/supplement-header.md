@@ -289,6 +289,36 @@ Given an Assertion, what test was run with which argument values for which param
     }
     GROUP BY ?test ?label ?description ?mechanism
 
+Given an a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX oa: <https://www.w3.org/TR/annotation-vocab/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT ?responsestatus ?responseresult ?responsecomment ?test ?label ?description (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism ?motivation ?annotationdate 
+    WHERE {
+      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
+      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      OPTIONAL {
+         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
+         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
+      } .
+      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
+      ?assertion bdqffdq:hasResponseStatus ?responsestatus .
+      ?assertion bdqffdq:hasResponseResult ?responseResult .
+      ?assertion bdqffdq:hasResponseComment ?responsecomment .
+      ?implementation bdqffdq:implementedBy ?mechanism .
+      ?annotation oa:body ?assertion .
+      ?annotation oa:target ?target .
+      OPTIONAL { ?annotation oa:motivation ?motivation . } .
+      OPTIONAL { ?annotation oa:generated ?annotationdate . } .
+      FILTER (STR(?target) = "https//mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832")
+    }
+    GROUP BY ?responsestatus ?responseresult ?responsecomment ?test ?label ?description ?mechanism ?motivation ?annotationdate
+
+
 ## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2: Data Quality Tests and Assertions was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized however, that any software was likely to be far less stable than defining a CORE suite of tests and an associated framework, so the software component was quickly dropped. We also limitied the scope of the tests to apply only to data encoded using the Darwin Core standard (Weiczorek et al. 2012). This gave us a specific target, but also associated problems noted below.
