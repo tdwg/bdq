@@ -37,10 +37,10 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-normative)
-- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
+- [1.5 Namespace abbreviations](#15-namespace-abbreviations)
 - [2 Historical Context](#2-historical-context)
 - [2.1 Definition of CORE](#21-definition-of-core)
+- [2.1.1 Tests tagged as DO NOT IMPLEMENT](#211-tests-tagged-as-do-not-implement)
 - [2.2 Use Case Development](#22-use-case-development)
 - [2.3 Data Quality Control and Data Quality Assurance](#23-data-quality-control-and-data-quality-assurance)
 - [2.4 Framework Competency Questions](#24-framework-competency-questions)
@@ -86,7 +86,7 @@ This document provides a historical context and lessons learned during the devel
 
 ### 1.2 Audience
 
-This sdocument is relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document. This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
+This document is relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document. This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
 
 ### 1.3 Associated Documents
 
@@ -96,28 +96,27 @@ This document provides practical information that goes beyond the normative guid
 
 This document is non-normative.
 
-### 1.5 RFC 2119 Key words (normative)
-
-The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
-
-## 1.6 Namespace abbreviations
+## 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
 | **Prefix**   | **Namespace**                                    |
 |--------------|--------------------------------------------------|
 | bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
-| bdqcrit      | https://rs.tdwg.org/bdqcrit/terms                |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms                 |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
+| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
+| xsd          | http://www.w3.org/2001/XMLSchema#                |
 
 ## 2 Historical Context
 
@@ -141,7 +140,32 @@ A number of tests were framed, but considered out of scope for CORE data quality
 
 Some tests were deemed not CORE because they would currently result in the majority of data not having 'quality'. They have been given the GitHub tag "Immature/Incomplete" because we thought that the test may have value in the future. An example of such a test is VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY where we would expect most records to have bdq:Empty for dwc:reproductiveCondition.
 
+#### 2.1.1 Tests tagged as DO NOT IMPLEMENT
+
 Some test were deemed not CORE because there was a perceived danger in their implementation, even though they appeared superficially implementable. In such cases, we applied the GitHub tag "DO NOT IMPLEMENT" to warn future implementers about the dangers. An example of such as test is VALIDATION_GEOGRAPHY_CONSISTENT because of the current complexities in matching terms in the geographic names hierarchy.
+
+The following issues describing potential tests were tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=+label%3A%22DO+NOT+IMPLEMENT%22).  The discussion in each issue provides rationalle management for why they were tagged as such.
+
+| Issue | Name | Description |
+| 274 | VALIDATION_MODIFIED_INRANGE | Is the value of dcterms:modified entirely with the Parameter Range? |
+| 266 | VALIDATION_WATERBODY_NOTEMPTY | Is there a value in dwc:waterbody? |
+| 231 | VALIDATION_IDENTIFICATIONQUALIFIER_NOTEMPTY | Is there a value in dwc:identificationQualifier? |
+| 141 | VALIDATION_YEAR_STANDARD | Can the value for year be interpreted as a valid year? |
+| 139 | VALIDATION_GEOGRAPHY_STANDARD | Can the individual values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality be unambiguously resolved from bdq:sourceAuthority? |
+| 129 | AMENDMENT_YEAR_STANDARDIZED | Attempt to amend the year |
+| 118 | AMENDMENT_GEOGRAPHY_STANDARDIZED | Propose amendment to one or more of the values dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality using bdq:sourceAuthority. |
+| 100 | AMENDMENT_MINDEPTHMAXDEPTH_TRANSPOSED | Attempt to transpose minimum and maximum depth if minimum depth is greater than maximum depth |
+| 95 | VALIDATION_GEOGRAPHY_CONSISTENT | Is the combination of the values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality consistent with the bdq:sourceAuthority? |
+| 90 | AMENDMENT_KINGDOM_STANDARDIZED | Can the value for kingdom be standardized against the source authority? |
+| 89 | ISSUE_DECIMALLATITUDEDECIMALLONGITUDE_CONVERSIONFAILED | Latitude and longitude could not be converted using the default geodetic datum |
+| 80 | AMENDMENT_PHYLUM_STANDARDIZED | Can the value of dwc:phylum be standardized using the Source Authority? |
+| 53 | AMENDMENT_CLASS_STANDARDIZED | Can the value of dwc:class be standardized using the Source Authority? |
+| 44 | AMENDMENT_MINELEVATIONMAXELEVATION_TRANSPOSED | If \"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters, can they be meaningfully swapped? |
+| 37 | ISSUE_DAYMONTH_SWAPPED | Is it likely that the day and month have been swapped? |
+| 35 | MEASURE_VALIDATIONTESTS_RUN | Total number of tests of output type VALIDATION that have been attempted to have been run against the record |
+| 34 | AMENDMENT_DAYMONTH_TRANSPOSED | Swap dwc:month and dwc:day if dwc:month is greater than 12 and dwc:day is less than 12. |
+| 27 | AMENDMENT_FAMILY_STANDARDIZED | Can the value of dwc:family be standardized using the Source Authority? |
+| 25 | AMENDMENT_ORDER_STANDARDIZED | Can the value of dwc:order be standardized using the Source Authority? |
 
 ### 2.2 Use Case Development
 
@@ -307,6 +331,36 @@ Given an Assertion, what test was run with which argument values for which param
     }
     GROUP BY ?test ?label ?description ?mechanism
 
+Given an a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX oa: <https://www.w3.org/TR/annotation-vocab/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT ?responsestatus ?responseresult ?responsecomment ?test ?label ?description (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism ?motivation ?annotationdate 
+    WHERE {
+      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
+      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      OPTIONAL {
+         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
+         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
+      } .
+      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
+      ?assertion bdqffdq:hasResponseStatus ?responsestatus .
+      ?assertion bdqffdq:hasResponseResult ?responseResult .
+      ?assertion bdqffdq:hasResponseComment ?responsecomment .
+      ?implementation bdqffdq:implementedBy ?mechanism .
+      ?annotation oa:body ?assertion .
+      ?annotation oa:target ?target .
+      OPTIONAL { ?annotation oa:motivation ?motivation . } .
+      OPTIONAL { ?annotation oa:generated ?annotationdate . } .
+      FILTER (STR(?target) = "https//mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832")
+    }
+    GROUP BY ?responsestatus ?responseresult ?responsecomment ?test ?label ?description ?mechanism ?motivation ?annotationdate
+
+
 ## 3 Developing the Tests
 
 Originally, TDWG Data Quality Task Group 2: Data Quality Tests and Assertions was tasked with finding a fundamental suite of tests and identifying any relevant software asociated with testing for 'Data Quality'/'Fitness for Use'. It was quickly realized however, that any software was likely to be far less stable than defining a CORE suite of tests and an associated framework, so the software component was quickly dropped. We also limitied the scope of the tests to apply only to data encoded using the Darwin Core standard (Weiczorek et al. 2012). This gave us a specific target, but also associated problems noted below.
@@ -317,6 +371,7 @@ The suite of tests were designed to provide an adequate coverage of basic inform
 
 We originally rendered the tests in the form that flagged a **FAIL**, for example a dwc:eventDate that did not conform to ISO 8601-1 date. Our reasoning was this strategy aligned with all of the sources of the tests in that we all sought to identify **issues** with values in the record that would reduce its quality. However, the Data Quality Framework (Veiga et al. 2017) worked in the opposite direction: Identifying values in a record that **PASSED** a test; increased 'quality'. To align with the Framework, we renamed all tests from FAIL to PASS type, for example, COUNTRYCODE_NOTSTANDARD became COUNTRYCODE_STANDARD. This reversal of 'fail' to 'pass' was also reflected in the comparison of the Framework's 'Data Quality Dimension' versus our early concept of 'Warning Type' (see Section 3.2).
 
+
 Second and subsequent evaluations of the candidate core tests reduced the number to about 100 that seemed to fulfil the criteria above. The Tests came and went as we provided more consistent and compehensive documentation against what we called the test Descriptors. The tests also changed as we began to implement them. We modified a Test Specification to then find that we would not be able to implement it due to potential ambiguous responses from the test or that a test response may be misleading. By far the greatest changes to the candidate tests came about when we implemented them and ran them against the Test Validation Data (see the [Implementer's Guide](../guide/implementers/index.md#81-introduction-non-normative)).
 
 At one point, we aligned the documetation for over sixty tests that were tagged in GitHub as Supplementary, Immature/Incomplete and DO NOT IMPLEMENT. In doing so, we realized that the consistent documentation now provided a more nuanced evaluation and subsequently moved a number of these tests back into the core set. The opposite was also true: The implementation of the tests and running against the test data clearly demonstrated that some tests were moved out of CORE. Where there were recognized nuances with the tests that may not be obvious from the Specification, we documented the issues in the test Notes.
@@ -325,9 +380,11 @@ The team identified a fundamental problem early in the development of the tests:
 
 Over the course of the development of the tests, we encountered significant difficulties with choices of words.  In the original formulation of the framework (Viega 2016 - Thesis), different words were used to describe parallel concepts at the levels of data quality needs, solutions, and reports, and the words used for fundamental concepts overlapped with those for derived concepts.  We have settled on Dimension, Criterion, and Enhancement as the words for fundamental concepts, and variations on Validation (Validation, ValidationMethod, ValidationAssertion), Measure, Amendment, and Issue for derived concepts.  It was very late in development of the test specifications that we realised that the heart of what we were terming Validation mapped to the derived concept of CriterionInContext/ContextualizedCriterion in the Framework (Veiga et al. 2017), so we have renamed Framework concepts for clarity.
 
+Early on we recognized that the Data Quality Framework required us to frame MultiRecord measures in order to support the formal requirements in the framework for Quality Control and Quality Assurance (which are defined as only invoving Measures).  We recognized that these would be simple, repetitive, formal statements about the results of validations, so we put off defining these until very late in the process.  They proved straightforward to frame and then generated from the set of adopted SingleRecord tests.
+
 ### 3.1 Types of Test
 
-The types of test in BDQ Core are identified by the bdqffdq namespace classes of Validation, Issue, Amendment and Measure. Each of these types of tests can be composed with a ResourceType to apply to a single record (bdqffdq:SingleRecord), or to multiple records in a data set (bdqffdq:MultiRecord).  In BDQ Core, we have described a set of SingleRecord Validations, Issues, Ammendments, and Measures, and in addition, a set of MultiRecord Measures.
+The types of test in BDQ Core are identified by the bdqffdq namespace classes of Validation, Issue, Amendment and Measure. Each of these types of tests can be composed with a ResourceType to apply to a single record (bdqffdq:SingleRecord), or to multiple records in a data set (bdqffdq:MultiRecord).  In BDQ Core, we have described a set of SingleRecord Validations, Issues, Ammendments, and Measures, and in addition, a set of MultiRecord Measures.  The formal statement of each of these is complex, being a composition of an instance of a subclass of a bdqffdq:DataQualityNeed with an instance of a subclass of a bdqffdq:Method with an instance of a bdqffdq:Specification, but we subsume this complexity with the phrases Validation Test, Issue Test, Amendment Test, and Measure Test. 
 
 #### 3.1.1 Validation
 
@@ -341,6 +398,7 @@ Validation Tests evaluate values in one or more [Darwin Core Terms](https://dwc.
 During the development of the tests, there were significant discussions about how tests were to be phrased, for several contributors (and all tests implemented by agencies such as th ALA and GBIF), the most natural form seemed to be to describe assertions in the negative sense, identifying problems. The bdqffdq Framework, however, focused entirely on positive statements, identifying data that have quality and are fit for purpose.  Over the evolution of the description of the tests we conformed the language to the positive sense of the Framework in almost all cases.  Validations are thus phrased in the Framework sense of being COMPLIANT if the data have quality with respect to the test evaluation criteria.  There were, however, a set of cases that didn't fit well into this positive sense, in particular, those where the conclusion of the test was that the data might or might not be fit for purpose and a human would have to evaluate more closely.  In order to accomodate this "there might be a problem" case, we expanded the framework to include the concept of bdqffdq:Issue, where Issues are the converse of Validations and are phrased in a negative sense, identifying problems, see below. 
 
 #### 3.1.2 Issues
+
 Issue Tests are a form of warning flag where the test is drawing attention to potential problem with the value of a [Darwin Core Term](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for at least one use case. As discussed above, Validations are phrased in the Framework sense of being COMPLIANT if the data have quality with respect to the test evaluation criteria.  There were however, a set of cases that didn't fit well into this positive sense, in particular, those where the conclusion of the test was that the data might or might not be fit for purpose and a human would have to evaluate the results.  In order to accomodate this "there might be a problem" case, we expanded the Framework to include the concept of bdqffdq:Issue, where Issues are the converse of Validations and are phrased in a negative sense of identifying potential problems. 
 
 Issues can result in a Response.status="RUN_HAS_RESULT" accompanied by a Response.result="POTENTIAL_ISSUE" or "NOT_ISSUE".  
@@ -348,11 +406,12 @@ Issues can result in a Response.status="RUN_HAS_RESULT" accompanied by a Respons
 An ISSUE is the equivalent to a Response.status="NOT_COMPLIANT" from a Validation Test. A Response.result="NOT_ISSUE" is similar to a Response.result="COMPLIANT" from a Validation Test, but with slightly different semantics, "COMPLIANT" means that the data is fit for some use. A Response.result="NOT_ISSUE" means that there was no reason for the data not to be fit for use.  A Response.result="POTENTIAL_ISSUE" is the reason we incorporated Issue type Tests into BDQ Core.  "POTENTIAL_ISSUE" means that the Issue found a concern in the data that might make it unfit for some use, but that human evaluation of the details of the data and the use are needed. Data flagged with potential issues require a human review.  For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result="POTENTIAL_ISSUE" if dwc:dataGeneralizations contains a value. Any value in dwc:dataGeneralizations asserts changes have been made to generalize other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and requires a human review to determine whether the data are fit for purpose.
 
 #### 3.1.3 Amendments
+
 Amendment Tests may propose a change to one or more [Darwin Core Term](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) values or fill in missing values. Amendments are intended to improve one or more components of the quality of the record.  The Response.result from an Amendment is a proposal for a change, not to be blindly applied to a database or record when a data quality report is used for Quality Control of an existing record.  Consumers of Data Quality Reports under Quality Assurance uses may choose to (blindly - not recommended, or after analysis) accept all proposed amendments as part of a pipeline in preparing data for an analysis. We urge that Amendments do not overwrite existing information within a database; that existing information is preserved, as well as potential changes.
 
 The Framework also supports Amendments where the Response.result is a proposal to changes in procedures, such as suggesting that a constraint should be placed on a database field to restrict allowed values, or that a mapping of a data set onto [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) has transposed a set of fields.  We have not framed any such tests of this form in BDQ Core, nor have we considered how such assertions should be represented in a Response.result.
 
-When carrying out Amendments where numeric vales are concerned (e.g. feet to meters, etc.), the principle of reversability is paramount, and thus rounding up or down or using approximations should be avoided and only exact values used. In BDQ Core, we have taken an expedient approach in relation to making Amendments: We have used code in our tests to try and parse out likely unambiguous matches. This is far from an ideal solution, but it does provide the potential of Amendments to 'value add' to Darwin Core data records.
+When carrying out Amendments where numeric values are concerned (e.g. feet to meters, etc.), the principle of reversability is paramount, and thus rounding up or down or using approximations should be avoided and only exact values used. In BDQ Core, we have taken an expedient approach in relation to making Amendments: We have used code in our tests to try and parse out likely unambiguous matches. This is far from an ideal solution, but it does provide the potential of Amendments to 'value add' to Darwin Core data records.
 
 #### 3.1.4 Measures
 
@@ -434,11 +493,11 @@ Gives the following distribution of test types by Dimension:
 
 ### 3.4 Domain Scope of Tests
 
-The domain scope of each test is largely provided by the value of the term bdqffdq:DataQualityNeed. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) evaluated by each test are expressed as specific bdqffdq:InformationElements. The bdqffdq:Specification provides details of how to evaluate values of the InformationElements, but also includes references to external authorities (to the Darwin Core standard) that are required to implement the test. For example, an external references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and where available, a link to a specific online resource such as an API required for the implementation of the test.
+The domain scope of each test is largely provided by the values of the properties associated with the instance of the subclass of bdqffdq:DataQualityNeed. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) evaluated by each test are expressed as specific bdqffdq:InformationElements. The bdqffdq:Specification provides details of how to evaluate values of the InformationElements, but also includes references to external authorities (to the Darwin Core standard) that are required to implement the test. For example, an external references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and where available, a link to a specific online resource such as an API required for the implementation of the test.
 
 The tests are agnostic about the form in which the data are stored or transported. The test specifications all assume that data are presented to the tests in structured form such as csv or tab delimited text files, with data elements identifiable as [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Here, cells contain non-typed data values possibly aggregated from and serialized from multiple sources such as relational databases where Boolean nulls and non-string data types may exist, but the data have been exported into a string serialization that supports neither null nor typed data. 
 
-The tests are also agnostic about uses for quality assurance, where output data are limited to those for which all Validations are Compliant, or for quality control where the results of Validations, Issues, Measures, and Amendments can be used to improve the quality of the data.
+The tests are also agnostic about uses for quality assurance, where output data are filtered down to those for which (in effect) all Validations are Compliant, or for quality control where the results of Validations, Issues, Measures, and Amendments can be used to improve the quality of the data.
 
 ### 3.5 Parameterising the tests
 
@@ -468,7 +527,7 @@ Testing Darwin Core values against a known Source Authority using a VALIDATION t
 
 ### 3.8 Amendments and Annotations
 
-The BDQ Core Standard supports the W3C Annotation Data Model (W3C 2017) for reporting the results from tests, including Amendment Type Tests. The bdqffdq:Assertion, with its Response.status, Response.result, and a Response.comment can form the body of an annotation, that is be related to an oa:Annotation through oa:hasBody.
+The BDQ Core Standard supports the W3C Annotation Data Model (W3C 2017) for reporting the results from tests, including Amendment Type Tests. The bdqffdq:Assertion, with its Response.status, Response.result, and a Response.comment can form the body of an annotation, that is be related to an oa:Annotation through oa:body.  An competency question in [Section 2.4 Framework Competency Questions](#24-Framework-Competency-Questions) illustrates how Assertions made by BDQ Core tests that are wrapped in oa:Annotations could be retrieved.
 
 The AMENDMENT tests in the BDQ Core only propose changes, and it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when and what changes are made to records. The most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an Amendment, and add that to their representation of the data.
 
@@ -482,10 +541,12 @@ The flexibility of Darwin Core (Wieczorek et al. 2012), on which BDQ Core is bas
 #### 3.9.2 Georeferencing
 Some tests are aspirational about ways in which the community should express things in order for there to be quality, for example, bringing in an understanding of georeferencing best practices (Chapman & Wieczorek 2020) of the set of metadata concepts that need to have values for there for quality georeferences, for example VALIDATION_GEODETICDATUM_NOTEMPTY. Similarly, we have encouraged the use of controlled vocabularies that the community should aspire to using, such as the EPSG codes for datums (https://epsg.org)
 
+
 #### 3.9.3 Annotations
 The authors recognized the significance of an annotation standard to BDQ Core and one test specifically targets record annoations: ISSUE_ANNOTATION_NOTEMPTY, even though no Biodiversity Information Standards/TDWG standard exists. We do however acknowledge the TDWG Annotations Interest Group (https://github.com/tdwg/annotations) has identified the W3C Web Annotation Data Model (W3C 2017) as the obvious way forward.  We understood that the annotation test will be difficult, if not impossible for many to implement, but we considered this issue of such significance, that we have included it to promote the use of the W3C web annotation data model by the community. We also acknowledge that data aggregators such as the Atlas of Living Australia (https://ala.org.au) have had an operational annotation service for many years (see https://support.ala.org.au/support/solutions/articles/6000262125-flagging-an-issue-with-a-record) but like other current implementations, this service is a subset of what is required for a comprehensive service (e.g., annotations on annotations for one)
 
 #### 3.9.4 "High Seas"
+
 A number of BDQ Core tests assert a 'lack of quality' for records representing events on the high seas/international waters (outside national jurisdictions) where tests will return 'NOT_COMPLIANT' as there is no currently agreed standard for designating 'high seas' records using Darwin Core (https://dwc.tdwg.org/). Examples of such tests include VALIDATION_COUNTRY_NOTEMPTY and VALIDATION_COUNTRYCODE_NOTEMPTY. The authors recognize the significance of this issue to the marine community, and we have retained these tests to promote an agreement on an international standard. We acknowledge a current user-assigned ISO 3166-alpha-2 country code (dwc:countryCode - https://dwc.tdwg.org/terms/#dwc:countryCode) of "XZ" to infer "international waters" (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#XZ and https://en.wikipedia.org/wiki/UN/LOCODE). While country code "XZ" looks like a much-needed advance, its use has not be standardized. The situation with populating a country value (dwc:country - https://dwc.tdwg.org/terms/#dwc:country) with "high seas" or "international waters" or something else is less advanced, but we have retained the country test, aspirationally. Related tests such as VALIDATION_COUNTRY_FOUND, VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT and VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT don't present as much an issue, due to the Specifications including the phrase "INTERNAL_PREREQUISITES_NOT_MET" if dwc:countryCode or dwc:country are bdq:Empty, as would be currently expected for records in international waters. The Specification in effect says "This test can't be done because a vital piece of information to run this test is absent". While currently acceptable, once a standard for international waters/high seas is established, the tests will need to be revisited.
 
 ### 3.10 Tests and Test Vocabularies
@@ -547,7 +608,7 @@ From [xkcd.com/2867](https://xkcd.com/2867/), by Randall Munroe, xkcd.com.  Lice
 
 ### 5.1 Developing tests with Github Issues
 
-The BDQ Core tests were developed as issues in the tdwg/bdq GitHub environment. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on github Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the Authors, the values within the template could be easily modified and documented.
+The BDQ Core tests were developed as issues in the tdwg/bdq GitHub environment. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on github Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the Authors, the values within the template could be easily modified and documented.  The comments in the issues served as a tool for rationalle management, documenting why particular decisions were made about the tests during their development.
 
 GitHub's API also provided ample latitude to 'scrape' and filter Issues using GitHub tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.   The bdq_issue_to_csv library (**TODO: Citation**) uses GitHub's API to obtain a json representation of the GitHub issues, then parses the agreed upon format for markdown tables for describing issues into a CSV file (destined to be come the term-history csv file for the bdqcore: vocabulary.
 

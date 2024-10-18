@@ -1,4 +1,3 @@
-# References
 Date Last Updated 2024-08-24
 
 The following references have been extracted from the "References" descriptor on the BDQ Core tests and supporting documents. We have used the formatting as used by Pensoft, see https://checklist.pensoft.net/about#AuthorsGuidelines. 

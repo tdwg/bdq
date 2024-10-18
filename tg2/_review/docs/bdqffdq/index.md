@@ -118,12 +118,12 @@ The following namespace abbreviations are used in this document:
 
 | **Prefix**   | **Namespace**                                    | **Note** |
 |--------------|--------------------------------------------------|----------|
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                | Framework for Describing Data Quality |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms                | Tests described using the bdqffdq Framework |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               | Framework for Describing Data Quality |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               | Tests described using the bdqffdq Framework |
 | bdq          | https://rs.tdwg.org/bdq/terms/                   | Supporting Vocabulary for Data Quality |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 | Data Quality Dimension Vocabulary |
-| bdqcrit      | https://rs.tdwg.org/bdqcrit/terms                | Data Quality Criteria Vocabulary | 
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms                 | Data Quality Enhancement Vocabulary | 
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                | Data Quality Dimension Vocabulary |
+| bdqcrit      | https://rs.tdwg.org/bdqcrit/terms/               | Data Quality Criteria Vocabulary | 
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                | Data Quality Enhancement Vocabulary | 
 | dc           | https://purl.org/dc/elements/1.1/                | | 
 | dcterms      | https://purl.org/dc/elements/1.1/                | |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    | Darwin Core |

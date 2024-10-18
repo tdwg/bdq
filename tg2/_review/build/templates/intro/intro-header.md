@@ -184,10 +184,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ### 2.9 Bibliography
 
-<!--- PJM: Select list here, or is this where the references go, or just link to References page? --->
-
-[References File](../references/index.md)
-
+{references}
 
 ## 3 Design of the Tests (normative)
 

@@ -48,6 +48,8 @@ PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
 inputTermsOwlFilename = "../vocabulary/bdqffdq.owl"
 bdqffdqOwlDocument = 'https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/{}'.format(inputTermsOwlFilename)
 
+referencesFileName = "references.md"
+
 # ----------------
 # Assumptions 
 # ---------------
@@ -99,6 +101,11 @@ term_lists_info = []
 #	term_lists_info.append(term_list_dict)
 #print(term_lists_info)
 #print()
+
+# Load References for inclusion in templates when requested.
+referencesObject = open(referencesFileName, 'rt', encoding='utf-8')
+references = referencesObject.read()
+referencesObject.close()
 
 #############
 ## Process each document in directories dictionary
@@ -172,6 +179,7 @@ for templatePath, document in directories.items() :
 	if has_namespace:
 		header = header.replace('{namespace_uri}', namespace_uri)
 		header = header.replace('{pref_namespace_prefix}', term)
+	header = header.replace('{references}', references)
 
 	if document == 'bdqcore_landing' : 
 		# Special handling of bdqcore landing page, load minimal test list, add to header

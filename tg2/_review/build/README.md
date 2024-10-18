@@ -7,6 +7,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 <pre>
 ├── make_bdq_tests_vertical.py  builds an artifact containing a list of tests, purpose unclear.
 ├── README.md this file.
+├── references.md the list of references for inclusion in other files.
 ├── templates  for various docs files.
 │   ├── list Term lists  files that produce /docs/list/{term}/index.md and /dist/{term}.xml files using draft_build-termlist.py
 │   │   ├── bdqcore  **work in progress** uses draft_build-termlist_bdqcore.py for build
@@ -49,8 +50,8 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │   └── bdqcore_landing-header.md
 │   ├── intro templates used by draft_build-docs.py to build docs/intro/
 │   │   ├── document_configuration.yaml
+│   │   ├── intro-header.md   (references are included from references.md above)
 │   │   ├── intro-footer.md
-│   │   ├── intro-header.md
 │   │   ├── workflow_single_iteration.svg
 │   │   └── workflow_two_iterations.svg
 │   ├── supplement templates used by draft_build-docs.py to build docs/supplement/
