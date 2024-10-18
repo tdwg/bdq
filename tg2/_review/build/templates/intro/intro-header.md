@@ -57,7 +57,7 @@ Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick
 
 All sections of this document are non-normative unless explicitly noted as normative.
 
-### 1.5 RFC 2119 Keywords
+### 1.5 RFC 2119 Key words (normative)
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
