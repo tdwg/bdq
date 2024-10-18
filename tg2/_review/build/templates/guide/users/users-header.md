@@ -55,7 +55,7 @@ This document is for consumers of data quality reports.
 
 Each sections of this document is marked as normative or non-normative.
 
-### 1.5 RFC 2119 key words (normative)
+### 1.5 RFC 2119 Key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
