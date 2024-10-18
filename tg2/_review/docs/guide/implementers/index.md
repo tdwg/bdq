@@ -99,9 +99,9 @@ This document is for software developers needing a technical understanding of th
 
 ### 1.3 Associated Documents
 
-- [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md)
-- [BDQ Core Vocabularies](../..//vocabularies/index.md)
-- [BDQ Core User's Guide](../guide/users/index.md)
+- [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md)
+- [BDQ Core Vocabularies](../../vocabularies/index.md)
+- [BDQ Core User's Guide](../users/index.md)
 
 ### 1.4 Status of the Content of this document
 
