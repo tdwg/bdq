@@ -124,7 +124,7 @@ Some BDQ Core Tests also require reference to external data such as standard voc
 
 While the BDQ Core Tests bascially apply to a SingleRecord (bdqffdq:SingeRecord), Test results may also be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord.
 
-### 2.1 Characteristics of the tests (non-normative)
+### 2.1 Characteristics of the Tests (non-normative)
 
 Each test is defined as a SingleRecord test. No CORE tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord. The framework allows for MultiRecord tests able to identify outliers within a data set, or other tests that look across a MultiRecord to evaluate data quality, but we have not specified any such tests here.
 
