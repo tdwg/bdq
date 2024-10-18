@@ -396,6 +396,7 @@ for templatePath, document in directories.items() :
 	footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 	footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 	footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+	footer = footer.replace('{references}', references)
 	
 	warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
 	
