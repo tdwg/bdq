@@ -124,6 +124,18 @@ When a Test is Parameterized, and a value other than the default value is used f
 
 So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
 
+# 3 Context for quality, uses and purposes (non-normative)
+
+TODO: Brief discussion of Use Cases
+
+Data does not have quality in the abstract, it only has quality with respect to some use.  The [bdqffdq:](../bdqffdq/index.md) Framework for data quality used in BDQ Core, describes uses for data as Use Cases, and expects that tests are run in suites that form policy for data quality with respect to Use Cases.    
+
+TODO: Brief discussion of Quality Control and Quality Assurance
+
+Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
+
+Data are found to be fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". 
+
 # 3 Using the BDQ Core Quick Reference Guide (non-normative)
 
 The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  

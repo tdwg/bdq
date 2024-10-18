@@ -37,17 +37,18 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-(normative))
+- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-normative)
 - [2 A Guide to the Tests](#2-a-guide-to-the-tests)
-- [2.1 Test Types (non-normative)](#21-test-types-(non-normative))
+- [2.1 Test Types (non-normative)](#21-test-types-non-normative)
 - [2.2 Test Inputs and Outputs](#22-test-inputs-and-outputs)
-- [2.2.1 Inputs to Tests (non-normative)](#221-inputs-to-tests-(non-normative))
-- [2.2.2 Responses From Tests (normative)](#222-responses-from-tests-(normative)-)
-- [2.2.3 Responses From Different Types of Test (normative)](#223-responses-from-different-types-of-test-(normative)-)
-- [2.3 Amendments Only Propose Changes (normative)](#23-amendments-only-propose-changes-(normative))
-- [2.4 Test Parameters (normative)](#24-test-parameters-(normative)-)
-- [3 Using the BDQ Core Quick Reference Guide (non-normative)](#3-using-the-bdq-core-quick-reference-guide-(non-normative))
-- [4 Time and TimeZones (non-normative)](#4-time-and-timezones-(non-normative))
+- [2.2.1 Inputs to Tests (non-normative)](#221-inputs-to-tests-non-normative)
+- [2.2.2 Responses From Tests (normative)](#222-responses-from-tests-normative)
+- [2.2.3 Responses From Different Types of Test (normative)](#223-responses-from-different-types-of-test-normative)
+- [2.3 Amendments Only Propose Changes (normative)](#23-amendments-only-propose-changes-normative)
+- [2.4 Test Parameters (normative)](#24-test-parameters-normative)
+- [3 Context for quality, uses and purposes (non-normative)](#3-context-for-quality,-uses-and-purposes-non-normative)
+- [3 Using the BDQ Core Quick Reference Guide (non-normative)](#3-using-the-bdq-core-quick-reference-guide-non-normative)
+- [4 Time and TimeZones (non-normative)](#4-time-and-timezones-non-normative)
 
 
 
@@ -140,6 +141,18 @@ When a Test is Parameterized, and a value other than the default value is used f
     VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642 
 
 So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
+
+# 3 Context for quality, uses and purposes (non-normative)
+
+TODO: Brief discussion of Use Cases
+
+Data does not have quality in the abstract, it only has quality with respect to some use.  The [bdqffdq:](../bdqffdq/index.md) Framework for data quality used in BDQ Core, describes uses for data as Use Cases, and expects that tests are run in suites that form policy for data quality with respect to Use Cases.    
+
+TODO: Brief discussion of Quality Control and Quality Assurance
+
+Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
+
+Data are found to be fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". 
 
 # 3 Using the BDQ Core Quick Reference Guide (non-normative)
 

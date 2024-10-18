@@ -41,16 +41,16 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-- [1 Introduction (non-normative)](#1-introduction-(non-normative))
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
 - [1.1 Target Audience](#11-target-audience)
 - [1.2 Documents about the bdqffdq: ontology](#12-documents-about-the-bdqffdq-ontology)
 - [1.2.1 Term List Distributions](#121-term-list-distributions)
 - [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
 - [1.4 Namespace abbreviations](#14-namespace-abbreviations)
 - [1.5 Key to Vocabulary Terms](#15-key-to-vocabulary-terms)
-- [2 Use of Terms (normative)](#2-use-of-terms-(normative))
-- [2.1 RFC 2119 Key words (normative)](#21-rfc-2119-key-words-(normative))
-- [3 Axiom Index (non-normative)](#3-axiom-index-(non-normative))
+- [2 Use of Terms (normative)](#2-use-of-terms-normative)
+- [2.1 RFC 2119 Key words (normative)](#21-rfc-2119-key-words-normative)
+- [3 Axiom Index (non-normative)](#3-axiom-index-non-normative)
 - [4 Vocabulary Extension](#4-vocabulary-extension)
 - [4.1 Range Axioms](#41-range-axioms)
 - [4.2 Different From Axioms](#42-different-from-axioms)

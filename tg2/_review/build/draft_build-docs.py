@@ -124,6 +124,7 @@ for templatePath, document in directories.items() :
 	with open(document_configuration_yaml_file) as dcfy:
 		document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
+
 	## Produce a table of contents from the headings 
 	toc = ""
 	regexHeadings = "^#+ [0-9]+.*"
@@ -133,6 +134,11 @@ for templatePath, document in directories.items() :
 			if (aHeading) : 
 				toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 		headerFile.close()
+	if document == 'bdqcore_landing' : 
+		toc = toc + "- " + markdown_heading_to_link("# 4.1 Index By Test Label") + "\n"
+		toc = toc + "- " + markdown_heading_to_link("# 5 Vocabulary Summary") + "\n"
+	if document == 'bdqffdq' : 
+		toc = toc + "{additional_toc}\n"
 	
 	# read in header and footer, merge with terms table, and output
 	headerObject = open(headerFileName, 'rt', encoding='utf-8')
@@ -168,7 +174,7 @@ for templatePath, document in directories.items() :
 		header = header.replace('{pref_namespace_prefix}', term)
 
 	if document == 'bdqcore_landing' : 
-		# Special handling of bdqcore landing page, load minimal test list
+		# Special handling of bdqcore landing page, load minimal test list, add to header
 		
 		# Load data
 		data_url = "../vocabulary/bdqcore_terms.csv"
@@ -182,7 +188,7 @@ for templatePath, document in directories.items() :
 		terms_sorted_by_label = terms_df.sort_values(by='Label')
 
 		# Index
-		text = '### 3.1 Index By Test Label\n\n'
+		text = '\n### 4.1 Index By Test Label\n\n'
 		text += '\n'
 		for row_index,row in terms_sorted_by_label.iterrows():
 			if row['Label'].find('MULTIRECORD') == -1 : 
@@ -190,9 +196,10 @@ for templatePath, document in directories.items() :
 				curie_anchor = curie.replace(':','_')
 				text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
 		text = text[:len(text)-2] # remove final trailing vertical bar and newline
+		text += '\n'
 
 		# Vocabulary terms with minimal data
-		text += '\n## 4 Vocabulary Summary\n'
+		text += '\n## 5 Vocabulary Summary\n'
 		for row_index,row in terms_sorted_by_label.iterrows():
 			if row['Label'].find('MULTIRECORD') == -1 :
 				curie =  "bdqcore:" + row['term_localName']
@@ -205,9 +212,12 @@ for templatePath, document in directories.items() :
 
 		# Append to end of header
 		header = header + '\n' + text
+		text = ""
+
+		# End special case handling of bdqcore_landing ********************************
 
 	if document == 'bdqffdq' : 
-		# Special handling of bdqffdq, load minimal ontology documentation
+		# Special handling of bdqffdq, load minimal ontology documentation, add to header
 		# ---------------
 		# Load rdf
 		# ---------------
@@ -335,8 +345,9 @@ for templatePath, document in directories.items() :
 
 		# put terms into header.
 		header = header.replace('{term_list}','\n{}\n'.format(text))
+		text = ""
 
-		# End special case handling of bqffdq ********************************
+		# End special case handling of bdqffdq ********************************
 	
 	# Determine whether there was a previous version of the document.
 	if document_configuration_yaml['doc_created'] != document_configuration_yaml['doc_modified']:

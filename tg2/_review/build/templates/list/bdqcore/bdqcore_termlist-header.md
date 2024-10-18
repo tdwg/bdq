@@ -46,7 +46,9 @@ An guide to implemetation of the bdqcore tests is provided in the [Implementers 
 ### 1.5 Status of the Content of this Document
 
 Sections 1 and 3 are non-normative.
+
 Section 2 is normative.
+
 Section 1.5 identifies which values in Section 4 are normative.
 
 <!--- TODO: Confirm that metadata for 1.5 has these values ---> 
@@ -75,7 +77,6 @@ The following namespace abbreviations are used in this document:
 | skos         | http://www.w3.org/2004/02/skos/core#             |
 | rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
-
 
 ## 1.7 Types of Tests
 

@@ -36,14 +36,14 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.4 RFC 2119 Key words (normative)](#14-rfc-2119-key-words-(normative))
-- [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-(normative))
-- [2.1 Identifying Example Data (normative)](#21-identifying-example-data-(normative))
-- [2.2 Data Fragments and Occurrence Data Sets (normative)](#22-data-fragments-and-occurrence-data-sets-(normative))
-- [2.3 Real Data Used as Examples (normative)](#23-real-data-used-as-examples-(normative))
-- [2.4  Real Data with Synthetic Modifications Used as Examples (normative)](#24--real-data-with-synthetic-modifications-used-as-examples-(normative))
-- [2.5 Wholly Synthetic Data (normative)](#25-wholly-synthetic-data-(normative))
-- [3 BDQ Core Validation Data (non-normative)](#3-bdq-core-validation-data-(non-normative)-)
+- [1.4 RFC 2119 Key words (normative)](#14-rfc-2119-key-words-normative)
+- [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
+- [2.1 Identifying Example Data (normative)](#21-identifying-example-data-normative)
+- [2.2 Data Fragments and Occurrence Data Sets (normative)](#22-data-fragments-and-occurrence-data-sets-normative)
+- [2.3 Real Data Used as Examples (normative)](#23-real-data-used-as-examples-normative)
+- [2.4  Real Data with Synthetic Modifications Used as Examples (normative)](#24--real-data-with-synthetic-modifications-used-as-examples-normative)
+- [2.5 Wholly Synthetic Data (normative)](#25-wholly-synthetic-data-normative)
+- [3 BDQ Core Validation Data (non-normative)](#3-bdq-core-validation-data-non-normative)
 
 
 

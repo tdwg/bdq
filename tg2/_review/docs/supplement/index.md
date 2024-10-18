@@ -33,11 +33,11 @@ Draft Standard for Submission
 
 
 - [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose-)
+- [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-(normative))
+- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-normative)
 - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
 - [2 Historical Context](#2-historical-context)
 - [2.1 Definition of CORE](#21-definition-of-core)

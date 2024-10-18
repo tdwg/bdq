@@ -44,13 +44,13 @@ Draft Standard for Submission
 - [1 Introduction](#1-introduction)
 - [1.1 Target Audience](#11-target-audience)
 - [1.2 Documents about the bdqffdq: ontology](#12-documents-about-the-bdqffdq-ontology)
-- [1.2.1 Distributions (normative)](#121-distributions-(normative))
+- [1.2.1 Distributions (normative)](#121-distributions-normative)
 - [1.2 Namespace abbreviations](#12-namespace-abbreviations)
 - [1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [1.3 RFC 2119 Key words (normative)](#13-rfc-2119-key-words-(normative))
-- [1.5 Diagram of classes and properties (non-normative)](#15-diagram-of-classes-and-properties-(non-normative)-)
-- [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
-- [2.1 Use of properties (normative)](#21-use-of-properties-(normative)-)
+- [1.3 RFC 2119 Key words (normative)](#13-rfc-2119-key-words-normative)
+- [1.5 Diagram of classes and properties (non-normative)](#15-diagram-of-classes-and-properties-non-normative)
+- [2 Use of Terms (normative)](#2-use-of-terms-normative)
+- [2.1 Use of properties (normative)](#21-use-of-properties-normative)
 - [2.1.1 Properties relating data quality needs](#211-properties-relating-data-quality-needs)
 - [2.1.2 Properties relating data quality needs to data quality solutions](#212-properties-relating-data-quality-needs-to-data-quality-solutions)
 - [2.1.3 Properties relating to data quality solutions provided in a test description](#213-properties-relating-to-data-quality-solutions-provided-in-a-test-description)
@@ -70,7 +70,7 @@ Draft Standard for Submission
 - [4.2 ObjectProperty terms](#42-objectproperty-terms)
 - [4.3 DataProperty terms](#43-dataproperty-terms)
 - [4.4 NamedIndividual terms](#44-namedindividual-terms)
-- [5 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#5-fitness-for-use-framework-summary-of-mathematical-formalization-(normative)-)
+- [5 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
 
 
 ## 1 Introduction
