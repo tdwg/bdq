@@ -44,13 +44,8 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section 1.5 identifies which values in Section 4 are normative.
+Section 1.8 identifies which values in Section 4 are normative.
 
-<!--- TODO: Confirm that metadata for 1.5 has these values ---> 
-In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
-Resource Type, Specification, Information Elements ActedUpon, Information
-Elements Consulted, and Parameters are normative.  The values of
-Description, Examples, Use Cases, and Notes are non-normative.
 
 ## 1.6 Namespace abbreviations
 
@@ -95,6 +90,12 @@ of biodiversity data quality reports. Terms such as the "Specification"
 ensure that implementers have no ambiguity about how the test should be coded.
 
 {term_key}
+
+<!--- TODO: Confirm that metadata for 1.8 has these values ---> 
+In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
+Resource Type, Specification, Information Elements ActedUpon, Information
+Elements Consulted, and Parameters are normative.  The values of
+Description, Examples, Use Cases, and Notes are non-normative.
 
 <!--- @Tasilee text for comparison with generated table.  Some of these will need to be incorporated into definitions in the generated table.
 
