@@ -3,23 +3,21 @@
 
 ## 1 Introduction
 
-This document lists the BDQ Core tests. It includes terms from the namespaces `bdqcore:` (the core tests), `bdq:` (parent namespace), `bdqffdq:` (framework for data quality), `bdqdim:` (data quality dimension from Veiga et al. 2017), `bdqenh:` (test enhancements) and `bdqcrit:` (test criteria). For background details see Chapman et al. (2017).
+This document lists the BDQ Core tests. These are the terms from the namespace `bdqcore:` (the core tests).  The description of these terms relies heavily on the [bdqffdq:](../bdqffdq/index.md) data quality framework vocabulary.  Terms are also used from the namespaces: [bdqdim:](../bdqdim/index.md) (data quality dimension from Veiga et al. 2017), [bdqenh:](../bdqenh/index.md) (test enhancements), [bdqcrit:](../bdqcrit/index.md) (test criteria), and [bdq:](../bdq/index.md) (additional vocabulary terms).  For background details see Chapman et al. (2017).
 
-The focus of this standard are a suite of tests that operate on a single (SingleRecord) Darwin Core (Wieczorek et al. 2012) encoded record, for example VALIDATION_COUNTRYCODE_STANDARD. This test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search. The data quality framework (ref) on which these tests are based, allows for MultiRecord tests that could identify outliers within a data set or could accumulate results of a
-SingleRecord tests, such as above, for example 70% of records in a dataset had a valid dwc:countryCode.
+The focus of this standard is the specifications for a suite of tests that operate on a single (SingleRecord) Darwin Core (Wieczorek et al. 2012) encoded record, for example VALIDATION_COUNTRYCODE_STANDARD. This test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search.  This standard also includes specifications for MultiRecord tests that accumulate results of a SingleRecord tests, for example allowing determination that 70% of records in a dataset had a valid dwc:countryCode.
 
-Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data
-records in sequence, as queries on data sets, on unique values.
+Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.  While tests are described in isolation, they must be used in sets that are related to a use of the data, as data does not have quality in the abstract, it only has quality with respect to some use.  Thus each test is linked to one or more UseCases, which are formal descriptions of uses to which data may be put.  The bdq: vocabulary defines the set of use cases referenced here.  The tests here can be freely composed in other ways for other uses.  
 
-Tests are paired in that all AMENDMENTs require a corresponding VALIDATION that assesses some aspect of data quality. An AMENDMENT may be able to improve the quality of data with respect to that VALIDATION.
+Tests described here are paired in that all Validation Tests that assesses some aspect of data quality are associated with an Amendment Test that may be able to improve the quality of data with respect to that Validation Test.
 
 ### 1.1 Purpose
 
-This document lists the BDQ Core Tests and provides an explanation of the terms needed to describe those Tests.
+This document lists the BDQ Core Tests, provides values for the terms that describe these tests, and provides a brief explanation of those terms.
 
 ### 1.2 Audience
 
-Users who need to understand the tests, but not all technical detials required in the standard. The focus is on description of each test with key elements necessary for understanding. This is the most important page for anyone needing to undertand what each test does.
+Users who need to understand the tests, including all technical details required in the standard. 
 
 ### 1.3 Asociated Documents
 
@@ -45,13 +43,13 @@ An guide to implemetation of the bdqcore tests is provided in the [Implementers 
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | Turtle  |
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV list of tests |
 
-
 ### 1.5 Status of the Content of this Document
 
 Sections 1 and 3 are non-normative.
 Section 2 is normative.
 Section 1.5 identifies which values in Section 4 are normative.
 
+<!--- TODO: Confirm that metadata for 1.5 has these values ---> 
 In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
 Resource Type, Specification, Information Elements ActedUpon, Information
 Elements Consulted, and Parameters are normative.  The values of
@@ -75,7 +73,7 @@ The following namespace abbreviations are used in this document:
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
 
