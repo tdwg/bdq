@@ -99,7 +99,7 @@ When not represented as objects, controlled value strings MUST be used as values
 
 IRIs MUST be use for values for all individual class instances and object properties when using bdqffdq: terms.
 
-### 2.1 RFC 2119 key words (normative)
+### 2.1 RFC 2119 Key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
