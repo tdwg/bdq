@@ -234,6 +234,54 @@ The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make
 
 See section [# 2.3 Parameterising the tests (normative)](../../bdqcore/index.md#23-Parameterising-the-tests-normative) of the bdqcore landing page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
 
+#### 2.3.2.4 Default value strings in parameters (normative)
+
+When a test is defined as parameterized, implementations SHOULD support the parameter in addition to the information elements.  When a test is defined as parameterized, implementations MAY choose to only support the default value, and MAY do so internally to the test, without including the parameter(s) in the test API (note that implementations that choose to do so, will be unable to validate against all of the test validation data (see [8 Validating Test Implementations](#8-Validating-Test-Implementations-normative))).
+
+When the parameter has a default value and a resource, and an implemntation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value".  Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the test implementation.
+
+#### 2.3.2.5 Example interpretation of a parameter string default value (non-normative)
+
+The following code snippet in java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of AMENDMENT_LICENSE_STANDARDIZED.  The literal "Creative Commons" is accepted as a parameter value.
+
+    @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
+    @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
+    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8/2023-09-18")
+    @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
+    public static DQResponse<AmendmentValue> amendmentLicenseStandardized(
+        @ActedUpon("dcterms:license") String license,
+        @Parameter(name="bdq:sourceAuthority") String sourceAuthority
+    ) {
+        DQResponse<AmendmentValue> result = new DQResponse<AmendmentValue>();
+
+        if (MetadataUtils.isEmpty(license)) { 
+            result.addComment("No Value provided for dcterms:license");
+            result.setResultState(ResultState.NOT_AMENDED);
+        } else { 
+            if (MetadataUtils.isEmpty(sourceAuthority)) { 
+                sourceAuthority = "Creative Commons";
+            }
+            try { 
+                MetadataSourceAuthority sourceAuthorityObject = new MetadataSourceAuthority(sourceAuthority);
+                if (sourceAuthorityObject.getAuthority().equals(EnumMetadataSourceAuthority.INVALID)) { 
+                    result.setResultState(ResultState.EXTERNAL_PREREQUISITES_NOT_MET);
+                }
+                String pattern = "";
+                if (sourceAuthorityObject.getAuthority().equals(EnumMetadataSourceAuthority.CREATIVE_COMMONS)) {
+                   ....
+
+This library also includes a method who's signature does not include the parameter, but which runs the implementation of AMENDMENT_LICENSE_STANDARDIZED with the default parameter.
+
+    @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
+    @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
+    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8/2023-09-18")
+    @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
+    public static DQResponse<AmendmentValue> amendmentLicenseStandardized(
+        @ActedUpon("dcterms:license") String license
+    ) {
+        return amendmentLicenseStandardized(license, null);
+    }
+
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
 In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
@@ -272,13 +320,8 @@ Within the Response.result for an Amendment, the order of key-value pairs is not
 
 ## 4 Extension Points (normative)
 
-A response MAY include a Response.qualifier. This is intended as a place to include structured assertions concerning uncertainty in a response. This is also intended as a place to include structured assertions about the details of Amendment Tests (e.g. TRANSPOSED MAY be attached to a Response.qualifier for some Amendment Tests).
+A response MAY include a Response.qualifier (in RDF, a bqqffqd:hasResponseQualifier object property on an instance of a bdqffdq:Assertion). This is intended as a place to include structured assertions concerning uncertainty in a response. This is also intended as a place to include structured assertions about the details of Amendment Tests (e.g. TRANSPOSED MAY be attached to a Response.qualifier for some Amendment Tests).
 
-<!--- Bit about ActedUpon/Consulted Needs to move, we have added these to the Test descriptors and the framework --->
-
-Implementations MAY identify InformationElements (bdqffdq:InformationElements) as bdqffdq:ActedUpon or bdqffdq:Consulted. Presentations of data quality results may use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon InformationElements are those for which a Validation Test is asserting compliance/non-compliance, or an Amendment Test that is proposing an improvement to the data. Consulted InformationElements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test AMENDMENT_EVENTDATE_FROM_VERBATIM, the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted. We do not identify InformationElements as ActedUpon or Consulted here, but implementers may wish to do so to more clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
-
-Tests MAY specify that InformationElements are ActedUpon or Consulted. We do not do so here, but ActedUpon and Consulted properties of an informationElement are an extension point that may be included when specifying the InformationElements pertinent to a Test.
 
 MultiRecord (bdqffdq:MultiRecord) Measues that return counts where the input InformationElement is Response values from Tests on SingleRecords (bdqffdq:SingleRecord) MUST report only a single count as the Response.result, but can provide a Response.qualifier containing structured data describing additional information such as the total number of SingleRecords evaluated (to calculate percentages), the number of each value of Response.status encountered, and the number of each Response.result encountered.  Measures under the Framework are only allowed to return "COMPLETE", "NOT_COMPLETE", or a single number. If it is desirable for any Measure to return more than a single number, Response.qualifier is the extension point to use. 
 
@@ -336,7 +379,6 @@ Implementers MUST NOT produce Test implementations identified by the same identi
 
 The Test descriptions in BDQ Core are designed to be able to be used anywhere in the lifecycle of biodiversity data, and are designed to be independent of the environment in which the Tests are run. They may be run at the point of initial collection or observation of organisms. They may be run to support data transcription. They may be run in loading data into databases of records from field or transcription sources. They may be run in preparing data from databases of record for aggregation. They may be run during data aggregation. Tests may be run individually on single Darwin Core records, or fragments of Darwin Core (Wieczorek et al. 2012) records within a data capture interface, or may be run in sequence in a processing pipleine of Darwin Core records, or they may be run in paralell in a processing pipeline of Darwin Core records, or they may be run in a workflow environment that produces lists of unique values of InformationElements for each Test, executes the Test on the unique values, and then maps the results back out into rows in the data set.  Data may be presented to an execution framework as Flat Darwin Core, or as Structured Darwin Core, or in another structure that can be mapped to the InformationElements of relevant Tests.
 
-
 ### 6.3 Considerations for Test Execution (normative)
 
 Many Tests invoke external bdq:sourceAuthorities, some of these are downloadable vocabulary files, others are webservices with changing data.
@@ -358,7 +400,7 @@ Under Quality Control, bdqffdq:MultiRecord measures that return numeric values M
 
 #### 6.4.2 Test Dependencies
 
-The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While BDQ Core Tests are designed to be as indepenent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core. The order of execution of some Amendments can be important. 
+The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While BDQ Core Tests are designed to be as indepenent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendments can affect results. 
 
 <!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
 
@@ -389,7 +431,9 @@ The bdqffdq: ontology does not include a property to describe sequence interdepe
 
 The bdqffdq: ontology provides terms: bdqffdq:targetedMeasure, bdqffdq:targetedValidation, bdqffdq:TargetedIssue, that could be used, together with bdqffdq:improvedBy to relate Amendments to Validations, Measures, and Issues.  BDQ Core does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
 
-#### 6.4.3 Implementing a concrete Test 
+#### 6.4.3 Implementing a concrete Test (normative)
+
+Implementations MAY be complete in the scope of the Test as described in [bdqcore:](../../list/bdqcore/index.md) with bdqffdq terms.  Such concrete implementations encompass the elements of the test defined in an instance of bdqffdq:DataQualityNeed, plus its associated bdqffdq:InformationElements, instance of a subclass of bdqffdq:Method, instance of bdqffdq:Specification, any related Arguments and Parameters, and be able to produce instances of bdqffdq:Assertion (carrying Response.status, Response.result, Response.comment).     
 
 
 #### 6.4.4 Presenting Darwin Core Data to a Method that Implements a Test
@@ -451,7 +495,9 @@ It is also possible to implement in an object oriented manner as methods on a cl
 
 Other approaches are possible.  Implementers MAY use any approach to passing data into Test implementations appropriate for their language(s) and environment.
 
-#### 6.4.5 Example Test Implementation (non-normative)
+#### 6.4.5 Example Test Implementations (non-normative)
+
+#### 6.4.5.1 Example in Pseudocode (non-normative)
 
 Given the specification: 
 
@@ -487,9 +533,56 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
 Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input countryCode contains a value.  This deviation from the logical sequence implied by the Specification (EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
+#### 6.4.5.1 Example in Java (non-normative)
+
+Given the test [VALIDATION_DAY_STANDARD](../../terms/bdqcore/index.md#VALIDATION_DAY_STANDARD)
+
+Specification
+: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
+
+Information Elements Acted Upon
+: dwc:day
+
+Here is an example implementation from the FilteredPush event_date_qc library.  In this implementation, java annotations are used to provide metadata that can be used by an implementation framework to pick out a test to run by its IRI or term_localName and match an input Darwin Core term to a (java) parameter in the method signature.  The implementation walks through the elements of the specification in sequence, and return the first matching response in a response object (which has Response.state, Response.result (here called value), and Response.comment properties.  
+
+    @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
+    @Provides("47ff73ba-0028-4f79-9ce1-ee7008d66498")
+    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18")
+    @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT. ")
+    public static DQResponse<ComplianceValue> validationDayStandard(@ActedUpon("dwc:day") String day) {
+        DQResponse<ComplianceValue> result = new DQResponse<ComplianceValue>();
+
+		if (DateUtils.isEmpty(day)) {
+			result.addComment("No value provided for day.");
+			result.setResultState(ResultState.INTERNAL_PREREQUISITES_NOT_MET);
+		} else {
+			try {
+				int numericDay = Integer.parseInt(day.trim());
+				if (DateUtils.isDayInRange(numericDay)) {
+					result.setValue(ComplianceValue.COMPLIANT);
+					result.addComment("Provided value for day '" + day + "' is an integer in the range 1 to 31.");
+				} else {
+					result.setValue(ComplianceValue.NOT_COMPLIANT);
+					result.addComment("Provided value for day '" + day + "' is not an integer in the range 1 to 31.");
+				}
+				result.setResultState(ResultState.RUN_HAS_RESULT);
+			} catch (NumberFormatException e) {
+				logger.debug(e.getMessage());
+				result.setValue(ComplianceValue.NOT_COMPLIANT);
+				result.setResultState(ResultState.RUN_HAS_RESULT);
+				result.addComment(e.getMessage());
+			}
+		}
+		return result;
+    }
+
 #### 6.4.6 Implementing an Abstract Test 
 
-In some environments, implementations MAY be lightweight implementations of an abstract Test. Consider the Validation Test: VALIDATION_ENDDAYOFYEAR_INRANGE
+In some environments, implementations MAY be lightweight implementations of an abstract Test. 
+
+Such abstract implementations MAY encompass only the elements of the test defined in an instance of bdqffdq:DataQualityNeed, plus its associated bdqffdq:InformationElements, and not be able to produce instances of bdqffdq:Assertion, but SHOULD be able to produce analogs of Response objects (with Response.status, Response.result, and Response.comment properties).     
+
+Consider the Validation Test: VALIDATION_ENDDAYOFYEAR_INRANGE
 
 A SQL query that implements this abstract concept, that the dwc:enddayofyear is in range, could take the following form, using available database fields that contain data related to the abstract information element, but are not precicely mapped to the concrete specified ActedUpon and Consulted [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification.  This query produces a data quality report with: 
 
@@ -564,7 +657,12 @@ Reports SHOULD identify Tests to consumers of those reports using at least the s
 
 ### 7.1 Data Quality Reports
 
-#### 7.1.1 Example (non-normative)
+### 7.1.1 InformationElements ActedUpon and Consulted in Results (normative)
+
+InformationElements (subtypes of bdqffdq:InformationElement) are bdqffdq:ActedUpon or bdqffdq:Consulted. Presentations of data quality results MAY use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon InformationElements are those for which a Validation Test is asserting compliance/non-compliance, or an Amendment Test that is proposing an improvement to the data. Consulted InformationElements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test AMENDMENT_EVENTDATE_FROM_VERBATIM, the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted.  Implementers may wish to clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
+
+
+#### 7.1.2 Example (non-normative)
 
 Below is an example, taken from MCZbase, of a portion of a data quality report, run on demand, for a single specimen using an implementation of BDQ Core Tests integrated into that collection management system.
 
@@ -614,6 +712,8 @@ Test responses MAY be represented as annotations.
 The responses from Tests could be structured as elements that can be wrapped in the body annotation document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
 When Test responses are being returned as annotations, they SHOULD use the W3C Web Annotation Data Model for the annotations, and SHOULD place Test responses within the body of the annotation.  Such annotations SHOULD include reference to the source Test by the versioned fully qualified name of the Test (e.g. bdqcore:47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18) and the Test skos:prefLabel (e.g. VALIDATION_DAY_STANDARD).  Such annotations SHOULD also provide the bdqffdq:Mechanism that generated the Test response. 
+
+When Test responses are persisted as Annotations in association with the annotated data, a means SHOULD be provided to mark annotations as having been evaluated, and to carry the results of such evaluations.  Annotation conversations MAY provide such a means.  Vocabularies related to bug/issue tracking MAY provide such a means.
 
 ## 8 Validating Test Implementations (normative)
 
