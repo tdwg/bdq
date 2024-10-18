@@ -175,6 +175,7 @@ Expanding on this single validation step, amendments can be run and their result
 ### 2.8 Glossary
 
 | Label | Definition | Context | Comment |
+| ----- | ---------- | ------- | ------- |
 | COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |  |
 | GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |  |
 | paramaterizedTest | A test that allows a bdq:Parameter to be set prior to the test being run. Where a bdq:Parameter value has not been provided, a default is specified within the test. | Test |  |
@@ -218,7 +219,6 @@ Expanding on this single validation step, amendments can be run and their result
 
 ### 2.9 Bibliography
 
-# References
 Date Last Updated 2024-08-24
 
 The following references have been extracted from the "References" descriptor on the BDQ Core tests and supporting documents. We have used the formatting as used by Pensoft, see https://checklist.pensoft.net/about#AuthorsGuidelines. 
