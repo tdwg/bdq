@@ -54,7 +54,7 @@ This document provides practical information that goes beyond the normative guid
 
 This document is non-normative.
 
-### 1.5 RFC 2119 keywords
+### 1.5 RFC 2119 Key words (normative)
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
