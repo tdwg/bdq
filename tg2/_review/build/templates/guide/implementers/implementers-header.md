@@ -54,9 +54,30 @@ This document is for software developers needing a technical understanding of th
 
 Section 1 is non-normative. Other sections are marked as normative or non-normative.
 
-### 1.5 Namespace Abbreviations
+### 1.5 RFC 2119 Key words (normative)
 
-The following namespace abbreviations are used in this document:
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
+
+### 1.6 Namespace Abbreviations
+
+**The following namespace abbreviations are used in this document:
+
+| **Prefix**   | **Namespace**                                    |
+|--------------|--------------------------------------------------|
+| bdq          | https://rs.tdwg.org/bdq/terms/                   |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
+| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| dc           | https://purl.org/dc/elements/1.1/                |
+| dcterms      | https://purl.org/dc/elements/1.1/                |
+| dwc          | http://rs.tdwg.org/dwc/terms/                    |
+| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
+| oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
+| owl          | http://www.w3.org/2002/07/owl#                   |
 
 ## 2 About the Tests and their Implementation
 
