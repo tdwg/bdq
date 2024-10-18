@@ -81,26 +81,22 @@ This document is for Users and Implementors of BDQ Core who require a technical 
 
 ### 1.3 Associated Documents
 
-The BDQ Core vocabulary includes the following documents and files: 
+The bdqcore: vocabulary includes: 
 
-- [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md)
-- [BDQ Core Vocabularies](../vocabularies/index.md)
-- This document provides Normative guidance on the use of the BDQ Core vocabulary.
-- The BDQ Core Tests have several distribution files:
-    - File: [CSV List of Tests](../../vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
-    - File: [Tests in RDF/XML](../../dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
-    - File: [Tests in Turtle](../../dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
-- [BDQ Core User's Guide](../guide/users/index.md)
-- [BDQ Core Implementer's Guide](../guide/implementers/index.md)
+- A [Quick Reference Guide](../terms/bdqcore/index.md) to the tests.
+- A [term-list for the vocabulary](../list/bdqcore/index.md), containing the vocabulary terms and their metadata.
+- This landing page document provides Normative guidance on the use of the BDQ Core vocabulary.
+
+In addition, A users guide to the use of the bdqcore tests is provided in the [Users Guide](../guide/users/index.md) and a guide to implemetation of the bdqcore tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
 
 ### 1.3.1 Term List Distributions for BDQ Core
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list  | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.xml | RDF/XML  | 
-| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | Turtle  | 
-| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV list of tests | 
+| HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list for the bdqcore: vocabulary  | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.xml | An rdf representation of the tests in an RDF/XML serialization | 
+| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the tests in a Turtle serialization | 
+| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the tests | 
 
 ### 1.4 RFC 2119 Key words (normative)
 
