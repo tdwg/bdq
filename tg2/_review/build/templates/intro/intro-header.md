@@ -76,7 +76,7 @@ The following namespace abbreviations are used in this document:
 | bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
 | bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
 | bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |

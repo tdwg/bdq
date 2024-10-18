@@ -44,7 +44,7 @@ This document provides a historical context and lessons learned during the devel
 
 ### 1.2 Audience
 
-This sdocument is relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document. This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
+This document is relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document. This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
 
 ### 1.3 Associated Documents
 
@@ -54,28 +54,27 @@ This document provides practical information that goes beyond the normative guid
 
 This document is non-normative.
 
-### 1.5 RFC 2119 Key words (normative)
-
-The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
-
-## 1.6 Namespace abbreviations
+## 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
 | **Prefix**   | **Namespace**                                    |
 |--------------|--------------------------------------------------|
 | bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
-| bdqcrit      | https://rs.tdwg.org/bdqcrit/terms                |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms                 |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
+| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
+| xsd          | http://www.w3.org/2001/XMLSchema#                |
 
 ## 2 Historical Context
 
@@ -99,7 +98,32 @@ A number of tests were framed, but considered out of scope for CORE data quality
 
 Some tests were deemed not CORE because they would currently result in the majority of data not having 'quality'. They have been given the GitHub tag "Immature/Incomplete" because we thought that the test may have value in the future. An example of such a test is VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY where we would expect most records to have bdq:Empty for dwc:reproductiveCondition.
 
+#### 2.1.1 Tests tagged as DO NOT IMPLEMENT
+
 Some test were deemed not CORE because there was a perceived danger in their implementation, even though they appeared superficially implementable. In such cases, we applied the GitHub tag "DO NOT IMPLEMENT" to warn future implementers about the dangers. An example of such as test is VALIDATION_GEOGRAPHY_CONSISTENT because of the current complexities in matching terms in the geographic names hierarchy.
+
+The following issues describing potential tests were tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=+label%3A%22DO+NOT+IMPLEMENT%22).  The discussion in each issue provides rationalle management for why they were tagged as such.
+
+| Issue | Name | Description |
+| 274 | VALIDATION_MODIFIED_INRANGE | Is the value of dcterms:modified entirely with the Parameter Range? |
+| 266 | VALIDATION_WATERBODY_NOTEMPTY | Is there a value in dwc:waterbody? |
+| 231 | VALIDATION_IDENTIFICATIONQUALIFIER_NOTEMPTY | Is there a value in dwc:identificationQualifier? |
+| 141 | VALIDATION_YEAR_STANDARD | Can the value for year be interpreted as a valid year? |
+| 139 | VALIDATION_GEOGRAPHY_STANDARD | Can the individual values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality be unambiguously resolved from bdq:sourceAuthority? |
+| 129 | AMENDMENT_YEAR_STANDARDIZED | Attempt to amend the year |
+| 118 | AMENDMENT_GEOGRAPHY_STANDARDIZED | Propose amendment to one or more of the values dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality using bdq:sourceAuthority. |
+| 100 | AMENDMENT_MINDEPTHMAXDEPTH_TRANSPOSED | Attempt to transpose minimum and maximum depth if minimum depth is greater than maximum depth |
+| 95 | VALIDATION_GEOGRAPHY_CONSISTENT | Is the combination of the values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality consistent with the bdq:sourceAuthority? |
+| 90 | AMENDMENT_KINGDOM_STANDARDIZED | Can the value for kingdom be standardized against the source authority? |
+| 89 | ISSUE_DECIMALLATITUDEDECIMALLONGITUDE_CONVERSIONFAILED | Latitude and longitude could not be converted using the default geodetic datum |
+| 80 | AMENDMENT_PHYLUM_STANDARDIZED | Can the value of dwc:phylum be standardized using the Source Authority? |
+| 53 | AMENDMENT_CLASS_STANDARDIZED | Can the value of dwc:class be standardized using the Source Authority? |
+| 44 | AMENDMENT_MINELEVATIONMAXELEVATION_TRANSPOSED | If \"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters, can they be meaningfully swapped? |
+| 37 | ISSUE_DAYMONTH_SWAPPED | Is it likely that the day and month have been swapped? |
+| 35 | MEASURE_VALIDATIONTESTS_RUN | Total number of tests of output type VALIDATION that have been attempted to have been run against the record |
+| 34 | AMENDMENT_DAYMONTH_TRANSPOSED | Swap dwc:month and dwc:day if dwc:month is greater than 12 and dwc:day is less than 12. |
+| 27 | AMENDMENT_FAMILY_STANDARDIZED | Can the value of dwc:family be standardized using the Source Authority? |
+| 25 | AMENDMENT_ORDER_STANDARDIZED | Can the value of dwc:order be standardized using the Source Authority? |
 
 ### 2.2 Use Case Development
 
