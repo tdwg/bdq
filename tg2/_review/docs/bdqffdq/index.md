@@ -47,7 +47,7 @@ Draft Standard for Submission
 - [1.2.1 Distributions (normative)](#121-distributions-(normative))
 - [1.2 Namespace abbreviations](#12-namespace-abbreviations)
 - [1.2 Status of the content of this document](#12-status-of-the-content-of-this-document)
-- [1.3 RFC 2119 key words (normative)](#13-rfc-2119-key-words-(normative))
+- [1.3 RFC 2119 Key words (normative)](#13-rfc-2119-key-words-(normative))
 - [1.5 Diagram of classes and properties (non-normative)](#15-diagram-of-classes-and-properties-(non-normative)-)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
 - [2.1 Use of properties (normative)](#21-use-of-properties-(normative)-)
@@ -143,7 +143,7 @@ Section 3.1 lists which which terms in section 4 have normative values and which
 
 Other sections of this document are marked as normative or non-normative.
 
-### 1.3 RFC 2119 key words (normative)
+### 1.3 RFC 2119 Key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
@@ -1656,6 +1656,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
+
 ## 5 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 <!--- NOTE: The source for the mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
 
@@ -1863,6 +1864,10 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
      QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}
 
      qa(dr1) = {dqv1, dqv2}
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

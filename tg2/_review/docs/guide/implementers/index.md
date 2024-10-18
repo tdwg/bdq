@@ -37,7 +37,8 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the Content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 Namespace Abbreviations](#15-namespace-abbreviations)
+- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-(normative))
+- [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 About the Tests and their Implementation](#2-about-the-tests-and-their-implementation)
 - [2.1 Independence (normative)](#21-independence-(normative)-)
 - [2.2 The Concept of "EMPTY" in BDQ Core (normative)](#22-the-concept-of-"empty"-in-bdq-core-(normative))
@@ -101,9 +102,30 @@ This document is for software developers needing a technical understanding of th
 
 Section 1 is non-normative. Other sections are marked as normative or non-normative.
 
-### 1.5 Namespace Abbreviations
+### 1.5 RFC 2119 Key words (normative)
 
-The following namespace abbreviations are used in this document:
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
+
+### 1.6 Namespace Abbreviations
+
+**The following namespace abbreviations are used in this document:
+
+| **Prefix**   | **Namespace**                                    |
+|--------------|--------------------------------------------------|
+| bdq          | https://rs.tdwg.org/bdq/terms/                   |
+| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
+| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
+| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
+| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| dc           | https://purl.org/dc/elements/1.1/                |
+| dcterms      | https://purl.org/dc/elements/1.1/                |
+| dwc          | http://rs.tdwg.org/dwc/terms/                    |
+| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
+| oa           | https://www.w3.org/TR/annotation-vocab/          |
+| skos         | http://www.w3.org/2004/02/skos/core#             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
+| owl          | http://www.w3.org/2002/07/owl#                   |
 
 ## 2 About the Tests and their Implementation
 
@@ -760,6 +782,10 @@ For each Test in an implementation, that Test MUST produce the same results as a
 ### 8.6 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
 The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (**TODO: Cite**) java annotations.
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

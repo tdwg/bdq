@@ -1275,6 +1275,10 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 ********************
 
 
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**

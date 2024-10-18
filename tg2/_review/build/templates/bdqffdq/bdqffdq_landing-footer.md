@@ -1,3 +1,4 @@
+
 ## 5 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 <!--- NOTE: The source for the mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
 
@@ -208,7 +209,7 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
 ## Acronyms
 
-For a list of Acronyms see [5. Acronyms](https://github.com/tdwg/bdq/blob/master/tg2/_review/build/templates/intro/intro-header.md#5-acronyms) in the Introduction document. 
+For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

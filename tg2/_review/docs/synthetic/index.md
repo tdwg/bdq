@@ -36,7 +36,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.4 RFC 2119 Keywords](#14-rfc-2119-keywords)
+- [1.4 RFC 2119 Key words (normative)](#14-rfc-2119-key-words-(normative))
 - [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-(normative))
 - [2.1 Identifying Example Data (normative)](#21-identifying-example-data-(normative))
 - [2.2 Data Fragments and Occurrence Data Sets (normative)](#22-data-fragments-and-occurrence-data-sets-(normative))
@@ -69,7 +69,7 @@ Section 1 is non-normative.
 Section 2 is normative.  
 Section 3 is non-normative.
 
-## 1.4 RFC 2119 Keywords
+## 1.4 RFC 2119 Key words (normative)
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
@@ -136,6 +136,10 @@ BDQ Core includes two data sets for the validation of test implemetations.  Thes
   - File: [Test Validation Data](../guide/implementers/TG2_test_validation_data.csv "Test validation data csv file")
   - File: [Test Validation Data for non-printing characters](../guide/implementers/TG2_test_validation_data_nonprintingchars.csv "Test validation data csv file for testing implementations of EMPTY, containing non-printing characters")
 
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

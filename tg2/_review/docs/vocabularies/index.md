@@ -105,6 +105,10 @@ The following namespace abbreviations are used in this document: **CHECK THIS se
 | rdfs         | http://www.w3.org/2000/01/rdf-schema             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
+
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**

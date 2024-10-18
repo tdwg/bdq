@@ -39,7 +39,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4. Status of the Content of This Document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 Keywords](#15-rfc-2119-keywords)
+- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-(normative))
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 Parts of the Standard](#2-parts-of-the-standard)
 - [2.1 Vocabularies](#21-vocabularies)
@@ -91,7 +91,7 @@ Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick
 
 All sections of this document are non-normative unless explicitly noted as normative.
 
-### 1.5 RFC 2119 Keywords
+### 1.5 RFC 2119 Key words (normative)
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
@@ -248,19 +248,20 @@ There were many people who have made notable contributions at various times duri
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
-| ALA         | Atlas of Living Australia                                                                                      | 
-| BDQ         | TDWG Biodiversity Data Quality Interest Group                                                                  |
-| BISON       | Biodiversity Information Serving Our Nation                                                                    |
-| CRIA        | Centro de Referência em Informação Ambiental                                                                   |
-| EPSG        | European Petroleum Survey Group                                                                                |
-| GBIF        | Global Biodiversity Information Facility                                                                       |
-| iDigBio     | Integrated Digitized BioCollections                                                                            |
-| IRI         | Internationalized Resource Identifier                                                                          |
-| ISO         | International Standards Organization                                                                           |
-| TDWG        | Biodiversity Information Standards                                                                             |
-| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality                               |
-| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions                       |
-| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases                                  |
+| ALA         | Atlas of Living Australia                             | 
+| BDQ         | TDWG Biodiversity Data Quality                        |
+| BDQIG       | Biodiversity Data Quality Interest Group              |
+| BISON       | Biodiversity Information Serving Our Nation           |
+| CRIA        | Centro de Referência em Informação Ambiental          |
+| EPSG        | European Petroleum Survey Group                       |
+| GBIF        | Global Biodiversity Information Facility              |
+| iDigBio     | Integrated Digitized BioCollections                   |
+| IRI         | Internationalized Resource Identifier                 |
+| ISO         | International Standards Organization                  |
+| TDWG        | Biodiversity Information Standards                    |
+| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality |
+| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions |
+| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases     |
 | TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
 
 ## 6 Audience for Each Document in BDQ Core
@@ -284,6 +285,10 @@ There were many people who have made notable contributions at various times duri
 - Additional Documents
   - [Marking Synthetic Data](../synthetic/index.md) This document is designed for creators of data sets for the validation of implementations of BDQ Core tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines . 
   - [Supplement](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within this this standard. This document may also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain.
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](#5-acronyms) in this document.
 
 ## Cite BDQ Core
 

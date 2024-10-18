@@ -37,7 +37,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-(normative))
+- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-(normative))
 - [2 A Guide to the Tests](#2-a-guide-to-the-tests)
 - [2.1 Test Types (non-normative)](#21-test-types-(non-normative))
 - [2.2 Test Inputs and Outputs](#22-test-inputs-and-outputs)
@@ -72,7 +72,7 @@ This document is for consumers of data quality reports.
 
 Each sections of this document is marked as normative or non-normative.
 
-### 1.5 RFC 2119 key words (normative)
+### 1.5 RFC 2119 Key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
@@ -156,6 +156,10 @@ The definitions of the terms used for the tests can be found at [Terms in bdqcor
 # 4 Time and TimeZones (non-normative)
 
 Time is not considered in any of the BDQ Core Tests.  There are Use Cases where time zone data is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced.  New Tests are required if ignorance of time would make such data unfit for your purposes. 
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

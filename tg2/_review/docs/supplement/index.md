@@ -37,7 +37,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 keywords](#15-rfc-2119-keywords)
+- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-(normative))
 - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
 - [2 Historical Context](#2-historical-context)
 - [2.1 Definition of CORE](#21-definition-of-core)
@@ -96,7 +96,7 @@ This document provides practical information that goes beyond the normative guid
 
 This document is non-normative.
 
-### 1.5 RFC 2119 keywords
+### 1.5 RFC 2119 Key words (normative)
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
@@ -644,6 +644,10 @@ While applying to a single record, the test results may be accumulated across mu
 **Link to Specification Source Code** [non-normative]: A link to code that implements the test, for example "https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169".
 
 **Notes** [non-normative]: Additional comments that the Authors believed necessary for an accurate understanding of the test or issues that implementers needed to be aware of. Example: For TAXONID_FROM_TAXON, “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

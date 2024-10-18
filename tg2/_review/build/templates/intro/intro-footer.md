@@ -1,7 +1,7 @@
 
 ## Acronyms
 
-For a list of Acronyms see [5. Acronyms](https://github.com/tdwg/bdq/blob/master/tg2/_review/build/templates/intro/intro-header.md#5-acronyms) in this document.
+For a list of Acronyms see [5. Acronyms](#5-acronyms) in this document.
 
 ## Cite BDQ Core
 

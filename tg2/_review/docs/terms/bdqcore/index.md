@@ -8886,6 +8886,11 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ********************
 
 
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**

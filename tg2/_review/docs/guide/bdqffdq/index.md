@@ -38,7 +38,7 @@ Draft Standard for Submission
 - [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
 - [1.4 Namespace abbreviations](#14-namespace-abbreviations)
 - [2 Use of Terms (normative)](#2-use-of-terms-(normative)-)
-- [2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-(normative))
+- [2.1 RFC 2119 Key words (normative)](#21-rfc-2119-key-words-(normative))
 - [3 Framework for describing data quality](#3-framework-for-describing-data-quality-)
 - [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-(non-normative))
 - [3.2 Description of the bdqffdq ontology (non-normative)](#32-description-of-the-bdqffdq-ontology-(non-normative)-)
@@ -120,7 +120,7 @@ When not represented as objects, controlled value strings MUST be used as values
 
 IRIs MUST be use for values for all individual class instances and object properties when using bdqffdq: terms.
 
-### 2.1 RFC 2119 key words (normative)
+### 2.1 RFC 2119 Key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
@@ -2006,6 +2006,10 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 ********************
 
+
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 

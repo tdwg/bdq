@@ -1287,6 +1287,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 
 
+## Acronyms
+
+For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**
