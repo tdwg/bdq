@@ -1,4 +1,42 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
+
+# BDQ Core Tests and Assertions List of Terms
+
+Title
+: BDQ Core Tests and Assertions List of Terms
+
+Date version issued
+: 2024-09-10
+
+Date created
+: 2024-09-10
+
+Part of TDWG Standard
+: <http://example.org/to_be_determined>
+
+Preferred namespace abbreviation
+: bdqcore
+
+This version
+: <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+
+Latest version
+: <http://rs.tdwg.org/bdqcore/terms/>
+
+Abstract
+: This document is a reference for the (Draft) BDQ Core Standard, documenting the tests in the bdqcore: vocabulary, using terms from the bdqffdq ontology.
+
+Authors
+: {authors}
+
+Creator
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+
+Bibliographic citation
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Tests and Assertions List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+
+Draft Standard for Submission
+
 # Table of Contents
 {toc}
 
@@ -45,13 +83,8 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section 1.5 identifies which values in Section 4 are normative.
+Section 1.8 identifies which values in Section 4 are normative.
 
-<!--- TODO: Confirm that metadata for 1.5 has these values ---> 
-In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
-Resource Type, Specification, Information Elements ActedUpon, Information
-Elements Consulted, and Parameters are normative.  The values of
-Description, Examples, Use Cases, and Notes are non-normative.
 
 ## 1.6 Namespace abbreviations
 
@@ -96,6 +129,12 @@ of biodiversity data quality reports. Terms such as the "Specification"
 ensure that implementers have no ambiguity about how the test should be coded.
 
 {term_key}
+
+<!--- TODO: Confirm that metadata for 1.8 has these values ---> 
+In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
+Resource Type, Specification, Information Elements ActedUpon, Information
+Elements Consulted, and Parameters are normative.  The values of
+Description, Examples, Use Cases, and Notes are non-normative.
 
 <!--- @Tasilee text for comparison with generated table.  Some of these will need to be incorporated into definitions in the generated table.
 
