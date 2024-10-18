@@ -1,3 +1,43 @@
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
+
+Title
+: {document_title}
+
+Date version issued
+: {ratification_date}
+
+Date created
+: {created_date}
+
+Part of TDWG Standard
+: <{standard_iri}>
+
+Preferred namespace abbreviation
+: {pref_namespace_prefix}
+
+This version
+: <{current_iri}{ratification_date}>
+
+Latest version
+: <{current_iri}>
+
+{previous_version_slot}
+
+Abstract
+: {abstract}
+
+Authors
+: {authors}
+
+Creator
+: {creator}
+
+Bibliographic citation
+: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+
+{comment}
+
 # Table of Contents
 {toc}
 
