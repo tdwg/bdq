@@ -55,3 +55,4 @@ This document is non-normative.
 
 ## 2 Bibliography
 
+{references}
