@@ -138,54 +138,6 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 2.8 Glossary
-
-| Label | Definition | Context | Comment |
-| ----- | ---------- | ------- | ------- |
-| COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |  |
-| GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |  |
-| paramaterizedTest | A test that allows a bdq:Parameter to be set prior to the test being run. Where a bdq:Parameter value has not been provided, a default is specified within the test. | Test |  |
-| POLYNOMIAL | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. | bdqffdq:InformationElement | See test "VALIDATION_POLYNOMIAL_CONSISTENT" (17f03f1f-f74d-40c0-8071-2927cfc9487b) |
-| testFields | Column heading in the markdown of the tests in the bdq GitHub that list all the normative and informative metadata elements that describe a Data Quality Test | Test |  |
-| TestPrerequisite | Conditions that must be met for a test to be run (e.g., fields having values, tests that need to be run before the current test, availability of a bdq:sourceAuthority) | Test | See for example, INTERNAL_PREREQUISTES_NOT_MET (_q.v._) and EXTERNAL_PREREQUISITES_NOT_MET (_q.v._). |
-| TestType | There are four types of tests, viz. bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Issue, and bdqffdq:Measure. | Test |  |
-| VERBATIM | A general category of specific bdq:InformationElements that represents a term containing a original value. | bdqffdq:InformationElement |  |
-| YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |  |
-| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |  |
-| CRS | Coordinate Reference System - (also spatial reference system) A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek (2020)). | Test |  |
-| dwc: | A namespace to indicate Darwin Core terms and which are listed in the dwcffdq:InformationElements of each Test. | Data |  |
-| ellipsoid | A three-dimensional, closed geometric shape, all planar sections of which are ellipses or circles. An ellipsoid has three independent axes. If an ellipsoid is made by rotating an ellipse about one of its axes, then two axes of the ellipsoid are the same, and it is called an ellipsoid of revolution. When used to represent a model of the earth, the ellipsoid is an oblate ellipsoid of revolution made by rotating an ellipse about its minor axis (Chapman and Wieczorek (2020)). | Test |  |
-| EPSG | A pseudo-namespace referenced in dwc:datum to indicate the EPSG API where the numeric value following the colon is used as the search key. Example: EPSG:4326. | Data |  |
-| gbif: | A pseudo-namespace referenced in dwc:taxonID to indicate the GBIF API where the numeric value following the colon is used as the search key. Example: gbif:8102122. | Data |  |
-| geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek (2020)). | Test |  |
-| geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface Chapman and Wieczorek (2000)). | Test |  |
-| non-printing characters | ASCII 0-32 and 127 decimal. Non printing characters or formatting marks that are not displayed at printing. These may include pilcrow, space, non-breaking space, tab character. etc. For the purposes of the tests they are treated as bdq:EMPTY. | Data |  |
-| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations by "NULL", "Null", "null". "/n", "9999", etc. These should be treated as bdq:NOTEMPTY. | Data |  |
-| label | See: https://www.w3.org/TR/rdf-schema/#ch_label | RDF representation | skos:prefLabel/skos:label may be prefered. |
-| Roman numerals | Roman numerals are interpreted as the equivalent integer for months (e.g. "X" as "10") in appropriate tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data |  |
-| Preferred Label | See https://www.w3.org/TR/skos-reference/#labels. | SKOS Representation | from SKOS Simple Knowledge Organization System |
-| SRS | spatial reference system - see CRS (Chapman and Wieczorek (2020)). | Test |  |
-| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | bdqTestField:Term-Actions | Would be used only in an extension or in bdq:Response.comment, bdq:Response.status value for this case is bdq:AMENDED. |
-| CONSISTENT | Identifies inconsistency among values between bdqffdq:InformationElements. | bdqTestField:Term-Actions |  |
-| CONVERTED | A conversion has been proposed to values in the bdqffdq:InformationElements to conform with a targeted reference system. | bdqTestField:Term-Actions | See Test "AMENDMENT_COORDINATES_CONVERTED" (620749b9-7d9c-4890-97d2-be3d1cde6da8). |
-| EMPTY | A bdqffdq:InformationElement that is either not present or does not contain any characters or values other than those in the range U+0000 to U+0020. | bdqTestField:Term-Actions | Note: A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOT_EMPTY and may be separately detected. |
-| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | bdqTestField:Term-Actions | Use bdq:COMPLIANT for bdq:Response.result, and include this in bdq:Response.comments or bdq:Response.qualifier. |
-| NOTEMPTY | The value of a bdqffdq:InformationElement that is present and has content  (cf. bdq:EMPTY) | bdqTestField:Term-Actions |  |
-| OUTOFRANGE | The value in a bdqffdq:InformationElement that is outside an acceptable range for that bdqffdq:InformationElement. | bdqTestField:Term-Actions | Use in bdq:Response.qualifier or bdq:Response.comment. |
-| PRECISIONINSECONDS | The length of the period of an event in seconds. | bdqTestField:Term-Actions | This is description of the bdq:Response.result from this bdqffdq:Measure, where the result is a numeric value in seconds. See Test "MEASURE_EVENTDATE_DURATIONINSECONDS" (56b6c695-adf1-418e-95d2-da04cad7be53). |
-| PREREQUISITESNOTMET | A test of type bdqffdq:Measure that counts the number of tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (e.g. bdq:INTERNAL_PREREQUISITES_NOTMET and bdq:EXTERNAL_PREREQUISITES_NOTMET) | bdqTestField:Term-Actions | See test "MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" (49a94636-a562-4e6b-803c-665c80628a3d). |
-| PROPOSED | A test of type bdqffdq:Measure that pertains to a bdqffdq:Amendment where an action to modify a value in some way through a change or addition is recommended. | bdqTestField:Term-Actions | Example see test "MEASURE_AMENDMENTS_PROPOSED" (03049fe5-a575-404f-b564-ae63f5a1cf8b). |
-| STANDARD | A bdqffdq:Amendment where a value in a bdqffdq:InformationElement is proposed from a bdq:sourceAuthority. | bdqTestField:Term-Actions | Use in bdq:Response.qualifier or bdq:Response.comment. |
-| STANDARDIZED | A bdqffdq:Amendment where a bdq:STANDARD value for a bdqffdq:InformationElement is proposed. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:STANDARDIZED in a bdq:Response.qualifier or in a bdq:Response.comment. |
-| TERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries; or a marine taxon that has geographic coordinates that fall within marine boundaries. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:TERRESTRIALMARINE in a bdq:Response.qualifier or in a bdq:Response.comment. See test "VALIDATION_COORDINATES_TERRESTRIALMARINE" (b9c184ce-a859-410c-9d12-71a338200380). |
-| TRANSPOSED | The sign and/or value of one or more bdqffdq:InformationElements were swapped. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:TRANSPOSED in a bdq:Response.qualifier or in a bdq:Response.comment. See Test "AMENDMENT_COORDINATES_TRANSPOSED" (f2b4a50a-6b2f-4930-b9df-da87b6a21082). |
-| white space | 1) A field that only includes white space (blanks) is treated as bdq:EMPTY (_q.v._). 2) In bdqffdq:Validation tests (_q.v._) that require the looking up of a bdq:sourceAuthority, leading and/or trailing white space will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing white spaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |  |
-
-
-
-### 2.9 Bibliography
-
-{references}
 
 ## 3 Design of the Tests (normative)
 
@@ -251,7 +203,6 @@ There were many people who have made notable contributions at various times duri
 - **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
 
 ## 5 Acronyms
-<!--- TODO: Where do the acronyms go? --->
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
@@ -271,7 +222,54 @@ There were many people who have made notable contributions at various times duri
 | TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases     |
 | TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
 
-## 6 Audience for Each Document in BDQ Core
+## 6 Glossary
+
+| Label | Definition | Context | Comment |
+| ----- | ---------- | ------- | ------- |
+| COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |  |
+| GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |  |
+| paramaterizedTest | A test that allows a bdq:Parameter to be set prior to the test being run. Where a bdq:Parameter value has not been provided, a default is specified within the test. | Test |  |
+| POLYNOMIAL | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. | bdqffdq:InformationElement | See test "VALIDATION_POLYNOMIAL_CONSISTENT" (17f03f1f-f74d-40c0-8071-2927cfc9487b) |
+| testFields | Column heading in the markdown of the tests in the bdq GitHub that list all the normative and informative metadata elements that describe a Data Quality Test | Test |  |
+| TestPrerequisite | Conditions that must be met for a test to be run (e.g., fields having values, tests that need to be run before the current test, availability of a bdq:sourceAuthority) | Test | See for example, INTERNAL_PREREQUISTES_NOT_MET (_q.v._) and EXTERNAL_PREREQUISITES_NOT_MET (_q.v._). |
+| TestType | There are four types of tests, viz. bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Issue, and bdqffdq:Measure. | Test |  |
+| VERBATIM | A general category of specific bdq:InformationElements that represents a term containing a original value. | bdqffdq:InformationElement |  |
+| YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |  |
+| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |  |
+| CRS | Coordinate Reference System - (also spatial reference system) A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek (2020)). | Test |  |
+| dwc: | A namespace to indicate Darwin Core terms and which are listed in the dwcffdq:InformationElements of each Test. | Data |  |
+| ellipsoid | A three-dimensional, closed geometric shape, all planar sections of which are ellipses or circles. An ellipsoid has three independent axes. If an ellipsoid is made by rotating an ellipse about one of its axes, then two axes of the ellipsoid are the same, and it is called an ellipsoid of revolution. When used to represent a model of the earth, the ellipsoid is an oblate ellipsoid of revolution made by rotating an ellipse about its minor axis (Chapman and Wieczorek (2020)). | Test |  |
+| EPSG | A pseudo-namespace referenced in dwc:datum to indicate the EPSG API where the numeric value following the colon is used as the search key. Example: EPSG:4326. | Data |  |
+| gbif: | A pseudo-namespace referenced in dwc:taxonID to indicate the GBIF API where the numeric value following the colon is used as the search key. Example: gbif:8102122. | Data |  |
+| geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek (2020)). | Test |  |
+| geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface Chapman and Wieczorek (2000)). | Test |  |
+| non-printing characters | ASCII 0-32 and 127 decimal. Non printing characters or formatting marks that are not displayed at printing. These may include pilcrow, space, non-breaking space, tab character. etc. For the purposes of the tests they are treated as bdq:EMPTY. | Data |  |
+| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations by "NULL", "Null", "null". "/n", "9999", etc. These should be treated as bdq:NOTEMPTY. | Data |  |
+| label | See: https://www.w3.org/TR/rdf-schema/#ch_label | RDF representation | skos:prefLabel/skos:label may be prefered. |
+| Roman numerals | Roman numerals are interpreted as the equivalent integer for months (e.g. "X" as "10") in appropriate tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data |  |
+| Preferred Label | See https://www.w3.org/TR/skos-reference/#labels. | SKOS Representation | from SKOS Simple Knowledge Organization System |
+| SRS | spatial reference system - see CRS (Chapman and Wieczorek (2020)). | Test |  |
+| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | bdqTestField:Term-Actions | Would be used only in an extension or in bdq:Response.comment, bdq:Response.status value for this case is bdq:AMENDED. |
+| CONSISTENT | Identifies inconsistency among values between bdqffdq:InformationElements. | bdqTestField:Term-Actions |  |
+| CONVERTED | A conversion has been proposed to values in the bdqffdq:InformationElements to conform with a targeted reference system. | bdqTestField:Term-Actions | See Test "AMENDMENT_COORDINATES_CONVERTED" (620749b9-7d9c-4890-97d2-be3d1cde6da8). |
+| EMPTY | A bdqffdq:InformationElement that is either not present or does not contain any characters or values other than those in the range U+0000 to U+0020. | bdqTestField:Term-Actions | Note: A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are NOT_EMPTY and may be separately detected. |
+| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | bdqTestField:Term-Actions | Use bdq:COMPLIANT for bdq:Response.result, and include this in bdq:Response.comments or bdq:Response.qualifier. |
+| NOTEMPTY | The value of a bdqffdq:InformationElement that is present and has content  (cf. bdq:EMPTY) | bdqTestField:Term-Actions |  |
+| OUTOFRANGE | The value in a bdqffdq:InformationElement that is outside an acceptable range for that bdqffdq:InformationElement. | bdqTestField:Term-Actions | Use in bdq:Response.qualifier or bdq:Response.comment. |
+| PRECISIONINSECONDS | The length of the period of an event in seconds. | bdqTestField:Term-Actions | This is description of the bdq:Response.result from this bdqffdq:Measure, where the result is a numeric value in seconds. See Test "MEASURE_EVENTDATE_DURATIONINSECONDS" (56b6c695-adf1-418e-95d2-da04cad7be53). |
+| PREREQUISITESNOTMET | A test of type bdqffdq:Measure that counts the number of tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (e.g. bdq:INTERNAL_PREREQUISITES_NOTMET and bdq:EXTERNAL_PREREQUISITES_NOTMET) | bdqTestField:Term-Actions | See test "MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" (49a94636-a562-4e6b-803c-665c80628a3d). |
+| PROPOSED | A test of type bdqffdq:Measure that pertains to a bdqffdq:Amendment where an action to modify a value in some way through a change or addition is recommended. | bdqTestField:Term-Actions | Example see test "MEASURE_AMENDMENTS_PROPOSED" (03049fe5-a575-404f-b564-ae63f5a1cf8b). |
+| STANDARD | A bdqffdq:Amendment where a value in a bdqffdq:InformationElement is proposed from a bdq:sourceAuthority. | bdqTestField:Term-Actions | Use in bdq:Response.qualifier or bdq:Response.comment. |
+| STANDARDIZED | A bdqffdq:Amendment where a bdq:STANDARD value for a bdqffdq:InformationElement is proposed. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:STANDARDIZED in a bdq:Response.qualifier or in a bdq:Response.comment. |
+| TERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries; or a marine taxon that has geographic coordinates that fall within marine boundaries. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:TERRESTRIALMARINE in a bdq:Response.qualifier or in a bdq:Response.comment. See test "VALIDATION_COORDINATES_TERRESTRIALMARINE" (b9c184ce-a859-410c-9d12-71a338200380). |
+| TRANSPOSED | The sign and/or value of one or more bdqffdq:InformationElements were swapped. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:TRANSPOSED in a bdq:Response.qualifier or in a bdq:Response.comment. See Test "AMENDMENT_COORDINATES_TRANSPOSED" (f2b4a50a-6b2f-4930-b9df-da87b6a21082). |
+| white space | 1) A field that only includes white space (blanks) is treated as bdq:EMPTY (_q.v._). 2) In bdqffdq:Validation tests (_q.v._) that require the looking up of a bdq:sourceAuthority, leading and/or trailing white space will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing white spaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |  |
+
+## 7 Bibliography
+
+{references}
+
+## 8 Audience for Each Document in BDQ Core
 
 - [Introduction](../intro/index.md) This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. 
 - Guides
