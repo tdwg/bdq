@@ -96,7 +96,7 @@ This document provides practical information that goes beyond the normative guid
 
 This document is non-normative.
 
-## 1.5 Namespace abbreviations
+### 1.5 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 

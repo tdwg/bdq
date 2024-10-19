@@ -90,7 +90,7 @@ Section 1.9 identifies which values in Section 4 are normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-## 1.7 Namespace abbreviations
+### 1.7 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -111,7 +111,7 @@ The following namespace abbreviations are used in this document:
 | rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-## 1.8 Types of Tests
+### 1.8 Types of Tests
 
 There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 

@@ -79,7 +79,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## 2 A Guide to the Tests
 
-## 2.1 Test Types (non-normative)
+### 2.1 Test Types (non-normative)
 
 There are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
@@ -91,15 +91,15 @@ There are four types of tests: Validations, Issues, Amendments and Measures. Eac
 
 **Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
 
-## 2.2 Test Inputs and Outputs
+### 2.2 Test Inputs and Outputs
 
-### 2.2.1 Inputs to Tests (non-normative)
+#### 2.2.1 Inputs to Tests (non-normative)
 
 Each Test is defined to take a specific set of input terms (InformationElements, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the Validations, Amendments, and Issues currently defined in BDQ Core examine a set of Darwin Core terms from a single record, e.g. from a single Occurrence record, rather than looking at the input term(s) over multiple records.  
 
 Consider the Test VALIDATION_EVENTDATE_STANDARD, it takes as input the InformationElement dwc:eventDate from a single record, and then asks "Is the value of dwc:eventDate a valid ISO date?".  It will then produce a Response describing the conclusion it reached in asking that question for that record.
 
-### 2.2.2 Responses From Tests (normative) 
+#### 2.2.2 Responses From Tests (normative) 
 
 Reports SHOULD identify Tests to you using at least the Label (rdfs:Label) for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
@@ -118,7 +118,7 @@ A Response.status="EXTERNAL_PREREQUISITES_NOT_MET" tells you that the test was l
 
 A Response.status="INTERNAL_PREREQUISITES_NOT_MET" however, means that some aspect of the data itself does not meet the prerequisites for running the Test, such as an empty dwc:eventDate for a Test that evaluates whether the eventDate falls within a particular time span.  If the same Test is run again on the same, unmodified data, the same result is expected.  It is too easy to interpret a Response.status="INTERNAL_PREREQUISITES_NOT_MET" as pointing to some quality problem in the data, and while this may seem so, it is is misleading. Look instead to some Validation Test that specifically makes that evaluation and returns a Response.result="COMPLIANT" or "NOT_COMPLIANT", or some measure that returns a Response.result="COMPLETE" or "NOT_COMPLETE". 
 
-### 2.2.3 Responses From Different Types of Test (normative) 
+#### 2.2.3 Responses From Different Types of Test (normative) 
 
 Validation Tests can also have a response of RUN_HAS_RESULT which tells you that the test ran, and the result of the test will be COMPLIANT or NOT_COMPLIANT.
 
