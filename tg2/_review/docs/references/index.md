@@ -37,11 +37,11 @@ Bibliographic citation
 
 Draft Standard for Submission
 
-# 1 Introduction (non-normative)
+## 1 Introduction
 
 This document includes the references cited in the BDQ Core Standard.
 
-## 1.1 Purpose
+### 1.1 Purpose
 : This is combined bibliographic citations for the BDQ Core Standard
 
 ### 1.2 Audience

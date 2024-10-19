@@ -34,12 +34,12 @@ Bibliographic citation
 
 {toc}
 
-
 ## 1 Introduction
 
 This document contains information that is considered supplemental to the normative and non-normative BDQ Core standard documentation. 
 
 ### 1.1 Purpose 
+
 This document provides a historical context and lessons learned during the development of BDQ Core. This document will also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain. 
 
 ### 1.2 Audience
@@ -105,25 +105,25 @@ Some test were deemed not CORE because there was a perceived danger in their imp
 The following issues describing potential tests were tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=+label%3A%22DO+NOT+IMPLEMENT%22).  The discussion in each issue provides rationalle management for why they were tagged as such.
 
 | Issue | Name | Description |
-| 274 | VALIDATION_MODIFIED_INRANGE | Is the value of dcterms:modified entirely with the Parameter Range? |
-| 266 | VALIDATION_WATERBODY_NOTEMPTY | Is there a value in dwc:waterbody? |
-| 231 | VALIDATION_IDENTIFICATIONQUALIFIER_NOTEMPTY | Is there a value in dwc:identificationQualifier? |
-| 141 | VALIDATION_YEAR_STANDARD | Can the value for year be interpreted as a valid year? |
-| 139 | VALIDATION_GEOGRAPHY_STANDARD | Can the individual values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality be unambiguously resolved from bdq:sourceAuthority? |
-| 129 | AMENDMENT_YEAR_STANDARDIZED | Attempt to amend the year |
-| 118 | AMENDMENT_GEOGRAPHY_STANDARDIZED | Propose amendment to one or more of the values dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality using bdq:sourceAuthority. |
-| 100 | AMENDMENT_MINDEPTHMAXDEPTH_TRANSPOSED | Attempt to transpose minimum and maximum depth if minimum depth is greater than maximum depth |
-| 95 | VALIDATION_GEOGRAPHY_CONSISTENT | Is the combination of the values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality consistent with the bdq:sourceAuthority? |
-| 90 | AMENDMENT_KINGDOM_STANDARDIZED | Can the value for kingdom be standardized against the source authority? |
-| 89 | ISSUE_DECIMALLATITUDEDECIMALLONGITUDE_CONVERSIONFAILED | Latitude and longitude could not be converted using the default geodetic datum |
-| 80 | AMENDMENT_PHYLUM_STANDARDIZED | Can the value of dwc:phylum be standardized using the Source Authority? |
-| 53 | AMENDMENT_CLASS_STANDARDIZED | Can the value of dwc:class be standardized using the Source Authority? |
-| 44 | AMENDMENT_MINELEVATIONMAXELEVATION_TRANSPOSED | If \"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters, can they be meaningfully swapped? |
-| 37 | ISSUE_DAYMONTH_SWAPPED | Is it likely that the day and month have been swapped? |
-| 35 | MEASURE_VALIDATIONTESTS_RUN | Total number of tests of output type VALIDATION that have been attempted to have been run against the record |
-| 34 | AMENDMENT_DAYMONTH_TRANSPOSED | Swap dwc:month and dwc:day if dwc:month is greater than 12 and dwc:day is less than 12. |
-| 27 | AMENDMENT_FAMILY_STANDARDIZED | Can the value of dwc:family be standardized using the Source Authority? |
-| 25 | AMENDMENT_ORDER_STANDARDIZED | Can the value of dwc:order be standardized using the Source Authority? |
+| [274](https://github.com/tdwg/bdq/issues/274) | VALIDATION_MODIFIED_INRANGE | Is the value of dcterms:modified entirely with the Parameter Range? |
+| [266](https://github.com/tdwg/bdq/issues/266) | VALIDATION_WATERBODY_NOTEMPTY | Is there a value in dwc:waterbody? |
+| [231](https://github.com/tdwg/bdq/issues/231) | VALIDATION_IDENTIFICATIONQUALIFIER_NOTEMPTY | Is there a value in dwc:identificationQualifier? |
+| [141](https://github.com/tdwg/bdq/issues/141) | VALIDATION_YEAR_STANDARD | Can the value for year be interpreted as a valid year? |
+| [139](https://github.com/tdwg/bdq/issues/139) | VALIDATION_GEOGRAPHY_STANDARD | Can the individual values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality be unambiguously resolved from bdq:sourceAuthority? |
+| [129](https://github.com/tdwg/bdq/issues/129) | AMENDMENT_YEAR_STANDARDIZED | Attempt to amend the year |
+| [118](https://github.com/tdwg/bdq/issues/118) | AMENDMENT_GEOGRAPHY_STANDARDIZED | Propose amendment to one or more of the values dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality using bdq:sourceAuthority. |
+| [100](https://github.com/tdwg/bdq/issues/100) | AMENDMENT_MINDEPTHMAXDEPTH_TRANSPOSED | Attempt to transpose minimum and maximum depth if minimum depth is greater than maximum depth |
+| [95](https://github.com/tdwg/bdq/issues/95) | VALIDATION_GEOGRAPHY_CONSISTENT | Is the combination of the values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality consistent with the bdq:sourceAuthority? |
+| [90](https://github.com/tdwg/bdq/issues/90) | AMENDMENT_KINGDOM_STANDARDIZED | Can the value for kingdom be standardized against the source authority? |
+| [89](https://github.com/tdwg/bdq/issues/89) | ISSUE_DECIMALLATITUDEDECIMALLONGITUDE_CONVERSIONFAILED | Latitude and longitude could not be converted using the default geodetic datum |
+| [80](https://github.com/tdwg/bdq/issues/80) | AMENDMENT_PHYLUM_STANDARDIZED | Can the value of dwc:phylum be standardized using the Source Authority? |
+| [53](https://github.com/tdwg/bdq/issues/53) | AMENDMENT_CLASS_STANDARDIZED | Can the value of dwc:class be standardized using the Source Authority? |
+| [44](https://github.com/tdwg/bdq/issues/44) | AMENDMENT_MINELEVATIONMAXELEVATION_TRANSPOSED | If \"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters, can they be meaningfully swapped? |
+| [37](https://github.com/tdwg/bdq/issues/37) | ISSUE_DAYMONTH_SWAPPED | Is it likely that the day and month have been swapped? |
+| [35](https://github.com/tdwg/bdq/issues/35) | MEASURE_VALIDATIONTESTS_RUN | Total number of tests of output type VALIDATION that have been attempted to have been run against the record |
+| [34](https://github.com/tdwg/bdq/issues/34) | AMENDMENT_DAYMONTH_TRANSPOSED | Swap dwc:month and dwc:day if dwc:month is greater than 12 and dwc:day is less than 12. |
+| [27](https://github.com/tdwg/bdq/issues/27) | AMENDMENT_FAMILY_STANDARDIZED | Can the value of dwc:family be standardized using the Source Authority? |
+| [25](https://github.com/tdwg/bdq/issues/25) | AMENDMENT_ORDER_STANDARDIZED | Can the value of dwc:order be standardized using the Source Authority? |
 
 ### 2.2 Use Case Development
 

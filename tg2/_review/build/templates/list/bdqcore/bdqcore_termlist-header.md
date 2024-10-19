@@ -84,10 +84,13 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section 1.8 identifies which values in Section 4 are normative.
+Section 1.9 identifies which values in Section 4 are normative.
 
+### 1.6 RFC 2119 key words
 
-## 1.6 Namespace abbreviations
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
+
+## 1.7 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -98,7 +101,7 @@ The following namespace abbreviations are used in this document:
 | bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
 | bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
 | bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |
@@ -108,7 +111,7 @@ The following namespace abbreviations are used in this document:
 | rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
-## 1.7 Types of Tests
+## 1.8 Types of Tests
 
 There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
@@ -120,14 +123,9 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 **Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
 
-### 1.8 Test Descriptors 
+### 1.9 Test Descriptors 
 
-The Test Descriptors are terms that are necessary to comprehensively
-describe each test. Some terms, such as the IRI and term_localName are 
-intended for machine consumption. Some terms such as the "Description" 
-are designed to be human-readable and to be understood by consumers 
-of biodiversity data quality reports. Terms such as the "Specification" 
-ensure that implementers have no ambiguity about how the test should be coded.
+The Test Descriptors are terms that are necessary to comprehensively describe each test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
 {term_key}
 
@@ -199,9 +197,5 @@ Description, Examples, Use Cases, and Notes are non-normative.
 ## 2 Normative Guidance
 
 See the [landing page](../../bdqcore/index.md) for normative guidance on the use of bdqcore terms.
-
-### 2.1 RFC 2119 Keywords (normative)
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## 3 Term Indices

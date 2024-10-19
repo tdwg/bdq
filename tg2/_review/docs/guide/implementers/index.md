@@ -37,7 +37,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the Content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-normative)
+- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 About the Tests and their Implementation](#2-about-the-tests-and-their-implementation)
 - [2.1 Independence (normative)](#21-independence-normative)
@@ -107,7 +107,7 @@ This document is for software developers needing a technical understanding of th
 
 Section 1 is non-normative. Other sections are marked as normative or non-normative.
 
-### 1.5 RFC 2119 Key words (normative)
+### 1.5 RFC 2119 key words
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 

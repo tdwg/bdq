@@ -59,7 +59,7 @@ Section 3 of this document is normative.
 
 All other sections of this document are non-normative.
 
-### 1.5 RFC 2119 Key words (normative)
+### 1.5 RFC 2119 key words
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 

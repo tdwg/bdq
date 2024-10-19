@@ -52,17 +52,17 @@ The framework considers data to have quality with respect to some specified use.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
+### 1.1 Purpose
 
-Purpose
-: This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
+This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
 The ontology follows open world principles and has limited restrictions.
 This document gathers normative statements about how to use the Frameowrk in a meaningful way. 
 
-### 1.1 Target Audience
+### 1.2 Audience
 
 Technical users who need to understand how to describe data quality with the framework.
 
-### 1.2 Documents about the bdqffdq: ontology
+### 1.3 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
 
@@ -73,7 +73,7 @@ The bdqffdq: vocabulary is an ontology, documentation for it can be found in:
 
 In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
-### 1.2.1 Distributions (normative)
+### 1.3.1 Distributions for bdqffdq:
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
@@ -81,7 +81,7 @@ In addition, an illustrated guide to the use of the bdqffdq ontology is provided
 | Human Readable Vocabulary Extension | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
 | Owl Ontology                        | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
 
-### 1.2 Namespace abbreviations
+### 1.4 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -101,24 +101,23 @@ The following namespace abbreviations are used in this document:
 | skos         | http://www.w3.org/2004/02/skos/core#             | |
 | owl          | http://www.w3.org/2002/07/owl#                   | |
 
-### 1.2 Status of the content of this document
+### 1.5 Status of the content of this document
 
 Sections 2 and 5 are normative.
 
-Section 3 is non-normative
+Sections 1 and 3 are non-normative
 
 Section 3.1 lists which which terms in section 4 have normative values and which non-normative.
 
 Other sections of this document are marked as normative or non-normative.
 
-### 1.3 RFC 2119 Key words (normative)
+### 1.6 RFC 2119 key words
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
+### 1.7 Diagram of classes and properties
 
-### 1.5 Diagram of classes and properties (non-normative) 
-
-The diagram below is intended to help understand the normative statements in section 2 below.
+The (non-normative) diagram below is intended to help understand the normative statements in section 2 below.
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 

@@ -42,14 +42,15 @@ Draft Standard for Submission
 ### Table of Contents ###
 
 - [1 Introduction](#1-introduction)
-- [1.1 Target Audience](#11-target-audience)
-- [1.2 Documents about the bdqffdq: ontology](#12-documents-about-the-bdqffdq-ontology)
-- [1.2.1 Term List Distributions](#121-term-list-distributions)
-- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
-- [1.3 Namespace abbreviations](#13-namespace-abbreviations)
-- [1.5 Key to Vocabulary Terms](#15-key-to-vocabulary-terms)
+- [1.1 Purpose](#11-purpose)
+- [1.2 Audience](#12-audience)
+- [1.3 Documents about the bdqffdq: ontology](#13-documents-about-the-bdqffdq-ontology)
+- [1.3.1 Term List Distributions](#131-term-list-distributions)
+- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
+- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
+- [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms)
 - [2 Use of Terms (normative)](#2-use-of-terms-normative)
-- [2.1 RFC 2119 key words (normative)](#21-rfc-2119-key-words-normative)
 - [3 Term index (non-normative)](#3-term-index-non-normative)
 - [3.1 Alphabetical Index of classes](#31-alphabetical-index-of-classes)
 - [3.2 Alphabetical Index of object properties](#32-alphabetical-index-of-object-properties)
@@ -74,14 +75,14 @@ The TDWG Standards Documentation Specification requires that the human readable 
 as a term list with additional axioms included in a vocabulary extension.  A [vocabulary extension](../../extension/bdqffdq/index.md) 
 documents additional axioms.  
 
-Purpose
+### 1.1 Purpose
 : This is the term-list document for the bdqffdq: vocabulary.
 
-### 1.1 Target Audience
+### 1.2 Audience
 
 This document is for those needing a technical understanding of the BDQ Core Tests and the application of the bdqffdq: Framework vocabulary.
 
-### 1.2 Documents about the bdqffdq: ontology
+### 1.3 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
 
@@ -92,14 +93,14 @@ The bdqffdq: vocabulary is an ontology, documentation for it can be found in:
 
 An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../../guide/bdqffdq/index.md) 
 
-### 1.2.1 Term List Distributions
+### 1.3.1 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | http://rs.tdwg.org/bdqffdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqffdq/index.md | This file | 
 | Owl Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
-### 1.3 Status of the content of this document
+### 1.4 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
@@ -109,7 +110,11 @@ In Section 4, the values of following terms are normative: Term IRI, Name, Type,
 
 In Section 4, the values of the following term are non-normative: Comment, skos:prefLabel, rdfs:label
 
-### 1.3 Namespace abbreviations
+### 1.5 RFC 2119 key words
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
+
+### 1.6 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -120,7 +125,7 @@ The following namespace abbreviations are used in this document:
 | bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
-### 1.5 Key to Vocabulary Terms
+### 1.7 Key to Vocabulary Terms
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
@@ -138,9 +143,6 @@ The following namespace abbreviations are used in this document:
 ## 2 Use of Terms (normative)
 
 Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values from the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.
-
-### 2.1 RFC 2119 key words (normative)
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
 ## 3 Term index (non-normative)
 

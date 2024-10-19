@@ -33,15 +33,16 @@ Draft Standard for Submission
 
 
 - [1 Introduction](#1-introduction)
-- [1.1 Target Audience](#11-target-audience)
-- [1.2 Documents about the bdqffdq: ontology](#12-documents-about-the-bdqffdq-ontology)
-- [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
-- [1.4 Namespace abbreviations](#14-namespace-abbreviations)
+- [1.1 Purpose](#11-purpose)
+- [1.2 Audience](#12-audience)
+- [1.3 Documents about the bdqffdq: ontology](#13-documents-about-the-bdqffdq-ontology)
+- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
+- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
 - [2 Use of Terms (normative)](#2-use-of-terms-normative)
-- [2.1 RFC 2119 Key words (normative)](#21-rfc-2119-key-words-normative)
 - [3 Framework for describing data quality](#3-framework-for-describing-data-quality)
-- [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-non-normative)
-- [3.2 Description of the bdqffdq ontology (non-normative)](#32-description-of-the-bdqffdq-ontology-non-normative)
+- [3.1 Introduction and Context](#31-introduction-and-context)
+- [3.2 Description of the bdqffdq ontology](#32-description-of-the-bdqffdq-ontology)
 - [3.2.1 Data Quality Control, Data Quality Assurance](#321-data-quality-control,-data-quality-assurance)
 - [3.2.2 Information Elements](#322-information-elements)
 - [3.2.3 Concepts in the framework, Test Types: Measure, Validation, Amendment, Issue.](#323-concepts-in-the-framework,-test-types-measure,-validation,-amendment,-issue)
@@ -49,11 +50,10 @@ Draft Standard for Submission
 - [3.5 Responses](#35-responses)
 - [3.6 Organization of the bdqcore classes](#36-organization-of-the-bdqcore-classes)
 - [3.7 Example representation of a bdqcore test](#37-example-representation-of-a-bdqcore-test)
-- [3.8 Cardinality of bdqffdq terms (non-normative)](#38-cardinality-of-bdqffdq-terms-non-normative)
+- [3.8 Cardinality of bdqffdq terms](#38-cardinality-of-bdqffdq-terms)
 - [4 Term index](#4-term-index)
-- [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.3)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-portions-normative,-see-13)
+- [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-portions-normative,-see-14)
 {additional_toc}
-
 
 
 
@@ -65,14 +65,15 @@ The framework considers data to have quality with respect to some specified use.
 
 This document describes the use of a set of terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These terms are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
-Purpose
-: This is a guide to the use of the bdqffdq: Framework vocabulary.
+### 1.1 Purpose
 
-### 1.1 Target Audience
+This is a guide to the use of the bdqffdq: Framework vocabulary.
+
+### 1.2 Audience
 
 This document is for those needing a technical understanding of the bdqffdq: Framework vocabulary.
 
-### 1.2 Documents about the bdqffdq: ontology
+### 1.3 Documents about the bdqffdq: ontology
 
 The bdqffdq: vocabulary is an ontology, it includes: 
 
@@ -83,9 +84,9 @@ The bdqffdq: vocabulary is an ontology, it includes:
 
 This document provides an illustrated guide to the use of the bdqffdq ontology.
 
-### 1.3 Status of the content of this document
+### 1.4 Status of the content of this document
 
-Section 1 is non-normative.
+Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
@@ -93,9 +94,11 @@ In Section 4, the values of following terms are normative: Term IRI, Name, Type,
 
 Figures are non-normative.
 
-Other sections of this document are marked as normative or non-normative.
+### 1.5 RFC 2119 key words
 
-### 1.4 Namespace abbreviations
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+
+### 1.6 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -115,19 +118,13 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Use of Terms (normative) 
 
-The content of this section is normative.
-
 When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
 
 IRIs MUST be use for values for all individual class instances and object properties when using bdqffdq: terms.
 
-### 2.1 RFC 2119 Key words (normative)
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
-
 ### 3 Framework for describing data quality 
 
-#### 3.1 Introduction and Context (non-normative)
+#### 3.1 Introduction and Context
 
 The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality.  This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an owl ontology.  This document describes the organization and use of the owl ontology, and gives a summary of the mathematical formulation.
 
@@ -135,7 +132,7 @@ This document provides a background for understanding the bdqcore: test descript
 
 See the [bdqffdq: landing page](../bdqffdq/index.md) for a concise description and normative information about the bdqffdq: ontology, the [bdqffdq: Term List](../../list/bdqffdq/index.md) for the list of terms in the bdqffdq: vocabulary, the [extension term list](../../extension/bdqffdq/index.md) for documentation additional axioms, and the [owl ontology](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an owl ontology.
 
-#### 3.2 Description of the bdqffdq ontology (non-normative) 
+#### 3.2 Description of the bdqffdq ontology
 
 The bdqffdq framework describes data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use.  That is, bdqffdq lets users describe how to evaluate if some data set is fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  Under the framework, data do not have quality in the abstract, but only can be evaluated for quality with respect to a specified purpose.  The term that purposes and uses of data in bdqffdq is UseCase.  
 
@@ -227,15 +224,11 @@ See the bdqcore: landing page section on the [Structure of a Response](../../bdq
 
 ### 3.6 Organization of the bdqcore classes 
 
-The content of this section is non-normative.
-
 Class diagram 
 
 ![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
 
 ### 3.7 Example representation of a bdqcore test
-
-The content of this section is non-normative.
 
 Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon InformationElement, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification.  Also shown is a ValidationPolicy linking this Validation to a UseCase. 
 
@@ -279,7 +272,7 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
      
      TODO: Add diagram
 
-### 3.8 Cardinality of bdqffdq terms (non-normative)
+### 3.8 Cardinality of bdqffdq terms
 
 The content of this section is non-normative, see the [bdqffdq: landing page](../../bdqffdq/index.md) for related normative guidance. 
 
@@ -451,7 +444,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 
 
-## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.3)
+## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)
 
 
 ### 5.1 Class terms

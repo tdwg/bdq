@@ -36,7 +36,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.4 RFC 2119 Key words (normative)](#14-rfc-2119-key-words-normative)
+- [1.4 RFC 2119 key words](#14-rfc-2119-key-words)
 - [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
 - [2.1 Identifying Example Data (normative)](#21-identifying-example-data-normative)
 - [2.2 Data Fragments and Occurrence Data Sets (normative)](#22-data-fragments-and-occurrence-data-sets-normative)
@@ -49,27 +49,31 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-Purpose
+With tests for data quality comes the need for validation data to test the behavior of test implementations.  It is important that synthetic data created for the purposes of validating the behavior of test implementation, or data representing real occurences that has been modified for that purpose not be conflated with real data in analysies of patterns of biodiversity.  This document explains how the creators of such validation data sets can unambiguosly mark such data for exclusion, and how users can use these markings to exclude such data from analysies.
 
 ### 1.1 Purpose
 
-This document specifies the marking and identification of synthetic data, not real world occurrences.
+This document specifies the marking and identification of synthetic data as clearly distinguisable from real world occurrences.
 
 ### 1.2 Audience
 
-This document is designed for creators of data sets for the validation of implementations of BDQ Core Tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines . 
+This document is designed for creators of data sets for the validation of implementations of BDQ Core Tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines. 
 
 ### 1.3 Associated Documents
 
-Link to Test Data?
+See the introduction to the [BDQ Core Standard](../intro/index.md) for more context.
+
+See the [Implementer's Guide](../guide/implementers/index.md) for discussion of validation of implementations of bdqcore: tests.
 
 ### 1.4 Status of the content of this document
 
 Section 1 is non-normative.
+
 Section 2 is normative.  
+
 Section 3 is non-normative.
 
-## 1.4 RFC 2119 Key words (normative)
+### 1.4 RFC 2119 key words
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 

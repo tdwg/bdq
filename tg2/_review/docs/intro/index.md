@@ -39,7 +39,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4. Status of the Content of This Document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 Key words (normative)](#15-rfc-2119-key-words-normative)
+- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 Parts of the Standard](#2-parts-of-the-standard)
 - [2.1 Vocabularies](#21-vocabularies)
@@ -93,7 +93,7 @@ Section 3 of this document is normative.
 
 All other sections of this document are non-normative.
 
-### 1.5 RFC 2119 Key words (normative)
+### 1.5 RFC 2119 key words
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
