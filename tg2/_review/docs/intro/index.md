@@ -48,8 +48,6 @@ Draft Standard for Submission
 - [2.4 Exemplar Tests Implementation](#24-exemplar-tests-implementation)
 - [2.6 Test Lists](#26-test-lists)
 - [2.7 Test Execution Environments and Workflows](#27-test-execution-environments-and-workflows)
-- [2.8 Glossary](#28-glossary)
-- [2.9 Bibliography](#29-bibliography)
 - [3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
 - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control,-data-quality-assurance-normative)
 - [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
@@ -61,7 +59,9 @@ Draft Standard for Submission
 - [4.2.1 Authors](#421-authors)
 - [4.2.2 Contributors](#422-contributors)
 - [5 Acronyms](#5-acronyms)
-- [6 Audience for Each Document in BDQ Core](#6-audience-for-each-document-in-bdq-core)
+- [6 Glossary](#6-glossary)
+- [7 Bibliography](#7-bibliography)
+- [8 Audience for Each Document in BDQ Core](#8-audience-for-each-document-in-bdq-core)
 
  
 
@@ -172,7 +172,91 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 2.8 Glossary
+
+## 3 Design of the Tests (normative)
+
+<!--- PJM: Section 3 is Important elements to put in the introduction --->
+
+### 3.1 Data Quality Control, Data Quality Assurance (normative)
+
+BDQ Core draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.  Implementations of the bdqcore tests MAY be used to perform Quality Control, Quality Assurance, or both.
+
+### 3.2 When are Tests Run (normative)
+
+The bdqcore tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of records from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data.  They MAY be run in workflows for analysis of data for research purposes.
+
+### 3.3 Results of Test Executions (normative)
+
+BDQ Core is agnostic about how reports from BDQ Core can be reported.  It does, however, specify that test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.  Responses MAY also contain more information in Response.qualifier.
+
+The results of the execution of implementations of the bdqcore: tests MAY be presented as Data Quality reports.  The bdqffdq: framework provides vocabulary and structure that MAY be used for such data quality reports.
+
+The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.
+
+## 4 Contributions and Acknowledgements
+
+### 4.1 Acknowledgements
+
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at TDWG annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings. The Authors are also gratefull for all those who responded to our email questions.
+
+We'd also aknowledge the continued support of the TDWG (Biodiversity Information Standards) Executive over the unusual 10 years of the project.
+
+#### 4.1.1 Funding and Support
+
+We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of BDQ Core, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthflor LLC provided support of John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
+
+The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP) provided facilities, and with the Global Biodiversity Information Facility and others, supported participants to attend the meeting in São Paulo, Brazil. The US National Science Foundation through iDigBio provided support for the meeting in Gainesville, Florida.
+
+### 4.2 Contributions
+
+Many people have contributed to the development of the BDQ Core standard.  
+
+#### 4.2.1 Authors 
+
+We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
+ - **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
+- **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, test validation data, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents; 
+- **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
+
+#### 4.2.2 Contributors
+
+There were many people who have made notable contributions at various times during the development of BDQ Core. 
+- **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents;
+- **António Mauro Saraiva (Universidade de São Paulo)**: Development of the Fitness for Use Framework (Task Group 1), facilitated test development workshop, Co-convenor of Data Quality Interest Group until 2022;
+- **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation, Convenor of Task Group 1: Framework on Data Quality;
+- **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value;
+- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues;
+- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of the Fitness for Use Framework, developer of kurator-ffdq java class representation of the framework;
+- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions, vocabulary definitions and early test development;
+- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests;
+- **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions, GBIF Representative to the Data Quality Interest Group in early years;
+- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the Fitness for Use Framework as an ontology, guided intital development of the ontology representation of the framework;
+- **Miles Nicholls (Atlas of Living Australia)**: Use Case analysis, Convenor of Task Group 3: Data Quality Use Cases;
+- **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in Task Group 3: Data Quality Use cases;
+- **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
+
+## 5 Acronyms
+
+| **Acronym** | **Explanation**                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------|
+| ALA         | Atlas of Living Australia                             | 
+| BDQ         | TDWG Biodiversity Data Quality                        |
+| BDQIG       | Biodiversity Data Quality Interest Group              |
+| BISON       | Biodiversity Information Serving Our Nation           |
+| CRIA        | Centro de Referência em Informação Ambiental          |
+| EPSG        | European Petroleum Survey Group                       |
+| GBIF        | Global Biodiversity Information Facility              |
+| iDigBio     | Integrated Digitized BioCollections                   |
+| IRI         | Internationalized Resource Identifier                 |
+| ISO         | International Standards Organization                  |
+| TDWG        | Biodiversity Information Standards                    |
+| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality |
+| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions |
+| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases     |
+| TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
+
+## 6 Glossary
 
 | Label | Definition | Context | Comment |
 | ----- | ---------- | ------- | ------- |
@@ -215,9 +299,7 @@ Expanding on this single validation step, amendments can be run and their result
 | TRANSPOSED | The sign and/or value of one or more bdqffdq:InformationElements were swapped. | bdqTestField:Term-Actions | Use bdq:AMENDED as the bdq:Response.status, report bdq:TRANSPOSED in a bdq:Response.qualifier or in a bdq:Response.comment. See Test "AMENDMENT_COORDINATES_TRANSPOSED" (f2b4a50a-6b2f-4930-b9df-da87b6a21082). |
 | white space | 1) A field that only includes white space (blanks) is treated as bdq:EMPTY (_q.v._). 2) In bdqffdq:Validation tests (_q.v._) that require the looking up of a bdq:sourceAuthority, leading and/or trailing white space will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing white spaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |  |
 
-
-
-### 2.9 Bibliography
+## 7 Bibliography
 
 Date Last Updated 2024-08-24
 
@@ -310,91 +392,7 @@ The following references have been extracted from the "References" descriptor on
 
 
 
-## 3 Design of the Tests (normative)
-
-<!--- PJM: Section 3 is Important elements to put in the introduction --->
-
-### 3.1 Data Quality Control, Data Quality Assurance (normative)
-
-BDQ Core draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.  Implementations of the bdqcore tests MAY be used to perform Quality Control, Quality Assurance, or both.
-
-### 3.2 When are Tests Run (normative)
-
-The bdqcore tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of records from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data.  They MAY be run in workflows for analysis of data for research purposes.
-
-### 3.3 Results of Test Executions (normative)
-
-BDQ Core is agnostic about how reports from BDQ Core can be reported.  It does, however, specify that test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.  Responses MAY also contain more information in Response.qualifier.
-
-The results of the execution of implementations of the bdqcore: tests MAY be presented as Data Quality reports.  The bdqffdq: framework provides vocabulary and structure that MAY be used for such data quality reports.
-
-The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.
-
-## 4 Contributions and Acknowledgements
-
-### 4.1 Acknowledgements
-
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at TDWG annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings. The Authors are also gratefull for all those who responded to our email questions.
-
-We'd also aknowledge the continued support of the TDWG (Biodiversity Information Standards) Executive over the unusual 10 years of the project.
-
-#### 4.1.1 Funding and Support
-
-We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of BDQ Core, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthflor LLC provided support of John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
-
-The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP) provided facilities, and with the Global Biodiversity Information Facility and others, supported participants to attend the meeting in São Paulo, Brazil. The US National Science Foundation through iDigBio provided support for the meeting in Gainesville, Florida.
-
-### 4.2 Contributions
-
-Many people have contributed to the development of the BDQ Core standard.  
-
-#### 4.2.1 Authors 
-
-We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
- - **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
-- **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, test validation data, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents; 
-- **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
-
-#### 4.2.2 Contributors
-
-There were many people who have made notable contributions at various times during the development of BDQ Core. 
-- **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents;
-- **António Mauro Saraiva (Universidade de São Paulo)**: Development of the Fitness for Use Framework (Task Group 1), facilitated test development workshop, Co-convenor of Data Quality Interest Group until 2022;
-- **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation, Convenor of Task Group 1: Framework on Data Quality;
-- **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value;
-- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues;
-- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of the Fitness for Use Framework, developer of kurator-ffdq java class representation of the framework;
-- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions, vocabulary definitions and early test development;
-- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests;
-- **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions, GBIF Representative to the Data Quality Interest Group in early years;
-- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the Fitness for Use Framework as an ontology, guided intital development of the ontology representation of the framework;
-- **Miles Nicholls (Atlas of Living Australia)**: Use Case analysis, Convenor of Task Group 3: Data Quality Use Cases;
-- **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in Task Group 3: Data Quality Use cases;
-- **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
-
-## 5 Acronyms
-<!--- TODO: Where do the acronyms go? --->
-
-| **Acronym** | **Explanation**                                                                                                |
-|-------------|----------------------------------------------------------------------------------------------------------------|
-| ALA         | Atlas of Living Australia                             | 
-| BDQ         | TDWG Biodiversity Data Quality                        |
-| BDQIG       | Biodiversity Data Quality Interest Group              |
-| BISON       | Biodiversity Information Serving Our Nation           |
-| CRIA        | Centro de Referência em Informação Ambiental          |
-| EPSG        | European Petroleum Survey Group                       |
-| GBIF        | Global Biodiversity Information Facility              |
-| iDigBio     | Integrated Digitized BioCollections                   |
-| IRI         | Internationalized Resource Identifier                 |
-| ISO         | International Standards Organization                  |
-| TDWG        | Biodiversity Information Standards                    |
-| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality |
-| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions |
-| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases     |
-| TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
-
-## 6 Audience for Each Document in BDQ Core
+## 8 Audience for Each Document in BDQ Core
 
 - [Introduction](../intro/index.md) This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. 
 - Guides
