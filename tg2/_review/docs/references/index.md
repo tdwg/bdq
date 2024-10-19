@@ -52,7 +52,7 @@ Readers of the BDQ Core Standard.
 
 This document is non-normative.
 
-# 2 Bibliography
+## 2 Bibliography
 
 
 ## Acronyms

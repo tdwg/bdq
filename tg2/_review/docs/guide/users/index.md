@@ -99,7 +99,7 @@ Each Test is defined to take a specific set of input terms (InformationElements,
 
 Consider the Test VALIDATION_EVENTDATE_STANDARD, it takes as input the InformationElement dwc:eventDate from a single record, and then asks "Is the value of dwc:eventDate a valid ISO date?".  It will then produce a Response describing the conclusion it reached in asking that question for that record.
 
-## 2.2.2 Responses From Tests (normative) 
+### 2.2.2 Responses From Tests (normative) 
 
 Reports SHOULD identify Tests to you using at least the Label (rdfs:Label) for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
 
@@ -118,7 +118,7 @@ A Response.status="EXTERNAL_PREREQUISITES_NOT_MET" tells you that the test was l
 
 A Response.status="INTERNAL_PREREQUISITES_NOT_MET" however, means that some aspect of the data itself does not meet the prerequisites for running the Test, such as an empty dwc:eventDate for a Test that evaluates whether the eventDate falls within a particular time span.  If the same Test is run again on the same, unmodified data, the same result is expected.  It is too easy to interpret a Response.status="INTERNAL_PREREQUISITES_NOT_MET" as pointing to some quality problem in the data, and while this may seem so, it is is misleading. Look instead to some Validation Test that specifically makes that evaluation and returns a Response.result="COMPLIANT" or "NOT_COMPLIANT", or some measure that returns a Response.result="COMPLETE" or "NOT_COMPLETE". 
 
-## 2.2.3 Responses From Different Types of Test (normative) 
+### 2.2.3 Responses From Different Types of Test (normative) 
 
 Validation Tests can also have a response of RUN_HAS_RESULT which tells you that the test ran, and the result of the test will be COMPLIANT or NOT_COMPLIANT.
 
@@ -128,11 +128,11 @@ Mesure Tests generally summarise the results of running the Validations and Amen
 
 Issues Tests result in a response of INTERNAL_PREREQUISITES_NOT_MET or RUN_HAS_RESULT and a result of POTENTIAL_ISSUE or NOT_ISSUE.  Potential issues require a human review. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY will return a Response.result="POTENTIAL_ISSUE" if dwc:dataGeneralizations contains a value. The value in dwc:dataGeneralizations and the assertions it makes about what changes have been made to generalize other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) will require human review for any Use Case to determine if the data are fit for purpose or not.   An Issue Test that has a Response.result="POTENTIAL_ISSUE" is making an assertion that is the same as a Validation Test reporting a Response.result="NOT_COMPLIANT". Issue Tests are the converse of Validation Tests.  The meaning, however, of a Response.result="NOT_ISSUE" is not the same as a Response.result="COMPLIANT" from a Validation Test. NOT_ISSUE means that no issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisify some critierion for fitness for some Use Case.  A Response.result="POTENTIAL_ISSUE" has no analog in Validation Tests; it marks the presence of something in the data that will need evaluation by a human to determine whether or not the data are fit for their use or not.  One Issue Test in BDQ Core evaluates whether dwc:dataGeneralizations contains any value. If it does, then the Test reports a Response.result="POTENTIAL_ISSUE", meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose.  See: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqcore/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY)  
 
-# 2.3 Amendments Only Propose Changes (normative)
+### 2.3 Amendments Only Propose Changes (normative)
 
 Amendment Tests only **propose changes** to data.  It is up to the consumers of data quality reports to choose whether or not to accept those changes, particularly into authoritative databases of records.  Consumers of data quality reports MAY choose to change data based on assertions made by Ammendment Tests, or consumers of data quality reports MAY choose to not change their data based on assertions made by Amendment Tests.  Databases of records SHOULD NOT automatically alter data based on assertions made by Amendment Tests without human evaluation.   
 
-## 2.4 Test Parameters (normative) 
+### 2.4 Test Parameters (normative) 
 
 Some Tests are parameterized. 
 

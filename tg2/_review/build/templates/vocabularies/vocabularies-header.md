@@ -53,20 +53,20 @@ The [landing page for BDQ Core](../../../index.md) provides an index to all docu
 
 This document is non-normative.
 
-# 2 BDQ Core Vocabularies
+## 2 BDQ Core Vocabularies
 
-## 2.1 Vocabularies Central to BDQ Core
+### 2.1 Vocabularies Central to BDQ Core
 
-## 2.1.1 The Quick Reference Guide to the Tests
+### 2.1.1 The Quick Reference Guide to the Tests
 
 - [BDQ Core Tests and Assertions Quick Reference Guide](../terms/bdqcore/index.md) -  An easy to read guide to the Tests (a descriptive document, not the full vocabulary definition document found in the BDQ Core Tests And Assertions List of Terms).
 
-## 2.1.2 Vocabularies
+### 2.1.2 Vocabularies
 
 - [BDQ Core Tests and Assertions Vocabulary](../bdqcore/index.md) - this vocabulary is likely to be the focus of interest for both implementors and consumers of the outputs of implementations of tests and assertions.  This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
 - [Fitness For Use Framework Ontology](../bdqffdq/index.md) - this vocabulary, in the form of an ontology, provides the semantics of terms that describe data quality and fitness for use in the namespace `https://rs.tdwg.org/bdqffdq` (abbreviated `bdqffdq:`), these are the terms used to describe the tests in bdqcore:.
 
-## 2.2 Vocabularies Supporting BDQ Core
+### 2.2 Vocabularies Supporting BDQ Core
 
 - [Test Specification Vocabulary List of Terms](../list/bdq/index.md) - this vocabulary provides definitions of terms within the namespace `https://rs.tdwg.org/bdq` (abbreviated `bdq:`), which are to be used within the specifications of the tests covered by `bdqcore:`.  Provides values for bdqffdq:Parameter and bdqffdq:UseCase. 
 - [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) - this vocabulary provides definitions of terms within the namespace `https://rs.tdwg.org/bdqdim` (abbreviated `bdqdim:`), which provides names and the preferred labels of values recommended for populating the specific term `bdqffdq:DataQualityDimension`. 
@@ -84,12 +84,12 @@ The following namespace abbreviations are used in this document: **CHECK THIS se
 | bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
 | bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
 | bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
+| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
 | dc           | https://purl.org/dc/elements/1.1/                |
 | dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |
 | dwciri       | http://rs.tdwg.org/dwc/iri/                      |
 | oa           | https://www.w3.org/TR/annotation-vocab/          |
 | skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema             |
+| rdfs         | http://www.w3.org/2000/01/rdf-schema/            |
 | owl          | http://www.w3.org/2002/07/owl#                   |
