@@ -1868,6 +1868,10 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
 For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
 
+## Bibliography
+
+The bibliography for BDQ Core is in the [Bibliography](../references/index.md#2-bibliography) document.
+
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**
