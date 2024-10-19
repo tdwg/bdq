@@ -30,7 +30,7 @@ from function_lib import build_authors_contributors_markdown, build_contributors
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
-directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqcore':'bdqcore_landing'}
+directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqcore':'bdqcore_landing','references':'references'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
