@@ -36,7 +36,7 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.4 RFC 2119 key words](#14-rfc-2119-key-words)
+- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
 - [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
 - [2.1 Identifying Example Data (normative)](#21-identifying-example-data-normative)
 - [2.2 Data Fragments and Occurrence Data Sets (normative)](#22-data-fragments-and-occurrence-data-sets-normative)
@@ -73,7 +73,7 @@ Section 2 is normative.
 
 Section 3 is non-normative.
 
-### 1.4 RFC 2119 key words
+### 1.5 RFC 2119 key words
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
