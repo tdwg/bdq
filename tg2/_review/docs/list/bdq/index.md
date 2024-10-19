@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Biodiversity Data Quality Controlled Vocabulary List of Terms
+# Test Specification Controlled Vocabulary List of Terms
 
 Title
-: Biodiversity Data Quality Controlled Vocabulary List of Terms
+: Test Specification Controlled Vocabulary List of Terms
 
 Date version issued
 : 2024-09-10
@@ -33,7 +33,7 @@ Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Test Specification Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 Draft Standard for Submission
 
@@ -92,8 +92,8 @@ The following namespace abbreviations are used in this document:
 | Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdq/terms/Alien-Species | normative |
 | Term Name | rdf:value |  | Alien-Species | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Alien-Species | non-normative |
-| Label | rdfs:label |  | Alien-Species | normative |
-| Comments | rdfs:comment |  |  | non-normative |
+| Label | rdfs:label | rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name. | Alien-Species | normative |
+| Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. |  | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). | normative |
 | Type | rdf:type |  | bdqffdq:UseCase | normative |
 | Modified | dcterms:issued |  | 2024-09-30 |  |
@@ -1315,7 +1315,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Test Specification Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 **Biodiversity Information Standards (TDWG)**
 

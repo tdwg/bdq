@@ -39,6 +39,15 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
     """
+    ## Selected hard coded definitions not available for lookup.
+    definition_dictionary = {
+        "Term Version IRI":"An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies a specific version of a resource.",
+        "Term IRI":"An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies an abstract resource.",
+        "Term Name":"The local name for a vocabulary term",
+        "term_locaName":"The local name for a vocabulary term",
+        "rdfs:comment":"rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource.",
+        "rdfs:label":"rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name." 
+    }  
     definitionTable = ""
     definitionTable = definitionTable + "| Label | Term | Definition | Example | Normative | \n"
     definitionTable = definitionTable + "| ----- | ---- | ---------- | ------- | --------- |\n"
@@ -55,6 +64,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                 queryResult = graph.query(sparql)
                 for r in queryResult : 
                     definition = r.object
+            elif termname in definition_dictionary.keys() : 
+               definition = definition_dictionary.get(termname)
             example = termrow[key]
             normative = value['normative']
             if normative == "true" :

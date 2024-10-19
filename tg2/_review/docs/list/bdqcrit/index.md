@@ -97,8 +97,8 @@ The following namespace abbreviations are used in this document:
 | Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqcrit/terms/Complete | normative |
 | Term Name | rdf:value |  | Complete | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Complete | non-normative |
-| Label | rdfs:label |  | Complete | normative |
-| Comments | rdfs:comment |  | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness | non-normative |
+| Label | rdfs:label | rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name. | Complete | normative |
+| Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Data are present and sufficiently comprehensive for use. | normative |
 | Type | rdf:type |  | bdqffdq:Criterion | normative |
 | Modified | dcterms:issued |  | 2024-09-30 |  |

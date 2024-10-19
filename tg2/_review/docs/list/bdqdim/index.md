@@ -98,8 +98,8 @@ The following namespace abbreviations are used in this document:
 | Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqdim/terms/Completeness | normative |
 | Term Name | rdf:value |  | Completeness | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Completeness | non-normative |
-| Label | rdfs:label |  | Completeness | normative |
-| Comments | rdfs:comment |  | Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. | non-normative |
+| Label | rdfs:label | rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name. | Completeness | normative |
+| Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. | Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. | normative |
 | Type | rdf:type |  | bdqffdq:DataQualityDimension | normative |
 | Modified | dcterms:issued |  | 2024-09-30 |  |

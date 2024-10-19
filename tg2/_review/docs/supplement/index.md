@@ -44,6 +44,7 @@ Draft Standard for Submission
 - [2.2 Use Case Development](#22-use-case-development)
 - [2.3 Data Quality Control and Data Quality Assurance](#23-data-quality-control-and-data-quality-assurance)
 - [2.4 Framework Competency Questions](#24-framework-competency-questions)
+- [2.4.1 Framework Competency Question including an oa:annotation](#241-framework-competency-question-including-an-oaannotation)
 - [3 Developing the Tests](#3-developing-the-tests)
 - [3.1 Types of Test](#31-types-of-test)
 - [3.1.1 Validation](#311-validation)
@@ -183,7 +184,7 @@ The specification of the tests within the Framework allows the same set of tests
 
 ### 2.4 Framework Competency Questions
 
-The development of the representation of the Fitness for Use Framework as an owl ontology (bdqffdq:) was influenced by competency questions, shaped by the late Robert A. Morris, and originally written by David Lowery (within in the kurator-ffdq codebase) <!--- Reference?-->.  The development of our test descriptors (the terms used to describe our tests) led to changes in the ontology (largely adopting a consistent naming pattern).  Changes to the specifics of competency questions follow on from that.
+The development of the representation of the Fitness for Use Framework as an owl ontology (bdqffdq:) was influenced by competency questions, shaped by the late Robert A. Morris, and originally written by David Lowery (within in the kurator-ffdq codebase (Morris and Lowery, 2018); see [kurator-ffdq competency questions](https://github.com/kurator-org/kurator-ffdq/tree/53ce808117d83cbe84e6820636c90e404a4c6886/competencyquestions)).  The development of our test descriptors (the terms used to describe our tests) led to changes in the ontology (largely adopting a consistent naming pattern).  Changes to the specifics of competency questions follow on from that.
 
 Example comptency questions that can be asked of the RDF representation of bdqcore: 
 
@@ -330,6 +331,8 @@ Given an Assertion, what test was run with which argument values for which param
       FILTER (STR(?assertion) = "{id of assertion to look up}")
     }
     GROUP BY ?test ?label ?description ?mechanism
+
+### 2.4.1 Framework Competency Question including an oa:annotation
 
 Given an a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
 

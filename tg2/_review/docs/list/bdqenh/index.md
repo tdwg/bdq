@@ -97,8 +97,8 @@ The following namespace abbreviations are used in this document:
 | Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqenh/terms/AssumedDefault | normative |
 | Term Name | rdf:value |  | AssumedDefault | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Assumed Default | non-normative |
-| Label | rdfs:label |  | Assumed Default | normative |
-| Comments | rdfs:comment |  | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness | non-normative |
+| Label | rdfs:label | rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name. | Assumed Default | normative |
+| Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Data could be improved by setting an empty value to a default value | normative |
 | Type | rdf:type |  | bdqffdq:Enhancement | normative |
 | Modified | dcterms:issued |  | 2024-09-30 |  |
