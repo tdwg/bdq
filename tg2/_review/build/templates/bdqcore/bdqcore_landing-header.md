@@ -72,11 +72,7 @@ In addition, A users guide to the use of the bdqcore tests is provided in the [U
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the tests in a Turtle serialization | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the tests | 
 
-### 1.4 RFC 2119 key words
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
-
-### 1.5 Status of the Content of this Document
+### 1.4 Status of the Content of this Document
 
 Sections 1 is non-normative.
 
@@ -87,6 +83,10 @@ Section 3 is normative.
 Section 4 is non-normative.
 
 Section 5 is non-normative.
+
+### 1.5 RFC 2119 key words
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ### 1.6 Namespace Abbreviations
 

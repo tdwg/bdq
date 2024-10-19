@@ -44,8 +44,8 @@ Draft Standard for Submission
 - [1.2 Audience](#12-audience)
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.3.1 Term List Distributions for BDQ Core](#131-term-list-distributions-for-bdq-core)
-- [1.4 RFC 2119 key words](#14-rfc-2119-key-words)
-- [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
+- [1.4 Status of the Content of this Document](#14-status-of-the-content-of-this-document)
+- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 A Brief Context for the BDQ Core Tests](#2-a-brief-context-for-the-bdq-core-tests)
 - [2.1 Characteristics of the Tests (non-normative)](#21-characteristics-of-the-tests-non-normative)
@@ -98,11 +98,7 @@ In addition, A users guide to the use of the bdqcore tests is provided in the [U
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the tests in a Turtle serialization | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the tests | 
 
-### 1.4 RFC 2119 key words
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
-
-### 1.5 Status of the Content of this Document
+### 1.4 Status of the Content of this Document
 
 Sections 1 is non-normative.
 
@@ -113,6 +109,10 @@ Section 3 is normative.
 Section 4 is non-normative.
 
 Section 5 is non-normative.
+
+### 1.5 RFC 2119 key words
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ### 1.6 Namespace Abbreviations
 
