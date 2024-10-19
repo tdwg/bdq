@@ -66,6 +66,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                     definition = r.object
             elif termname in definition_dictionary.keys() : 
                definition = definition_dictionary.get(termname)
+            elif label in definition_dictionary.keys() : 
+               definition = definition_dictionary.get(label)
             example = termrow[key]
             normative = value['normative']
             if normative == "true" :

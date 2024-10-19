@@ -93,9 +93,9 @@ The following namespace abbreviations are used in this document:
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
-| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30 | normative |
-| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdqcrit/terms/Complete | normative |
-| Term Name | rdf:value |  | Complete | normative |
+| Term Version IRI | rdf:about | An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies a specific version of a resource. | https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30 | normative |
+| Term IRI | dcterms:isVersionOf | An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies an abstract resource. | https://rs.tdwg.org/bdqcrit/terms/Complete | normative |
+| Term Name | rdf:value | The local name for a vocabulary term | Complete | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Complete | non-normative |
 | Label | rdfs:label | rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name. | Complete | normative |
 | Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness | non-normative |

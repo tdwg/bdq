@@ -88,9 +88,9 @@ The following namespace abbreviations are used in this document:
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
-| Term Version IRI | rdf:about |  | https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30 | normative |
-| Term IRI | dcterms:isVersionOf |  | https://rs.tdwg.org/bdq/terms/Alien-Species | normative |
-| Term Name | rdf:value |  | Alien-Species | normative |
+| Term Version IRI | rdf:about | An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies a specific version of a resource. | https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30 | normative |
+| Term IRI | dcterms:isVersionOf | An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies an abstract resource. | https://rs.tdwg.org/bdq/terms/Alien-Species | normative |
+| Term Name | rdf:value | The local name for a vocabulary term | Alien-Species | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Alien-Species | non-normative |
 | Label | rdfs:label | rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name. | Alien-Species | normative |
 | Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. |  | non-normative |
