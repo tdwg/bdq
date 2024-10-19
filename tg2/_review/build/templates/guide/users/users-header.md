@@ -124,7 +124,7 @@ When a Test is Parameterized, and a value other than the default value is used f
 
 So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
 
-# 3 Context for quality, uses and purposes (non-normative)
+## 3 Context for quality, uses and purposes (non-normative)
 
 TODO: Brief discussion of Use Cases
 
@@ -136,7 +136,7 @@ Tests for data quality may serve two purposes, Quality Control and Quality Assur
 
 Data are found to be fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". 
 
-# 3 Using the BDQ Core Quick Reference Guide (non-normative)
+## 4 Using the BDQ Core Quick Reference Guide (non-normative)
 
 The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
@@ -148,6 +148,6 @@ Each Test lists UseCases describing data quality needs to which each Test is app
 
 The definitions of the terms used for the tests can be found at [Terms in bdqcore: Quick Reference Guide](../../terms/bdqcore/bdqcore_qrg_term_descriptions.md).
 
-# 4 Time and TimeZones (non-normative)
+## 5 Time and TimeZones (non-normative)
 
 Time is not considered in any of the BDQ Core Tests.  There are Use Cases where time zone data is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced.  New Tests are required if ignorance of time would make such data unfit for your purposes. 
