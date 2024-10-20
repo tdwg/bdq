@@ -89,14 +89,14 @@ The following namespace abbreviations are used in this document:
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
 | Term Version IRI | rdf:about | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30 | normative |
-| Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. | https://rs.tdwg.org/bdq/terms/Alien-Species | normative |
-| Term Name | rdf:value | Idiomatic property used for structured values. | Alien-Species | normative |
+| Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdq/terms/Alien-Species | normative |
+| Term Name | rdf:value | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | Alien-Species | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Alien-Species | non-normative |
 | Label | rdfs:label | A human-readable name for the subject. | Alien-Species | normative |
 | Comments | rdfs:comment | A description of the subject resource. |  | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). | normative |
 | Type | rdf:type | The subject is an instance of a class. | bdqffdq:UseCase | normative |
-| Modified | dcterms:issued | Date of formal issuance of the resource. | 2024-09-30 |  |
+| Modified | dcterms:issued | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |  |
 | Status | tdwgutility:status | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |  |
 | Controlled Value |  | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | Alien-Species | normative |
 

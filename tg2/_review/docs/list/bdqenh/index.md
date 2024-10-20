@@ -94,14 +94,14 @@ The following namespace abbreviations are used in this document:
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
 | Term Version IRI | rdf:about | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30 | normative |
-| Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. | https://rs.tdwg.org/bdqenh/terms/AssumedDefault | normative |
-| Term Name | rdf:value | Idiomatic property used for structured values. | AssumedDefault | normative |
+| Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdqenh/terms/AssumedDefault | normative |
+| Term Name | rdf:value | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | AssumedDefault | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Assumed Default | non-normative |
 | Label | rdfs:label | A human-readable name for the subject. | Assumed Default | normative |
 | Comments | rdfs:comment | A description of the subject resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | Data could be improved by setting an empty value to a default value | normative |
 | Type | rdf:type | The subject is an instance of a class. | bdqffdq:Enhancement | normative |
-| Modified | dcterms:issued | Date of formal issuance of the resource. | 2024-09-30 |  |
+| Modified | dcterms:issued | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |  |
 | Status | tdwgutility:status | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |  |
 | Controlled Value |  | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | AssumedDefault | normative |
 
