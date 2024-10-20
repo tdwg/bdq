@@ -53,7 +53,6 @@ Draft Standard for Submission
 - [2.3.2.4 Default value strings in parameters (normative)](#2324-default-value-strings-in-parameters-normative)
 - [2.3.2.5 Example interpretation of a parameter string default value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative)
 - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-"interpreted-as"-normative)
-- [2.4 How to assert a test was run with non-default parameter arguments. (normative)](#24-how-to-assert-a-test-was-run-with-non-default-parameter-arguments-normative)
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
 - [4 Extension Points (normative)](#4-extension-points-normative)
 - [5 Responses from Tests](#5-responses-from-tests)
@@ -346,18 +345,6 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 
 When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for AMENDMENT_MONTH_STANDARDIZED states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
-### 2.4 How to assert a test was run with non-default parameter arguments. (normative)
-
-
-When a test is executed with non-default Arguments specified for Parameters, consumers of Assertions and data quality reports resulting from such MUST be able to tell that non-default Arguments were used, and what the non-default values were.
-
-When a non-default Argument is used, a Response.comment SHOULD include the non-default value.
-
-When a non-default Argument is used, an instance of an  
-
-**TODO** Specify how to assert the alternate Argument value in RDF.
-
-
 ## 3 Compliant Implementation (normative)
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
@@ -440,6 +427,18 @@ A Parameterized Test will behave differently on the same data when using differe
 Implementers SHOULD only present non-default Parameter values to a Test implementation if needed for local data quality needs.
 
 Implementers MUST NOT produce Test implementations identified by the same identifiers that only implement non-default Parameter values.  An implementation of a Test MUST support the Test execution with the default Parameter values, and MAY optionally support other Parameter values.  Provided Parameters MUST NOT change the behavior of the Test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the Test as specified in the bdqffdq:Specification.expectedResponse.
+
+**Text to Merge with above 6.1**
+
+When a test is executed with non-default Arguments specified for Parameters, consumers of Assertions and data quality reports resulting from such MUST be able to tell that non-default Arguments were used, and what the non-default values were.
+
+When a non-default Argument is used, a Response.comment SHOULD include the non-default value.
+
+When a non-default Argument is used, an instance of an  
+
+**TODO** Specify how to assert the alternate Argument value in RDF.
+
+**End text to Merge**
 
 ### 6.2 Execution Process are Agnostic (non-normative)
 
