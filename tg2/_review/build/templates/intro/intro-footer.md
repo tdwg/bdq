@@ -1,8 +1,4 @@
 
-## Acronyms
-
-For a list of Acronyms see [5. Acronyms](#5-acronyms) in this document.
-
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**
