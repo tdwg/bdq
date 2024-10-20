@@ -413,10 +413,6 @@ The following references have been extracted from the "References" descriptor on
   - [Marking Synthetic Data](../synthetic/index.md) This document is designed for creators of data sets for the validation of implementations of BDQ Core tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines . 
   - [Supplement](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within this this standard. This document may also be useful to those seeking to evaluate their current tests or generate additional to the existing tests for their domain.
 
-## Acronyms
-
-For a list of Acronyms see [5. Acronyms](#5-acronyms) in this document.
-
 ## Cite BDQ Core
 
 **To cite BDQ Core in general, use the peer-reviewed article:**

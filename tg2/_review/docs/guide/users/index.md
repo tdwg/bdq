@@ -172,7 +172,15 @@ Time is not considered in any of the BDQ Core Tests.  There are Use Cases where 
 
 ## Acronyms
 
-For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+
+## Glossary
+
+A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
+
+## References
+
+The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
 
 ## Cite BDQ Core
 
