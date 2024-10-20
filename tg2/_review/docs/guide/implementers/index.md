@@ -53,6 +53,7 @@ Draft Standard for Submission
 - [2.3.2.4 Default value strings in parameters (normative)](#2324-default-value-strings-in-parameters-normative)
 - [2.3.2.5 Example interpretation of a parameter string default value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative)
 - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-"interpreted-as"-normative)
+- [2.4 How to assert a test was run with non-default parameter arguments. (normative)](#24-how-to-assert-a-test-was-run-with-non-default-parameter-arguments-normative)
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
 - [4 Extension Points (normative)](#4-extension-points-normative)
 - [5 Responses from Tests](#5-responses-from-tests)
@@ -181,7 +182,7 @@ For csv data, a column is either there or not in a data set, but in an rdf repre
 
 #### 2.2.2 Example implementation of a Function to Assess Empty (non-normative)
 
-Here is a java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty.  Test implementations can reuse a function like this for Tests that evaluate bdq:Empty in their specification.
+Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty.  Test implementations can reuse a function like this for Tests that evaluate bdq:Empty in their specification.
 
     public boolean isEmpty(String aString)  {
         boolean result = true;
@@ -295,7 +296,7 @@ When the parameter has a default value and a resource, and an implemntation incl
 
 #### 2.3.2.5 Example interpretation of a parameter string default value (non-normative)
 
-The following code snippet in java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of AMENDMENT_LICENSE_STANDARDIZED.  The literal "Creative Commons" is accepted as a parameter value.
+The following code snippet in Java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of AMENDMENT_LICENSE_STANDARDIZED.  The literal "Creative Commons" is accepted as a parameter value.
 
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
@@ -344,6 +345,18 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
 When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for AMENDMENT_MONTH_STANDARDIZED states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+
+### 2.4 How to assert a test was run with non-default parameter arguments. (normative)
+
+
+When a test is executed with non-default Arguments specified for Parameters, consumers of Assertions and data quality reports resulting from such MUST be able to tell that non-default Arguments were used, and what the non-default values were.
+
+When a non-default Argument is used, a Response.comment SHOULD include the non-default value.
+
+When a non-default Argument is used, an instance of an  
+
+**TODO** Specify how to assert the alternate Argument value in RDF.
+
 
 ## 3 Compliant Implementation (normative)
 
@@ -596,7 +609,7 @@ Specification
 Information Elements Acted Upon
 : dwc:day
 
-Here is an example implementation from the FilteredPush event_date_qc library.  In this implementation, java annotations are used to provide metadata that can be used by an implementation framework to pick out a test to run by its IRI or term_localName and match an input Darwin Core term to a (java) parameter in the method signature.  The implementation walks through the elements of the specification in sequence, and return the first matching response in a response object (which has Response.state, Response.result (here called value), and Response.comment properties.  
+Here is an example implementation from the FilteredPush event_date_qc library.  In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a test to run by its IRI or term_localName and match an input Darwin Core term to a (Java) parameter in the method signature.  The implementation walks through the elements of the specification in sequence, and return the first matching response in a response object (which has Response.state, Response.result (here called value), and Response.comment properties.  
 
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
     @Provides("47ff73ba-0028-4f79-9ce1-ee7008d66498")
@@ -886,7 +899,7 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 ### 8.6 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (**TODO: Cite**) java annotations.
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (**TODO: Cite**) Java annotations.
 
 ## Acronyms
 

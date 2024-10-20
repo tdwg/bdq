@@ -147,7 +147,7 @@ The following references have been extracted from the "References" descriptor on
 
 ## Acronyms
 
-For a list of Acronyms see [5. Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+For a list of Acronyms see [5. Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
 
 ## Cite BDQ Core
 
