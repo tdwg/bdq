@@ -165,7 +165,7 @@ Objects that are null, or null values in a relational database, at the point of 
 
 Data serialized from relational database systems may contain string representations of NULL.
 
-We considered, and explicitly rejected, treating common string serializations of null such as "\N" and "NULL" as empty values.  String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as bdq:NotEmpty.  A Test execution environment MAY deserialize these string serializations of NULL
+We considered, and explicitly rejected, treating common string serializations of null such as "&#92;N" and "NULL" as empty values.  String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as bdq:NotEmpty.  A Test execution environment MAY deserialize these string serializations of NULL
 
 (3) Data values indicating an unknown, treated as bdq:NotEmpty.
 
