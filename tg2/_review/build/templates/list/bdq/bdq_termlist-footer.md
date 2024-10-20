@@ -5,7 +5,7 @@ For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the In
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document
+A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
 
 ## References
 
