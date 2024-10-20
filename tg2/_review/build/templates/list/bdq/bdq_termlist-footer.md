@@ -9,7 +9,7 @@ A glossary of terms additional to those in the various namespaces can be found a
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
+The bibliography for BDQ Core is in the [References](../../intro/index.md#7-references) document.
 
 ## Cite BDQ Core
 
