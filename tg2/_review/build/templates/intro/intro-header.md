@@ -264,7 +264,7 @@ There were many people who have made notable contributions at various times duri
 | YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |  |
 
 
-## 7 Bibliography
+## 7 References
 
 {references}
 
