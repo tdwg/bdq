@@ -416,14 +416,14 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 
 | Label | Term | Definition | Example | Normative | 
 | ----- | ---- | ---------- | ------- | --------- |
-| Term Version IRI | rdf:about | An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies a specific version of a resource. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Term IRI | dcterms:isVersionOf | An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies an abstract resource. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Name | rdf:value |  | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
+| Term Version IRI | rdf:about | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
+| Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
+| Name | rdf:value | Idiomatic property used for structured values. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
 | Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Abstract Information Element | non-normative |
-| Comments | rdfs:comment | rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource. | Information elements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete Acted Upon or Consulted information elements. | non-normative |
+| Comments | rdfs:comment | A description of the subject resource. | Information elements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete Acted Upon or Consulted information elements. | non-normative |
 | Definition | skos:definition | A statement or formal explanation of the meaning of a concept. | An InformationElement described in abstract terms and not linked with one or more concrete terms. | normative |
-| Type | rdf:type |  | http://www.w3.org/2002/07/owl#Class | normative |
-| SubClass Of | rdfs:subClassOf |  | https://rs.tdwg.org/bdqffdq/terms/InformationElement | normative |
+| Type | rdf:type | The subject is an instance of a class. | http://www.w3.org/2002/07/owl#Class | normative |
+| SubClass Of | rdfs:subClassOf | The subject is a subclass of a class. | https://rs.tdwg.org/bdqffdq/terms/InformationElement | normative |
 
 
 ### 3.2 Indexes

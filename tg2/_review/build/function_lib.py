@@ -36,17 +36,20 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
     """
     ## Selected hard coded definitions not available for lookup.
+    # Definitions drawn from the SDS Section 3.3.3.1
+    # https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md#33-vocabulary-descriptions
     definition_dictionary = {
-        "Term Version IRI":"An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies a specific version of a resource.",
-        "Term IRI":"An IRI uniquely identifies a resource using characters from any character set. The Term Version IRI identfies an abstract resource.",
-        "Term Name":"The local name for a vocabulary term",
-        "term_locaName":"The local name for a vocabulary term",
-        "rdfs:comment":"rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource.",
-        "rdfs:label":"rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name." 
+        "Term Version IRI":"The HTTP IRI that identifies the version of the term that is currently in force.",
+        "Term IRI":"The HTTP IRI that uniquely identifies the current term.",
+        "Term Name":"The term name is a controlled value that represents the class, property, or concept described by the term definition.",
+        "term_localName":"The term name is a controlled value that represents the class, property, or concept described by the term definition.",
+        "Controlled Value":"A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters.",
+        "Modified":"The date in ISO 8601 Date format on which the most recent version of the term was issued."
     }  
     definitionTable = ""
     definitionTable = definitionTable + "| Label | Term | Definition | Example | Normative | \n"
@@ -64,10 +67,50 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                 queryResult = graph.query(sparql)
                 for r in queryResult : 
                     definition = r.object
-            elif termname in definition_dictionary.keys() : 
-               definition = definition_dictionary.get(termname)
-            elif label in definition_dictionary.keys() : 
-               definition = definition_dictionary.get(label)
+            elif termname.startswith("tdwgutility:") : 
+                graph = rdflib.Graph()
+                # tdwgutility rdf with definitions only delivered from the term names themselves.
+                graph.parse("https://rs.tdwg.org/dwc/terms/attributes/" + termname.replace("tdwgutility:","") + ".rdf", format="xml")
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            elif termname.startswith("bdqffdq:") : 
+                graph = rdflib.Graph()
+                graph.parse("https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/vocabulary/bdqffdq.owl", format="turtle")
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            elif termname.startswith("dcterms:") : 
+                graph = rdflib.Graph()
+                graph.parse("https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.rdf")
+                # dcterms places the definition in the rdfs:comment
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject rdfs:comment ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            elif termname.startswith("rdfs:") : 
+                graph = rdflib.Graph()
+                graph.parse("http://www.w3.org/2000/01/rdf-schema.rdf")
+                # rdfs places the definition in the rdfs:comment
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject rdfs:comment ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            elif termname.startswith("rdf:") : 
+                graph = rdflib.Graph()
+                graph.parse("https://www.w3.org/1999/02/22-rdf-syntax-ns.rdf")
+                # rdf places the definition in the rdfs:comment
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject rdfs:comment ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
+            if len(definition) == 0 : 
+                if termname in definition_dictionary.keys() : 
+                   definition = definition_dictionary.get(termname)
+                elif label in definition_dictionary.keys() : 
+                   definition = definition_dictionary.get(label)
             example = termrow[key]
             normative = value['normative']
             if normative == "true" :
