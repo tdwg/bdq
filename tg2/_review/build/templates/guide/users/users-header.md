@@ -34,7 +34,7 @@ Bibliographic citation
 
 {toc}
 
-# 1 Introduction
+## 1 Introduction
 
 This document describes how consumers of BDQ Core data quality reports can interpret the content of those reports.  
 
