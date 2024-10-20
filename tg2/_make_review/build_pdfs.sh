@@ -5,3 +5,5 @@ pandoc --pdf-engine=pdflatex --toc --toc-depth=1 -V geometry:margin=0.5in ../_re
 pandoc --pdf-engine=pdflatex --toc --toc-depth=1 -V geometry:margin=0.5in ../_review/docs/terms/bdqcore/index.md -o test_quick_reference_guide.pdf
 pandoc --pdf-engine=pdflatex --toc --toc-depth=2 --resource-path=../_review/docs/guide/bdqffdq/ -V geometry:margin=0.5in ../_review/docs/guide/bdqffdq/index.md -o bdqffdq_guide.pdf
 pandoc --pdf-engine=pdflatex --toc --toc-depth=1 -V geometry:margin=0.5in ../_review/docs/guide/implementers/index.md -o implementers_guide.pdf
+pandoc --pdf-engine=pdflatex --toc --toc-depth=1 -V geometry:margin=0.5in ../_review/docs/bdqcore/index.md -o bdqcore_landing.pdf
+pandoc --pdf-engine=pdfroff --toc --toc-depth=2 --resource-path=../_review/docs/guide/bdqffdq/ -V geometry:margin=0.5in ../_review/docs/bdqffdq/index.md -o bdqffdq_landing.pdf
