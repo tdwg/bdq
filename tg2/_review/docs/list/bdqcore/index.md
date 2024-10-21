@@ -611,6 +611,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -729,6 +730,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -835,6 +837,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -945,6 +948,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1051,6 +1055,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1161,6 +1166,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1259,6 +1265,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1369,6 +1376,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1475,6 +1483,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1585,6 +1594,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1691,6 +1701,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1805,6 +1816,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -1919,6 +1931,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2033,6 +2046,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2147,6 +2161,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2257,6 +2272,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2367,6 +2383,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2473,6 +2490,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2575,6 +2593,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2677,6 +2696,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2783,6 +2803,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2889,6 +2910,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -2995,6 +3017,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3105,6 +3128,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3219,6 +3243,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3337,6 +3362,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3447,6 +3473,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3557,6 +3584,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3667,6 +3695,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3777,6 +3806,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3891,6 +3921,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -3993,6 +4024,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4087,6 +4119,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4177,6 +4210,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4283,6 +4317,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4377,6 +4412,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4471,6 +4507,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4565,6 +4602,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4663,6 +4701,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4757,6 +4796,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4855,6 +4895,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -4953,6 +4994,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5051,6 +5093,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5145,6 +5188,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5243,6 +5287,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5337,6 +5382,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5435,6 +5481,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5529,6 +5576,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5627,6 +5675,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5721,6 +5770,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5815,6 +5865,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -5913,6 +5964,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6011,6 +6063,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6105,6 +6158,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6203,6 +6257,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6301,6 +6356,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6399,6 +6455,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6493,6 +6550,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6587,6 +6645,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6685,6 +6744,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6783,6 +6843,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6877,6 +6938,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -6971,6 +7033,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7065,6 +7128,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7159,6 +7223,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7253,6 +7318,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7347,6 +7413,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7441,6 +7508,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7539,6 +7607,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7633,6 +7702,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7731,6 +7801,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7825,6 +7896,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -7919,6 +7991,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8017,6 +8090,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8111,6 +8185,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8205,6 +8280,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8303,6 +8379,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8401,6 +8478,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8495,6 +8573,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8593,6 +8672,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8687,6 +8767,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8785,6 +8866,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8883,6 +8965,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -8981,6 +9064,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9079,6 +9163,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9173,6 +9258,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9267,6 +9353,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9361,6 +9448,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9455,6 +9543,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9549,6 +9638,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9647,6 +9737,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9745,6 +9836,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9843,6 +9935,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -9941,6 +10034,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10039,6 +10133,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10133,6 +10228,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10227,6 +10323,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10321,6 +10418,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10415,6 +10513,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10513,6 +10612,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10607,6 +10707,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10705,6 +10806,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10799,6 +10901,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10897,6 +11000,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -10991,6 +11095,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11089,6 +11194,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11187,6 +11293,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11285,6 +11392,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11379,6 +11487,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11473,6 +11582,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11571,6 +11681,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11665,6 +11776,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11763,6 +11875,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11861,6 +11974,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -11959,6 +12073,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12053,6 +12168,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12151,6 +12267,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12245,6 +12362,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12343,6 +12461,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12437,6 +12556,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12535,6 +12655,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12629,6 +12750,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12723,6 +12845,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12821,6 +12944,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -12919,6 +13043,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13013,6 +13138,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13111,6 +13237,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13209,6 +13336,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13307,6 +13435,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13401,6 +13530,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13495,6 +13625,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13593,6 +13724,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13691,6 +13823,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13785,6 +13918,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13879,6 +14013,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -13973,6 +14108,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14067,6 +14203,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14161,6 +14298,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14255,6 +14393,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14349,6 +14488,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14447,6 +14587,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14541,6 +14682,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14639,6 +14781,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14733,6 +14876,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14827,6 +14971,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -14925,6 +15070,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15019,6 +15165,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15113,6 +15260,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15211,6 +15359,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15309,6 +15458,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15403,6 +15553,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15501,6 +15652,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15595,6 +15747,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15693,6 +15846,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15791,6 +15945,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15889,6 +16044,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -15987,6 +16143,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16081,6 +16238,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16175,6 +16333,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16269,6 +16428,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16363,6 +16523,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16457,6 +16618,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16555,6 +16717,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16653,6 +16816,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16751,6 +16915,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16849,6 +17014,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -16947,6 +17113,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17041,6 +17208,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17135,6 +17303,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17229,6 +17398,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17323,6 +17493,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17421,6 +17592,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17515,6 +17687,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17613,6 +17786,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17707,6 +17881,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17805,6 +17980,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17899,6 +18075,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -17997,6 +18174,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18095,6 +18273,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18193,6 +18372,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18287,6 +18467,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18381,6 +18562,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18487,6 +18669,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18585,6 +18768,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18695,6 +18879,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18813,6 +18998,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -18923,6 +19109,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19025,6 +19212,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19139,6 +19327,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19237,6 +19426,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19351,6 +19541,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19449,6 +19640,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19559,6 +19751,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19661,6 +19854,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19755,6 +19949,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19861,6 +20056,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -19967,6 +20163,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20069,6 +20266,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20175,6 +20373,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20293,6 +20492,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20403,6 +20603,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20513,6 +20714,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20619,6 +20821,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20725,6 +20928,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20847,6 +21051,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -20949,6 +21154,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21059,6 +21265,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21165,6 +21372,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21263,6 +21471,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21361,6 +21570,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21459,6 +21669,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21553,6 +21764,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21663,6 +21875,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21773,6 +21986,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21883,6 +22097,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -21989,6 +22204,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22095,6 +22311,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22213,6 +22430,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22315,6 +22533,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22425,6 +22644,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22535,6 +22755,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22645,6 +22866,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22739,6 +22961,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22849,6 +23072,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -22943,6 +23167,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23053,6 +23278,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23163,6 +23389,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23273,6 +23500,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23383,6 +23611,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23481,6 +23710,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23583,6 +23813,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23677,6 +23908,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23771,6 +24003,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23865,6 +24098,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -23979,6 +24213,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24089,6 +24324,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24199,6 +24435,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24309,6 +24546,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24423,6 +24661,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24521,6 +24760,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24615,6 +24855,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24717,6 +24958,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24815,6 +25057,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -24925,6 +25168,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25035,6 +25279,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25145,6 +25390,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25243,6 +25489,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25353,6 +25600,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25451,6 +25699,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25561,6 +25810,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25671,6 +25921,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25785,6 +26036,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25887,6 +26139,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 <table>
 	<thead>
@@ -25997,6 +26250,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 	</tbody>
 </table>
+<br>
 
 
 

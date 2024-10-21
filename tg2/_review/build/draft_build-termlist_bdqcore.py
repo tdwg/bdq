@@ -409,6 +409,7 @@ for term in termLists:
     
             text += '\t</tbody>\n'
             text += '</table>\n'
+            text += '<br>\n'
             text += '\n'
         text += '\n'
     term_table = text
