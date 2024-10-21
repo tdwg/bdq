@@ -398,7 +398,7 @@ An Amendment Test may propose a change to an exisiting Darwin Core (Wieczorek et
 
 An Amendment Test Response.result SHOULD consist of a set of key:value pairs, where the key is the InformationElement to be modified, and the value is the proposed new value for that InformationElement. The Response.result key:value pairs SHOULD be a JSON serialization of the proposed changes.
 
-Under the Frameowrk (bdqffdq:), amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Test Response.result, and implementers MAY develop their own structures and serialisations for such Amendment Test Response.results.
+Under the Framework (bdqffdq:), amendments may propose changes to processes as well as data, no structure is proposed for such an Amendment Test Response.result, and implementers MAY develop their own structures and serialisations for such Amendment Test Response.results.
 
 Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses. Implementations MAY serialize Assertions in any appropriate form. 
 
