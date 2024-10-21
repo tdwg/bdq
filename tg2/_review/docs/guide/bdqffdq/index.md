@@ -425,6 +425,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 [hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
+[hasDateLastUpdated](#hasDateLastUpdated)
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
@@ -1107,6 +1108,14 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Definition: Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.
 - Range xsd:string
+
+********************
+
+### hasDateLastUpdated
+
+- Name: bdqffdq:hasDateLastUpdated
+- Definition: Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation.
+- Range xsd:date
 
 ********************
 

@@ -161,6 +161,15 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 | Range | xsd:string |
 
 
+#### hasDateLastUpdated
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:hasDateLastUpdated |
+| Type | owl:DatatypeProperty |
+| Range | xsd:date |
+
+
 #### hasExpectedResponse
 
 | Property | Value |

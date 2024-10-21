@@ -527,6 +527,7 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 
 [hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
+[hasDateLastUpdated](#hasDateLastUpdated)
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
@@ -1492,6 +1493,17 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Range xsd:string
 - Comments: Details of the bdq:sourceAuthority listed in a Specification, along with Parameters that may be provided to the expected response along with their default values.
 - View in: [term-list](../list/bdqffdq/index.md#hasAuthoritiesDefaults)
+
+********************
+
+### hasDateLastUpdated
+
+- Name: bdqffdq:hasDateLastUpdated
+- Preferred Label: has Date Last Updated
+- Definition: Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation.
+- Range xsd:date
+- Comments: While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertenent to implemeters, that is would required implementers to evaluate their code for changes needed to comply with the update.  bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a test would entail changes to code, and which would not.   For example, a change to the logic of a Specification in the text of hasExpectedResponse would imply needed changes to the logic of code implementing that specification, but a correction of a spelling mistake within the text of a hasExpectedResponse would not.
+- View in: [term-list](../list/bdqffdq/index.md#hasDateLastUpdated)
 
 ********************
 

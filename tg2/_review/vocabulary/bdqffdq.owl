@@ -446,6 +446,16 @@ bdqffdq:hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
                                skos:prefLabel "has Authorities and Defaults" .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/hasDateLastUpdated
+bdqffdq:hasDateLastUpdated rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:range xsd:date ;
+                           rdfs:comment "While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertenent to implemeters, that is would required implementers to evaluate their code for changes needed to comply with the update.  bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a test would entail changes to code, and which would not.   For example, a change to the logic of a Specification in the text of hasExpectedResponse would imply needed changes to the logic of code implementing that specification, but a correction of a spelling mistake within the text of a hasExpectedResponse would not." ;
+                           rdfs:label "has Date Last Updated" ;
+                           skos:definition "Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation." ;
+                           skos:prefLabel "has Date Last Updated" .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse
 bdqffdq:hasExpectedResponse rdf:type owl:DatatypeProperty ;
                             rdfs:range xsd:string ;
