@@ -491,6 +491,29 @@ The BDQ Core Standard supports the W3C Annotation Data Model (W3C 2017) for repo
 
 The AMENDMENT tests in the BDQ Core only propose changes, and it becomes the responsibility of the consumer of the data quality report under Quality Control to assert when and what changes are made to records. The most consistent path is to allow consumers of data quality reports to extract the metadata about the reasoning for a change from the Response.comment in an Amendment, and add that to their representation of the data.
 
+Below is an example of a bdqffdq:Assertion forming the body of an oa:Annotation, with triples indicating the implementation that produced the Assertion and relating it back to a bdqcore:Specification (from which the metadata about the test that was run can be identified).
+
+    <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> a bdqffdq:ValidationAssertion ;
+        oa:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
+        oa:hasResponseResult bdqffdq:COMPLIANT ;
+        oa:hasResponseComment "Exact Match found for [Chicoreus palmarosae (Lamarck, 1822)] to [https://www.gbif.org/species/4365662] running VALIDATION_SCIENTIFICNAME_FOUND." ;
+        bdqffdq:appliesTo <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>
+
+    <https://example.org/annotation/519ab16d-6c00-4a94-a3bd-5418ad391717> a oa:Annotation ;
+        oa:body <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
+        oa:target <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832> ;
+        oa:created "2015-01-28T12:00:00Z" ;
+        oa:creator <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
+        oa:motivation oa:assessing .
+
+    <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> a bdqffd:Mechanism ;
+        a oa:Software ;
+        rdfs:label "Kurator: Scientific Name Validator - DwCSciNameDQ:v1.1.1-SNAPSHOT" .
+
+	<urn:uuid:f3a41284-093c-4b7e-8054-a32456a7a427> a bdqffdq:Implementation ;
+        bdqffdq:implementedBy <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
+        bdqffdq:usesSpecification <urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4> .
+
 ### 3.9 Aspirational Aspects of Some CORE Tests
 
 #### 3.9.1 Vocabularies
