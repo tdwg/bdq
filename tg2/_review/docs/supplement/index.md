@@ -31,7 +31,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -74,7 +73,6 @@ Draft Standard for Submission
 - [5.1 Developing tests with Github Issues](#51-developing-tests-with-github-issues)
 - [5.2 Github Tags and Categorizing Issues](#52-github-tags-and-categorizing-issues)
 - [5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors](#53-using-markdown-tables-in-github-issues-to-develop-test-descriptors)
-
 
 
 ## 1 Introduction

@@ -93,24 +93,19 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		with open(document_configuration_yaml_file) as dcfy:
 			document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
-		## Produce a table of contents from the headings 
-		toc = ""
-		regexHeadings = "^#+ [0-9]+.*"
-		with open(headerFileName) as headerFile:
-			separator = ""
-			for line in headerFile:
-				aHeading = re.search(regexHeadings,line)
-				if (aHeading) : 
-					toc = toc + separator + "- " + markdown_heading_to_link(aHeading.group())
-					separator = "\n"
-			headerFile.close()
 	
 		# read in header and footer, merge with terms table, and output
 		headerObject = open(headerFileName, 'rt', encoding='utf-8')
 		header = headerObject.read()
 		headerObject.close()
-		
-		text = ""
+
+		## Produce a table of contents from the headings in the header
+		toc = ""
+		regexHeadings = "^#+ [0-9]+.*"
+		for line in (header).splitlines() :
+			aHeading = re.search(regexHeadings,line)
+			if (aHeading) : 
+				toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
 	
 		# Substitute values of ratification_date and contributors into the header template
 		header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")

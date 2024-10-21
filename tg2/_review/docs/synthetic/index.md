@@ -30,7 +30,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -44,7 +43,6 @@ Draft Standard for Submission
 - [2.4  Real Data with Synthetic Modifications Used as Examples (normative)](#24--real-data-with-synthetic-modifications-used-as-examples-normative)
 - [2.5 Wholly Synthetic Data (normative)](#25-wholly-synthetic-data-normative)
 - [3 BDQ Core Validation Data (non-normative)](#3-bdq-core-validation-data-non-normative)
-
 
 
 ## 1 Introduction

@@ -38,7 +38,6 @@ Bibliographic citation
 Draft Standard for Submission
 
 # Table of Contents 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -64,7 +63,6 @@ Draft Standard for Submission
 - [4 Term indices](#4-term-indices)
 - [4.1 Index By Test Label](#41-index-by-test-label)
 - [5 Vocabulary Summary](#5-vocabulary-summary)
-
 
 
 ## 1 Introduction

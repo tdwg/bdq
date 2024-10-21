@@ -30,7 +30,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -42,7 +41,6 @@ Draft Standard for Submission
 - [2.1.2 Vocabularies](#212-vocabularies)
 - [2.2 Vocabularies Supporting BDQ Core](#22-vocabularies-supporting-bdq-core)
 - [3 Namespace Abbreviations](#3-namespace-abbreviations)
-
 
 
 ## 1 Introduction

@@ -31,7 +31,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction (non-normative)](#1-introduction-non-normative)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -84,7 +83,6 @@ Draft Standard for Submission
 - [8.4 Where to Get the Validation Data (non-normative)](#84-where-to-get-the-validation-data-non-normative)
 - [8.5 Implementation and the Validation Data (normative)](#85-implementation-and-the-validation-data-normative)
 - [8.6 Tools for Validating Test Implementations with the Validation Data (non-normative)](#86-tools-for-validating-test-implementations-with-the-validation-data-non-normative)
-
 
 
 ## 1 Introduction (non-normative)

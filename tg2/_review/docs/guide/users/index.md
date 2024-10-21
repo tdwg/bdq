@@ -31,7 +31,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -49,7 +48,6 @@ Draft Standard for Submission
 - [3 Context for quality, uses and purposes (non-normative)](#3-context-for-quality,-uses-and-purposes-non-normative)
 - [4 Using the BDQ Core Quick Reference Guide (non-normative)](#4-using-the-bdq-core-quick-reference-guide-non-normative)
 - [5 Time and TimeZones (non-normative)](#5-time-and-timezones-non-normative)
-
 
 
 ## 1 Introduction

@@ -33,7 +33,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -62,7 +61,6 @@ Draft Standard for Submission
 - [6 Glossary](#6-glossary)
 - [7 References](#7-references)
 - [8 Audience for Each Document in BDQ Core](#8-audience-for-each-document-in-bdq-core)
-
  
 
 ## 1 Introduction

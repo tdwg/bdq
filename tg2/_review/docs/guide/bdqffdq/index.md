@@ -31,7 +31,6 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
@@ -52,9 +51,15 @@ Draft Standard for Submission
 - [3.7 Example representation of a bdqcore test](#37-example-representation-of-a-bdqcore-test)
 - [3.8 Cardinality of bdqffdq terms](#38-cardinality-of-bdqffdq-terms)
 - [4 Term index](#4-term-index)
+- [4.1 Alphabetical Index of classes](#41-alphabetical-index-of-classes)
+- [4.2 Alphabetical Index of object properties](#42-alphabetical-index-of-object-properties)
+- [4.3 Alphabetical Index of data properties](#43-alphabetical-index-of-data-properties)
+- [4.4 Alphabetical Index of named individuals](#44-alphabetical-index-of-named-individuals)
 - [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-portions-normative,-see-14)
-{additional_toc}
-
+- [5.1 Class terms](#51-class-terms)
+- [5.2 ObjectProperty terms](#52-objectproperty-terms)
+- [5.3 DataProperty terms](#53-dataproperty-terms)
+- [5.4 NamedIndividual terms](#54-namedindividual-terms)
 
 
 ## 1 Introduction

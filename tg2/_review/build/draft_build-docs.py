@@ -131,22 +131,6 @@ for templatePath, document in directories.items() :
 	with open(document_configuration_yaml_file) as dcfy:
 		document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
-
-	## Produce a table of contents from the headings 
-	toc = ""
-	regexHeadings = "^#+ [0-9]+.*"
-	with open(headerFileName) as headerFile:
-		for line in headerFile:
-			aHeading = re.search(regexHeadings,line)
-			if (aHeading) : 
-				toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
-		headerFile.close()
-	if document == 'bdqcore_landing' : 
-		toc = toc + "- " + markdown_heading_to_link("# 4.1 Index By Test Label") + "\n"
-		toc = toc + "- " + markdown_heading_to_link("# 5 Vocabulary Summary") + "\n"
-	if document == 'bdqffdq' : 
-		toc = toc + "{additional_toc}\n"
-	
 	# read in header and footer, merge with terms table, and output
 	headerObject = open(headerFileName, 'rt', encoding='utf-8')
 	header = headerObject.read()
@@ -173,7 +157,6 @@ for templatePath, document in directories.items() :
 	header = header.replace('{creator}', document_configuration_yaml['creator'])
 	header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 	header = header.replace('{comment}', document_configuration_yaml['comment'])
-	header = header.replace('{toc}','\n{}\n'.format(toc))
 	year = document_configuration_yaml['doc_modified'].split('-')[0]
 	header = header.replace('{year}', year)
 	if has_namespace:
@@ -397,6 +380,15 @@ for templatePath, document in directories.items() :
 	footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 	footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 	footer = footer.replace('{references}', references)
+
+	## Produce a table of contents from the headings 
+	toc = ""
+	regexHeadings = "^#+ [0-9]+.*"
+	for line in (header+text+footer).splitlines() :
+		aHeading = re.search(regexHeadings,line)
+		if (aHeading) : 
+			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+	header = header.replace('{toc}', toc)
 	
 	warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
 	
