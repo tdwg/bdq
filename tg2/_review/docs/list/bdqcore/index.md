@@ -141,7 +141,28 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 The Test Descriptors are terms that are necessary to comprehensively describe each test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded.
 
-{term_key}
+| Label | Term | Definition | Example | Normative | 
+| ----- | ---- | ---------- | ------- | --------- |
+| Term Version IRI | rdf:about | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20 | normative |
+| Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e | normative |
+| Term Name | rdf:value | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e | normative |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Amendment Coordinates From Verbatim | non-normative |
+| Label | rdfs:label | A human-readable name for the subject. | AMENDMENT_COORDINATES_FROM_VERBATIM | normative |
+| Description | rdfs:comment | A description of the subject resource. | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. | non-normative |
+| ExpectedResponse | bdqffdq:hasExpectedResponse | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. | normative |
+| Type | rdf:type | The subject is an instance of a class. | Amendment | normative |
+| Modified | dcterms:issued | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-04 |  |
+| DateLastUpdated | bdqffdq:hasDateLastUpdated | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |  |
+| InformationElements Consulted | bdqffdq:composedOf | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum | normative |
+| Parameters | bdqffdq:Parameter | A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner. |  | normative |
+| SourceAuthorities/Defaults | bdqffdq:hasAuthoritiesDefaults | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. |  |  |
+| ResourceType | bdqffdq:ResourceType | Category of things that are data objects about which data quality assertions may be made. | SingleRecord |  |
+| DataQualityDimension | bdqffdq:DataQualityDimension | An aspect of data quality. | Completeness | normative |
+| Criterion | bdqffdq:Criterion | Rule against which data are evaluated for conformance to quality criteria. |  | normative |
+| Enhancement | bdqffdq:Enhancement | Description of a means by which data could be improved. | FillInFrom | normative |
+| References | dcterms:bibliographicCitations |  | <ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul> |  |
+| Developed As Github Issue | skos:historyNote | A note about the past state/use/meaning of a concept. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |
+
 
 <!--- TODO: Confirm that metadata for 1.8 has these values ---> 
 In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,

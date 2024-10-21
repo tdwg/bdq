@@ -16,7 +16,7 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown, markdown_heading_to_link
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown, markdown_heading_to_link, build_term_key
 
 # -----------------
 # Configuration section
@@ -151,7 +151,6 @@ for term in termLists:
     with open(document_configuration_yaml_file) as dcfy:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
-    # Create column list - custom list for bdqcore terms.
     # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
     column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","Specification","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
@@ -201,6 +200,36 @@ for term in termLists:
     #terms_sorted_by_localname
     print('done retrieving')
     print()
+
+
+    # Create column list - custom list for bdqcore terms.
+    term_concept_dictionary = {
+        "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
+        "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
+        "term_localName": {"label":"Term Name","term":"rdf:value","normative":"true"}, 
+        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false"}, 
+        "Label": {"label":"Label","term":"rdfs:label","normative":"true"}, 
+        "Description": {"label":"Description","term":"rdfs:comment","normative":"false"}, 
+        "Specification": {"label":"ExpectedResponse","term":"bdqffdq:hasExpectedResponse","normative":"true"}, 
+        "Type": {"label":"Type","term":"rdf:type","normative":"true"}, 
+        "organized_in": {"label":"","term":"","normative":""}, 
+        "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
+        "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
+        "flags": {"label":"","term":"","normative":""}, 
+        "DateLastUpdated": {"label":"DateLastUpdated","term":"bdqffdq:hasDateLastUpdated","normative":""}, 
+        "InformationElement:ActedUpon": {"label":"InformationElements ActedUpon","term":"bdqffdq:composedOf","normative":"true"},
+        "InformationElement:ActedUpon": {"label":"InformationElements Consulted","term":"bdqffdq:composedOf","normative":"true"},
+        "Parameters": {"label":"Parameters","term":"bdqffdq:Parameter","normative":"true"},
+        "AuthoritiesDefaults": {"label":"SourceAuthorities/Defaults","term":"bdqffdq:hasAuthoritiesDefaults","normative":""},
+        "Resource Type": {"label":"ResourceType","term":"bdqffdq:ResourceType","normative":""},
+        "Dimension": {"label":"DataQualityDimension","term":"bdqffdq:DataQualityDimension","normative":"true"},
+        "Criterion": {"label":"Criterion","term":"bdqffdq:Criterion","normative":"true"},
+        "Enhancement": {"label":"Enhancement","term":"bdqffdq:Enhancement","normative":"true"},
+        "References": {"label":"References","term":"dcterms:bibliographicCitations","normative":""},
+        "historyNoteUrl": {"label":"Developed As Github Issue","term":"skos:historyNote","normative":""},
+        "controlled_value_string": {"label":"Controlled Value","term":"","normative":"true"}
+    }
+    definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
     
     # ---------------
     # generate the index of terms grouped by category and sorted alphabetically by lowercase term local name
@@ -425,6 +454,7 @@ for term in termLists:
     if has_namespace:
         header = header.replace('{namespace_uri}', namespace_uri)
         header = header.replace('{pref_namespace_prefix}', term)
+    header = header.replace('{term_key}', definitionTable)
     
     # Determine whether there was a previous version of the document.
     if document_configuration_yaml['doc_created'] != document_configuration_yaml['doc_modified']:
