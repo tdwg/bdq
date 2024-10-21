@@ -38,7 +38,22 @@ Bibliographic citation
 Draft Standard for Submission
 
 # Table of Contents
-{toc}
+- [1 Introduction](#1-introduction)
+- [1.1 Purpose](#11-purpose)
+- [1.2 Audience](#12-audience)
+- [1.3 Asociated Documents](#13-asociated-documents)
+- [1.4 Term List Distributions](#14-term-list-distributions)
+- [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
+- [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
+- [1.7 Namespace abbreviations](#17-namespace-abbreviations)
+- [1.8 Types of Tests](#18-types-of-tests)
+- [1.9 Test Descriptors](#19-test-descriptors)
+- [2 Normative Guidance](#2-normative-guidance)
+- [3 Term Indices](#3-term-indices)
+- [3.1 Index By Term Name](#31-index-by-term-name)
+- [3.2 Index By Label](#32-index-by-label)
+- [4 Vocabulary](#4-vocabulary)
+
 
 ## 1 Introduction
 

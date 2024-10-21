@@ -16,7 +16,7 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown, markdown_heading_to_link
 
 # -----------------
 # Configuration section
@@ -402,6 +402,7 @@ for term in termLists:
     header = headerObject.read()
     headerObject.close()
     
+
     # Substitute values of ratification_date and contributors into the header template
     print(document_configuration_yaml)
     header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
@@ -465,6 +466,15 @@ for term in termLists:
     
     warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
+    ## Produce a table of contents from the headings 
+    toc = ""
+    regexHeadings = "^#+ [0-9]+.*"
+    for line in (header+text).splitlines() :
+        aHeading = re.search(regexHeadings,line)
+        if (aHeading) : 
+            toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+    header = header.replace('{toc}', toc)
+
     output = warning + header + text + footer
     outputObject = open(outFileName, 'wt', encoding='utf-8')
     outputObject.write(output)
