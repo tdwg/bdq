@@ -4928,7 +4928,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/9d061523-2182-482a-82f2-6246f3c51cf5/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/dda7d67c-9c37-4603-8eb7-fd9355dafe93/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -4958,7 +4958,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/1f425807-4f8a-4e1b-b17f-c81004417f38/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/b6346906-6778-42bd-86ee-6607a9b475e5/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -4988,7 +4988,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/e30d529f-028b-4e6c-94e7-09406c7a946b/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5138,7 +5138,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/efc57a09-b9c8-4622-a799-41c435b096dd/2024-09-25
+https://rs.tdwg.org/bdqcore/terms/7c71ff82-c854-41f5-89fa-acd72d7647e8/2024-09-25
 Acts upon  MultiRecord
 
 #### Description
@@ -5678,7 +5678,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/a2e0b9b4-fc3c-448d-87eb-e032b8d91456/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/d95e2fb4-25fc-4345-b899-8dd05b9de549/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5708,7 +5708,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent
-https://rs.tdwg.org/bdqcore/terms/ae2c89af-d46b-4cbf-926c-43eb157e0016/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/cf03cbad-abff-4256-a9e8-4dd5344ba759/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5738,7 +5738,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqcore/terms/6c276a60-eb23-438a-b86e-db8d2a3755f1/2024-08-30
+https://rs.tdwg.org/bdqcore/terms/12431215-e79a-40f8-9bf4-4479c8ae617a/2024-08-30
 Acts upon  MultiRecord
 
 #### Description
@@ -5888,7 +5888,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqcore/terms/bd73ce7b-aa25-44eb-bc11-62debba85351/2024-09-25
+https://rs.tdwg.org/bdqcore/terms/4210b12e-a960-495e-9561-b634f5ec7935/2024-09-25
 Acts upon  MultiRecord
 
 #### Description
@@ -6608,7 +6608,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/39ffc749-ba12-4891-806d-fba61ec9a90d/2023-09-30
+https://rs.tdwg.org/bdqcore/terms/88d0d369-0ea1-4b06-9e07-2482df451018/2023-09-30
 Acts upon  MultiRecord
 
 #### Description
@@ -6968,7 +6968,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty
-https://rs.tdwg.org/bdqcore/terms/4210c56a-d64b-4698-ad92-ef44015c3179/2023-09-30
+https://rs.tdwg.org/bdqcore/terms/6379907d-0f21-4c89-b34b-fe48a65f4afe/2023-09-30
 Acts upon  MultiRecord
 
 #### Description

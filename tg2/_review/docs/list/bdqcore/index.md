@@ -269,14 +269,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD](#bdqcore_f5dd74bd-6a22-4792-b675-c7ccf2a2c103) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT](#bdqcore_a56fb342-c8ee-4611-8aab-e6c6357e8875) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND](#bdqcore_7270a362-5f2e-41f0-955a-d7a8eaaf0f17) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_9d061523-2182-482a-82f2-6246f3c51cf5) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_1f425807-4f8a-4e1b-b17f-c81004417f38) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_dda7d67c-9c37-4603-8eb7-fd9355dafe93) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_b6346906-6778-42bd-86ee-6607a9b475e5) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_e30d529f-028b-4e6c-94e7-09406c7a946b) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO](#bdqcore_0e239a55-0f19-4c68-bdbf-20580f27a647) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_2d90d94b-d384-4bac-aa68-c6800d765882) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY](#bdqcore_d71be8d4-1a04-4816-90c5-49808c823651) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD](#bdqcore_38966850-3737-4a67-953c-c231469e0489) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_efc57a09-b9c8-4622-a799-41c435b096dd) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_7c71ff82-c854-41f5-89fa-acd72d7647e8) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_8b73f37d-89ed-479a-8389-9e71ad2ac84d) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND](#bdqcore_f15c38c3-d96d-4e9c-982d-410fb71cf2bc) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY](#bdqcore_6887c881-dc52-409b-8979-9c2f05e55569) |
@@ -296,7 +296,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE](#bdqcore_c8250600-de61-4047-9d7c-6e06a38c7994) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY](#bdqcore_3f62eaa2-747f-456b-85e6-1a6e74086a18) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD](#bdqcore_bffd7499-aca3-423f-bb43-f7bdc9260f4f) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_39ffc749-ba12-4891-806d-fba61ec9a90d) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_88d0d369-0ea1-4b06-9e07-2482df451018) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT](#bdqcore_1919f212-b7db-4b6e-9697-41a715001bd6) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND](#bdqcore_97928242-11a9-4ab0-9dd7-3f0465834824) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND](#bdqcore_977f7e75-a88e-4e29-a7b1-e8cdd35aa107) |
@@ -341,14 +341,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD](#bdqcore_241a279c-76d5-499b-ab49-a47ad7f8df50) |
 [MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT](#bdqcore_a2be4734-0a93-46dc-af4a-e2125b47dbd4) |
 [MULTIRECORD_MEASURE_QA_CLASS_FOUND](#bdqcore_21541436-641d-45a9-938c-537484d94eb7) |
-[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_a2e0b9b4-fc3c-448d-87eb-e032b8d91456) |
-[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_ae2c89af-d46b-4cbf-926c-43eb157e0016) |
-[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_6c276a60-eb23-438a-b86e-db8d2a3755f1) |
+[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_d95e2fb4-25fc-4345-b899-8dd05b9de549) |
+[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_cf03cbad-abff-4256-a9e8-4dd5344ba759) |
+[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_12431215-e79a-40f8-9bf4-4479c8ae617a) |
 [MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO](#bdqcore_151b2d29-3460-4ba5-a226-86971dc8ad03) |
 [MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_d94b0130-7a13-4fa8-955c-eff5c47bd9de) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY](#bdqcore_942f63bd-d19d-4214-bf8e-cec0055b8909) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD](#bdqcore_fedf27b2-e01d-459f-98fc-7f0f39e3d4be) |
-[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_bd73ce7b-aa25-44eb-bc11-62debba85351) |
+[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_4210b12e-a960-495e-9561-b634f5ec7935) |
 [MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_23aced89-d613-479c-bc4c-837d74b73be0) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_FOUND](#bdqcore_388e74b3-2e18-4d78-8112-3142d1177e25) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY](#bdqcore_9c8df974-8fba-4537-8c67-31466787f732) |
@@ -368,7 +368,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE](#bdqcore_d41a731b-2e2b-4442-9217-4c375ae92926) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY](#bdqcore_c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD](#bdqcore_14a1d51f-16ed-4148-9dc8-1e90157a9868) |
-[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_4210c56a-d64b-4698-ad92-ef44015c3179) |
+[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_6379907d-0f21-4c89-b34b-fe48a65f4afe) |
 [MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT](#bdqcore_f375a3fd-4cf5-4ef4-955e-d71762ede2d8) |
 [MULTIRECORD_MEASURE_QA_FAMILY_FOUND](#bdqcore_a07d7147-2db8-48ce-81b8-e47595ad5f17) |
 [MULTIRECORD_MEASURE_QA_GENUS_FOUND](#bdqcore_c5c8db83-3af0-4215-806f-e2f90574b138) |
@@ -497,6 +497,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>32</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/32</td>
+		</tr>
+		<tr>
 			<td>iri</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20</td>
 		</tr>
@@ -578,7 +586,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/32</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/32</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -609,6 +617,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>54</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/54</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -704,7 +720,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/54</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/54</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -735,6 +751,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>41</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/41</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -818,7 +842,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/41</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/41</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -849,6 +873,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>133</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/133</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -936,7 +968,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/133</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/133</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -967,6 +999,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>63</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/63</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1050,7 +1090,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/63</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/63</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1081,6 +1121,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>73</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/73</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1168,7 +1216,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/73</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/73</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1199,6 +1247,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>48</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/48</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1274,7 +1330,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/48</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/48</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1305,6 +1361,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>26</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/26</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1392,7 +1456,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/26</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/26</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1423,6 +1487,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>127</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/127</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1506,7 +1578,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/127</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/127</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1537,6 +1609,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>276</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/276</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1624,7 +1704,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/276</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/276</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1655,6 +1735,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>269</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/269</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1738,7 +1826,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/269</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/269</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1769,6 +1857,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>52</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/52</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1860,7 +1956,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/52</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/52</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1891,6 +1987,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>86</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/86</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -1982,7 +2086,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/86</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/86</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2013,6 +2117,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>93</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/93</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2104,7 +2216,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/93</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/93</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2135,6 +2247,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>132</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/132</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2226,7 +2346,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/132</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/132</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2257,6 +2377,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_EVENTDATE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>61</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/61</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2344,7 +2472,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/61</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/61</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2375,6 +2503,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>102</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/102</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2462,7 +2598,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/102</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/102</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2493,6 +2629,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/60</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2576,7 +2720,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/60</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/60</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2607,6 +2751,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>55</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/55</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2686,7 +2838,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/55</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/55</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2717,6 +2869,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>68</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/68</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2796,7 +2956,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/68</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/68</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2827,6 +2987,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_MONTH_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>128</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/128</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -2910,7 +3078,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/128</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/128</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2941,6 +3109,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>75</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3024,7 +3200,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/75</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3055,6 +3231,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>115</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/115</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3138,7 +3322,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/115</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/115</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3169,6 +3353,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_PATHWAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>278</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/278</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3256,7 +3448,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/278</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/278</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3287,6 +3479,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>71</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/71</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3378,7 +3578,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/71</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/71</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3409,6 +3609,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>57</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/57</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3504,7 +3712,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/57</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/57</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3535,6 +3743,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_SEX_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>284</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/284</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3622,7 +3838,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/284</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/284</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3653,6 +3869,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_TAXONRANK_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>163</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/163</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3740,7 +3964,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/163</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/163</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3771,6 +3995,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>286</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/286</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3858,7 +4090,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/286</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/286</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3889,6 +4121,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_ANNOTATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>29</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/29</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -3976,7 +4216,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/29</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/29</td>
 		</tr>
 	</tbody>
 </table>
@@ -3991,6 +4231,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>287</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/287</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4082,7 +4330,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/287</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/287</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:IssueMethod</td>
@@ -4113,6 +4361,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>72</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/72</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4192,7 +4448,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/72</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/72</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:IssueMethod</td>
@@ -4223,6 +4479,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>94</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/94</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4294,7 +4558,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/94</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/94</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:IssueMethod</td>
@@ -4325,6 +4589,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_AMENDMENTS_PROPOSED</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>65</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/65</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4392,7 +4664,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/65</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/65</td>
 		</tr>
 	</tbody>
 </table>
@@ -4407,6 +4679,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_EVENTDATE_DURATIONINSECONDS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>140</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/140</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4490,7 +4770,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/140</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/140</td>
 		</tr>
 	</tbody>
 </table>
@@ -4505,6 +4785,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_VALIDATIONTESTS_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>135</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/135</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4576,7 +4864,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/135</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/135</td>
 		</tr>
 	</tbody>
 </table>
@@ -4591,6 +4879,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>31</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/31</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4662,7 +4958,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/31</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/31</td>
 		</tr>
 	</tbody>
 </table>
@@ -4677,6 +4973,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>134</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/134</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4748,7 +5052,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/134</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/134</td>
 		</tr>
 	</tbody>
 </table>
@@ -4763,6 +5067,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>59</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4838,7 +5150,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 	</tbody>
 </table>
@@ -4853,6 +5165,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -4924,7 +5244,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 	</tbody>
 </table>
@@ -4939,6 +5259,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5014,7 +5342,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 	</tbody>
 </table>
@@ -5022,7 +5350,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_9d061523-2182-482a-82f2-6246f3c51cf5"></a>Term Name  bdqcore:9d061523-2182-482a-82f2-6246f3c51cf5</th>
+			<th colspan="2"><a id="bdqcore_dda7d67c-9c37-4603-8eb7-fd9355dafe93"></a>Term Name  bdqcore:dda7d67c-9c37-4603-8eb7-fd9355dafe93</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5031,12 +5359,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9d061523-2182-482a-82f2-6246f3c51cf5-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/dda7d67c-9c37-4603-8eb7-fd9355dafe93-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9d061523-2182-482a-82f2-6246f3c51cf5</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/dda7d67c-9c37-4603-8eb7-fd9355dafe93</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -5104,7 +5440,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 	</tbody>
 </table>
@@ -5112,7 +5448,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_1f425807-4f8a-4e1b-b17f-c81004417f38"></a>Term Name  bdqcore:1f425807-4f8a-4e1b-b17f-c81004417f38</th>
+			<th colspan="2"><a id="bdqcore_b6346906-6778-42bd-86ee-6607a9b475e5"></a>Term Name  bdqcore:b6346906-6778-42bd-86ee-6607a9b475e5</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5121,12 +5457,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>56</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1f425807-4f8a-4e1b-b17f-c81004417f38-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b6346906-6778-42bd-86ee-6607a9b475e5-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1f425807-4f8a-4e1b-b17f-c81004417f38</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b6346906-6778-42bd-86ee-6607a9b475e5</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -5194,7 +5538,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 	</tbody>
 </table>
@@ -5209,6 +5553,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>87</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5280,7 +5632,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 	</tbody>
 </table>
@@ -5288,7 +5640,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035"></a>Term Name  bdqcore:5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035</th>
+			<th colspan="2"><a id="bdqcore_e30d529f-028b-4e6c-94e7-09406c7a946b"></a>Term Name  bdqcore:e30d529f-028b-4e6c-94e7-09406c7a946b</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5297,12 +5649,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>51</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/e30d529f-028b-4e6c-94e7-09406c7a946b-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/5a2b35bd-22d0-4807-9e7e-5ccc0c9a8035</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/e30d529f-028b-4e6c-94e7-09406c7a946b</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -5370,7 +5730,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 	</tbody>
 </table>
@@ -5385,6 +5745,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>103</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5456,7 +5824,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 	</tbody>
 </table>
@@ -5471,6 +5839,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>91</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5546,7 +5922,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 	</tbody>
 </table>
@@ -5561,6 +5937,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>99</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5632,7 +6016,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 	</tbody>
 </table>
@@ -5647,6 +6031,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>38</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5722,7 +6114,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 	</tbody>
 </table>
@@ -5737,6 +6129,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>40</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5808,7 +6208,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 	</tbody>
 </table>
@@ -5823,6 +6223,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>58</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5894,7 +6302,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 	</tbody>
 </table>
@@ -5909,6 +6317,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>104</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -5984,7 +6400,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 	</tbody>
 </table>
@@ -5999,6 +6415,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>77</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6074,7 +6498,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 	</tbody>
 </table>
@@ -6089,6 +6513,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>109</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6160,7 +6592,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 	</tbody>
 </table>
@@ -6168,7 +6600,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_efc57a09-b9c8-4622-a799-41c435b096dd"></a>Term Name  bdqcore:efc57a09-b9c8-4622-a799-41c435b096dd</th>
+			<th colspan="2"><a id="bdqcore_7c71ff82-c854-41f5-89fa-acd72d7647e8"></a>Term Name  bdqcore:7c71ff82-c854-41f5-89fa-acd72d7647e8</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -6177,12 +6609,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/efc57a09-b9c8-4622-a799-41c435b096dd-2024-09-25</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7c71ff82-c854-41f5-89fa-acd72d7647e8-2024-09-25</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/efc57a09-b9c8-4622-a799-41c435b096dd</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7c71ff82-c854-41f5-89fa-acd72d7647e8</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -6250,7 +6690,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 	</tbody>
 </table>
@@ -6265,6 +6705,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>201</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6340,7 +6788,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 	</tbody>
 </table>
@@ -6355,6 +6803,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6430,7 +6886,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 	</tbody>
 </table>
@@ -6445,6 +6901,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>42</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6516,7 +6980,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 	</tbody>
 </table>
@@ -6531,6 +6995,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>98</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6602,7 +7074,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 	</tbody>
 </table>
@@ -6617,6 +7089,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6692,7 +7172,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 	</tbody>
 </table>
@@ -6707,6 +7187,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>76</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6782,7 +7270,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 	</tbody>
 </table>
@@ -6797,6 +7285,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>69</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6868,7 +7364,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 	</tbody>
 </table>
@@ -6883,6 +7379,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>125</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -6954,7 +7458,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 	</tbody>
 </table>
@@ -6969,6 +7473,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>147</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7040,7 +7552,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 	</tbody>
 </table>
@@ -7055,6 +7567,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>79</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7126,7 +7646,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 	</tbody>
 </table>
@@ -7141,6 +7661,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>119</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7212,7 +7740,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 	</tbody>
 </table>
@@ -7227,6 +7755,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7298,7 +7834,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 	</tbody>
 </table>
@@ -7313,6 +7849,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>96</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7384,7 +7928,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 	</tbody>
 </table>
@@ -7399,6 +7943,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>275</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7474,7 +8026,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 	</tbody>
 </table>
@@ -7489,6 +8041,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>131</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7560,7 +8120,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 	</tbody>
 </table>
@@ -7575,6 +8135,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>268</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7650,7 +8218,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 	</tbody>
 </table>
@@ -7665,6 +8233,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>67</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7736,7 +8312,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 	</tbody>
 </table>
@@ -7744,7 +8320,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_39ffc749-ba12-4891-806d-fba61ec9a90d"></a>Term Name  bdqcore:39ffc749-ba12-4891-806d-fba61ec9a90d</th>
+			<th colspan="2"><a id="bdqcore_88d0d369-0ea1-4b06-9e07-2482df451018"></a>Term Name  bdqcore:88d0d369-0ea1-4b06-9e07-2482df451018</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -7753,12 +8329,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>88</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/39ffc749-ba12-4891-806d-fba61ec9a90d-2023-09-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/88d0d369-0ea1-4b06-9e07-2482df451018-2023-09-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/39ffc749-ba12-4891-806d-fba61ec9a90d</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/88d0d369-0ea1-4b06-9e07-2482df451018</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -7822,7 +8406,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 	</tbody>
 </table>
@@ -7837,6 +8421,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>36</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7912,7 +8504,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 	</tbody>
 </table>
@@ -7927,6 +8519,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -7998,7 +8598,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 	</tbody>
 </table>
@@ -8013,6 +8613,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>66</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8084,7 +8692,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 	</tbody>
 </table>
@@ -8099,6 +8707,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>28</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8174,7 +8790,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 	</tbody>
 </table>
@@ -8189,6 +8805,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>122</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8264,7 +8888,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 	</tbody>
 </table>
@@ -8279,6 +8903,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>78</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8350,7 +8982,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 	</tbody>
 </table>
@@ -8365,6 +8997,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>81</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8440,7 +9080,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 	</tbody>
 </table>
@@ -8455,6 +9095,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>216</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8526,7 +9174,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 	</tbody>
 </table>
@@ -8541,6 +9189,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>187</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8616,7 +9272,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 	</tbody>
 </table>
@@ -8631,6 +9287,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>112</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8706,7 +9370,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 	</tbody>
 </table>
@@ -8721,6 +9385,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>107</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8796,7 +9468,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 	</tbody>
 </table>
@@ -8811,6 +9483,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>39</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8886,7 +9566,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 	</tbody>
 </table>
@@ -8901,6 +9581,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>108</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -8972,7 +9660,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 	</tbody>
 </table>
@@ -8987,6 +9675,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>126</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9058,7 +9754,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 	</tbody>
 </table>
@@ -9073,6 +9769,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>259</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9144,7 +9848,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 	</tbody>
 </table>
@@ -9159,6 +9863,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>47</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9230,7 +9942,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 	</tbody>
 </table>
@@ -9245,6 +9957,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>117</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9316,7 +10036,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 	</tbody>
 </table>
@@ -9331,6 +10051,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>116</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9406,7 +10134,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 	</tbody>
 </table>
@@ -9421,6 +10149,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>83</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9496,7 +10232,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 	</tbody>
 </table>
@@ -9511,6 +10247,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>277</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9586,7 +10330,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 	</tbody>
 </table>
@@ -9601,6 +10345,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>22</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9676,7 +10428,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 	</tbody>
 </table>
@@ -9691,6 +10443,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>46</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9766,7 +10526,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 	</tbody>
 </table>
@@ -9781,6 +10541,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>82</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9852,7 +10620,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 	</tbody>
 </table>
@@ -9867,6 +10635,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>244</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -9938,7 +10714,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 	</tbody>
 </table>
@@ -9953,6 +10729,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>212</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10024,7 +10808,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 	</tbody>
 </table>
@@ -10039,6 +10823,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10110,7 +10902,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 	</tbody>
 </table>
@@ -10125,6 +10917,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>283</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10200,7 +11000,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 	</tbody>
 </table>
@@ -10215,6 +11015,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>130</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10286,7 +11094,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 	</tbody>
 </table>
@@ -10301,6 +11109,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10376,7 +11192,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 	</tbody>
 </table>
@@ -10391,6 +11207,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>105</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10462,7 +11286,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 	</tbody>
 </table>
@@ -10477,6 +11301,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>70</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10552,7 +11384,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 	</tbody>
 </table>
@@ -10567,6 +11399,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>161</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10638,7 +11478,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 	</tbody>
 </table>
@@ -10653,6 +11493,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>162</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10728,7 +11576,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 	</tbody>
 </table>
@@ -10743,6 +11591,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>285</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10818,7 +11674,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 	</tbody>
 </table>
@@ -10833,6 +11689,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>84</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10908,7 +11772,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 	</tbody>
 </table>
@@ -10923,6 +11787,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>49</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -10994,7 +11866,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 	</tbody>
 </table>
@@ -11009,6 +11881,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>101</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11080,7 +11960,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/296</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 	</tbody>
 </table>
@@ -11095,6 +11975,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>59</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11170,7 +12058,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 	</tbody>
 </table>
@@ -11185,6 +12073,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11256,7 +12152,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 	</tbody>
 </table>
@@ -11271,6 +12167,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11346,7 +12250,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 	</tbody>
 </table>
@@ -11354,7 +12258,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_a2e0b9b4-fc3c-448d-87eb-e032b8d91456"></a>Term Name  bdqcore:a2e0b9b4-fc3c-448d-87eb-e032b8d91456</th>
+			<th colspan="2"><a id="bdqcore_d95e2fb4-25fc-4345-b899-8dd05b9de549"></a>Term Name  bdqcore:d95e2fb4-25fc-4345-b899-8dd05b9de549</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11363,12 +12267,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a2e0b9b4-fc3c-448d-87eb-e032b8d91456-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d95e2fb4-25fc-4345-b899-8dd05b9de549-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a2e0b9b4-fc3c-448d-87eb-e032b8d91456</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d95e2fb4-25fc-4345-b899-8dd05b9de549</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -11436,7 +12348,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 	</tbody>
 </table>
@@ -11444,7 +12356,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_ae2c89af-d46b-4cbf-926c-43eb157e0016"></a>Term Name  bdqcore:ae2c89af-d46b-4cbf-926c-43eb157e0016</th>
+			<th colspan="2"><a id="bdqcore_cf03cbad-abff-4256-a9e8-4dd5344ba759"></a>Term Name  bdqcore:cf03cbad-abff-4256-a9e8-4dd5344ba759</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11453,12 +12365,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>56</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/ae2c89af-d46b-4cbf-926c-43eb157e0016-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cf03cbad-abff-4256-a9e8-4dd5344ba759-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/ae2c89af-d46b-4cbf-926c-43eb157e0016</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/cf03cbad-abff-4256-a9e8-4dd5344ba759</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -11526,7 +12446,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 	</tbody>
 </table>
@@ -11541,6 +12461,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>87</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11612,7 +12540,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 	</tbody>
 </table>
@@ -11620,7 +12548,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_6c276a60-eb23-438a-b86e-db8d2a3755f1"></a>Term Name  bdqcore:6c276a60-eb23-438a-b86e-db8d2a3755f1</th>
+			<th colspan="2"><a id="bdqcore_12431215-e79a-40f8-9bf4-4479c8ae617a"></a>Term Name  bdqcore:12431215-e79a-40f8-9bf4-4479c8ae617a</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11629,12 +12557,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>51</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6c276a60-eb23-438a-b86e-db8d2a3755f1-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/12431215-e79a-40f8-9bf4-4479c8ae617a-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6c276a60-eb23-438a-b86e-db8d2a3755f1</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/12431215-e79a-40f8-9bf4-4479c8ae617a</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -11702,7 +12638,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 	</tbody>
 </table>
@@ -11717,6 +12653,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>103</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11788,7 +12732,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 	</tbody>
 </table>
@@ -11803,6 +12747,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>91</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11878,7 +12830,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 	</tbody>
 </table>
@@ -11893,6 +12845,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>99</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -11964,7 +12924,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 	</tbody>
 </table>
@@ -11979,6 +12939,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>38</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12054,7 +13022,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 	</tbody>
 </table>
@@ -12069,6 +13037,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>40</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12140,7 +13116,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 	</tbody>
 </table>
@@ -12155,6 +13131,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>58</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12226,7 +13210,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 	</tbody>
 </table>
@@ -12241,6 +13225,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>104</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12316,7 +13308,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 	</tbody>
 </table>
@@ -12331,6 +13323,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>77</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12406,7 +13406,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 	</tbody>
 </table>
@@ -12421,6 +13421,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>109</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12492,7 +13500,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 	</tbody>
 </table>
@@ -12500,7 +13508,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_bd73ce7b-aa25-44eb-bc11-62debba85351"></a>Term Name  bdqcore:bd73ce7b-aa25-44eb-bc11-62debba85351</th>
+			<th colspan="2"><a id="bdqcore_4210b12e-a960-495e-9561-b634f5ec7935"></a>Term Name  bdqcore:4210b12e-a960-495e-9561-b634f5ec7935</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12509,12 +13517,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/bd73ce7b-aa25-44eb-bc11-62debba85351-2024-09-25</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4210b12e-a960-495e-9561-b634f5ec7935-2024-09-25</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/bd73ce7b-aa25-44eb-bc11-62debba85351</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4210b12e-a960-495e-9561-b634f5ec7935</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -12582,7 +13598,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 	</tbody>
 </table>
@@ -12597,6 +13613,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>201</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12672,7 +13696,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 	</tbody>
 </table>
@@ -12687,6 +13711,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12762,7 +13794,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 	</tbody>
 </table>
@@ -12777,6 +13809,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>42</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12848,7 +13888,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 	</tbody>
 </table>
@@ -12863,6 +13903,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>98</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -12934,7 +13982,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 	</tbody>
 </table>
@@ -12949,6 +13997,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13024,7 +14080,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 	</tbody>
 </table>
@@ -13039,6 +14095,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>76</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13114,7 +14178,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 	</tbody>
 </table>
@@ -13129,6 +14193,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>69</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13200,7 +14272,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 	</tbody>
 </table>
@@ -13215,6 +14287,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>125</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13286,7 +14366,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 	</tbody>
 </table>
@@ -13301,6 +14381,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>147</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13372,7 +14460,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 	</tbody>
 </table>
@@ -13387,6 +14475,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>79</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13458,7 +14554,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 	</tbody>
 </table>
@@ -13473,6 +14569,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>119</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13544,7 +14648,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 	</tbody>
 </table>
@@ -13559,6 +14663,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13630,7 +14742,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 	</tbody>
 </table>
@@ -13645,6 +14757,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>96</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13716,7 +14836,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 	</tbody>
 </table>
@@ -13731,6 +14851,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>275</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13806,7 +14934,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 	</tbody>
 </table>
@@ -13821,6 +14949,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>131</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13892,7 +15028,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 	</tbody>
 </table>
@@ -13907,6 +15043,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>268</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -13982,7 +15126,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 	</tbody>
 </table>
@@ -13997,6 +15141,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>67</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14068,7 +15220,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 	</tbody>
 </table>
@@ -14076,7 +15228,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_4210c56a-d64b-4698-ad92-ef44015c3179"></a>Term Name  bdqcore:4210c56a-d64b-4698-ad92-ef44015c3179</th>
+			<th colspan="2"><a id="bdqcore_6379907d-0f21-4c89-b34b-fe48a65f4afe"></a>Term Name  bdqcore:6379907d-0f21-4c89-b34b-fe48a65f4afe</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14085,12 +15237,20 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>issueNumber</td>
+			<td>88</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
+		</tr>
+		<tr>
 			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4210c56a-d64b-4698-ad92-ef44015c3179-2023-09-30</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/6379907d-0f21-4c89-b34b-fe48a65f4afe-2023-09-30</td>
 		</tr>
 		<tr>
 			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4210c56a-d64b-4698-ad92-ef44015c3179</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/6379907d-0f21-4c89-b34b-fe48a65f4afe</td>
 		</tr>
 		<tr>
 			<td>issued</td>
@@ -14154,7 +15314,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 	</tbody>
 </table>
@@ -14169,6 +15329,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>36</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14244,7 +15412,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 	</tbody>
 </table>
@@ -14259,6 +15427,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14330,7 +15506,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 	</tbody>
 </table>
@@ -14345,6 +15521,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>66</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14416,7 +15600,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 	</tbody>
 </table>
@@ -14431,6 +15615,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>28</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14506,7 +15698,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 	</tbody>
 </table>
@@ -14521,6 +15713,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>122</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14596,7 +15796,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 	</tbody>
 </table>
@@ -14611,6 +15811,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>78</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14682,7 +15890,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 	</tbody>
 </table>
@@ -14697,6 +15905,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>81</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14772,7 +15988,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 	</tbody>
 </table>
@@ -14787,6 +16003,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>216</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14858,7 +16082,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 	</tbody>
 </table>
@@ -14873,6 +16097,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>187</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -14948,7 +16180,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 	</tbody>
 </table>
@@ -14963,6 +16195,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>112</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15038,7 +16278,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 	</tbody>
 </table>
@@ -15053,6 +16293,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>107</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15128,7 +16376,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 	</tbody>
 </table>
@@ -15143,6 +16391,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>39</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15218,7 +16474,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 	</tbody>
 </table>
@@ -15233,6 +16489,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>108</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15304,7 +16568,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 	</tbody>
 </table>
@@ -15319,6 +16583,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>126</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15390,7 +16662,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 	</tbody>
 </table>
@@ -15405,6 +16677,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>259</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15476,7 +16756,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 	</tbody>
 </table>
@@ -15491,6 +16771,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>47</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15562,7 +16850,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 	</tbody>
 </table>
@@ -15577,6 +16865,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>117</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15648,7 +16944,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 	</tbody>
 </table>
@@ -15663,6 +16959,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>116</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15738,7 +17042,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 	</tbody>
 </table>
@@ -15753,6 +17057,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>83</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15828,7 +17140,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 	</tbody>
 </table>
@@ -15843,6 +17155,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>277</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -15918,7 +17238,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 	</tbody>
 </table>
@@ -15933,6 +17253,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>22</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16008,7 +17336,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 	</tbody>
 </table>
@@ -16023,6 +17351,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>46</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16098,7 +17434,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 	</tbody>
 </table>
@@ -16113,6 +17449,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>82</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16184,7 +17528,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 	</tbody>
 </table>
@@ -16199,6 +17543,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>244</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16270,7 +17622,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 	</tbody>
 </table>
@@ -16285,6 +17637,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>212</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16356,7 +17716,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 	</tbody>
 </table>
@@ -16371,6 +17731,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16442,7 +17810,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 	</tbody>
 </table>
@@ -16457,6 +17825,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>283</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16532,7 +17908,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 	</tbody>
 </table>
@@ -16547,6 +17923,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>130</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16618,7 +18002,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 	</tbody>
 </table>
@@ -16633,6 +18017,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16708,7 +18100,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 	</tbody>
 </table>
@@ -16723,6 +18115,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>105</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16794,7 +18194,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 	</tbody>
 </table>
@@ -16809,6 +18209,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>70</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16884,7 +18292,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 	</tbody>
 </table>
@@ -16899,6 +18307,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>161</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -16970,7 +18386,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 	</tbody>
 </table>
@@ -16985,6 +18401,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>162</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17060,7 +18484,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 	</tbody>
 </table>
@@ -17075,6 +18499,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>285</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17150,7 +18582,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 	</tbody>
 </table>
@@ -17165,6 +18597,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>84</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17240,7 +18680,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 	</tbody>
 </table>
@@ -17255,6 +18695,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>49</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17326,7 +18774,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/295</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 	</tbody>
 </table>
@@ -17341,6 +18789,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>101</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17412,7 +18868,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/297</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 	</tbody>
 </table>
@@ -17427,6 +18883,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>59</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17510,7 +18974,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/59</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -17541,6 +19005,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17616,7 +19088,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/24</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -17647,6 +19119,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17734,7 +19214,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/123</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -17765,6 +19245,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17860,7 +19348,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/50</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -17891,6 +19379,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>56</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -17978,7 +19474,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/56</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18009,6 +19505,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>87</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18088,7 +19592,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/87</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18119,6 +19623,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>51</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18210,7 +19722,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/51</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18241,6 +19753,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>103</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18316,7 +19836,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/103</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18347,6 +19867,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>91</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18438,7 +19966,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/91</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18469,6 +19997,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>99</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18544,7 +20080,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/99</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18575,6 +20111,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>38</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18662,7 +20206,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/38</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18693,6 +20237,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>40</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18772,7 +20324,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/40</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18803,6 +20355,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>58</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18874,7 +20434,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/58</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -18905,6 +20465,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>104</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -18988,7 +20556,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/104</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19019,6 +20587,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>77</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19102,7 +20678,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/77</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19133,6 +20709,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>109</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19212,7 +20796,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/109</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19243,6 +20827,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19326,7 +20918,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/62</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19357,6 +20949,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>201</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19452,7 +21052,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/201</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19483,6 +21083,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19570,7 +21178,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/21</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19601,6 +21209,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>42</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19688,7 +21304,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/42</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19719,6 +21335,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>98</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19802,7 +21426,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/98</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19833,6 +21457,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -19916,7 +21548,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/20</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -19947,6 +21579,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>76</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20046,7 +21686,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/76</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20077,6 +21717,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>69</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20156,7 +21804,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/69</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20187,6 +21835,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>125</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20274,7 +21930,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/125</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20305,6 +21961,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>147</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20388,7 +22052,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/147</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20419,6 +22083,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>79</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20494,7 +22166,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/79</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20525,6 +22197,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>119</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20600,7 +22280,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/119</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20631,6 +22311,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20706,7 +22394,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/30</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20737,6 +22425,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>96</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20808,7 +22504,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/96</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20839,6 +22535,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>275</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -20926,7 +22630,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/275</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20957,6 +22661,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>131</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21044,7 +22756,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/131</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21075,6 +22787,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>268</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21162,7 +22882,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/268</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21193,6 +22913,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>67</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21276,7 +23004,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/67</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21307,6 +23035,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>88</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21390,7 +23126,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/88</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21421,6 +23157,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>36</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21516,7 +23260,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/36</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21547,6 +23291,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21626,7 +23378,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/33</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21657,6 +23409,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>66</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21744,7 +23504,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/66</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21775,6 +23535,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>28</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21862,7 +23630,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/28</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21893,6 +23661,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>122</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -21980,7 +23756,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/122</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22011,6 +23787,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>78</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22082,7 +23866,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/78</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22113,6 +23897,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>81</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22200,7 +23992,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/81</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22231,6 +24023,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>216</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22302,7 +24102,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/216</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22333,6 +24133,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>187</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22420,7 +24228,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/187</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22451,6 +24259,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>112</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22538,7 +24354,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/112</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22569,6 +24385,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>107</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22656,7 +24480,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/107</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22687,6 +24511,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>39</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22774,7 +24606,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/39</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22805,6 +24637,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>108</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22880,7 +24720,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/108</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22911,6 +24751,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>126</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -22990,7 +24838,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/126</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23021,6 +24869,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>259</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23092,7 +24948,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/259</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23123,6 +24979,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>47</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23194,7 +25058,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/47</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23225,6 +25089,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>117</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23296,7 +25168,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/117</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23327,6 +25199,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>116</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23418,7 +25298,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/116</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23449,6 +25329,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>83</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23536,7 +25424,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/83</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23567,6 +25455,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>277</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23654,7 +25550,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/277</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23685,6 +25581,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>22</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23772,7 +25676,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/22</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23803,6 +25707,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>46</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -23894,7 +25806,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/46</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23925,6 +25837,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>82</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24000,7 +25920,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/82</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24031,6 +25951,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>244</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24102,7 +26030,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/244</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24133,6 +26061,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>212</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24212,7 +26148,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/212</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24243,6 +26179,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24318,7 +26262,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/120</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24349,6 +26293,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>283</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24436,7 +26388,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/283</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24467,6 +26419,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>130</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24554,7 +26514,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/130</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24585,6 +26545,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24672,7 +26640,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/199</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24703,6 +26671,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>105</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24778,7 +26754,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/105</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24809,6 +26785,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>70</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -24896,7 +26880,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/70</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24927,6 +26911,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>161</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -25002,7 +26994,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/161</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25033,6 +27025,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>162</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -25120,7 +27120,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/162</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25151,6 +27151,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>285</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -25238,7 +27246,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/285</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25269,6 +27277,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>84</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -25360,7 +27376,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/84</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25391,6 +27407,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>49</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -25470,7 +27494,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/49</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25501,6 +27525,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Label</td>
 			<td>VALIDATION_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>issueNumber</td>
+			<td>101</td>
+		</tr>
+		<tr>
+			<td>historyNoteUrl</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>iri</td>
@@ -25588,7 +27620,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
-			<td>https://github.com/tdwg/bdq/issues/101</td>
+			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
