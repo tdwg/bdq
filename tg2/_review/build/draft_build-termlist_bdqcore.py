@@ -213,6 +213,7 @@ for term in termLists:
         "ExpectedResponse": {"label":"ExpectedResponse","term":"bdqffdq:hasExpectedResponse","normative":"true"}, 
         "Type": {"label":"Type","term":"rdf:type","normative":"true","append":"The type of the test, one of the subtypes of bdqffdq:DataQualityNeed."}, 
         "organized_in": {"label":"","term":"","normative":""}, 
+        "Notes": {"label":"Notes","term":"skos:note","normative":"","additional":"Additional information to supplement the Specification."}, 
         "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
         "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
         "flags": {"label":"","term":"","normative":""}, 
@@ -371,7 +372,7 @@ for term in termLists:
                     if row[column] : 
                         text += '\t\t<tr>\n'
                         if column in term_concept_dictionary.keys() : 
-                           label = term_concept_dictionary.get(column).get('Label')
+                           label = term_concept_dictionary.get(column).get('label')
                            text += '\t\t\t<td>{}</td>\n'.format(label)
                         else : 
                            text += '\t\t\t<td>{}</td>\n'.format(column)
