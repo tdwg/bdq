@@ -23,11 +23,17 @@ def markdown_heading_to_link(input_heading) :
 #   and values each being a dictionary with with keys label, term, normative
 #   where the term is the fully qualified term name, and normative is a 
 #   string with values of 'true', 'false', or '' 
-# @param terms_sorted_by_locaiton a dictionary containing at least one 
+#   and optionally append, where append is a string to be appended to 
+#   the end of the definitions providing local context to the definition
+#   and optionally force, where if force is a string with the value 'true'
+#   forces the term to appear in the output table even if not 
+#   in terms_sorted_by_localname
+# @param terms_sorted_by_localname a dictionary containing at least one 
 #   record with entries for each term in the term_concept_dictionary
 #   used to provide an example for each term.
 # @return a markdown table of label, term, and metadata for each term in 
-#   the term_concept_dictionary
+#   the term_concept_dictionary or where force=true in the 
+#   term_concept_dictionary
 def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
     # prefixes for sparql queries
     prefixes = """
@@ -56,7 +62,10 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
     definitionTable = definitionTable + "| ----- | ---- | ---------- | ------- | --------- |\n"
     termrow = terms_sorted_by_localname.iloc[0]
     for key, value in term_concept_dictionary.items() :
-        if value['label'] and key in termrow.keys() : 
+        force = False
+        if 'force' in value and value['force'] :
+            force = True
+        if value['label'] and (key in termrow.keys() or force) : 
             label = value['label']
             termname = value['term']
             definition = ""
@@ -114,7 +123,12 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
             else :
                 if label in definition_dictionary.keys() : 
                    definition = definition + " TDWG SDS: " + definition_dictionary.get(label)
-            example = termrow[key]
+            if 'append' in value and value['append'] :
+                definition = definition + " In present context: " + value['append']
+            if key in termrow.keys() : 
+                example = termrow[key]
+            else : 
+                example = ""
             normative = value['normative']
             if normative == "true" :
                  normative = "normative"

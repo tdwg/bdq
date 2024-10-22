@@ -146,11 +146,11 @@ The Test Descriptors are terms that are necessary to comprehensively describe ea
 | Term Version IRI | rdf:about | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20 | normative |
 | Term IRI | dcterms:isVersionOf | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e | normative |
 | Term Name | rdf:value | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e | normative |
-| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. | Amendment Coordinates From Verbatim | non-normative |
-| Label | rdfs:label | A human-readable name for the subject. | AMENDMENT_COORDINATES_FROM_VERBATIM | normative |
-| Description | rdfs:comment | A description of the subject resource. | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. | non-normative |
+| Preferred Label | skos:prefLabel | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the test, similar to the Label, but in words. | Amendment Coordinates From Verbatim | non-normative |
+| Label | rdfs:label | A human-readable name for the subject. In present context: A descriptive label for humans to use to identify the test. | AMENDMENT_COORDINATES_FROM_VERBATIM | normative |
+| Description | rdfs:comment | A description of the subject resource. In present context: A brief description of what the test does | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. | non-normative |
 | ExpectedResponse | bdqffdq:hasExpectedResponse | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. | normative |
-| Type | rdf:type | The subject is an instance of a class. | Amendment | normative |
+| Type | rdf:type | The subject is an instance of a class. In present context: The type of the test, one of the subtypes of bdqffdq:DataQualityNeed. | Amendment | normative |
 | Modified | dcterms:issued | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-04 |  |
 | DateLastUpdated | bdqffdq:hasDateLastUpdated | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |  |
 | InformationElements Consulted | bdqffdq:composedOf | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum | normative |
@@ -162,6 +162,10 @@ The Test Descriptors are terms that are necessary to comprehensively describe ea
 | Enhancement | bdqffdq:Enhancement | Description of a means by which data could be improved. | FillInFrom | normative |
 | References | dcterms:bibliographicCitations |  | <ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul> |  |
 | Developed As Github Issue | skos:historyNote | A note about the past state/use/meaning of a concept. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |
+| Method | bdqffdq:Method |  |  | normative |
+| Method label | rdfs:label | A human-readable name for the subject. In present context: The label for the instance of the subclass of bdqffdq:Method for this test. |  | non-normative |
+| Specification | bdqffdq:Specification | A specific statement about how to evaluate a data quality need. |  | normative |
+| Specification label | rdfs:label | A human-readable name for the subject. In present context: The label for the instance of the bdqffdq:Specification for this test |  | non-normative |
 
 
 <!--- TODO: Confirm that metadata for 1.8 has these values ---> 
@@ -290,14 +294,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD](#bdqcore_f5dd74bd-6a22-4792-b675-c7ccf2a2c103) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT](#bdqcore_a56fb342-c8ee-4611-8aab-e6c6357e8875) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND](#bdqcore_7270a362-5f2e-41f0-955a-d7a8eaaf0f17) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_dda7d67c-9c37-4603-8eb7-fd9355dafe93) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_b6346906-6778-42bd-86ee-6607a9b475e5) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_e30d529f-028b-4e6c-94e7-09406c7a946b) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_d68dc111-9704-4fc5-a8eb-5fa084809202) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_c6c998af-6145-4361-b1e6-52c5b790340a) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_b67f41f4-198c-41e9-9419-ba3919c1be8b) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO](#bdqcore_0e239a55-0f19-4c68-bdbf-20580f27a647) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_2d90d94b-d384-4bac-aa68-c6800d765882) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY](#bdqcore_d71be8d4-1a04-4816-90c5-49808c823651) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD](#bdqcore_38966850-3737-4a67-953c-c231469e0489) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_7c71ff82-c854-41f5-89fa-acd72d7647e8) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_26b46375-df2b-4677-a2e5-f96f86b8e242) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_8b73f37d-89ed-479a-8389-9e71ad2ac84d) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND](#bdqcore_f15c38c3-d96d-4e9c-982d-410fb71cf2bc) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY](#bdqcore_6887c881-dc52-409b-8979-9c2f05e55569) |
@@ -317,7 +321,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE](#bdqcore_c8250600-de61-4047-9d7c-6e06a38c7994) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY](#bdqcore_3f62eaa2-747f-456b-85e6-1a6e74086a18) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD](#bdqcore_bffd7499-aca3-423f-bb43-f7bdc9260f4f) |
-[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_88d0d369-0ea1-4b06-9e07-2482df451018) |
+[MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY](#bdqcore_d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT](#bdqcore_1919f212-b7db-4b6e-9697-41a715001bd6) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND](#bdqcore_97928242-11a9-4ab0-9dd7-3f0465834824) |
 [MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND](#bdqcore_977f7e75-a88e-4e29-a7b1-e8cdd35aa107) |
@@ -362,14 +366,14 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD](#bdqcore_241a279c-76d5-499b-ab49-a47ad7f8df50) |
 [MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT](#bdqcore_a2be4734-0a93-46dc-af4a-e2125b47dbd4) |
 [MULTIRECORD_MEASURE_QA_CLASS_FOUND](#bdqcore_21541436-641d-45a9-938c-537484d94eb7) |
-[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_d95e2fb4-25fc-4345-b899-8dd05b9de549) |
-[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_cf03cbad-abff-4256-a9e8-4dd5344ba759) |
-[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_12431215-e79a-40f8-9bf4-4479c8ae617a) |
+[MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqcore_86c28d5e-f778-4230-88d8-64cc01478601) |
+[MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqcore_7a8b0af3-fa7d-416a-921a-8992d56f8233) |
+[MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqcore_478dee00-98d0-4154-b66c-eca64dbbf86d) |
 [MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO](#bdqcore_151b2d29-3460-4ba5-a226-86971dc8ad03) |
 [MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE](#bdqcore_d94b0130-7a13-4fa8-955c-eff5c47bd9de) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY](#bdqcore_942f63bd-d19d-4214-bf8e-cec0055b8909) |
 [MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD](#bdqcore_fedf27b2-e01d-459f-98fc-7f0f39e3d4be) |
-[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_4210b12e-a960-495e-9561-b634f5ec7935) |
+[MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqcore_57b40d9a-67d7-4916-9c27-dbb395c6c27e) |
 [MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqcore_23aced89-d613-479c-bc4c-837d74b73be0) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_FOUND](#bdqcore_388e74b3-2e18-4d78-8112-3142d1177e25) |
 [MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY](#bdqcore_9c8df974-8fba-4537-8c67-31466787f732) |
@@ -389,7 +393,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 [MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE](#bdqcore_d41a731b-2e2b-4442-9217-4c375ae92926) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY](#bdqcore_c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365) |
 [MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD](#bdqcore_14a1d51f-16ed-4148-9dc8-1e90157a9868) |
-[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_6379907d-0f21-4c89-b34b-fe48a65f4afe) |
+[MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY](#bdqcore_f22539ef-029b-4edb-ad17-add4363f7395) |
 [MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT](#bdqcore_f375a3fd-4cf5-4ef4-955e-d71762ede2d8) |
 [MULTIRECORD_MEASURE_QA_FAMILY_FOUND](#bdqcore_a07d7147-2db8-48ce-81b8-e47595ad5f17) |
 [MULTIRECORD_MEASURE_QA_GENUS_FOUND](#bdqcore_c5c8db83-3af0-4215-806f-e2f90574b138) |
@@ -522,27 +526,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>32</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/32</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-20</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment Coordinates From Verbatim</td>
 		</tr>
 		<tr>
@@ -550,7 +554,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum</td>
 		</tr>
 		<tr>
@@ -558,11 +562,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:verbatimCoordinateSystem,dwc:verbatimSRS</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.</td>
 		</tr>
 		<tr>
@@ -570,19 +574,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: verbatim</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -594,7 +598,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -629,27 +633,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>54</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/54</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment Coordinates Transposed</td>
 		</tr>
 		<tr>
@@ -657,7 +661,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
@@ -665,15 +669,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:countryCode</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.</td>
 		</tr>
 		<tr>
@@ -681,19 +685,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: transposed</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Transposed</td>
 		</tr>
 		<tr>
@@ -705,7 +709,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>iDigBio, GBIF, BISON, FP, Kurator, ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -748,27 +752,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>41</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/41</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2024-08-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dc:type Standard</td>
 		</tr>
 		<tr>
@@ -776,19 +780,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dc:type</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dc:type using the DCMI type vocabulary.</td>
 		</tr>
 		<tr>
@@ -796,19 +800,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -820,7 +824,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li></ul></td>
 		</tr>
 		<tr>
@@ -855,27 +859,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>133</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/133</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dcterms:license Standardized</td>
 		</tr>
 		<tr>
@@ -883,23 +887,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dcterms:license</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -907,19 +911,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -931,7 +935,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Dublin Core (2020) Dublin Core Metadata Initiative. License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li><li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li></ul></td>
 		</tr>
 		<tr>
@@ -966,27 +970,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>63</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/63</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-07-24</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:basisOfRecord Standardized</td>
 		</tr>
 		<tr>
@@ -994,23 +998,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:basisOfRecord</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -1018,19 +1022,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -1073,27 +1077,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>73</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/73</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:countryCode from Coordinates</td>
 		</tr>
 		<tr>
@@ -1101,23 +1105,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.</td>
 		</tr>
 		<tr>
@@ -1125,19 +1129,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: coordinates</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -1149,7 +1153,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li></ul></td>
 		</tr>
 		<tr>
@@ -1184,27 +1188,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>48</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/48</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:countryCode Standard</td>
 		</tr>
 		<tr>
@@ -1212,19 +1216,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:countryCode</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.</td>
 		</tr>
 		<tr>
@@ -1232,19 +1236,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -1252,7 +1256,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:countryCode="Australia": Response.status=AMENDED, Response.result=dwc:countryCode="AU", Response.comment="dwc:countryCode contains an interpretable value"],[dwc:countryCode="Aust.": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:countryCode contains an ambiguous value"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.</li></ul></td>
 		</tr>
 		<tr>
@@ -1283,27 +1287,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>26</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/26</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:dateIdentified Standard</td>
 		</tr>
 		<tr>
@@ -1311,15 +1315,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:dateIdentified</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.</td>
 		</tr>
 		<tr>
@@ -1327,19 +1331,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -1351,7 +1355,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Kurator</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -1394,27 +1398,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>127</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/127</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:day Standardized</td>
 		</tr>
 		<tr>
@@ -1422,15 +1426,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:day</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.</td>
 		</tr>
 		<tr>
@@ -1438,19 +1442,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -1501,27 +1505,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>276</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/276</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2024-04-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-04-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:degreeOfEstablishment Standardized</td>
 		</tr>
 		<tr>
@@ -1529,23 +1533,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:degreeOfEstablishment</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -1553,19 +1557,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -1577,7 +1581,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
@@ -1612,27 +1616,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>269</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/269</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-02-08</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-08</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-08</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:establishmentMeans Standardized</td>
 		</tr>
 		<tr>
@@ -1640,23 +1644,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:establishmentMeans</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -1664,19 +1668,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -1688,7 +1692,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
@@ -1719,27 +1723,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>52</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/52</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:Event from dwc:eventDate</td>
 		</tr>
 		<tr>
@@ -1747,7 +1751,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear</td>
 		</tr>
 		<tr>
@@ -1755,11 +1759,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.</td>
 		</tr>
 		<tr>
@@ -1767,19 +1771,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: eventdate</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -1791,7 +1795,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -1834,27 +1838,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>86</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/86</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:eventDate From dwc:verbatimEventDate</td>
 		</tr>
 		<tr>
@@ -1862,7 +1866,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
@@ -1870,11 +1874,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:verbatimEventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.</td>
 		</tr>
 		<tr>
@@ -1882,19 +1886,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: verbatim</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -1906,7 +1910,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet, FP, Kurator</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -1949,27 +1953,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>93</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/93</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-15</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-15</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:eventDate from dwc:year dwc:month dwc:day</td>
 		</tr>
 		<tr>
@@ -1977,7 +1981,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
@@ -1985,11 +1989,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:year,dwc:month,dwc:day</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.</td>
 		</tr>
 		<tr>
@@ -1997,19 +2001,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: yearmonthday</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -2021,7 +2025,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -2064,27 +2068,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>132</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/132</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-12</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear</td>
 		</tr>
 		<tr>
@@ -2092,7 +2096,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
@@ -2100,11 +2104,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:year,dwc:startDayOfYear,dwc:endDayOfYear</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.</td>
 		</tr>
 		<tr>
@@ -2112,19 +2116,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: yearstartdayofyearenddayofyear</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -2136,7 +2140,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li></ul></td>
 		</tr>
 		<tr>
@@ -2179,27 +2183,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>61</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/61</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:eventDate Standardized</td>
 		</tr>
 		<tr>
@@ -2207,15 +2211,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment of the value of dwc:eventDate to a valid ISO date.</td>
 		</tr>
 		<tr>
@@ -2223,19 +2227,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -2247,7 +2251,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Paul Morris, Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -2290,27 +2294,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>102</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/102</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:geodeticDatum Assumed Default</td>
 		</tr>
 		<tr>
@@ -2318,23 +2322,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters,dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:defaultGeodeticDatum</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:defaultGeodeticDatum default = "EPSG:4326"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.</td>
 		</tr>
 		<tr>
@@ -2342,19 +2346,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: assumeddefault</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>AssumedDefault</td>
 		</tr>
 		<tr>
@@ -2366,7 +2370,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</li></ul></td>
 		</tr>
 		<tr>
@@ -2401,27 +2405,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>60</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/60</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-7-24</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:geodeticDatum Standardized</td>
 		</tr>
 		<tr>
@@ -2429,19 +2433,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:geodeticDatum</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -2449,19 +2453,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -2473,7 +2477,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Paul Morris</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</li></ul></td>
 		</tr>
 		<tr>
@@ -2508,27 +2512,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>55</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/55</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-24</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth</td>
 		</tr>
 		<tr>
@@ -2536,7 +2540,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:minimumDepthInMeters,dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
@@ -2544,11 +2548,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:verbatimDepth</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdq:NotEmpty or dwc:verbatimDepth is bdq:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.</td>
 		</tr>
 		<tr>
@@ -2556,19 +2560,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: verbatim</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -2576,7 +2580,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="", dwc:verbatimDepth="10 feet": Response.status=FILLED_IN, Response.result=dwc:minimumDepthInMeters="3.048", dwc:maximumDepthInMeters="3.048", Response.comment="dwc:verbatimDepth contains interpretable values"],[ dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="", dwc:verbatimDepth="x": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:verbatimDepth does not contain an interpretable value"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -2611,27 +2615,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>68</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/68</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation</td>
 		</tr>
 		<tr>
@@ -2639,7 +2643,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:minimumElevationInMeters,dwc:maximumElevationInMeters</td>
 		</tr>
 		<tr>
@@ -2647,11 +2651,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:verbatimElevation</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdq:NotEmpty or dwc:verbatimElevation is bdq:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.</td>
 		</tr>
 		<tr>
@@ -2659,19 +2663,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: verbatim</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -2679,7 +2683,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:verbatimElevation="100 feet", dwc:minimumElevationInMeters="", dwc:maximumElevationInMeters="": Response.status=FILLED_IN, Response.result=dwc:minimumElevationInMeters="30.48", dwc:maximumElevationInMeters="30.48", Response.comment="dwc:verbatimElevation contains an interpretable value"],[dwc:verbatimElevation="x", dwc:minimumElevationInMeters="", dwc:maximumElevationInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:verbatimElevation contains an uninterpretable value"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -2714,27 +2718,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>128</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/128</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:month Standardized</td>
 		</tr>
 		<tr>
@@ -2742,15 +2746,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:month</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.</td>
 		</tr>
 		<tr>
@@ -2758,19 +2762,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -2821,27 +2825,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>75</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-08-23</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-23</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:occurrenceStatus Assumed Default</td>
 		</tr>
 		<tr>
@@ -2849,7 +2853,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:occurrenceStatus</td>
 		</tr>
 		<tr>
@@ -2857,19 +2861,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:individualCount,dwc:organismQuantity</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>dwc:defaultOccurrenceStatus</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>dwc:defaultOccurrenceStatus default = "present"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.</td>
 		</tr>
 		<tr>
@@ -2877,19 +2881,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: assumeddefault</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>AssumedDefault</td>
 		</tr>
 		<tr>
@@ -2928,27 +2932,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>115</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/115</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-07-26</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-07-26</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:occurrenceStatus Standardized</td>
 		</tr>
 		<tr>
@@ -2956,23 +2960,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:occurrenceStatus</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -2980,19 +2984,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -3035,27 +3039,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>278</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/278</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:pathway Standardized</td>
 		</tr>
 		<tr>
@@ -3063,23 +3067,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:pathway</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -3087,19 +3091,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -3111,7 +3115,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</i></ul></td>
 		</tr>
 		<tr>
@@ -3146,27 +3150,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>71</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/71</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:scientificName from dwc:scientificNameID</td>
 		</tr>
 		<tr>
@@ -3174,7 +3178,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificName</td>
 		</tr>
 		<tr>
@@ -3182,19 +3186,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:scientificNameID</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -3202,19 +3206,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: scientificnameid</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -3226,7 +3230,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -3261,27 +3265,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>57</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/57</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:scientificNameID from dwc:Taxon</td>
 		</tr>
 		<tr>
@@ -3289,7 +3293,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificNameID</td>
 		</tr>
 		<tr>
@@ -3297,19 +3301,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:taxonID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:scientificName,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:cultivarEpithet,dwc:vernacularName,dwc:scientificNameAuthorship,dwc:taxonRank</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.</td>
 		</tr>
 		<tr>
@@ -3317,19 +3321,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: taxon</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>FillInFrom</td>
 		</tr>
 		<tr>
@@ -3341,7 +3345,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>FP-Akka</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -3380,27 +3384,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>284</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/284</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-03-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-03-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:sex Standardized</td>
 		</tr>
 		<tr>
@@ -3408,23 +3412,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:sex</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -3432,19 +3436,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -3456,7 +3460,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml</li></ul></td>
 		</tr>
 		<tr>
@@ -3491,27 +3495,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>163</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/163</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:taxonRank Standardized</td>
 		</tr>
 		<tr>
@@ -3519,23 +3523,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:taxonRank</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -3543,19 +3547,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -3567,7 +3571,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TDWG2018</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li></ul></td>
 		</tr>
 		<tr>
@@ -3602,27 +3606,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>286</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/286</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2024-08-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Amendment dwc:typeStatus Standardized</td>
 		</tr>
 		<tr>
@@ -3630,23 +3634,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:typeStatus</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
@@ -3654,19 +3658,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standardized</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Amendment</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Enhancement</td>
+			<td>None</td>
 			<td>Standardized</td>
 		</tr>
 		<tr>
@@ -3678,7 +3682,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul></td>
 		</tr>
 		<tr>
@@ -3713,27 +3717,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>29</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/29</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-17</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Issue Annotation Not Empty</td>
 		</tr>
 		<tr>
@@ -3745,19 +3749,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>AllDarwinCoreTerms</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:annotationSystem,bdq:annotationAlertIf</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" {[https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under test." {[https://www.w3.org/TR/annotation-vocab/]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Are there any annotations associated with the record?</td>
 		</tr>
 		<tr>
@@ -3765,19 +3769,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Reliability: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Issue</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Reliability</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -3789,7 +3793,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li><li>W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation</li><li>Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li></ul></td>
 		</tr>
 		<tr>
@@ -3824,27 +3828,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>287</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/287</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-08-28</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-28</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Issue Coordinates Center Of Country</td>
 		</tr>
 		<tr>
@@ -3852,7 +3856,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
@@ -3860,19 +3864,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:coordinateUncertaintyInMeters</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:spatialBufferInMeters,bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Are the supplied geographic coordinates within a defined buffer of the center of the country?</td>
 		</tr>
 		<tr>
@@ -3880,19 +3884,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: centerofcountry</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Issue</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Likely</td>
 		</tr>
 		<tr>
@@ -3904,7 +3908,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul> <li> Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> </ul></td>
 		</tr>
 		<tr>
@@ -3939,27 +3943,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>72</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/72</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Issue dwc:dataGeneralizations Not Empty</td>
 		</tr>
 		<tr>
@@ -3967,15 +3971,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:dataGeneralizations</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:dataGeneralizations?</td>
 		</tr>
 		<tr>
@@ -3983,19 +3987,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Resolution: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Issue</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Resolution</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -4007,7 +4011,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10.</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -4042,27 +4046,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>94</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/94</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Issue dwc:establishmentMeans Not Empty</td>
 		</tr>
 		<tr>
@@ -4070,15 +4074,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:establishmentMeans</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:establishmentMeans?</td>
 		</tr>
 		<tr>
@@ -4086,19 +4090,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Issue</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -4137,27 +4141,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>65</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/65</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measure Amendments Proposed</td>
 		</tr>
 		<tr>
@@ -4169,11 +4173,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:AllAmendmentTestsRunOnSingleRecord"</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>The number of tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED")</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>A count of the number of distinct AMENDMENT tests that have a Response.status="AMENDED" for a given record.</td>
 		</tr>
 		<tr>
@@ -4181,15 +4185,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: proposed</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -4228,27 +4232,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>140</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/140</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measure dwc:eventDate Duration In Seconds</td>
 		</tr>
 		<tr>
@@ -4256,15 +4260,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>What is the duration of dwc:eventDate in seconds?</td>
 		</tr>
 		<tr>
@@ -4272,15 +4276,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Resolution: durationinseconds</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Resolution</td>
 		</tr>
 		<tr>
@@ -4292,7 +4296,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Alex Thompson</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li></ul></td>
 		</tr>
 		<tr>
@@ -4335,27 +4339,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>135</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/135</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measure Validation Tests Compliant</td>
 		</tr>
 		<tr>
@@ -4367,11 +4371,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; Report the number of tests of output type VALIDATION run against the record that were COMPLIANT (passed)</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measures the number of distinct VALIDATION tests that have a Response.status="COMPLIANT" for a given record.</td>
 		</tr>
 		<tr>
@@ -4379,15 +4383,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Reliability: compliant</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Reliability</td>
 		</tr>
 		<tr>
@@ -4430,27 +4434,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>31</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/31</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2024-08-22</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-24</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-22</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measure Validation Tests Not Compliant</td>
 		</tr>
 		<tr>
@@ -4462,11 +4466,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; REPORT of the number of tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>A count of the number of distinct VALIDATION tests that have a Response.status="NOT_COMPLIANT" for a given record.</td>
 		</tr>
 		<tr>
@@ -4474,15 +4478,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Reliability: notcompliant</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Reliability</td>
 		</tr>
 		<tr>
@@ -4525,27 +4529,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>134</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/134</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measure Validation Tests Prerequisites Not Met</td>
 		</tr>
 		<tr>
@@ -4557,11 +4561,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>The number of distinct VALIDATION tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.</td>
 		</tr>
 		<tr>
@@ -4569,15 +4573,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: prerequisitesnotmet</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -4620,27 +4624,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>59</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard</td>
 		</tr>
 		<tr>
@@ -4648,19 +4652,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -4668,15 +4672,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -4684,7 +4688,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -4719,27 +4723,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>24</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
@@ -4747,15 +4751,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -4763,15 +4767,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: maxdepth</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -4779,7 +4783,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -4814,27 +4818,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>123</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Classification Consistent</td>
 		</tr>
 		<tr>
@@ -4842,19 +4846,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -4862,15 +4866,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -4878,7 +4882,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -4900,7 +4904,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_dda7d67c-9c37-4603-8eb7-fd9355dafe93"></a>Term Name  bdqcore:dda7d67c-9c37-4603-8eb7-fd9355dafe93</th>
+			<th colspan="2"><a id="bdqcore_d68dc111-9704-4fc5-a8eb-5fa084809202"></a>Term Name  bdqcore:d68dc111-9704-4fc5-a8eb-5fa084809202</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4913,27 +4917,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>50</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/dda7d67c-9c37-4603-8eb7-fd9355dafe93-2024-08-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/dda7d67c-9c37-4603-8eb7-fd9355dafe93</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d68dc111-9704-4fc5-a8eb-5fa084809202</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-26</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent</td>
 		</tr>
 		<tr>
@@ -4941,19 +4945,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -4961,15 +4965,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -4977,7 +4981,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -4999,7 +5003,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_b6346906-6778-42bd-86ee-6607a9b475e5"></a>Term Name  bdqcore:b6346906-6778-42bd-86ee-6607a9b475e5</th>
+			<th colspan="2"><a id="bdqcore_c6c998af-6145-4361-b1e6-52c5b790340a"></a>Term Name  bdqcore:c6c998af-6145-4361-b1e6-52c5b790340a</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5012,27 +5016,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>56</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b6346906-6778-42bd-86ee-6607a9b475e5-2024-08-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b6346906-6778-42bd-86ee-6607a9b475e5</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c6c998af-6145-4361-b1e6-52c5b790340a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent</td>
 		</tr>
 		<tr>
@@ -5040,19 +5044,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5060,15 +5064,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -5076,7 +5080,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5111,27 +5115,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>87</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2023-06-20</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-06-20</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero</td>
 		</tr>
 		<tr>
@@ -5139,15 +5143,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5155,15 +5159,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Likeliness: notzero</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Likeliness</td>
 		</tr>
 		<tr>
@@ -5171,7 +5175,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5193,7 +5197,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_e30d529f-028b-4e6c-94e7-09406c7a946b"></a>Term Name  bdqcore:e30d529f-028b-4e6c-94e7-09406c7a946b</th>
+			<th colspan="2"><a id="bdqcore_b67f41f4-198c-41e9-9419-ba3919c1be8b"></a>Term Name  bdqcore:b67f41f4-198c-41e9-9419-ba3919c1be8b</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5206,27 +5210,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>51</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/e30d529f-028b-4e6c-94e7-09406c7a946b-2024-08-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/e30d529f-028b-4e6c-94e7-09406c7a946b</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b67f41f4-198c-41e9-9419-ba3919c1be8b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine</td>
 		</tr>
 		<tr>
@@ -5234,19 +5238,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5254,15 +5258,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -5270,7 +5274,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5305,27 +5309,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>103</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty</td>
 		</tr>
 		<tr>
@@ -5333,15 +5337,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5349,15 +5353,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -5365,7 +5369,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5400,27 +5404,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>91</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Standard</td>
 		</tr>
 		<tr>
@@ -5428,19 +5432,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5448,15 +5452,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -5464,7 +5468,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5499,27 +5503,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>99</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty</td>
 		</tr>
 		<tr>
@@ -5527,15 +5531,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5543,15 +5547,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -5559,7 +5563,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5594,27 +5598,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>38</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard</td>
 		</tr>
 		<tr>
@@ -5622,19 +5626,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5642,15 +5646,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -5658,7 +5662,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5693,27 +5697,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>40</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty</td>
 		</tr>
 		<tr>
@@ -5721,15 +5725,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5737,15 +5741,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -5753,7 +5757,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5788,27 +5792,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>58</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty</td>
 		</tr>
 		<tr>
@@ -5816,15 +5820,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5832,15 +5836,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -5848,7 +5852,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5883,27 +5887,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>104</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard</td>
 		</tr>
 		<tr>
@@ -5911,19 +5915,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -5931,15 +5935,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -5947,7 +5951,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -5982,27 +5986,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>77</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:class Found</td>
 		</tr>
 		<tr>
@@ -6010,19 +6014,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6030,15 +6034,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -6046,7 +6050,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6081,27 +6085,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>109</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:coordinateUncertaintyInMeters In Range</td>
 		</tr>
 		<tr>
@@ -6109,15 +6113,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6125,15 +6129,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -6141,7 +6145,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6163,7 +6167,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_7c71ff82-c854-41f5-89fa-acd72d7647e8"></a>Term Name  bdqcore:7c71ff82-c854-41f5-89fa-acd72d7647e8</th>
+			<th colspan="2"><a id="bdqcore_26b46375-df2b-4677-a2e5-f96f86b8e242"></a>Term Name  bdqcore:26b46375-df2b-4677-a2e5-f96f86b8e242</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -6176,27 +6180,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>62</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7c71ff82-c854-41f5-89fa-acd72d7647e8-2024-09-25</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2024-09-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7c71ff82-c854-41f5-89fa-acd72d7647e8</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/26b46375-df2b-4677-a2e5-f96f86b8e242</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent</td>
 		</tr>
 		<tr>
@@ -6204,19 +6208,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6224,15 +6228,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -6240,7 +6244,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6275,27 +6279,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>201</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:stateProvince Unambiguous</td>
 		</tr>
 		<tr>
@@ -6303,19 +6307,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6323,15 +6327,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: unambiguous</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -6339,7 +6343,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6374,27 +6378,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>21</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2024-08-19</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-24</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-19</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country Found</td>
 		</tr>
 		<tr>
@@ -6402,19 +6406,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6422,15 +6426,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -6438,7 +6442,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6473,27 +6477,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>42</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2024-09-27</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country Not Empty</td>
 		</tr>
 		<tr>
@@ -6501,15 +6505,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRY_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6517,15 +6521,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -6533,7 +6537,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6568,27 +6572,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>98</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-09-27</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty</td>
 		</tr>
 		<tr>
@@ -6596,15 +6600,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6612,15 +6616,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -6628,7 +6632,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6663,27 +6667,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>20</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/38966850-3737-4a67-953c-c231469e0489-2024-09-19</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-19</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard</td>
 		</tr>
 		<tr>
@@ -6691,19 +6695,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6711,15 +6715,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -6727,7 +6731,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6762,27 +6766,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>76</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified In Range</td>
 		</tr>
 		<tr>
@@ -6790,19 +6794,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6810,15 +6814,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Likeliness: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Likeliness</td>
 		</tr>
 		<tr>
@@ -6826,7 +6830,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6861,27 +6865,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>69</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified Standard</td>
 		</tr>
 		<tr>
@@ -6889,15 +6893,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -6905,15 +6909,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -6921,7 +6925,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -6956,27 +6960,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>125</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:day In Range</td>
 		</tr>
 		<tr>
@@ -6984,15 +6988,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DAY_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7000,15 +7004,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7016,7 +7020,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7051,27 +7055,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>147</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:day Standard</td>
 		</tr>
 		<tr>
@@ -7079,15 +7083,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DAY_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7095,15 +7099,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7111,7 +7115,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7146,27 +7150,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>79</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude In Range</td>
 		</tr>
 		<tr>
@@ -7174,15 +7178,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7190,15 +7194,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7206,7 +7210,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7241,27 +7245,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>119</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/bceae35a-52ab-4968-846f-069ace766513-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude Not Empty</td>
 		</tr>
 		<tr>
@@ -7269,15 +7273,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7285,15 +7289,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -7301,7 +7305,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7336,27 +7340,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>30</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude In Range</td>
 		</tr>
 		<tr>
@@ -7364,15 +7368,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7380,15 +7384,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7396,7 +7400,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7431,27 +7435,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>96</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude Not Empty</td>
 		</tr>
 		<tr>
@@ -7459,15 +7463,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7475,15 +7479,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -7491,7 +7495,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7526,27 +7530,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>275</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard</td>
 		</tr>
 		<tr>
@@ -7554,19 +7558,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7574,15 +7578,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7590,7 +7594,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7625,27 +7629,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>131</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:endDayOfYear In Range</td>
 		</tr>
 		<tr>
@@ -7653,15 +7657,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7669,15 +7673,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7685,7 +7689,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7720,27 +7724,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>268</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2024-02-08</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-08</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:establishmentMeans Standard</td>
 		</tr>
 		<tr>
@@ -7748,19 +7752,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7768,15 +7772,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -7784,7 +7788,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7819,27 +7823,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>67</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent</td>
 		</tr>
 		<tr>
@@ -7847,15 +7851,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7863,15 +7867,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -7879,7 +7883,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -7901,7 +7905,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_88d0d369-0ea1-4b06-9e07-2482df451018"></a>Term Name  bdqcore:88d0d369-0ea1-4b06-9e07-2482df451018</th>
+			<th colspan="2"><a id="bdqcore_d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161"></a>Term Name  bdqcore:d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -7914,27 +7918,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>88</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/88d0d369-0ea1-4b06-9e07-2482df451018-2023-09-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2023-09-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/88d0d369-0ea1-4b06-9e07-2482df451018</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty</td>
 		</tr>
 		<tr>
@@ -7942,15 +7946,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -7958,15 +7962,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -7974,7 +7978,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8009,27 +8013,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>36</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate In Range</td>
 		</tr>
 		<tr>
@@ -8037,19 +8041,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTDATE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8057,15 +8061,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8073,7 +8077,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8108,27 +8112,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>33</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Not Empty</td>
 		</tr>
 		<tr>
@@ -8136,15 +8140,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8152,15 +8156,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -8168,7 +8172,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8203,27 +8207,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>66</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Standard</td>
 		</tr>
 		<tr>
@@ -8231,15 +8235,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTDATE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8247,15 +8251,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8263,7 +8267,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8298,27 +8302,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>28</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-17</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:family Found</td>
 		</tr>
 		<tr>
@@ -8326,19 +8330,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_FAMILY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8346,15 +8350,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8362,7 +8366,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8397,27 +8401,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>122</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:genus Found</td>
 		</tr>
 		<tr>
@@ -8425,19 +8429,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_GENUS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8445,15 +8449,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8461,7 +8465,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8496,27 +8500,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>78</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Not Empty</td>
 		</tr>
 		<tr>
@@ -8524,15 +8528,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8540,15 +8544,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -8556,7 +8560,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8591,27 +8595,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>81</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Found</td>
 		</tr>
 		<tr>
@@ -8619,19 +8623,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_KINGDOM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8639,15 +8643,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8655,7 +8659,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8690,27 +8694,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>216</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2024-01-28</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-01-28</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Not Empty</td>
 		</tr>
 		<tr>
@@ -8718,15 +8722,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_KINGDOM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8734,15 +8738,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -8750,7 +8754,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8785,27 +8789,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>187</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:maximumDepthInMeters In Range</td>
 		</tr>
 		<tr>
@@ -8813,19 +8817,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MAXDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8833,15 +8837,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8849,7 +8853,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8884,27 +8888,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>112</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:maximumElevationInMeters In Range</td>
 		</tr>
 		<tr>
@@ -8912,19 +8916,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MAXELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -8932,15 +8936,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -8948,7 +8952,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -8983,27 +8987,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>107</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters In Range</td>
 		</tr>
 		<tr>
@@ -9011,19 +9015,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9031,15 +9035,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9047,7 +9051,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9082,27 +9086,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>39</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters In Range</td>
 		</tr>
 		<tr>
@@ -9110,19 +9114,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9130,15 +9134,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9146,7 +9150,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9181,27 +9185,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>108</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
 		</tr>
 		<tr>
@@ -9209,15 +9213,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9225,15 +9229,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: maxelevation</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9241,7 +9245,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9276,27 +9280,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>126</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:month Standard</td>
 		</tr>
 		<tr>
@@ -9304,15 +9308,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MONTH_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9320,15 +9324,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9336,7 +9340,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9371,27 +9375,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>259</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2024-02-07</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-07</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:namePublishedInYear Not Empty</td>
 		</tr>
 		<tr>
@@ -9399,15 +9403,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9415,15 +9419,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -9431,7 +9435,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9466,27 +9470,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>47</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceID Not Empty</td>
 		</tr>
 		<tr>
@@ -9494,15 +9498,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9510,15 +9514,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -9526,7 +9530,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9561,27 +9565,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>117</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Not Empty</td>
 		</tr>
 		<tr>
@@ -9589,15 +9593,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9605,15 +9609,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -9621,7 +9625,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9656,27 +9660,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>116</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Standard</td>
 		</tr>
 		<tr>
@@ -9684,19 +9688,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9704,15 +9708,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9720,7 +9724,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9755,27 +9759,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>83</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:order Found</td>
 		</tr>
 		<tr>
@@ -9783,19 +9787,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_ORDER_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9803,15 +9807,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9819,7 +9823,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9854,27 +9858,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>277</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:pathway Standard</td>
 		</tr>
 		<tr>
@@ -9882,19 +9886,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_PATHWAY_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -9902,15 +9906,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -9918,7 +9922,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -9953,27 +9957,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>22</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2022-03-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2022-03-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:phylum Found</td>
 		</tr>
 		<tr>
@@ -9981,19 +9985,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_PHYLUM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10001,15 +10005,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -10017,7 +10021,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10052,27 +10056,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>46</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found</td>
 		</tr>
 		<tr>
@@ -10080,19 +10084,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10100,15 +10104,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -10116,7 +10120,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10151,27 +10155,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>82</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty</td>
 		</tr>
 		<tr>
@@ -10179,15 +10183,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10195,15 +10199,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -10211,7 +10215,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10246,27 +10250,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>244</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2024-02-04</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-04</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameAuthorship Not Empty</td>
 		</tr>
 		<tr>
@@ -10274,15 +10278,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10290,15 +10294,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -10306,7 +10310,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10341,27 +10345,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>212</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Complete</td>
 		</tr>
 		<tr>
@@ -10369,15 +10373,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10385,15 +10389,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: complete</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -10401,7 +10405,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10436,27 +10440,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>120</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Not Empty</td>
 		</tr>
 		<tr>
@@ -10464,15 +10468,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10480,15 +10484,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -10496,7 +10500,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10531,27 +10535,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>283</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:sex Standard</td>
 		</tr>
 		<tr>
@@ -10559,19 +10563,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SEX_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10579,15 +10583,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -10595,7 +10599,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10630,27 +10634,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>130</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:startDayOfYear In Range</td>
 		</tr>
 		<tr>
@@ -10658,15 +10662,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10674,15 +10678,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -10690,7 +10694,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10725,27 +10729,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>199</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:stateProvince Found</td>
 		</tr>
 		<tr>
@@ -10753,19 +10757,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_STATEPROVINCE_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10773,15 +10777,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -10789,7 +10793,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10824,27 +10828,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>105</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty</td>
 		</tr>
 		<tr>
@@ -10852,15 +10856,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10868,15 +10872,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -10884,7 +10888,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -10919,27 +10923,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>70</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous</td>
 		</tr>
 		<tr>
@@ -10947,19 +10951,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -10967,15 +10971,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: unambiguous</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -10983,7 +10987,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11018,27 +11022,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>161</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Not Empty</td>
 		</tr>
 		<tr>
@@ -11046,15 +11050,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11062,15 +11066,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -11078,7 +11082,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11113,27 +11117,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>162</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Standard</td>
 		</tr>
 		<tr>
@@ -11141,19 +11145,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXONRANK_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11161,15 +11165,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -11177,7 +11181,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11212,27 +11216,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>285</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2024-08-03</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-03</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:typeStatus Standard</td>
 		</tr>
 		<tr>
@@ -11240,19 +11244,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TYPESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11260,15 +11264,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -11276,7 +11280,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11311,27 +11315,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>84</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2024-08-23</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-23</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:year In Range</td>
 		</tr>
 		<tr>
@@ -11339,19 +11343,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_YEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11359,15 +11363,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -11375,7 +11379,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11410,27 +11414,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>49</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:year Not Empty</td>
 		</tr>
 		<tr>
@@ -11438,15 +11442,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_YEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11454,15 +11458,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -11470,7 +11474,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11505,27 +11509,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>101</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent</td>
 		</tr>
 		<tr>
@@ -11533,15 +11537,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11549,15 +11553,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -11565,7 +11569,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11600,27 +11604,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>59</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard</td>
 		</tr>
 		<tr>
@@ -11628,19 +11632,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11648,15 +11652,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -11664,7 +11668,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11699,27 +11703,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>24</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
@@ -11727,15 +11731,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -11743,15 +11747,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: maxdepth</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -11759,7 +11763,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11794,27 +11798,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>123</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent</td>
 		</tr>
 		<tr>
@@ -11822,19 +11826,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11842,15 +11846,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -11858,7 +11862,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11880,7 +11884,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_d95e2fb4-25fc-4345-b899-8dd05b9de549"></a>Term Name  bdqcore:d95e2fb4-25fc-4345-b899-8dd05b9de549</th>
+			<th colspan="2"><a id="bdqcore_86c28d5e-f778-4230-88d8-64cc01478601"></a>Term Name  bdqcore:86c28d5e-f778-4230-88d8-64cc01478601</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11893,27 +11897,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>50</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d95e2fb4-25fc-4345-b899-8dd05b9de549-2024-08-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d95e2fb4-25fc-4345-b899-8dd05b9de549</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/86c28d5e-f778-4230-88d8-64cc01478601</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-26</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent</td>
 		</tr>
 		<tr>
@@ -11921,19 +11925,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -11941,15 +11945,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -11957,7 +11961,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -11979,7 +11983,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_cf03cbad-abff-4256-a9e8-4dd5344ba759"></a>Term Name  bdqcore:cf03cbad-abff-4256-a9e8-4dd5344ba759</th>
+			<th colspan="2"><a id="bdqcore_7a8b0af3-fa7d-416a-921a-8992d56f8233"></a>Term Name  bdqcore:7a8b0af3-fa7d-416a-921a-8992d56f8233</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11992,27 +11996,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>56</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/cf03cbad-abff-4256-a9e8-4dd5344ba759-2024-08-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/cf03cbad-abff-4256-a9e8-4dd5344ba759</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7a8b0af3-fa7d-416a-921a-8992d56f8233</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent</td>
 		</tr>
 		<tr>
@@ -12020,19 +12024,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12040,15 +12044,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -12056,7 +12060,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12091,27 +12095,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>87</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2023-06-20</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-06-20</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero</td>
 		</tr>
 		<tr>
@@ -12119,15 +12123,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12135,15 +12139,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Likeliness: notzero</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Likeliness</td>
 		</tr>
 		<tr>
@@ -12151,7 +12155,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12173,7 +12177,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_12431215-e79a-40f8-9bf4-4479c8ae617a"></a>Term Name  bdqcore:12431215-e79a-40f8-9bf4-4479c8ae617a</th>
+			<th colspan="2"><a id="bdqcore_478dee00-98d0-4154-b66c-eca64dbbf86d"></a>Term Name  bdqcore:478dee00-98d0-4154-b66c-eca64dbbf86d</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12186,27 +12190,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>51</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/12431215-e79a-40f8-9bf4-4479c8ae617a-2024-08-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/12431215-e79a-40f8-9bf4-4479c8ae617a</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/478dee00-98d0-4154-b66c-eca64dbbf86d</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine</td>
 		</tr>
 		<tr>
@@ -12214,19 +12218,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12234,15 +12238,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -12250,7 +12254,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12285,27 +12289,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>103</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty</td>
 		</tr>
 		<tr>
@@ -12313,15 +12317,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12329,15 +12333,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -12345,7 +12349,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12380,27 +12384,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>91</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard</td>
 		</tr>
 		<tr>
@@ -12408,19 +12412,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12428,15 +12432,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -12444,7 +12448,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12479,27 +12483,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>99</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty</td>
 		</tr>
 		<tr>
@@ -12507,15 +12511,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12523,15 +12527,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -12539,7 +12543,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12574,27 +12578,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>38</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard</td>
 		</tr>
 		<tr>
@@ -12602,19 +12606,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12622,15 +12626,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -12638,7 +12642,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12673,27 +12677,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>40</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty</td>
 		</tr>
 		<tr>
@@ -12701,15 +12705,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12717,15 +12721,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -12733,7 +12737,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12768,27 +12772,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>58</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty</td>
 		</tr>
 		<tr>
@@ -12796,15 +12800,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12812,15 +12816,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -12828,7 +12832,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12863,27 +12867,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>104</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard</td>
 		</tr>
 		<tr>
@@ -12891,19 +12895,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -12911,15 +12915,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -12927,7 +12931,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -12962,27 +12966,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>77</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/21541436-641d-45a9-938c-537484d94eb7-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found</td>
 		</tr>
 		<tr>
@@ -12990,19 +12994,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -13010,15 +13014,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13026,7 +13030,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13061,27 +13065,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>109</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:coordinateUncertaintyInMeters In Range</td>
 		</tr>
 		<tr>
@@ -13089,15 +13093,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -13105,15 +13109,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13121,7 +13125,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13143,7 +13147,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_4210b12e-a960-495e-9561-b634f5ec7935"></a>Term Name  bdqcore:4210b12e-a960-495e-9561-b634f5ec7935</th>
+			<th colspan="2"><a id="bdqcore_57b40d9a-67d7-4916-9c27-dbb395c6c27e"></a>Term Name  bdqcore:57b40d9a-67d7-4916-9c27-dbb395c6c27e</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -13156,27 +13160,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>62</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4210b12e-a960-495e-9561-b634f5ec7935-2024-09-25</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2024-09-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4210b12e-a960-495e-9561-b634f5ec7935</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent</td>
 		</tr>
 		<tr>
@@ -13184,19 +13188,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13204,15 +13208,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -13220,7 +13224,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13255,27 +13259,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>201</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:stateProvince Unambiguous</td>
 		</tr>
 		<tr>
@@ -13283,19 +13287,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13303,15 +13307,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: unambiguous</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13319,7 +13323,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13354,27 +13358,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>21</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2024-08-19</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-24</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-19</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found</td>
 		</tr>
 		<tr>
@@ -13382,19 +13386,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13402,15 +13406,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13418,7 +13422,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13453,27 +13457,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>42</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2024-09-27</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country Not Empty</td>
 		</tr>
 		<tr>
@@ -13481,15 +13485,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRY_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13497,15 +13501,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -13513,7 +13517,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13548,27 +13552,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>98</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-09-27</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty</td>
 		</tr>
 		<tr>
@@ -13576,15 +13580,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13592,15 +13596,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -13608,7 +13612,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13643,27 +13647,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>20</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2024-09-19</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-19</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Standard</td>
 		</tr>
 		<tr>
@@ -13671,19 +13675,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -13691,15 +13695,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13707,7 +13711,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13742,27 +13746,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>76</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified In Range</td>
 		</tr>
 		<tr>
@@ -13770,19 +13774,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13790,15 +13794,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Likeliness: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Likeliness</td>
 		</tr>
 		<tr>
@@ -13806,7 +13810,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13841,27 +13845,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>69</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified Standard</td>
 		</tr>
 		<tr>
@@ -13869,15 +13873,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -13885,15 +13889,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13901,7 +13905,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -13936,27 +13940,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>125</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:day In Range</td>
 		</tr>
 		<tr>
@@ -13964,15 +13968,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DAY_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -13980,15 +13984,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -13996,7 +14000,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14031,27 +14035,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>147</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:day Standard</td>
 		</tr>
 		<tr>
@@ -14059,15 +14063,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DAY_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -14075,15 +14079,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -14091,7 +14095,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14126,27 +14130,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>79</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude In Range</td>
 		</tr>
 		<tr>
@@ -14154,15 +14158,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -14170,15 +14174,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -14186,7 +14190,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14221,27 +14225,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>119</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude Not Empty</td>
 		</tr>
 		<tr>
@@ -14249,15 +14253,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -14265,15 +14269,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -14281,7 +14285,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14316,27 +14320,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>30</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude In Range</td>
 		</tr>
 		<tr>
@@ -14344,15 +14348,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -14360,15 +14364,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -14376,7 +14380,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14411,27 +14415,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>96</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude Not Empty</td>
 		</tr>
 		<tr>
@@ -14439,15 +14443,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -14455,15 +14459,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -14471,7 +14475,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14506,27 +14510,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>275</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard</td>
 		</tr>
 		<tr>
@@ -14534,19 +14538,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -14554,15 +14558,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -14570,7 +14574,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14605,27 +14609,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>131</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:endDayOfYear In Range</td>
 		</tr>
 		<tr>
@@ -14633,15 +14637,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -14649,15 +14653,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -14665,7 +14669,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14700,27 +14704,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>268</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2024-02-08</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-08</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:establishmentMeans Standard</td>
 		</tr>
 		<tr>
@@ -14728,19 +14732,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -14748,15 +14752,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -14764,7 +14768,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14799,27 +14803,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>67</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent</td>
 		</tr>
 		<tr>
@@ -14827,15 +14831,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -14843,15 +14847,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -14859,7 +14863,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14881,7 +14885,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_6379907d-0f21-4c89-b34b-fe48a65f4afe"></a>Term Name  bdqcore:6379907d-0f21-4c89-b34b-fe48a65f4afe</th>
+			<th colspan="2"><a id="bdqcore_f22539ef-029b-4edb-ad17-add4363f7395"></a>Term Name  bdqcore:f22539ef-029b-4edb-ad17-add4363f7395</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14894,27 +14898,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>88</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
-			<td>iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6379907d-0f21-4c89-b34b-fe48a65f4afe-2023-09-30</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2023-09-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6379907d-0f21-4c89-b34b-fe48a65f4afe</td>
+			<td>None</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty</td>
 		</tr>
 		<tr>
@@ -14922,15 +14926,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -14938,15 +14942,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -14954,7 +14958,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -14989,27 +14993,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>36</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate In Range</td>
 		</tr>
 		<tr>
@@ -15017,19 +15021,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTDATE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -15037,15 +15041,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15053,7 +15057,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15088,27 +15092,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>33</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Not Empty</td>
 		</tr>
 		<tr>
@@ -15116,15 +15120,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -15132,15 +15136,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -15148,7 +15152,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15183,27 +15187,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>66</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Standard</td>
 		</tr>
 		<tr>
@@ -15211,15 +15215,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_EVENTDATE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -15227,15 +15231,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15243,7 +15247,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15278,27 +15282,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>28</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-17</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:family Found</td>
 		</tr>
 		<tr>
@@ -15306,19 +15310,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_FAMILY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -15326,15 +15330,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15342,7 +15346,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15377,27 +15381,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>122</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:genus Found</td>
 		</tr>
 		<tr>
@@ -15405,19 +15409,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_GENUS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -15425,15 +15429,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15441,7 +15445,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15476,27 +15480,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>78</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Not Empty</td>
 		</tr>
 		<tr>
@@ -15504,15 +15508,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -15520,15 +15524,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -15536,7 +15540,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15571,27 +15575,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>81</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Found</td>
 		</tr>
 		<tr>
@@ -15599,19 +15603,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_KINGDOM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -15619,15 +15623,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15635,7 +15639,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15670,27 +15674,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>216</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2024-01-28</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-01-28</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Not Empty</td>
 		</tr>
 		<tr>
@@ -15698,15 +15702,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_KINGDOM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -15714,15 +15718,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -15730,7 +15734,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15765,27 +15769,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>187</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumDepthInMeters In Range</td>
 		</tr>
 		<tr>
@@ -15793,19 +15797,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MAXDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -15813,15 +15817,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15829,7 +15833,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15864,27 +15868,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>112</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumElevationInMeters In Range</td>
 		</tr>
 		<tr>
@@ -15892,19 +15896,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MAXELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -15912,15 +15916,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -15928,7 +15932,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -15963,27 +15967,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>107</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters In Range</td>
 		</tr>
 		<tr>
@@ -15991,19 +15995,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16011,15 +16015,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16027,7 +16031,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16062,27 +16066,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>39</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters In Range</td>
 		</tr>
 		<tr>
@@ -16090,19 +16094,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16110,15 +16114,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16126,7 +16130,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16161,27 +16165,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>108</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
 		</tr>
 		<tr>
@@ -16189,15 +16193,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16205,15 +16209,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: maxelevation</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16221,7 +16225,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16256,27 +16260,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>126</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:month Standard</td>
 		</tr>
 		<tr>
@@ -16284,15 +16288,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_MONTH_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16300,15 +16304,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16316,7 +16320,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16351,27 +16355,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>259</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2024-02-07</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-07</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:namePublishedInYear Not Empty</td>
 		</tr>
 		<tr>
@@ -16379,15 +16383,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16395,15 +16399,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -16411,7 +16415,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16446,27 +16450,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>47</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceID Not Empty</td>
 		</tr>
 		<tr>
@@ -16474,15 +16478,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -16490,15 +16494,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -16506,7 +16510,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16541,27 +16545,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>117</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Not Empty</td>
 		</tr>
 		<tr>
@@ -16569,15 +16573,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -16585,15 +16589,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -16601,7 +16605,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16636,27 +16640,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>116</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard</td>
 		</tr>
 		<tr>
@@ -16664,19 +16668,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -16684,15 +16688,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16700,7 +16704,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16735,27 +16739,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>83</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:order Found</td>
 		</tr>
 		<tr>
@@ -16763,19 +16767,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_ORDER_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16783,15 +16787,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16799,7 +16803,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16834,27 +16838,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>277</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:pathway Standard</td>
 		</tr>
 		<tr>
@@ -16862,19 +16866,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_PATHWAY_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16882,15 +16886,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16898,7 +16902,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -16933,27 +16937,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>22</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2022-03-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2022-03-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:phylum Found</td>
 		</tr>
 		<tr>
@@ -16961,19 +16965,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_PHYLUM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -16981,15 +16985,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -16997,7 +17001,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17032,27 +17036,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>46</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found</td>
 		</tr>
 		<tr>
@@ -17060,19 +17064,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17080,15 +17084,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -17096,7 +17100,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17131,27 +17135,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>82</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty</td>
 		</tr>
 		<tr>
@@ -17159,15 +17163,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17175,15 +17179,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -17191,7 +17195,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17226,27 +17230,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>244</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2024-02-04</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-04</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameAuthorship Not Empty</td>
 		</tr>
 		<tr>
@@ -17254,15 +17258,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17270,15 +17274,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -17286,7 +17290,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17321,27 +17325,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>212</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Complete</td>
 		</tr>
 		<tr>
@@ -17349,15 +17353,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17365,15 +17369,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: complete</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -17381,7 +17385,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17416,27 +17420,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>120</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Not Empty</td>
 		</tr>
 		<tr>
@@ -17444,15 +17448,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17460,15 +17464,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -17476,7 +17480,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17511,27 +17515,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>283</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:sex Standard</td>
 		</tr>
 		<tr>
@@ -17539,19 +17543,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_SEX_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -17559,15 +17563,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -17575,7 +17579,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17610,27 +17614,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>130</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range</td>
 		</tr>
 		<tr>
@@ -17638,15 +17642,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -17654,15 +17658,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -17670,7 +17674,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17705,27 +17709,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>199</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:stateProvince Found</td>
 		</tr>
 		<tr>
@@ -17733,19 +17737,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_STATEPROVINCE_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -17753,15 +17757,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -17769,7 +17773,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17804,27 +17808,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>105</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty</td>
 		</tr>
 		<tr>
@@ -17832,15 +17836,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17848,15 +17852,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -17864,7 +17868,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17899,27 +17903,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>70</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous</td>
 		</tr>
 		<tr>
@@ -17927,19 +17931,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -17947,15 +17951,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: unambiguous</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -17963,7 +17967,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -17998,27 +18002,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>161</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Not Empty</td>
 		</tr>
 		<tr>
@@ -18026,15 +18030,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -18042,15 +18046,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -18058,7 +18062,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -18093,27 +18097,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>162</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Standard</td>
 		</tr>
 		<tr>
@@ -18121,19 +18125,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TAXONRANK_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -18141,15 +18145,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -18157,7 +18161,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -18192,27 +18196,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>285</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2024-08-03</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-03</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard</td>
 		</tr>
 		<tr>
@@ -18220,19 +18224,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_TYPESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -18240,15 +18244,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -18256,7 +18260,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -18291,27 +18295,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>84</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2024-08-23</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-23</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:year In Range</td>
 		</tr>
 		<tr>
@@ -18319,19 +18323,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_YEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -18339,15 +18343,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
@@ -18355,7 +18359,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -18390,27 +18394,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>49</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:year Not Empty</td>
 		</tr>
 		<tr>
@@ -18418,15 +18422,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_YEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
@@ -18434,15 +18438,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
@@ -18450,7 +18454,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -18485,27 +18489,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>101</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent</td>
 		</tr>
 		<tr>
@@ -18513,15 +18517,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
-			<td>COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
+			<td>None</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
@@ -18529,15 +18533,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Measure</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>MultiRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
@@ -18545,7 +18549,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
 		<tr>
@@ -18580,27 +18584,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>59</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Vaildation dwc:geodeticDatum Standard</td>
 		</tr>
 		<tr>
@@ -18608,19 +18612,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:geodeticDatum</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -18628,19 +18632,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -18652,7 +18656,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</li></ul></td>
 		</tr>
 		<tr>
@@ -18687,27 +18691,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>24</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
@@ -18715,15 +18719,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:minimumDepthInMeters,dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?</td>
 		</tr>
 		<tr>
@@ -18731,19 +18735,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: maxdepth</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -18755,7 +18759,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -18786,27 +18790,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>123</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation Classification Consistent</td>
 		</tr>
 		<tr>
@@ -18814,23 +18818,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -18838,19 +18842,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -18862,7 +18866,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -18897,27 +18901,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>50</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-26</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation Coordinates dwc:countryCode Consistent</td>
 		</tr>
 		<tr>
@@ -18925,23 +18929,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority,bdq:spatialBufferInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Do the geographic coordinates fall on or within the boundaries of the territory given in dwc:countryCode or its Exclusive Economic Zone?</td>
 		</tr>
 		<tr>
@@ -18949,19 +18953,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -18973,7 +18977,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li></ul></td>
 		</tr>
 		<tr>
@@ -19016,27 +19020,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>56</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation Coordinates dwc:stateProvince Consistent</td>
 		</tr>
 		<tr>
@@ -19044,23 +19048,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:stateProvince,dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority,bdq:spatialBufferInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?</td>
 		</tr>
 		<tr>
@@ -19068,19 +19072,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -19092,7 +19096,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents </li><li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li><li>ESRI (2020) World Administrative Divisions. https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b</li><li>ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames</li></ul></td>
 		</tr>
 		<tr>
@@ -19127,27 +19131,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>87</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2023-06-20</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-06-20</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation Coordinates Not Zero</td>
 		</tr>
 		<tr>
@@ -19155,15 +19159,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?</td>
 		</tr>
 		<tr>
@@ -19171,19 +19175,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Likeliness: notzero</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Likeliness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Likely</td>
 		</tr>
 		<tr>
@@ -19195,7 +19199,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
 		<tr>
@@ -19230,27 +19234,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>51</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2024-08-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation Coordinates Terrestrial Marine</td>
 		</tr>
 		<tr>
@@ -19258,7 +19262,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
@@ -19266,19 +19270,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:scientificName</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:taxonIsMarine,bdq:geospatialLand,bdq:spatialBufferInMeters,bdq:assumptionOnUnknownBiome</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?</td>
 		</tr>
 		<tr>
@@ -19286,19 +19290,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -19310,7 +19314,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, OBIS</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org/</li> <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org/</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org/ </li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li><li>Natural Earth (2009) Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li><li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li></ul></td>
 		</tr>
 		<tr>
@@ -19345,27 +19349,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>103</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dc:type Not Empty</td>
 		</tr>
 		<tr>
@@ -19373,15 +19377,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dc:type</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dc:type?</td>
 		</tr>
 		<tr>
@@ -19389,19 +19393,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -19413,7 +19417,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li></ul></td>
 		</tr>
 		<tr>
@@ -19444,27 +19448,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>91</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dc:type Standard</td>
 		</tr>
 		<tr>
@@ -19472,19 +19476,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dc:type</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value in dc:type occur as a value in the DCMI type vocabulary?</td>
 		</tr>
 		<tr>
@@ -19492,19 +19496,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -19516,7 +19520,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li></ul></td>
 		</tr>
 		<tr>
@@ -19559,27 +19563,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>99</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dcterms:license Not Empty</td>
 		</tr>
 		<tr>
@@ -19587,15 +19591,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dcterms:license</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dcterms:license?</td>
 		</tr>
 		<tr>
@@ -19603,19 +19607,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -19623,7 +19627,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"],[dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li><li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li></ul></td>
 		</tr>
 		<tr>
@@ -19658,27 +19662,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>38</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dcterms:license Standard</td>
 		</tr>
 		<tr>
@@ -19686,23 +19690,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dcterms:license</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dcterms:license occur in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -19710,19 +19714,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -19734,7 +19738,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>John Wieczorek</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li><li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li></ul></td>
 		</tr>
 		<tr>
@@ -19769,27 +19773,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>40</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dcterms:Location Not Empty</td>
 		</tr>
 		<tr>
@@ -19797,15 +19801,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryCode,dwc:stateProvince,dwc:county,dwc:municipality,dwc:waterBody,dwc:island,dwc:islandGroup,dwc:locality,dwc:locationID,dwc:verbatimLocality,dwc:decimalLatitude,dwc:decimalLongitude,dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:footprintWKT</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in any of the Darwin Core spatial terms that could specify a location?</td>
 		</tr>
 		<tr>
@@ -19813,19 +19817,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -19837,7 +19841,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -19872,27 +19876,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>58</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:basisOfRecord Not Empty</td>
 		</tr>
 		<tr>
@@ -19900,15 +19904,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:basisOfRecord</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:basisOfRecord?</td>
 		</tr>
 		<tr>
@@ -19916,19 +19920,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -19967,27 +19971,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>104</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-08-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:basisOfRecord Standard</td>
 		</tr>
 		<tr>
@@ -19995,23 +19999,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Record-level</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:basisOfRecord</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -20019,19 +20023,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -20074,27 +20078,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>77</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:class Found</td>
 		</tr>
 		<tr>
@@ -20102,23 +20106,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:class</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -20126,19 +20130,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -20146,7 +20150,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority"],[dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,  Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -20181,27 +20185,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>109</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:coordinateUncertaintyInMeters In Range</td>
 		</tr>
 		<tr>
@@ -20209,15 +20213,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:coordinateUncertaintyInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509?</td>
 		</tr>
 		<tr>
@@ -20225,19 +20229,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -20249,7 +20253,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Wikipedia (2020) Great-circle distance. https://en.wikipedia.org/wiki/Great-circle_distance</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -20284,27 +20288,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>62</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:country dwc:countryCode Consistent</td>
 		</tr>
 		<tr>
@@ -20312,19 +20316,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:country,dwc:countryCode</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode?</td>
 		</tr>
 		<tr>
@@ -20332,19 +20336,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -20356,7 +20360,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html/li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -20391,27 +20395,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>201</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:country dwc:stateProvince Unambiguous</td>
 		</tr>
 		<tr>
@@ -20419,23 +20423,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:country,dwc:stateProvince</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -20443,19 +20447,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: unambiguous</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Unambiguous</td>
 		</tr>
 		<tr>
@@ -20467,7 +20471,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet, Kurator</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li> <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li></ul></td>
 		</tr>
 		<tr>
@@ -20510,27 +20514,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>21</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-08-19</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-24</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-19</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:country Found</td>
 		</tr>
 		<tr>
@@ -20538,23 +20542,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:country</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:country occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -20562,19 +20566,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -20586,7 +20590,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -20621,27 +20625,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>42</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:country Not Empty</td>
 		</tr>
 		<tr>
@@ -20649,7 +20653,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:country</td>
 		</tr>
 		<tr>
@@ -20657,11 +20661,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:countryCode</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:country?</td>
 		</tr>
 		<tr>
@@ -20669,19 +20673,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -20689,7 +20693,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is bdq:NotEmpty"],[dwc:country="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country is bdq:Empty"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -20732,27 +20736,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>98</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-09-27</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-27</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:countryCode Not Empty</td>
 		</tr>
 		<tr>
@@ -20760,15 +20764,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:countryCode</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:countryCode?</td>
 		</tr>
 		<tr>
@@ -20776,19 +20780,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -20796,7 +20800,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdq:NotEmpty"],[dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdq:Empty"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li></ul></td>
 		</tr>
 		<tr>
@@ -20839,27 +20843,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>20</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-19</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-19</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:countryCode Standard</td>
 		</tr>
 		<tr>
@@ -20867,19 +20871,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:countryCode</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?</td>
 		</tr>
 		<tr>
@@ -20887,19 +20891,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -20911,7 +20915,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -20946,27 +20950,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>76</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:dateIdentified In Range</td>
 		</tr>
 		<tr>
@@ -20974,7 +20978,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:dateIdentified</td>
 		</tr>
 		<tr>
@@ -20982,19 +20986,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:dateIdentified within Parameter ranges and either overlap or is later than dwc:eventDate?</td>
 		</tr>
 		<tr>
@@ -21002,19 +21006,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Likeliness: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Likeliness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -21026,7 +21030,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>GBIF, ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -21069,27 +21073,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>69</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:dateIdentified Standard</td>
 		</tr>
 		<tr>
@@ -21097,15 +21101,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Identification</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:dateIdentified</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:dateIdentified a valid ISO date?</td>
 		</tr>
 		<tr>
@@ -21113,19 +21117,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -21133,7 +21137,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:dateIdentified="1963-03-08T14:07": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:dateIdentified is a valid ISO 8601-1:2019 date"],[dwc:dateIdentified="1963-03-08X14:07-0600": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:dateIdentified is not a valid ISO 8601-1:2019 date"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -21172,27 +21176,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>125</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:day In Range</td>
 		</tr>
 		<tr>
@@ -21200,15 +21204,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:day,dwc:month,dwc:year</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive or 29, 30 or 31 given the relative month and year?</td>
 		</tr>
 		<tr>
@@ -21216,19 +21220,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -21240,7 +21244,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -21283,27 +21287,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>147</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:day Standard</td>
 		</tr>
 		<tr>
@@ -21311,15 +21315,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:day</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:day an integer between 1 and 31 inclusive?</td>
 		</tr>
 		<tr>
@@ -21327,19 +21331,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -21390,27 +21394,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>79</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:decimalLatitude In Range</td>
 		</tr>
 		<tr>
@@ -21418,15 +21422,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLatitude</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?</td>
 		</tr>
 		<tr>
@@ -21434,19 +21438,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -21458,7 +21462,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -21489,27 +21493,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>119</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:decimalLatitude Not Empty</td>
 		</tr>
 		<tr>
@@ -21517,15 +21521,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLatitude</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:decimalLatitude?</td>
 		</tr>
 		<tr>
@@ -21533,19 +21537,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -21557,7 +21561,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -21588,27 +21592,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>30</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:decimalLongitude In Range</td>
 		</tr>
 		<tr>
@@ -21616,15 +21620,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?</td>
 		</tr>
 		<tr>
@@ -21632,19 +21636,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -21656,7 +21660,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -21687,27 +21691,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>96</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:decimalLongitude Not Empty</td>
 		</tr>
 		<tr>
@@ -21715,15 +21719,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:decimalLongitude</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:decimalLongitude?</td>
 		</tr>
 		<tr>
@@ -21731,19 +21735,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -21751,7 +21755,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:NotEmpty"],[dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:Empty"]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -21782,27 +21786,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>275</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:degreeofEstablishment Standard</td>
 		</tr>
 		<tr>
@@ -21810,23 +21814,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:degreeOfEstablishment</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -21834,19 +21838,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -21858,7 +21862,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://dwc.tdwg.org/dwc/doc/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
@@ -21893,27 +21897,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>131</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:endDayOfYear In Range</td>
 		</tr>
 		<tr>
@@ -21921,7 +21925,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:endDayOfYear</td>
 		</tr>
 		<tr>
@@ -21929,11 +21933,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?</td>
 		</tr>
 		<tr>
@@ -21941,19 +21945,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -22004,27 +22008,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>268</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-02-08</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-08</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:establishmentMeans Standard</td>
 		</tr>
 		<tr>
@@ -22032,23 +22036,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:establishmentMeans</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -22056,19 +22060,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -22080,7 +22084,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
@@ -22115,27 +22119,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>67</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:Event Consistent</td>
 		</tr>
 		<tr>
@@ -22143,15 +22147,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate,dwc:day,dwc:month,dwc:year,dwc:startDayOfYear,dwc:endDayOfYear</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?</td>
 		</tr>
 		<tr>
@@ -22159,19 +22163,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -22222,27 +22226,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>88</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2023-09-30</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-30</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:Event Temporal Not Empty</td>
 		</tr>
 		<tr>
@@ -22250,15 +22254,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate,dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear,dwc:verbatimEventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?</td>
 		</tr>
 		<tr>
@@ -22266,19 +22270,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -22329,27 +22333,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>36</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:eventDate In Range</td>
 		</tr>
 		<tr>
@@ -22357,23 +22361,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate,bdq:latestValidDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:eventDate entirely with the Parameter Range?</td>
 		</tr>
 		<tr>
@@ -22381,19 +22385,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -22405,7 +22409,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -22448,27 +22452,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>33</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:eventDate Not Empty</td>
 		</tr>
 		<tr>
@@ -22476,15 +22480,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:eventDate?</td>
 		</tr>
 		<tr>
@@ -22492,19 +22496,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -22551,27 +22555,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>66</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-16</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:eventDate Standard</td>
 		</tr>
 		<tr>
@@ -22579,15 +22583,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:eventDate a valid ISO date?</td>
 		</tr>
 		<tr>
@@ -22595,19 +22599,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -22619,7 +22623,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Paul Morris</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li><li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li><li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li></ul></td>
 		</tr>
 		<tr>
@@ -22662,27 +22666,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>28</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-17</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:family Found</td>
 		</tr>
 		<tr>
@@ -22690,23 +22694,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:family</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -22714,19 +22718,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -22738,7 +22742,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -22773,27 +22777,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>122</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:genus Found</td>
 		</tr>
 		<tr>
@@ -22801,23 +22805,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:genus</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -22825,19 +22829,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -22849,7 +22853,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -22884,27 +22888,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>78</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:geodeticDatum Not Empty</td>
 		</tr>
 		<tr>
@@ -22912,15 +22916,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:geodeticDatum</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:geodeticDatum?</td>
 		</tr>
 		<tr>
@@ -22928,19 +22932,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -22948,7 +22952,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[dwc:geodeticDatum="UTM": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:NotEmpty"],[dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:Empty."]</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li>  </ul></td>
 		</tr>
 		<tr>
@@ -22979,27 +22983,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>81</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:kingdom Found</td>
 		</tr>
 		<tr>
@@ -23007,23 +23011,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:kingdom</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -23031,19 +23035,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -23055,7 +23059,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -23090,27 +23094,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>216</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-01-28</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-01-28</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:kingdom Not Empty</td>
 		</tr>
 		<tr>
@@ -23118,15 +23122,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:kingdom</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:kingdom?</td>
 		</tr>
 		<tr>
@@ -23134,19 +23138,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -23185,27 +23189,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>187</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:maximumDepthInMeters In Range</td>
 		</tr>
 		<tr>
@@ -23213,23 +23217,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:maximumDepthInMeters within the Parameter range?</td>
 		</tr>
 		<tr>
@@ -23237,19 +23241,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -23261,7 +23265,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -23296,27 +23300,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>112</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:maximumElevationInMeters In Range</td>
 		</tr>
 		<tr>
@@ -23324,23 +23328,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:maximumElevationInMeters</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:maximumElevationInMeters of a single record within a valid range?</td>
 		</tr>
 		<tr>
@@ -23348,19 +23352,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -23372,7 +23376,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li> <li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica </li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -23407,27 +23411,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>107</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:minimumDepthInMeters In Range</td>
 		</tr>
 		<tr>
@@ -23435,23 +23439,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:minimumDepthInMeters</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:minimumDepthInMeters within the Parameter range?</td>
 		</tr>
 		<tr>
@@ -23459,19 +23463,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -23483,7 +23487,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Wikipedia (2020). Extreme points on Earth (https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)</li></ul></td>
 		</tr>
 		<tr>
@@ -23518,27 +23522,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>39</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:minimumElevationInMeters In Range</td>
 		</tr>
 		<tr>
@@ -23546,23 +23550,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:minimumElevationInMeters</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:minimumElevationInMeters within the Parameter range?</td>
 		</tr>
 		<tr>
@@ -23570,19 +23574,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -23594,7 +23598,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li><li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica</li><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -23629,27 +23633,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>108</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
 		</tr>
 		<tr>
@@ -23657,15 +23661,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:minimumElevationInMeters,dwc:maximumElevationInMeters</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?</td>
 		</tr>
 		<tr>
@@ -23673,19 +23677,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: maxelevation</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -23697,7 +23701,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>@Tasilee</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
@@ -23728,27 +23732,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>126</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:month Standard</td>
 		</tr>
 		<tr>
@@ -23756,15 +23760,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:month</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive?</td>
 		</tr>
 		<tr>
@@ -23772,19 +23776,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -23831,27 +23835,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>259</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-02-07</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-07</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:namePublishedInYear Not Empty</td>
 		</tr>
 		<tr>
@@ -23859,15 +23863,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:namePublishedInYear</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:namePublishedInYear?</td>
 		</tr>
 		<tr>
@@ -23875,19 +23879,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -23926,27 +23930,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>47</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:occurrenceID Not Empty</td>
 		</tr>
 		<tr>
@@ -23954,15 +23958,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:occurrenceID</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:occurrenceID?</td>
 		</tr>
 		<tr>
@@ -23970,19 +23974,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -24021,27 +24025,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>117</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:occurrenceStatus Not Empty</td>
 		</tr>
 		<tr>
@@ -24049,15 +24053,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:occurrenceStatus</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:occurrenceStatus?</td>
 		</tr>
 		<tr>
@@ -24065,19 +24069,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -24116,27 +24120,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>116</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:occurrenceStatus Standard</td>
 		</tr>
 		<tr>
@@ -24144,23 +24148,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:occurrenceStatus</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -24168,19 +24172,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -24231,27 +24235,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>83</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:order Found</td>
 		</tr>
 		<tr>
@@ -24259,23 +24263,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:order</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -24283,19 +24287,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -24307,7 +24311,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -24342,27 +24346,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>277</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:pathway Standard</td>
 		</tr>
 		<tr>
@@ -24370,23 +24374,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:pathway</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:pathway occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -24394,19 +24398,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -24418,7 +24422,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084 h.ttps://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
@@ -24453,27 +24457,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>22</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2022-03-25</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2022-03-25</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:phylum Found</td>
 		</tr>
 		<tr>
@@ -24481,23 +24485,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:phylum</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -24505,19 +24509,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -24529,7 +24533,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -24564,27 +24568,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>46</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:scientificName Found</td>
 		</tr>
 		<tr>
@@ -24592,23 +24596,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificName</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -24616,19 +24620,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -24640,7 +24644,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</li></ul></td>
 		</tr>
 		<tr>
@@ -24679,27 +24683,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>82</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:scientificName Not Empty</td>
 		</tr>
 		<tr>
@@ -24707,15 +24711,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificName</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:scientificName?</td>
 		</tr>
 		<tr>
@@ -24723,19 +24727,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -24747,7 +24751,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA,GBIF,OBIS</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -24778,27 +24782,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>244</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-02-04</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-04</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:scientificNameAuthorship Not Empty</td>
 		</tr>
 		<tr>
@@ -24806,15 +24810,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificNameAuthorship</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:scientificNameAuthorship?</td>
 		</tr>
 		<tr>
@@ -24822,19 +24826,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -24873,27 +24877,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>212</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:scientificNameID Complete</td>
 		</tr>
 		<tr>
@@ -24901,15 +24905,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificNameID</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:scientificNameID contain a complete identifier?</td>
 		</tr>
 		<tr>
@@ -24917,19 +24921,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: complete</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Complete</td>
 		</tr>
 		<tr>
@@ -24941,7 +24945,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2 December 2023</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li><li>Wikipedia (2024) LSID (Life Science Identifier). https://en.wikipedia.org/wiki/LSID</li><li>Wikipedia (2024) Uniform Resource Name (URN). https://en.wikipedia.org/wiki/Uniform_Resource_Name</ul></td>
 		</tr>
 		<tr>
@@ -24976,27 +24980,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>120</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:scientificNameID Not Empty</td>
 		</tr>
 		<tr>
@@ -25004,15 +25008,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificNameID</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:scientificNameID?</td>
 		</tr>
 		<tr>
@@ -25020,19 +25024,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -25044,7 +25048,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -25075,27 +25079,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>283</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2024-02-09</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-02-09</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:sex Standard</td>
 		</tr>
 		<tr>
@@ -25103,23 +25107,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:sex</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:sex occur in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -25127,19 +25131,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -25151,7 +25155,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml</li></ul></td>
 		</tr>
 		<tr>
@@ -25186,27 +25190,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>130</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:startDayOfYear In Range</td>
 		</tr>
 		<tr>
@@ -25214,7 +25218,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:startDayOfYear</td>
 		</tr>
 		<tr>
@@ -25222,11 +25226,11 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:eventDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?</td>
 		</tr>
 		<tr>
@@ -25234,19 +25238,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -25297,27 +25301,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>199</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-25</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:stateProvince Found</td>
 		</tr>
 		<tr>
@@ -25325,23 +25329,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dcterms:Location</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:stateProvince</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -25349,19 +25353,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: found</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Found</td>
 		</tr>
 		<tr>
@@ -25373,7 +25377,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li></ul></td>
 		</tr>
 		<tr>
@@ -25408,27 +25412,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>105</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-06</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:Taxon Not Empty</td>
 		</tr>
 		<tr>
@@ -25436,15 +25440,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:taxonID,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:parentNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:scientificName,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:infragenericEpithet,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:vernacularName,dwc:cultivarEpithet</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in any of the terms needed to determine that the taxon exists?</td>
 		</tr>
 		<tr>
@@ -25452,19 +25456,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -25507,27 +25511,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>70</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:Taxon Unambiguous</td>
 		</tr>
 		<tr>
@@ -25535,23 +25539,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:taxonID,dwc:scientificName,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:infragenericEpithet,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:cultivarEpithet,dwc:vernacularName,dwc:scientificNameAuthorship,dwc:taxonRank</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms?</td>
 		</tr>
 		<tr>
@@ -25559,19 +25563,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: unambiguous</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Unambiguous</td>
 		</tr>
 		<tr>
@@ -25583,7 +25587,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF, CRIA</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
@@ -25618,27 +25622,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>161</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:taxonRank Not Empty</td>
 		</tr>
 		<tr>
@@ -25646,15 +25650,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:taxonRank</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:taxonRank?</td>
 		</tr>
 		<tr>
@@ -25662,19 +25666,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -25686,7 +25690,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TDWG2018</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF (2015) Taxonomic Rank GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/rank.xml</li></ul></td>
 		</tr>
 		<tr>
@@ -25717,27 +25721,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>162</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:taxonRank Standard</td>
 		</tr>
 		<tr>
@@ -25745,23 +25749,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:taxonRank</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -25769,19 +25773,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -25793,7 +25797,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TDWG2018</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li></ul></td>
 		</tr>
 		<tr>
@@ -25828,27 +25832,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>285</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-08-03</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-07</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-03</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:typeStatus Standard</td>
 		</tr>
 		<tr>
@@ -25856,23 +25860,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:typeStatus</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Does the value of dwc:typeStatus occur in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
@@ -25880,19 +25884,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: standard</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Standard</td>
 		</tr>
 		<tr>
@@ -25904,7 +25908,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul></td>
 		</tr>
 		<tr>
@@ -25939,27 +25943,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>84</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-08-23</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-10-14</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2024-08-23</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:year In Range</td>
 		</tr>
 		<tr>
@@ -25967,23 +25971,23 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:year</td>
 		</tr>
 		<tr>
-			<td>Parameters</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate,bdq:latestValidDate</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>AuthoritiesDefaults</td>
+			<td>None</td>
 			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the value of dwc:year within the Parameter range?</td>
 		</tr>
 		<tr>
@@ -25991,19 +25995,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Conformance: inrange</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Conformance</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>InRange</td>
 		</tr>
 		<tr>
@@ -26054,27 +26058,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>49</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2023-09-17</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-04</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-17</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation dwc:year Not Empty</td>
 		</tr>
 		<tr>
@@ -26082,15 +26086,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Event</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:year</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is there a value in dwc:year?</td>
 		</tr>
 		<tr>
@@ -26098,19 +26102,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Completeness: notempty</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Completeness</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>NotEmpty</td>
 		</tr>
 		<tr>
@@ -26157,27 +26161,27 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>101</td>
 		</tr>
 		<tr>
-			<td>historyNoteUrl</td>
+			<td>None</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
-			<td>iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2023-09-18</td>
 		</tr>
 		<tr>
-			<td>term_iri</td>
+			<td>None</td>
 			<td>https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b</td>
 		</tr>
 		<tr>
-			<td>issued</td>
+			<td>None</td>
 			<td>2024-09-05</td>
 		</tr>
 		<tr>
-			<td>DateLastUpdated</td>
+			<td>None</td>
 			<td>2023-09-18</td>
 		</tr>
 		<tr>
-			<td>prefLabel</td>
+			<td>None</td>
 			<td>Validation Polynomial Consistent</td>
 		</tr>
 		<tr>
@@ -26185,15 +26189,15 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
-			<td>InformationElement:ActedUpon</td>
+			<td>None</td>
 			<td>dwc:scientificName,dwc:genericName,dwc:specificEpithet,dwc:infraspecificEpithet</td>
 		</tr>
 		<tr>
-			<td>Specification</td>
+			<td>None</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
+			<td>None</td>
 			<td>Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet?</td>
 		</tr>
 		<tr>
@@ -26201,19 +26205,19 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Consistency: consistent</td>
 		</tr>
 		<tr>
-			<td>Type</td>
+			<td>None</td>
 			<td>Validation</td>
 		</tr>
 		<tr>
-			<td>Resource Type</td>
+			<td>None</td>
 			<td>SingleRecord</td>
 		</tr>
 		<tr>
-			<td>Dimension</td>
+			<td>None</td>
 			<td>Consistency</td>
 		</tr>
 		<tr>
-			<td>Criterion</td>
+			<td>None</td>
 			<td>Consistent</td>
 		</tr>
 		<tr>
@@ -26225,7 +26229,7 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Paula Zermoglio</td>
 		</tr>
 		<tr>
-			<td>References</td>
+			<td>None</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>

@@ -17,7 +17,7 @@
 # Description
 # InformationElement:ActedUpon
 # InformationElement:Consulted	
-# Specification
+# ExpectedResponse -> as Specification
 # Parameters
 # Examples	
 # UseCases
@@ -275,7 +275,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print("#### Specification")
 			print()
-			print(row['Specification'])
+			print(row['ExpectedResponse'])
 			print()
 			print("#### Information Elements")
 			if not pandas.isna(row['InformationElement:ActedUpon']) : 
@@ -335,7 +335,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print("#### Specification")
 			print()
-			print(row['Specification'])
+			print(row['ExpectedResponse'])
 			print()
 			print("#### Information Elements")
 			if not pandas.isna(row['InformationElement:ActedUpon']) : 

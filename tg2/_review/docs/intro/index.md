@@ -258,6 +258,8 @@ There were many people who have made notable contributions at various times duri
 
 ## 6 Glossary
 
+Glossary of terms used in BDQ Core that are additional to those included in the various namespace vocabularies.
+
 | Label | Definition | Context | Comment |
 | ---- | ---- | ---- | ---- |
 | ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | Term-Action | Would be used only in an extension or in bdq:Response.comment. bdq:Response.status value for this case is bdq:AMENDED. |

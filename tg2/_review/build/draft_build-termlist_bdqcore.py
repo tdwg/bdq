@@ -152,7 +152,7 @@ for term in termLists:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
     # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","Specification","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
+    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
@@ -181,7 +181,7 @@ for term in termLists:
             for index,row in frame.iterrows():
             # PJM: TODO: just use column list?
                 # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-                row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['Specification'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"] ]
+                row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"] ]
                 # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
         
                 table_list.append(row_list)
@@ -207,11 +207,11 @@ for term in termLists:
         "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
         "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
         "term_localName": {"label":"Term Name","term":"rdf:value","normative":"true"}, 
-        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false"}, 
-        "Label": {"label":"Label","term":"rdfs:label","normative":"true"}, 
-        "Description": {"label":"Description","term":"rdfs:comment","normative":"false"}, 
-        "Specification": {"label":"ExpectedResponse","term":"bdqffdq:hasExpectedResponse","normative":"true"}, 
-        "Type": {"label":"Type","term":"rdf:type","normative":"true"}, 
+        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false","append":"An easy to read label for the test, similar to the Label, but in words."}, 
+        "Label": {"label":"Label","term":"rdfs:label","normative":"true","append":"A descriptive label for humans to use to identify the test."}, 
+        "Description": {"label":"Description","term":"rdfs:comment","normative":"false","append":"A brief description of what the test does"}, 
+        "ExpectedResponse": {"label":"ExpectedResponse","term":"bdqffdq:hasExpectedResponse","normative":"true"}, 
+        "Type": {"label":"Type","term":"rdf:type","normative":"true","append":"The type of the test, one of the subtypes of bdqffdq:DataQualityNeed."}, 
         "organized_in": {"label":"","term":"","normative":""}, 
         "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
         "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
@@ -227,6 +227,10 @@ for term in termLists:
         "Enhancement": {"label":"Enhancement","term":"bdqffdq:Enhancement","normative":"true"},
         "References": {"label":"References","term":"dcterms:bibliographicCitations","normative":""},
         "historyNoteUrl": {"label":"Developed As Github Issue","term":"skos:historyNote","normative":""},
+        "Method": {"label":"Method","term":"bdqffdq:Method","normative":"true","force":"true"},
+        "MethodLabel": {"label":"Method label","term":"rdfs:label","normative":"false","force":"true","append":"The label for the instance of the subclass of bdqffdq:Method for this test."},
+        "Specification": {"label":"Specification","term":"bdqffdq:Specification","normative":"true","force":"true"},
+        "SpecificationLabel": {"label":"Specification label","term":"rdfs:label","normative":"false","force":"true","append":"The label for the instance of the bdqffdq:Specification for this test"},
         "controlled_value_string": {"label":"Controlled Value","term":"","normative":"true"}
     }
     definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
@@ -347,7 +351,7 @@ for term in termLists:
     if True:
         filtered_table = terms_sorted_by_localname
     
-        # row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['Specification'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
+        # row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
         for row_index,row in filtered_table.iterrows():
             text += '<table>\n'
             curie =  "bdqcore:" + row['term_localName']
@@ -366,7 +370,11 @@ for term in termLists:
                 if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column != "IssueLabels" and column!="#" : 
                     if row[column] : 
                         text += '\t\t<tr>\n'
-                        text += '\t\t\t<td>{}</td>\n'.format(column)
+                        if column in term_concept_dictionary.keys() : 
+                           label = term_concept_dictionary.get(column).get('Label')
+                           text += '\t\t\t<td>{}</td>\n'.format(label)
+                        else : 
+                           text += '\t\t\t<td>{}</td>\n'.format(column)
                         text += '\t\t\t<td>{}</td>\n'.format(row[column])
                         text += '\t\t</tr>\n'
             text += '\t\t<tr>\n'
@@ -397,7 +405,6 @@ for term in termLists:
                 text += '\t\t\t<td>' + str(r['specificationLabel']) + '</td>\n'
                 text += '\t\t</tr>\n'
                
-    
             ## PJM: Decisions won't apply for draft standards.
             # Look up decisions related to this term
             #for drow_index,drow in decisions_df.iterrows():
