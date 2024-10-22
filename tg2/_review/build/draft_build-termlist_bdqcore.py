@@ -16,7 +16,7 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown, markdown_heading_to_link, build_term_key
+from function_lib import build_authors_contributors_markdown, build_authors_markdown, build_contributors_markdown, markdown_heading_to_link, build_term_key
 
 # -----------------
 # Configuration section
@@ -452,6 +452,8 @@ for term in termLists:
     header = header.replace('{authors_contributors}', contributors)
     contributors = build_contributors_markdown(contributors_yaml)
     header = header.replace('{contributors}', contributors)
+    contributors = build_authors_markdown(contributors_yaml)
+    header = header.replace('{authors}', contributors)
     header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
     header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])
     header = header.replace('{abstract}', document_configuration_yaml['abstract'])
