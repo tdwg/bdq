@@ -111,7 +111,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ### 1.6 Namespace Abbreviations
 
-**The following namespace abbreviations are used in this document:
+The following namespace abbreviations are used in this document:
 
 | **Prefix**   | **Namespace**                                    |
 |--------------|--------------------------------------------------|
@@ -283,13 +283,13 @@ Values of bdqffdq:hasAuthoritiesDefaults are text strings listing parameters in 
 
 The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make the expected response easier to read) as in the VALIDATION_COUNTRYCODE_STANDARD example above when a test is not parameterized, or when a test is parameterized, with corresponding bdqffdq:Arguments and bdqffdq:Parameters.  
 
-See section [# 2.3 Parameterising the tests (normative)](../../bdqcore/index.md#23-Parameterising-the-tests-normative) of the bdqcore landing page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
+See section [# 3.3 Parameterising the tests (normative)](../../bdqcore/index.md#33-parameterising-the-tests-normative) of the bdqcore landing page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
 
 #### 2.3.2.4 Default value strings in parameters (normative)
 
 When a test is defined as parameterized, implementations SHOULD support the parameter in addition to the information elements.  When a test is defined as parameterized, implementations MAY choose to only support the default value, and MAY do so internally to the test, without including the parameter(s) in the test API (note that implementations that choose to do so, will be unable to validate against all of the test validation data (see [8 Validating Test Implementations](#8-Validating-Test-Implementations-normative))).
 
-When the parameter has a default value and a resource, and an implemntation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value".  Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the test implementation.
+When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value".  Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the test implementation.
 
 #### 2.3.2.5 Example interpretation of a parameter string default value (non-normative)
 
@@ -402,7 +402,7 @@ Nothing in this section should be taken as a requirement for a particular format
 
 Nothing in this section should be taken as a requirement to how bdqffdq:Assertions or Responses are to be presented to consumers of data quality reports.  Implementations MAY present the results of Tests in any form appropriate for their consumers.  
 
-See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#21-Structure-of-Response-normative) for further normative guidance on representing Responses as RDF or in data structures.
+See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#31-structure-of-response-normative) for further normative guidance on representing Responses as RDF or in data structures.
 
 ### 5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)
 
@@ -896,7 +896,7 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 ### 8.6 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/)  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (**TODO: Cite**) Java annotations.
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (**TODO: Cite**) Java annotations.
 
 ## Acronyms
 
