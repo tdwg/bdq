@@ -226,7 +226,7 @@ for term in termLists:
         "Dimension": {"label":"DataQualityDimension","term":"bdqffdq:DataQualityDimension","normative":"true"},
         "Criterion": {"label":"Criterion","term":"bdqffdq:Criterion","normative":"true"},
         "Enhancement": {"label":"Enhancement","term":"bdqffdq:Enhancement","normative":"true"},
-        "References": {"label":"References","term":"dcterms:bibliographicCitations","normative":""},
+        "References": {"label":"References","term":"dcterms:bibliographicCitation","normative":""},
         "historyNoteUrl": {"label":"Developed As Github Issue","term":"skos:historyNote","normative":""},
         "Method": {"label":"Method","term":"bdqffdq:Method","normative":"true","force":"true"},
         "MethodLabel": {"label":"Method label","term":"rdfs:label","normative":"false","force":"true","append":"The label for the instance of the subclass of bdqffdq:Method for this test."},

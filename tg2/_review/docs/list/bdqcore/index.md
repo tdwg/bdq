@@ -161,7 +161,7 @@ The Test Descriptors are terms that are necessary to comprehensively describe ea
 | DataQualityDimension (bdqffdq:DataQualityDimension) | An aspect of data quality. | Completeness | normative |
 | Criterion (bdqffdq:Criterion) | Rule against which data are evaluated for conformance to quality criteria. |  | normative |
 | Enhancement (bdqffdq:Enhancement) | Description of a means by which data could be improved. | FillInFrom | normative |
-| References (dcterms:bibliographicCitations) |  | <ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul> |  |
+| References (dcterms:bibliographicCitation) | A bibliographic reference for the resource. | <ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul> |  |
 | Developed As Github Issue (skos:historyNote) | A note about the past state/use/meaning of a concept. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |
 | Method (bdqffdq:Method) |  |  | normative |
 | Method label (rdfs:label) | A human-readable name for the subject. In present context: The label for the instance of the subclass of bdqffdq:Method for this test. |  | non-normative |
