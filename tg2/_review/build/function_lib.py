@@ -58,8 +58,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
         "Modified":"The date in ISO 8601 Date format on which the most recent version of the term was issued."
     }  
     definitionTable = ""
-    definitionTable = definitionTable + "| Label | Term | Definition | Example | Normative | \n"
-    definitionTable = definitionTable + "| ----- | ---- | ---------- | ------- | --------- |\n"
+    definitionTable = definitionTable + "| Label (Term) | Definition | Example | Normative | \n"
+    definitionTable = definitionTable + "| ------------ | ---------- | ------- | --------- |\n"
     termrow = terms_sorted_by_localname.iloc[0]
     for key, value in term_concept_dictionary.items() :
         force = False
@@ -134,7 +134,7 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                  normative = "normative"
             elif normative == "false" :
                  normative = "non-normative"
-            definitionTable = definitionTable + "| {} | {} | {} | {} | {} |\n".format(label,termname,definition,example,normative)
+            definitionTable = definitionTable + "| {} ({}) | {} | {} | {} |\n".format(label,termname,definition,example,normative)
     return definitionTable
 
 # Function build_authors_contributors_markdown builds a markdown list of authors and contributors from 
