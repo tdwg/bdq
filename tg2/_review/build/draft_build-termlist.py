@@ -40,6 +40,9 @@ termLists = ['bdqdim','bdq','bdqenh','bdqcrit']
 github_branch = 'master' # "master" for production, something else for development
 githubBaseUri = 'https://raw.githubusercontent.com/tdwg/bdq/' + github_branch + '/tg2/core/generation/'
 
+# This is the configuration file to build a key to the terms used to describe the vocabulary terms.
+vocabulary_configuration_yaml_file = "vocabulary_configuration.yaml"
+
 # ----------------
 # Assumptions 
 # ---------------
@@ -55,6 +58,8 @@ contributors_yaml_file = 'authors_configuration.yaml'
 term_list_document = "temp_term-lists.csv"
 local_metadata_config_file = 'temp_namespaces.yaml'
 # (8) {term}_termlist-header.md, {term}_termlist-footer.md files are in build/templates/list/{term}/ along with a document_configuration.yaml file
+# (9) Each vocabulary has the same list of terms, dictionary to build key loaded from a common configuration file.
+#
 # see loop below through termLists
 # headerFileName = 'templates/list/{}/{}_termlist-header.md'.format(term,term)
 # footerFileName = 'templates/list/{}/{}_termlist-footer.md'.format(term,term)
@@ -81,6 +86,11 @@ display_order = ['']
 display_label = ['Vocabulary'] # these are the section labels for the categories in the page
 display_comments = [''] # these are the comments about the category to be appended following the section labels
 display_id = ['Vocabulary'] # these are the fragment identifiers for the associated sections for the categories
+
+# Load the vocabulary configuration YAML file from its local location.  
+# load from local file
+with open(vocabulary_configuration_yaml_file) as vcfy:
+   term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 
 # ---------------
 # Load header data
@@ -372,21 +382,7 @@ for term in termLists:
     
     # PJM: TODO: map from row column headers 
     # Dictionary of column heading: dictionary of label:, term, (could include normative}
-    term_concept_dictionary = {
-        "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
-        "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
-        "term_localName": {"label":"Term Name","term":"rdf:value","normative":"true"}, 
-        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false"}, 
-        "label": {"label":"Label","term":"rdfs:label","normative":"true"}, 
-        "comments": {"label":"Comments","term":"rdfs:comment","normative":"false"}, 
-        "definition": {"label":"Definition","term":"skos:definition","normative":"true"}, 
-        "rdf_type": {"label":"Type","term":"rdf:type","normative":"true"}, 
-        "organized_in": {"label":"","term":"","normative":""}, 
-        "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
-        "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
-        "flags": {"label":"","term":"","normative":""}, 
-        "controlled_value_string": {"label":"Controlled Value","term":"","normative":"true"}
-    }
+
     definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
 
     print('Generating terms table')

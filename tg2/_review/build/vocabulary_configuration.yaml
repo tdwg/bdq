@@ -1,0 +1,66 @@
+# ----------------
+# Configuration for key to terms in a basic vocabulary
+# ----------------
+
+# For each header in csv term-version file, provide the following: 
+
+#csvheader:
+#  label: the label to show for this term, required
+#  normative: true to list the term as normative, required
+#  term: the curie for the term as used, required
+#  append: Local meaning to append to the end of the definition, optional
+#  force: If true, show this entry in the key even if the csvheader is not present in the term-version file, optional
+
+comments:
+  label: Comments
+  normative: 'false'
+  term: rdfs:comment
+controlled_value_string:
+  label: Controlled Value
+  normative: 'true'
+  term: ''
+definition:
+  label: Definition
+  normative: 'true'
+  term: skos:definition
+flags:
+  label: ''
+  normative: ''
+  term: ''
+iri:
+  label: Term Version IRI
+  normative: 'true'
+  term: rdf:about
+issued:
+  label: Modified
+  normative: ''
+  term: dcterms:issued
+label:
+  label: Label
+  normative: 'true'
+  term: rdfs:label
+organized_in:
+  label: ''
+  normative: ''
+  term: ''
+prefLabel:
+  label: Preferred Label
+  normative: 'false'
+  term: skos:prefLabel
+rdf_type:
+  label: Type
+  normative: 'true'
+  term: rdf:type
+status:
+  label: Status
+  normative: ''
+  term: tdwgutility:status
+term_iri:
+  label: Term IRI
+  normative: 'true'
+  term: dcterms:isVersionOf
+term_localName:
+  label: Term Name
+  normative: 'true'
+  term: rdf:value
+
