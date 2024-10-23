@@ -82,6 +82,8 @@ Each Test is defined to take a specific set of input terms (InformationElements,
 
 Consider the Test VALIDATION_EVENTDATE_STANDARD, it takes as input the InformationElement dwc:eventDate from a single record, and then asks "Is the value of dwc:eventDate a valid ISO date?".  It will then produce a Response describing the conclusion it reached in asking that question for that record.
 
+#### 2.2.2 Data Quality Reports (non-normative) 
+
 #### 2.2.2 Responses From Tests (normative) 
 
 Reports SHOULD identify Tests to you using at least the Label (rdfs:Label) for the test class, e.g. VALIDATION_COUNTRY_FOUND.  
@@ -127,23 +129,31 @@ So a value of dwc:minDepth of 2000m would be NOT_COMPLIANT in this case; while w
 
 ## 3 Context for quality, uses and purposes (non-normative)
 
-TODO: Brief discussion of Use Cases
-
-Data does not have quality in the abstract, it only has quality with respect to some use.  The [bdqffdq:](../bdqffdq/index.md) Framework for data quality used in BDQ Core, describes uses for data as Use Cases, and expects that tests are run in suites that form policy for data quality with respect to Use Cases.    
-
-TODO: Brief discussion of Quality Control and Quality Assurance
+Data does not have quality in the abstract, it only has quality with respect to some use.  The [bdqffdq:](../bdqffdq/index.md) Framework for data quality used in BDQ Core, describes uses for data as Use Cases, and expects that tests are run in suites that form policy for data quality with respect to Use Cases.  That is, sets of tests are expected to be run together in order to assess quality of data for some specified use, and reports of results from test should be understood within the context of that use for the data.
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
-Data are found to be fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". 
+The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, Data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
+
+While the bdqffdq: Framework also provides a formal statement of Quality Control, the application of Qualtity Control in the wild can be much more nuanced.  At the point of intial data capture.....
+
+TODO: Text on context and QC, initial not able to enter, 
+reports on databases of record, targeted work effort, 
+analysis of reports may give single fix for multiple results for a test being non compliant,
+mapping for aggregation, reports from aggregators,
+analysis of reports may reveal simple mapping errors,
+improvement on data in stream during downstream analysis.
+
 
 ## 4 Using the BDQ Core Quick Reference Guide (non-normative)
 
 The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset provides a quick summary of the nature of each of the Tests, and some Test Descriptors can be used to filter the Tests to those that may be applicable to an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
-For each Test, the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test). Does the Test operate on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
+The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a description of each test indidually.  Data Quality Reports may vary in how they present this information, including displaying test results individually, aggregating counts of results for each test run over all records in a data set, and separating results into pre- and post-amendment phases.  In the latter case, results may be shown for all Validations and Measures run in a pre-amendment phase, then proposals for changes from all Amendments run in an amendment phase, and then results from the same Validations and Measures run in a post-amendement phase as if all proposed changes from the Amendments were accepted.  It is thus important to identify both the test for which results are being reported, and the context for the report.  The Quick Reference Guide describes what each test does independent of this context.
 
-Two examples of Test data input and output are provided to illustrate opposing behaviors of the test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other of "NOT_COMPLIANT".  See the implementation guide for information about the set of test validation data.   
+For each Test, the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test).  For each test the guide identifies whether the Test operates on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
+
+Two examples of Test data input and output are provided to illustrate opposing behaviors of the test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other of "NOT_COMPLIANT".  See the implementation guide for information about the set of test validation data. 
 
 Each Test lists UseCases describing data quality needs to which each Test is applicable. Notes provide additional guidance for understanding test results and for implementation.  
 
