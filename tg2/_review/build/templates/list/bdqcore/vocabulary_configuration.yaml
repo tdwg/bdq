@@ -1,0 +1,179 @@
+# ----------------
+# Configuration for key to terms in vocabulary
+# ----------------
+
+# For each header in csv term-version file, provide the following: 
+
+#csvheader:
+#  label: the label to show for this term, required
+#  normative: true to list the term as normative, required
+#  term: the curie for the term as used, required
+#  append: Local meaning to append to the end of the definition, optional
+#  force: If true, show this entry in the key even if the csvheader is not present in the term-version file, optional
+
+# TODO: 
+#"issueNumber"
+#"IE Class",
+#"Criterion Label"
+#"IssueState"
+#"IssueLabels",
+
+iri:
+  label: Term Version IRI
+  normative: 'true'
+  term: rdf:about
+term_iri:
+  label: Term IRI
+  normative: 'true'
+  term: dcterms:isVersionOf
+term_localName:
+  label: Term Name
+  normative: 'true'
+  term: rdf:value
+issued:
+  append: The most recent date for any change to any element of the test.
+  label: Modified
+  normative: ''
+  term: dcterms:issued
+Label:
+  append: A descriptive label for humans to use to identify the test.
+  label: Label
+  normative: 'true'
+  term: rdfs:label
+prefLabel:
+  append: An easy to read label for the test, similar to the Label, but in words.
+  label: Preferred Label
+  normative: 'false'
+  term: skos:prefLabel
+DateLastUpdated:
+  label: DateLastUpdated
+  normative: ''
+  term: bdqffdq:hasDateLastUpdated
+ArgumentGuids:
+  label: Guids for Arguments
+  normative: 'true'
+  term: bdqffdq:Argument
+AuthoritiesDefaults:
+  label: SourceAuthorities/Defaults
+  normative: ''
+  term: bdqffdq:hasAuthoritiesDefaults
+Criterion:
+  label: Criterion
+  normative: 'true'
+  term: bdqffdq:Criterion
+Description:
+  append: A brief description of what the test does
+  label: Description
+  normative: 'false'
+  term: rdfs:comment
+Dimension:
+  label: DataQualityDimension
+  normative: 'true'
+  term: bdqffdq:DataQualityDimension
+Enhancement:
+  label: Enhancement
+  normative: 'true'
+  term: bdqffdq:Enhancement
+ExpectedResponse:
+  append: The formal definition of how the test must be implemented.
+  label: ExpectedResponse
+  normative: 'true'
+  term: bdqffdq:hasExpectedResponse
+Examples: 
+  append: Examples of input and output data and test responses for a pass case and a fail case.
+  label: Examples
+  normative: 'false'
+  term: skos:example
+"Example Implementations (Mechanisms)":
+  label: Example Implementations
+  normative: 'false'
+  term: ????
+"Link to Specification Source Code":
+  label: Example Implementation Source Code
+  normative: 'false'
+  term: ????
+"InformationElement:ActedUpon":
+  label: InformationElements ActedUpon
+  normative: 'true'
+  term: bdqffdq:composedOf
+"InformationElement:Consulted":
+  label: InformationElements Consulted
+  normative: 'true'
+  term: bdqffdq:composedOf
+Method:
+  force: 'true'
+  label: Method
+  normative: 'true'
+  term: bdqffdq:Method
+MethodLabel:
+  append: The label for the instance of the subclass of bdqffdq:Method for this test.
+  force: 'true'
+  label: Method label
+  normative: 'false'
+  term: rdfs:label
+Notes:
+  append: Additional information to supplement the Specification.
+  label: Notes
+  normative: ''
+  term: skos:note
+Parameters:
+  label: Parameters
+  normative: 'true'
+  term: bdqffdq:Parameter
+References:
+  append: The minimum set of references that are required for an understanding of the nature of the test.
+  label: References
+  normative: ''
+  term: dcterms:bibliographicCitation
+Resource Type:
+  label: ResourceType
+  normative: ''
+  term: bdqffdq:ResourceType
+Source:
+  append: The origin of the concept of the test.
+  label: Source
+  normative: ''
+  term: skos:historyNote
+Specification:
+  force: 'true'
+  label: Specification
+  normative: 'true'
+  term: bdqffdq:Specification
+SpecificationLabel:
+  append: The label for the instance of the bdqffdq:Specification for this test
+  force: 'true'
+  label: Specification label
+  normative: 'false'
+  term: rdfs:label
+Type:
+  append: The type of the test, one of the subtypes of bdqffdq:DataQualityNeed.
+  label: Type
+  normative: 'true'
+  term: rdf:type
+UseCases:
+  append: One or more Use Cases where this test would apply.
+  label: Use Cases
+  normative: 'false'
+  term: bdqffdq:hasUseCase
+controlled_value_string:
+  label: Controlled Value
+  normative: 'true'
+  term: ''
+flags:
+  label: ''
+  normative: ''
+  term: ''
+historyNoteUrl:
+  append: A link to the github issue that provides a history (changes and comments) of the development of the test.
+  label: Developed As Github Issue
+  normative: ''
+  term: skos:historyNote
+organized_in:
+  label: ''
+  normative: ''
+  term: ''
+status:
+  label: Status
+  normative: ''
+  term: tdwgutility:status
+

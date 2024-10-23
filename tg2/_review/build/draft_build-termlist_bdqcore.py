@@ -141,6 +141,7 @@ for term in termLists:
     headerFileName = 'templates/list/{}/{}_termlist-header.md'.format(term,term)
     footerFileName = 'templates/list/{}/{}_termlist-footer.md'.format(term,term)
     document_configuration_yaml_file = 'templates/list/{}/document_configuration.yaml'.format(term)
+    vocabulary_configuration_yaml_file = 'templates/list/{}/vocabulary_configuration.yaml'.format(term)
     outFileName = '../docs/list/{}/index.md'.format(term)
     outRDFFileName = '../dist/{}.xml'.format(term)
     # there isn't one for bdqcore, closest is bdqcore_terms.csv
@@ -203,39 +204,13 @@ for term in termLists:
 
 
     # Create column list - custom list for bdqcore terms.
-    term_concept_dictionary = {
-        "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
-        "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
-        "term_localName": {"label":"Term Name","term":"rdf:value","normative":"true"}, 
-        "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false","append":"An easy to read label for the test, similar to the Label, but in words."}, 
-        "Label": {"label":"Label","term":"rdfs:label","normative":"true","append":"A descriptive label for humans to use to identify the test."}, 
-        "Description": {"label":"Description","term":"rdfs:comment","normative":"false","append":"A brief description of what the test does"}, 
-        "ExpectedResponse": {"label":"ExpectedResponse","term":"bdqffdq:hasExpectedResponse","normative":"true"}, 
-        "Type": {"label":"Type","term":"rdf:type","normative":"true","append":"The type of the test, one of the subtypes of bdqffdq:DataQualityNeed."}, 
-        "organized_in": {"label":"","term":"","normative":""}, 
-        "Notes": {"label":"Notes","term":"skos:note","normative":"","additional":"Additional information to supplement the Specification."}, 
-        "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
-        "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
-        "flags": {"label":"","term":"","normative":""}, 
-        "DateLastUpdated": {"label":"DateLastUpdated","term":"bdqffdq:hasDateLastUpdated","normative":""}, 
-        "InformationElement:ActedUpon": {"label":"InformationElements ActedUpon","term":"bdqffdq:composedOf","normative":"true"},
-        "InformationElement:ActedUpon": {"label":"InformationElements Consulted","term":"bdqffdq:composedOf","normative":"true"},
-        "Parameters": {"label":"Parameters","term":"bdqffdq:Parameter","normative":"true"},
-        "AuthoritiesDefaults": {"label":"SourceAuthorities/Defaults","term":"bdqffdq:hasAuthoritiesDefaults","normative":""},
-        "Resource Type": {"label":"ResourceType","term":"bdqffdq:ResourceType","normative":""},
-        "Dimension": {"label":"DataQualityDimension","term":"bdqffdq:DataQualityDimension","normative":"true"},
-        "Criterion": {"label":"Criterion","term":"bdqffdq:Criterion","normative":"true"},
-        "Enhancement": {"label":"Enhancement","term":"bdqffdq:Enhancement","normative":"true"},
-        "References": {"label":"References","term":"dcterms:bibliographicCitation","normative":""},
-        "historyNoteUrl": {"label":"Developed As Github Issue","term":"skos:historyNote","normative":""},
-        "Method": {"label":"Method","term":"bdqffdq:Method","normative":"true","force":"true"},
-        "MethodLabel": {"label":"Method label","term":"rdfs:label","normative":"false","force":"true","append":"The label for the instance of the subclass of bdqffdq:Method for this test."},
-        "Specification": {"label":"Specification","term":"bdqffdq:Specification","normative":"true","force":"true"},
-        "SpecificationLabel": {"label":"Specification label","term":"rdfs:label","normative":"false","force":"true","append":"The label for the instance of the bdqffdq:Specification for this test"},
-        "controlled_value_string": {"label":"Controlled Value","term":"","normative":"true"}
-    }
+    # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
+    # load from local file
+    with open(vocabulary_configuration_yaml_file) as vcfy:
+        term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
+
     definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
-    
+
     # ---------------
     # generate the index of terms grouped by category and sorted alphabetically by lowercase term local name
     # ---------------
