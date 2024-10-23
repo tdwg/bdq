@@ -155,11 +155,11 @@ The Test Descriptors are terms that are necessary to comprehensively describe ea
 | Modified (dcterms:issued) | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-04 |  |
 | DateLastUpdated (bdqffdq:hasDateLastUpdated) | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |  |
 | InformationElements Consulted (bdqffdq:composedOf) | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum | normative |
-| Parameters (bdqffdq:Parameter) | A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner. |  | normative |
-| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. |  |  |
+| Parameters (bdqffdq:Parameter) | A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner. | bdq:sourceAuthority | normative |
+| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]} |  |
 | ResourceType (bdqffdq:ResourceType) | Category of things that are data objects about which data quality assertions may be made. | SingleRecord |  |
 | DataQualityDimension (bdqffdq:DataQualityDimension) | An aspect of data quality. | Completeness | normative |
-| Criterion (bdqffdq:Criterion) | Rule against which data are evaluated for conformance to quality criteria. |  | normative |
+| Criterion (bdqffdq:Criterion) | Rule against which data are evaluated for conformance to quality criteria. | NotEmpty | normative |
 | Enhancement (bdqffdq:Enhancement) | Description of a means by which data could be improved. | FillInFrom | normative |
 | References (dcterms:bibliographicCitation) | A bibliographic reference for the resource. | <ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul> |  |
 | Developed As Github Issue (skos:historyNote) | A note about the past state/use/meaning of a concept. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |

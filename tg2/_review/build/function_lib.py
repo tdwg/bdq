@@ -127,6 +127,12 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                 definition = definition + " In present context: " + value['append']
             if key in termrow.keys() : 
                 example = termrow[key]
+                if not example : 
+                    ## first row does not contain a value, loop through to find a non-empty value
+                    for row_index,row in terms_sorted_by_localname.iterrows():
+                        if key in row.keys() and row[key] :
+                            example = row[key]
+                            break
             else : 
                 example = ""
             normative = value['normative']
