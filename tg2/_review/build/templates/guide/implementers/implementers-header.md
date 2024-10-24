@@ -418,10 +418,10 @@ When Amendment Tests are executed in a workflow where downstream amendments oper
 
 Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, AMENDMENT_EVENT_FROM_EVENTDATE (710fe118-17e1-440f-b428-88ba3f547d6d) SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
 
-AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812),
-AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d),
-AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR (eb0a44fa-241c-4d64-98df-ad4aa837307b),
-AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7).
+- AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812),
+- AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d),
+- AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR (eb0a44fa-241c-4d64-98df-ad4aa837307b),
+- AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7).
 
 AMENDMENT_SCIENTIFICNAME_FROM_TAXONID (f01fb3f9-2f7e-418b-9f51-adf50f202aea) SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: AMENDMENT_TAXONID_FROM_TAXON (431467d6-9b4b-48fa-a197-cd5379f5e889). 
 
