@@ -129,15 +129,14 @@ The following namespace abbreviations are used in this document:
 
 | Label (Term) | Definition | Example | Normative | 
 | ------------ | ---------- | ------- | --------- |
-| Term Version IRI (rdf:about) | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Term IRI (dcterms:isVersionOf) | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Term Name (rdf:value) | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Preferred Label (skos:prefLabel) | The preferred lexical label for a resource, in a given language. | Abstract Information Element | non-normative |
-| Label (rdfs:label) | A human-readable name for the subject. | Abstract Information Element | normative |
 | Comments (rdfs:comment) | A description of the subject resource. | Information elements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete Acted Upon or Consulted information elements. | non-normative |
 | Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. | An InformationElement described in abstract terms and not linked with one or more concrete terms. | normative |
+| Term Version IRI (rdf:about) | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
+| Label (rdfs:label) | A human-readable name for the subject. | Abstract Information Element | normative |
+| Preferred Label (skos:prefLabel) | The preferred lexical label for a resource, in a given language. | Abstract Information Element | non-normative |
 | Type (rdf:type) | The subject is an instance of a class. | http://www.w3.org/2002/07/owl#Class | normative |
-| Superclass (rdfs:subClassOf) | The subject is a subclass of a class. | https://rs.tdwg.org/bdqffdq/terms/InformationElement | normative |
+| Term IRI (dcterms:isVersionOf) | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
+| Term Name (rdf:value) | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
 
 
 ## 2 Use of Terms (normative)

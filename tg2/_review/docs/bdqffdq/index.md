@@ -424,6 +424,7 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 | Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. | An InformationElement described in abstract terms and not linked with one or more concrete terms. | normative |
 | Type (rdf:type) | The subject is an instance of a class. | http://www.w3.org/2002/07/owl#Class | normative |
 | SubClass Of (rdfs:subClassOf) | The subject is a subclass of a class. | https://rs.tdwg.org/bdqffdq/terms/InformationElement | normative |
+| Label (rdfs:label) | A human-readable name for the subject. | Abstract Information Element | normative |
 
 
 ### 3.2 Indexes

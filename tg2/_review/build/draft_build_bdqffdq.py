@@ -44,6 +44,7 @@ namespace_uri = 'https://rs.tdwg.org/bdqffdq'
 pref_namespace_prefix = "bdqffdq"
 #term = "bdqffdq"
 
+
 # Note: Each of the three documents has a configuration section below.
 
 # ---------------
@@ -80,20 +81,13 @@ outputFilename = "{}index.md".format(outputDirectory)
 headerFileName = '{}bdqffdq_landing-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqffdq_landing-footer.md'.format(sourceDirectory)
 document_configuration_yaml_file = '{}/document_configuration.yaml'.format(sourceDirectory)
+# This is the configuration file to build a key to the terms used to describe the vocabulary terms.
+vocabulary_configuration_yaml_file = "{}/vocabulary_configuration.yaml".format(sourceDirectory)
 
 # Name, Preferred Label, Definition, SubClass Of, Range, Comments, DifferentFrom
-term_concept_dictionary = {
-    "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
-    "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
-    "term_localName": {"label":"Name","term":"rdf:value","normative":"true"}, 
-    "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false"}, 
-    "comments": {"label":"Comments","term":"rdfs:comment","normative":"false"}, 
-    "definition": {"label":"Definition","term":"skos:definition","normative":"true"}, 
-    "rdf_type": {"label":"Type","term":"rdf:type","normative":"true"}, 
-    "superclass": {"label":"SubClass Of","term":"rdfs:subClassOf","normative":"true"}, 
-    "range": {"label":"","Range":"","term":"rdf:","normative":"true"}, 
-    "differentFrom": {"label":"DifferentFrom","term":"owl:","normative":"true"}, 
-}
+# Load the vocabulary configuration YAML file from its local location.  
+with open(vocabulary_configuration_yaml_file) as vcfy:
+   term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 
 # Build Landing Page Document
 
@@ -332,23 +326,13 @@ outputFilename = "{}index.md".format(outputDirectory)
 headerFileName = '{}bdqffdq_termlist-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqffdq_termlist-footer.md'.format(sourceDirectory)
 document_configuration_yaml_file = '{}/document_configuration.yaml'.format(sourceDirectory)
+# Use main vocabulary configuration file.
+vocabulary_configuration_yaml_file = 'vocabulary_configuration.yaml'
 
-term_concept_dictionary = {
-    "iri": {"label":"Term Version IRI","term":"rdf:about","normative":"true"}, 
-    "term_iri": {"label":"Term IRI","term":"dcterms:isVersionOf","normative":"true"}, 
-    "term_localName": {"label":"Term Name","term":"rdf:value","normative":"true"}, 
-    "prefLabel": {"label":"Preferred Label","term":"skos:prefLabel","normative":"false"}, 
-    "label": {"label":"Label","term":"rdfs:label","normative":"true"}, 
-    "comments": {"label":"Comments","term":"rdfs:comment","normative":"false"}, 
-    "definition": {"label":"Definition","term":"skos:definition","normative":"true"}, 
-    "rdf_type": {"label":"Type","term":"rdf:type","normative":"true"}, 
-    "superclass": {"label":"Superclass","term":"rdfs:subClassOf","normative":"true"}, 
-    "organized_in": {"label":"","term":"","normative":""}, 
-    "issued": {"label":"Modified","term":"dcterms:issued","normative":""}, 
-    "status": {"label":"Status","term":"tdwgutility:status","normative":""}, 
-    "flags": {"label":"","term":"","normative":""}, 
-    "controlled_value_string": {"label":"Controlled Value","term":"","normative":"true"}
-}
+# Name, Preferred Label, Definition, SubClass Of, Range, Comments, DifferentFrom
+# Load the vocabulary configuration YAML file from its local location.  
+with open(vocabulary_configuration_yaml_file) as vcfy:
+   term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 
 # Build Term-List Document
 
@@ -577,9 +561,28 @@ outputFilename = "{}index.md".format(outputDirectory)
 headerFileName = '{}bdqffdq_extension-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqffdq_extension-footer.md'.format(sourceDirectory)
 document_configuration_yaml_file = '{}/document_configuration.yaml'.format(sourceDirectory)
+vocabulary_configuration_yaml_file = '{}/vocabulary_configuration.yaml'.format(sourceDirectory)
 
 # Build Vocabulary Extension document
 
+# Name, Type, Range, DifferentFrom
+# Load the vocabulary configuration YAML file from its local location.  
+with open(vocabulary_configuration_yaml_file) as vcfy:
+   term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
+
+# Build definition table
+graph = rdflib.Graph()
+graph.parse(inputTermsOwlFilename, format="ttl")
+column_list = ['term_localName', 'range', 'rdf_type', 'differentFrom', 'label']
+# Obtain something similar to reported data to produce key
+sparql = prefixes + "SELECT distinct (?subject as ?term_localName) ?type ?range ?differentFrom ?label WHERE { ?subject rdf:type ?type . ?subject rdfs:label ?label . optional { ?subject rdfs:range ?range. } .  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x .  } } ORDER BY ?type ?subject"
+queryResult = graph.query(sparql)
+
+terms_df = pd.DataFrame(queryResult, columns = column_list)
+terms_sorted_by_label = terms_df.sort_values(by='label')
+terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
+
+definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
 # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
