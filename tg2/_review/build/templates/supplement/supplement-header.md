@@ -612,7 +612,7 @@ The development of each Test, with documentation of why particular decisions wer
 | NAME | A label to indicate that the test is related to Darwin Core terms in the dwc:Taxon Class. |  |
 | NEEDS WORK | A label that indicates that an issue (Test) requires more work before finalising. | Supports a workflow of contributors identifying tests needing work with this tag, and review of issues with this tag in task group meetings.  |
 | OTHER | A label to indicate that the test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. |  |
-| Parameterized | A label for a test that a bdq:Parameter may be set prior to a bdq:parameterizedTest being run. |  |
+| Parameterized | A label for a test that a bdq:Parameter may be set prior to a Parameterized Test being run. |  |
 | SPACE | A label to indicate that the test is related to Darwin Core terms in the dwc:Location Class. |  |
 | Supplementary | Conclusion that a test is regarded as not CORE (cf. the tag CORE) because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely to return a high percentage of either bdq:NOT_COMPLIANT or bdq:POTENTIAL_ISSUE records. A Supplementary test MAY be implemented in a local implementation if a suitable use case exists. | A Supplementary test may be made CORE at a later time. |
 | Test | Tests descriptions created by TG2, either CORE, Immature/Incomplete, Supplementary, or DO NOT IMPLEMENT. | Supports workflows for exporting tests from issues to process the markdown into csv files for review.  |
