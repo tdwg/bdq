@@ -45,7 +45,7 @@ Bibliographic citation
 
 This document lists the BDQ Core tests. These are the terms from the namespace `bdqcore:` (the core tests).  The description of these terms relies heavily on the [bdqffdq:](../bdqffdq/index.md) data quality framework vocabulary.  Terms are also used from the namespaces: [bdqdim:](../bdqdim/index.md) (data quality dimension from Veiga et al. 2017), [bdqenh:](../bdqenh/index.md) (test enhancements), [bdqcrit:](../bdqcrit/index.md) (test criteria), and [bdq:](../bdq/index.md) (additional vocabulary terms).  For background details see Chapman et al. (2017).
 
-The focus of this standard is the specifications for a suite of tests that operate on single Darwin Core (Wieczorek et al. 2012) encoded record, for example VALIDATION_COUNTRYCODE_STANDARD. This (SingleRecord) test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search.  This standard also includes specifications for MultiRecord tests that accumulate results of a SingleRecord tests, for example allowing determination that 70% of records in a dataset had a valid dwc:countryCode.
+The focus of this standard is the specifications for a suite of Tests that operate on single Darwin Core (Wieczorek et al. 2012) encoded record, for example [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe). This (SingleRecord) test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code using https://www.iso.org/obp/ui/#search.  This standard also includes specifications for MultiRecord tests that accumulate results of a SingleRecord tests, for example allowing determination that 70% of records in a dataset had a valid dwc:countryCode.
 
 Each test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other tests to meet particular data quality needs, and so as not impose any particular model of test execution on implementation frameworks. Implementations of test execution frameworks may execute tests in on data records in parallel, on data records in sequence, as queries on data sets, on unique values.  While tests are described in isolation, they must be used in sets that are related to a use of the data, as data does not have quality in the abstract, it only has quality with respect to some use.  Thus each test is linked to one or more UseCases, which are formal descriptions of uses to which data may be put.  The bdq: vocabulary defines the set of use cases referenced here.  The tests here can be freely composed in other ways for other uses.  
 
@@ -115,13 +115,13 @@ The following namespace abbreviations are used in this document:
 
 There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
 
-**Validation Tests** examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is VALIDATION_COUNTRYCODE_STANDARD where dwc:countryCode is checked against a source authority for validity.
+**Validation Tests** examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a source authority for validity.
 
-**Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, ISSUE_DATAGENERALIZATIONS_NOTEMPTY alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
+**Issue Tests** are like Validations in identifying potential issues in the data that may be problems for all users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) alerts users to a non-empty value that should be examined against their data quality needs. Issues are a 'warning flag' while Validations assert that the data are fit for use or not. 
 
-**Amendment Tests** examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) to identify potential changes to improve the quality. An example is AMENDMENT_COUNTRYCODE_STANDARDIZED where a valid ISO country code could be inferred.
+**Amendment Tests** examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) to identify potential changes to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350) where a valid ISO country code could be inferred.
 
-**Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is MEASURE_VALIDATIONTESTS_NOTCOMPLIANT that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
+**Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a) that returns the number of tests of Type Validation that had a response of "NOT_COMPLIANT".
 
 ### 1.9 Test Descriptors 
 
@@ -179,7 +179,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **References**. The minimum set of references that are required for an understanding of the nature of the test
 
-**Notes**. Additional information that may not be obvious from the Specification, for example for the test "VALIDATION_COUNTRYCODE_STANDARD", the Notes are "Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters".
+**Notes**. Additional information that may not be obvious from the Specification, for example for the test [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), the Notes are "Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters".
 
 **UseCases**. An example of one or more Use Cases where this test would apply. Note that one test will likely have many Use Cases, and one Use Case will likely have many applicable tests.
 
@@ -187,11 +187,11 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **bdqffdq:AmendmentMethod**. For AMENDMENTs: A URN to the AmendmentMethodLabel in for form of "urn:uuid:GUID", for example "urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a"
 
-**AmendmentMethod label**. For AMENDMENTs: The nature of the method of AMENDMENT, for example "AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary.Amedment for SingleRecord with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED"
+**AmendmentMethod label**. For AMENDMENTs: The nature of the method of AMENDMENT, for example "AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary. Amendment for SingleRecord with Specification for: [AMENDMENT_DCTYPE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904).
 
 **bdqffdq:Specification**. For AMENDMENTs: A urn in the form of "urn:uuid:GUID" that points to the Specification label, for example "urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88"
 
-**Specification label**. A descriptive label for the specification of an AMENDMENT, for example "Specification for: AMENDMENT_LICENSE_STANDARDIZED"
+**Specification label**. A descriptive label for the specification of an AMENDMENT, for example "Specification for: [AMENDMENT_LICENSE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8).
 --->
 
 ## 2 Normative Guidance
