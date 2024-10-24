@@ -13,6 +13,12 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │   ├── bdqcore  **work in progress** uses draft_build-termlist_bdqcore.py for build
 │   │   │   ├── bdqcore_termlist-footer.md  
 │   │   │   ├── bdqcore_termlist-header.md
+│   │   │   ├── vocabulary_configuration.yaml
+│   │   │   └── document_configuration.yaml
+│   │   ├── bdqffdq
+│   │   │   ├── bdqffdq_termlist-footer.md
+│   │   │   ├── bdqffdq_termlist-header.md
+│   │   │   ├── vocabulary_configuration.yaml
 │   │   │   └── document_configuration.yaml
 │   │   ├── bdq
 │   │   │   ├── bdq_termlist-footer.md
@@ -42,6 +48,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │       └── bdqcore_quickreference-header.md
 │   ├── bdqffdq used by draft_buid_bdqffdq.py to produce landing page for bdqffdq /docs/bdqffdq/index.md
 │   │   ├── document_configuration.yaml
+│   │   ├── vocabulary_configuration.yaml
 │   │   ├── bdqffdq_landing-footer.md **Main text document for landing page**
 │   │   └── bdqffdq_landing-header.md **Includes Mathematical Forumulation**
 │   ├── bdqcore Landing pad page for bdqcore.
@@ -63,6 +70,10 @@ Editable master copies of templates for human readable vocabulary lists and huma
 │   │   ├── document_configuration.yaml
 │   │   ├── synthetic-footer.md
 │   │   └── synthetic-header.md
+│   ├── references templates used by draft_build-docs.py to build docs/references/
+│   │   ├── document_configuration.yaml
+│   │   ├── references-footer.md
+│   │   └── references-header.md **NOTE: Bulk of content is in build/references.md above**
 │   ├── vocabularies templates used by draft_build-docs.py to build docs/vocabularies/
 │   │   ├── document_configuration.yaml
 │   │   ├── vocabularies-footer.md
@@ -96,6 +107,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── draft_build-docs.py script to fill in template information and copy files that don't include terms from build/templates to docs/
 ├── draft_build_bdqcore_qrg.py to build bdqcore quick reference guide
 ├── authors_configuration.yaml  list of authors and contributors
+├── vocabulary_configuration.yaml  key to terms used to describe terms in bdq, bdqdim, bdqenh, and bdqcrit.
 ├── temp_namespaces.yaml used by draft_build-termlist.py to replace a rs.tdwg.org resource unavailable for a draft standard
 └── temp_term-lists.csv used by draft_build-termlist.py to replace a rs.tdwg.org resource unavailable for a draft standard
 </pre>

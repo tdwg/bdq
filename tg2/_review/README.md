@@ -83,7 +83,7 @@ Work in progress description of files in this directory:
 │   ├── maintenance
 │   │   └── index.md  suggestions for maintinance group, **editable.**
 │   ├── references
-│   │   └── **NOTE: Moved to build/references.md**
+│   │   └── index.md Generated file, do not edit.  **NOTE: Moved to build/references.md**
 │   └── supplement
 │       └── index.md Generated file, do not edit.
 └── vocabulary should just be the term version files, but not all as term version files yet
