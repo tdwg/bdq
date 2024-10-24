@@ -288,9 +288,9 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 
 1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
-3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
+3. interpreting the representation of a numeric value (e.g., a Roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
 ## 3 Compliant Implementation (normative)
 
