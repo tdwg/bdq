@@ -138,7 +138,7 @@ Note that the evaluation of a test can only take place within the context of a s
 
 The Fitness for Use Framework (Veiga et al. 2017) (bdqffdq: namespace) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose/use case, that is to assure that data used for some purpose are fit for that purpose.
 
-The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (detecting and correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the test types Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
+The specification of the tests within the Framework allows the same set of tests to apply to both Data Quality Control (detecting and correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Test Types Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
 ### 2.4 Framework Competency Questions
 
@@ -232,7 +232,7 @@ Summary of the distribution of tests by Data Quality Dimension and specific Darw
     GROUP BY ?sie ?dimension
     ORDER BY ?sie ?dimension
 
-Summary of the distribution of tests by test Type and specific Darwin Core Terms in InformationElements ActedUpon: 
+Summary of the distribution of tests by Test Type and specific Darwin Core Terms in InformationElements ActedUpon: 
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -384,7 +384,7 @@ bdqffdq:SingleRecord MEASUREs within BDQ Core are [MEASURE_VALIDATIONTESTS_COMPL
 
 ### 3.2 MultiRecord Tests
 
-When defining a test, the test Type (Validation, Amendment, Measure, Issue) is composed with a ResourceType (SingleRecord or MultiRecord).  This determines if the test results in assertions about a single record or a dataset as a whole.
+When defining a test, the Test Type (Validation, Amendment, Measure, Issue) is composed with a ResourceType (SingleRecord or MultiRecord).  This determines if the test results in assertions about a single record or a dataset as a whole.
 
 #### 3.2.1 MultiRecord Validations, Amendments, Issues
 
@@ -441,7 +441,7 @@ FILTER (?testType != owl:NamedIndividual)
 GROUP BY ?dimension ?testType
 </pre>
 
-Gives the following distribution of test types by Dimension:
+Gives the following distribution of Test Types by Dimension:
 
 | Data Quality Dimension | Validation | Amendment | Issue | Measure | 
 | ---------------------- | ---------- | --------- | ----- | ------- | 
