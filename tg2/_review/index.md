@@ -24,7 +24,7 @@ Preferred Citation
 
 - [BDQ Core Introduction](docs/intro/index.md)
 - [BDQ Core Quick Reference Guide](docs/terms/bdqcore/index.md)
-- [BDQ Core Fitness For Use Framework Guide](docs/guide/bdqffdq/index.md)
+- [BDQ Core Fitness For Use Framework Ontology Guide](docs/guide/bdqffdq/index.md)
 - [BDQ Core User's Guide](docs/guide/users/index.md)
 - [BDQ Core Vocabularies](docs/vocabularies/index.md)
   - [BDQ Core Tests and Assertions Landing Page](docs/bdqcore/index.md):
