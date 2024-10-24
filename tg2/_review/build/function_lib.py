@@ -99,6 +99,14 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                 queryResult = graph.query(sparql)
                 for r in queryResult : 
                     definition = r.object
+            elif termname.startswith("owl:") : 
+                graph = rdflib.Graph()
+                graph.parse("https://www.w3.org/2002/07/owl")
+                # owl places the definition in the rdfs:comment
+                sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject rdfs:comment ?object . FILTER ( ?subject = "+termname+" )  } "
+                queryResult = graph.query(sparql)
+                for r in queryResult : 
+                    definition = r.object
             elif termname.startswith("rdfs:") : 
                 graph = rdflib.Graph()
                 graph.parse("http://www.w3.org/2000/01/rdf-schema.rdf")

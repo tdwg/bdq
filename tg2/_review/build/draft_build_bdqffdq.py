@@ -573,9 +573,9 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
 # Build definition table
 graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
-column_list = ['term_localName', 'range', 'rdf_type', 'differentFrom', 'label']
+column_list = ['term_localName', 'rdf_type', 'range', 'differentFrom', 'label']
 # Obtain something similar to reported data to produce key
-sparql = prefixes + "SELECT distinct (?subject as ?term_localName) ?type ?range ?differentFrom ?label WHERE { ?subject rdf:type ?type . ?subject rdfs:label ?label . optional { ?subject rdfs:range ?range. } .  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x .  } } ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT distinct (?subject as ?term_localName) ?type ?range ?differentFrom ?label WHERE { ?subject rdf:type ?type . FILTER(?type = bdqffdq:ResponseResult) . ?subject rdfs:label ?label . optional { ?subject rdfs:range ?range. } .  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x .  } } ORDER BY ?type ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)

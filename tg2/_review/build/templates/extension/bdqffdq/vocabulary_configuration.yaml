@@ -44,6 +44,7 @@ superclass:
   term: rdfs:subClassOf
   normative: 'true'
 range: 
+  append: "shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]."
   label: Range
   term: rdfs:range
   normative: 'true'

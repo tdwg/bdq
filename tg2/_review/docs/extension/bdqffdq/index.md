@@ -129,11 +129,11 @@ The following namespace abbreviations are used in this document:
 
 | Label (Term) | Definition | Example | Normative | 
 | ------------ | ---------- | ------- | --------- |
-| Name (rdf:value) | Idiomatic property used for structured values. | https://rs.tdwg.org/bdqffdq/terms/AMENDED | normative |
-| Type (rdf:type) | The subject is an instance of a class. | n1a9f9f004de740c39a461114af6fc9a7b1 | normative |
-| Range (rdfs:range) | A range of the subject property. | https://rs.tdwg.org/bdqffdq/terms/ResponseStatus | normative |
-| DifferentFrom (owl:differentFrom) |  | https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED | normative |
-| Label (rdfs:label) | A human-readable name for the subject. | AMENDED | normative |
+| Name (rdf:value) | Idiomatic property used for structured values. | https://rs.tdwg.org/bdqffdq/terms/COMPLETE | normative |
+| Type (rdf:type) | The subject is an instance of a class. | https://rs.tdwg.org/bdqffdq/terms/ResponseResult | normative |
+| Range (rdfs:range) | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n8795914f01cd4a0f85a17aa9abd05b47b1 | normative |
+| DifferentFrom (owl:differentFrom) | The property that determines that two given individuals are different. | https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE | normative |
+| Label (rdfs:label) | A human-readable name for the subject. | COMPLETE | normative |
 
 
 ## 2 Use of Terms (normative)
