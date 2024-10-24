@@ -195,7 +195,7 @@ Expressed with bdqffdq terms, as would be if Assertions are expressed in RDF, th
 
 EXTERNAL_PREREQUISITES_NOT_MET means some bdqffdq:Assertion bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, that Assertion bdqffdq:hasResponseResult Response.null,  that Assertion bdqffdq:hasResponseComment "{some non-null description of the failure condition}"
 
-For example, the bdqffdq:hasExpectedResponse for the Specification for: VALIDATION_COUNTRYCODE_STANDARD states:
+For example, the bdqffdq:hasExpectedResponse for the Specification for: VALIDATION_COUNTRYCODE_STANDARD (0493bcfb-652e-4d17-815b-b0cce0742fbe) states:
 
     EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -242,7 +242,7 @@ When the parameter has a default value and a resource, and an implementation inc
 
 #### 2.3.2.5 Example interpretation of a parameter string default value (non-normative)
 
-The following code snippet in Java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of AMENDMENT_LICENSE_STANDARDIZED.  The literal "Creative Commons" is accepted as a parameter value.
+The following code snippet in Java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of AMENDMENT_LICENSE_STANDARDIZED (dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8).  The literal "Creative Commons" is accepted as a parameter value.
 
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
@@ -414,18 +414,16 @@ Under Quality Control, bdqffdq:MultiRecord measures that return numeric values M
 
 The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While BDQ Core Tests are designed to be as indepenent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendments can affect results. 
 
-<!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
-
 When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed. Similarly when Amendment Tests are executed in parallel these sequences SHOULD be applied.
 
-Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, AMENDMENT_EVENT_FROM_EVENTDATE SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
+Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, AMENDMENT_EVENT_FROM_EVENTDATE (710fe118-17e1-440f-b428-88ba3f547d6d) SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
 
-AMENDMENT_EVENTDATE_FROM_VERBATIM, <!---should we add the GUIDs to these? in this document---> <!---AC: Could use a link to the test--->
-AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY,
-AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR,
-AMENDMENT_EVENTDATE_STANDARDIZED.
+AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812),
+AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d),
+AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR (eb0a44fa-241c-4d64-98df-ad4aa837307b),
+AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7).
 
-AMENDMENT_SCIENTIFICNAME_FROM_TAXONID SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: AMENDMENT_TAXONID_FROM_TAXON. 
+AMENDMENT_SCIENTIFICNAME_FROM_TAXONID (f01fb3f9-2f7e-418b-9f51-adf50f202aea) SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: AMENDMENT_TAXONID_FROM_TAXON (431467d6-9b4b-48fa-a197-cd5379f5e889). 
 
 Where multiple Amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
 
@@ -545,7 +543,7 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
 Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input countryCode contains a value.  This deviation from the logical sequence implied by the Specification (EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
-#### 6.4.5.1 Example in Java (non-normative)
+#### 6.4.5.2 Example in Java (non-normative)
 
 Given the test [VALIDATION_DAY_STANDARD](../../terms/bdqcore/index.md#VALIDATION_DAY_STANDARD)
 
