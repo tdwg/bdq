@@ -68,7 +68,7 @@ Draft Standard for Submission
 - [6.4.4 Presenting Darwin Core Data to a Method that Implements a Test](#644-presenting-darwin-core-data-to-a-method-that-implements-a-test)
 - [6.4.5 Example Test Implementations (non-normative)](#645-example-test-implementations-non-normative)
 - [6.4.5.1 Example in Pseudocode (non-normative)](#6451-example-in-pseudocode-non-normative)
-- [6.4.5.1 Example in Java (non-normative)](#6451-example-in-java-non-normative)
+- [6.4.5.2 Example in Java (non-normative)](#6452-example-in-java-non-normative)
 - [6.4.6 Implementing an Abstract Test](#646-implementing-an-abstract-test)
 - [6.4.7 Implementing a Test in a Specific Environment](#647-implementing-a-test-in-a-specific-environment)
 - [7 Presentation of Results](#7-presentation-of-results)
@@ -189,7 +189,7 @@ Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space
         return result;
     }
 
-Here is a MariaDB implementation of a lightweight version of VALIDATION_KINGDOM_NOTEMPTY that provides a list of NOT_COMPLIANT records for some flat taxonomy table in a database, again handing off the resposibility for evaluation of non-printing characters to the trim function available in the language.
+Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098) that provides a list of NOT_COMPLIANT records for some flat taxonomy table in a database, again handing off the resposibility for evaluation of non-printing characters to the trim function available in the language.
 
     SELECT taxonomy_id, kingdom,
          'VALIDATION_KINGDOM_NOTEMPTY' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status,
@@ -246,7 +246,7 @@ Expressed with bdqffdq terms, as would be if Assertions are expressed in RDF, th
 
 EXTERNAL_PREREQUISITES_NOT_MET means some bdqffdq:Assertion bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, that Assertion bdqffdq:hasResponseResult Response.null,  that Assertion bdqffdq:hasResponseComment "{some non-null description of the failure condition}"
 
-For example, the bdqffdq:hasExpectedResponse for the Specification for: VALIDATION_COUNTRYCODE_STANDARD states:
+For example, the bdqffdq:hasExpectedResponse for the Specification for: [VALIDATION_COUNTRYCODE_STANDARD]((https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) states:
 
     EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -293,7 +293,7 @@ When the parameter has a default value and a resource, and an implementation inc
 
 #### 2.3.2.5 Example interpretation of a parameter string default value (non-normative)
 
-The following code snippet in Java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of AMENDMENT_LICENSE_STANDARDIZED.  The literal "Creative Commons" is accepted as a parameter value.
+The following code snippet in Java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8).  The literal "Creative Commons" is accepted as a parameter value.
 
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
@@ -341,7 +341,7 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for AMENDMENT_MONTH_STANDARDIZED states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
 ## 3 Compliant Implementation (normative)
 
@@ -465,18 +465,16 @@ Under Quality Control, bdqffdq:MultiRecord measures that return numeric values M
 
 The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While BDQ Core Tests are designed to be as indepenent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendments can affect results. 
 
-<!--- Ming: How can user know the order of execution for AMENDMENTS? What are primary term and secondary term? --->
-
 When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed. Similarly when Amendment Tests are executed in parallel these sequences SHOULD be applied.
 
-Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, AMENDMENT_EVENT_FROM_EVENTDATE SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
+Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
 
-AMENDMENT_EVENTDATE_FROM_VERBATIM, <!---should we add the GUIDs to these? in this document---> <!---AC: Could use a link to the test--->
-AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY,
-AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR,
-AMENDMENT_EVENTDATE_STANDARDIZED.
+- [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812),
+- [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d),
+- [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b),
+- [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7).
 
-AMENDMENT_SCIENTIFICNAME_FROM_TAXONID SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: AMENDMENT_TAXONID_FROM_TAXON. 
+[AMENDMENT_SCIENTIFICNAME_FROM_TAXONID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: [AMENDMENT_TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889). 
 
 Where multiple Amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
 
@@ -501,7 +499,7 @@ Implementations MAY be complete in the scope of the Test as described in [bdqcor
 
 #### 6.4.4 Presenting Darwin Core Data to a Method that Implements a Test
 
-One complexity introduced by the abstraction of Tests into essentially APIs that take [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) as input and output, Response objects are correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method.   Consider an implementation of the Test VALIDATION_ENDDAYOFYEAR_INRANGE that has a method signature: 
+One complexity introduced by the abstraction of Tests into essentially APIs that take [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) as input and output, Response objects are correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method.   Consider an implementation of the Test [VALIDATION_ENDDAYOFYEAR_INRANGE](https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8) that has a method signature: 
     
     public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate) 
 
@@ -525,7 +523,7 @@ An execution framework can use reflection to determine, from the annotations on 
 
 Additional metadata can be added in Java annotations, here, from the FilteredPush event_date_qc library annotations enable an implementation framework to look a Test implementation by the Test GUID, and can provide metadata about the Test to users, and for maintenance, can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
-    @Validation(label="VALIDATION_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
+    @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
     @ProvidesVersion("https://rs.tdwg.org/bdq/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8/2023-09-18")
     @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is EMPTY or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is EMPTY or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT ")
@@ -596,9 +594,9 @@ Pseudocode for an implementation follows the sequence of RESPONSE,critera; of th
 
 Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input countryCode contains a value.  This deviation from the logical sequence implied by the Specification (EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
-#### 6.4.5.1 Example in Java (non-normative)
+#### 6.4.5.2 Example in Java (non-normative)
 
-Given the test [VALIDATION_DAY_STANDARD](../../terms/bdqcore/index.md#VALIDATION_DAY_STANDARD)
+Given the test [VALIDATION_DAY_STANDARD](https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498)
 
 Specification
 : INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
@@ -645,7 +643,7 @@ In some environments, implementations MAY be lightweight implementations of an a
 
 Such abstract implementations MAY encompass only the elements of the test defined in an instance of bdqffdq:DataQualityNeed, plus its associated bdqffdq:InformationElements, and not be able to produce instances of bdqffdq:Assertion, but SHOULD be able to produce analogs of Response objects (with Response.status, Response.result, and Response.comment properties).     
 
-Consider the Validation Test: VALIDATION_ENDDAYOFYEAR_INRANGE
+Consider the Validation Test: [VALIDATION_ENDDAYOFYEAR_INRANGE](https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8)
 
 A SQL query that implements this abstract concept, that the dwc:enddayofyear is in range, could take the following form, using available database fields that contain data related to the abstract information element, but are not precicely mapped to the concrete specified ActedUpon and Consulted [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification.  This query produces a data quality report with: 
 
@@ -672,12 +670,11 @@ A SQL query that implements this abstract concept, that the dwc:enddayofyear is 
 
 #### 6.4.7 Implementing a Test in a Specific Environment
 
-Given data stored in a known and controlled environment, Test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. Consider the Validation Test: 
-VALIDATION_ENDDAYOFYEAR_INRANGE
+Given data stored in a known and controlled environment, Test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. Consider the Validation Test: [VALIDATION_ENDDAYOFYEAR_INRANGE](https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8)
 
 With the specification "INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT."
 
-Given a hypothetical Event table with fields including a primary key event_id and an integer field day, an implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
+Given a hypothetical Event table with fields including a primary key event_id and an integer field day, an implementation of [VALIDATION_DAY_STANDARD](https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498) in SQL that operates on data in the aggregate might look like:
 
     SELECT
         ‘VALIDATION_DAY_STANDARD’ as test name, 
@@ -716,13 +713,13 @@ Implementations should carefully consider the assumptions inherent in the enviro
 
 We are agnostic about how reports from BDQ Core can be reported, e.g., as aggregated results, on web pages for individual records, as spreadsheets of results with issues for quality control, etc.  
 
-Reports SHOULD identify Tests to consumers of those reports using at least the skos:prefLabel for the Test class, e.g. VALIDATION_COUNTRY_FOUND.  
+Reports SHOULD identify Tests to consumers of those reports using at least the skos:prefLabel for the Test class, e.g. [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134).  
 
 ### 7.1 Data Quality Reports
 
 ### 7.1.1 InformationElements ActedUpon and Consulted in Results (normative)
 
-InformationElements (subtypes of bdqffdq:InformationElement) are bdqffdq:ActedUpon or bdqffdq:Consulted. Presentations of data quality results MAY use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon InformationElements are those for which a Validation Test is asserting compliance/non-compliance, or an Amendment Test that is proposing an improvement to the data. Consulted InformationElements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test AMENDMENT_EVENTDATE_FROM_VERBATIM, the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted.  Implementers may wish to clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
+InformationElements (subtypes of bdqffdq:InformationElement) are bdqffdq:ActedUpon or bdqffdq:Consulted. Presentations of data quality results MAY use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon InformationElements are those for which a Validation Test is asserting compliance/non-compliance, or an Amendment Test that is proposing an improvement to the data. Consulted InformationElements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812), the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted.  Implementers may wish to clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
 
 
 #### 7.1.2 Example (non-normative)
@@ -811,7 +808,7 @@ The following column header for the data are used for the validation data files.
 | Data Dimension | Does the Test apply to data that is essentially NAME, SPACE, TIME or OTHER? |
 | dataID | A local to bdq:ValidationData unique integer to indentify each Validation Data record | 
 | LineForTest | A local to bdq:ValidationData integer identifier for Test records within one Test. For maintaining the sort order within a test, and with two special cases: "88" when Input.data contains a NULL character and "99" when Input.data contains non-printers characters. | 
-| Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, e.g., for VALIDATION_COUNTRY_COUNTRCODE_CONSISTENT, dwc:country="México", dwc:countryCode="MX" |
+| Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, e.g., for [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c), dwc:country="México", dwc:countryCode="MX" |
 | Output.data | For Amendments only and when Response.status="AMENDED", suggested changes to the Input.data to improve quality, in the same format as Input.data |
 | Response.status | The status on applying the Test to the data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET". |
 | Response.result | The result of running the Test on the data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED". |
