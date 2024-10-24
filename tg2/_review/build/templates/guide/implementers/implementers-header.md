@@ -768,7 +768,7 @@ The following column header for the data are used for the validation data files.
 | header | definition |
 | ------ | ---------- |
 | bdq:annotation | A placeholder for an annotation when Testing for their presence. |
-| bdq:sourceAuthority | Input parameter for some parameterized Tests. |
+| bdq:sourceAuthority | Input parameter for some Parameterized Tests. |
 | dwc: (77 columns) |  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant Test and pertinent to the Test case at hand contain values. |
 
 **NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the Input.Data structure of
