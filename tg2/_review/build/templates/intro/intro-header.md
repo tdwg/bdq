@@ -226,26 +226,32 @@ There were many people who have made notable contributions at various times duri
 
 ## 6 Glossary
 
+Glossary of Term-Actions used in BDQ .........
+
+| Label | Definition | Comment |
+| ---- | ---- | ---- |
+| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | Would be used only in an extension or in bdq:Response.comment. bdq:Response.status value for this case is bdq:AMENDED. See, for example, Test [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7). |
+| CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the centre of the dwc:country, allowing for a spatial buffer. | See Test [ISSUE_COORDINATES_CENTEROFCOUNTRY](https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e). |
+| COMPLETE | Testing if bdqffdq:InformationElement dwc:scientificNameId forms a valid and complete identifier. | Testing for bdqdim:Completeness. See Test [VALIDATION_SCIENTIFICNAMEID_COMPLETE](https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8). |
+| CONSISTENT | Identifies consistency among values between bdqffdq:InformationElements. | Testing for bdqdim:Consistency. See, for example, Test [VALIDATION_CLASSIFICATION_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f). |
+| COORDINATESTERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries; or a marine taxon that has geographic coordinates that fall within marine boundaries. | Use bdq:AMENDED as the bdq:Response.status, report bdq:COORDINATESTERRESTRIALMARINE in a bdq:Response.qualifier or in a bdq:Response.comment. See Test [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380). |
+| DURATIONINSECONDS | The duration in seconds of bdq:InformationElement dwc:eventDate. | See Test [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53). |
+| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | Use bdq:COMPLIANT for bdq:Response.result, and include this in bdq:Response.comments or bdq:Response.qualifier. See Test [VALIDATION_STATEPROVINCE_FOUND](https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a). |
+| FROM | An Output bdqffdqInformationElement is being populated from a more primary Input bdqffdq:InformationElement. | Populates dwc:scienticName from dwc:scientificNameId. See, for example, Test [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea). |
+| INRANGE | The value of bdqffdq:InformationElements that are within an acceptable range. | Use in bdq:Response.qualifier or bdq:Response.comment. See for example, test [VALIDATION_MAXDEPTH_INRANGE](3f1db29a-bfa5-40db-9fd1-fde020d81939). |
+
 Glossary of terms used in BDQ Core that are additional to those included in the various Namespace: vocabularies.
 
-| Label | Definition | Context | Comment |
-| ---- | ---- | ---- | ---- |
-| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | Term-Action | Would be used only in an extension or in bdq:Response.comment. bdq:Response.status value for this case is bdq:AMENDED. |
-| CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the centre of the dwc:country, allowing for a spatial buffer. | Term-Action | |
-| COMPLETE | Testing if bdqffdq:InformationElement dwc:scientificNameId forms a valid and complete identifier. | Term-Action | Testing for bdqdim:Completeness. |
-| CONSISTENT | Identifies consistency among values between bdqffdq:InformationElements. | Term-Action | Testing for bdqdim:Consistency. |
-| CONVERTED | A conversion has been proposed to values in the bdqffdq:InformationElements to conform with a targeted geographic reference system. | Term-Action | See Test [AMENDMENT_COORDINATES_CONVERTED](https://rs.tdwg.org/bdqcore/terms/ (620749b9-7d9c-4890-97d2-be3d1cde6da8). |
-| COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |  |
-| COORDINATESTERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries; or a marine taxon that has geographic coordinates that fall within marine boundaries. | Term-Action | Use bdq:AMENDED as the bdq:Response.status, report bdq:COORDINATESTERRESTRIALMARINE in a bdq:Response.qualifier or in a bdq:Response.comment. See Test [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380). |
-| CRS | Coordinate Reference System - (also spatial reference system). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |  |
-| DURATIONINSECONDS | The duration in seconds of bdq:InformationElement dwc:eventDate. | Term-Action | See Test [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53). |
-| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | Term-Action | Use bdq:COMPLIANT for bdq:Response.result, and include this in bdq:Response.comments or bdq:Response.qualifier. |
-| FROM | An Output bdqffdqInformationElement is being populated from a more primary Input bdqffdq:InformationElement. | Term-Action | For example, the Test [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) populates dwc:scienticName from dwc:scientificNameId. |
-| geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test | |
-| geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |  |
-| GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |  |
-| INRANGE | The value of bdqffdq:InformationElements that are within an acceptable range. | Term Action | Use in bdq:Response.qualifier or bdq:Response.comment. |
-| Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ Core |  |
+| Label | Definition | Context |
+| ---- | ---- | ---- |
+| COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
+| CRS | Coordinate Reference System - (also spatial reference system). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
+| geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
+| geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
+| GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
+| Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ Core |
+
+
 | LESSTHAN | A Term-Action indicating that the value in one bdq:InformationElement is less than the value in another bdq:InformationElement. | Term-Action | Used in tests for Depth and Elevation, e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e). |
 | non-printing characters | ASCII 0-32 and 127 decimal. Non printing characters or formatting marks that are not displayed at printing. These may include pilcrow, space, non-breaking space, tab character. etc. For the purposes of the tests they are treated as bdq:Empty. | Data |  |
 | NOTEMPTY | An bdqffdq:InformationElement contains some non-empty value | Term-Action | For example the Test [VALIDATION_EVENTDATE_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985). |
