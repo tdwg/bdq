@@ -292,6 +292,18 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 
 When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
+#### 2.3.4 Handling leading/trailing white space (normative)
+
+TODO: text for this section Rewrite from glossary entry: 
+
+In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. 
+
+When matching to a source authority, unless specified otherwise in the specification, implementations MUST include leading/trailing whitespace.
+
+Amendments SHOULD propose changes with leading or trailing whitespace removed.
+
+TODO: Above needs better phrasing.
+
 ## 3 Compliant Implementation (normative)
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
