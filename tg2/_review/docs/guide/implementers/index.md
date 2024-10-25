@@ -52,6 +52,7 @@ Draft Standard for Submission
 - [2.3.2.4 Default value strings in parameters (normative)](#2324-default-value-strings-in-parameters-normative)
 - [2.3.2.5 Example interpretation of a parameter string default value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative)
 - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-"interpreted-as"-normative)
+- [2.3.4 Handling leading/trailing white space (normative)](#234-handling-leading/trailing-white-space-normative)
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
 - [4 Extension Points (normative)](#4-extension-points-normative)
 - [5 Responses from Tests](#5-responses-from-tests)
@@ -339,9 +340,21 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 
 1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be parsed into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
-3. interpreting the representation of a numeric value (e.g., a roman numeral) as a number (e.g., an integer).
+3. interpreting the representation of a numeric value (e.g., a Roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+
+#### 2.3.4 Handling leading/trailing white space (normative)
+
+TODO: text for this section Rewrite from glossary entry: 
+
+In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. 
+
+When matching to a source authority, unless specified otherwise in the specification, implementations MUST include leading/trailing whitespace.
+
+Amendments SHOULD propose changes with leading or trailing whitespace removed.
+
+TODO: Above needs better phrasing.
 
 ## 3 Compliant Implementation (normative)
 
@@ -819,7 +832,7 @@ The following column header for the data are used for the validation data files.
 | header | definition |
 | ------ | ---------- |
 | bdq:annotation | A placeholder for an annotation when Testing for their presence. |
-| bdq:sourceAuthority | Input parameter for some parameterized Tests. |
+| bdq:sourceAuthority | Input parameter for some Parameterized Tests. |
 | dwc: (77 columns) |  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant Test and pertinent to the Test case at hand contain values. |
 
 **NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the Input.Data structure of

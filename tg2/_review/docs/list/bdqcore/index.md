@@ -238,7 +238,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **bdqffdq:Specification**. For AMENDMENTs: A urn in the form of "urn:uuid:GUID" that points to the Specification label, for example "urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88"
 
-**Specification label**. A descriptive label for the specification of an AMENDMENT, for example "Specification for: [AMENDMENT_LICENSE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8).
+**Specification label**. A descriptive label for the specification of an AMENDMENT, for example "Specification for: AMENDMENT_LICENSE_STANDARDIZED".
 --->
 
 ## 2 Normative Guidance
