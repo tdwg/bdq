@@ -282,7 +282,7 @@ Values of bdqffdq:hasAuthoritiesDefaults are text strings listing parameters in 
 - parameter default = "default value" {[resource]}
 - parameter default = "default value" {[resource]} {API endpoint [resource]}
 
-The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make the expected response easier to read) as in the VALIDATION_COUNTRYCODE_STANDARD example above when a test is not parameterized, or when a test is parameterized, with corresponding bdqffdq:Arguments and bdqffdq:Parameters.  
+The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make the expected response easier to read) as in the Test [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) example above when a test is not parameterized, or when a test is parameterized, with corresponding bdqffdq:Arguments and bdqffdq:Parameters.  
 
 See section [# 3.3 Parameterising the tests (normative)](../../bdqcore/index.md#33-parameterising-the-tests-normative) of the bdqcore landing page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
 
@@ -322,7 +322,7 @@ The following code snippet in Java from the FilteredPush rec_occur_qc library il
                 if (sourceAuthorityObject.getAuthority().equals(EnumMetadataSourceAuthority.CREATIVE_COMMONS)) {
                    ....
 
-This library also includes a method who's signature does not include the parameter, but which runs the implementation of AMENDMENT_LICENSE_STANDARDIZED with the default parameter.
+This library also includes a method who's signature does not include the parameter, but which runs the implementation of [AMENDMENT_LICENSE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8) with the default parameter.
 
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
@@ -480,7 +480,7 @@ The Tests are largely agnostic to the extent to which they are run in parallel a
 
 When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed. Similarly when Amendment Tests are executed in parallel these sequences SHOULD be applied.
 
-Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
+Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, The Test [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
 
 - [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812),
 - [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d),
