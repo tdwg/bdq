@@ -228,7 +228,7 @@ There were many people who have made notable contributions at various times duri
 
 ### 6.1 Term-Action
 
-Glossary of Term-Actions - i.e. the last two components of the Title (the focus bdqffdq:InformationElement), and the evaluation focus). Useful in filtering Tests in CSV files, for example: "COUNTRYCODE_STANDARD".
+Glossary of Term-Actions - i.e. the last two components of the Title (the focus bdqffdq:InformationElement), and the evaluation focus. Useful in filtering Tests in CSV files, for example: "COUNTRYCODE_STANDARD".
 
 | Label | Definition | Comment |
 | ---- | ---- | ---- |
