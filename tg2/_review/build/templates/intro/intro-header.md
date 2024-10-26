@@ -187,9 +187,9 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 ### 4.1 Acknowledgements
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at TDWG annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings. The Authors are also gratefull for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at TDWG annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also gratefull for all those who responded to our email questions.
 
-We'd also aknowledge the continued support of the TDWG (Biodiversity Information Standards) Executive over the unusual 10 years of the project.
+We'd also aknowledge the continued support of the TDWG (Biodiversity Information Standards) Executive over the 10 years of the project.
 
 #### 4.1.1 Funding and Support
 
