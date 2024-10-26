@@ -40,13 +40,15 @@ Draft Standard for Submission
 - [1.4. Status of the Content of This Document](#14-status-of-the-content-of-this-document)
 - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
-- [2 Parts of the Standard](#2-parts-of-the-standard)
+- [2 Introduction to the BDQ Core Standard](#2-introduction-to-the-bdq-core-standard)
+- [2.1 Parts of the Standard](#21-parts-of-the-standard)
 - [2.1 Vocabularies](#21-vocabularies)
 - [2.2 Test Guidance](#22-test-guidance)
-- [2.3 Implementation Validation Data](#23-implementation-validation-data)
-- [2.4 Exemplar Tests Implementation](#24-exemplar-tests-implementation)
-- [2.6 Test Lists](#26-test-lists)
-- [2.7 Test Execution Environments and Workflows](#27-test-execution-environments-and-workflows)
+- [2.3 Test Lists](#23-test-lists)
+- [2.4 Guides and other documents.](#24-guides-and-other-documents)
+- [2.5 Implementation Validation Data](#25-implementation-validation-data)
+- [2.6 Test Execution Environments and Workflows](#26-test-execution-environments-and-workflows)
+- [2.7 Exemplar Tests Implementation](#27-exemplar-tests-implementation)
 - [3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
 - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control,-data-quality-assurance-normative)
 - [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
@@ -69,11 +71,11 @@ Draft Standard for Submission
 
 Biodiversity Data Quality (BDQ) Core, hereafter referred to as 'BDQ Core', consists of 1) specifications of data quality tests that can be implemented to provide reproducible results from a given set of input data and test parameters, 2) a generic fitness for use framework (bdqffdq:) whose terms and semantics are embodied in an ontology, 3) a set of controlled vocabularies for the terms bdqffdq:DataQualityDimension, bdqffdq:Enhancement, and bdqffdq:Criterion, 4) a supporting vocabulary of terms (bdq:) used in the specification of the previously mentioned tests, 5) an exemplar data set to use as input for validation of the behavior of implementations of the previously mentioned tests, 6) a guide to implementation of the tests,  7) a guide to the interpretation of the results of the tests, and 8) a guide to the bdqffdq: Framework for describing data quality.
 
-Not part of BDQ Core, but dependent on it, is an exemplar implementation of the tests, written in Java(R), the behavior of which has been validated against the uses the previously mentioned validation data set.
+Not part of BDQ Core, but dependent on it, is an exemplar implementation of the tests, written in Java&#174;, the behavior of which has been validated against the uses the previously mentioned validation data set.
 
 BDQ Core covers a specification of tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record depends on the use to which it is applied: a record that is unsuitable to be used in one application may be suitable for another application (Belbin et al 2013).  Data does not have quality in the abstract, it only has quality with respect to some use, within BDQ Core, bdqffdq:UseCases provide a formal representation of uses to which data may be put.  The set of Tests and UseCases defined in BDQ Core are a starting point, not a limitation.  The BDQ Core tests may be composed differently for different uses, and additional tests are expected. 
 
-The BDQ tests support the determination of whether data resources will be fit for use for some particular purpose from the perspectives of the data quality dimensions `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. The tests themselves do not assert data quality, rather, sets of tests can be defined to support the assessment or assurance of data quality for a particular purpose by analyzing their responses to the input data in question against predefined expectations. This standard does not specify a structure to capture 'profiles' - component tests, order of processing, and expected results - for particular cases of fitness for use.
+The BDQ tests support the determination of whether data resources will be fit for use for some particular purpose from the perspectives of the data quality dimensions `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. The tests themselves do not assert data quality, rather, sets of tests can be defined to support the assessment or assurance of data quality for a particular purpose by analyzing their responses to the input data in question against predefined expectations.  This standard also specifies a structure to capture Profiles of tests for particular cases of fitness for use, and identifies a set of Profiles and uses they apply to for the included tests.  This standard does not specify execution order or other aspects of frameworks within which tests may be run.  Users are free to add new tests and compose tests differently for different uses.
 
 The BDQ tests were initially targeted specifically to [Darwin Core](https://dwc.tdwg.org/terms/) classes and properties against which they operate. This is not a limitation on the scope of the standard, but rather a choice of original scope against which to develop the tests.
 
@@ -87,13 +89,15 @@ This document is a general introduction to BDQ Core standard designed for anyone
 
 ### 1.3 Associated Documents
 
-Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md). Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").
+Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").  Those intereseted in composing new tests, or seeking to represent test results as linked open data should consult the [bdqffdq: Framework guide](../guide/bdqffdq/index.md).
 
 ### 1.4. Status of the Content of This Document
 
-Section 3 of this document is normative.  
+Section 3 of this document is normative. 
 
 All other sections of this document are non-normative.
+
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.5 RFC 2119 key words
 
@@ -123,11 +127,15 @@ The following namespace abbreviations are used in this document:
 | owl          | http://www.w3.org/2002/07/owl#                   |
 | xsd          | http://www.w3.org/2001/XMLSchema#                |
 
-## 2 Parts of the Standard
+## 2 Introduction to the BDQ Core Standard 
+
+### 2.1 Parts of the Standard
+
+The full set of documents comprising the BDQ Core standard is listed on the [BDQ Core landing page](../index.md).
 
 ### 2.1 Vocabularies
 
-The focus of this standard is on (1) a framework for describing data quality and (2) the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata. The tests and assertions specifications make use of additional vocabularies, three of which are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](../vocabularies/index.md). 
+The focus of this standard is on (1) a framework for describing data quality and (2) the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata expressed with bdqffdq: and other vocabularies.  Four additional vocabularies used in defining the tests are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](../vocabularies/index.md). 
 
 ### 2.2 Test Guidance
 
@@ -135,44 +143,60 @@ Beyond data availability, data quality is probably the most significant issue fo
 
 The Fitness for Use Framework upon which BDQ Core is based allows pipelines of tests and assertions to have formal dependencies between them, such as a specified order in which they should be run in order to get a deterministic result, or using the results of some tests as the inputs to other tests, or building composite tests from other existing tests. By design, dependencies are manifest in some of the tests and assertions that are Measures, while tests and assertions that are Issues, Validations, and Amendments tend to be independent of each other.
 
-Tests, even those labeled as Amendments, do not modify original data. Instead, test responses contain the information needed to amend original data by providing reproducible interpretations. These interpretations can be as a substitute for the original data or can be used to vet and amend the original data, as appropriate.
+Tests, even Amendments, do not modify original data. Instead, Amendment Test responses contain the information needed to amend original data by providing reproducible interpretations. These interpretations can be as a substitute for the original data downstream in analytical pipelines, or can be used to vet and amend the original data, as appropriate.
 
-Test specifications consist of the metadata (e.g., identifier, preferred label, description, information elements acted upon, information elements consulted, expected response, data quality dimension, parameters and default behavior, notes) required to understand the test, its context, and its potential uses, and to implement it in a way that is compliant with the standard.
+Test specifications _sensu latu_ consist of the metadata (e.g., identifier, preferred label, description, information elements acted upon, information elements consulted, expected response, data quality dimension, parameters and default behavior, notes) required to understand the test, its context, and its potential uses, and to implement it in a way that is compliant with the standard.
 
-The specifications for expected responses from tests consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the test that was run, whether the information elements were those consulted or those acted upon.
+The specifications _sensu strictu_ for tests include expected responses from tests consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the test that was run, whether the information elements were those consulted or those acted upon.
 
-The [BDQ User's Guide](../guide/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run. 
-
-The [BDQ Implementer's Guide](../guide/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
-
-[!--- JRW first pass finished to here ---]
-
-[Synthetic and Modified Data](../synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
-
-
-### 2.3 Implementation Validation Data 
-
-See the [BDQ Implementer's Guide](../guide/implementers/index.md) for information on a set of data for validating test implementations.. 
-
-### 2.4 Exemplar Tests Implementation
-
-<!--- PJM: Does section 2.4 belong?  The filteredpush implementations aren't part of the standard --->
-
-### 2.6 Test Lists
+### 2.3 Test Lists
 
 The [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) is a quick reference guide to the tests defined in BDQ Core. 
 
-### 2.7 Test Execution Environments and Workflows
+### 2.4 Guides and other documents. 
 
-Neither the test descriptions nor the framework impose constraints on workflows for execution.  One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
+The [BDQ User's Guide](../guide/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run.  It is intended to be read with the quick reference guide to the tests.
+
+The [BDQ Implementer's Guide](../guide/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
+
+The [bdqffdq: Framework guide](../guide/bdqffdq/index.md) describes how the bdqffdq: Framework ontology is used to describe the BDQ Core Tests, and can be used to describe new tests or new compositions of tests for new uses.  The ontology is also intended to allow test results to be represented as linked open data or in W3C oa:Annotations. 
+
+[Synthetic and Modified Data](../synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
+
+### 2.5 Implementation Validation Data 
+
+See the [BDQ Implementer's Guide](../guide/implementers/index.md) for information on a set of data for validating test implementations.. 
+
+### 2.6 Test Execution Environments and Workflows
+
+Neither the test descriptions nor the framework impose constraints on environments or workflows for execution.  One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
 
 A single validation step, with measures evaluating the results of the amendments could look like the diagram below.
 
 ![Diagram of workflow through single validation step](workflow_single_iteration.svg)
 
-Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted.
+Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted.  Presentation of a data quality report would be an expected result from this workflow for Quality Control purposes, while using the Measures in the second step to filter data in a processing pipeline to just that fit for purpose for a particular use would be expected for Quality Assurance purposes.
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
+
+### 2.7 Exemplar Tests Implementation
+
+<!--- TODO: Evaluate: Question from PJM: Does section 2.7 belong?  The filteredpush implementations aren't part of the standard --->
+<!--- TODO: This information is provided in the implementer's guide, could link to the two relevant sections there instead --->
+
+Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java libraries that provide classes which implement each of the single record tests that operate directly on data.  
+
+<!--- TODO: Add citations --->
+
+- [event_date_qc](https://github.com/filteredpush/event_date_qc) Tests related to spatial terms.  
+- [sci_name_qc](https://github.com/filteredpush/sci_name_qc) Tests related to taxonomy and identification terms.
+- [geo_ref_qc](https://github.com/filteredpush/geo_ref_qc) Tests related to spatial terms.
+- [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) Tests related to metadata terms.
+
+These test implementations use Java Annotations to carry metadata to identify tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api.  In addition, a Java library, kurator-ffdq is available for working with test descriptions as RDF, being an implementation of the bdqffdq: Framework in Java.  The kurator-ffdq library also includes classes for generating stub methods for each test in either Java or Python.
+
+- [ffdq-api](https://github.com/kurator-org/ffdq-api) Java annotations for decorating test implementations.
+- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq)  Java classes for bdqffdq: classes.
 
 
 ## 3 Design of the Tests (normative)
@@ -191,7 +215,7 @@ The bdqcore tests are designed to be run at any point in the life cycle of biodi
 
 BDQ Core is agnostic about the format of presentation of results from BDQ Core Tests.  BDQ Core does, however, specify that test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.comment  Responses MAY also contain more information in Response.qualifier.  See the implementer's guide section on [Presentation of Results](../guide/implementers/index.md#7-Presentation-of-Results) for further normative and non-normative guidance about result presentation See the bdqcore: landing page section on the [Structure of a Response](../bdqcore/index.md#31-Structure-of-Response-normative) for normative guidance on Responses as RDF or as data structures.
 
-The results of the execution of implementations of the bdqcore: tests MAY be presented as Data Quality reports.  The bdqffdq: framework provides vocabulary and structure that MAY be used for such data quality reports.
+The results of the execution of implementations of the bdqcore: tests MAY be presented as Data Quality reports.  The bdqffdq: Framework provides vocabulary and structure that MAY be used for such data quality reports.
 
 The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.  See the section on [Annotations](../guide/implementers/index.md#72-Annotations-normative) in the implementer's guide for more guidance.
 
@@ -216,14 +240,16 @@ Many people have contributed to the development of the BDQ Core standard.
 #### 4.2.1 Authors 
 
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
- - **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
+
+- **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, test validation data, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
 - **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents; 
 - **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
 
 #### 4.2.2 Contributors
 
-There were many people who have made notable contributions at various times during the development of BDQ Core. 
+There were many people who have made notable contributions at various times during the development of BDQ Core.
+ 
 - **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents;
 - **António Mauro Saraiva (Universidade de São Paulo)**: Development of the Fitness for Use Framework (Task Group 1), facilitated test development workshop, Co-convenor of Data Quality Interest Group until 2022;
 - **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation, Convenor of Task Group 1: Framework on Data Quality;
@@ -298,16 +324,16 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 | GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ Core |
 | non-printing characters | ASCII 0-32 and 127 decimal. Non printing characters or formatting marks that are not displayed at printing. These may include pilcrow, space, non-breaking space, tab character. etc. For the purposes of the tests they are treated as bdq:Empty. | Data |
-| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations by "NULL", "Null", "null". "/n", "9999", etc. These should be treated as bdq:NotEmpty. | Data |
+| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", etc. These serializations should be treated as bdq:NotEmpty. | Data |
 | POLYNOMIAL | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. See test [VALIDATION_POLYNOMIAL_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b). | bdqffdq:InformationElement |
-| Roman numerals | Roman numerals are interpreted as the equivalent integer for months (e.g. "X" as "10") in appropriate tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data | 
+| Roman numerals | Numbers written with the characters I, V, X, L, C, D, and M in the latin alphabet, each letter representing an integer and combined to form arbitrary integers. Roman numerals are interpreted as the equivalent integer for months (e.g. "X" as "10") in certain tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data | 
 | SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Test |
 | Test | An individual consideration of a DataQualityNeed with a Method which links it to an instance of a Specification, these instances being composed of InformationElements, Arguments, and Parameters. |  |  |
 |  | Technical: A composition of an instance of a subclass of bdqffdq:DataQualityNeed (which expresses a data quality need in the abstract) with an instance of a subclass of bdqffdq:DataQualityMethod which links it to an instance of a bdqffdq:Specification (which spells out how to concretely evaluate the need), these class instances being composed with bdqffdq:InformationElements, bdqffdq;Arguments, and bdqffdq:Parameters. For example, [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134).| BDQ Core | 
 | TestField | Column heading in the markdown of the tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Test |
 | Test Type | There are four types of tests, viz. Validation (bdqffdq:Validation), Amendment (bdqffdq:Amendment), Issue (bdqffdq:Issue), and Measure (bdqffdq:Measure). | Test |
 | VERBATIM | A general category of specific bdq:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
-| whitespace | 1) A field that only includes whitespace (blanks) is treated as bdq:Empty. 2) In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |
+| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed.   1) A field that only includes whitespace is treated as bdq:Empty. 2) In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |
 | YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
 | YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |
 
