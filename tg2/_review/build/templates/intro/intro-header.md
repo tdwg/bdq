@@ -35,11 +35,11 @@ Bibliographic citation
 
 Biodiversity Data Quality (BDQ) Core, hereafter referred to as 'BDQ Core', consists of 1) specifications of data quality tests that can be implemented to provide reproducible results from a given set of input data and test parameters, 2) a generic fitness for use framework (bdqffdq:) whose terms and semantics are embodied in an ontology, 3) a set of controlled vocabularies for the terms bdqffdq:DataQualityDimension, bdqffdq:Enhancement, and bdqffdq:Criterion, 4) a supporting vocabulary of terms (bdq:) used in the specification of the previously mentioned tests, 5) an exemplar data set to use as input for validation of the behavior of implementations of the previously mentioned tests, 6) a guide to implementation of the tests,  7) a guide to the interpretation of the results of the tests, and 8) a guide to the bdqffdq: Framework for describing data quality.
 
-Not part of BDQ Core, but dependent on it, is an exemplar implementation of the tests, written in Java(R), the behavior of which has been validated against the uses the previously mentioned validation data set.
+Not part of BDQ Core, but dependent on it, is an exemplar implementation of the tests, written in Java&#174;, the behavior of which has been validated against the uses the previously mentioned validation data set.
 
 BDQ Core covers a specification of tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record depends on the use to which it is applied: a record that is unsuitable to be used in one application may be suitable for another application (Belbin et al 2013).  Data does not have quality in the abstract, it only has quality with respect to some use, within BDQ Core, bdqffdq:UseCases provide a formal representation of uses to which data may be put.  The set of Tests and UseCases defined in BDQ Core are a starting point, not a limitation.  The BDQ Core tests may be composed differently for different uses, and additional tests are expected. 
 
-The BDQ tests support the determination of whether data resources will be fit for use for some particular purpose from the perspectives of the data quality dimensions `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. The tests themselves do not assert data quality, rather, sets of tests can be defined to support the assessment or assurance of data quality for a particular purpose by analyzing their responses to the input data in question against predefined expectations. This standard does not specify a structure to capture 'profiles' - component tests, order of processing, and expected results - for particular cases of fitness for use.
+The BDQ tests support the determination of whether data resources will be fit for use for some particular purpose from the perspectives of the data quality dimensions `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. The tests themselves do not assert data quality, rather, sets of tests can be defined to support the assessment or assurance of data quality for a particular purpose by analyzing their responses to the input data in question against predefined expectations.  This standard also specifies a structure to capture Profiles of tests for particular cases of fitness for use, and identifies a set of Profiles and uses they apply to for the included tests.  This standard does not specify execution order or other aspects of frameworks within which tests may be run.  Users are free to add new tests and compose tests differently for different uses.
 
 The BDQ tests were initially targeted specifically to [Darwin Core](https://dwc.tdwg.org/terms/) classes and properties against which they operate. This is not a limitation on the scope of the standard, but rather a choice of original scope against which to develop the tests.
 
@@ -53,13 +53,15 @@ This document is a general introduction to BDQ Core standard designed for anyone
 
 ### 1.3 Associated Documents
 
-Those who want  quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md). Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").
+Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").  Those intereseted in composing new tests, or seeking to represent test results as linked open data should consult the [bdqffdq: Framework guide](../guide/bdqffdq/index.md).  The full set of documents comprising the BDQ Core standard is listed on the [BDQ Core landing page](../index.md).
 
 ### 1.4. Status of the Content of This Document
 
-Section 3 of this document is normative.  
+Section 3 of this document is normative. 
 
 All other sections of this document are non-normative.
+
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.5 RFC 2119 key words
 
@@ -93,7 +95,7 @@ The following namespace abbreviations are used in this document:
 
 ### 2.1 Vocabularies
 
-The focus of this standard is on (1) a framework for describing data quality and (2) the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata. The tests and assertions specifications make use of additional vocabularies, three of which are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](../vocabularies/index.md). 
+The focus of this standard is on (1) a framework for describing data quality and (2) the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata expressed with bdqffdq: and other vocabularies.  Four additional vocabularies used in defining the tests are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](../vocabularies/index.md). 
 
 ### 2.2 Test Guidance
 
