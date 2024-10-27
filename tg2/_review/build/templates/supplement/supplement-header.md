@@ -628,10 +628,10 @@ The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark con
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
 
-![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](https://github.com/user-attachments/assets/a7a58c12-6cf6-4866-a3a0-4d2e7500913b)
+![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.jpg "NAME" by InformationElements")
 Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon
 
-![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](https://github.com/user-attachments/assets/9a5a3e38-bbd9-482c-a830-06b1989604b6)
+![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.jpg "SPACE" by InformationElements")
 Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
 
 
