@@ -292,9 +292,13 @@ When interpretations of strings containing Roman numerals as numbers is intended
 
 #### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
+<!--- TODO: Rewrited this section as normative guidance for implementers --->
+
 Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed. A field that only includes whitespace is treated as bdq:Empty. In bdqffdq:Validation tests that require the lookup of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment Tests and thus pass when the bdqffdq:Validation Test is run again
 
 Amendments SHOULD propose changes with leading or trailing whitespace removed.
+
+<!--- TODO: Above needs better phrasing --->
 
 ## 3 Compliant Implementation (normative)
 
