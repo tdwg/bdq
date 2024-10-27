@@ -628,20 +628,19 @@ The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark con
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the test results (which could be a defect in the implementation, in the validation data, or a problem in the test specification), discuss as a group, make changes as needed, and repeat.
 
-![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.jpg "NAME" by InformationElements")
+![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.png "NAME by InformationElements")
 Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon
 
-![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.jpg "SPACE" by InformationElements")
+
+![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.png "SPACE by InformationElements")
 Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
 
 
 
-![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.jpg "TIME by InformationElements")
-
+![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.png "TIME by InformationElements")
 Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.
 
-![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.jpg "OTHER by InformationElements")
-
+![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.png "OTHER by InformationElements")
 Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon
 
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
