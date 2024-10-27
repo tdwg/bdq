@@ -163,7 +163,7 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
 
 #### 2.3.2 Reading a Specification 
 
-#### 2.3.2.1 Response as shorthand for a set of bdqffdq concepts (non-normative)
+#### 2.3.2.1 Response as Shorthand for a Set of bdqffdq Concepts (non-normative)
 
 We regularly use Response, Response.status, Response.result, and Response.comment as shorthand for a more complicated set of bdqffdq: classes, object properties and datatype properties.  The table below describes how these concepts are related.
 
@@ -179,7 +179,7 @@ We regularly use Response, Response.status, Response.result, and Response.commen
 
 A bdqffdq:hasExpectedResponse property of a bdqffdq:Specification provides expectations for the behavior of an implemenation of a test.  A bdqffdq:hasExpectedResponse consists of a sequence of blocks of "RESPONSE, criteria;"   Where a few Amendment Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), the "criteria" is a sequence of options for that RESPONSE.  When reading a Specification, implementers SHOULD read each block in sequence, evaluating each of the criteria in sequence, and returning the first response for which the specified criteria are met.  An exception to this is that the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification. This does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
-#### 2.3.2.3 Further guidance for Reading a Specification (non-normative)
+#### 2.3.2.3 Further Guidance for Reading a Specification (non-normative)
 
 Responses in a Specification are expressed in a concise and abbreviated form for readability by implementers, expanding these to string properties on a Response object gives:
 
@@ -187,15 +187,13 @@ EXTERNAL_PREREQUISITES_NOT_MET means Response.status=EXTERNAL_PREREQUISITES_NOT_
 
 INTERNAL_PREREQUISITES_NOT_MET means Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some non-null description of the failure condition}.
 
-COMPLIANT means Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some non-null description of the failure condition}.
-
-etc.
+COMPLIANT means Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some non-null description of the failure condition}. etc.
 
 Expressed with bdqffdq terms, as would be if Assertions are expressed in RDF, the first of these would be:
 
 EXTERNAL_PREREQUISITES_NOT_MET means some bdqffdq:Assertion bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, that Assertion bdqffdq:hasResponseResult Response.null,  that Assertion bdqffdq:hasResponseComment "{some non-null description of the failure condition}"
 
-For example, the bdqffdq:hasExpectedResponse for the Specification for: [VALIDATION_COUNTRYCODE_STANDARD]((https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) states:
+For example, the bdqffdq:hasExpectedResponse for the Specification for: [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) states:
 
     EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -234,13 +232,13 @@ The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make
 
 See section [# 3.3 Parameterising the tests (normative)](../../bdqcore/index.md#33-parameterising-the-tests-normative) of the bdqcore landing page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
 
-#### 2.3.2.4 Default value strings in parameters (normative)
+#### 2.3.2.4 Default Value Strings in Parameters (normative)
 
 When a test is defined as parameterized, implementations SHOULD support the parameter in addition to the information elements.  When a test is defined as parameterized, implementations MAY choose to only support the default value, and MAY do so internally to the test, without including the parameter(s) in the test API (note that implementations that choose to do so, will be unable to validate against all of the test validation data (see [8 Validating Test Implementations](#8-Validating-Test-Implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value".  Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the test implementation.
 
-#### 2.3.2.5 Example interpretation of a parameter string default value (non-normative)
+#### 2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)
 
 The following code snippet in Java from the FilteredPush rec_occur_qc library illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8).  The literal "Creative Commons" is accepted as a parameter value.
 
@@ -290,27 +288,21 @@ In the Specifications the phrase "interpreted as" SHOULD BE interpreted by Imple
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a Roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the test, should be explicit about this meaning.  For example, the skos:note for [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
+When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the skos:note for the Test, should be explicit about this meaning.  For example, the skos:note for the Test [AMENDMENT_MONTH_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs moth/day order." this is explicit guidance for the meaning of "interpeted as" in the Specification for this test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive;"
 
-#### 2.3.4 Handling leading/trailing white space (normative)
+#### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
-TODO: text for this section Rewrite from glossary entry: 
-
-In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. 
-
-When matching to a source authority, unless specified otherwise in the specification, implementations MUST include leading/trailing whitespace.
+Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed. A field that only includes whitespace is treated as bdq:Empty. In bdqffdq:Validation tests that require the lookup of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment Tests and thus pass when the bdqffdq:Validation Test is run again
 
 Amendments SHOULD propose changes with leading or trailing whitespace removed.
-
-TODO: Above needs better phrasing.
 
 ## 3 Compliant Implementation (normative)
 
 In order to be considered as compliant with this standard, an implementation MUST meet the requirements of this section.   
 
-We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementers will implement sets of these Tests that fit their data quality needs, and may also implement other Tests suited for their domain. The BDQ Core Tests provide a coherent library of Tests that can be applied to the set of defined bdqffdq:UseCases, and considerable thought has gone into describing Tests that isolate particular data quality issues and work together as a conherent suite.   
+We view the most important elements of this standard as being the structure that holds explicit descriptions of what a data quality Test is intended to do, along with the consistent structure for reporting the results from the execution of a Test upon some data.  We expect that implementers will implement sets of these Tests that fit their data quality needs, and may also implement other Tests suited for their domain. BDQ Core provides a coherent library of Tests that can be applied to the set of defined bdqffdq:UseCases, and considerable thought has gone into describing Tests that isolate particular data quality issues and work together as a conherent suite.   
 
-An implementation MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one bdqffdq:UseCase, and MAY provide implementations for more or all of the bdqffdq:UseCases.   Implementations MAY include additional Tests and additional UseCases.
+An implementation of a Test MUST include all bdqcore:SingleRecord Validations, Amendments, and Measures for each implemented UseCase.  An Implementation MUST provide an implementation for at least one bdqffdq:UseCase, and MAY provide implementations for more or all of the bdqffdq:UseCases.   Implementations MAY include additional Tests and additional UseCases.
 
 Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response. Results MAY include Response.qualifier (See 4 Extension Points).  The values of Response.status and Response.result MUST be those specified. This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response.  See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#31-Structure-of-Response-normative) for further normative guidance on Responses as RDF or as data structures.
 
