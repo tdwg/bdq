@@ -44,13 +44,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/290</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:199d3bdb-5732-4039-a8d3-a05f78b3fc15"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:81667ac4-6208-42f2-819e-3a01bca65171"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:199d3bdb-5732-4039-a8d3-a05f78b3fc15">
+<rdf:Description rdf:about="urn:uuid:81667ac4-6208-42f2-819e-3a01bca65171">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:individualCount</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/individualCount"/>
@@ -185,13 +185,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/tdwg/bdq/issues/282</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Currently, it appears that no full Vocabulary exists for dwc:reproductiveCondition making this test difficult to implement. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4259893a-81ce-4bff-81c7-237843eb02e4"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5e518eb8-9fa2-4991-8ed2-c472969cd976"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:4259893a-81ce-4bff-81c7-237843eb02e4">
+<rdf:Description rdf:about="urn:uuid:5e518eb8-9fa2-4991-8ed2-c472969cd976">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:reproductiveCondition</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/reproductiveCondition"/>
@@ -208,9 +208,16 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:pathway="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:reproductiveCondition does not contain an interpretable value in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:reproductiveCondition="lact.": Response.status=AMENDED, Response.result=dwc:reproductiveCondition="lactating", Response.comment="dwc:reproductiveCondition contains an interpretable value in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e7d3f0e8-8989-417f-93e5-436ca48e2449"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:673ec034-f5ce-4170-8abd-04583d5c5643"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "Darwin Core reproductionCondition" {[https://dwc.tdwg.org/list/#dwc_reproductiveCondition]} {dwc:reproductiveCondition vocabulary API [NO CURRENT API EXISTS]}</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:reproductiveCondition is bdq:Empty; AMENDED the value of dwc:reproductiveCondition if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:673ec034-f5ce-4170-8abd-04583d5c5643">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"Darwin Core reproductionCondition"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darwin Core reproductionCondition</hasArgumentValue>
+	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9116d7d1-5a12-4d72-aa79-82d377b4a6f6">
@@ -220,13 +227,6 @@
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED with Specification Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</skos:prefLabel>
 	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05"/>
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:42c9c755-2f1a-4d56-b6f8-889c148049d6"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:e7d3f0e8-8989-417f-93e5-436ca48e2449">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"Darwin Core reproductionCondition"</rdfs:label>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darwin Core reproductionCondition</hasArgumentValue>
-	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05">
@@ -239,17 +239,24 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/tdwg/bdq/issues/280</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Currently, it appears that no full Vocabulary exists for dwc:preparations making this test difficult to implement. Best practice for dwc:preparations is a pipe delimited list, implementations should split the list into elements and test each element against the source authority. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a4cc96fe-06d3-4085-af4e-8d0a4d715f61"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:12cc393c-bc4c-49ef-9d01-4163b027f133"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:a4cc96fe-06d3-4085-af4e-8d0a4d715f61">
+<rdf:Description rdf:about="urn:uuid:12cc393c-bc4c-49ef-9d01-4163b027f133">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:preparations</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/preparations"/>
 	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:preparations</prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:986efddd-74f1-4197-aa60-a6907550ced1">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFAULT</hasArgumentValue>
+	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9a034f38-7d86-463e-86c1-b5b3a482dbf5">
@@ -258,7 +265,7 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:preparations="image": Response.status=AMENDED, Response.result=dwc:preparations="photograph", Response.comment="dwc:preparations contains an interpretable value in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:preparations="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:preparations does not contain an interpretable value in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b4f1f1a1-653a-4292-8b0c-10844c8688b2"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:986efddd-74f1-4197-aa60-a6907550ced1"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "Darwin Core preparations {[https://dwc.tdwg.org/list/#dwc_preparations]} {dwc:preparations vocabulary API [NO CURRENT API EXISTS]}</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:preparations is bdq:Empty; AMENDED the value of dwc:preparations if at least one item in the list of preparations, comparing and amending item by item in the list, ignoring leading or trailing whitespace in each item,  can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</hasExpectedResponse>
 </rdf:Description>
@@ -272,46 +279,30 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9a034f38-7d86-463e-86c1-b5b3a482dbf5"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:b4f1f1a1-653a-4292-8b0c-10844c8688b2">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority</rdfs:label>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFAULT</hasArgumentValue>
-	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-18">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2024-10-27">
 	<dcterms:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO 8601-1: Latest version (currently 2019(en)) Date and time — Representations for information interchange — Part 1: Basic rules (https://www.iso.org/obp/ui/#iso:std:iso:8601:-1:ed-1:v1:en); Wikipedia (2020). ISO 8601 (https://en.wikipedia.org/wiki/ISO_8601); Library of Congress (2019). Extended Date/Time Format (EDTF) (https://www.loc.gov/standards/datetime/)</dcterms:bibliographicCitation>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024-09-18</dcterms:issued>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024-10-27</dcterms:issued>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propose amendment of the value of dcterms:modified to a valid ISO date and time.</rdfs:comment>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/tdwg/bdq/issues/273</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The intent of the amended range is to capture the original uncertainty where possible. As in the example, we amend "1999-11" instead of "1999-11-01/1999-11-31".  An AMBIGUOUS response is possible. See Comments.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba589033-eba2-438a-8bfc-754527f7dddc"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6d95c558-096c-4d1b-9a2b-c7d971755471"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ba589033-eba2-438a-8bfc-754527f7dddc">
+<rdf:Description rdf:about="urn:uuid:6d95c558-096c-4d1b-9a2b-c7d971755471">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dcterms:modified</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://purl.org/dc/terms/modified"/>
 	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dcterms:modified</prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:44e074e1-bfa7-4ad3-b5d8-a4627d1a97c6">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
-	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source: TG2</skos:historyNote>
-	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</skos:prefLabel>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-18"/>
-	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:null"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:null">
+<rdf:Description rdf:about="urn:uuid:369904b2-1176-419c-8daa-aba5e760aa48">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if dcterms:modified is bdq:Empty; AMENDED if the value of dcterms:modified is not a properly formatted ISO 8601 date/time but is unambiguous, and is altered to be a valid ISO 8601 date/time; otherwise NOT_AMENDED</rdfs:comment>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
@@ -319,6 +310,15 @@
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dcterms:modified="2021-28-10T15:19": Response.status=AMENDED, Response.result=dcterms:modified="2021-10-28T15:19", Response.comment="dcterms:modified contains an interpretable value. Assuming year-day-month input format"</skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTERNAL_PREREQUISITES_NOT_MET if dcterms:modified is bdq:Empty; AMENDED if the value of dcterms:modified is not a properly formatted ISO 8601 date/time but is unambiguous, and is altered to be a valid ISO 8601 date/time; otherwise NOT_AMENDED</hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9180fd00-2c49-4793-8598-443da633363d">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
+	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source: TG2</skos:historyNote>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</skos:prefLabel>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2024-10-27"/>
+	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:369904b2-1176-419c-8daa-aba5e760aa48"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/c253f11a-6161-4692-bfce-4328f1961630-2024-09-16">
@@ -331,7 +331,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/272</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba589033-eba2-438a-8bfc-754527f7dddc"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6d95c558-096c-4d1b-9a2b-c7d971755471"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -366,13 +366,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/tdwg/bdq/issues/271</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. For reference, synonym values for dwc:lifestage can be found at https://registry.gbif.org/vocabulary/LifeStage/concepts.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2eb9e28d-86b8-43a9-ad95-ec87333e720b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f30d3bf3-e238-42c6-a218-0bb4211f2579"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:2eb9e28d-86b8-43a9-ad95-ec87333e720b">
+<rdf:Description rdf:about="urn:uuid:f30d3bf3-e238-42c6-a218-0bb4211f2579">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:lifeStage</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/lifeStage"/>
@@ -385,7 +385,7 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:lifeStage="fruting": Response.status=AMENDED, Response.result=dwc:lifeStage="fruiting", Response.comment="dwc:lifeStage contains an interpretable value in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:lifeStage="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:lifeStage does not contain an interpretable value in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:815072e0-a4bf-48d1-b126-073eae71e81e"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e148b08e-15e0-4857-9650-534b8d701753"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "GBIF LifeStage Vocabulary" [https://api.gbif.org/v1/vocabularies/LifeStage]} {"dwc:lifeStage vocabulary API" [https://api.gbif.org/v1/vocabularies/LifeStage/concepts]}</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:lifeStage is bdq:Empty; AMENDED the value of dwc:lifeStage if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</hasExpectedResponse>
 </rdf:Description>
@@ -399,7 +399,7 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1246660d-5aa0-4f17-b930-67e419a43f3c"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:815072e0-a4bf-48d1-b126-073eae71e81e">
+<rdf:Description rdf:about="urn:uuid:e148b08e-15e0-4857-9650-534b8d701753">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"GBIF LifeStage Vocabulary"</rdfs:label>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBIF LifeStage Vocabulary</hasArgumentValue>
@@ -416,7 +416,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/270</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2eb9e28d-86b8-43a9-ad95-ec87333e720b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f30d3bf3-e238-42c6-a218-0bb4211f2579"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -431,7 +431,7 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d023b94e-a82c-4c26-8ceb-3e34e4364b25"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:a9fb4f38-dd86-4554-9325-992cbec99a3a">
+<rdf:Description rdf:about="urn:uuid:9e98ab76-9f54-40f9-8f63-d3aa637c206a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"GBIF LifeStage Vocabulary"</rdfs:label>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBIF LifeStage Vocabulary</hasArgumentValue>
@@ -444,7 +444,7 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:lifeStage="Bird mature": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:lifeStages not found in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:lifeStage="Larva": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:lifeStage found in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a9fb4f38-dd86-4554-9325-992cbec99a3a"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9e98ab76-9f54-40f9-8f63-d3aa637c206a"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "GBIF LifeStage Vocabulary" [https://api.gbif.org/v1/vocabularies/LifeStage]} {"dwc:lifeStage vocabulary API" [https://api.gbif.org/v1/vocabularies/LifeStage/concepts]}</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:lifeStage is bdq:Empty; COMPLIANT if the value of dwc:lifeStage is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</hasExpectedResponse>
 </rdf:Description>
@@ -585,13 +585,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/261</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implementors need to consider multiplicity, in that a SingleRecord that contains dwc:relationshipOfResource values likely contains multiple dwc:ResourceRelationship records related to each Occurrence or other core entity of the SingleRecord.  Assessment should be made on single ResourceRelationship records at a time.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:215dc31f-7654-46fe-b273-3aa70b572adc"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9b65da5b-8d62-4413-bb85-6eddcdae489f"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:215dc31f-7654-46fe-b273-3aa70b572adc">
+<rdf:Description rdf:about="urn:uuid:9b65da5b-8d62-4413-bb85-6eddcdae489f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:relationshipOfResource</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/relationshipOfResource"/>
@@ -627,7 +627,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/260</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Widely applicable for Occurrences vouchered by MateralSamples, but not generally applicable to observational Occurrence data.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. See comments.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a4cc96fe-06d3-4085-af4e-8d0a4d715f61"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:12cc393c-bc4c-49ef-9d01-4163b027f133"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -662,13 +662,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/258</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occurrences from the high seas is not expected to contain a value in dwc:muncipality.  Marine occurrences from within an EEZ may or may not legitimately have a value in municipality.   Local governments vary considerably in how far offshore they consider to be within the municipality, so nearshore marine occurrences may legitimately have a value in municipality.  Terrestrial material may or may not fall within the boundaries of an geopolitical entity that could be place within municipality.   This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4f0f708b-f2a2-4ebd-a90c-201ad2a01c20"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5a249d57-1c4d-40b2-9be4-13bea82df632"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:4f0f708b-f2a2-4ebd-a90c-201ad2a01c20">
+<rdf:Description rdf:about="urn:uuid:5a249d57-1c4d-40b2-9be4-13bea82df632">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:municipality</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
@@ -704,13 +704,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/257</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:13a41e94-a38e-493f-9d75-ad75fd56c8a0"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0f4d7052-9bdf-4b71-a7f3-b52b7c4bab39"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:13a41e94-a38e-493f-9d75-ad75fd56c8a0">
+<rdf:Description rdf:about="urn:uuid:0f4d7052-9bdf-4b71-a7f3-b52b7c4bab39">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:georeferenceVerificationStatus</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus"/>
@@ -746,13 +746,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/256</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A COMPLIANT response on this test may have some quality value in some use cases, but a NOT_COMPLAINT response doesn't without the context of a georeference.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:48fdf435-f649-4409-8961-60e5e63db2e9"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b8039405-e39e-45a0-b703-2c24bdb3a6f8"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:48fdf435-f649-4409-8961-60e5e63db2e9">
+<rdf:Description rdf:about="urn:uuid:b8039405-e39e-45a0-b703-2c24bdb3a6f8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:georeferencedDate</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferencedDate"/>
@@ -788,13 +788,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/255</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because assessment of dwc:eventTime is out of scope for the CORE use case, where temporal resolution is only considered down to the resolution of approximately one day.  Time is often known for observational occurrence data, but very seldom recorded for vouchered specimen data.  This test has significant value for research and other uses of observational data.   Any analysis of time data needs to be very cognizant of substantial problems related to temporal data of which time zones are just the tip of the iceberg, see: https://xkcd.com/2867/,Time is  of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9a8aa67c-05c5-41e0-95ef-7c59df84dd8c"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7b9ae79a-32e6-446d-bbc8-82dd265d1eda"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:9a8aa67c-05c5-41e0-95ef-7c59df84dd8c">
+<rdf:Description rdf:about="urn:uuid:7b9ae79a-32e6-446d-bbc8-82dd265d1eda">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:eventTime</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/eventTime"/>
@@ -830,13 +830,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/254</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This test has significant utility for assessing Taxon data.  The presence of vernacular names can substantially improve access to data using scientific names by a broader range of users.   Any uses of vernacularName on occurrence data should be cognizant of the vernacularName being populated because the occurrence vouchers the application of that vernacular name to the organism in the occurrence, or because it is metadata inherited from the taxon name applied in an identification.,This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7a5779a1-cada-43ac-ac66-b71dff5895ed"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ec14c629-0a9b-4caf-a924-6e3c11f56080"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:7a5779a1-cada-43ac-ac66-b71dff5895ed">
+<rdf:Description rdf:about="urn:uuid:ec14c629-0a9b-4caf-a924-6e3c11f56080">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:vernacularName</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/vernacularName"/>
@@ -872,13 +872,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/253</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0c940c02-4e5b-4d27-9e1f-6957ea4d23f9"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:26498c7b-07e7-40f1-aa80-5aa79d213448"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:0c940c02-4e5b-4d27-9e1f-6957ea4d23f9">
+<rdf:Description rdf:about="urn:uuid:26498c7b-07e7-40f1-aa80-5aa79d213448">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimSRS</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimSRS"/>
@@ -914,13 +914,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/252</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:ISSUE or bdq:NOT_ISSUE results (cf. bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6998b6aa-59b3-460e-a25d-b54a9f15917d"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fc781d10-d64a-4e28-9575-79f42f3167ab"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:6998b6aa-59b3-460e-a25d-b54a9f15917d">
+<rdf:Description rdf:about="urn:uuid:fc781d10-d64a-4e28-9575-79f42f3167ab">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimLongitude</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimLongitude"/>
@@ -956,13 +956,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/251</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f6d989ec-3d29-42d3-a15f-4d36a99dad33"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:99adbfea-8dbc-444c-83a3-60687dcbd74c"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:f6d989ec-3d29-42d3-a15f-4d36a99dad33">
+<rdf:Description rdf:about="urn:uuid:99adbfea-8dbc-444c-83a3-60687dcbd74c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimLatitude</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimLatitude"/>
@@ -998,13 +998,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/250</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:781dc5bd-2bd2-40ab-aacb-a675015eb876"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f6ab8399-41ad-4d47-af61-c7693581853d"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:781dc5bd-2bd2-40ab-aacb-a675015eb876">
+<rdf:Description rdf:about="urn:uuid:f6ab8399-41ad-4d47-af61-c7693581853d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimEventDate</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimEventDate"/>
@@ -1040,13 +1040,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/249</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6e2bb72f-f89f-4a52-913e-cd0916117d29"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4fd9b7cb-aa94-45a0-80d5-feb3bbe8749c"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:6e2bb72f-f89f-4a52-913e-cd0916117d29">
+<rdf:Description rdf:about="urn:uuid:4fd9b7cb-aa94-45a0-80d5-feb3bbe8749c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimElevation</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimElevation"/>
@@ -1082,13 +1082,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/248</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c6a9efc1-6843-46e5-8681-b8dcfc393213"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6dc36fe6-e0c9-4303-aaa5-18e7860e9014"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:c6a9efc1-6843-46e5-8681-b8dcfc393213">
+<rdf:Description rdf:about="urn:uuid:6dc36fe6-e0c9-4303-aaa5-18e7860e9014">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimDepth</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimDepth"/>
@@ -1124,13 +1124,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/247</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:24016477-36f7-4ebf-9eae-a738d2d796f9"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:12749f34-754a-4fe0-bee4-4d52913db757"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:24016477-36f7-4ebf-9eae-a738d2d796f9">
+<rdf:Description rdf:about="urn:uuid:12749f34-754a-4fe0-bee4-4d52913db757">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:verbatimCoordinates</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimCoordinates"/>
@@ -1250,13 +1250,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/243</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:92f8b815-9ca1-4fac-8341-298e7afe8344"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba01890a-e612-4edf-8806-8fa0ab600364"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:92f8b815-9ca1-4fac-8341-298e7afe8344">
+<rdf:Description rdf:about="urn:uuid:ba01890a-e612-4edf-8806-8fa0ab600364">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:recordNumber</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/recordNumber"/>
@@ -1292,13 +1292,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/242</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because it is not widely applicable to the CORE use case.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:87e973bf-8c2d-4d01-83aa-6cf844956562"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:919a2dd1-ddca-499b-8abb-713d6aef2af2"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:87e973bf-8c2d-4d01-83aa-6cf844956562">
+<rdf:Description rdf:about="urn:uuid:919a2dd1-ddca-499b-8abb-713d6aef2af2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:recordedBy</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/recordedBy"/>
@@ -1376,13 +1376,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/240</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:086d0beb-e4e6-4217-af04-7a86ed37773f"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e0896a0a-e4b4-43e8-999a-226abf7e801b"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:086d0beb-e4e6-4217-af04-7a86ed37773f">
+<rdf:Description rdf:about="urn:uuid:e0896a0a-e4b4-43e8-999a-226abf7e801b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:minimumElevation</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/minimumElevation"/>
@@ -1418,13 +1418,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/239</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:84f955fa-639c-46ea-b6c5-ab7217103390"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8f02ecbd-ed39-476c-85d4-de8b9dc1185c"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:84f955fa-639c-46ea-b6c5-ab7217103390">
+<rdf:Description rdf:about="urn:uuid:8f02ecbd-ed39-476c-85d4-de8b9dc1185c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:minimumDepth</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/minimumDepth"/>
@@ -1460,13 +1460,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/238</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b319eacf-93e2-4858-8f1d-e3b9501d15b0"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7c346e7d-b6b1-4259-8fe0-c754ea6d4e5c"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:b319eacf-93e2-4858-8f1d-e3b9501d15b0">
+<rdf:Description rdf:about="urn:uuid:7c346e7d-b6b1-4259-8fe0-c754ea6d4e5c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:maximumElevation</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/maximumElevation"/>
@@ -1502,13 +1502,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/237</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ae8d5802-1ec7-4acd-b394-ae0f8c9ad740"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:97f9e470-2466-4485-9dd3-8930da96c4cf"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ae8d5802-1ec7-4acd-b394-ae0f8c9ad740">
+<rdf:Description rdf:about="urn:uuid:97f9e470-2466-4485-9dd3-8930da96c4cf">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:maximumDepth</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/maximumDepth"/>
@@ -1544,13 +1544,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/236</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4bf5d6c0-86ac-4dd8-af5a-3ec6151f3ded"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:70938731-00f5-4b35-b0aa-dc1b65a82fdc"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:4bf5d6c0-86ac-4dd8-af5a-3ec6151f3ded">
+<rdf:Description rdf:about="urn:uuid:70938731-00f5-4b35-b0aa-dc1b65a82fdc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:locality</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
@@ -1586,7 +1586,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/235</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2eb9e28d-86b8-43a9-ad95-ec87333e720b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f30d3bf3-e238-42c6-a218-0bb4211f2579"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -1621,13 +1621,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/234</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:45c9e48d-78e4-4f89-b4ae-47b0cdd4f229"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d840e77c-01d5-4117-9f04-f51f1f9a3006"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:45c9e48d-78e4-4f89-b4ae-47b0cdd4f229">
+<rdf:Description rdf:about="urn:uuid:d840e77c-01d5-4117-9f04-f51f1f9a3006">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:islandGroup</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/islandGroup"/>
@@ -1663,13 +1663,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/233</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:861cbcb1-f9b4-4d1d-9b98-d845d0867618"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e93b72c8-9575-4079-8901-fac7562268c1"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:861cbcb1-f9b4-4d1d-9b98-d845d0867618">
+<rdf:Description rdf:about="urn:uuid:e93b72c8-9575-4079-8901-fac7562268c1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:island</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/island"/>
@@ -1705,7 +1705,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/232</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:199d3bdb-5732-4039-a8d3-a05f78b3fc15"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:81667ac4-6208-42f2-819e-3a01bca65171"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -1740,13 +1740,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/230</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This would belong in core, except we are treating the georeference as the primary terms for locality, and the textual terms as secondary, and dwc:higherGeography is a concatenation of the textual higher geography terms, thus this appropriately falls outside of core.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1033249e-43c3-490f-8766-18f4ea6c1d69"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4acdd464-73f0-4fe8-8bb1-c1b49a62e621"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:1033249e-43c3-490f-8766-18f4ea6c1d69">
+<rdf:Description rdf:about="urn:uuid:4acdd464-73f0-4fe8-8bb1-c1b49a62e621">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:higherGeography</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/higherGeography"/>
@@ -1782,13 +1782,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/229</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because it is not seen as having utility for most uses, dwc:higherClassification being largely redundant with the set of ranked higher taxonomic placement terms.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1b528f7a-2e88-4433-b9cf-41702979b83e"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3a41f57a-59c9-4fbb-9663-8144dad8d43f"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:1b528f7a-2e88-4433-b9cf-41702979b83e">
+<rdf:Description rdf:about="urn:uuid:3a41f57a-59c9-4fbb-9663-8144dad8d43f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:higherClassification</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/higherClassification"/>
@@ -1823,7 +1823,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/228</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. This test illustrates the need for a new set of tests (based on the TG2 template) that examine the quality of the Darwin Core geospatial values in a record.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:13a41e94-a38e-493f-9d75-ad75fd56c8a0"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0f4d7052-9bdf-4b71-a7f3-b52b7c4bab39"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -1858,7 +1858,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/227</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:48fdf435-f649-4409-8961-60e5e63db2e9"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b8039405-e39e-45a0-b703-2c24bdb3a6f8"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -1893,13 +1893,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/226</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:70806432-9aaf-4db7-b950-6283f05238ac"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7798c96c-6783-4546-8898-d9eb7ebf6e2c"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:70806432-9aaf-4db7-b950-6283f05238ac">
+<rdf:Description rdf:about="urn:uuid:7798c96c-6783-4546-8898-d9eb7ebf6e2c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:footprintWKT</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/footprintWKT"/>
@@ -1935,13 +1935,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/225</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9846e3f5-3942-42e5-8fa2-036946882a18"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8ce13b45-eed3-499d-a2be-f3014d2f98f9"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:9846e3f5-3942-42e5-8fa2-036946882a18">
+<rdf:Description rdf:about="urn:uuid:8ce13b45-eed3-499d-a2be-f3014d2f98f9">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:disposition</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
@@ -1977,7 +1977,7 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/224</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. See Issue comments below.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba589033-eba2-438a-8bfc-754527f7dddc"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6d95c558-096c-4d1b-9a2b-c7d971755471"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -2012,13 +2012,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/222</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d53ed9c2-81a6-4c21-9388-bdd6bb793115"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:05fafc73-049c-4734-b147-5950143d8b4d"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:d53ed9c2-81a6-4c21-9388-bdd6bb793115">
+<rdf:Description rdf:about="urn:uuid:05fafc73-049c-4734-b147-5950143d8b4d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:coordinatePrecision</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/coordinatePrecision"/>
@@ -2054,13 +2054,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/221</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. This test is seen of little current value due to the low population of dwc:waterbody and dwc:continent and the complexity of the definition of both terms.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f77fe399-7ea5-4206-9a0a-17bd12bbcf07"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2db05953-e92e-47a2-a6e6-4bb71c9e7bbf"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:f77fe399-7ea5-4206-9a0a-17bd12bbcf07">
+<rdf:Description rdf:about="urn:uuid:2db05953-e92e-47a2-a6e6-4bb71c9e7bbf">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:continent, dwc:waterbody</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/continent"/>
@@ -2097,13 +2097,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/220</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4b6acbc3-1d00-4e0b-a7bc-5ee4146f3a0c"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0c8843ba-e6b9-4d77-8bcc-56fcd3ab6ad6"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:4b6acbc3-1d00-4e0b-a7bc-5ee4146f3a0c">
+<rdf:Description rdf:about="urn:uuid:0c8843ba-e6b9-4d77-8bcc-56fcd3ab6ad6">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:specificEpithet</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/specificEpithet"/>
@@ -2139,13 +2139,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/219</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:806498b6-d098-42ba-8821-b1e0b3042019"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c10f5960-6b9e-4aaa-a987-6a0bc284bba2"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:806498b6-d098-42ba-8821-b1e0b3042019">
+<rdf:Description rdf:about="urn:uuid:c10f5960-6b9e-4aaa-a987-6a0bc284bba2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:infraspecificEpithet</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"/>
@@ -2182,7 +2182,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The definition of dwc:phylum includes both phylum and division.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8fe0d938-7aa4-40a2-87b7-5bd7e9727e95"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ea8f6eb5-15d2-40c8-81ff-9a13977a6c82"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:db782815-61e3-4414-82e7-dfe0accac8cd"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -2195,7 +2195,7 @@
 	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:phylum</prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ea8f6eb5-15d2-40c8-81ff-9a13977a6c82">
+<rdf:Description rdf:about="urn:uuid:db782815-61e3-4414-82e7-dfe0accac8cd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element Consulted dwc:taxonRank</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/taxonRank"/>
@@ -2232,7 +2232,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b1b7b96f-79c7-414e-998f-4e31c23b6dec"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ea8f6eb5-15d2-40c8-81ff-9a13977a6c82"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:db782815-61e3-4414-82e7-dfe0accac8cd"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -2275,7 +2275,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family is expected to be empty when an identification is only to a rank higher than Family.   This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3987992-230d-4c2e-816c-5b72d98218eb"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ea8f6eb5-15d2-40c8-81ff-9a13977a6c82"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:db782815-61e3-4414-82e7-dfe0accac8cd"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -2318,7 +2318,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genus is expected to be bdq:Empty when an identification is only to the level of a taxon higher than Genus.   This test is not regarded as CORE (cf. bdq:CORE).</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6417eb42-b07d-4b42-9a6a-13c592aeb5ea"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ea8f6eb5-15d2-40c8-81ff-9a13977a6c82"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:db782815-61e3-4414-82e7-dfe0accac8cd"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -2361,7 +2361,7 @@
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5b155af3-2ce0-432e-ab10-2e21d6ccd32a"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ea8f6eb5-15d2-40c8-81ff-9a13977a6c82"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:db782815-61e3-4414-82e7-dfe0accac8cd"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
@@ -2408,13 +2408,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/208</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. The same test might return distinct results when using distinct source authorities. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ed2efa76-97ea-4f7c-9911-1ecbb0c87c85"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6d65993e-29f1-45fa-be90-d689785d091b"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ed2efa76-97ea-4f7c-9911-1ecbb0c87c85">
+<rdf:Description rdf:about="urn:uuid:6d65993e-29f1-45fa-be90-d689785d091b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:subtribe</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/subtribe"/>
@@ -2435,12 +2435,12 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_SUBTRIBE_FOUND</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:subtribe="Malinae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:subtribe has an equivalent at the rank of Subtribe in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:subtribe="Metazoa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:subtribe does not strictly have an equivalent at the rank of Subtribe in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bb7bf004-2e4c-4811-9afe-b460aa2f631e"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ed17576d-cfa3-4c03-b8e0-407931378b6e"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "GBIF Backbone Taxonomy" [https://doi.org/10.15468/39omei],API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:subtribe is bdq:Empty; COMPLIANT if the value of dwc:subtribe is found as a value at the rank of subtribe in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:bb7bf004-2e4c-4811-9afe-b460aa2f631e">
+<rdf:Description rdf:about="urn:uuid:ed17576d-cfa3-4c03-b8e0-407931378b6e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBIF Backbone Taxonomy</hasArgumentValue>
@@ -2457,17 +2457,24 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/207</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. The same test might return distinct results when using distinct source authorities. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:70aad281-f450-4c7c-b130-35aa71bd14cd"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:86997ad2-8c6d-4c8c-a7d3-59dfcc5b8153"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:70aad281-f450-4c7c-b130-35aa71bd14cd">
+<rdf:Description rdf:about="urn:uuid:86997ad2-8c6d-4c8c-a7d3-59dfcc5b8153">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:tribe</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/tribe"/>
 	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:tribe</prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0127860f-0d52-4a2c-8c35-d98673ae0f46">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBIF Backbone Taxonomy</hasArgumentValue>
+	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8a7e5ab4-b7fc-4d1e-b8d2-ddba7bfe7b14">
@@ -2484,16 +2491,9 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_TRIBE_FOUND</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:tribe="Bombini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:tribe has an equivalent at the rank of tribe in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:tribe="Metazoa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:tribe does not strictly have an equivalent at the rank of tribe in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f58d5a54-02a7-4126-bb5d-290418329528"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0127860f-0d52-4a2c-8c35-d98673ae0f46"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "GBIF Backbone Taxonomy" [https://doi.org/10.15468/39omei],API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:tribe is bdq:Empty; COMPLIANT if the value of dwc:tribe is found as a value at the rank of tribe in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:f58d5a54-02a7-4126-bb5d-290418329528">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBIF Backbone Taxonomy</hasArgumentValue>
-	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2024-09-05">
@@ -2506,13 +2506,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/206</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. The same test might return distinct results when using distinct source authorities. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:056f0e2e-75ee-4672-970d-92aaeb266496"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d02fec68-7874-453a-b7a7-c89a508822dd"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:056f0e2e-75ee-4672-970d-92aaeb266496">
+<rdf:Description rdf:about="urn:uuid:d02fec68-7874-453a-b7a7-c89a508822dd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:superfamily</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/superfamily"/>
@@ -2525,12 +2525,12 @@
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:superfamily="Metazoa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:superfamily does not strictly have an equivalent at the rank of Superfamily in the bdq:sourceAuthority"</skos:example>
 	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:superfamily="Muricoidea": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:superfamily has an equivalent at the rank of Superfamily in the bdq:sourceAuthority"</skos:example>
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:80981336-8481-4890-babd-f1a1a0f95ef6"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a24afb1a-1551-40d9-a598-33d02fece819"/>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "GBIF Backbone Taxonomy" [https://doi.org/10.15468/39omei],API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]</hasAuthoritiesDefaults>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:superfamily is bdq:Empty; COMPLIANT if the value of dwc:superfamily is found as a value at the rank of superfamily in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:80981336-8481-4890-babd-f1a1a0f95ef6">
+<rdf:Description rdf:about="urn:uuid:a24afb1a-1551-40d9-a598-33d02fece819">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBIF Backbone Taxonomy</hasArgumentValue>
@@ -2579,13 +2579,31 @@
 	<prefLabel xmlns="skos:" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:country, dwc:stateProvince</prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:59789974-638e-48da-ba27-1168fd052ecf">
+<rdf:Description rdf:about="urn:uuid:17e17c79-c720-44f6-93af-3b20b44c6436">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default value for bdq:sourceAuthority:"The Getty Thesaurus of Geographic Names (TGN)"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Getty Thesaurus of Geographic Names (TGN)</hasArgumentValue>
+	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:39cbb213-b33a-4e45-bfa4-967ee277455b">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country or dwc:stateProvince are bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to the administrative entity matching the value of dwc:country in the bdq:sourceAuthority, and the match to dwc:country is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
+	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:country="Australia", dwc:stateProvince="Florida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country is not consistent with dwc:stateProvince"</skos:example>
+	<skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dwc:country="Australia", dwc:stateProvince="WA": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is consistent with dwc:stateProvince. dwc:stateProvince matches Western Australia in dwc:country Australia"</skos:example>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:17e17c79-c720-44f6-93af-3b20b44c6436"/>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</hasAuthoritiesDefaults>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country or dwc:stateProvince are bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to the administrative entity matching the value of dwc:country in the bdq:sourceAuthority, and the match to dwc:country is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f93ba397-7bdf-4cb0-836b-467bc2a8a9f8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source: VertNet, Kurator</skos:historyNote>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</skos:prefLabel>
 	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2024-09-18"/>
-	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:null"/>
+	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:39cbb213-b33a-4e45-bfa4-967ee277455b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="bdqcrit:Complete">
@@ -2603,13 +2621,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/121</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We have made this test SUPPLEMENTARY - which means that while we do not believe this test should be CORE, there may be circumstances where some communities may want it as CORE. This change derived from a discussion at TDWG 2023 on the use of dwc:taxonID and dwc:scientificNameID. It was concluded that a test VALIDATION_SCIENTIFICNAMEID was justified as CORE while this test should be SUPPLEMENTARY.  The original test "VALIDATION_TAXONID_AMBIGUOUS" was seen by the TG2 team as too complex to implement. If we use any single bdq:sourceAuthority such as GBIF, a valid and complete dwc:taxonID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:58a87062-b9e9-4738-a330-a3d84d91a6fb"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:65f2d726-c2e5-4796-a0a0-3020f9cc7fda"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Complete"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:58a87062-b9e9-4738-a330-a3d84d91a6fb">
+<rdf:Description rdf:about="urn:uuid:65f2d726-c2e5-4796-a0a0-3020f9cc7fda">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:taxonID</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
@@ -2650,13 +2668,13 @@
 	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.github.com/repos/tdwg/bdq/issues/92</skos:historyNote>
 	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There might be identification dates that are legitimately before dwc:eventDate.  This test will, by design, flag as problematic cases (such as LTER plots, bird banding data, and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed (or collected) without new taxonomic identifications being made.</skos:note>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missing prefLabel for SingleRecord</skos:prefLabel>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a6f8fc3f-14be-40a9-95f5-0709e5ef53ab"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4ece2536-3d91-42d3-8fb4-3d465d3be4c6"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Consistent"/>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Likelihood"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:a6f8fc3f-14be-40a9-95f5-0709e5ef53ab">
+<rdf:Description rdf:about="urn:uuid:4ece2536-3d91-42d3-8fb4-3d465d3be4c6">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Element ActedUpon dwc:eventDate, dwc:dateIdentified</rdfs:label>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/dateIdentified"/>
