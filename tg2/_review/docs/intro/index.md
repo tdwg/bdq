@@ -55,7 +55,7 @@ Draft Standard for Submission
 - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
 - [4 Contributions and Acknowledgements](#4-contributions-and-acknowledgements)
 - [4.1 Acknowledgements](#41-acknowledgements)
-- [4.1.1 Funding and Support](#411-funding-and-support)
+- [4.1.1 Funding and Support for Meetings](#411-funding-and-support-for-meetings)
 - [4.2 Contributions](#42-contributions)
 - [4.2.1 Authors](#421-authors)
 - [4.2.2 Contributors](#422-contributors)
@@ -223,11 +223,11 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 ### 4.1 Acknowledgements
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at TDWG annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also gratefull for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at Biodiversity Informatuion Standards (TDWG) annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also gratefull for all those who responded to our email questions.
 
-We'd also aknowledge the continued support of the TDWG (Biodiversity Information Standards) Executive over the 10 years of the project.
+We'd also gratefully aknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
 
-#### 4.1.1 Funding and Support
+#### 4.1.1 Funding and Support for Meetings
 
 We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of BDQ Core, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthflor LLC provided support of John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
 
@@ -242,18 +242,18 @@ Many people have contributed valuable commments through the development of the B
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
 
 - **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
-- **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, test validation data, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents; 
+- **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, vocabularies, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents, test validation data; 
 - **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
 
 #### 4.2.2 Contributors
 
 There were many people who have made notable contributions at various times during the development of BDQ Core.
  
-- **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to finalization of the test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents;
+- **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents;
 - **António Mauro Saraiva (Universidade de São Paulo)**: Development of the Fitness for Use Framework (Task Group 1), facilitated test development workshop, Co-convenor of Data Quality Interest Group until 2022;
-- **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation, Convenor of Task Group 1: Framework on Data Quality;
-- **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Contributions to multiple test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value;
+- **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation (Veiga 2016), Convenor of Task Group 1: Framework on Data Quality;
+- **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Contributions to test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value;
 - **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues;
 - **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of the Fitness for Use Framework, developer of kurator-ffdq Java class representation of the framework;
 - **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions, vocabulary definitions and early test development;
