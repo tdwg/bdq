@@ -205,7 +205,7 @@ Many people have contributed valuable commments through the development of the B
 
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
 
-- **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
+- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, vocabularies, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
 - **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents, test validation data; 
 - **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
