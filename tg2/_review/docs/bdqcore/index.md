@@ -11,7 +11,7 @@ Date version issued
 Date created
 : 2024-09-10
 
-Part of TDWG Standard
+Part of Biodiversity Information Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
@@ -67,11 +67,11 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-This document provides explanatory information and normative guidance for the BDQ Core tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman et al. (2017).
+This document provides explanatory information and normative guidance for the BDQ Core Tests. The document includes terms in several namespaces that contain the recommended terms: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:` as well as the focus of this document the `bdqcore:` terms. For details and rationale, see Chapman et al. (2017).
 
 ### 1.1 Purpose
 
-The document provides the context in which the BDQ Core tests exist.
+The document provides the context in which the BDQ Core Tests exist.
 
 ### 1.2 Audience
 
@@ -81,20 +81,22 @@ This document is for Users and Implementors of BDQ Core who require a technical 
 
 The bdqcore: vocabulary includes: 
 
-- A [Quick Reference Guide](../terms/bdqcore/index.md) to the tests.
+- A [Quick Reference Guide](../terms/bdqcore/index.md) to the BDQ Core Tests.
 - A [term-list for the vocabulary](../list/bdqcore/index.md), containing the vocabulary terms and their metadata.
 - This landing page document provides Normative guidance on the use of the BDQ Core vocabulary.
 
-In addition, A users guide to the use of the bdqcore tests is provided in the [Users Guide](../guide/users/index.md) and a guide to implemetation of the bdqcore tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
+In addition, A users guide to the use of the BDQ Core Tests is provided in the 
+- [Users Guide](../guide/users/index.md) and
+- A guide to implemetation of the BDQ Core Tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
 
 ### 1.3.1 Term List Distributions for BDQ Core
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list for the bdqcore: vocabulary  | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.xml | An rdf representation of the tests in an RDF/XML serialization | 
-| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the tests in a Turtle serialization | 
-| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the tests | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.xml | An rdf representation of the Tests in an RDF/XML serialization | 
+| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the Tests in a Turtle serialization | 
+| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the Tests | 
 
 ### 1.4 Status of the Content of this Document
 
@@ -138,13 +140,13 @@ The following namespace abbreviations are used in this document:
 
 The Authors acknowledge the centrality of the work of:
 
-- The TDWG Framework on Data Qualilty Task Group (https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core tests.
-- The TDWG Data Quality Use Case Library Task Group (https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
-- The TDWG Annotations Interest Group (https://github.com/tdwg/annotations) as to how the test results may be reported against records. 
+- The Biodiversity Information standards (TDWG) Framework on Data Qualilty Task Group (https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
+- The Biodiversity Information standards (TDWG) Data Quality Use Case Library Task Group (https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
+- The Biodiversity Information standards (TDWG) Annotations Interest Group (https://github.com/tdwg/annotations) as to how the Test results may be reported against records. 
   
-The terminology of BDQ Core is based primarily on the Fittness for use Framework (Viega 2016, TDWG Task Group 1, and Veiga et al. 2017) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them.  See the [list of vocabularies](../vocabularies/index.md).
+The terminology of BDQ Core is based primarily on the Fittness for use Framework (Viega 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them.  See the [list of vocabularies](../vocabularies/index.md).
 
-BDQ Core Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as bdqffdq:InformationElements as inputs to the tests. Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on data sets and on unique values. Tests are paired in that all Amendment Tests are matched with a corresponding Validation Test that assesses some aspect of data quality. An Amendment Test may propose improvements to term values but BDQ Core recommends that all improvements be evaluated before application.
+BDQ Core Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as bdqffdq:InformationElements as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on data sets and on unique values. Tests are paired in that all Amendment Tests are matched with a corresponding Validation Test that assesses some aspect of data quality. An Amendment Test may propose improvements to term values but BDQ Core recommends that all improvements be evaluated before application.
 
 Some BDQ Core Tests also require reference to external data such as standard vocabularies of terms or names. 
 
@@ -152,15 +154,15 @@ While the most important BDQ Core Tests apply to a SingleRecord (bdqffdq:SingeRe
 
 ### 2.1 Characteristics of the Tests (non-normative)
 
-The scope of each test is largely provided by the bdqffdq:Specification. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the Specification are included in the "Information Elements". The Specification also includes references to external (to the Darwin Core standard: Wieczorek et al. 2012) authorities that are required to implement the test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the test.
+The scope of each BDQ Core Test is largely provided by the bdqffdq:Specification. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the Specification are included in the "Information Elements". The Specification also includes references to external (to the Darwin Core standard: Wieczorek et al. 2012) authorities that are required to implement the Test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
 
-Each test is defined to operate on a SingleRecord or a MultiRecord.  The framework allows for MultiRecord tests able to identify outliers within a data set, or other tests that look across data values in a MultiRecord to evaluate data quality.  No BDQ Core tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord.  The only MultiRecord Tests included in BDQ Core accumulate the outputs of other tests.
+Each BDQ Core Test is defined to operate on a SingleRecord or a MultiRecord.  The framework allows for MultiRecord Tests able to identify outliers within a data set, or other Tests that look across data values in a MultiRecord to evaluate data quality.  No BDQ Core Tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord.  The only MultiRecord Tests included in BDQ Core accumulate the outputs of other Tests.
 
 ### 2.2 Types of Tests (non-normative)
 
-The concept of 'tests' in the context of this standard include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure). 
+The concept of 'Tests' in the context of BDQ Core include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure). 
 
-Each bdqcore: test is an instance of a subclass of bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation) composed with an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod) composed with an instance of bdqffdq:Specification.  When run by an implementation, each bdqcore: test can produce a data quality report consisting of bdqffdq:Assertions.  See the diagrams and further information in the [bdqffdq: Framework Guide](../guide/bdqffdq/index.md).
+Each bdqcore: Test is an instance of a subclass of bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation) composed with an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod) composed with an instance of bdqffdq:Specification.  When run by an implementation, each BDQ Core Test can produce a data quality report consisting of bdqffdq:Assertions.  See the diagrams and further information in the [bdqffdq: Framework Guide](../guide/bdqffdq/index.md).
 
 #### 2.2.1 Validation Tests (normative)
 
@@ -170,52 +172,52 @@ Validation Tests in BDQ Core evaluate values in one or more [Darwin Core Terms](
 
 The response of a Validation Test (an instance of a bdqffdq:ValidationAssertion) MUST take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same test on the same data at a different time may result in a different result.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this situation:
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.
+2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.
+3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
   - A Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not.
 
 #### 2.2.2 Issue Tests (normative)
 
 Each Issue Test is composed of an instance of bdqffdq:Issue (which expresses a data quality need in the abstract) with an instance of bdqffdq:IssueMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
 
-Issue Tests are a form of warning flag where the test is drawing attention to potential problem with the value of an Information Element for at least one use of the data.
+Issue Tests are a form of warning flag where the Test is drawing attention to potential problem with the value of an Information Element for at least one use of the data.
 
 We have used Issue Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) is informing the tester than there is at least one annotation associated with record and this should be evaluated before using the record. Similarly for the other two ISSUE-Type Tests: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) where some form of transformation has occurred, and the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700) where the value needs to be assessed for utility.
 
 The response of an Issue Test (an instance of a bdqffdq:IssueAssertion) MUST take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run.  In this case, the Response.result MUST be empty.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this case:
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
+2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.  In this case, the Response.result MUST be empty.
+3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case:
   - A Response.result="POTENTIAL_ISSUE", a Response.result="NOT_ISSUE", or a Response.result="IS_ISSUE".
 
-In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the test produced this response in this case.
+In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
 
-None of the currently defined BDQ Core Issue tests return a Response.result of IS_ISSUE
+None of the currently defined BDQ Core Issue Tests return a Response.result of IS_ISSUE
 
 #### 2.2.3 Amendment Tests (normative) 
 
 Each Amendment Test is composed of an instance of bdqffdq:Amendment (which expresses how to improve data to fit a data quality need in the abstract) with an instance of bdqffdq:AmendmentMethod which links it to an instance of a bdqffdq:Specification (which gives details of how proposals could be made to improve data for that need).
 
-An Amendment Test MAY propose a change to one or more Darwin Core Term values, or MAY propose to fill in missing values.  The Assertion produced by an Amendment is intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in these tests.
+An Amendment Test MAY propose a change to one or more Darwin Core Term values, or MAY propose to fill in missing values.  The Assertion produced by an Amendment is intended to improve one or more components of the quality of the record.  The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record.  Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed amendments as part of a pipeline in preparing data for an analysis.  Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in these Tests.
 
 The response of an Amendment Test (an instance of a bdqffdq:AmendmentAssertion) MUST take one of four forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same test on the same data at a different time may result in a different result.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run.
-3. A Response.status of "FILLED_IN" when the prerequisites for running the test have been met and a proposal is made to fill in a value for one or more input terms that were empty, and in this situation:
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.
+2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.
+3. A Response.status of "FILLED_IN" when the prerequisites for running the Test have been met and a proposal is made to fill in a value for one or more input terms that were empty, and in this situation:
   - A Response.result containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
-3. A Response.status of "AMENDED" when the prerequisites for running the test have been met and a proposal is made to change a value for one or more input terms that were empty, and in this situation:
+3. A Response.status of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were empty, and in this situation:
   - A Response.result containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
 
-In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the test produced this response in this case.
+In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
 
 #### 2.2.4 Measure Tests (normative) 
 
 Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses how measure fittnes of data for a data quality need in the abstract) with an instance of bdqffdq:MeasurementMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality is to be measured).
 
-Measure Tests return a Response.result of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE".  Measure Tests may directly measure properties of data.  Alternatively, Measure Tests may measure the outputs of other tests, for example, a Measure may count the number of Response.results from all Validation run on a single record that are COMPLIANT.
+Measure Tests return a Response.result of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE".  Measure Tests may directly measure properties of data.  Alternatively, Measure Tests may measure the outputs of other Tests, for example, a Measure may count the number of Response.results from all Validation run on a single record that are COMPLIANT.
 
 The only Measure defined in BDQ Core that directly examines data is Test [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53).  This Test returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the Validation and Amendment Tests and in one case provides an indication of the length of the period of the value of dwc:eventDate.
 
@@ -223,22 +225,22 @@ Most SingleRecord Measure Tests defined in BDQ Core count the number of Validati
 
 The response of a Measure Test (an instance of a bdqffdq:MeasureAssertion) MUST take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the test cannot be meaningfully run.  In this case, the Response.result MUST be empty.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the test have been met, and in this case either:
+1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
+2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.  In this case, the Response.result MUST be empty.
+3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case either:
   - A Response.result="COMPLETE", or a Response.result="NOT_COMPLETE".
   - or
   - A Response.result containing a single number.
 
-In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the test produced this response in this case.
+In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
 
 #### 2.3 SingleRecord and MultiRecord Tests (non-normative) 
 
 Tests may operate on a bdqffdq:SingleRecord (e.g. one row of Flat Darwin Core) or on a bdqffdq:MultiRecord (a data set).  
 
-The bdqffdq Framework allows for tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords.  In BDQ Core, the only MultiRecord tests that have been defined are Measures.  We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).   
+The bdqffdq Framework allows for tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords.  In BDQ Core, the only MultiRecord Tests that have been defined are Measures.  We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).   
 
-The focus of the BDQ Core tests are the SingleRecord tests.  To allow for standard means for sumarizing the results of these tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures. 
+The focus of the BDQ Core Tests are the SingleRecord Tests.  To allow for standard means for sumarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures. 
 
 In BDQ Core, for each SingleRecord Validation Test, we have defined a MultiRecord Measure Test that returns a Response.result="COMPLETE" when all records in the MultiRecord have a Response.result="COMPLIANT", and a Response.result="NOT_COMPLETE" when they are not. Under Quality Assurance, these Measure Tests are the key criterion for identifying data which have quality for a Use Case. Under Quality Assurance, a MultiRecord is filtered to remove records that do not fit the MultiRecord Measure Tests for completeness, such that a filtered MultiRecord has Response.result="COMPLETE" for all MultiRecord Measure Tests.
 
@@ -248,7 +250,7 @@ See the [bdqcore mathematical formulation](../bdqffdq/index.md#5-fitness-for-use
 
 ### 2.4 Example RDF (non-normative) 
 
-A more complete description of the tests can be found in the RDF representation of this vocabulary.  Following the bdqffdq: Framework, a test is composed of an instance of a subclass of a bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation), an instance of a bdqffdq:ActedUpon information element, optionally an instance of a bdqffdq:Consulted information element, an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod), and an instance of a bdqffdq:Specification.  Most of the information associated with a bdqffdq:term is expressed in other vocabularies, in particular bdqffdq:.  This structure and dependence on other vocabularies can be seen in the example below of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe).
+A more complete description of BDQ Core Tests can be found in the RDF representation of this vocabulary.  Following the bdqffdq: Framework, a Test is composed of an instance of a subclass of a bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation), an instance of a bdqffdq:ActedUpon information element, optionally an instance of a bdqffdq:Consulted information element, an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod), and an instance of a bdqffdq:Specification.  Most of the information associated with a bdqffdq:term is expressed in other vocabularies, in particular bdqffdq:.  This structure and dependence on other vocabularies can be seen in the example below of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe).
 
 Example: Formal description of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe)-
 
@@ -262,7 +264,7 @@ Example: Formal description of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg
     	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
     	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?</rdfs:comment>
     	<skos:historyNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/tdwg/bdq/issues/20</skos:historyNote>
-    	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
+    	<skos:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
     	<dcterms:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</dcterms:bibliographicCitation>
     </rdf:Description>
     
@@ -347,17 +349,17 @@ Nothing in this section should be taken as a requirement to how bdqffdq:Assertio
 
 ### 3.2 Resource Types (normative)
 
-Each Test (each instance of a bdqffdq:DataQualityNeed) MUST have exactly one bdqffdq:hasResourceType object property that relates the test to a ResouceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
+Each BDQ Core Test (each instance of a bdqffdq:DataQualityNeed) MUST have exactly one bdqffdq:hasResourceType object property that relates the Test to a ResouceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
 
-Tests operate on data, the data may be understood as representing a single record or multiple records.  In the bdqcore: tests the single record (bdqffdq:SingleRecord) tests MAY be applied to a single of Flat Darwin Core Record, or to a single instance of a Darwin Core Observation, Taxon, Event, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al 2012).  For example,    A bdqcore: SingleRecord test SHOULD NOT take multiple rows of Flat Darwin core as input.  A bdqcore: SingleRecord test SHOULD NOT take multiple objects of the same core type as input when taking structured Darwin Core as input (for example, input data Darwin Core data in RDF should be presented to a SingleRecord test one dwc:Occurrence at a time, although the Occurrence could be linked to multiple other instances of other classes such as identifications).
+Tests operate on data, the data may be understood as representing a single record or multiple records.  The single record (bdqffdq:SingleRecord) BDQ Core Tests MAY be applied to a single of Flat Darwin Core Record, or to a single instance of a Darwin Core Observation, Taxon, Event, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al 2012).  For example,    A bdqcore: SingleRecord Test SHOULD NOT take multiple rows of Flat Darwin core as input.  A bdqcore: SingleRecord Test SHOULD NOT take multiple objects of the same core type as input when taking structured Darwin Core as input (for example, input data Darwin Core data in RDF should be presented to a SingleRecord Test one dwc:Occurrence at a time, although the Occurrence could be linked to multiple other instances of other classes such as identifications).
 
 The BDQ Core Test [ISSUE_ANNOTATION_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) similarly operates on a single Flat Darwin Core record, or a single core Darwin Core class instance, and asks whether annotations exist related to that class, here this standard encourages the implementation of a standard for annotating occurrence records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-Multi record (bdqffdq:MultiRecord) tests operate on a dataset as a whole, the MultiRecord tests in bdqcore: sum up results across all records for each single record test.
+BDQ Core multiRecord (bdqffdq:MultiRecord) Tests operate on a dataset as a whol. BDQ Core multiRecord Tests in bdqcore: sum up results across all records for each single record Test.
 
 ### 3.3 Parameterising the Tests (normative)
 
-Where a Test is parameterized, a parameter (e.g. bdq:sourceAuthority) is specified in the text of the hasExpectedResponse data type property of the instance of the bdqffdq:Specification for the test.  Such a bdqffdq:Specification MUST also have a bdqffdq:hasArgument object property linking it to an instance of a bdqffdq:Argument, which MUST have a bdqffdq:hasArgumentValue data type property carrying the default value for the parameter, and this bdqffdq:Argument MUST have a bdqffdq:hasParameter object property linking it to a bdqffdq:Parameter.  The bdqffdq:Parameter SHOULD be a class instance in the bdq: namespace (e.g. bdq:sourceAuthority).  
+Where a Test is parameterized, a parameter (e.g. bdq:sourceAuthority) is specified in the text of the hasExpectedResponse data type property of the instance of the bdqffdq:Specification for the Test.  Such a bdqffdq:Specification MUST also have a bdqffdq:hasArgument object property linking it to an instance of a bdqffdq:Argument, which MUST have a bdqffdq:hasArgumentValue data type property carrying the default value for the parameter, and this bdqffdq:Argument MUST have a bdqffdq:hasParameter object property linking it to a bdqffdq:Parameter.  The bdqffdq:Parameter SHOULD be a class instance in the bdq: namespace (e.g. bdq:sourceAuthority).  
 
 The instance of the bdqffdq:Specification SHOULD have a bdqffdq:hasAuthoritiesDefaults data type property containing the parameters, default values, and references to resources, including API enpoints that would provide access to values in authority.   
 
@@ -369,9 +371,9 @@ Values of bdqffdq:hasAuthoritiesDefaults SHOULD be a text string listing paramet
 - parameter default = "default value" {[resource]}
 - parameter default = "default value" {[resource]} {API endpoint [resource]}
 
-The bdqffdq:hasAuthoritiesDefaults data property MAY be used without corresponding bdqffdq:Arguments and bdqffdq:Parameters when a test is not parameterized, but a bdq:sourceAuthority is mentioned within a bdqffdq:hasExpectedResponse for the bdqffdq:Specification and the bdqffdq:hasAuthoritiesDefaults provides details on this source authority.  This usage allows for simpler and easier to read expected responses.
+The bdqffdq:hasAuthoritiesDefaults data property MAY be used without corresponding bdqffdq:Arguments and bdqffdq:Parameters when a Test is not parameterized, but a bdq:sourceAuthority is mentioned within a bdqffdq:hasExpectedResponse for the bdqffdq:Specification and the bdqffdq:hasAuthoritiesDefaults provides details on this source authority.  This usage allows for simpler and easier to read expected responses.
 
-Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-Reading-a-Specification) of the implementers guide contains additional guidance for handling parameters in test implementations.
+Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-Reading-a-Specification) of the implementers guide contains additional guidance for handling parameters in BDQ Core Test implementations.
 
 #### 3.3.1 Parameter Examples (non-normative)
 
@@ -407,7 +409,7 @@ Example RDF fragment showing use of Arguments and hasAuthoritiesDefaults:
         ...
     </rdf:Description>
 
-Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), where bdqffdq:hasAuthoritiesDefaults is present to provide a bdq:sourceAuthority for the Specificaiton, but the test is not parameterized, so no hasArgument properties are present: 
+Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), where bdqffdq:hasAuthoritiesDefaults is present to provide a bdq:sourceAuthority for the Specificaiton, but the Test is not parameterized, so no hasArgument properties are present: 
 
     <hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
     <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
