@@ -10,7 +10,7 @@ Date version issued
 Date created
 : {created_date}
 
-Part of TDWG Standard
+Part of Biodiversity Information Standard
 : <{standard_iri}>
 
 {previous_version_slot}
