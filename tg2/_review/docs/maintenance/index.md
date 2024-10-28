@@ -2,30 +2,6 @@
 
 # Preliminary Guidance for Maintainers of BDQ Core
 
-Date created
-: {created_date}
-
-Part of Biodiversity Information Standard
-: <{standard_iri}>
-
-Abstract
-: {abstract}
-
-Authors:
-: {authors}
-
-Creator
-: {creator}
-
-Bibliographic citation
-: {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
-
-{comment}
-
-### Table of Contents ###
-
-{toc}
-
 ## 1 Introduction
 
 Notes for the guidance for maintainers if the BDQ Core standard is ratified.
