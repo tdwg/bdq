@@ -81,11 +81,15 @@ Amend the data record as required, and update the Date Last Updated is REQUIRED
 ### 3.2 Additions to Test Validation Data
 The Test Validation Data provides a minimal suite of Darwin Core records to test the pathways through each Test Specification. The addition of edge cases to the existing Test Validation Data is RECOMMENDED. The addition of Validation Test Data for new Tests is REQUIRED.
 
-The Test Validation Data uses CSV format. There are two versions of the Validation Test Data. The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transfomred version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. This compressed version of the file contains columns of information for each record (e.g., link to Test, Label, Dimension) that SHOULD be helpful in understanding the context of the focus columns of Input.data, Output.data, Response.status and Response.result. The Response.comment MUST describe the reason for the Response.status. 
+The Test Validation Data uses CSV format. There are two versions of the Validation Test Data.  One is easier to mainain, the other is easier for test validation frameworks to consume.  See section [3.4 Processing Test Validation Data](#34-Processing-Test-Validation-Data) for details.
+
+Both forms of the validation data contains columns of information for each record (e.g., link to Test, Label, Dimension) that SHOULD be helpful in understanding the context of the focus columns of Input.data, Output.data, Response.status and Response.result. The Response.comment MUST describe the reason for the Response.status. 
 
 Additions to the Test Validation Data are best done by copying and pasting an existing record and editing the content of the new record. Within the (compressed) Test Validation, note that the DataID is unique, so additions MUST NOT re-use an existing DataID value. 
 
-Values in the column **LineForTest** are useful in determining the number of Test Validation records for each Test, but also flag an additional function. A LineForTest value of "88" flags an Input.data value of "[null]" while a value of "99" flags an Input.data value of "[non-printing characters]". Both of these record types are used to separate records of 'normally' expected values from records that require special handing within the testing framework. 
+Values in the column **LineForTest** are useful in determining the number of Test Validation records for each Test, but also flag an additional function. A LineForTest value of "88" flags an Input.data value of "[null]" while a value of "99" flags an Input.data value of "[non-printing characters]". Both of these record types are used to separate records of 'normally' expected values from records that require special handing within the testing framework.   These rows SHOULD not be present in either form of the validation data set.
+
+Validation data containing non-printing characters and nulls SHOULD only be edited in the separate file of validation data containing non-printing characters, this file MUST only be edited by sofware able to correctly handle the non-printing characters.  This file MUST NOT be edited with a spreadsheet application.  The text editors vim and emacs are recomended.  
 
 ### 3.3 Updating Test Validation Data Due to Changes in Specifications or Terms
 
@@ -97,9 +101,12 @@ Therefore any changes to Test Specifications must trigger the need to check the 
 
 ### 3.4 Processing Test Validation Data
 
-<!--- Paul?? **TODO**  Add more text. --->
 
 Test validation data is most easily input into validation frameworks when presented as csv with one column per information element (e.g. Darwin Core term).  However, such sparse data is very difficult for humans to edit and maintain with spreadsheet software.  Much easier to maintain is a sheet where all the input information elements for a validation row are concatenated as a list of key-value pairs in one spreadsheet column. 
+
+<!--- Paul **TODO**  Cleanup this text --->
+
+The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transfomred version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. 
 
 Two tools to move between the two representations:
 
@@ -110,6 +117,10 @@ https://github.com/tdwg/bdq/blob/master/tg2/core/squish_validation_data.py
 To expand the single input information elements column into multiple columns one for each information element: 
 
 https://github.com/FilteredPush/bdqtestrunner/blob/master/src/main/java/org/filteredpush/qc/bdqtestrunner/TestOfTestSpreasheetUtility.java
+
+These tools SHOULD NOT be used on the validation data file containing non-printing characters.
+
+Changes to squish_validation_data.py may be provided that would allow round tripping of that file between forms (with the replacment of non printing characters and nulls with specified string markers in a squished file editable in a spreadsheet application.
 
 ### 3.5 Tools for validating implementations against the validation data
 
