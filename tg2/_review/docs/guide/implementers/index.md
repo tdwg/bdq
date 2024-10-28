@@ -434,13 +434,7 @@ When a non-default Argument is used, a Response.comment SHOULD include the non-d
 
 Implementers MUST NOT produce Test implementations identified by the same identifiers that only implement non-default Parameter values.  An implementation of a Test MUST support the Test execution with the default Parameter values, and MAY optionally support other Parameter values.  Provided Parameters MUST NOT change the behavior of the Test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the Test as specified in the bdqffdq:Specification.expectedResponse.
 
-<!--- Text to Merge with above 6.1 --->
-
-When a non-default Argument is used, an instance of an  
-
-**TODO** Specify how to assert the alternate Argument value in RDF.
-
-<!---End text to Merge --->
+<!--- Text to Merge with above 6.1 When a non-default Argument is used, an instance of an  **TODO** Specify how to assert the alternate Argument value in RDF. --->
 
 ### 6.2 Execution Process is Agnostic (non-normative)
 
@@ -908,7 +902,9 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 ### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (**TODO: Cite**) Java annotations.
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api
+
+<!--- (**TODO: Cite**) Java annotations. --->
 
 ### 8.6.2 Tools to assist with implementations and RDF presentation (non-normative) 
 

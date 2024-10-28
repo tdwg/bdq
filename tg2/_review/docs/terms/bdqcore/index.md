@@ -8910,8 +8910,6 @@ Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls M, Rees ER,
 BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
 
 **To cite this document specifically, use the following:**
-<!--- TODO: move citation elements to document_configuration.yaml --->
-BDQ Core Maintenance Group. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). https://bdq.tdwg.org/terms/
 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
 

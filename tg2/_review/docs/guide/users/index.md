@@ -152,13 +152,23 @@ The bdqffdq: Framework provides a formal means for filtering records for Quality
 
 While the bdqffdq: Framework also provides a formal statement of Quality Control, the application of Qualtity Control in the wild can be much more nuanced.  At the point of intial data capture.....
 
-TODO: Text on context and QC, initial not able to enter, 
-reports on databases of record, targeted work effort, 
-analysis of reports may give single fix for multiple results for a test being non compliant,
-mapping for aggregation, reports from aggregators,
-analysis of reports may reveal simple mapping errors,
-improvement on data in stream during downstream analysis.
+The context of Quality Control may affect how Tests and their results are applied in broader ways.
 
+Quality Control applied at the initial point of data capture may simply prevent the entry of incorrect values.  This is the most effective and least expensive point at which to apply quality control. 
+
+<!--- TODO: Make the following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
+
+- reports on databases of record, targeted work effort,  
+
+- analysis of reports may give single fix for multiple results for a test being non compliant, when reltational tables are denormalized into flattened data for analysis and reporting, what may appear to be multiple cases of the same error may be a single point fix.  key is to identify focused areas for data cleanup projects, data cleanup takes significant work effort.
+
+- mapping for aggregation, reports from aggregators, key is to to identify focused areas for data cleanup projects, takes work effort. 
+
+- analysis of reports may reveal simple mapping errors, e.g. field transpositions in mapping.
+
+- improvement on data in stream during downstream analysis.  May mean acceptance of amendments into data stream, shouldn't be done blindly.
+
+<!--- END TODO: block  --->
 
 ## 4 Using the BDQ Core Quick Reference Guide (non-normative)
 
