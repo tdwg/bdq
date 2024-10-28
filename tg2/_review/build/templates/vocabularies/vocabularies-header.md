@@ -10,7 +10,7 @@ Date version issued
 Date created
 : {created_date}
 
-Part of TDWG Standard
+Part of Biodiversity Information Standard
 : <{standard_iri}>
 
 {previous_version_slot}
@@ -35,7 +35,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-This page provides an introduction and index to the six vocabularies introduced by this standard. The vocabularies are distinguished by their roles within applications of the standard to biodiversity data quality (BDQ) use cases. Each vocabulary has its own namespace and term list document. 
+This page provides an introduction and index to the six vocabularies introduced in BDQ Core. The vocabularies are distinguished by their roles within applications of the standard to biodiversity data quality (BDQ) use cases. Each vocabulary has its own namespace and term list document. 
 
 ### 1.1 Purpose
 
