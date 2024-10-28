@@ -131,7 +131,7 @@ Data does not have quality in the abstract, it only has quality with respect to 
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
-The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, Data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
+The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
 
 <!--- TODO: Make the following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
 
@@ -150,11 +150,11 @@ Quality Control applied at the initial point of data capture may simply prevent 
 
 - reports on databases of record, targeted work effort,  
 
-- analysis of reports may give single fix for multiple results for a test being non compliant, when reltational tables are denormalized into flattened data for analysis and reporting, what may appear to be multiple cases of the same error may be a single point fix.  key is to identify focused areas for data cleanup projects, data cleanup takes significant work effort.
+- analysis of reports may give single fix for multiple results for a test being non compliant, when relational tables are denormalized into flattened data for analysis and reporting, what may appear to be multiple cases of the same error may be a single point fix.  Key is to identify focused areas for data cleanup projects, data cleanup takes significant work effort,
 
-- mapping for aggregation, reports from aggregators, key is to to identify focused areas for data cleanup projects, takes work effort. 
+- mapping for aggregation, reports from aggregators, key is to to identify focused areas for data cleanup projects, takes work effort,  
 
-- analysis of reports may reveal simple mapping errors, e.g. field transpositions in mapping.
+- analysis of reports may reveal simple mapping errors, e.g. field transpositions in mapping,
 
 - improvement on data in stream during downstream analysis.  May mean acceptance of amendments into data stream, shouldn't be done blindly.
 
