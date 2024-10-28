@@ -384,7 +384,7 @@ bdqffdq:SingleRecord MEASUREs within BDQ Core are [MEASURE_VALIDATIONTESTS_COMPL
 
 ### 3.2 MultiRecord Tests
 
-When defining a BDQ Core Test, the Test Type (Validation, Amendment, Measure, Issue) is composed with a ResourceType (SingleRecord or MultiRecord).  This determines if the Test results in assertions about a single record or a dataset as a whole.
+When defining a Test, the Test Type (Validation, Amendment, Measure, Issue) is composed with a ResourceType (SingleRecord or MultiRecord).  This determines if the Test results in assertions about a single record or a dataset as a whole.
 
 #### 3.2.1 MultiRecord Validations, Amendments, Issues
 
