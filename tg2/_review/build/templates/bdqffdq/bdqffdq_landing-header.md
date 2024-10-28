@@ -10,7 +10,7 @@ Date version issued
 Date created
 : {created_date}
 
-Part of TDWG Standard
+Part of Biodiversity Information Standard
 : <{standard_iri}>
 
 Preferred namespace abbreviation
@@ -44,32 +44,33 @@ Bibliographic citation
 
 ## 1 Introduction
 
-The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies.
+The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual Framework (Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also prodives a base for the bdq: and bdqcore: namespace vocabularies.
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the tests in the bdqcore: vocabulary in this standard has been designed with this framework and is framed using the terms and concepts from the framework. The framework provides the context for each test, and has shaped decisions made about each test.
+The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about each Test.
 
-The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
+The Framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
 
 ### 1.1 Purpose
 
-This document provides a technical understanding of the Framework (bdqffdq:) ontology.  
+This document provides a technical understanding of the Framework (`bdqffdq:`) ontology.  
 The ontology follows open world principles and has limited restrictions.
 This document gathers normative statements about how to use the Frameowrk in a meaningful way. 
 
 ### 1.2 Audience
 
-Technical users who need to understand how to describe data quality with the framework.
+Technical users who need to understand how to describe data quality with the Framework.
 
-### 1.3 Documents about the bdqffdq: ontology
+### 1.3 Documents About the bdqffdq: Ontology
 
-The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
+The `bdqffdq:` vocabulary is an ontology, documentation for it can be found in: 
 
 - This page, the landing page with normative guidance on the use of this ontology.
 - A [term list](../list/bdqffdq/index.md) the list of vocabulary terms.
 - Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
+- The bdqffdq Framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl)
+- Veiga et al. 2017
 
 In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
@@ -77,7 +78,7 @@ In addition, an illustrated guide to the use of the bdqffdq ontology is provided
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List            | TBD  | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
+| Human Readable Term List            | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
 | Human Readable Vocabulary Extension | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
 | Owl Ontology                        | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
 
@@ -101,7 +102,7 @@ The following namespace abbreviations are used in this document:
 | skos         | http://www.w3.org/2004/02/skos/core#             | |
 | owl          | http://www.w3.org/2002/07/owl#                   | |
 
-### 1.5 Status of the content of this document
+### 1.5 Status of the Content of this Document
 
 Sections 2 and 5 are normative.
 
@@ -115,7 +116,7 @@ Other sections of this document are marked as normative or non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.7 Diagram of classes and properties
+### 1.7 Diagram of Classes and Properties
 
 The (non-normative) diagram below is intended to help understand the normative statements in section 2 below.
 
@@ -127,17 +128,17 @@ The use of classes and properties in [bdqcore:](../../dist/bdqcore.ttl) also fol
 
 When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
 
-### 2.1 Use of properties (normative) 
+### 2.1 Use of Properties (normative) 
 
 This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative defintions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
 
-This guidance describes the use of the bdqffdq: framework terms in an RDF context.  This guidance MAY be used to develop models of the bdqffdq data quality framework in more constrained forms including UML object models, information models, classes in a programing language, or database schemas.  
+This guidance describes the use of the bdqffdq: Framework terms in an RDF context.  This guidance MAY be used to develop models of the bdqffdq data quality Framework in more constrained forms including UML object models, information models, classes in a programing language, or database schemas.  
 
-Section [2.2.6](#216-identifying-the-test-that-produced-an-assertion) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an Assertion produced by a test and the particular test that produced it.
+Section [2.2.6](#216-identifying-the-test-that-produced-an-assertion) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an Assertion produced by a Test and the particular Test that produced it.
 
-#### 2.1.1 Properties relating data quality needs
+#### 2.1.1 Properties Relating to Data Quality Needs (normative)
 
-Each description of a data quality test SHOULD include the following properties and related instances.
+Each description of a data quality Test SHOULD include the following properties and related instances.
 
 The bdqffdq:hasUseCase object property SHOULD have an individual with a type that is a subclass of bdqffdq:Policy as its subject.  
 
@@ -155,7 +156,7 @@ Each individual that is a subclass of bdqffdq:DataQualityNeed SHOULD have at lea
 
 User communites MAY provide new use cases, and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways.  
 
-Each instance of a subclass of a bdqffdq:DataQualityNeed SHOULD have an rdfs:label in all upper case, with underscores separating components.  Tests that have a bdqffdq:hasResourceType of bdqffdq:SingleRecord SHOULD follow the convention of the subclass of bdqffdq:DataQualityNeed in all upper case as the first word, and a representation of the bdqffdq:AbstractInformationElement as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT.  Tests that have a bdqffdq:hasResourceType of bdqffdq:MultiRecord SHOULD have "MULTIRECORD_" as the first element in their rdfs:label, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMANTIONELEMENT_CRITERIA.  The rdfs:label of the instance of the subclass of bdqffdq:DataQualityNeed SHOULD be used by humans to identify tests.
+Each instance of a subclass of a bdqffdq:DataQualityNeed SHOULD have an rdfs:label in all upper case, with underscores separating components.  Tests that have a bdqffdq:hasResourceType of bdqffdq:SingleRecord SHOULD follow the convention of the subclass of bdqffdq:DataQualityNeed in all upper case as the first word, and a representation of the bdqffdq:AbstractInformationElement as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT.  Tests that have a bdqffdq:hasResourceType of bdqffdq:MultiRecord SHOULD have "MULTIRECORD_" as the first element in their rdfs:label, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMANTIONELEMENT_CRITERIA.  The rdfs:label of the instance of the subclass of bdqffdq:DataQualityNeed SHOULD be used by humans to identify Tests.
 
 Each instance of a subclass of bdqffdq:DataQualityNeed MUST have exactly one bdqffdq:hasResourceType object property linking it to a bdqffdq:SingleRecord or a bsqffdq:MultiRecord.
 
@@ -201,7 +202,7 @@ Each instance of a subclass of bdqffdq:DataQualityNeed MAY have a bdqffdq:hasInf
 
 Each instance of bdqffdq:AbstractInformationElement SHOULD have rdfs:label and rdfs:comment properties describing the scope of the information element with the rdfs:label corresponding to the INFORMATIONELEMENT portion of the rdfs:label for an instance of a subclass of bdqffdq:DataQualityNeed following the convention described in this section.  
 
-#### 2.1.2 Properties relating data quality needs to data quality solutions
+#### 2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions
 
 Each description of a data quality test SHOULD include the following properties and related instances.
 
@@ -229,7 +230,7 @@ An axiom places an owl:restriction on the object of the bdqffdq:forIssue object 
 
 Each bdqffdq:Issue method SHOULD have exactly one bdqffdq:forIssue object property.
 
-#### 2.1.3 Properties relating to data quality solutions provided in a test description
+#### 2.1.3 Properties Relating to Data Quality Solutions Provided in a Test Description
 
 Each description of a data quality test SHOULD include the following properties and related instances.
 
@@ -287,7 +288,7 @@ Each instance of a bdqffdq:Asssertion SHOULD be the object of exactly one bdqffd
 
 ### 2.1.6 Identifying the Test that produced an Assertion
 
-Following the object properties from an instance of a bdqffdq:Assertion to an instance of a subclass of a bdqffdq:DataQualityNeed SHOULD identify one and only one instance of a subclass of a bdqffdq:DataQualityNeed for a single instance of a bdqffdq:Assertion.  If this condition is not met, it is not possible to tell which test with which parameter argument values produced the Assertion.
+Following the object properties from an instance of a bdqffdq:Assertion to an instance of a subclass of a bdqffdq:DataQualityNeed SHOULD identify one and only one instance of a subclass of a bdqffdq:DataQualityNeed for a single instance of a bdqffdq:Assertion.  If this condition is not met, it is not possible to tell which Test with which parameter argument values produced the Assertion.
 
 Each instance of a bdqffdq:ValidationAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:ValidationMethod which in turn SHOULD be the subject for one and only one bdqffdq:forValidation property linking it to an instance of a bdqffdq:Validation.
 
@@ -297,7 +298,7 @@ Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and 
 
 Each instance of a bdqffdq:IssueAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:IssueMethod which in turn SHOULD be the subject for one and only one bdqffdq:forIssue property linking it to an instance of a bdqffdq:Issue.
 
-Given an Assertion, the following query returns what test was run with which argument values for which parameters by which mechanism to produce it.  This query SHOULD only return a single row.  
+Given an Assertion, the following query returns what Test was run with which argument values for which parameters by which mechanism to produce it.  This query SHOULD only return a single row.  
  
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -385,5 +386,5 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 {term_key}
 
 ### 3.2 Indexes
-<!--- NOTE: The mathematical forumlation of the framework is in the bdqffdq_landing-footer.md document --->
+<!--- NOTE: The mathematical forumlation of the Framework is in the bdqffdq_landing-footer.md document --->
 
