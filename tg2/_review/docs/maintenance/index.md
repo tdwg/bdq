@@ -13,19 +13,27 @@ This document is for guidance of the BDQ Core Maintenence Group
 Biodiversity Information Standards (TDWG) BDQ Core Maintenance Interest Group
 
 ### 1.3 Associated Documents
-- The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a brief summary of the Tests in BDQ Core
-- The [BDQ Core Introduction](../../intro/index.md) provides an introduction to the BDQ Core standard and the Tests
-- The [BDQ Core Implementer's Guide](../implementers/index.md) provides a more detailed view for those seeking to implement BDQ Core
-- 
+
+This document is not part of the BDQ Core standard, so no documents are associated with it.
+
+Additional information about processes followed during the development of the BDQ Core standard can be found in the BDQ Core supplement.
+
 ### 1.4 Status of the content of this document
+
 This document is non-normative.
+
+This document is not part of the BDQ Core standard. 
 
 ## 1.5 RFC 2119 key words
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
 ## 2 Proposals for New Issues 
 
+<!--- TODO: These templates should get moved to a new maintinance repository for BDQ Core and should be removed from tdq/bdq --->
+
 Templates for proposals of new and change issues are available at https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE
+
+<!--- TODO: Update templates to fit term-version files --->
 
 **Note** These templates need to be updated to conform with production of term-version file entries (e.g. GUID->term_localName)
 
@@ -43,6 +51,10 @@ Templates for proposals of new and change issues are available at https://github
 11. Confirm that the Proposed test is linked to at least one use case.  
 12. Once at least one implementation exists that passes all validation tests (produces exactly the expected Response.status, exactly the expected Response.result, and some Response.comment for each validation case/row), the Proposed test can be evaluated for inclusion in the standard.  
 13. At acceptance, tag the issue as CORE, remove the Proposed tab, export the markdown table into the normative term versions csv, generate derivatives as needed, and close the issue.
+
+### 2.2 Software tools for workign with test descriptions
+
+The bdq_issue_to_csv utility is available for converting markdown tables in issues into lines of csv.
 
 ## 3 Test Validation Data
 The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) records where each record provides-
@@ -85,4 +97,34 @@ Therefore any changes to Test Specifications must trigger the need to check the 
 
 ### 3.4 Processing Test Validation Data
 
-<!--- Paul?? **TODO**?--->
+<!--- Paul?? **TODO**  Add more text. --->
+
+Test validation data is most easily input into validation frameworks when presented as csv with one column per information element (e.g. Darwin Core term).  However, such sparse data is very difficult for humans to edit and maintain with spreadsheet software.  Much easier to maintain is a sheet where all the input information elements for a validation row are concatenated as a list of key-value pairs in one spreadsheet column. 
+
+Two tools to move between the two representations:
+
+To squish sparse information element columns into a single colum: 
+
+https://github.com/tdwg/bdq/blob/master/tg2/core/squish_validation_data.py
+
+To expand the single input information elements column into multiple columns one for each information element: 
+
+https://github.com/FilteredPush/bdqtestrunner/blob/master/src/main/java/org/filteredpush/qc/bdqtestrunner/TestOfTestSpreasheetUtility.java
+
+### 3.5 Tools for validating implementations against the validation data
+
+The bdqtestrunner utility is available for running Java implementations of tests that use the ffdq-api Java annotations to annotate method signatures against validation data.   See the [bdqtestrunner README](https://github.com/FilteredPush/bdqtestrunner).
+
+## 2 Proposals for Changes to existing Tests 
+
+<!--- TODO: Add template for proposals of changes to existing to maintinance repository.  It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
+
+Accepted changes will need to be added as new rows to the bdqcore term-version file.
+
+Note the distinction between the issued date and date last modified.  The date last modified SHOULD only be changed if the changes are substatnive to implementers (would cause them to change their code).  The purpose of date last modified is to allow implementers to not have to review their code when changes wouldn't affect that code.  Implementers who note the date last updated for each test within their implementations can run sofware checks on their code to see if new changes require examination of their code.  Non-substantive changes (such as addition of more non-normative known implementations) to the metadata about a test can be distinguished by only updating the (required) value of issued in the term-version file without a change to the date last modified. 
+
+Proposed substantive changes SHOULD have a software implementation.
+
+Proposed substantive changes SHOULD have data validation rows or have proposed changes to existing data validation rows.
+
+
