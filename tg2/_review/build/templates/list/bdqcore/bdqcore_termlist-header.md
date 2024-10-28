@@ -167,7 +167,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **Type**. The type of the Test, one of VALIDATION, ISSUE, AMENDMENT or MEASURE, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
 
-**Resource Type**. The Test either operates on a Single Record or Multiple Records **(TODO bdq...used here or keep it simple English)**...this generally relates to this list.
+**Resource Type**. The Test either operates on a Single Record or Multiple Records <!--- (TODO bdq...used here or keep it simple English) --->...this generally relates to this list.
 
 **Dimension**. The Data Quality Dimension focus of the Test: One of "Completeness", "Conformance", "Consistency", "Likeliness", "Reliability" or "Resolution"
 
