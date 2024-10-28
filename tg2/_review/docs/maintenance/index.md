@@ -5,7 +5,7 @@
 Date created
 : {created_date}
 
-Part of TDWG Standard
+Part of Biodiversity Information Standard
 : <{standard_iri}>
 
 Abstract
@@ -28,7 +28,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-Notes for the guidance for maintainers if the BDQ-Core standard is ratified.
+Notes for the guidance for maintainers if the BDQ Core standard is ratified.
 
 ### 1.1 Purpose
 This document is for guidance of the BDQ Core Maintenence Group
@@ -37,8 +37,8 @@ This document is for guidance of the BDQ Core Maintenence Group
 Biodiversity Information Standards (TDWG) BDQ Core Maintenance Interest Group
 
 ### 1.3 Associated Documents
-- The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a brief summary of the tests in BDQ Core
-- The [BDQ Core Introduction](../../intro/index.md) provides an introduction to the BDQ Core standard and the tests
+- The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a brief summary of the Tests in BDQ Core
+- The [BDQ Core Introduction](../../intro/index.md) provides an introduction to the BDQ Core standard and the Tests
 - The [BDQ Core Implementer's Guide](../implementers/index.md) provides a more detailed view for those seeking to implement BDQ Core
 - 
 ### 1.4 Status of the content of this document
@@ -51,7 +51,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 Templates for proposals of new and change issues are available at https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE
 
-**Note** These templates need to be updated to conform with production of term-version file entries (e.g. GUID->term_localName
+**Note** These templates need to be updated to conform with production of term-version file entries (e.g. GUID->term_localName)
 
 ### 2.1 Suggested Lifecycle for a Proposal
 1. Tag as Proposed
@@ -93,7 +93,7 @@ Amend the data record as required, and update the Date Last Updated is REQUIRED
 ### 3.2 Additions to Test Validation Data
 The Test Validation Data provides a minimal suite of Darwin Core records to test the pathways through each Test Specification. The addition of edge cases to the existing Test Validation Data is RECOMMENDED. The addition of Validation Test Data for new Tests is REQUIRED.
 
-The Test Validation Data uses CSV format. There are two versions of the Validation Test Data. The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transfomred version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. This compressed version of the file contains columns of information for each record (e.g., link to test, Label, Dimension) that SHOULD be helpful in understanding the context of the focus columns of Input.data, Output.data, Response.status and Response.result. The Response.comment MUST describe the reason for the Response.status. 
+The Test Validation Data uses CSV format. There are two versions of the Validation Test Data. The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transfomred version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. This compressed version of the file contains columns of information for each record (e.g., link to Test, Label, Dimension) that SHOULD be helpful in understanding the context of the focus columns of Input.data, Output.data, Response.status and Response.result. The Response.comment MUST describe the reason for the Response.status. 
 
 Additions to the Test Validation Data are best done by copying and pasting an existing record and editing the content of the new record. Within the (compressed) Test Validation, note that the DataID is unique, so additions MUST NOT re-use an existing DataID value. 
 
@@ -101,14 +101,12 @@ Values in the column **LineForTest** are useful in determining the number of Tes
 
 ### 3.3 Updating Test Validation Data Due to Changes in Specifications or Terms
 
-If any part of the logic of a test changes, parallel changes must be made to the test data for that test. For example, a change in a tests Expected Response will very likely to result in the need to amend at least one record within the associated test data. For example the Expected Response of the test [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) to limit amendments to a single year resulted in an amendment to the Response.status of the data record DataID #320 from "FILLED_IN" to "NOT_AMENDED".
+If any part of the logic of a test changes, parallel changes must be made to the test data for that test. For example, a change in a tests Expected Response/Specification will very likely to result in the need to amend at least one record within the associated test validation data. For example the Expected Response of the Test [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) to limit amendments to a single year resulted in an amendment to the Response.status of the data record DataID #320 from "FILLED_IN" to "NOT_AMENDED".
 
-A change to the test data may also precipitate the need to change one or both of the Examples within the test specification. As all examples of tests are based on the associated tests records in the test data, any such need for changes should be explicit.
+A change to a Test data may also precipitate the need to change one or both of the Examples within the Test Specification. As all examples of Tests are based on the associated Test Validation Data records, any such need for changes should be explicit.
 
-Similarly, changes to the test specification 'Information Elements ActedUpon' and 'Information Elements Consulted' will may require changes to Input.data, Output.data, Response.result and Response.comment.
-
-Therefore any changes to test specifications must trigger the need to check the associated test data and examples.
+Therefore any changes to Test Specifications must trigger the need to check the associated Test Validation Data and examples.
 
 ### 3.4 Processing Test Validation Data
 
-**Paul**?
+<!--- Paul?? **TODO**?--->
