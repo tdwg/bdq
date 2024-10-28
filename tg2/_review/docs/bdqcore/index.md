@@ -11,7 +11,7 @@ Date version issued
 Date created
 : 2024-09-10
 
-Part of Biodiversity Information Standard
+Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Preferred namespace abbreviation
