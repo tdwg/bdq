@@ -10,7 +10,7 @@ Date version issued
 Date created
 : {created_date}
 
-Part of Biodiversity Information Standard
+Part of TDWG Standard
 : <{standard_iri}>
 
 Preferred namespace abbreviation
