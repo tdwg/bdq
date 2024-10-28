@@ -292,9 +292,9 @@ When interpretations of strings containing Roman numerals as numbers is intended
 
 #### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
-<!--- TODO: Rewrite this section as normative guidance for implementers --->
+<!--- TODO: Rewrite this section as normative guidance for implementers. Lee thinks it reads well and did a few minor edits--->
 
-Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed. A field that only includes whitespace is treated as bdq:Empty. In bdqffdq:Validation Tests that require the lookup of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment Tests and thus pass when the bdqffdq:Validation Test is run again
+Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed (see the [Glossary](../../intro/index.md#6-glossary)). A field that only includes whitespace is treated as bdq:Empty. In bdqffdq:Validation Tests that require the lookup of a bdq:sourceAuthority, leading and/or trailing whitespace may cause the test to fail as no preprocessing is performed on the data. Leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment Tests and thus pass when the same bdqffdq:Validation Test is re-run.
 
 Amendments SHOULD propose changes with leading or trailing whitespace removed.
 
@@ -743,7 +743,7 @@ Additional Test records can be readily generated or adapted from real data using
 
 ### 8.2 Structure of the Validation Data 
 
-<!--- Check meaning in paragraph below --->
+<!---Paul - please check meaning in paragraph below --->
 
 The validation test data are intended as input into a testing system that can evaluate the implementations of Tests independently. Each Test data record is contains only the values of REQUIRED Information Elements ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) as input, and assesses whether the Test Response conforms to the expected responses in the Test data.  The data could be processed as input for unit Tests or it could be used as the basis for presenting synthetic records to a larger test execution system. The test data is designed to be used at a level where individual Tests are being assessed.  The structure of the validation data attempts to be at a level of abstraction above **the method signature specificity needed in unit Tests ??**, but still at a level that is examining individual Test implementations below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
 
