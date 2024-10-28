@@ -135,13 +135,7 @@ The bdqffdq: Framework provides a formal means for filtering records for Quality
 
 While the bdqffdq: Framework also provides a formal statement of Quality Control, the application of Qualtity Control in the wild can be much more nuanced.  At the point of intial data capture.....
 
-TODO: Text on context and QC, initial not able to enter, 
-reports on databases of record, targeted work effort, 
-analysis of reports may give single fix for multiple results for a test being non compliant,
-mapping for aggregation, reports from aggregators,
-analysis of reports may reveal simple mapping errors,
-improvement on data in stream during downstream analysis.
-
+<!--- TODO: Text on context and QC, initial not able to enter, reports on databases of record, targeted work effort, analysis of reports may give single fix for multiple results for a test being non compliant, mapping for aggregation, reports from aggregators, analysis of reports may reveal simple mapping errors, improvement on data in stream during downstream analysis. --->
 
 ## 4 Using the BDQ Core Quick Reference Guide (non-normative)
 
