@@ -131,15 +131,22 @@ Data does not have quality in the abstract, it only has quality with respect to 
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
-The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, Data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
+The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, Data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
+
+<!--- TODO: Make the following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
+
+<!--- Lee's go at this section in a paragraph --->
+
+The bdqffdq: Framework provides a formal statement of Quality Control but the application of Qualtity Control 'in the wild' is more nuanced.  Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent far less efficient issue detection and correction. Issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost and errors propagated. When relational database tables are denormalized to flat files for analyses and reporting, propagated errors could trace back to a single 'point of failure'. Correcting issues subesquent to data capture introduces further complexities in that any amendment to existing values requires careful human evaluation and a forking of data records to maintain original data, and an audit trail. Data cleaning often requires far more time than data analysis.
+
+<!---End Lee's effort --->
+
 
 While the bdqffdq: Framework also provides a formal statement of Quality Control, the application of Qualtity Control in the wild can be much more nuanced.  At the point of intial data capture.....
 
 The context of Quality Control may affect how Tests and their results are applied in broader ways.
 
 Quality Control applied at the initial point of data capture may simply prevent the entry of incorrect values.  This is the most effective and least expensive point at which to apply quality control. 
-
-<!--- TODO: Make the following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
 
 - reports on databases of record, targeted work effort,  
 
