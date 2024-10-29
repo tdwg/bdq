@@ -82,6 +82,8 @@ Portions of section 2 are normative and portions are non-normative.
 
 Section 3 is normative.
 
+Any sentence or phrase begining with "For example" or "e.g." is non-normative.
+
 Section 4 is non-normative.
 
 Section 5 is non-normative.
@@ -327,7 +329,7 @@ Nothing in this section should be taken as a requirement to how bdqffdq:Assertio
 
 Each BDQ Core Test (each instance of a bdqffdq:DataQualityNeed) MUST have exactly one bdqffdq:hasResourceType object property that relates the Test to a ResouceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
 
-Tests operate on data, the data may be understood as representing a single record or multiple records.  The single record (bdqffdq:SingleRecord) BDQ Core Tests MAY be applied to a single Flat Darwin Core Record, or to a single instance of a Darwin Core Observation, Taxon, Event, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al 2012).  For example,  a bdqcore: SingleRecord Test SHOULD NOT take multiple rows of Flat Darwin core as input.  A bdqcore: SingleRecord Test SHOULD NOT take multiple objects of the same core type as input when taking structured Darwin Core as input (for example, input data Darwin Core data in RDF should be presented to a bdqcore: SingleRecord Test one dwc:Occurrence at a time, although the Occurrence could be linked to multiple other instances of other classes such as identifications).
+Tests operate on data, the data may be understood as representing a single record or multiple records.  The single record (bdqffdq:SingleRecord) BDQ Core Tests MAY be applied to a single Flat Darwin Core Record, or to a single instance of a Darwin Core Observation, Taxon, Event, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al 2012).  For example,  a bdqcore: SingleRecord Test (that is, a bdqcore: Test with a bdqffdq:hasResourceType of bdqffdq:SingleRecord) SHOULD NOT take multiple rows of Flat Darwin core as input.  A bdqcore: SingleRecord Test SHOULD NOT take multiple objects of the same core type as input when taking structured Darwin Core as input (for example, input data Darwin Core data in RDF should be presented to a bdqcore: SingleRecord Test one dwc:Occurrence at a time, although the Occurrence could be linked to multiple other instances of other classes such as identifications).
 
 The BDQ Core Test [ISSUE_ANNOTATION_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) similarly operates on a single Flat Darwin Core record, or a single core Darwin Core class instance, and asks whether annotations exist related to that class, here this standard encourages the implementation of a standard for annotating occurrence records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
