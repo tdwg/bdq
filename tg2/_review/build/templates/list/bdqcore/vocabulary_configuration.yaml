@@ -53,6 +53,14 @@ ArgumentGuids:
   label: Guids for Arguments
   normative: 'true'
   term: bdqffdq:Argument
+SpecificationGuid:
+  label: Guid for Specification
+  normative: 'true'
+  term: bdqffdq:Specification
+MethodGuid:
+  label: Guid for DataQualityMethod
+  normative: 'true'
+  term: bdqffdq:DataQualityMethod
 AuthoritiesDefaults:
   label: SourceAuthorities/Defaults
   normative: ''
