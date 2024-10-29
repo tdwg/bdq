@@ -60,7 +60,7 @@ The bdq_issue_to_csv utility is available for converting markdown tables in issu
 The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) records where each record provides-
 
 - Input.data: The values of bdqffdq:InformationElements (bdq:InformationElementsConsulted and bdq:InformationElementsActedUpon) required as input to the test
-- Output.data: For AMENDMENT Type Tests, the output values of amended bdq:InformationElementsActedUpon
+- Output.data: For Amenedment Type Tests, the output values of amended bdq:InformationElementsActedUpon
 - A Response.status that informs the expected status of running the Test on the input data
 - A Response.result that informs the expected outcome of running the Test on the input data
 - A Response.comment that explains the reasoning for the Response of running the Test on the input data
@@ -69,7 +69,7 @@ The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) record
   - The URL for the GitHub Issue Test page
   - The Test number (the number on the end of the URL for the GitHub Issue page
   - The Test GUID
-  - TestType: Either VALIDATION, ISSUE, MEASURE or AMENDMENT
+  - TestType: Either Validation, Issue, Measure or Amendment
   - Test Label: The last two components of the full Test Label that enables sorting by the Information Element focus of the Test
   - The Data Dimension: What dimension of the data does the Test focus on, either NAME, SPACE, TIME, or OTHER
   - The record unique identifier

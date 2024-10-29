@@ -165,13 +165,13 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **Criterion Label**. A combination of the Dimension (bdqdim:) value and the bdqcrit: value, for example "Conformance: standard"
 
-**Type**. The type of the Test, one of VALIDATION, ISSUE, AMENDMENT or MEASURE, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
+**Type**. The type of the Test, one of Validation, Issue, Amendment or Mmeasure, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
 
 **Resource Type**. The Test either operates on a Single Record or Multiple Records <!--- (TODO bdq...used here or keep it simple English) --->...this generally relates to this list.
 
 **Dimension**. The Data Quality Dimension focus of the Test: One of "Completeness", "Conformance", "Consistency", "Likeliness", "Reliability" or "Resolution"
 
-**Enhancement**. For AMENDMENTS: The type of enhancement that is bring proposed. One of "Assumed Default", "Converted", "Fill in From", "STandardized" and "Transposed".
+**Enhancement**. For Amendment Tests: The type of enhancement that is bring proposed. One of "Assumed Default", "Converted", "Fill in From", "STandardized" and "Transposed".
 
 **Examples**. Two examples of input and output data and Test responses for a 'pass' and 'fail' case, for example "[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is a valid country name in the bdq:sourceAuthority"], [dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Tasmania is not found at the level of national in the bdq:sourceAuthority"]
 
