@@ -193,27 +193,27 @@ Many people have contributed valuable commments through the development of the B
 
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
 
-- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
-- **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, vocabularies, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents, test validation data; 
-- **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.
+- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); test descriptions; author of BDQ Core documents; test validation data.
+- **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; test descriptions; author of BDQ Core documents; vocabularies. 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; bdqffdq ontology; Java test implementations in filteredpush packages; author of BDQ Core documents; test validation data. 
+- **John Wieczorek (VertNet)**: Test descriptions; test implementations; author of BDQ Core documents; Darwin Core liaison.
 
 #### 4.2.2 Contributors
 
 There were many people who have made notable contributions at various times during the development of BDQ Core.
  
-- **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to test descriptors, explanatory workflow diagrams, edits to text of BDQ Core documents;
-- **António Mauro Saraiva (Universidade de São Paulo)**: Development of the Fitness for Use Framework (Task Group 1), facilitated test development workshop, Co-convenor of Data Quality Interest Group until 2022;
-- **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Fitness for Use Framework as his disertation (Veiga 2016), Convenor of Task Group 1: Framework on Data Quality;
-- **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Contributions to test descriptions and vocabulary development, Convenor of Task Group 4: Best Practices for Development of Vocabularies of Value;
-- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors, migrated test descriptors into markdown tables in github issues;
-- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of the Fitness for Use Framework, developer of kurator-ffdq Java class representation of the framework;
-- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions, vocabulary definitions and early test development;
-- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions, clarification of GBIF vocabulary and API resources for the tests;
-- **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions, GBIF Representative to the Data Quality Interest Group in early years;
-- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the Fitness for Use Framework as an ontology, guided intital development of the ontology representation of the framework;
-- **Miles Nicholls (Atlas of Living Australia)**: Use Case analysis, Convenor of Task Group 3: Data Quality Use Cases;
-- **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in Task Group 3: Data Quality Use cases;
+- **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Convener of TDWG Data Quality Task Group 4 (Best Practices for Development of Vocabularies of Value); test descriptions; vocabulary development.
+- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors; migrated test descriptors into markdown tables in github issues.
+- **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to test evaluation; explanatory workflow diagrams; editing BDQ Core documents.
+- **António Mauro Saraiva (Universidade de São Paulo)**: Co-convenor of the TDWG Data Quality Interest Group; development of the Framework for Data Quality (TDWG Data Quality Task Group 1); facilitated test development workshop.
+- **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Framework on Data Quality as his disertation (Veiga 2016), Convener of the TDWG Data Quality Task Group 1 (Framework for Data Quality);
+- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of Framework on Data Quality; developer of kurator-ffdq Java class representation of the framework.
+- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions; vocabulary definitions and early test development.
+- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions; clarification of GBIF vocabulary and API resources for the BDQ Core Tsts.
+- **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions; GBIF Representative to the Data Quality Interest Group in early years.
+- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the ontology of the Data Quality Framework; guided intital development of the ontology representation of the framework.
+- **Miles Nicholls (Atlas of Living Australia)**: Convener of TDWG Data Quality Task Group 3 (Data Quality Use Cases); use Case analysis.
+- **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in TDWG Data Quality Task Group 3 (Data Quality Use Cases).
 - **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
 
 ## 5 Acronyms
@@ -231,10 +231,10 @@ There were many people who have made notable contributions at various times duri
 | IRI         | Internationalized Resource Identifier                 |
 | ISO         | International Standards Organization                  |
 | TDWG        | Biodiversity Information Standards                    |
-| TG1         | Biodiversity Data Quality Interest Group Task Group 1: Framework on Data Quality |
-| TG2         | Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions |
-| TG3         | Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases     |
-| TG4         | Biodiversity Data Quality Interest Group Task Group 4: Best Practices for Development of Vocabularies of Value |
+| TG1         | Biodiversity Data Quality Task Group Task Group 1: Framework on Data Quality |
+| TG2         | Biodiversity Data Quality Task Group Task Group 2: Data Quality Tests and Assertions |
+| TG3         | Biodiversity Data Quality Task Group Task Group 3: Data Quality Use Cases     |
+| TG4         | Biodiversity Data Quality Task Group Task Group 4: Best Practices for Development of Vocabularies of Value |
 
 ## 6 Glossary
 
@@ -273,7 +273,7 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 | CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
-| Framework | The body of work that provides a framework for most of BDQ Core, and is the outcome of TDWG Data Quality Task Group 1: Framework on Data Quality. See Veiga et al. 2017 | bdqffdq: |
+| Framework | The body of work that provides a framework for most of BDQ Core, and is the outcome of the TDWG Data Quality Task Group 1 (Framework on Data Quality. See Veiga et al. 2017 | bdqffdq: |
 | GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ Core |
 | non-printing characters | ASCII 0-32 and 127 decimal. Non printing characters or formatting marks that are not displayed at printing. These may include pilcrow, space, non-breaking space, tab character. etc. For the purposes of the tests they are treated as bdq:Empty. | Data |
