@@ -33,7 +33,7 @@ iri:
   term: rdf:about
 issued:
   label: Modified
-  normative: ''
+  normative: 'true'
   term: dcterms:issued
 label:
   label: Label
@@ -41,7 +41,7 @@ label:
   term: rdfs:label
 organized_in:
   label: ''
-  normative: ''
+  normative: 'false'
   term: ''
 prefLabel:
   label: Preferred Label
