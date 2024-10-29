@@ -412,13 +412,13 @@ Some source authorities are highly stable small vocabularies.  Implementers MAY 
 
 A good practice for executing the Tests is to execute all of the bdqffdq:SingleRecord Validation and Measure Tests in a pre-amendment phase, then to execute all of the Amendment Tests in an amendment phase, then to re-execute all of the Validation Tests on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the Validation and Measures Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for Tests is to aggregate the unique values of applicable InformationElements within a bdqffdq:MultiRecord for each Validation or Measure Test, then to execute the Validation or Measure Test on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing Tests as SQL queries.
 
-Recommended process with the current suite of BDQ Core Tests is to run all pertinent single record Validation and Measure Tests, then run all pertinent Under Quality Assurance, MultiRecord measures that return "COMPLETE" or "NOT_COMPLETE" MAY be used as filters for quality for purpose, exclude records from the data set untill all MultiRecord measures of this sort are returning "COMPLETE", this under the mathematical forumuation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.
+Recommended process with the current suite of BDQ Core Tests is to run all pertinent bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent Under Quality Assurance, MultiRecord measures that return "COMPLETE" or "NOT_COMPLETE" MAY be used as filters for quality for purpose, exclude records from the data set untill all bdqffdq:MultiRecord Measures Tests of this sort are returning "COMPLETE", this under the mathematical forumuation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.
 
-Under Quality Control, bdqffdq:MultiRecord measures that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  
+Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  
 
 #### 6.4.2 Test Dependencies
 
-The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While BDQ Core Tests are designed to be as independent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendments can affect results. 
+The BDQ Core Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While the Tests are designed to be as independent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendment Tests can affect results. 
 
 When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed. Similarly when Amendment Tests are executed in parallel these sequences SHOULD be applied.
 
@@ -431,9 +431,9 @@ Given that Amendment Tests propose a value to a primary term from secondary term
 
 [AMENDMENT_SCIENTIFICNAME_FROM_TAXONID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: [AMENDMENT_TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889). 
 
-Where multiple Amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
+Where multiple amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
 
-The following Amendments SHOULD be composed to run in an ordered sequence:
+The following Amendment Tests SHOULD be composed to run in an ordered sequence:
 
 | order       | Test                                                       |
 |-------------|------------------------------------------------------------|
@@ -859,7 +859,7 @@ These libraries are available in Maven Central.
 
 ## 9 Existing Test Implementations (non-normative) 
 
-Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of open source Java libraries that provide classes which implement each of the single record Tests that operate directly on data.
+A set of open source Java libraries provide classes which implement each of the bdqffdq:SingleRecord Tests that operate directly on data. These librarie are not part of the BDQ Core standard, but have been implemented as part of the process of writing the standard.
 
 <!--- TODO: Add citations --->
 
