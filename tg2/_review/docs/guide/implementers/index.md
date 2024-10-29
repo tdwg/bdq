@@ -347,9 +347,9 @@ When interpretations of strings containing Roman numerals as numbers is intended
 
 #### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
-<!--- TODO: Rewrite this section as normative guidance for implementers --->
+<!--- TODO: Rewrite this section as normative guidance for implementers. Lee thinks it reads well and did a few minor edits--->
 
-Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed. A field that only includes whitespace is treated as bdq:Empty. In bdqffdq:Validation Tests that require the lookup of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment Tests and thus pass when the bdqffdq:Validation Test is run again
+Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed (see the [Glossary](../../intro/index.md#6-glossary)). A field that only includes whitespace is treated as bdq:Empty. In bdqffdq:Validation Tests that require the lookup of a bdq:sourceAuthority, leading and/or trailing whitespace may cause the test to fail as no preprocessing is performed on the data. Leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment Tests and thus pass when the same bdqffdq:Validation Test is re-run.
 
 Amendments SHOULD propose changes with leading or trailing whitespace removed.
 
@@ -467,13 +467,13 @@ Some source authorities are highly stable small vocabularies.  Implementers MAY 
 
 A good practice for executing the Tests is to execute all of the bdqffdq:SingleRecord Validation and Measure Tests in a pre-amendment phase, then to execute all of the Amendment Tests in an amendment phase, then to re-execute all of the Validation Tests on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the Validation and Measures Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for Tests is to aggregate the unique values of applicable InformationElements within a bdqffdq:MultiRecord for each Validation or Measure Test, then to execute the Validation or Measure Test on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing Tests as SQL queries.
 
-Recommended process with the current suite of BDQ Core Tests is to run all pertinent single record Validation and Measure Tests, then run all pertinent Under Quality Assurance, MultiRecord measures that return "COMPLETE" or "NOT_COMPLETE" MAY be used as filters for quality for purpose, exclude records from the data set untill all MultiRecord measures of this sort are returning "COMPLETE", this under the mathematical forumuation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.
+Recommended process with the current suite of BDQ Core Tests is to run all pertinent bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent Under Quality Assurance, MultiRecord measures that return "COMPLETE" or "NOT_COMPLETE" MAY be used as filters for quality for purpose, exclude records from the data set untill all bdqffdq:MultiRecord Measures Tests of this sort are returning "COMPLETE", this under the mathematical forumuation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.
 
-Under Quality Control, bdqffdq:MultiRecord measures that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  
+Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  
 
 #### 6.4.2 Test Dependencies
 
-The Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While BDQ Core Tests are designed to be as independent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendments can affect results. 
+The BDQ Core Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While the Tests are designed to be as independent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendment Tests can affect results. 
 
 When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed. Similarly when Amendment Tests are executed in parallel these sequences SHOULD be applied.
 
@@ -486,9 +486,9 @@ Given that Amendment Tests propose a value to a primary term from secondary term
 
 [AMENDMENT_SCIENTIFICNAME_FROM_TAXONID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: [AMENDMENT_TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889). 
 
-Where multiple Amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
+Where multiple amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
 
-The following Amendments SHOULD be composed to run in an ordered sequence:
+The following Amendment Tests SHOULD be composed to run in an ordered sequence:
 
 | order       | Test                                                       |
 |-------------|------------------------------------------------------------|
@@ -798,7 +798,7 @@ Additional Test records can be readily generated or adapted from real data using
 
 ### 8.2 Structure of the Validation Data 
 
-<!--- Check meaning in paragraph below --->
+<!---Paul - please check meaning in paragraph below --->
 
 The validation test data are intended as input into a testing system that can evaluate the implementations of Tests independently. Each Test data record is contains only the values of REQUIRED Information Elements ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) as input, and assesses whether the Test Response conforms to the expected responses in the Test data.  The data could be processed as input for unit Tests or it could be used as the basis for presenting synthetic records to a larger test execution system. The test data is designed to be used at a level where individual Tests are being assessed.  The structure of the validation data attempts to be at a level of abstraction above **the method signature specificity needed in unit Tests ??**, but still at a level that is examining individual Test implementations below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output (to avoid forcing particular formats on data quality reports as a whole).  
 
@@ -820,11 +820,6 @@ The following column header for the data are used for the validation data files.
 | Response.status | The status on applying the Test to the data record. For VALIDATIONS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For AMENDMENTS, one of the terms "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET", "FILLED_IN", "AMENDED" or "NOT_AMENDED". For ISSUE, one of the terms "INTERNAL_PREREQUISITES_NOT_MET" or "RUN_HAS_RESULT". For MEASURES, either "RUN_HAS_RESULT" or "INTERNAL_PREREQUISITES_NOT_MET". |
 | Response.result | The result of running the Test on the data record. For VALIDATIONS and AMENDMENTS, "NULL" where the Response.status is either "EXTERNAL_PREREQUISITES_NOT_MET", "INTERNAL_PREREQUISITES_NOT_MET". For VALIDATIONS, either "COMPLIANT" or "NOT_COMPLIANT" where Response.status is "RUN_HAS_RESULT".  For AMENDMENTS where Response.status is either "FILLED_IN" or "AMENDED, the Response.result is a json structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or "NOT_REPORTED". |
 |Response.comment | A human-readable example statement identifying the reason for the Test result given the input data. Implementations are not expected to produce this exact value | IssuesWithThisRow | A working column for recording issues while developing validation data, to be removed. |
-
-<!---Additional ?? fields from PJM --->
-
-| header | definition |
-| ------ | ---------- |
 | bdq:annotation | A placeholder for an annotation when Testing for their presence. |
 | bdq:sourceAuthority | Input parameter for some Parameterized Tests. |
 | dwc: (77 columns) |  All of the Darwin Core terms that are in scope for Core.  In each row, only those identified in the Information Elements of the relevant Test and pertinent to the Test case at hand contain values. |
@@ -902,9 +897,9 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 ### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api <!--- (**TODO: Cite**) ---> 
 
-<!--- (**TODO: Cite**) Java annotations. --->
+Java annotations can be used to match test implementation methods to tests and information elements to method parameters <!-- TODO: Complete this thought --->
 
 ### 8.6.2 Tools to assist with implementations and RDF presentation (non-normative) 
 
@@ -919,7 +914,7 @@ These libraries are available in Maven Central.
 
 ## 9 Existing Test Implementations (non-normative) 
 
-Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of open source Java libraries that provide classes which implement each of the single record Tests that operate directly on data.
+A set of open source Java libraries provide classes which implement each of the bdqffdq:SingleRecord Tests that operate directly on data. These librarie are not part of the BDQ Core standard, but have been implemented as part of the process of writing the standard.
 
 <!--- TODO: Add citations --->
 

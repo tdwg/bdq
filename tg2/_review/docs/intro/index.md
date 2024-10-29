@@ -48,7 +48,7 @@ Draft Standard for Submission
 - [2.4 Guides and other documents.](#24-guides-and-other-documents)
 - [2.5 Implementation Validation Data](#25-implementation-validation-data)
 - [2.6 Test Execution Environments and Workflows](#26-test-execution-environments-and-workflows)
-- [2.7 Exemplar Tests Implementation](#27-exemplar-tests-implementation)
+- [2.7 Implementations of Tests 'In the Wild'](#27-implementations-of-tests-'in-the-wild')
 - [3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
 - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control,-data-quality-assurance-normative)
 - [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
@@ -179,29 +179,17 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 2.7 Exemplar Tests Implementation
+### 2.7 Implementations of Tests 'In the Wild'
 
-<!--- TODO: Evaluate: Question from PJM: Does section 2.7 belong?  The filteredpush implementations aren't part of the standard --->
-<!--- TODO: This information is provided in the implementer's guide, could link to the two relevant sections there instead --->
+Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java implementations of the BDQ Core tests which pass against the validation data.  See [9 Existing Test Implementations](../guide/implementers/index.md/#9-Existing-Test-Implementations-non-normative) in the implementer's guide for details.  
 
-Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java libraries that provide classes which implement each of the single record tests that operate directly on data.  
+Additional code is available to help support implmentation of tests and the use of bdqcore, dwc, and bdqffdq terms in rdf.  See the discussion in [section 8.6 Existing Sofware tools](#86-Existing-Sofware-tools-non-normative) of the implementer's guide.
 
-<!--- TODO: Add citations --->
-
-- [event_date_qc](https://github.com/filteredpush/event_date_qc) Tests related to spatial terms.  
-- [sci_name_qc](https://github.com/filteredpush/sci_name_qc) Tests related to taxonomy and identification terms.
-- [geo_ref_qc](https://github.com/filteredpush/geo_ref_qc) Tests related to spatial terms.
-- [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) Tests related to metadata terms.
-
-These test implementations use Java Annotations to carry metadata to identify tests and to allow binding of  [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api.  In addition, a Java library, kurator-ffdq is available for working with test descriptions as RDF, being an implementation of the bdqffdq: Framework in Java.  The kurator-ffdq library also includes classes for generating stub methods for each test in either Java or Python.
-
-- [ffdq-api](https://github.com/kurator-org/ffdq-api) Java annotations for decorating test implementations.
-- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq)  Java classes for bdqffdq: classes.
-
+<!--- TODO: note partial implementations in iDigBio, ALA, OBIS, GBIF, and R packages --->
 
 ## 3 Design of the Tests (normative)
 
-<!--- PJM: Section 3 is Important elements to put in the introduction --->
+<!--- PJM: Section 3 is Important (largely permissive) elements that are needed in the introduction --->
 
 ### 3.1 Data Quality Control, Data Quality Assurance (normative)
 
@@ -241,7 +229,7 @@ Many people have contributed valuable commments through the development of the B
 
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core test descriptors and the BDQ core documentation. 
 
-- **Lee Belbin (Blatant Fabrications)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
+- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Test descriptions, test validation data, author of BDQ Core documents, Convenor of Task Group 2; 
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Test descriptions, vocabularies, author of BDQ Core documents. Convenor of the TDWG Data Quality Interest Group; 
 - **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions, bdqffdq ontology, Java test implementations in filteredpush packages, author of BDQ Core documents, test validation data; 
 - **John Wieczorek (VertNet)**: Test descriptions, test implementations, author of BDQ Core documents, Darwin Core liaison.

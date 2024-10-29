@@ -95,9 +95,9 @@ There are four types of tests: Validations, Issues, Amendments and Measures. Eac
 
 #### 2.2.1 Inputs to Tests (non-normative)
 
-Each Test is defined to take a specific set of input terms (InformationElements, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the Validations, Amendments, and Issues currently defined in BDQ Core examine a set of Darwin Core terms from a single record, e.g. from a single Occurrence record, rather than looking at the input term(s) over multiple records.  
+Each Test is defined to take a specific set of input terms (InformationElements, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ Core Validation, Amendment, and Issue Tests examine a set of Darwin Core terms from a Single Record, e.g. from a single Occurrence record, rather than looking at the input term(s) over multiple records.  
 
-Consider the Test [VALIDATION_EVENTDATE_STANDARD](https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803), it takes as input the InformationElement dwc:eventDate from a single record, and then asks "Is the value of dwc:eventDate a valid ISO date?".  It will then produce a Response describing the conclusion it reached in asking that question for that record.
+Consider the Test [VALIDATION_EVENTDATE_STANDARD](https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803), it takes as input the InformationElement dwc:eventDate from a Single Record, and then asks "Is the value of dwc:eventDate a valid ISO date?".  It will then produce a Response describing the conclusion it reached in asking that question for that record.
 
 #### 2.2.2 Data Quality Reports (non-normative) 
 
@@ -148,23 +148,27 @@ Data does not have quality in the abstract, it only has quality with respect to 
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
-The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, Data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
+The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
 
-While the bdqffdq: Framework also provides a formal statement of Quality Control, the application of Qualtity Control in the wild can be much more nuanced.  At the point of intial data capture.....
+<!--- Lee's go at changing the TODOs below into paragraphs with edits by Paul. --->
 
-The context of Quality Control may affect how Tests and their results are applied in broader ways.
+The bdqffdq: Framework provides a formal statement of Quality Control but the application of Qualtity Control 'in the wild' is more nuanced, and is more complex than simple filtering under Quality Assurance.
+The context of Quality Control may affect how Tests and their results are applied to data, information systems, and processes.
+  Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent far less efficient issue detection and correction. Issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost or held on paper records remote from data entry, and errors may be propagated.  Validation Tests may be though of as framing constraints to impose on data entry interfaces, such as validation of data against a controlled vocabulary being imposed by the presentation of the controlled vocabulary as a pick list in a user interface, or may be implemented as checks on entered data values with immediate feedback for users. 
 
-Quality Control applied at the initial point of data capture may simply prevent the entry of incorrect values.  This is the most effective and least expensive point at which to apply quality control. 
+When data quality reports result from analysis of data in databases of record, numerous validation failures are likely, particularly in historical data where data values may be poorly know, or data may have passed through multiple life cycles of collection management systems.  In a data base of record, the focus of quality control processes is very likely on identifing tractable targeted data cleanup projects.  Data cleanup projects can involve multiple staff with different skills and are likely to last for long periods of time.  Datacleanup projects are expensive, and data quality reports driven by Tests organized by Use Cases can be a management tool for identifying and prioritizing suitable and tractable projects for data cleanup. 
 
-<!--- TODO: Make the following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
+Complicating the analysis of data quality reports on databases of record is that when relational database tables are denormalized to flat files for analyses and reporting, propagated errors could trace back to a single 'point of failure'.  What appear in reports as large numbers of errors may result from a single problem in a single record of a relational table.  A clear understanding of the structure of a database of record is needed to interpret data quality reports into targeted data cleanup projects.   The keys for applying data quality reports to impovement of data in databases of record is identification of focused areas for data cleanup projects, and identification of places where data quality problems may be reduced by improvements to workflow processes or user interfaces for entry and manipulation of data.  Some validations may point to places where controlled vocabularies should be in use but are not, pointing to a need for a coordinated set of changes (for example splitting a single free text field into a controlled vocabulary field and a free text field for further elaboration, a data cleanup project to map all existing values onto a controlled vocabulary, and then changes to user interface to reflect the split into a controlled field and associated remarks.
 
-- reports on databases of record, targeted work effort,  
+Correcting issues subesquent to data capture introduces further complexities in that any amendment to existing values requires careful human evaluation and a forking of data records to maintain original data, and an audit trail. Data cleaning often requires far more time than data analysis.
 
-- analysis of reports may give single fix for multiple results for a test being non compliant, when reltational tables are denormalized into flattened data for analysis and reporting, what may appear to be multiple cases of the same error may be a single point fix.  key is to identify focused areas for data cleanup projects, data cleanup takes significant work effort.
+<!---End Lee's effort and Paul's edits --->
 
-- mapping for aggregation, reports from aggregators, key is to to identify focused areas for data cleanup projects, takes work effort. 
+<!--- TODO: Make the remaining following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
 
-- analysis of reports may reveal simple mapping errors, e.g. field transpositions in mapping.
+- mapping for aggregation, reports from aggregators, key is to to identify focused areas for data cleanup projects, takes work effort,  
+
+- analysis of reports may reveal simple mapping errors, e.g. field transpositions in mapping,
 
 - improvement on data in stream during downstream analysis.  May mean acceptance of amendments into data stream, shouldn't be done blindly.
 
