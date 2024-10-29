@@ -96,6 +96,7 @@ In addition, A users guide to the use of the BDQ Core Tests is provided in the
 | HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/docs/list/bdqcore/index.md | Complete term list for the bdqcore: vocabulary  | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.xml | An rdf representation of the Tests in an RDF/XML serialization | 
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the Tests in a Turtle serialization | 
+| JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.json | An rdf representation of the Tests in a json-ld serialization | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the Tests | 
 
 ### 1.4 Status of the Content of this Document

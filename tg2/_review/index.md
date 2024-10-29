@@ -32,6 +32,7 @@ Preferred Citation
       - File: [CSV List of Tests](vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
       - File: [Tests in RDF/XML](dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
       - File: [Tests in Turtle](dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
+      - File: [Tests in json-ld](dist/bdqcore.json "Json-ld serialization of OWL representation of the tests descriptors.")
   - [Fitness For Use Ontology Landing Page](docs/bdqffdq/index.md):
     - [Fitness For Use Framework Ontology List of Terms](docs/list/bdqffdq/index.md):
     - [Fitness For Use Framework Ontology Extension List](docs/extension/bdqffdq/index.md):
