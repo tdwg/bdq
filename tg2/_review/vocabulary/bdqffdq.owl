@@ -74,6 +74,7 @@ bdqffdq:composedOf rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/containsAssertion
 bdqffdq:containsAssertion rdf:type owl:ObjectProperty ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment "Connects Assertions together into Data Quality Reports.  Alterntatively, Assertions can be contained in oa:Annotations, in which case this property is not used." ;
                           rdfs:label "contains Assertion" ;
                           skos:definition "Connects a Data Quality Report with Assertions that comprise that report." ;
@@ -82,6 +83,7 @@ bdqffdq:containsAssertion rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
 bdqffdq:forAmendment rdf:type owl:ObjectProperty ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:subPropertyOf bdqffdq:amendmentProperty ,
                                         bdqffdq:forDataQualityNeed ;
                      rdfs:range [ rdf:type owl:Restriction ;
@@ -96,6 +98,7 @@ bdqffdq:forAmendment rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed
 bdqffdq:forDataQualityNeed rdf:type owl:ObjectProperty ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:comment "Category of properties that link tests to their Methods." ;
                            rdfs:label "for Data Quality Need" ;
                            skos:definition "Category of properties that relates specific Data Quality Needs to specific Methods." ;
@@ -104,6 +107,7 @@ bdqffdq:forDataQualityNeed rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forIssue
 bdqffdq:forIssue rdf:type owl:ObjectProperty ;
+                 dcterms:issued "2024-09-30"^^xsd:date ;
                  rdfs:subPropertyOf bdqffdq:forDataQualityNeed ,
                                     bdqffdq:issueProperty ;
                  rdfs:range [ rdf:type owl:Restriction ;
@@ -118,6 +122,7 @@ bdqffdq:forIssue rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forMeasure
 bdqffdq:forMeasure rdf:type owl:ObjectProperty ;
+                   dcterms:issued "2024-09-30"^^xsd:date ;
                    rdfs:subPropertyOf bdqffdq:forDataQualityNeed ,
                                       bdqffdq:measurementProperty ;
                    rdfs:range [ rdf:type owl:Restriction ;
@@ -132,6 +137,7 @@ bdqffdq:forMeasure rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forValidation
 bdqffdq:forValidation rdf:type owl:ObjectProperty ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdfs:subPropertyOf bdqffdq:forDataQualityNeed ,
                                          bdqffdq:validationProperty ;
                       rdfs:range [ rdf:type owl:Restriction ;
@@ -146,6 +152,7 @@ bdqffdq:forValidation rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement
 bdqffdq:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
+                                       dcterms:issued "2024-09-30"^^xsd:date ;
                                        rdfs:subPropertyOf bdqffdq:hasInformationElement ;
                                        rdfs:comment "Provides a relationship between bdqffdq concepts and the information elements that are ActedUpon in a test."@en ;
                                        rdfs:label "has Acted Upon Information Element" ;
@@ -155,6 +162,7 @@ bdqffdq:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasArgument
 bdqffdq:hasArgument rdf:type owl:ObjectProperty ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdfs:range bdqffdq:Argument ;
                     rdfs:comment "Expected to be a relationship between a Specification and an Argument, where the Argument provides a value for a Paramter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification may provide a default value for the Parameter under that specification." ;
                     rdfs:label "has Argument" ;
@@ -164,6 +172,7 @@ bdqffdq:hasArgument rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement
 bdqffdq:hasConsultedInformationElement rdf:type owl:ObjectProperty ;
+                                       dcterms:issued "2024-09-30"^^xsd:date ;
                                        rdfs:subPropertyOf bdqffdq:hasInformationElement ;
                                        rdfs:comment "Provides a relationship between bdqffdq concepts and the information elements that are Consulted, but not ActedUpon in a test."@en ;
                                        rdfs:label "has Consulted Information Element" ;
@@ -173,6 +182,7 @@ bdqffdq:hasConsultedInformationElement rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasCriterion
 bdqffdq:hasCriterion rdf:type owl:ObjectProperty ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:subPropertyOf bdqffdq:issueProperty ,
                                         bdqffdq:validationProperty ;
                      rdfs:range [ rdf:type owl:Restriction ;
@@ -187,6 +197,7 @@ bdqffdq:hasCriterion rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension
 bdqffdq:hasDataQualityDimension rdf:type owl:ObjectProperty ;
+                                dcterms:issued "2024-09-30"^^xsd:date ;
                                 rdfs:subPropertyOf bdqffdq:amendmentProperty ,
                                                    bdqffdq:issueProperty ,
                                                    bdqffdq:measurementProperty ,
@@ -205,6 +216,7 @@ Under the original formulation of the Framework, only Measures have Dimensions."
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasEnhancement
 bdqffdq:hasEnhancement rdf:type owl:ObjectProperty ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:subPropertyOf bdqffdq:amendmentProperty ;
                        rdfs:range [ rdf:type owl:Restriction ;
                                     owl:onProperty bdqffdq:hasEnhancement ;
@@ -218,6 +230,7 @@ bdqffdq:hasEnhancement rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasInformationElement
 bdqffdq:hasInformationElement rdf:type owl:ObjectProperty ;
+                              dcterms:issued "2024-09-30"^^xsd:date ;
                               rdfs:subPropertyOf bdqffdq:amendmentProperty ,
                                                  bdqffdq:issueProperty ,
                                                  bdqffdq:measurementProperty ,
@@ -233,6 +246,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasParameter
 bdqffdq:hasParameter rdf:type owl:ObjectProperty ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:range bdqffdq:Parameter ;
                      rdfs:comment "Expected to be a relationship between a Specification and a Parameter, where the Parameter defines the term for the parameter (e.g. bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification provides a default value for the Parameter under that specification."@en ;
                      rdfs:label "has Parameter"@en ;
@@ -242,6 +256,7 @@ bdqffdq:hasParameter rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResourceType
 bdqffdq:hasResourceType rdf:type owl:ObjectProperty ;
+                        dcterms:issued "2024-09-30"^^xsd:date ;
                         rdfs:comment "Provides additional metadata, along with the information elements, that describe the nature of the data  (SingleRecord or MultiRecord) on which the bdqffdq concept operates. For example, an Amendment with resource type of MultiRecord defines that Amendment as operating on a data set." ;
                         rdfs:label "has Resource Type" ;
                         skos:definition "Resource Type to which a DataQualityNeed applies." ;
@@ -250,6 +265,7 @@ bdqffdq:hasResourceType rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier
 bdqffdq:hasResponseQualifier rdf:type owl:ObjectProperty ;
+                             dcterms:issued "2024-09-30"^^xsd:date ;
                              rdfs:subPropertyOf bdqffdq:reportProperty ;
                              rdfs:comment "Optional extension point, could be used to add structured information about uncertainty."@en ;
                              rdfs:label "has Response Qualifier"@en ;
@@ -259,6 +275,7 @@ bdqffdq:hasResponseQualifier rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResult
 bdqffdq:hasResponseResult rdf:type owl:ObjectProperty ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subPropertyOf bdqffdq:reportProperty ;
                           rdfs:comment """Used in the DQ Report concept to describe response result objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.  
 
@@ -270,6 +287,7 @@ bdqffdq:hasResponseResult rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus
 bdqffdq:hasResponseStatus rdf:type owl:ObjectProperty ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subPropertyOf bdqffdq:reportProperty ;
                           rdfs:comment """Used in the DQ Report concept to describe response status.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdqffdq:RUN_HAS_RESULT or bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.  
 
@@ -281,6 +299,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasSpecification
 bdqffdq:hasSpecification rdf:type owl:ObjectProperty ;
+                         dcterms:issued "2024-09-30"^^xsd:date ;
                          rdfs:range [ rdf:type owl:Restriction ;
                                       owl:onProperty bdqffdq:hasSpecification ;
                                       owl:someValuesFrom bdqffdq:Specification
@@ -293,6 +312,7 @@ bdqffdq:hasSpecification rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasUseCase
 bdqffdq:hasUseCase rdf:type owl:ObjectProperty ;
+                   dcterms:issued "2024-09-30"^^xsd:date ;
                    rdfs:range [ rdf:type owl:Restriction ;
                                 owl:onProperty bdqffdq:hasUseCase ;
                                 owl:someValuesFrom bdqffdq:UseCase
@@ -305,6 +325,7 @@ bdqffdq:hasUseCase rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/implementedBy
 bdqffdq:implementedBy rdf:type owl:ObjectProperty ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdfs:range [ rdf:type owl:Restriction ;
                                    owl:onProperty bdqffdq:implementedBy ;
                                    owl:someValuesFrom bdqffdq:Mechanism
@@ -317,6 +338,7 @@ bdqffdq:implementedBy rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/improvedBy
 bdqffdq:improvedBy rdf:type owl:ObjectProperty ;
+                   dcterms:issued "2024-09-30"^^xsd:date ;
                    rdfs:range [ rdf:type owl:Restriction ;
                                 owl:onProperty bdqffdq:improvedBy ;
                                 owl:someValuesFrom bdqffdq:Amendment
@@ -331,6 +353,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ###  https://rs.tdwg.org/bdqffdq/terms/includedInPolicy
 bdqffdq:includedInPolicy rdf:type owl:ObjectProperty ;
+                         dcterms:issued "2024-09-30"^^xsd:date ;
                          rdfs:comment "Relates Policies to tests (DataQualityNeeds) ." ;
                          rdfs:label "included in Policy" ;
                          skos:definition "Assserts that a Data Quality Need is part of a Policy" ;
@@ -339,6 +362,7 @@ bdqffdq:includedInPolicy rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/issueProperty
 bdqffdq:issueProperty rdf:type owl:ObjectProperty ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdfs:comment "Properties that relate Issues to IssueMethods, Criteria, and dataQualityDimensions." ;
                       rdfs:label "issue Property" ;
                       skos:definition "Category of object properties that apply to Issues." ;
@@ -347,6 +371,7 @@ bdqffdq:issueProperty rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/measurementProperty
 bdqffdq:measurementProperty rdf:type owl:ObjectProperty ;
+                            dcterms:issued "2024-09-30"^^xsd:date ;
                             rdfs:comment "Sub properties of this type group object properties that apply to measurement concepts such as MeasurementPolicy (DQ Needs), MeasurementMethod (DQ Solutions) and Measure (DQ Reports)." ;
                             rdfs:label "measurement Property" ;
                             skos:definition "Category of object properties that apply to Measures." ;
@@ -355,6 +380,7 @@ bdqffdq:measurementProperty rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/producesAssertion
 bdqffdq:producesAssertion rdf:type owl:ObjectProperty ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment "Connects Implementations (solutions) with the Assertions (reports) that they produce from the execution of a Specification." ;
                           rdfs:label "produces Assertion" ;
                           skos:definition "Connects an entity with an assertion that the entity created." ;
@@ -363,6 +389,7 @@ bdqffdq:producesAssertion rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/reportProperty
 bdqffdq:reportProperty rdf:type owl:ObjectProperty ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:comment "Category of properties used in reports (object properties associated with Response objects (bdqffdq:Assertions)).  See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue." ;
                        rdfs:label "report Property" ;
                        skos:definition "Category of object properties that apply to Assertions." ;
@@ -371,6 +398,7 @@ bdqffdq:reportProperty rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedIssue
 bdqffdq:targetedIssue rdf:type owl:ObjectProperty ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdfs:range [ rdf:type owl:Restriction ;
                                    owl:onProperty bdqffdq:targetedIssue ;
                                    owl:someValuesFrom bdqffdq:Issue
@@ -383,6 +411,7 @@ bdqffdq:targetedIssue rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedMeasure
 bdqffdq:targetedMeasure rdf:type owl:ObjectProperty ;
+                        dcterms:issued "2024-09-30"^^xsd:date ;
                         rdfs:range [ rdf:type owl:Restriction ;
                                      owl:onProperty bdqffdq:targetedMeasure ;
                                      owl:someValuesFrom bdqffdq:Measure
@@ -395,6 +424,7 @@ bdqffdq:targetedMeasure rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/targetedValidation
 bdqffdq:targetedValidation rdf:type owl:ObjectProperty ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:range [ rdf:type owl:Restriction ;
                                         owl:onProperty bdqffdq:targetedValidation ;
@@ -408,6 +438,7 @@ bdqffdq:targetedValidation rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/usesSpecification
 bdqffdq:usesSpecification rdf:type owl:ObjectProperty ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:range [ rdf:type owl:Restriction ;
                                        owl:onProperty bdqffdq:usesSpecification ;
                                        owl:someValuesFrom bdqffdq:Specification
@@ -420,6 +451,7 @@ bdqffdq:usesSpecification rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/validationProperty
 bdqffdq:validationProperty rdf:type owl:ObjectProperty ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:comment "Sub properties of this type group object properties that apply to validation concepts such as ValidationPolicy (DQ Needs), ValidationMethod (DQ Solutions) and Validation (DQ Reports)." ;
                            rdfs:label "validation Property" ;
                            skos:definition "Category of object properties that apply to Validations." ;
@@ -432,6 +464,7 @@ bdqffdq:validationProperty rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue
 bdqffdq:hasArgumentValue rdf:type owl:DatatypeProperty ;
+                         dcterms:issued "2024-09-30"^^xsd:date ;
                          rdfs:label "has Argument value" ;
                          skos:definition "The value of an Argument which is used in a Specification to replace a formal Parameter to determine the behavior of the Specification." ;
                          skos:prefLabel "has Argument value" .
@@ -439,6 +472,7 @@ bdqffdq:hasArgumentValue rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults
 bdqffdq:hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
+                               dcterms:issued "2024-09-30"^^xsd:date ;
                                rdfs:range xsd:string ;
                                rdfs:comment "Details of the bdq:sourceAuthority listed in a Specification, along with Parameters that may be provided to the expected response along with their default values." ;
                                rdfs:label "has Authorities and Defaults"@en ;
@@ -448,6 +482,7 @@ bdqffdq:hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasDateLastUpdated
 bdqffdq:hasDateLastUpdated rdf:type owl:DatatypeProperty ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:subPropertyOf owl:topDataProperty ;
                            rdfs:range xsd:date ;
                            rdfs:comment "While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertenent to implemeters, that is would required implementers to evaluate their code for changes needed to comply with the update.  bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a test would entail changes to code, and which would not.   For example, a change to the logic of a Specification in the text of hasExpectedResponse would imply needed changes to the logic of code implementing that specification, but a correction of a spelling mistake within the text of a hasExpectedResponse would not." ;
@@ -458,6 +493,7 @@ bdqffdq:hasDateLastUpdated rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse
 bdqffdq:hasExpectedResponse rdf:type owl:DatatypeProperty ;
+                            dcterms:issued "2024-09-30"^^xsd:date ;
                             rdfs:range xsd:string ;
                             rdfs:comment "The description of the logic of a test Specification.  An expected response is expected to be a data property of a Specification."@en ;
                             rdfs:label "has Expected Response"@en ;
@@ -467,6 +503,7 @@ bdqffdq:hasExpectedResponse rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
 bdqffdq:hasResponseComment rdf:type owl:DatatypeProperty ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:range xsd:string ;
                            rdfs:comment "Intended for consumption by human readers of data quality reports to understand why particular assertions were made.  Referenced in some documentation as Response.comment." ;
                            rdfs:label "has Response Comment" ;
@@ -476,6 +513,7 @@ bdqffdq:hasResponseComment rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
+                               dcterms:issued "2024-09-30"^^xsd:date ;
                                rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value." ;
                                rdfs:label "has response result value" ;
                                skos:definition "Data property carrying the value of an Assertion when not an object." ;
@@ -488,6 +526,7 @@ bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
 bdqffdq:AbstractInformationElement rdf:type owl:Class ;
+                                   dcterms:issued "2024-09-30"^^xsd:date ;
                                    rdfs:subClassOf bdqffdq:InformationElement ;
                                    rdfs:comment "Information elements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete Acted Upon or Consulted information elements." ;
                                    rdfs:label "Abstract Information Element" ;
@@ -497,6 +536,7 @@ bdqffdq:AbstractInformationElement rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ActedUpon
 bdqffdq:ActedUpon rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:InformationElement ;
                   rdfs:comment "An information element to which a Result applies."@en ;
                   rdfs:label "Acted Upon"@en ;
@@ -506,6 +546,7 @@ bdqffdq:ActedUpon rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Amendment
 bdqffdq:Amendment rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:AmendmentConcept ,
                                   bdqffdq:DataQualityNeed ;
                   rdfs:comment """ContextualizedEnhacement in the original framework.   Describes an instance of the enhancement concept in the context of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.  
@@ -524,6 +565,7 @@ AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion
 bdqffdq:AmendmentAssertion rdf:type owl:Class ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:subClassOf bdqffdq:AmendmentConcept ,
                                            bdqffdq:Assertion ;
                            rdfs:comment """The Amendment assertion type is a report level concept that describes the results of the execution of of a test that performs an AmendmentMethod following some Specification to propose changes based on some Amendment. 
@@ -546,6 +588,7 @@ bdqffdq:AmendmentConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod
 bdqffdq:AmendmentMethod rdf:type owl:Class ;
+                        dcterms:issued "2024-09-30"^^xsd:date ;
                         rdfs:subClassOf bdqffdq:AmendmentConcept ,
                                         bdqffdq:DataQualityMethod ;
                         rdfs:comment """The AmendmentMethod in bdqffdq is a DQ Solutions level concept describing the relationship between a Specification (technical description of a test) and an Amendment (an enhancement in the context of resource type (SingleRecord or MultiRecord) and associated information elements).
@@ -558,6 +601,7 @@ EM(am) = {s | s ⊂ S ⋀ am ∈ AM}""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy
 bdqffdq:AmendmentPolicy rdf:type owl:Class ;
+                        dcterms:issued "2024-09-30"^^xsd:date ;
                         rdfs:subClassOf bdqffdq:AmendmentConcept ,
                                         bdqffdq:Policy ;
                         rdfs:comment """A Data Quality needs level concept that describes how some Amendment relates to a UseCase. This relationship defines which amendments are supported by a given UseCase.
@@ -570,6 +614,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Argument
 bdqffdq:Argument rdf:type owl:Class ;
+                 dcterms:issued "2024-09-30"^^xsd:date ;
                  rdfs:subClassOf bdqffdq:SolutionsConcept ;
                  rdfs:comment "The argument is an Actual Parameter, for which a Parameter is the corresponding Formal Parameter.  An extension to the original fitness for use framework as described in Veiga et al., 2017."@en ;
                  rdfs:label "Argument" ;
@@ -579,6 +624,7 @@ bdqffdq:Argument rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Assertion
 bdqffdq:Assertion rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:ReportConcept ;
                   rdfs:comment "The Assertion type in bdqffdq is the fundamental concept that makes up a data quality report. Assertion can be any one of four types (represented as subClasses), Measure, Validation, Issue, and Amendement.  The assertion concept consists of a Specification (the technical description of a performed test), a data resource (initial values of input data expressed in terms of some controlled vocabulary), the mechanism (external service, actor, or code that performs the test), and some form of result." ;
                   rdfs:label "Assertion"@en ;
@@ -588,6 +634,7 @@ bdqffdq:Assertion rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Consulted
 bdqffdq:Consulted rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:InformationElement ;
                   rdfs:comment "An Information Element the content of which is examined to assert a result on one or more other Information Elements."@en ;
                   rdfs:label "Consulted"@en ;
@@ -597,6 +644,7 @@ bdqffdq:Consulted rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Criterion
 bdqffdq:Criterion rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                   bdqffdq:NeedConcept ;
                   rdfs:comment "General statement, for example: In a controlled vocabulary.  Composed with both Validations and Issues."@en ;
@@ -607,6 +655,7 @@ bdqffdq:Criterion rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension
 bdqffdq:DataQualityDimension rdf:type owl:Class ;
+                             dcterms:issued "2024-09-30"^^xsd:date ;
                              rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                              bdqffdq:NeedConcept ;
                              rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, [precision] in [coordinate precision of single records].  In the original framework only related to Measures, here may be related to any DataQualityNeed."@en ;
@@ -617,6 +666,7 @@ bdqffdq:DataQualityDimension rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod
 bdqffdq:DataQualityMethod rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subClassOf bdqffdq:SolutionsConcept ;
                           rdfs:comment "DataQualityMethods are associative entities that allow Specifications or data quality tests to be reused by supporting a many to many relationship between the two." ;
                           rdfs:label "Data Quality Method"@en ;
@@ -626,6 +676,7 @@ bdqffdq:DataQualityMethod rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed
 bdqffdq:DataQualityNeed rdf:type owl:Class ;
+                        dcterms:issued "2024-09-30"^^xsd:date ;
                         rdfs:subClassOf bdqffdq:NeedConcept ;
                         rdfs:comment "Subtypes of DataQualityNeed are the Test Types.  Data Quality Need appoximates the informal concept of Test as used in BDQ Core." ;
                         rdfs:label "Data Quality Need"@en ;
@@ -635,6 +686,7 @@ bdqffdq:DataQualityNeed rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityProfile
 bdqffdq:DataQualityProfile rdf:type owl:Class ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:subClassOf bdqffdq:NeedConcept ;
                            rdfs:comment """Profile in bdqffdq is a data quality Needs level concept describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant assertions.  
 
@@ -646,6 +698,7 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataQualityReport
 bdqffdq:DataQualityReport rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subClassOf bdqffdq:ReportConcept ;
                           rdfs:comment "The DataQualityReport concept consists of a set of assertions (MeasureAssertions, ValidationAssertions, IssueAssertions and AmendmentAssertions) that represent the output of a workflow/actor run.  These assertions form an account of the fitness for use of a tested data set for a specified use, as produced by a Mechanism."@en ;
                           rdfs:label "Data Quality Report"@en ;
@@ -655,6 +708,7 @@ bdqffdq:DataQualityReport rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/DataResource
 bdqffdq:DataResource rdf:type owl:Class ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:subClassOf bdqffdq:ReportConcept ;
                      rdfs:comment """Describes a data resource containing terms from a controlled vocabulary such as (dwc) that can be related to information elements and represents the original values of the data operated on by an assertion test (i.e. an instance of dwc:Occurrence).  Ideally, DataResources have persistent GUIDs.
 
@@ -668,6 +722,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Enhancement
 bdqffdq:Enhancement rdf:type owl:Class ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdfs:subClassOf bdqffdq:AmendmentConcept ,
                                     bdqffdq:FundamentalConcept ,
                                     bdqffdq:NeedConcept ;
@@ -679,6 +734,7 @@ bdqffdq:Enhancement rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept
 bdqffdq:FundamentalConcept rdf:type owl:Class ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:comment "Contrast with derived concepts, which are compositions of two or more fundamental concepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into AmendmentConcept, ValidationConcept, MeasurementConcept or IssueConcept.  Derived concepts can also be organized by framework layer into NeedsConcept, SolutionsConcept, and ReportConcept." ;
                            rdfs:label "Fundamental Concept"@en ;
                            skos:definition "Category of fitness for use concepts that are not derived by composition with other concepts."@en ;
@@ -687,6 +743,7 @@ bdqffdq:FundamentalConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Implementation
 bdqffdq:Implementation rdf:type owl:Class ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:subClassOf bdqffdq:SolutionsConcept ;
                        rdfs:comment """The bdqffdq derived concept of an Implementation describes the relationship between a Specification (technical description of a test) and the mechanism that implements it.
 
@@ -698,6 +755,7 @@ I (s) = {m | m ⊂ M ⋀ s ∈ S}""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget
 bdqffdq:ImprovementTarget rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subClassOf bdqffdq:NeedConcept ;
                           rdfs:comment """The ImprovementTarget concept in bdqffdq describes which measures, issues, and validations are improved by some amendment. ImprovementTarget includes relationships between an Amendment and one or more Validations or Measures.
 
@@ -709,6 +767,7 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}"""@en ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/InformationElement
 bdqffdq:InformationElement rdf:type owl:Class ;
+                           dcterms:issued "2024-09-30"^^xsd:date ;
                            rdfs:subClassOf bdqffdq:FundamentalConcept ;
                            rdfs:comment "An information element identifies a portion of data to which a test pertains.  The information element in bdqffdq can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields actedUpon or consulted by an assertion test) that identifies concepts in data relevant to a UseCase.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude)."@en ;
                            rdfs:label "Information Element"@en ;
@@ -718,6 +777,7 @@ bdqffdq:InformationElement rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Issue
 bdqffdq:Issue rdf:type owl:Class ;
+              dcterms:issued "2024-09-30"^^xsd:date ;
               rdfs:subClassOf bdqffdq:DataQualityNeed ,
                               bdqffdq:IssueConcept ;
               rdfs:comment """Added to the original framework.  Inverse of Contextualized Criterion in the original framework.  Describes an instance of the issue concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.  Describes criteria by which data which lack quality for some purpose may be identified.  An issue is phrased in a negative sense, and approximates an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose,  If the conditions described by an issue are identified by a test, the Problem Assertion result will be either IS_ISSUE or POTENTIAL_ISSUE, if no issue is found with the data the result will be NOT_ISSUE.  NOT_ISSUE, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose.    An Issue is the data quality needs concept that parallels a IssueMethod at the solutions level, and a IssueAssertion at the report level.   
@@ -730,6 +790,7 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }"""@en ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueAssertion
 bdqffdq:IssueAssertion rdf:type owl:Class ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:subClassOf bdqffdq:Assertion ,
                                        bdqffdq:IssueConcept ;
                        rdfs:comment """The data quality report concept describing a the result of a test in the negative, that is identifying the potential absence of data quality. 
@@ -742,6 +803,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueConcept
 bdqffdq:IssueConcept rdf:type owl:Class ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:comment "Issue terms are expressed in a negative sense, they identify data that do not or may not conform to quality needs."@en ;
                      rdfs:label "Issue Concept"@en ;
                      skos:definition "A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting expressed data quality needs."@en ;
@@ -750,6 +812,7 @@ bdqffdq:IssueConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueMethod
 bdqffdq:IssueMethod rdf:type owl:Class ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdfs:subClassOf bdqffdq:DataQualityMethod ,
                                     bdqffdq:IssueConcept ;
                     rdfs:comment "The IssueMethod in bdqffdq is a data quality Solutions level concept describing the relationship between a Specification (technical description of a test) and an Issue (a Criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements)." ;
@@ -760,6 +823,7 @@ bdqffdq:IssueMethod rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/IssuePolicy
 bdqffdq:IssuePolicy rdf:type owl:Class ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdfs:subClassOf bdqffdq:IssueConcept ,
                                     bdqffdq:Policy ;
                     rdfs:comment "The IssuePolicy in bdqffdq is a data quality Needs level concept that describes how some Issue relates to a UseCase. This relationship defines which Issues are supported by a given UseCase." ;
@@ -770,6 +834,7 @@ bdqffdq:IssuePolicy rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
 bdqffdq:Measure rdf:type owl:Class ;
+                dcterms:issued "2024-09-30"^^xsd:date ;
                 rdfs:subClassOf bdqffdq:DataQualityNeed ,
                                 bdqffdq:MeaurementConcept ;
                 rdfs:comment """Contextualized Dimension in the original framework Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord. 
@@ -788,6 +853,7 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}"""@en ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
 bdqffdq:MeasurementAssertion rdf:type owl:Class ;
+                             dcterms:issued "2024-09-30"^^xsd:date ;
                              rdfs:subClassOf bdqffdq:Assertion ,
                                              bdqffdq:MeaurementConcept ;
                              rdfs:comment """The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod following some Specification to assess some data quality Measurement. 
@@ -802,6 +868,7 @@ DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod
 bdqffdq:MeasurementMethod rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subClassOf bdqffdq:DataQualityMethod ,
                                           bdqffdq:MeaurementConcept ;
                           rdfs:comment """The MeasurementMethod in bdqffdq is a data quality Solutions level concept describing the relationship between a Specification (technical description of a test) and a Measurement (a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements).
@@ -814,6 +881,7 @@ MM(me) = {s | s ⊂ S ⋀ me ∈ ME}""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
 bdqffdq:MeasurementPolicy rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subClassOf bdqffdq:MeaurementConcept ,
                                           bdqffdq:Policy ;
                           rdfs:comment """The MeasurementPolicy in bdqffdq is a data quality Needs level concept that describes how some Measurement relates to a UseCase. This relationship defines which measures are supported by a given UseCase.
@@ -826,6 +894,7 @@ MP(u) = {me | me ⊂ ME ⋀ u ∈ U }""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeaurementConcept
 bdqffdq:MeaurementConcept rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:label "Measurement Concept"@en ;
                           skos:definition "A term involved in measurement of data quality with regards to expressed data quality needs."@en ;
                           skos:prefLabel "Measurement Concept"@en .
@@ -833,6 +902,7 @@ bdqffdq:MeaurementConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Mechanism
 bdqffdq:Mechanism rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                   bdqffdq:SolutionsConcept ;
                   rdfs:comment """Mechanisms may produce data quality reports as products.    
@@ -845,6 +915,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ###  https://rs.tdwg.org/bdqffdq/terms/NeedConcept
 bdqffdq:NeedConcept rdf:type owl:Class ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdfs:comment "Category of concepts forming the Needs layer of the fitness for use framework." ;
                     rdfs:label "Need Concept"@en ;
                     skos:definition "A concept that expresses an aspect of a data quality need."@en ;
@@ -853,6 +924,7 @@ bdqffdq:NeedConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Parameter
 bdqffdq:Parameter rdf:type owl:Class ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:subClassOf bdqffdq:SolutionsConcept ;
                   rdfs:comment "A Parameter is a Formal Parameter for which an Argument is an Actual Parameter that replaces it to determine the behavior of a Specification.  An extension to the original fitness for use framework as described in Veiga et al., 2017." ;
                   rdfs:label "Parameter"@en ;
@@ -862,6 +934,7 @@ bdqffdq:Parameter rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Policy
 bdqffdq:Policy rdf:type owl:Class ;
+               dcterms:issued "2024-09-30"^^xsd:date ;
                rdfs:subClassOf bdqffdq:NeedConcept ;
                rdfs:comment "Composition of data quality Needs into UseCases." ;
                rdfs:label "Policy" ;
@@ -871,6 +944,7 @@ bdqffdq:Policy rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ReportConcept
 bdqffdq:ReportConcept rdf:type owl:Class ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdfs:comment "Category of concepts forming the Report layer of the fitness for use framework."@en ;
                       rdfs:label "Report Concept" ;
                       skos:definition "A concept concerning data quality expressed in a data quality report." ;
@@ -879,6 +953,7 @@ bdqffdq:ReportConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResourceType
 bdqffdq:ResourceType rdf:type owl:Class ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:subClassOf bdqffdq:FundamentalConcept ;
                      rdfs:comment "In bdqffdq the concept of ResourceType has instances for SingleRecord or MultiRecord." ;
                      rdfs:label "Resource Type"@en ;
@@ -888,6 +963,7 @@ bdqffdq:ResourceType rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier
 bdqffdq:ResponseQualifier rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:subClassOf bdqffdq:ReportConcept ;
                           rdfs:comment "Intended as an extension point for qualifying information about uncertainty or ambiguity." ;
                           rdfs:label "Response Qualifier" ;
@@ -897,6 +973,7 @@ bdqffdq:ResponseQualifier rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResponseResult
 bdqffdq:ResponseResult rdf:type owl:Class ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:subClassOf bdqffdq:ReportConcept ;
                        rdfs:comment """For Validations, response results may be COMPLIANT, or NOT_COMPLIANT.  For Measures, response result objects may be COMPLETE or NOT_COMPLETE.  For Issues, Response results may be IS_ISSUE, POTENTIAL_ISSUE, or NOT_ISSUE.  See the bdq: vocabulary.  Measures may also use a numeric data property.  Amendments assert a string data property.
 
@@ -908,6 +985,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResponseStatus
 bdqffdq:ResponseStatus rdf:type owl:Class ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:subClassOf bdqffdq:ReportConcept ;
                        rdfs:comment "The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any assertion may have the values INTERNAL_PREREQUISITES_NOT_MET of EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  Thes would be RUN_HAS_RESULT for a Validation, Measure, or Isssue, and, FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the assertion in a ReqponseResult, such as statements of uncertainy or ambiguity may be placed in the ResponseQualifier." ;
                        rdfs:label "Response.status"@en ;
@@ -917,6 +995,7 @@ bdqffdq:ResponseStatus rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept
 bdqffdq:SolutionsConcept rdf:type owl:Class ;
+                         dcterms:issued "2024-09-30"^^xsd:date ;
                          rdfs:comment "Category of concepts forming the Solutions layer of the fitness for use framework.  Solutions are tools that evaluate data against needs and express conclusions in data quality reports."@en ;
                          rdfs:label "Solutions Concept"@en ;
                          skos:definition "A concept that expresses an aspect of a data quality solution." ;
@@ -925,6 +1004,7 @@ bdqffdq:SolutionsConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Specification
 bdqffdq:Specification rdf:type owl:Class ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                       bdqffdq:SolutionsConcept ;
                       rdfs:comment "A Specification is a technical desription of an assertion test.  A Specification is expected to have the following properies:  (1) Expected Response, (2) Authorities and Parameters."@en ;
@@ -935,6 +1015,7 @@ bdqffdq:Specification rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/UseCase
 bdqffdq:UseCase rdf:type owl:Class ;
+                dcterms:issued "2024-09-30"^^xsd:date ;
                 rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                 bdqffdq:NeedConcept ;
                 rdfs:comment "The UseCase concept in bdqffdq describes some data quality control UseCase. The Amendment, Measurement and Validation policies that make up a UseCase define which assertions cover a given UseCase.  An example of a UseCase could be \"Check for internal consistency of dates\", with validation policies for checking consistency between atomic date fields and an Amendment such as \"eventDate filled in from verbatim\".  UseCases in bdqffdq are not the same as UseCases in the software engineering sense, but are similar bdqffdq formal statements derived from analyis of user stories." ;
@@ -945,6 +1026,7 @@ bdqffdq:UseCase rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Validation
 bdqffdq:Validation rdf:type owl:Class ;
+                   dcterms:issued "2024-09-30"^^xsd:date ;
                    rdfs:subClassOf bdqffdq:DataQualityNeed ,
                                    bdqffdq:ValidationConcept ;
                    rdfs:comment """ContextualizedCriterion in the original framework.  Describes the criteria for determining compliance of data to fill some data quality need.  A description of a criterion applied to an information element for some resource type.   Describes an instance of the criterion concept in terms of the associated information elements from some controlled vocabulary (fields actedUpon or consulted), and a resource type of SingleRecord or MultiRecord.  
@@ -961,6 +1043,7 @@ VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }"""@en ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion
 bdqffdq:ValidationAssertion rdf:type owl:Class ;
+                            dcterms:issued "2024-09-30"^^xsd:date ;
                             rdfs:subClassOf bdqffdq:Assertion ,
                                             bdqffdq:ValidationConcept ;
                             rdfs:comment """The ValidationAssertion is a report level concept that describes the results of the execution of of a test that performs a ValidationMethod following some Specification to assess the validity of some data with respect to the Criteria of some Validation. 
@@ -975,6 +1058,7 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationConcept
 bdqffdq:ValidationConcept rdf:type owl:Class ;
+                          dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment "Validation terms are expressed in a positive sense, they identify data that conform to needs."@en ;
                           rdfs:label "Validation Concept"@en ;
                           skos:definition "A term involved in statements about the conformance of data to expressed quality needs."@en ;
@@ -983,6 +1067,7 @@ bdqffdq:ValidationConcept rdf:type owl:Class ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationMethod
 bdqffdq:ValidationMethod rdf:type owl:Class ;
+                         dcterms:issued "2024-09-30"^^xsd:date ;
                          rdfs:subClassOf bdqffdq:DataQualityMethod ,
                                          bdqffdq:ValidationConcept ;
                          rdfs:comment """The ValidationMethod in bdqffdq is a data quality Solutions level concept describing the relationship between a Specification (technical description of a test) and a Validation (a Criterion in the context of resource type (SingleRecord or MultiRecord) and associated information elements).
@@ -995,6 +1080,7 @@ VM(va) = {s | s ⊂ S ⋀ va ∈ VA}""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy
 bdqffdq:ValidationPolicy rdf:type owl:Class ;
+                         dcterms:issued "2024-09-30"^^xsd:date ;
                          rdfs:subClassOf bdqffdq:Policy ,
                                          bdqffdq:ValidationConcept ;
                          rdfs:comment """The ValidationPolicy in bdqffdq is a data quality Needs level concept that describes how some Validation relates to a UseCase. This relationship defines which Validations are needed to identify quality in a given UseCase.
@@ -1012,6 +1098,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }""" ;
 ###  https://rs.tdwg.org/bdqffdq/terms/AMENDED
 bdqffdq:AMENDED rdf:type owl:NamedIndividual ,
                          bdqffdq:ResponseStatus ;
+                dcterms:issued "2024-09-30"^^xsd:date ;
                 owl:differentFrom bdqffdq:NOT_AMENDED ;
                 rdf:value "AMENDED" ;
                 rdfs:comment "AMENDED implies that a change is being proposed to some existing non-empty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property." ;
@@ -1023,6 +1110,7 @@ bdqffdq:AMENDED rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/COMPLETE
 bdqffdq:COMPLETE rdf:type owl:NamedIndividual ,
                           bdqffdq:ResponseResult ;
+                 dcterms:issued "2024-09-30"^^xsd:date ;
                  owl:differentFrom bdqffdq:NOT_COMPLETE ;
                  rdf:value "COMPLETE" ;
                  rdfs:comment "These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT." ;
@@ -1034,6 +1122,7 @@ bdqffdq:COMPLETE rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/COMPLIANT
 bdqffdq:COMPLIANT rdf:type owl:NamedIndividual ,
                            bdqffdq:ResponseResult ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   owl:differentFrom bdqffdq:NOT_COMPLIANT ;
                   rdf:value "COMPLIANT" ;
                   rdfs:label "COMPLIANT" ;
@@ -1044,6 +1133,7 @@ bdqffdq:COMPLIANT rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET
 bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
                                                 bdqffdq:ResponseStatus ;
+                                       dcterms:issued "2024-09-30"^^xsd:date ;
                                        owl:differentFrom bdqffdq:INTERNAL_PREREQUISITES_NOT_MET ;
                                        rdf:value "EXTERNAL_PREREQUISITES_NOT_MET" ;
                                        rdfs:label "EXTERNAL_PREREQUISITES_NOT_MET" ;
@@ -1054,6 +1144,7 @@ bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/FILLED_IN
 bdqffdq:FILLED_IN rdf:type owl:NamedIndividual ,
                            bdqffdq:ResponseStatus ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   owl:differentFrom bdqffdq:NOT_AMENDED ;
                   rdf:value "FILLED_IN" ;
                   rdfs:label "FILLED_IN" ;
@@ -1064,6 +1155,7 @@ bdqffdq:FILLED_IN rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET
 bdqffdq:INTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
                                                 bdqffdq:ResponseStatus ;
+                                       dcterms:issued "2024-09-30"^^xsd:date ;
                                        rdf:value "INTERNAL_PREREQUISITES_NOT_MET" ;
                                        rdfs:label "INTERNAL_PREREQUISITES_NOT_MET" ;
                                        skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the test. If the test is run at a later time on unmodified data, it should produce the same bdqffdq:Response." ;
@@ -1073,6 +1165,7 @@ bdqffdq:INTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE
 bdqffdq:IS_ISSUE rdf:type owl:NamedIndividual ,
                           bdqffdq:ResponseResult ;
+                 dcterms:issued "2024-09-30"^^xsd:date ;
                  owl:differentFrom bdqffdq:NOT_ISSUE ,
                                    bdqffdq:POTENTIAL_ISSUE ;
                  rdf:value "IS_ISSUE" ;
@@ -1085,6 +1178,7 @@ bdqffdq:IS_ISSUE rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/MultiRecord
 bdqffdq:MultiRecord rdf:type owl:NamedIndividual ,
                              bdqffdq:ResourceType ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdfs:comment "A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset." ;
                     rdfs:label "Multi Record"@en ;
                     skos:definition "A set of one or more Single Records." ;
@@ -1094,6 +1188,7 @@ bdqffdq:MultiRecord rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED
 bdqffdq:NOT_AMENDED rdf:type owl:NamedIndividual ,
                              bdqffdq:ResponseStatus ;
+                    dcterms:issued "2024-09-30"^^xsd:date ;
                     rdf:value "NOT_AMENDED" ;
                     rdfs:comment "No assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties." ;
                     rdfs:label "NOT_AMENDED" ;
@@ -1104,6 +1199,7 @@ bdqffdq:NOT_AMENDED rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE
 bdqffdq:NOT_COMPLETE rdf:type owl:NamedIndividual ,
                               bdqffdq:ResponseResult ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdf:value "NOT_COMPLETE" ;
                      rdfs:comment "These can be used to exclude data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT." ;
                      rdfs:label "NOT_COMPLETE" ;
@@ -1114,6 +1210,7 @@ bdqffdq:NOT_COMPLETE rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT
 bdqffdq:NOT_COMPLIANT rdf:type owl:NamedIndividual ,
                                bdqffdq:ResponseResult ;
+                      dcterms:issued "2024-09-30"^^xsd:date ;
                       rdf:value "NOT_COMPLIANT" ;
                       rdfs:label "NOT_COMPLIANT" ;
                       skos:definition "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the criteria for quality in the test specification." ;
@@ -1123,6 +1220,7 @@ bdqffdq:NOT_COMPLIANT rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE
 bdqffdq:NOT_ISSUE rdf:type owl:NamedIndividual ,
                            bdqffdq:ResponseResult ;
+                  dcterms:issued "2024-09-30"^^xsd:date ;
                   owl:differentFrom bdqffdq:POTENTIAL_ISSUE ;
                   rdf:value "NOT_ISSUE" ;
                   rdfs:comment "This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no issue with data quality was found under some criterion for identifying the absence of quality." ;
@@ -1134,6 +1232,7 @@ bdqffdq:NOT_ISSUE rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE
 bdqffdq:POTENTIAL_ISSUE rdf:type owl:NamedIndividual ,
                                  bdqffdq:ResponseResult ;
+                        dcterms:issued "2024-09-30"^^xsd:date ;
                         rdf:value "POTENTIAL_ISSUE" ;
                         rdfs:comment "See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation." ;
                         rdfs:label "POTENTIAL_ISSUE" ;
@@ -1144,6 +1243,7 @@ bdqffdq:POTENTIAL_ISSUE rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT
 bdqffdq:RUN_HAS_RESULT rdf:type owl:NamedIndividual ,
                                 bdqffdq:ResponseStatus ;
+                       dcterms:issued "2024-09-30"^^xsd:date ;
                        rdf:value "RUN_HAS_RESULT" ;
                        rdfs:comment "Applies to bdqffdq:Validations, bdqfdfq:Measures, and bdqffdq:Issues, but not bdqffdq:Amendments.   For Validations and Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For Measures, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object." ;
                        rdfs:label "RUN_HAS_RESULT" ;
@@ -1154,6 +1254,7 @@ bdqffdq:RUN_HAS_RESULT rdf:type owl:NamedIndividual ,
 ###  https://rs.tdwg.org/bdqffdq/terms/SingleRecord
 bdqffdq:SingleRecord rdf:type owl:NamedIndividual ,
                               bdqffdq:ResourceType ;
+                     dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:comment """A record from a dataset.  May be a a database tuple in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is Single in that it has one instance of a core concept from the perspective of information elements assessed for a UseCase.  For example, in a use case where occurences are central, a SingleRecord would represent a single occurrence, but could have multiple identifications and multiple taxa related to it in a graph or data structure.  However, in a UseCase where taxa are central, a SingleRecord would represent a single Taxon entity (and might have multiple occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other Taxon entities).
 
 A SingleRecord, like a MultiRecord, is Encoded data with a defined structure that can be described as dcmitype:Dataset"""@en ;
