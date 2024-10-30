@@ -57,4 +57,4 @@
 "c3346048-0cd3-4efe-9544-89dd8f0482ea","""Default value for bdq:sourceAuthority:""GBIF OccurrenceStatus Vocabulary""""","""GBIF OccurrenceStatus Vocabulary""","fae50773-a832-4e44-87fe-d66a1332c3e7"
 "3e00109a-13d3-416d-9a91-127c99b47473","""Default value for bdq:sourceAuthority:""The Getty Thesaurus of Geographic Names (TGN)""""","""The Getty Thesaurus of Geographic Names (TGN)""","051f6ad7-1a4b-4e6c-8a1d-2af76de24848"
 "c72cfe4a-a500-4266-84be-1faa6673c022","""Default value for dwc:defaultOccurrenceStatus:""present""""","""present""","9c150f88-1fc4-47b7-b826-f6357c104946"
-""bd91e45d-691a-4d7e-9917-7b6231c05c43,"""Default value for bdq:sourceAuthority:""GBIF Backbone Taxonomy""""","""GBIF Backbone Taxonomy""","1193230f-f188-4917-92da-bba3390ed3fa"
+""bd91e45d-691a-4d7e-9917-7b6231c05c43",""Default value for bdq:sourceAuthority:""GBIF Backbone Taxonomy""""","""GBIF Backbone Taxonomy""","1193230f-f188-4917-92da-bba3390ed3fa"
