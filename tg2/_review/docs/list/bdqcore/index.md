@@ -151,8 +151,8 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 | Label (rdfs:label) | A human-readable name for the subject. In present context: A descriptive label for humans to use to identify the test. | AMENDMENT_COORDINATES_FROM_VERBATIM | normative |
 | Preferred Label (skos:prefLabel) | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the test, similar to the Label, but in words. | Amendment Coordinates From Verbatim | non-normative |
 | DateLastUpdated (bdqffdq:hasDateLastUpdated) | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |  |
-| Guids for Arguments (bdqffdq:Argument) | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. |  | normative |
-| Guid for Specification (bdqffdq:Specification) | A specific statement about how to evaluate a data quality need. |  | normative |
+| Guids for Arguments (bdqffdq:Argument) | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 7ecc692d-e65f-4ea5-9d54-04421ec96ab4 | normative |
+| Guid for Specification (bdqffdq:Specification) | A specific statement about how to evaluate a data quality need. | urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04 | normative |
 | SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]} |  |
 | Criterion (bdqffdq:Criterion) | Rule against which data are evaluated for conformance to quality criteria. | NotEmpty | normative |
 | Description (rdfs:comment) | A description of the subject resource. In present context: A brief description of what the test does | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. | non-normative |
@@ -578,6 +578,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.</td>
 		</tr>
@@ -683,6 +687,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -800,6 +808,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
@@ -911,6 +923,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
 		</tr>
@@ -957,6 +973,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>7ecc692d-e65f-4ea5-9d54-04421ec96ab4</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -1022,6 +1042,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
@@ -1064,6 +1088,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>1b66a16a-5e76-4eca-a400-d097ac136ac1</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -1129,6 +1157,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
 		</tr>
@@ -1175,6 +1207,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>82350b56-1855-4b5a-8b44-9040efb0bf05</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -1234,6 +1270,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -1333,6 +1373,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -1446,6 +1490,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.</td>
 		</tr>
@@ -1557,6 +1605,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
@@ -1603,6 +1655,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>ff9e9459-d1a5-43a6-ada9-8be41772b711</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -1668,6 +1724,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
@@ -1710,6 +1770,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>17d785ee-6ac9-4ab4-9806-f4a2b0d8bbf1</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -1773,6 +1837,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -1890,6 +1958,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.</td>
 		</tr>
@@ -2003,6 +2075,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -2120,6 +2196,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:647bf697-e432-4b31-9a69-778396e14a82</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.</td>
 		</tr>
@@ -2229,6 +2309,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -2346,6 +2430,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:defaultGeodeticDatum default = "EPSG:4326"</td>
 		</tr>
@@ -2392,6 +2480,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>7fd3889a-0d1d-4054-8e68-807cfa5410f2</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -2451,6 +2543,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -2564,6 +2660,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdq:NotEmpty or dwc:verbatimDepth is bdq:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.</td>
 		</tr>
@@ -2667,6 +2767,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdq:NotEmpty or dwc:verbatimElevation is bdq:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.</td>
 		</tr>
@@ -2764,6 +2868,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -2881,6 +2989,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>dwc:defaultOccurrenceStatus default = "present"</td>
 		</tr>
@@ -2984,6 +3096,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
 		</tr>
@@ -3026,6 +3142,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>c3346048-0cd3-4efe-9544-89dd8f0482ea</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3089,6 +3209,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -3206,6 +3330,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -3252,6 +3380,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>0127389b-a68d-4393-a84c-aa9c690bd0e7</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3321,6 +3453,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:566faded-60b6-44bf-a335-dc78d5013582</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -3371,6 +3507,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>b1f2699b-3b7e-41a1-9e5c-f670559664ba</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3436,6 +3576,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
@@ -3482,6 +3626,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>e35dd18a-9c69-4aef-9b70-3d36d7eb6bd4</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3547,6 +3695,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}</td>
 		</tr>
@@ -3593,6 +3745,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>ef83a8c4-62f3-4e18-b589-07bc6f178cd7</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3658,6 +3814,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -3704,6 +3864,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a10eb348-7fc5-4b96-88e3-619300cb0079</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3767,6 +3931,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -3884,6 +4052,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</td>
 		</tr>
@@ -3930,6 +4102,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>9c0a82d5-4b24-4160-a000-ee9429bef8f7,2c441806-b56b-4252-9944-e331f9f3fee6</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -3989,6 +4165,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -4094,6 +4274,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:establishmentMeans?</td>
 		</tr>
@@ -4189,6 +4373,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The number of tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED")</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>A count of the number of distinct AMENDMENT tests that have a Response.status="AMENDED" for a given record.</td>
 		</tr>
@@ -4278,6 +4466,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -4387,6 +4579,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; Report the number of tests of output type VALIDATION run against the record that were COMPLIANT (passed)</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measures the number of distinct VALIDATION tests that have a Response.status="COMPLIANT" for a given record.</td>
 		</tr>
@@ -4480,6 +4676,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; REPORT of the number of tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -4577,6 +4777,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>The number of distinct VALIDATION tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.</td>
 		</tr>
@@ -4670,6 +4874,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -4771,6 +4979,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</td>
 		</tr>
@@ -4866,6 +5078,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -4904,6 +5120,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -4965,6 +5185,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -5003,6 +5227,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -5064,6 +5292,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -5102,6 +5334,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -5161,6 +5397,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -5258,6 +5498,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
@@ -5296,6 +5540,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -5355,6 +5603,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -5450,6 +5702,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -5551,6 +5807,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -5646,6 +5906,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
@@ -5684,6 +5948,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -5743,6 +6011,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -5840,6 +6112,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -5935,6 +6211,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
@@ -5973,6 +6253,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -6034,6 +6318,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -6072,6 +6360,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -6131,6 +6423,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -6226,6 +6522,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6327,6 +6627,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -6365,6 +6669,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -6424,6 +6732,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6525,6 +6837,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -6620,6 +6936,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -6713,6 +7033,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6814,6 +7138,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
@@ -6852,6 +7180,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -6911,6 +7243,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7008,6 +7344,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -7101,6 +7441,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7198,6 +7542,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -7291,6 +7639,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7388,6 +7740,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -7483,6 +7839,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -7576,6 +7936,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -7677,6 +8041,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -7772,6 +8140,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
@@ -7810,6 +8182,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -7869,6 +8245,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7966,6 +8346,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -8061,6 +8445,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
@@ -8099,6 +8487,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -8158,6 +8550,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -8255,6 +8651,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
@@ -8350,6 +8750,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -8388,6 +8792,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -8449,6 +8857,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -8487,6 +8899,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -8546,6 +8962,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -8643,6 +9063,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -8681,6 +9105,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -8740,6 +9168,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -8837,6 +9269,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -8875,6 +9311,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -8936,6 +9376,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -8974,6 +9418,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -9035,6 +9483,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -9073,6 +9525,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -9134,6 +9590,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -9172,6 +9632,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -9231,6 +9695,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -9328,6 +9796,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
@@ -9421,6 +9893,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -9518,6 +9994,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -9613,6 +10093,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -9706,6 +10190,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -9807,6 +10295,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -9845,6 +10337,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -9906,6 +10402,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
@@ -9944,6 +10444,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -10005,6 +10509,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -10043,6 +10551,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -10104,6 +10616,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -10142,6 +10658,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -10201,6 +10721,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -10298,6 +10822,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -10391,6 +10919,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -10488,6 +11020,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -10583,6 +11119,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
@@ -10621,6 +11161,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -10680,6 +11224,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -10777,6 +11325,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -10815,6 +11367,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -10874,6 +11430,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -10971,6 +11531,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -11009,6 +11573,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -11068,6 +11636,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -11165,6 +11737,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
@@ -11203,6 +11779,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -11264,6 +11844,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -11302,6 +11886,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -11363,6 +11951,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
@@ -11401,6 +11993,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -11460,6 +12056,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -11557,6 +12157,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
@@ -11650,6 +12254,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -11751,6 +12359,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -11846,6 +12458,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -11884,6 +12500,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -11945,6 +12565,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -11983,6 +12607,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -12044,6 +12672,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -12082,6 +12714,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -12141,6 +12777,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -12238,6 +12878,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
@@ -12276,6 +12920,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -12335,6 +12983,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -12430,6 +13082,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12531,6 +13187,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -12626,6 +13286,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
@@ -12664,6 +13328,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -12723,6 +13391,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -12820,6 +13492,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -12915,6 +13591,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
@@ -12953,6 +13633,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -13014,6 +13698,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -13052,6 +13740,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -13111,6 +13803,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -13206,6 +13902,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13307,6 +14007,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -13345,6 +14049,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -13404,6 +14112,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13505,6 +14217,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -13600,6 +14316,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -13693,6 +14413,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13794,6 +14518,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
@@ -13832,6 +14560,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -13891,6 +14623,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -13988,6 +14724,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -14081,6 +14821,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14178,6 +14922,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT</td>
 		</tr>
@@ -14271,6 +15019,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14368,6 +15120,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT</td>
 		</tr>
@@ -14463,6 +15219,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -14556,6 +15316,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -14657,6 +15421,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -14752,6 +15520,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
@@ -14790,6 +15562,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -14849,6 +15625,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14946,6 +15726,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -15041,6 +15825,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
@@ -15079,6 +15867,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -15138,6 +15930,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -15235,6 +16031,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT</td>
 		</tr>
@@ -15330,6 +16130,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -15368,6 +16172,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -15429,6 +16237,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -15467,6 +16279,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -15526,6 +16342,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -15623,6 +16443,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -15661,6 +16485,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -15720,6 +16548,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -15817,6 +16649,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -15855,6 +16691,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -15916,6 +16756,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -15954,6 +16798,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -16015,6 +16863,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -16053,6 +16905,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -16114,6 +16970,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -16152,6 +17012,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -16211,6 +17075,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -16308,6 +17176,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -16401,6 +17273,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -16498,6 +17374,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -16593,6 +17473,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -16686,6 +17570,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -16787,6 +17675,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -16825,6 +17717,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -16886,6 +17782,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
@@ -16924,6 +17824,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -16985,6 +17889,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -17023,6 +17931,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -17084,6 +17996,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -17122,6 +18038,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -17181,6 +18101,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17278,6 +18202,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -17371,6 +18299,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17468,6 +18400,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -17563,6 +18499,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
@@ -17601,6 +18541,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -17660,6 +18604,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17757,6 +18705,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -17795,6 +18747,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -17854,6 +18810,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17951,6 +18911,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -17989,6 +18953,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -18048,6 +19016,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -18145,6 +19117,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
@@ -18183,6 +19159,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -18244,6 +19224,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -18282,6 +19266,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -18343,6 +19331,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
@@ -18381,6 +19373,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -18440,6 +19436,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -18537,6 +19537,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -18630,6 +19634,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -18739,6 +19747,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?</td>
 		</tr>
@@ -18842,6 +19854,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -18888,6 +19904,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -18953,6 +19973,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -19007,6 +20031,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -19072,6 +20100,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -19118,6 +20150,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -19177,6 +20213,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -19290,6 +20330,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
@@ -19336,6 +20380,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -19395,6 +20443,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -19494,6 +20546,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -19611,6 +20667,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dcterms:license?</td>
 		</tr>
@@ -19714,6 +20774,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
@@ -19760,6 +20824,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -19819,6 +20887,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -19924,6 +20996,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:basisOfRecord?</td>
 		</tr>
@@ -20023,6 +21099,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
@@ -20065,6 +21145,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -20130,6 +21214,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -20172,6 +21260,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -20231,6 +21323,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -20334,6 +21430,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -20447,6 +21547,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -20501,6 +21605,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -20564,6 +21672,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -20677,6 +21789,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:country?</td>
 		</tr>
@@ -20784,6 +21900,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:countryCode?</td>
 		</tr>
@@ -20889,6 +22009,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -21006,6 +22130,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
@@ -21060,6 +22188,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -21119,6 +22251,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -21222,6 +22358,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -21335,6 +22475,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:day an integer between 1 and 31 inclusive?</td>
 		</tr>
@@ -21442,6 +22586,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?</td>
 		</tr>
@@ -21539,6 +22687,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -21640,6 +22792,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?</td>
 		</tr>
@@ -21739,6 +22895,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:decimalLongitude?</td>
 		</tr>
@@ -21836,6 +22996,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -21949,6 +23113,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?</td>
 		</tr>
@@ -22060,6 +23228,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
@@ -22106,6 +23278,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -22165,6 +23341,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -22272,6 +23452,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -22385,6 +23569,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
@@ -22439,6 +23627,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -22498,6 +23690,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -22601,6 +23797,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -22718,6 +23918,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -22764,6 +23968,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -22829,6 +24037,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -22875,6 +24087,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -22934,6 +24150,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -23035,6 +24255,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -23081,6 +24305,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -23140,6 +24368,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -23241,6 +24473,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -23287,6 +24523,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -23352,6 +24592,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -23398,6 +24642,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -23463,6 +24711,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -23509,6 +24761,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -23574,6 +24830,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -23620,6 +24880,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -23679,6 +24943,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -23778,6 +25046,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -23883,6 +25155,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:namePublishedInYear?</td>
 		</tr>
@@ -23978,6 +25254,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:occurrenceID?</td>
 		</tr>
@@ -24071,6 +25351,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -24170,6 +25454,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -24287,6 +25575,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -24333,6 +25625,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -24398,6 +25694,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
@@ -24444,6 +25744,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -24509,6 +25813,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -24555,6 +25863,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -24620,6 +25932,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -24670,6 +25986,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -24729,6 +26049,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -24830,6 +26154,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:scientificNameAuthorship?</td>
 		</tr>
@@ -24923,6 +26251,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -25028,6 +26360,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:scientificNameID?</td>
 		</tr>
@@ -25131,6 +26467,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
@@ -25177,6 +26517,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -25240,6 +26584,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -25353,6 +26701,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -25399,6 +26751,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -25458,6 +26814,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -25563,6 +26923,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -25609,6 +26973,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -25668,6 +27036,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -25773,6 +27145,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
@@ -25819,6 +27195,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -25884,6 +27264,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -25930,6 +27314,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -25995,6 +27383,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
 		</tr>
@@ -26045,6 +27437,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -26104,6 +27500,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -26207,6 +27607,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>ExpectedResponse</td>
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Guid for Specification</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
