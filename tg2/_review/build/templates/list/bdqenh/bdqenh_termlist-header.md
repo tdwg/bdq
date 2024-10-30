@@ -48,7 +48,7 @@ This is the term-list document for the bdqenh: vocabulary.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and application of the bdqffdq: Framework. 
+This document is for those needing a technical understanding of the BDQ Core Tests and application of the Framework Ontology. 
 
 ### 1.3 Data Quality Enhancement
 

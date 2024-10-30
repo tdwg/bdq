@@ -165,7 +165,7 @@ Each BDQ Core Test is defined to operate on a SingleRecord or a MultiRecord.  Th
 
 The concept of 'Tests' in the context of BDQ Core include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure). 
 
-Each bdqcore: Test is an instance of a subclass of bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation) composed with an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod) composed with an instance of bdqffdq:Specification.  When run by an implementation, each BDQ Core Test can produce a data quality report consisting of bdqffdq:Assertions.  See the diagrams and further information in the [bdqffdq: Framework Guide](../guide/bdqffdq/index.md).
+Each bdqcore: Test is an instance of a subclass of bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation) composed with an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod) composed with an instance of bdqffdq:Specification.  When run by an implementation, each BDQ Core Test can produce a data quality report consisting of bdqffdq:Assertions.  See the diagrams and further information in the [Framework Ontology Guide](../guide/bdqffdq/index.md).
 
 #### 2.2.1 Validation Tests (normative)
 
@@ -253,7 +253,7 @@ See the [bdqcore mathematical formulation](../bdqffdq/index.md#5-fitness-for-use
 
 ### 2.4 Example RDF (non-normative) 
 
-A more complete description of BDQ Core Tests can be found in the RDF representation of this vocabulary.  Following the bdqffdq: Framework, a Test is composed of an instance of a subclass of a bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation), an instance of a bdqffdq:ActedUpon information element, optionally an instance of a bdqffdq:Consulted information element, an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod), and an instance of a bdqffdq:Specification.  Most of the information associated with a bdqffdq:term is expressed in other vocabularies, in particular bdqffdq:.  This structure and dependence on other vocabularies can be seen in the example below of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe).
+A more complete description of BDQ Core Tests can be found in the RDF representation of this vocabulary.  Following the Framework Ontology (bdqffdq:), a Test is composed of an instance of a subclass of a bdqffdq:DataQualityNeed (e.g. bdqffdq:Validation), an instance of a bdqffdq:ActedUpon information element, optionally an instance of a bdqffdq:Consulted information element, an instance of a subclass of bdqffdq:Method (e.g. bdqffdq:ValidationMethod), and an instance of a bdqffdq:Specification.  Most of the information associated with a bdqffdq:term is expressed in other vocabularies, in particular bdqffdq:.  This structure and dependence on other vocabularies can be seen in the example below of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe).
 
 Example: Formal description of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe)-
 

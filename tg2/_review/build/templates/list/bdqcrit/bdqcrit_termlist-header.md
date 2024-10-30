@@ -48,7 +48,7 @@ This is the term-list document for the bdqcrit: vocabulary.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the bdqffdq: Framework vocabulary.
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
 
 ### 1.3 Data Quality Criteria
 

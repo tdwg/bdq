@@ -80,7 +80,7 @@ documents additional axioms.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the bdqffdq: Framework vocabulary.
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
 
 ### 1.3 Documents about the bdqffdq: ontology
 

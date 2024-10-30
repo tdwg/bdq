@@ -148,11 +148,11 @@ Data does not have quality in the abstract, it only has quality with respect to 
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
-The bdqffdq: Framework provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the bdqffdq: Framework.
+The Framework Ontology (bdqffdq:) provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the Framework Ontology.
 
 <!--- Lee's go at changing the TODOs below into paragraphs with edits by Paul. --->
 
-The bdqffdq: Framework provides a formal statement of Quality Control but the application of Qualtity Control 'in the wild' is more nuanced, and is more complex than simple filtering under Quality Assurance.
+The Framework Ontology provides a formal statement of Quality Control but the application of Qualtity Control 'in the wild' is more nuanced, and is more complex than simple filtering under Quality Assurance.
 The context of Quality Control may affect how Tests and their results are applied to data, information systems, and processes.
   Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent far less efficient issue detection and correction. Issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost or held on paper records remote from data entry, and errors may be propagated.  Validation Tests may be though of as framing constraints to impose on data entry interfaces, such as validation of data against a controlled vocabulary being imposed by the presentation of the controlled vocabulary as a pick list in a user interface, or may be implemented as checks on entered data values with immediate feedback for users. 
 
@@ -162,17 +162,9 @@ Complicating the analysis of data quality reports on databases of record is that
 
 Correcting issues subesquent to data capture introduces further complexities in that any amendment to existing values requires careful human evaluation and a forking of data records to maintain original data, and an audit trail. Data cleaning often requires far more time than data analysis.
 
-<!---End Lee's effort and Paul's edits --->
+When performing Quality Control when preparing data for aggregation, or when reports are provided by aggregators to upstream data providers, analysis of reports may reveal simple errors introduced in mapping data onto Darwin Core terms, such as field transpositions in mapping in addition to underlying problems in the data.  Validation, particularly at this step may reveal cases where the a database of record holds more authoritative information than an upstream resource relied upon by the aggregator (or a source authority for a test), and is correct despite NOT_COMPLIANT Validation results.  Careful analysis of data quality control results is needed, again with a need to identify focused areas for data cleanup projects, as they involve significant work effort.  
 
-<!--- TODO: Make the remaining following thoughts into complete sentences/paragraphs to provide Text on context and QC, --->
-
-- mapping for aggregation, reports from aggregators, key is to to identify focused areas for data cleanup projects, takes work effort,  
-
-- analysis of reports may reveal simple mapping errors, e.g. field transpositions in mapping,
-
-- improvement on data in stream during downstream analysis.  May mean acceptance of amendments into data stream, shouldn't be done blindly.
-
-<!--- END TODO: block  --->
+Quality Control to improve data during downstream analysis of aggregated data has other chalenges.  The volume of aggregated data may be large enough to make both examination of the proposal of Amendments and reporting of proposed changes to upstream databases of record infeasable.  Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from Amendments into a data stream for downstream analysis.  This should be done with some care in checking that the proposed amendments are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from amendments clearly identifiable as manipulations of the data stream.  
 
 ## 4 Using the BDQ Core Quick Reference Guide (non-normative)
 

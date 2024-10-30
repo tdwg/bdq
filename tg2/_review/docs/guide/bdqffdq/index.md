@@ -72,11 +72,11 @@ This document describes the use of a set of terms used to describe 'data quality
 
 ### 1.1 Purpose
 
-This is a guide to the use of the bdqffdq: Framework vocabulary.
+This is a guide to the use of the Framework Ontology (bdqffdq: vocabulary).
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the bdqffdq: Framework vocabulary.
+This document is for those needing a technical understanding of the Framework Ontology.
 
 ### 1.3 Documents about the bdqffdq: ontology
 
