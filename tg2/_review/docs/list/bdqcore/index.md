@@ -3033,6 +3033,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
+			<td>Guids for Arguments</td>
+			<td>c72cfe4a-a500-4266-84be-1faa6673c022</td>
+		</tr>
+		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
 		</tr>
@@ -3261,6 +3265,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>0a7b3629-ecd9-47d2-b672-44ef47e03f7b</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -6778,6 +6786,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
+			<td>Guids for Arguments</td>
+			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
+		</tr>
+		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
@@ -7980,6 +7992,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -10234,6 +10250,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -14158,6 +14178,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
+			<td>Guids for Arguments</td>
+			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
+		</tr>
+		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
@@ -15360,6 +15384,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -17614,6 +17642,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -21726,6 +21758,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
+			<td>Guids for Arguments</td>
+			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
+		</tr>
+		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
 		</tr>
@@ -23048,6 +23084,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
@@ -25510,6 +25550,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>

@@ -131,7 +131,7 @@ The following namespace abbreviations are used in this document:
 | ------------ | ---------- | ------- | --------- |
 | Name (rdf:value) | Idiomatic property used for structured values. | https://rs.tdwg.org/bdqffdq/terms/COMPLETE | normative |
 | Type (rdf:type) | The subject is an instance of a class. | https://rs.tdwg.org/bdqffdq/terms/ResponseResult | normative |
-| Range (rdfs:range) | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n3f9059f22f0f43cc863125c3941f0975b1 | normative |
+| Range (rdfs:range) | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n31b9110f8dc04a608e0388e8eec79287b1 | normative |
 | DifferentFrom (owl:differentFrom) | The property that determines that two given individuals are different. | https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE | normative |
 | Label (rdfs:label) | A human-readable name for the subject. | COMPLETE | normative |
 
