@@ -36,9 +36,7 @@ Draft Standard for Submission
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
 - [2 BDQ Core Vocabularies](#2-bdq-core-vocabularies)
-- [2.1 Vocabularies Central to BDQ Core](#21-vocabularies-central-to-bdq-core)
-- [2.1.1 The Quick Reference Guide to the Tests](#211-the-quick-reference-guide-to-the-tests)
-- [2.1.2 Vocabularies](#212-vocabularies)
+- [2.1 Vocabularies Foundational to BDQ Core](#21-vocabularies-foundational-to-bdq-core)
 - [2.2 Vocabularies Supporting BDQ Core](#22-vocabularies-supporting-bdq-core)
 - [3 Namespace Abbreviations](#3-namespace-abbreviations)
 
@@ -57,7 +55,8 @@ This document is for those needing a general contextual, or a technical understa
 
 ### 1.3 Associated Documents
 
-The [landing page for BDQ Core](../../../index.md) provides an index to all documents in the standard.
+- [Landing page for BDQ Core](../../../index.md) provides an index to all documents in the standard.
+- [BDQ Core Tests and Assertions Quick Reference Guide](../terms/bdqcore/index.md) provides an easy to read guide to the Tests (a descriptive document, not the full vocabulary definition document found in the BDQ Core Tests And Assertions List of Terms).
 
 ### 1.4 Status of the content of this document
 
@@ -65,14 +64,7 @@ This document is non-normative.
 
 ## 2 BDQ Core Vocabularies
 
-### 2.1 Vocabularies Central to BDQ Core
-
-### 2.1.1 The Quick Reference Guide to the Tests
-
-- [BDQ Core Tests and Assertions Quick Reference Guide](../terms/bdqcore/index.md) -  An easy to read guide to the Tests (a descriptive document, not the full vocabulary definition document found in the BDQ Core Tests And Assertions List of Terms).
-
-### 2.1.2 Vocabularies
-
+### 2.1 Vocabularies Foundational to BDQ Core
 - [BDQ Core Tests and Assertions Vocabulary](../bdqcore/index.md) - this vocabulary is likely to be the focus of interest for both implementors and consumers of the outputs of implementations of tests and assertions.  This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
 - [Fitness For Use Framework Ontology](../bdqffdq/index.md) - this vocabulary, in the form of an ontology, provides the semantics of terms that describe data quality and fitness for use in the namespace `https://rs.tdwg.org/bdqffdq` (abbreviated `bdqffdq:`), these are the terms used to describe the tests in bdqcore:.
 
