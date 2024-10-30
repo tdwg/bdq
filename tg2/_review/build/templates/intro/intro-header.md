@@ -231,10 +231,10 @@ There were many people who have made notable contributions at various times duri
 | IRI         | Internationalized Resource Identifier                 |
 | ISO         | International Standards Organization                  |
 | TDWG        | Biodiversity Information Standards                    |
-| TG1         | Biodiversity Data Quality Task Group Task Group 1: Framework on Data Quality |
-| TG2         | Biodiversity Data Quality Task Group Task Group 2: Data Quality Tests and Assertions |
-| TG3         | Biodiversity Data Quality Task Group Task Group 3: Data Quality Use Cases     |
-| TG4         | Biodiversity Data Quality Task Group Task Group 4: Best Practices for Development of Vocabularies of Value |
+| TG1         | Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality |
+| TG2         | Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions |
+| TG3         | Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases     |
+| TG4         | Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Value |
 
 ## 6 Glossary
 
