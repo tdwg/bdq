@@ -47,7 +47,7 @@ Draft Standard for Submission
 - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
 - [1.7 Namespace abbreviations](#17-namespace-abbreviations)
 - [1.8 Types of Tests](#18-types-of-tests)
-- [1.9 Test Descriptors](#19-test-descriptors)
+- [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
 - [2 Normative Guidance](#2-normative-guidance)
 - [3 Term Indices](#3-term-indices)
 - [3.1 Index By Term Name](#31-index-by-term-name)
@@ -138,9 +138,9 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 **Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a) that returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT".
 
-### 1.9 Test Descriptors 
+### 1.9 Key to Vocabulary Terms
 
-The Test Descriptors are terms that are necessary to comprehensively describe each Test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the Test should be coded.
+These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the Test should be coded.
 
 | Label (Term) | Definition | Example | Normative | 
 | ------------ | ---------- | ------- | --------- |
@@ -178,11 +178,13 @@ The Test Descriptors are terms that are necessary to comprehensively describe ea
 | Developed As Github Issue (skos:historyNote) | A note about the past state/use/meaning of a concept. In present context: A link to the github issue that provides a history (changes and comments) of the development of the test. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |
 
 
-<!--- TODO: Confirm that metadata for 1.8 has these values ---> 
+<!--- TODO: Confirm that metadata for 1.9 has these values ---> 
+<!---
 In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
 Resource Type, Specification, Information Elements ActedUpon, Information
 Elements Consulted, and Parameters are normative.  The values of
 Description, Examples, Use Cases, and Notes are non-normative.
+--->
 
 <!--- @Tasilee text for comparison with generated table.  Some of these will need to be incorporated into definitions in the generated table.
 
@@ -216,7 +218,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **Type**. The type of the Test, one of Validation, Issue, Amendment or Mmeasure, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
 
-**Resource Type**. The Test either operates on a Single Record or Multiple Records <!--- (TODO bdq...used here or keep it simple English) --->...this generally relates to this list.
+**Resource Type**. The Test either operates on a Single Record or Multiple Records 
 
 **Dimension**. The Data Quality Dimension focus of the Test: One of "Completeness", "Conformance", "Consistency", "Likeliness", "Reliability" or "Resolution"
 

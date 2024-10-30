@@ -124,17 +124,19 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 **Measure Tests** either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a) that returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT".
 
-### 1.9 Test Descriptors 
+### 1.9 Key to Vocabulary Terms
 
-The Test Descriptors are terms that are necessary to comprehensively describe each Test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the Test should be coded.
+These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the Test should be coded.
 
 {term_key}
 
-<!--- TODO: Confirm that metadata for 1.8 has these values ---> 
+<!--- TODO: Confirm that metadata for 1.9 has these values ---> 
+<!---
 In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
 Resource Type, Specification, Information Elements ActedUpon, Information
 Elements Consulted, and Parameters are normative.  The values of
 Description, Examples, Use Cases, and Notes are non-normative.
+--->
 
 <!--- @Tasilee text for comparison with generated table.  Some of these will need to be incorporated into definitions in the generated table.
 
@@ -168,7 +170,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **Type**. The type of the Test, one of Validation, Issue, Amendment or Mmeasure, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
 
-**Resource Type**. The Test either operates on a Single Record or Multiple Records <!--- (TODO bdq...used here or keep it simple English) --->...this generally relates to this list.
+**Resource Type**. The Test either operates on a Single Record or Multiple Records 
 
 **Dimension**. The Data Quality Dimension focus of the Test: One of "Completeness", "Conformance", "Consistency", "Likeliness", "Reliability" or "Resolution"
 
