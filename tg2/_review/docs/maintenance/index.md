@@ -71,7 +71,7 @@ The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) record
   - The Test GUID
   - TestType: Either Validation, Issue, Measure or Amendment
   - Test Label: The last two components of the full Test Label that enables sorting by the Information Element focus of the Test
-  - The Data Dimension: What dimension of the data does the Test focus on, either NAME, SPACE, TIME, or OTHER
+  - The Data Dimension: What dimension of the data does the Test focus on, either NAME, SPACE, TIME, or OTHER (for definitions - see the Glossary in the BDQ Core Introduction)
   - The record unique identifier
   - The within Test unique identifier (see below on special values)
 
