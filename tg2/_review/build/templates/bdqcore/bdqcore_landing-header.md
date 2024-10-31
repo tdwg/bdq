@@ -119,9 +119,9 @@ The following namespace abbreviations are used in this document:
 
 The Authors acknowledge the centrality of the work of:
 
-- The Biodiversity Information standards (TDWG) Framework on Data Qualilty Task Group (https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
-- The Biodiversity Information standards (TDWG) Data Quality Use Case Library Task Group (https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
-- The Biodiversity Information standards (TDWG) Annotations Interest Group (https://github.com/tdwg/annotations) as to how the Test results may be reported against records. 
+- The TDWG Data Quality Interest Group - Task Group 1 [Framework on Data Qualilty] (https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
+- The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases] (https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
+- The TDWG [Annotations Interest Group] (https://github.com/tdwg/annotations) as to how the Test results may be reported against records. 
   
 The terminology of BDQ Core is based primarily on the Fittness for use Framework (Viega 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them.  See the [list of vocabularies](../vocabularies/index.md).
 
