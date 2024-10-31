@@ -161,7 +161,7 @@ BDQ Core draws a distinction between Quality Control and Quality Assurance.  Qua
 
 ### 3.2 When are Tests Run (normative)
 
-The bdqcore tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of records from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data.  They MAY be run in workflows for analysis of data for research purposes.
+The bdqcore tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of record from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data.  They MAY be run in workflows for analysis of data for research purposes.
 
 ### 3.3 Results of Test Executions (normative)
 
@@ -271,6 +271,7 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 | ---- | ---- | ---- |
 | COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
 | CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
+| Database of record | An information system which holds an authoritative or master record of some data.  This is in distinction from aggregated data sets, derived research data set, data sets for portals and other holders of non authoritative copies of the data. | BDQ Core |
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
 | Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Core Tests.  The Fitness for Use Framework is derived from (Viega 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |

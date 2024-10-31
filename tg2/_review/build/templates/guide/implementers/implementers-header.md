@@ -386,7 +386,7 @@ The Test descriptions in BDQ Core are designed to be able to be used anywhere in
 
 - at the point of initial collection or observation of organisms,
 - to support data transcription,
-- in loading data into databases of records from field or transcription sources,
+- in loading data into databases of record from field or transcription sources,
 - in preparing data from databases of record for aggregation,
 - during data aggregation,
 - individually on single Darwin Core records,
