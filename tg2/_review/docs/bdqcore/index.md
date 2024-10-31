@@ -143,9 +143,9 @@ The following namespace abbreviations are used in this document:
 
 The Authors acknowledge the centrality of the work of:
 
-- The Biodiversity Information standards (TDWG) Framework on Data Qualilty Task Group (https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
-- The Biodiversity Information standards (TDWG) Data Quality Use Case Library Task Group (https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
-- The Biodiversity Information standards (TDWG) Annotations Interest Group (https://github.com/tdwg/annotations) as to how the Test results may be reported against records. 
+- The TDWG Data Quality Interest Group - Task Group 1 [Framework on Data Qualilty](https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
+- The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
+- The TDWG [Annotations Interest Group](https://github.com/tdwg/annotations) as to how the Test results may be reported against records. 
   
 The terminology of BDQ Core is based primarily on the Fittness for use Framework (Viega 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them.  See the [list of vocabularies](../vocabularies/index.md).
 
@@ -159,7 +159,7 @@ While the most important BDQ Core Tests apply to a SingleRecord (bdqffdq:SingeRe
 
 The scope of each BDQ Core Test is largely provided by the bdqffdq:Specification. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the Specification are included in the "Information Elements". The Specification also includes references to external (to the Darwin Core standard: Wieczorek et al. 2012) authorities that are required to implement the Test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
 
-Each BDQ Core Test is defined to operate on a SingleRecord or a MultiRecord.  The framework allows for MultiRecord Tests able to identify outliers within a data set, or other Tests that look across data values in a MultiRecord to evaluate data quality.  No BDQ Core Tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord.  The only MultiRecord Tests included in BDQ Core accumulate the outputs of other Tests.
+Each BDQ Core Test is defined to operate on a SingleRecord or a MultiRecord.  The Framework allows for MultiRecord Tests able to identify outliers within a data set, or other Tests that look across data values in a MultiRecord to evaluate data quality.  No BDQ Core Tests have been defined to use data in other records within a data set to evaluate the quality of data in a SingleRecord.  The only MultiRecord Tests included in BDQ Core accumulate the outputs of other Tests.
 
 ### 2.2 Types of Tests (non-normative)
 
@@ -171,7 +171,7 @@ Each bdqcore: Test is an instance of a subclass of bdqffdq:DataQualityNeed (e.g.
 
 Each Validation Test is composed of an instance of bdqffdq:Validation (which expresses a data quality need in the abstract) with an instance of bdqffdq:ValidationMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
 
-Validation Tests in BDQ Core evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890) will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". 
+Validation Tests in BDQ Core evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890) will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record under test contains a value in dwc:taxonRank, rather being phrased in the negative (i.e. VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem.  Data are found to be fit for some use if all Validations comprising that Use have a Response.result="COMPLIANT". 
 
 The response of a Validation Test (an instance of a bdqffdq:ValidationAssertion) MUST take one of three forms. 
 

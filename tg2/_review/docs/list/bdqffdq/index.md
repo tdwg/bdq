@@ -70,7 +70,7 @@ This document includes terms that form the bdqffdq: vocabulary.  The bdqffdq: vo
 The bdqffdq: terms include classes, object properties, datatype properties, and named individuals.  
 This document only lists the terms, it does not provide additional axioms or normative guidance needed for their use.
 
-The bdqffdq framework is represented as an owl ontology.  The basic terms for that framework are listed in this document.  
+The bdqffdq framework is represented as an owl ontology (the Framework Ontology).  The basic terms for that framework are listed in this document.  
 The TDWG Standards Documentation Specification requires that the human readable documentation for ontologies be presented 
 as a term list with additional axioms included in a vocabulary extension.  A [vocabulary extension](../../extension/bdqffdq/index.md) 
 documents additional axioms.  
