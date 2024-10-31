@@ -610,7 +610,7 @@ The development of each Test, with documentation of why particular decisions wer
 | Measure | A label to indicate a Test of Type Measure that performs a measurement according to some data quality dimension. | See bdqffdq:Measure |
 | NAME | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
 | NEEDS WORK | A label that indicates that an issue (Test) requires more work before finalising. | Supports a workflow of contributors identifying tests needing work with this tag, and review of issues with this tag in task group meetings.  |
-| OTHER | A label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. |  |
+| [OTHER](#OTHER) | A label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. |  |
 | Parameterized | A label for a Test that a bdq:Parameter may be set prior to a Parameterized Test being run. |  |
 | SPACE | A label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. |  |
 | Supplementary | Conclusion that a Test is regarded as not CORE (cf. the tag CORE, and BDQ Core) because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely to return a high percentage of either bdq:NOT_COMPLIANT or bdq:POTENTIAL_ISSUE records. A Supplementary test MAY be implemented in a local implementation if a suitable use case exists. | A Supplementary test may be made CORE at a later time.  |
@@ -639,7 +639,7 @@ Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
 Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.
 
 ![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.png "OTHER by InformationElements")
-Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon
+Diagram of the '<a name=OTHER>OTHER</a>'- oriented tests and InformationElementsActedUpon
 
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
