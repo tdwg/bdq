@@ -62,6 +62,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## 2 A Guide to the Tests
 
+BDQ Core defines a set of tests to assess the quality of biodiversity data.  Implementations of these tests may produce data quality reports.  The format of such data quality reports may vary, but they should contain specific information about outputs from each test.  This guide describes the tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the quick reference guide that gives the details of each BDQ Core test. 
+
 ### 2.1 Test Types (non-normative)
 
 There are four types of tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (profiles) that assess the fitness for use of data for a specific use.
