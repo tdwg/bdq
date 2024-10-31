@@ -608,18 +608,18 @@ The development of each Test, with documentation of why particular decisions wer
 | ISO/DCMI STANDARD | A reference to either an ISO (International Organization for Standardization) Standard or a DCMI (Dublin Core Metadata Initiative) Standard |  |
 | Issue | A label to indicate a test of type ISSUE, where potential problems are flagged and may need examination by the user to determine if data have quality for their use. | see bdqffdq:Issue |
 | Measure | A label to indicate a Test of Type Measure that performs a measurement according to some data quality dimension. | See bdqffdq:Measure |
-| NAME | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
+|[NAME](#NAME) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
 | NEEDS WORK | A label that indicates that an issue (Test) requires more work before finalising. | Supports a workflow of contributors identifying tests needing work with this tag, and review of issues with this tag in task group meetings.  |
 | [OTHER](#OTHER) | A label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. |  |
 | Parameterized | A label for a Test that a bdq:Parameter may be set prior to a Parameterized Test being run. |  |
-| SPACE | A label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. |  |
+| [SPACE](#SPACE) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. |  |
 | Supplementary | Conclusion that a Test is regarded as not CORE (cf. the tag CORE, and BDQ Core) because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely to return a high percentage of either bdq:NOT_COMPLIANT or bdq:POTENTIAL_ISSUE records. A Supplementary test MAY be implemented in a local implementation if a suitable use case exists. | A Supplementary test may be made CORE at a later time.  |
 | Test | Tests descriptions created by TG2, either CORE, Immature/Incomplete, Supplementary, or DO NOT IMPLEMENT. | Supports workflows for exporting tests from issues to process the markdown into csv files for review.  |
 | TG1 | Issues pertinent to Task Group 1 ([Framework on Data Quality](https://tdwg.github.io/bdq/tg1/site)) of the Biodiversity Information Standards (TDWG) Data Quality Interest Group. |  |
 | TG2 | Issues including Tests, developed by, or pertinent to Task Group 2 ([Data Quality Tests and Assertions](https://github.com/tdwg/bdq/blob/master/tg2/README.md)) of the Biodiversity Information Standards (TDWG) Data Quality Interest Group. |  |
 | TG3 | Issues pertinent to Task Group 3 ([Data Quality Use Cases](https://github.com/tdwg/bdq/blob/master/tg3/README.md)) of the Biodiversity Information Standards (TDWG) Data Quality Interest Group. |  |
 | TG4 | Issues pertinent to Task Group 4 ([Best Practices for Development of Vocabularies of Value](https://github.com/tdwg/bdq/blob/master/tg4/README.md)) of the Biodiversity Information Standards (TDWG) Data Quality Interest Group. |  |
-| TIME | A label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. |  |
+| [TIME](#TIME) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. |  |
 | Validation | A label to indicate a Test of Type Validation that describes a run of a Test for validity against a set of criteria. | See bdqffdq:Validation |
 | VOCABULARY | A label to indicate that a Test requires a controlled Vocabulary |  |
 
@@ -629,14 +629,17 @@ Supplementary tests have been exported to a CSV list of tests and have RDF repre
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the implementation, in the validation data, or a problem in the Test Specification), discuss as a group, make changes as needed, and repeat.
 
+Diagram of the '<a name="NAME">NAME</a>'-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.png "NAME by InformationElements")
-Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon
 
+
+Diagram of the '<a name="SPACE">SPACE</a>'-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.png "SPACE by InformationElements")
-Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
 
+
+Diagram of the '<a name="TIME">TIME</a>'-oriented tests and InformationElementsActedUpon.
 ![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.png "TIME by InformationElements")
-Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.
+
 
 Diagram of the '<a name="OTHER">OTHER</a>'- oriented tests and InformationElementsActedUpon
 ![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.png "OTHER by InformationElements")
