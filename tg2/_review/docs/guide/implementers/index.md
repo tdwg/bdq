@@ -429,11 +429,15 @@ A Parameterized Test will behave differently on the same data when using differe
 
 Implementers SHOULD only present non-default Parameter values to a Test implementation if needed for local data quality needs. When a test is executed with non-default Arguments specified for Parameters, consumers of Assertions and data quality reports resulting from such MUST be able to tell that non-default Arguments were used, and what the non-default values were.
 
-When a non-default Argument is used, a Response.comment SHOULD include the non-default value.
+When a Test is Parameterized, and a value other than the default value is used for some Parameter, reports SHOULD identify the Tests to you using at least the Label (rdfs:Label) for the Test class, in combination with the Parameter, and the value of the argument that replaced the Parameter in this specific case.  
+
+For example 'VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642'.
+
+When a non-default Argument is used, a new instance of an Implementation linked to a new instance of a Specification linked to an instance of an Argument asserting the non-default value SHOULD be used.   When Assertions are represented in RDF, an Assertion produced by a test run with a non-default Argument value MUST NOT be linked to the instance of the Specification with the Argument with the default value, but MUST be linked to novel instances of Implementation, Specification, and Argument, such that a query on the Assertion can identify what Argument value was used for the Parameter to produce the Assertion.  This provides the non-default value for software consumers.
+
+When a non-default Argument is used, a Response.comment SHOULD include the Parameter and the non-default value.  This provides the non-default value for human consumers.
 
 Implementers MUST NOT produce Test implementations identified by the same identifiers that only implement non-default Parameter values.  An implementation of a Test MUST support the Test execution with the default Parameter values, and MAY optionally support other Parameter values.  Provided Parameters MUST NOT change the behavior of the Test to depart from the bdqffdq:Specification.expectedResponse.  Parameters MUST only change the behavior of the Test as specified in the bdqffdq:Specification.expectedResponse.
-
-<!--- Text to Merge with above 6.1 When a non-default Argument is used, an instance of an  **TODO** Specify how to assert the alternate Argument value in RDF. --->
 
 ### 6.2 Execution Process is Agnostic (non-normative)
 
@@ -441,7 +445,7 @@ The Test descriptions in BDQ Core are designed to be able to be used anywhere in
 
 - at the point of initial collection or observation of organisms,
 - to support data transcription,
-- in loading data into databases of records from field or transcription sources,
+- in loading data into databases of record from field or transcription sources,
 - in preparing data from databases of record for aggregation,
 - during data aggregation,
 - individually on single Darwin Core records,
