@@ -50,7 +50,7 @@ The bdqffdq: vocabulary is a specification of a framework for describing data qu
 
 The Framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
 
-This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga 2016 and Veiga et al. 2017, with a few changes for increased clarity.
+This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
 ### 1.1 Purpose
 
@@ -70,7 +70,7 @@ The `bdqffdq:` vocabulary is an ontology, documentation for it can be found in:
 - A [term list](../list/bdqffdq/index.md) the list of vocabulary terms.
 - Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../extension/bdqffdq/index.md) 
 - The bdqffdq Framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl)
-- Veiga et al. 2017
+- Veiga (2016) and Veiga et al. (2017)
 
 In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
 
