@@ -638,8 +638,9 @@ Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.png "TIME by InformationElements")
 Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.
 
+Diagram of the '<a name="OTHER">OTHER</a>'- oriented tests and InformationElementsActedUpon
 ![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.png "OTHER by InformationElements")
-Diagram of the '<a name=OTHER>OTHER</a>'- oriented tests and InformationElementsActedUpon
+
 
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
