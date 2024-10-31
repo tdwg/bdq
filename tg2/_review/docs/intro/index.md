@@ -258,7 +258,6 @@ There were many people who have made notable contributions at various times duri
 |-------------|----------------------------------------------------------------------------------------------------------------|
 | ALA         | Atlas of Living Australia                             | 
 | BDQ         | TDWG Biodiversity Data Quality                        |
-| BDQIG       | Biodiversity Data Quality Interest Group              |
 | BISON       | Biodiversity Information Serving Our Nation           |
 | CRIA        | Centro de Referência em Informação Ambiental          |
 | EPSG        | European Petroleum Survey Group                       |
@@ -307,7 +306,7 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 | ---- | ---- | ---- |
 | COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
 | CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
-| Database of record | An information system which holds an authoritative or master record of some data.  This is in distinction from aggregated data sets, derived research data set, data sets for portals and other holders of non authoritative copies of the data. | BDQ Core |
+| Database of record | An information system which holds an authoritative or master record of some data.  Records in a database of record are held to be correct over different values for the same records that might be found in other data sets.  This is in distinction from aggregated data sets, derived research data set, data sets for portals and other holders of non authoritative copies of the data. | BDQ Core |
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
 | Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Core Tests.  The Fitness for Use Framework is derived from (Viega 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |
