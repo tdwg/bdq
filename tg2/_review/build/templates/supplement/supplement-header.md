@@ -687,7 +687,7 @@ Only a subset of all [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Cor
 
 **"References"** [non-normative]: A list of references that will assist in a thorough understanding of the Test, for example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
 
-**Example Implementations (Mechanisms)** [non-normative]: A link to one or more agencies that have an implementation of the Test, for example "https://github.com/FilteredPush/event_date_qc".
+**Example Implementations (Mechanisms)** [non-normative]: A link to one or more entities that have an implementation of the Test, for example "https://github.com/FilteredPush/event_date_qc".
 
 **Link to Specification Source Code** [non-normative]: A link to code that implements the Test, for example "https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169".
 

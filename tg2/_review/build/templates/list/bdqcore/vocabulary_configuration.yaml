@@ -11,11 +11,12 @@
 #  append: Local meaning to append to the end of the definition, optional
 #  force: If true, show this entry in the key even if the csvheader is not present in the term-version file, optional
 
-# TODO: These terms are in the CSV but not represented in the RDF
+# These terms are in the CSV but not represented in the RDF
 #"issueNumber"
-#"IE Class",
 #"Criterion Label"
 #"IssueState"
+# TODO: These terms are in the CSV but not represented in the RDF
+#"IE Class",
 #"IssueLabels",
 
 iri:
@@ -93,13 +94,15 @@ Examples:
   normative: 'false'
   term: skos:example
 "Example Implementations (Mechanisms)":
+  append: Name or links to one or more entities that have an implementation of the Test.
   label: Example Implementations
   normative: 'false'
-  term: ????
+  term: skos:note
 "Link to Specification Source Code":
+  append: A link to code that implements the Test.
   label: Example Implementation Source Code
   normative: 'false'
-  term: ????
+  term: skos:note
 "InformationElement:ActedUpon":
   label: InformationElements ActedUpon
   normative: 'true'
