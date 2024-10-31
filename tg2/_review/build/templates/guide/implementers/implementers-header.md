@@ -760,7 +760,7 @@ The following column header for the data are used for the validation data files.
 | GUID | The machine readable identifier for the Test under validation, e.g., 69b2efdc-6269-45a4-aecb-4cb99c2ae134 |
 | Test Type | The type of the Test, either Validation, Issue, Amendment or Measure |
 | Label | The second two components of the full english Test label, for example COUNTRYCODE_STANDARD |
-| Data Dimension | Does the Test apply to data that is essentially NAME, SPACE, TIME or OTHER? |
+| Data Dimension | Does the Test apply to data that is essentially [NAME](../../intro/index.md#6-glossary), [SPACE](../../intro/index.md#6-glossary), [TIME](../../intro/index.md#6-glossary) or [OTHER](../../intro/index.md#6-glossary)? |
 | dataID | A local to bdq:ValidationData unique integer to indentify each Validation Data record | 
 | LineForTest | A local to bdq:ValidationData integer identifier for Test records within one Test. For maintaining the sort order within a test, and with two special cases: "88" when Input.data contains a NULL character and "99" when Input.data contains non-printers characters. | 
 | Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, e.g., for [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c), dwc:country="México", dwc:countryCode="MX" |
