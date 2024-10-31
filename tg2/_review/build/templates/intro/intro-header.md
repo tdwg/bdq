@@ -222,7 +222,6 @@ There were many people who have made notable contributions at various times duri
 |-------------|----------------------------------------------------------------------------------------------------------------|
 | ALA         | Atlas of Living Australia                             | 
 | BDQ         | TDWG Biodiversity Data Quality                        |
-| BDQIG       | Biodiversity Data Quality Interest Group              |
 | BISON       | Biodiversity Information Serving Our Nation           |
 | CRIA        | Centro de Referência em Informação Ambiental          |
 | EPSG        | European Petroleum Survey Group                       |
