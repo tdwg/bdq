@@ -127,11 +127,21 @@ Amendment Tests **propose changes** to data.  It is up to the consumers of data 
 
 ### 2.4 Test Parameters (normative) 
 
-Some Tests are parameterized. When a Test is Parameterized, and a value other than the default value is used for some Parameter, reports SHOULD identify the Tests to you using at least the Label (rdfs:Label) for the Test class, e.g. [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92) in combination with the Parameter (e.g. bdq:maximumValidDepthInMeters) and the value of the argument that replaced the Parameter in this specific case (e.g. 1642).
+Some Tests are parameterized.  When a Test is Parameterized, and a value other than the default value is used for some Parameter, reports SHOULD identify the Tests to you using at least the Label (rdfs:Label) for the Test class, in combination with the Parameter and the value of the argument that replaced the Parameter in this specific case.
 
-    VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642 
+Values of parameters other than the defaults SHOULD also be present in the Response.comment.
 
-So a value of dwc:minimumDepthInMeters of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
+More normative guidance can be found in the [implementer's guide](../implemeters/index.md#61-Parameters-and-Changing-the-Behavior-of-a-Test-normative).
+
+### 2.4.1 Test Parameters Example (non-normative) 
+
+For example, a test with a non-default parameter value is used, this should be represented with at least the Label (rdfs:Label) for the Test class, e.g. [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92) in combination with the Parameter (e.g. bdq:maximumValidDepthInMeters) and the value of the argument that replaced the Parameter in this specific case (e.g. 1642), thus: 
+
+	VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642
+
+This should be accomanied by a Response.comment that includes text expresing somethig similar to "Non-default bdq:maximumValidDepthInMeters=1642".
+
+So, a value of dwc:minimumDepthInMeters of 2000m would be NOT_COMPLIANT in this case; while with the default value for that parameter it would be COMPLIANT.
 
 ## 3 Context for Quality, Uses and Purposes (non-normative)
 
@@ -139,13 +149,13 @@ Data does not have quality in the abstract, it only has quality with respect to 
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
-The Framework Ontology (bdqffdq:) provides a formal means for filtering records for Quality Assurance (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the Framework Ontology.
+The Fittness for use Framework (Viega 2016, Viega et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#5-Fitness-For-Use-Framework-Summary-of-Mathematical-Formalization-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE".  The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (for Quality Assurance) and reporting (for Quality Control) under the Framework Ontology (bdqffdq:).
 
-<!--- Lee's go at changing the TODOs below into paragraphs with edits by Paul. --->
+#5-Fitness-For-Use-Framework-Summary-of-Mathematical-Formalization-normative
 
-The Framework Ontology provides a formal statement of Quality Control but the application of Qualtity Control 'in the wild' is more nuanced, and is more complex than simple filtering under Quality Assurance.
-The context of Quality Control may affect how Tests and their results are applied to data, information systems, and processes.
-  Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent far less efficient issue detection and correction. Issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost or held on paper records remote from data entry, and errors may be propagated.  Validation Tests may be though of as framing constraints to impose on data entry interfaces, such as validation of data against a controlled vocabulary being imposed by the presentation of the controlled vocabulary as a pick list in a user interface, or may be implemented as checks on entered data values with immediate feedback for users. 
+The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#5-Fitness-For-Use-Framework-Summary-of-Mathematical-Formalization-normative) but the application of Qualtity Control 'in the wild' is more nuanced, and is more complex than simple filtering under Quality Assurance.  The context of Quality Control may affect how Tests and their results are applied to data, information systems, and processes.
+
+Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent far less efficient issue detection and correction. Issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost or held on paper records remote from data entry, and errors may be propagated.  Validation Tests may be though of as framing constraints to impose on data entry interfaces, such as validation of data against a controlled vocabulary being imposed by the presentation of the controlled vocabulary as a pick list in a user interface, or may be implemented as checks on entered data values with immediate feedback for users. 
 
 When data quality reports result from analysis of data in databases of record, numerous validation failures are likely, particularly in historical data where data values may be poorly know, or data may have passed through multiple life cycles of collection management systems.  In a data base of record, the focus of quality control processes is very likely on identifing tractable targeted data cleanup projects.  Data cleanup projects can involve multiple staff with different skills and are likely to last for long periods of time.  Datacleanup projects are expensive, and data quality reports driven by Tests organized by Use Cases can be a management tool for identifying and prioritizing suitable and tractable projects for data cleanup. 
 
@@ -161,7 +171,7 @@ Quality Control to improve data during downstream analysis of aggregated data ha
 
 The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) is a companion to this Guide and lists the tests by a subset of Test Descriptors. This subset is intended to provide a quick summary of the nature of each of the Tests. Some Test Descriptors can be used to filter the Tests down to those that may be applicable for an application.  An index is provided for each Test by example UseCase.  Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord tests (at this time only Measures that evaluate the output of SingleRecord Validations across a data set) are included.  
 
-The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a description of individual Tests.  Data Quality Reports may vary in how they present this information, including displaying test results individually, aggregating counts of results for each test run over all records in a data set, and separating results into pre- and post-amendment phases.  In the latter case, results may be shown for all Validation and Measure Tests run in a pre-amendment phase, then proposals for changes from all Amendment Tests run in an amendment phase, and then results from the same Validation and Measure Tests run in a post-amendement phase as if all proposed changes from the Amendment Tests were evaluated and accepted.  It is thus important to identify both the Test for which results are being reported, and the context for the report.  The Quick Reference Guide describes what each Test does independent of this context.
+While the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a description each individual Test, data Quality Reports may vary in how they present results from the eexecution of tests, including displaying test results individually, aggregating counts of results for each test run over all records in a data set, and separating results into pre- and post-amendment phases.  In the latter case, results may be shown for all Validation and Measure Tests run in a pre-amendment phase, then proposals for changes from all Amendment Tests run in an amendment phase, and then results from the same Validation and Measure Tests run in a post-amendement phase as if all proposed changes from the Amendment Tests were evaluated and accepted.  It is thus important to identify both the Test for which results are being reported, and the context for the report.  The Quick Reference Guide describes what each Test does independent of this context.
 
 For each Test, the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) lists ways to identify the Test (**Label:** the brief human readable means for identifying a Test; **skos:prefLabel:** A human readable label spelled out in words; **Versioned IRI:** the means for software to identify the Test).  For each Test, the guide identifies whether the Test operates on SingleRecords or a MultiRecord (a data set).  A brief description follows of what the Test is intended to do, with a more detailed description for implementors (consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behaviour of the Tests, default values for any bdq:sourceAuthority consulted by the Test or other parameters).  
 
@@ -173,4 +183,4 @@ The definitions of the terms used for the tests can be found at [Terms in bdqcor
 
 ## 5 Time and TimeZones (non-normative)
 
-Time is not considered in any of the BDQ Core Tests.  There are Use Cases where time zone data is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced.  New Tests are required if ignorance of time would make such data unfit for purpose. 
+Time is not considered in any of the BDQ Core Tests.  There are Use Cases where time zone data is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced.  New Tests are required if ignorance of time would make such data unfit for purpose.  For further information, see Section [4.2 Time](../../supplement/index.md#42-Time) in the supplement.
