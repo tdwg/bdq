@@ -67,7 +67,7 @@ The bdqcore: vocabulary includes:
 - This document, a term-list for the vocabulary, containing the vocabulary terms and their metadata.
 - A [landing page](../bdqcore/index.md) document with normative guidance on the use of the bdqcore vocabulary.
 
-In addition, A users guide to the use of the BDQ Core Tests is provided in the [BDQ Core User's Guide](../guide/users/index.md) and a guide to implemetation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
+In addition, A users guide to the use of the BDQ Core Tests is provided in the [BDQ Core User's Guide](../guide/users/index.md) and a guide to implementation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
 
 ### 1.4 Term List Distributions
 
@@ -77,7 +77,7 @@ In addition, A users guide to the use of the BDQ Core Tests is provided in the [
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.xml | An rdf representation of the Tests in an RDF/XML serialization | 
 | Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.ttl | An rdf representation of the Tests in a Turtle serialization | 
 | JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore.json | An rdf representation of the Tests in a json-ld serialization | 
-| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV  filelisting the Tests | 
+| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/vocabulary/bdqcore_terms.csv | CSV file listing the Tests | 
 
 ### 1.5 Status of the Content of this Document
 
@@ -168,7 +168,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **Criterion Label**. A combination of the Dimension (bdqdim:) value and the bdqcrit: value, for example "Conformance: standard"
 
-**Type**. The type of the Test, one of Validation, Issue, Amendment or Mmeasure, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
+**Type**. The type of the Test, one of Validation, Issue, Amendment or Measure, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
 
 **Resource Type**. The Test either operates on a Single Record or Multiple Records 
 
@@ -186,7 +186,7 @@ Description, Examples, Use Cases, and Notes are non-normative.
 
 **UseCases**. An example of one or more Use Cases where this Test would apply. Note that one Test will likely have many Use Cases, and one Use Case will likely have many applicable Tests.
 
-**skos:historyNote**. A link (URL) to the github issue that provides a history (changes and comments) of the development of the Test, for example https://github.com/tdwg/bdq/issues/36.
+**skos:historyNote**. A link (URL) to the GitHub issue that provides a history (changes and comments) of the development of the Test, for example https://github.com/tdwg/bdq/issues/36.
 
 **bdqffdq:AmendmentMethod**. For AMENDMENTs: A URN to the AmendmentMethodLabel in for form of "urn:uuid:GUID", for example "urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a"
 
