@@ -317,10 +317,6 @@ for term in termLists:
                            text += '\t\t\t<td>{}</td>\n'.format(column)
                         text += '\t\t\t<td>{}</td>\n'.format(row[column])
                         text += '\t\t</tr>\n'
-            text += '\t\t<tr>\n'
-            text += '\t\t\t<td>skos:historyNote</td>\n'
-            text += '\t\t\t<td>' + str(row['historyNoteUrl']) + '</td>\n'
-            text += '\t\t</tr>\n'
 
             testType = row['Type']
 
