@@ -645,7 +645,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -776,7 +776,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -895,7 +895,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1022,7 +1022,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1145,7 +1145,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1272,7 +1272,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1383,7 +1383,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1506,7 +1506,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1625,7 +1625,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1752,7 +1752,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1875,7 +1875,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2002,7 +2002,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2129,7 +2129,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2256,7 +2256,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2383,7 +2383,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2506,7 +2506,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2633,7 +2633,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2752,7 +2752,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2867,7 +2867,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2982,7 +2982,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3101,7 +3101,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3224,7 +3224,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3347,7 +3347,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3474,7 +3474,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3605,7 +3605,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3740,7 +3740,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3867,7 +3867,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3994,7 +3994,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4121,7 +4121,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4228,7 +4228,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4359,7 +4359,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4474,7 +4474,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4581,7 +4581,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4668,7 +4668,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4771,7 +4771,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4862,7 +4862,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4953,7 +4953,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5044,7 +5044,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5139,7 +5139,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5230,7 +5230,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5329,7 +5329,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5428,7 +5428,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5527,7 +5527,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5618,7 +5618,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5717,7 +5717,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5808,7 +5808,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5903,7 +5903,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5994,7 +5994,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6093,7 +6093,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6184,7 +6184,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6275,7 +6275,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6374,7 +6374,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6473,7 +6473,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6564,7 +6564,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6659,7 +6659,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6758,7 +6758,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6857,7 +6857,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6948,7 +6948,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7039,7 +7039,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7134,7 +7134,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7233,7 +7233,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7324,7 +7324,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7415,7 +7415,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7506,7 +7506,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7597,7 +7597,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7688,7 +7688,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7779,7 +7779,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7870,7 +7870,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7969,7 +7969,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8060,7 +8060,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8159,7 +8159,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8250,7 +8250,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8341,7 +8341,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8440,7 +8440,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8531,7 +8531,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8622,7 +8622,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8721,7 +8721,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8820,7 +8820,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8911,7 +8911,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9010,7 +9010,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9101,7 +9101,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9200,7 +9200,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9299,7 +9299,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9398,7 +9398,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9497,7 +9497,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9588,7 +9588,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9679,7 +9679,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9770,7 +9770,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9861,7 +9861,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9952,7 +9952,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10051,7 +10051,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10150,7 +10150,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10249,7 +10249,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10348,7 +10348,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10447,7 +10447,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10538,7 +10538,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10629,7 +10629,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10720,7 +10720,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10811,7 +10811,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10910,7 +10910,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11001,7 +11001,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11100,7 +11100,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11191,7 +11191,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11290,7 +11290,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11381,7 +11381,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11480,7 +11480,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11579,7 +11579,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11678,7 +11678,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11769,7 +11769,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11860,7 +11860,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11955,7 +11955,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12046,7 +12046,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12145,7 +12145,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12244,7 +12244,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12343,7 +12343,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12434,7 +12434,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12533,7 +12533,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12624,7 +12624,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12719,7 +12719,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12810,7 +12810,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12909,7 +12909,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13000,7 +13000,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13091,7 +13091,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13190,7 +13190,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13289,7 +13289,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13380,7 +13380,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13475,7 +13475,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13574,7 +13574,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13673,7 +13673,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13764,7 +13764,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13855,7 +13855,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13950,7 +13950,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14049,7 +14049,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14140,7 +14140,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14231,7 +14231,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14322,7 +14322,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14413,7 +14413,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14504,7 +14504,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14595,7 +14595,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14686,7 +14686,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14785,7 +14785,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14876,7 +14876,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14975,7 +14975,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15066,7 +15066,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15157,7 +15157,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15256,7 +15256,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15347,7 +15347,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15438,7 +15438,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15537,7 +15537,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15636,7 +15636,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15727,7 +15727,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15826,7 +15826,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15917,7 +15917,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16016,7 +16016,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16115,7 +16115,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16214,7 +16214,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16313,7 +16313,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16404,7 +16404,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16495,7 +16495,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16586,7 +16586,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16677,7 +16677,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16768,7 +16768,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16867,7 +16867,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16966,7 +16966,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17065,7 +17065,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17164,7 +17164,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17263,7 +17263,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17354,7 +17354,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17445,7 +17445,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17536,7 +17536,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17627,7 +17627,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17726,7 +17726,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17817,7 +17817,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17916,7 +17916,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18007,7 +18007,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18106,7 +18106,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18197,7 +18197,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18296,7 +18296,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18395,7 +18395,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18494,7 +18494,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18585,7 +18585,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18676,7 +18676,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18795,7 +18795,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18906,7 +18906,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19033,7 +19033,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19168,7 +19168,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19295,7 +19295,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19410,7 +19410,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19541,7 +19541,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19652,7 +19652,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19779,7 +19779,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19890,7 +19890,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20017,7 +20017,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20132,7 +20132,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20239,7 +20239,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20362,7 +20362,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20485,7 +20485,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20600,7 +20600,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20719,7 +20719,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20854,7 +20854,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20981,7 +20981,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21104,7 +21104,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21223,7 +21223,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21342,7 +21342,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21481,7 +21481,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21596,7 +21596,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21719,7 +21719,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21838,7 +21838,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21949,7 +21949,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22060,7 +22060,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22171,7 +22171,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22278,7 +22278,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22405,7 +22405,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22528,7 +22528,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22655,7 +22655,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22774,7 +22774,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22893,7 +22893,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23028,7 +23028,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23143,7 +23143,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23266,7 +23266,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23393,7 +23393,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23520,7 +23520,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23627,7 +23627,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23754,7 +23754,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23861,7 +23861,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23988,7 +23988,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24115,7 +24115,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24242,7 +24242,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24369,7 +24369,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24480,7 +24480,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24595,7 +24595,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24702,7 +24702,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24809,7 +24809,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24916,7 +24916,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25047,7 +25047,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25174,7 +25174,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25301,7 +25301,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25428,7 +25428,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25559,7 +25559,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25670,7 +25670,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25777,7 +25777,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25892,7 +25892,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26003,7 +26003,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26130,7 +26130,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26253,7 +26253,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26380,7 +26380,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26491,7 +26491,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26618,7 +26618,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26729,7 +26729,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26856,7 +26856,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26983,7 +26983,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -27114,7 +27114,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -27229,7 +27229,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -27352,7 +27352,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-[🠱](#3-Term-Indices)
+<a href='#3-Term-Indices'>[🠱]</a>
 
 
 ## Acronyms

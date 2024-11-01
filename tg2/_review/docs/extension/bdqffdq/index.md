@@ -133,7 +133,7 @@ The following namespace abbreviations are used in this document:
 | ------------ | --------- | ---------- | ------- |
 | Name (rdf:value) | normative | Idiomatic property used for structured values. | [https://rs.tdwg.org/ bdqffdq/terms/ COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) |
 | Type (rdf:type) | normative | The subject is an instance of a class. | [https://rs.tdwg.org/ bdqffdq/terms/ ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult) |
-| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n72c19bcc62f94e52ade9dd8073cac623b1 |
+| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n290555c196304d61aa78fa4df4a806dcb1 |
 | DifferentFrom (owl:differentFrom) | normative | The property that determines that two given individuals are different. | [https://rs.tdwg.org/ bdqffdq/terms/ NOT_COMPLETE](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE |
 

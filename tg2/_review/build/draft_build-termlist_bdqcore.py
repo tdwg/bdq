@@ -354,7 +354,7 @@ for term in termLists:
             text += '\t</tbody>\n'
             text += '</table>\n'
             text += '<br>\n'
-            text += "[🠱](#3-Term-Indices)"
+            text += "<a href='#3-Term-Indices'>[🠱]</a>"
             text += '\n'
         text += '\n'
     term_table = text
