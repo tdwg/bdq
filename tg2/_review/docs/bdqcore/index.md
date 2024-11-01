@@ -364,7 +364,7 @@ BDQ Core MultiRecord (bdqffdq:MultiRecord) Tests operate on a dataset as a whole
 
 Where a Test is parameterized, a parameter (e.g. bdq:sourceAuthority) is specified in the text of the hasExpectedResponse data type property of the instance of the bdqffdq:Specification for the Test.  Such a bdqffdq:Specification MUST also have a bdqffdq:hasArgument object property linking it to an instance of a bdqffdq:Argument, which MUST have a bdqffdq:hasArgumentValue data type property carrying the default value for the parameter, and this bdqffdq:Argument MUST have a bdqffdq:hasParameter object property linking it to a bdqffdq:Parameter.  The bdqffdq:Parameter SHOULD be a class instance in the bdq: namespace (e.g. bdq:sourceAuthority).  
 
-The instance of the bdqffdq:Specification SHOULD have a bdqffdq:hasAuthoritiesDefaults data type property containing the parameters, default values, and references to resources, including API enpoints that would provide access to values in authority.   
+The instance of the bdqffdq:Specification SHOULD have a bdqffdq:hasAuthoritiesDefaults data type property containing the parameters, default values, and references to resources, including API endpoints that would provide access to values in authority.   
 
 These elements MUST be understood in concert.
 

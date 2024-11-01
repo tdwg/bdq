@@ -53,8 +53,8 @@ Draft Standard for Submission
 - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control,-data-quality-assurance-normative)
 - [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
 - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
-- [4 Contributions and Acknowledgements](#4-contributions-and-acknowledgements)
-- [4.1 Acknowledgements](#41-acknowledgements)
+- [4 Contributions and Acknowledgments](#4-contributions-and-acknowledgments)
+- [4.1 Acknowledgments](#41-acknowledgments)
 - [4.1.1 Funding and Support for Meetings](#411-funding-and-support-for-meetings)
 - [4.2 Contributions](#42-contributions)
 - [4.2.1 Authors](#421-authors)
@@ -73,7 +73,7 @@ Biodiversity Data Quality (BDQ) Core, hereafter referred to as 'BDQ Core', consi
 
 Not part of BDQ Core, but dependent on it, is an exemplar implementation of the tests, written in Java&#174;, the behavior of which has been validated against the uses the previously mentioned validation data set.
 
-BDQ Core covers a specification of tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record depends on the use to which it is applied: a record that is unsuitable to be used in one application may be suitable for another application (Belbin et al 2013).  Data does not have quality in the abstract, it only has quality with respect to some use, within BDQ Core, bdqffdq:UseCases provide a formal representation of uses to which data may be put.  The set of Tests and UseCases defined in BDQ Core are a starting point, not a limitation.  The BDQ Core tests may be composed differently for different uses, and additional tests are expected. 
+BDQ Core covers a specification of tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record depends on the use to which it is applied: a record that is unsuitable to be used in one application may be suitable for another application (Belbin et al. 2013).  Data does not have quality in the abstract, it only has quality with respect to some use, within BDQ Core, bdqffdq:UseCases provide a formal representation of uses to which data may be put.  The set of Tests and UseCases defined in BDQ Core are a starting point, not a limitation.  The BDQ Core tests may be composed differently for different uses, and additional tests are expected. 
 
 The BDQ tests support the determination of whether data resources will be fit for use for some particular purpose from the perspectives of the data quality dimensions `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. The tests themselves do not assert data quality, rather, sets of tests can be defined to support the assessment or assurance of data quality for a particular purpose by analyzing their responses to the input data in question against predefined expectations.  This standard also specifies a structure to capture Profiles of tests for particular cases of fitness for use, and identifies a set of Profiles and uses they apply to for the included tests.  This standard does not specify execution order or other aspects of frameworks within which tests may be run.  Users are free to add new tests and compose tests differently for different uses.
 
@@ -89,7 +89,7 @@ This document is a general introduction to BDQ Core standard designed for anyone
 
 ### 1.3 Associated Documents
 
-Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").  Those intereseted in composing new tests, or seeking to represent test results as linked open data should consult the [Framework Ontology guide](../guide/bdqffdq/index.md).
+Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").  Those interested in composing new tests, or seeking to represent test results as linked open data should consult the [Framework Ontology guide](../guide/bdqffdq/index.md).
 
 ### 1.4. Status of the Content of This Document
 
@@ -183,7 +183,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java implementations of the BDQ Core tests which pass against the validation data.  See [9 Existing Test Implementations](../guide/implementers/index.md/#9-Existing-Test-Implementations-non-normative) in the implementer's guide for details.  
 
-Additional code is available to help support implmentation of tests and the use of bdqcore, dwc, and bdqffdq terms in rdf.  See the discussion in [section 8.6 Existing Sofware tools](#86-Existing-Sofware-tools-non-normative) of the implementer's guide.
+Additional code is available to help support implementation of tests and the use of bdqcore, dwc, and bdqffdq terms in rdf.  See the discussion in [section 8.6 Existing Software tools](#86-Existing-Sofware-tools-non-normative) of the BDQ Core Implementer's Guide.
 
 <!--- TODO: note partial implementations in iDigBio, ALA, OBIS, GBIF, and R packages --->
 
@@ -207,13 +207,13 @@ The results of the execution of implementations of the bdqcore: tests MAY be pre
 
 The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests within annotations.  The bdqffdq: vocabularies in particular are intended to support the framing of assertions from tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores.  See the section on [Annotations](../guide/implementers/index.md#72-Annotations-normative) in the implementer's guide for more guidance.
 
-## 4 Contributions and Acknowledgements
+## 4 Contributions and Acknowledgments
 
-### 4.1 Acknowledgements
+### 4.1 Acknowledgments
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at Biodiversity Informatuion Standards (TDWG) annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also gratefull for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at Biodiversity Information Standards (TDWG) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also grateful for all those who responded to our email questions.
 
-We'd also gratefully aknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
+We'd also gratefully acknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
 
 #### 4.1.1 Funding and Support for Meetings
 
@@ -223,7 +223,7 @@ The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP
 
 ### 4.2 Contributions
 
-Many people have contributed valuable commments through the development of the BDQ Core standard.  
+Many people have contributed valuable comments through the development of the BDQ Core standard.  
 
 #### 4.2.1 Authors 
 
@@ -239,18 +239,18 @@ We recognize four people as authors of the standard, having contributed consiste
 There were many people who have made notable contributions at various times during the development of BDQ Core.
  
 - **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Convener of TDWG Data Quality Task Group 4 (Best Practices for Development of Vocabularies of Value); test descriptions; vocabulary development.
-- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors; migrated test descriptors into markdown tables in github issues.
+- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors; migrated test descriptors into markdown tables in GitHub issues.
 - **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to test evaluation; explanatory workflow diagrams; editing BDQ Core documents.
 - **António Mauro Saraiva (Universidade de São Paulo)**: Co-convenor of the TDWG Data Quality Interest Group; development of the Framework for Data Quality (TDWG Data Quality Task Group 1); facilitated test development workshop.
 - **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Framework on Data Quality as his dissertation (Veiga 2016), Convener of the TDWG Data Quality Task Group 1 (Framework for Data Quality).
-- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of Framework on Data Quality; developer of kurator-ffdq Java class representation of the Framework.
-- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions; vocabulary definitions and early test development.
-- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions; clarification of GBIF vocabulary and API resources for the BDQ Core Tsts.
-- **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions; GBIF Representative to the Data Quality Interest Group in early years.
-- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the ontology of the Data Quality Framework; guided intital development of the ontology representation of the Framework.
+- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology representation of Framework on Data Quality; developer of kurator-ffdq Java class representation of the Framework.
+- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Initial contribitions to data quality discussions; vocabulary definitions and early test development.
+- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions; clarification of GBIF vocabulary and API resources for the BDQ Core Tests.
+- **Dmitry Schigel (Global Biodiversity Information Facility)**: Initial contributions to data quality discussions and vocabulary definitions; GBIF Representative to the Data Quality Interest Group in early years.
+- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the ontology of the Data Quality Framework; guided initial development of the ontology representation of the Framework.
 - **Miles Nicholls (Atlas of Living Australia)**: Convener of TDWG Data Quality Task Group 3 (Data Quality Use Cases); Use Case analysis.
 - **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in TDWG Data Quality Task Group 3 (Data Quality Use Cases).
-- **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
+- **Abigail Benson (U.S. Geological Survey)**: Initial contributions to data quality discussions and vocabulary definitions.
 
 ## 5 Acronyms
 
@@ -282,7 +282,7 @@ Glossary of Term-Actions - i.e. the last two components of the Title (the focus 
 | Label | Definition | Comment |
 | ---- | ---- | ---- |
 | ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | This action is used in Tests and in bdq:Response.comments. bdq:Response.status value for this case is bdq:AMENDED. For example, the Test [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7). |
-| CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the centre of the dwc:country, allowing for a spatial buffer. | For example, the Test [ISSUE_COORDINATES_CENTEROFCOUNTRY](https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e). |
+| CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the center of the dwc:country, allowing for a spatial buffer. | For example, the Test [ISSUE_COORDINATES_CENTEROFCOUNTRY](https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e). |
 | COMPLETE | Testing if the bdqffdq:InformationElement dwc:scientificNameId forms a valid and complete identifier. | Testing for bdqdim:Completeness, for example, the Test [VALIDATION_SCIENTIFICNAMEID_COMPLETE](https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8). |
 | CONSISTENT | Identifies consistency among values between bdqffdq:InformationElements. | Testing for bdqdim:Consistency. For example, the Test [VALIDATION_CLASSIFICATION_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f). |
 | COORDINATESTERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries. | Use bdq:AMENDED as the bdq:Response.status, report bdq:COORDINATESTERRESTRIALMARINE in a bdq:Response.qualifier or in a bdq:Response.comment. See the Test [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380). |
@@ -294,11 +294,11 @@ Glossary of Term-Actions - i.e. the last two components of the Title (the focus 
 | NOTEMPTY | An bdqffdq:InformationElement contains a non-empty value | For example, the Test [VALIDATION_EVENTDATE_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985). |
 | PREREQUISITESNOTMET | A Test of type bdqffdq:Measure that counts the number of Tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (bdq:INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET). | See the Test [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d). |
 | PROPOSED | A test of type bdqffdq:Measure that counts the number of bdqffdq:Amendments where an action to modify a value in some way through a change or addition is proposed. | See the Test [MEASURE_AMENDMENTS_PROPOSED](https://rs.tdwg.org/bdqcore/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b). |
-| STANDARD | A bdqffdq:Valiudation Test where a value in a bdqffdq:InformationElement matches a bdq:STANDARD value in a bdq:sourceAuthority. | Use in bdq:Response.qualifier or bdq:Response.comment. For example, the Test [VALIDATION_TAXONRANK_STANDARD](https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e). |
+| STANDARD | A bdqffdq:Validation Test where a value in a bdqffdq:InformationElement matches a bdq:STANDARD value in a bdq:sourceAuthority. | Use in bdq:Response.qualifier or bdq:Response.comment. For example, the Test [VALIDATION_TAXONRANK_STANDARD](https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e). |
 | STANDARDIZED | A bdqffdq:Amendment where a bdq:STANDARD value for a bdqffdq:InformationElement is proposed. | Use bdq:AMENDED as the bdq:Response.status, report bdq:STANDARDIZED in a bdq:Response.qualifier or in a bdq:Response.comment. For example see Test [AMENDMENT_TAXONRANK_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb). |
-| TRANSPOSED | A bdqffdq:Amendment where the sign and/or value of one or more bdqffdq:InformationElements were prposed to be swapped. | Use bdq:AMENDED as the bdq:Response.status, report bdq:TRANSPOSED in a bdq:Response.qualifier or in a bdq:Response.comment. See the Test [AMENDMENT_COORDINATES_TRANSPOSED](https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082). |
+| TRANSPOSED | A bdqffdq:Amendment where the sign and/or value of one or more bdqffdq:InformationElements were proposed to be swapped. | Use bdq:AMENDED as the bdq:Response.status, report bdq:TRANSPOSED in a bdq:Response.qualifier or in a bdq:Response.comment. See the Test [AMENDMENT_COORDINATES_TRANSPOSED](https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082). |
 | UNAMBIGUOUS | A combination of bdqffdq:InformationElements is unambiguous in that they align to a unique result given a reference or a Source Authority (bdq:sourceAuthority). | For example, the Test [VALIDATION_TAXON_UNAMBIGUOUS](https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590).	|
-| VERBATIM | Refers to bdqffdq:Amendment Tests that attempt to extract explicit Darwin Core bdq:InformationElements values from Darwin Core verbatim term bdq:InformationElements. | For example, the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812) attempts to extract dwc:eventdate from dwc:verbatimEventDate. |
+| VERBATIM | Refers to bdqffdq:Amendment Tests that attempt to extract explicit Darwin Core bdq:InformationElements values from Darwin Core verbatim term bdq:InformationElements. | For example, the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812) attempts to extract dwc:eventDate from dwc:verbatimEventDate. |
 
 ### 6.2 General Glossary
 
@@ -329,7 +329,7 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 | Test Type | There are four types of tests, viz. Validation (bdqffdq:Validation), Amendment (bdqffdq:Amendment), Issue (bdqffdq:Issue), and Measure (bdqffdq:Measure). | Test |
 | [TIME](../../supplement/#TIME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. | bdqffdq:InformationElement |
 | VERBATIM | A general category of specific bdq:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
-| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed.   1) A field that only includes whitespace is treated as bdq:Empty. 2) In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no preprocessing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |
+| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed.   1) A field that only includes whitespace is treated as bdq:Empty. 2) In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |
 | YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
 | YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |
 
@@ -436,7 +436,7 @@ The following references have been extracted from the "References" descriptor on
   - [bdqffdq Framework Guide](../guide/bdqffdq/index.md) This document is for those needing a technical understanding of the Framework Ontology (the bdqffdq: vocabulary).
 - Vocabularies
   - [Vocabulary Landing page](../vocabularies/index.md) This document is for those needing a technical understanding of BDQ Core and readers seeking to navigate the BDQ Core standard.
-    - [bdqcore: Landing page](../bdqcore/index.md) This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementors. 
+    - [bdqcore: Landing page](../bdqcore/index.md) This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementers. 
     - [bdqffdq; Landing page](../bdqffdq/index.md) Technical users who need to understand how to describe data quality with the framework.
     - [Term List for bdqffdq:](../list/bdqffdq/index.md) This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology (the bdqffdq: vocabulary).
     - [bdqffdq: Vocabulary Extension](../extension/bdqffdq/index.md) This document is for those needing a technical understanding of the bdqffdq Framework. 

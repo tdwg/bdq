@@ -122,7 +122,7 @@ The following namespace abbreviations are used in this document:
 | --- | --- |
 | bdq:     | https://rs.tdwg.org/bdq/terms/   |
 | bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
-| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
+| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
 ### 1.7 Key to Vocabulary Terms
@@ -131,7 +131,7 @@ The following namespace abbreviations are used in this document:
 | ------------ | ---------- | ------- | --------- |
 | Name (rdf:value) | Idiomatic property used for structured values. | https://rs.tdwg.org/bdqffdq/terms/COMPLETE | normative |
 | Type (rdf:type) | The subject is an instance of a class. | https://rs.tdwg.org/bdqffdq/terms/ResponseResult | normative |
-| Range (rdfs:range) | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | nb93b70ae79f54ef49f0e5608d9a198f9b1 | normative |
+| Range (rdfs:range) | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | nd5d34f4f5f0e45a6b6960bcef57a9cc4b1 | normative |
 | DifferentFrom (owl:differentFrom) | The property that determines that two given individuals are different. | https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE | normative |
 | Label (rdfs:label) | A human-readable name for the subject. | COMPLETE | normative |
 

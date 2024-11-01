@@ -47,11 +47,11 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-With tests for data quality comes the need for validation data to test the behavior of test implementations.  It is important that synthetic data created for the purposes of validating the behavior of test implementation, or data representing real occurences that has been modified for that purpose not be conflated with real data in analysies of patterns of biodiversity.  This document explains how the creators of such validation data sets can unambiguosly mark such data for exclusion, and how users can use these markings to exclude such data from analysies.
+With tests for data quality comes the need for validation data to test the behavior of test implementations.  It is important that synthetic data created for the purposes of validating the behavior of test implementation, or data representing real occurences that has been modified for that purpose not be conflated with real data in analyses of patterns of biodiversity.  This document explains how the creators of such validation data sets can unambiguously mark such data for exclusion, and how users can use these markings to exclude such data from analysies.
 
 ### 1.1 Purpose
 
-This document specifies the marking and identification of synthetic data as clearly distinguisable from real world occurrences.
+This document specifies the marking and identification of synthetic data as clearly distinguishable from real world occurrences.
 
 ### 1.2 Audience
 
@@ -77,7 +77,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ## 2 Synthetic and Example Data (normative)
 
-Implementors of BDQ Core tests, and other tests of biodiversity data quality may wish to use data sets containing known errors and issues for the purposes of testing the behavior of their test implementations and to validate that those test implementations perform as expected.  To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if test implementations correctly identify those errors).  To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analysies, such data SHOULD BE marked in a consistent manner known to consumers of such data.
+Implementers of BDQ Core tests, and other tests of biodiversity data quality may wish to use data sets containing known errors and issues for the purposes of testing the behavior of their test implementations and to validate that those test implementations perform as expected.  To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if test implementations correctly identify those errors).  To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.
 
 ### 2.1 Identifying Example Data (normative)
 

@@ -122,7 +122,7 @@ The following namespace abbreviations are used in this document:
 | --- | --- |
 | bdq:     | https://rs.tdwg.org/bdq/terms/   |
 | bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
-| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
+| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 
 ### 1.7 Key to Vocabulary Terms

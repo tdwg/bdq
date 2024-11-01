@@ -65,7 +65,7 @@ This document is non-normative.
 ## 2 BDQ Core Vocabularies
 
 ### 2.1 Vocabularies Foundational to BDQ Core
-- [BDQ Core Tests and Assertions Vocabulary](../bdqcore/index.md) - this vocabulary is likely to be the focus of interest for both implementors and consumers of the outputs of implementations of tests and assertions.  This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
+- [BDQ Core Tests and Assertions Vocabulary](../bdqcore/index.md) - this vocabulary is likely to be the focus of interest for both implementers and consumers of the outputs of implementations of tests and assertions.  This vocabulary uses the namespace abbreviation `bdqcore:` for the namespace `https://rs.tdwg.org/bdqcore`. The specifications defined in `bdqcore:` make use of terms from the other three vocabularies defined by the standard and listed below.
 - [Fitness For Use Framework Ontology](../bdqffdq/index.md) - this vocabulary, in the form of an ontology, provides the semantics of terms that describe data quality and fitness for use in the namespace `https://rs.tdwg.org/bdqffdq` (abbreviated `bdqffdq:`), these are the terms used to describe the tests in bdqcore:.
 
 ### 2.2 Vocabularies Supporting BDQ Core
