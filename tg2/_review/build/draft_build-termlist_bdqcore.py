@@ -343,7 +343,7 @@ for term in termLists:
             text += '\t\t\t<td>' + row['Label'] + '</td>\n'
             text += '\t\t</tr>\n'
             for column in column_list : 
-                if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column != "IssueLabels" and column!="#" : 
+                if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column!="#" : 
                     if row[column] : 
                         text += '\t\t<tr>\n'
                         if column in term_concept_dictionary.keys() : 
@@ -360,7 +360,8 @@ for term in termLists:
 
             testType = row['Type']
 
-            sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" bdqcore:"+row['term_localName']+" .  FILTER ( ?predicate = rdfs:label ) }"
+            iri = row['term_localName'] + '-' + row['issued']
+            sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" bdqcore:"+iri+" .  FILTER ( ?predicate = rdfs:label ) }"
             queryResult = graph.query(sparql)
             print(sparql)
             for r in queryResult : 

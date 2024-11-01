@@ -165,7 +165,7 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 | Github Issue Labels (skos:note) | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote | TG2 Amendment SPACE Test Completeness CORE | non-normative |
 | InformationElements ActedUpon (bdqffdq:composedOf) | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum | normative |
 | InformationElements Consulted (bdqffdq:composedOf) | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:verbatimCoordinateSystem,dwc:verbatimSRS | normative |
-| Method (bdqffdq:Method) |  |  | normative |
+| Method (bdqffdq:DataQualityMethod) | A solutions concept that relates a data quality need to a Specification. |  | normative |
 | Method label (rdfs:label) | A human-readable name for the subject. In present context: The label for the instance of the subclass of bdqffdq:Method for this test. |  | non-normative |
 | Notes (skos:note) | A general note, for any purpose. In present context: Additional information to supplement the Specification. | Transformations between coordinate reference systems should not be made as a part of this test. Though coordinate precision of the verbatim coordinates could also be interpreted during the process of amending decimal coordinates from verbatim coordinates, that amendment is recommended to be an independent test. Note that dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimCoordinates might all be populated, and they may or not be perfectly consistent with each other. An ideal implementation should check for the consistency of these three fields and not amend them if they are inconsistent. |  |
 | Parameters (bdqffdq:Parameter) | A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner. | bdq:sourceAuthority | normative |
@@ -623,12 +623,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Transformations between coordinate reference systems should not be made as a part of this test. Though coordinate precision of the verbatim coordinates could also be interpreted during the process of amending decimal coordinates from verbatim coordinates, that amendment is recommended to be an independent test. Note that dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimCoordinates might all be populated, and they may or not be perfectly consistent with each other. An ideal implementation should check for the consistency of these three fields and not amend them if they are inconsistent.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/32</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -746,12 +766,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The dwc:geodeticDatum is not necessary for this test. The maximum positional shift between any geographic coordinate reference system and WGS84 is less than 6 km, so any hemisphere test that relies on a country code for consistency would not be affected by the potential shift.  The prior VALIDATION for this test is VALIDATION_COORDINATE_COUNTRYCODE_CONSISTENT (adb27d29-9f0d-4d52-b760-a77ba57a69c9).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/54</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 	</tbody>
 </table>
@@ -857,12 +897,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dc:type holds literals (e.g. PhysicalObject), while dcterms:type holds an IRI for the resource (e.g. http://purl.org/dc/dcmitype/PhysicalObject), see the Darwin Core RDF guide https://dwc.tdwg.org/rdf/#32-imported-dublin-core-terms-for-which-only-literal-objects-are-appropriate-normative.   Implementations of this Amendment are expected be able to amend IRI values to the literals, as well as removing leading/trailing whitespace and correcting case errors in the literal.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/41</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -972,6 +1032,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The license at the record level might be derived from the license of the data set from which the record is retrieved.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
@@ -982,6 +1046,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/133</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:d040474f-edc7-47b8-80a0-3a3859359897</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1087,6 +1167,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen.  For tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -1097,6 +1181,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/63</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:3c402f21-5347-419c-a720-8bbad7c38577</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1206,6 +1306,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related tests. In this test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -1216,6 +1320,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/73</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 	</tbody>
 </table>
@@ -1313,12 +1433,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/48</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1428,12 +1568,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>We reference Wikipedia for the ISO standard because the standard documents are not free.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/26</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:0836e914-75d8-4cda-a39f-f21a08382732</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1539,12 +1699,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>If dwc:day contains text that may be interpreted as Roman numerals, the result will be NOT_AMENDED as this is not standard. Values such as "3rd" or "12th" can be interpreted as the integers "3" and "12".  Text such as "5th Friday" is ambiguous.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/127</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:c15d57ce-301c-4db0-8146-399cd59382ad</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1654,6 +1834,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For reference, synonyms for values of dwc:degreeOfEstablishment can be found at https://registry.gbif.org/vocabulary/DegreeOfEstablishment/concepts.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
@@ -1664,6 +1848,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/276</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1769,6 +1969,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -1779,6 +1983,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/269</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1892,12 +2112,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,  dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component.  Note, see sequencing tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME CODED Test Completeness ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/52</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:2bc15408-d0d0-4166-b6a6-6fdba5704379</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
 	</tbody>
 </table>
@@ -2011,12 +2251,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>If the proposed eventDate is prior to 1918-02-14, the Response.comment will include a note that the "verbatimDate was assumed to be in the Gregorian calendar". When running the test, the original precision, e.g. year=1980, month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-31.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/86</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:7c915d24-1fda-4d72-97d4-8bd5e2136c97</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2130,12 +2390,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment.   This test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-3.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/93</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:8ca96a50-f1f5-4a4e-853e-755cc5aa82a7</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
 		</tr>
 	</tbody>
 </table>
@@ -2249,12 +2529,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this test is run.   While year=1999, startDayOfYear=123  could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This test is only for cases that fall within the one year (as given in dwc:year) and hence "dwc:startDayOfYear will always be less than dwc:endDayOfYear". [or do we just leave this as being obvious from the Expected Response.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/132</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:cca7732f-c336-47b0-9d69-4514d39f5950</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:647bf697-e432-4b31-9a69-778396e14a82</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
 		</tr>
 	</tbody>
 </table>
@@ -2364,12 +2664,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The intent of the amended range is to capture the original uncertainty where possible. As in the example, we amend "1999-11" instead of "1999-11-01/1999-11-31".  An AMBIGUOUS response is possible.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/61</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:381b0edb-0fb4-4a8e-a77b-badcfa286961</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2479,6 +2799,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system.  If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test Completeness Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -2489,6 +2813,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/102</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -2594,12 +2934,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/60</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2701,12 +3061,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>If dwc:verbatimDepth has a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform fathoms to meters by multiplying by 1.8288 and retaining added significant digits (verbatim depth of 10 fathoms to minimum and maximum depths in meters of 18.288). Implementations should be capable of interpreting verbatim data in at least meters, fathoms, and feet, in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/55</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:2f73a662-b833-44ad-942c-a87f82262b7c</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2808,12 +3188,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>If the dwc:verbatimElevation as a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform yards to meters by multiplying by 0.9144 and retaining added significant digits (verbatim elevation of 10 yards to minimum and maximum depths in meters of 9.144). Implementations should be capable of interpreting verbatim data in at least meters,  yards, feet, and kilometers in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/68</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:47bdaece-0c20-4ba3-b453-4c78b92b4c94</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2919,12 +3319,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order. In these cases, the result will be AMENDED numeric equivalents.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/128</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:c1af0cfd-311e-4982-922a-dc67e0c2c975</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3030,6 +3450,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -3040,6 +3464,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -3145,6 +3585,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -3155,6 +3599,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/115</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3264,6 +3724,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For reference, synonyms for values of dwc:pathway can be found at https://registry.gbif.org/vocabulary/Pathway/concepts.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -3274,6 +3738,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/278</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:5e1ab035-a79f-4048-9330-e073d4b6c2c9</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3387,6 +3867,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority.   When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.   Implementors can be aware of the current  GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122  The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records.   Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementors will need to support at least the "gbif:" pseudo-namespace.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment NAME Test VOCABULARY Completeness Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -3397,6 +3881,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/71</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 	</tbody>
 </table>
@@ -3514,6 +4014,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -3524,6 +4028,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/57</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:316da14e-9477-4319-bd2c-c201f3b0f461</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:566faded-60b6-44bf-a335-dc78d5013582</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 	</tbody>
 </table>
@@ -3633,6 +4153,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -3643,6 +4167,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/284</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3752,6 +4292,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For reference, information about possible values of dwc:taxonRank can be found at https://registry.gbif.org/vocabulary/TaxonRank/concepts</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -3762,6 +4306,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/163</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3871,6 +4431,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Valuable for data quality needs related to voucher specimens in natural science collections.   Almost all occurrence data will have no value in dwc:typeStatus.  For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -3881,6 +4445,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/286</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:AmendmentMethod</td>
+			<td>urn:uuid:05104b96-267c-432a-9f30-88552404763e</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3988,6 +4568,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records.  While implementation of this test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this test as a placeholder in the hope of future developments.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Issue OTHER Test CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4109,6 +4693,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Issue SPACE Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
@@ -4119,6 +4707,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/287</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:IssueMethod</td>
+			<td>urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4220,12 +4824,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Issue NAME SPACE TIME Test Resolution CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/72</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:IssueMethod</td>
+			<td>urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4319,12 +4943,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA, CRIA</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Issue OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/94</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:IssueMethod</td>
+			<td>urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4412,6 +5056,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Source</td>
 			<td>John Wieczorek</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4525,6 +5173,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The duration of a day is 86400 seconds. Implementations should treat all days as 86400 seconds, but should include leap days (but not leap seconds) in durations that encompass them.  Consumers should treat assertions about event date duration as approximations, see: https://xkcd.com/2867/</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Measure TIME CODED Test CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -4622,6 +5274,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Measure NAME SPACE OTHER Test CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4723,6 +5379,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -4820,6 +5480,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of tests that were attempted, add all three measures. To get the total number of tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4925,6 +5589,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -5022,6 +5690,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5125,6 +5797,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5234,6 +5910,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
@@ -5341,6 +6021,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -5442,6 +6126,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Likeliness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5547,6 +6235,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -5648,6 +6340,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5753,6 +6449,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -5850,6 +6550,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5955,6 +6659,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
@@ -6058,6 +6766,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -6155,6 +6867,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6258,6 +6974,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6367,6 +7087,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -6468,6 +7192,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6573,6 +7301,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -6674,6 +7406,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6783,6 +7519,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -6886,6 +7626,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -6983,6 +7727,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7088,6 +7836,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -7189,6 +7941,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7294,6 +8050,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -7391,6 +8151,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7492,6 +8256,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -7589,6 +8357,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7690,6 +8462,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -7789,6 +8565,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -7886,6 +8666,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7991,6 +8775,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
@@ -8092,6 +8880,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8197,6 +8989,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -8300,6 +9096,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -8397,6 +9197,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8502,6 +9306,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -8605,6 +9413,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -8702,6 +9514,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8805,6 +9621,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8914,6 +9734,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -9015,6 +9839,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9120,6 +9948,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -9223,6 +10055,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -9324,6 +10160,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9433,6 +10273,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Likeliness Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -9538,6 +10382,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9647,6 +10495,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -9750,6 +10602,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -9847,6 +10703,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9948,6 +10808,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -10047,6 +10911,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
@@ -10144,6 +11012,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10247,6 +11119,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10356,6 +11232,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -10461,6 +11341,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10570,6 +11454,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -10677,6 +11565,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -10780,6 +11672,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -10877,6 +11773,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10978,6 +11878,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -11075,6 +11979,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11180,6 +12088,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -11281,6 +12193,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11386,6 +12302,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -11487,6 +12407,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11592,6 +12516,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -11695,6 +12623,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -11796,6 +12728,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11905,6 +12841,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -12012,6 +12952,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -12115,6 +13059,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -12212,6 +13160,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12317,6 +13269,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -12414,6 +13370,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12517,6 +13477,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12626,6 +13590,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
@@ -12733,6 +13701,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -12834,6 +13806,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Likeliness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12939,6 +13915,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -13040,6 +14020,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13145,6 +14129,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -13242,6 +14230,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13347,6 +14339,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
@@ -13450,6 +14446,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -13547,6 +14547,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13650,6 +14654,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13759,6 +14767,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -13860,6 +14872,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13965,6 +14981,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -14066,6 +15086,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14175,6 +15199,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -14278,6 +15306,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -14375,6 +15407,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14480,6 +15516,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -14581,6 +15621,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14686,6 +15730,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -14783,6 +15831,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14884,6 +15936,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -14981,6 +16037,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15082,6 +16142,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -15181,6 +16245,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -15278,6 +16346,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15383,6 +16455,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
@@ -15484,6 +16560,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15589,6 +16669,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -15692,6 +16776,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -15789,6 +16877,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15894,6 +16986,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -15997,6 +17093,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -16094,6 +17194,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16197,6 +17301,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16306,6 +17414,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -16407,6 +17519,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16512,6 +17628,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -16615,6 +17735,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -16716,6 +17840,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16825,6 +17953,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Likeliness Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -16930,6 +18062,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17039,6 +18175,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -17142,6 +18282,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -17239,6 +18383,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17340,6 +18488,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -17439,6 +18591,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
@@ -17536,6 +18692,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17639,6 +18799,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17748,6 +18912,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -17853,6 +19021,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17962,6 +19134,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -18069,6 +19245,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -18172,6 +19352,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -18269,6 +19453,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18370,6 +19558,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -18467,6 +19659,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18572,6 +19768,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -18673,6 +19873,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18778,6 +19982,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -18879,6 +20087,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18984,6 +20196,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -19087,6 +20303,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -19188,6 +20408,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19297,6 +20521,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -19404,6 +20632,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -19507,6 +20739,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -19604,6 +20840,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19717,12 +20957,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -19820,12 +21080,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:07e4c491-0d13-409d-b966-fbb9721e81cf</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 	</tbody>
 </table>
@@ -19935,6 +21215,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>A fail condition may arise either from the taxon terms being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of classification values. Additional tests could be devised against a taxonomic authority to report the distinct failure conditions. This test specifically does not consider the content of dwc:higherClassification.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -19945,6 +21229,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20062,6 +21362,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country.  Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
@@ -20072,6 +21376,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20181,6 +21501,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The geographic determination service is expected to return a list of names of first-level administrative divisions for geometries that the geographic point falls on or within, including a 3 km buffer around the administrative geometry. A match on any of those names should constitute a consistency, and dwc:countryCode should not be needed to make this determination, that is, this test does not attempt to disambiguate potential duplicate first-level administrative division names. The level of buffering may be related to the scale of the underlying GIS layer being used. At a global scale, typical map scales used for borders and coastal areas are either 1:3M or 1:1M (Dooley 2005, Chapter 4). Horizontal accuracy at those scales is around 1.5-2.5km and 0.5-0.85 km respectively (Chapman & Wieczorek 2020).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -20191,6 +21515,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:315a198d-3811-40dd-918a-756f598f3294</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20292,12 +21632,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>A record with 0.0 is interpreted as the string "0"</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Likeliness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -20411,6 +21771,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation tests treat "brackish" in WoRMS as both marine and terrestrial.   Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -20421,6 +21785,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20518,12 +21898,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:95c2e363-5a99-4276-937d-98008ca893f9</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20637,12 +22037,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.   EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a test implementation without an external call</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20740,12 +22160,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The license at the record level might be derived from the license of the data set from which the record is retrieved</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:940621f5-4f24-48de-8b36-256101ca4987</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20855,6 +22295,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The license at the record level might be derived from the license of the data set from which the record is retrieved. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.   The  canonical form of the Creative Commons license IRI has nothing after the version  e.g. https://creativecommons.org/licenses/by/4.0/, but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code.   However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI.  As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
@@ -20865,6 +22309,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20966,12 +22426,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Only fails if all of the relevant fields of the Darwin Core Location class are EMPTY or do not exist.  Relevant Darwin Core fields include dwc:locationID, dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:waterBody, dwc:islandGroup, dwc:island, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:locality, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT. Elevation and/or depth alone are deemed insufficient to meaningfully locate a position on the earth.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21065,12 +22545,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:31c40ce6-eecd-4304-bda7-0234993b079d</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21176,6 +22676,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -21186,6 +22690,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -21291,6 +22811,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -21301,6 +22825,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -21402,12 +22942,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The upper limit is one half the equatorial circumference of the earth.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -21513,12 +23073,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The country code determination service should be able to match the name of a country in the original or any language in the source authority.   When dwc:countryCode="XZ" to mark the high seas, country should be empty until a time when a dwc:country="High seas" or similar is adopted.  This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -21636,6 +23216,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values.  This test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this test. @tucotuco: "Of #200 and #201, #201 is the strongest test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level".</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -21646,6 +23230,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -21755,6 +23355,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Non-country information such as "high seas" will fail this test (High Seas should use dwc:countryCode = "XZ" and have dwc:country empty).  Getty Place Types for administrative level "nation"  are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation.  Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are  same). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -21765,6 +23369,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -21874,12 +23494,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Country is expected to be either bdq:Empty or ideally have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21985,12 +23625,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test will return 'NOT_COMPLIANT' for records on the "High seas" where dwc:countryCode is bdq:Empty. We recommend that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ" and dwc:country = "High seas" until an agreement has been made.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22096,12 +23756,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22223,6 +23903,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>There may be valid identifications prior to Linnaeus, but this test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -22233,6 +23917,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22334,12 +24034,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>[event_date_qc  DwCOtherDateDQ.validationDateidentifiedStandard()](https://github.com/FilteredPush/event_date_qc/blob/be60f348609363d560fe16552bca4cc2975c0766/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L58)</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:4c6a5522-ae8c-42d3-a396-8fc3aee49ef9</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22449,12 +24169,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must take into account the given month and year, if present, to account for leap years. This is part of a group of similar tests (VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e, #VALIDATION_STARTDAYOFYEAR_INRANGE (85803c7e-2a5a-42e1-b8d3-299a44cafc46), VALIDATION_ENDDAYOFYEAR_INRANGE9a39d88c-7eee-46df-b32a-c109f9f81fb8)).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:bb12babf-ca13-4289-9a3d-dde52bb8aff8</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification for: VALIDATION_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DAY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22560,12 +24300,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This is part of a group of similar tests (VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e), VALIDATION_STARTDAYOFYEAR_INRANGE (85803c7e-2a5a-42e1-b8d3-299a44cafc46), VALIDATION_ENDDAYOFYEAR_INRANGE (9a39d88c-7eee-46df-b32a-c109f9f81fb8)).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22663,12 +24423,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22766,12 +24546,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22869,12 +24669,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22968,12 +24788,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:908fc823-75a9-437e-be7c-5c72cd6b149e</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23083,6 +24923,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species</td>
 		</tr>
@@ -23093,6 +24937,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -23202,12 +25062,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This test only asks if dwc:endDayOfYear is a valid value for the relevant year, not if it is consistent with the end day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This test should be run after the series of tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -23317,6 +25197,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -23327,6 +25211,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -23432,12 +25332,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test does not take a position on whether the value in dwc:eventDate, or the values in the atomic terms are correct, it simply points out the presence of inconsistencies.  For this test, dwc:eventTime is explicitly ignored. It may be useful to consider an additional test that does evaluate dwc:eventTime and dwc:eventDate. In that case, but not in this test, if the time is present in both dwc:eventDate and dwc:eventTime, and it is inconsistent, it may indicate an error in the dwc:eventDate, thus making it a problem that someone needs to evaluate.   This test will only assert consistency if the data are both internally consistent and are compliant with the term definitions, for example dwc:day, by its definition, can only be the day  of an dwc:eventDate that has a precision of a day or better and is not a range that spans more than a single day.   A dwc:day that was internally consistent with the first day of the year (that is, 1) of an dwc:eventDate that only had precision to a year would be consistent internally, but not consistent with the Darwin Core term definitions, and would not return COMPLIANT from this test.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -23543,12 +25463,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear.  The terms dwc:eventID (if populated may or may not point to temporal information accessible to user of the data) and dwc:eventTime (which is rare) are not included.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:87d34104-0a79-4f51-aeeb-1115ec56e237</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23666,6 +25606,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test provides for a default earliest date, which is 1582-11-15 by convention. That date was chosen because ISO 8601-1 asserts that "the use of proleptic Gregorian calendar dates prior are not allowed in ISO 8601-1 without prior agreement of the parties exchanging data", and Darwin Core does not comment on this.  Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date, and metadata may or not be present to even identify such records. Given the complexity, and ongoing nature of transitions between calendars, we do not advocate using this test for quality assurance by selecting a transition date and using it as a threshold.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -23676,6 +25620,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENTDATE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -23777,12 +25737,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>event_date_qc v3.0.0 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L182)</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23892,12 +25872,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test should also pick up issues such as 29 Feb in a non leap year.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:3f868855-cc39-4a1b-8050-bfa246416a47</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENTDATE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -24007,6 +26007,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -24017,6 +26021,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24126,6 +26146,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against which to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -24136,6 +26160,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24229,12 +26269,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li>  </ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:6d1f3f11-98d9-4b26-a8e7-56fbc066c705</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24344,6 +26404,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -24354,6 +26418,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24447,12 +26527,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f5bd0eee-4cdf-4455-876d-a46d92373a4e</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24562,6 +26662,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -24572,6 +26676,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24681,6 +26801,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Likeliness Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -24691,6 +26815,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24800,6 +26940,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -24810,6 +26954,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24919,6 +27079,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -24929,6 +27093,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -25026,12 +27206,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 	</tbody>
 </table>
@@ -25133,12 +27333,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>event_date_qc [DwCEventDQ.validationMonthStandard()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L673) Unit test in [DwcEventDQTest]{https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L242)</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25232,12 +27452,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25331,12 +27571,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>VertNet</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:296e08b2-c044-4cef-930e-8d29c579c8d6</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25430,12 +27690,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>ALA</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:af9591f4-d0ee-4301-bc59-d6a68d1d6813</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25549,6 +27829,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -25559,6 +27843,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25668,6 +27968,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -25678,6 +27982,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -25787,6 +28107,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -25797,6 +28121,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:ffae8e47-2181-4a83-b1c7-d0a893e79b67</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25906,6 +28246,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -25916,6 +28260,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -26029,6 +28389,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The purpose of this test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdq:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of data sets doing quality control, this test provides a specific subset of targeted data cleaning, making it a valuable test to include for the quality control case.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -26039,6 +28403,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -26136,12 +28516,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26235,12 +28635,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f6c58791-279d-458b-b4ee-058a73a002ee</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26342,12 +28762,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.  Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f2f40350-4081-4402-8b2b-95f9ad8893a7</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 	</tbody>
 </table>
@@ -26445,12 +28885,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:b1b04dc2-e74b-43f3-9f48-60ac08afcadb</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26560,6 +29020,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -26570,6 +29034,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -26679,12 +29159,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>See test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e).  This test only asks if dwc:startDayOfYear is a valid value for the relevant year, not if it is consistent with the start day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This test should be run after the series of tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME Test Conformance CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:c3d0ce9b-2f40-4cd7-8e67-085b137e8e89</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -26794,6 +29294,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>Multiple values in the dwc:stateProvince field (whether to signify on a border or in a list of possibilities) will fail this test. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -26804,6 +29308,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -26901,12 +29421,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:9c5798cd-6176-41ed-8e91-35e3df1fa6d4</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27016,6 +29556,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>There are any number of potential controlled vocabularies that might be used for this test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon.  If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record.   The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty.  Note that test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific test for a subset of Information Elements from this test.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -27026,6 +29570,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -27123,12 +29683,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td><ul><li>GBIF (2015) Taxonomic Rank GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/rank.xml</li></ul></td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:dbb803cb-8b37-4db3-a562-b4f6036f9d17</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27238,6 +29818,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
@@ -27248,6 +29832,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27357,6 +29957,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
@@ -27367,6 +29971,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27480,6 +30100,10 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>The results of this test are time-dependent. Next year is not valid now. Next year it will be. This test provides the option to designate lower and upper limits to the year. The upper limit, if not provided, should default to the year when the test is run. This test provides for a default earliest date (year), of 1582 by convention. That value was chosen because ISO 8601-1 asserts that "the use of proleptic Gregorian calendar dates prior are not allowed in ISO 8601-1 without prior agreement of the parties exchanging data", and Darwin Core provides no such prior agreement.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
@@ -27490,6 +30114,22 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:7922ab56-6eae-4257-9691-d55d24842274</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -27591,12 +30231,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>event_date_qc v3.0.0 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L217)</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_YEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27706,12 +30366,32 @@ See the [landing page](../../bdqcore/index.md) for normative guidance on the use
 			<td>If dwc:specificEpithet is populated then this test expects that the value dwc:specificEpithet is the name of the second or species epithet of the scientificName.  If dwc:genericName is populated, this test expects that the value of dwc:genus is the first word of the value of dwc:scientificName.  If dwc:specificEpithet is populated then this test expects that the value dwc:specificEpithet is the name of the first or species epithet of the scientificName.  If dwc:infraspecificEpithet is populated, then this test expects that the value of dwc:infraspecificEpithet is the name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.</td>
 		</tr>
 		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME Test Consistency CORE</td>
+		</tr>
+		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>skos:historyNote</td>
 			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:ValidationMethod</td>
+			<td>urn:uuid:94510668-a59f-41d3-84bb-30cd9715cb62</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>bdqffdq:Specification</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>

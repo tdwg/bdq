@@ -144,6 +144,8 @@ Section 3.1 lists which which terms in section 4 have normative values and which
 
 Other sections of this document are marked as normative or non-normative.
 
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative
+
 ### 1.6 RFC 2119 key words
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
