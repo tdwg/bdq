@@ -267,6 +267,7 @@ There were many people who have made notable contributions at various times duri
 | ISO         | International Standards Organization                  |
 | QA          | Quality Assurance                                     |
 | QC          | Quality Control                                       |
+| SDS         | TDWG Standards Documentation Standard                 |
 | TDWG        | Biodiversity Information Standards                    |
 | TG1         | Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality |
 | TG2         | Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions |
@@ -388,7 +389,7 @@ The following references have been extracted from the "References" descriptor on
 <li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li>
 <li>Leiba B (2017) IETF Key words for use in RFCs to Indicate Requirement Levels (RFC 8174). https://tools.ietf.org/html/rfc8174</li>
 <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li>
-<li>Lowery D, Morris PJ, Morris RA (2018) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v1.0.4 (v1.0.4). Zenodo. https://doi.org/10.5281/zenodo.1253045</li>
+<li>Lowery D, Morris PJ, Morris RA (2024) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.0.0 (v3.0.0). Zenodo. https://doi.org/10.5281/zenodo.14026643</li>
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li>
 <li>Morris PJ (2023) FilteredPush/sci_name_qc: Release vesion 1.0.1 of the sci_name_qc library implementing TG2 core NAME tests. (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.8165105</li>
 <li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Initial release of bdq_issue_to_csv utility (v0.0.5). Zenodo. https://doi.org/10.5281/zenodo.13937571</li>

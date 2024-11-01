@@ -908,14 +908,14 @@ Java annotations can be used to match test implementation methods to tests and i
 
 ### 8.6.2 Tools to assist with implementations and RDF presentation (non-normative) 
 
-The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api.  In addition, a Java library, kurator-ffdq is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java.  The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
+The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api.  In addition, a Java library, kurator-ffdq (Lowery et al., 2024) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java.  The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
 
 <!--- TODO: Add citations --->
 
 - [ffdq-api](https://github.com/kurator-org/ffdq-api) Java annotations for decorating Test implementations.
-- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq)  Java classes for bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.
+- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al., 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.
 
-These libraries are available in Maven Central.
+These libraries are available in Maven Central, source code is archived in zenodo.
 
 ## 9 Existing Test Implementations (non-normative) 
 
