@@ -151,6 +151,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                        spacedExample = spacedExample.replace("/master/","/master/ ")
                        spacedExample = spacedExample.replace("/rs.tdwg.org/","/rs.tdwg.org/ ")
                        example = "[{}]({})".format(spacedExample,example)
+                   if example.find('.') : 
+                       example = example.replace(",",", ")
             else : 
                 example = ""
             normative = value['normative']
