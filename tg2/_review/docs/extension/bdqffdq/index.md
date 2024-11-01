@@ -108,7 +108,9 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section 1.7 lists which values in Section 4 are normative and which are non-normative.
+Section [1.7 Key to Vocabulary Terms](#17-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.5 RFC 2119 key words
 
@@ -131,7 +133,7 @@ The following namespace abbreviations are used in this document:
 | ------------ | --------- | ---------- | ------- |
 | Name (rdf:value) | normative | Idiomatic property used for structured values. | [https://rs.tdwg.org/bdqffdq/terms/ COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) |
 | Type (rdf:type) | normative | The subject is an instance of a class. | [https://rs.tdwg.org/bdqffdq/terms/ ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult) |
-| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | nb7fd15c3ce0c4da2b3752306f3ad6116b1 |
+| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n19bebaebed0f4171adeeb0d4a4e3ee1bb1 |
 | DifferentFrom (owl:differentFrom) | normative | The property that determines that two given individuals are different. | [https://rs.tdwg.org/bdqffdq/terms/ NOT_COMPLETE](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE |
 

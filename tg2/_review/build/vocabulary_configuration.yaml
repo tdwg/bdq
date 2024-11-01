@@ -45,7 +45,7 @@ organized_in:
   term: ''
 prefLabel:
   label: Preferred Label
-  normative: 'false'
+  normative: 'true'
   term: skos:prefLabel
 rdf_type:
   label: Type

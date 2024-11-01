@@ -73,7 +73,9 @@ Section 1 is non-normative.
 
 Section 2 is normative.
 
-In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
+Section [1.8 Key to Vocabulary Terms](#18-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.6 RFC 2119 key words
 
@@ -100,7 +102,7 @@ The following namespace abbreviations are used in this document:
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/bdqdim/terms/version/ Completeness-2024-09-30](https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30) |
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Completeness |
-| Preferred Label (skos:prefLabel) | non-normative | The preferred lexical label for a resource, in a given language. | Completeness |
+| Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. | Completeness |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:DataQualityDimension |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/bdqdim/terms/ Completeness](https://rs.tdwg.org/bdqdim/terms/Completeness) |

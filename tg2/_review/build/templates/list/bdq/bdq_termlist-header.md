@@ -67,7 +67,9 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-In Section 4, the values of the `Term IRI`, `Term Name`, `Type`, `Definition` and `Controlled value` are normative. The values of `Comments`, `Label` and `Preferred Label` are non-normative. 
+Section [1.8 Key to Vocabulary Terms](#18-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.6 RFC 2119 key words
 

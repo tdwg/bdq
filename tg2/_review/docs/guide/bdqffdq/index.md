@@ -91,15 +91,17 @@ This document provides an illustrated guide to the use of the bdqffdq ontology.
 
 ### 1.4 Status of the content of this document
 
+<!--- TODO: Review these normative/non-normative statements, not all sections are covered --->
+
 Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-In Section 4, the values of following terms are normative: Term IRI, Name, Type, Superclass, Definition.
+In Section 5, the values of following terms are normative: Term IRI, Name, Type, Superclass, Definition.
 
 Figures are non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.5 RFC 2119 key words
 

@@ -101,7 +101,9 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section 1.9 identifies which values in Section 4 are normative.
+Section [1.9 Key to Vocabulary Terms](#19-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.6 RFC 2119 key words
 

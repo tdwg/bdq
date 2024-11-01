@@ -112,7 +112,7 @@ Section 3.1 lists which which terms in section 4 have normative values and which
 
 Other sections of this document are marked as normative or non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.6 RFC 2119 key words
 

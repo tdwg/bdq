@@ -55,7 +55,7 @@ This document is for consumers of data quality reports.
 
 Each sections of this document is marked as normative or non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.5 RFC 2119 key words
 
