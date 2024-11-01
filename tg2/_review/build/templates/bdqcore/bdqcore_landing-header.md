@@ -62,8 +62,8 @@ The bdqcore: vocabulary includes:
 - This landing page document provides Normative guidance on the use of the BDQ Core vocabulary.
 
 In addition, A users guide to the use of the BDQ Core Tests is provided in the 
-- [Users Guide](../guide/users/index.md) and
-- A guide to implemetation of the BDQ Core Tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
+- [BDQ Core User's Guide](../guide/users/index.md) and
+- A guide to implemetation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
 
 ### 1.3.1 Term List Distributions for BDQ Core
 
