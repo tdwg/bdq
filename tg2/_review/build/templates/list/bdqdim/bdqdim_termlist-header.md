@@ -53,7 +53,7 @@ This document is for those needing a technical understanding of the BDQ Core Tes
 
 ### 1.3 Data Quality Dimensions 
 
-DataQualityDimension as used in the context of BDQ Core, was originally defined by Viega 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a test examines to assess 'quality' for a given use case.
+DataQualityDimension as used in the context of BDQ Core, was originally defined by Veiga 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a test examines to assess 'quality' for a given use case.
 
 DataQualityDimensions are measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
 

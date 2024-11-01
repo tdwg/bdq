@@ -24,7 +24,7 @@ Latest version
 : <http://rs.tdwg.org/bdq/bdqenh/terms/>
 
 Abstract
-: This document describes the vocabulary terms used in the (Draft) BDQ Core Standard as values of bdqffdq:Enhancement, originally defined in Viega 2016 and Veiga et al. 2017.
+: This document describes the vocabulary terms used in the (Draft) BDQ Core Standard as values of bdqffdq:Enhancement, originally defined in Veiga 2016 and Veiga et al. 2017.
 
 Authors
 : [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
@@ -51,7 +51,7 @@ This document is for those needing a technical understanding of the BDQ Core Tes
 
 ### 1.3 Data Quality Enhancement
 
-Enhancement as used in the context of BDQ Core, was originally defined by Viega 2016 and Veiga et at. 2017, where it is a fundamental concept. The concept of bdqffdq:Enhancement (AssumedDefault, Converted, From, Standardized, and Transposed)  describes how a bdqffdq:Amendment may act to produce proposals to improve data quality for a given use case.
+Enhancement as used in the context of BDQ Core, was originally defined by Veiga 2016 and Veiga et at. 2017, where it is a fundamental concept. The concept of bdqffdq:Enhancement (AssumedDefault, Converted, From, Standardized, and Transposed)  describes how a bdqffdq:Amendment may act to produce proposals to improve data quality for a given use case.
 
 The Enhancement describes, in abstract terms, how proposals can modify data to improve fitness.  An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Enhancements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
 

@@ -163,7 +163,7 @@ Data quality needs can relate to the data quality of single records (bdqffdq:Sin
 
 ### 3.4 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
-Needs, mechanisms, and reports can be seen as horizontal slices through the framework (following the illustrations in Viega et al., 2017).
+Needs, mechanisms, and reports can be seen as horizontal slices through the framework (following the illustrations in Veiga et al., 2017).
 
 The framework organizes data quality concepts into three areas: Needs, Mechanisms, and Reports.  Data Quality Needs identify a use to which data may be put, and frame a set of requirements that data needs to meet to be fit for that use, and means by which data not fit for that use may be improved.  The tests described in this standard are formal descriptions of data quality needs for CORE purposes.  Data Quality Mechanisms in the framework are formal descriptions of software and other mechanisms that implement tests described in the Needs area.  Data Quality Reports are the results produced by Mechanisms on some set of data.  The tests described in this standard include specifications of assertions to be made in Data Quality Reports.
 
@@ -181,7 +181,7 @@ Diagram of the composition of Validation, ValidationMethod, and ValidationAssert
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-A useful way to think of the framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the test concepts verticaly through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Viega et al., 2017)  Below is a diagram that brings together the horizonal Needs, Solutions, and Reports layers with the vertical test concepts (Validations, Amendments, Measures, Issues), with validation related concepts expanded to show all related entities in bdqffdq.
+A useful way to think of the framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the test concepts verticaly through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017)  Below is a diagram that brings together the horizonal Needs, Solutions, and Reports layers with the vertical test concepts (Validations, Amendments, Measures, Issues), with validation related concepts expanded to show all related entities in bdqffdq.
 
 ![Diagram of Illustrating both the horizonal (needs/solutions/reports) layers and the vertical test concepts (validation, amendment, measurement, issues)](bdqffdq_data_quality_layers.svg "All four tests concepts in the Needs Solutions, and Reports levels.")
 
