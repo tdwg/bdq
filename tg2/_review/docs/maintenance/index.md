@@ -7,7 +7,7 @@
 Notes for the guidance for maintainers if the BDQ Core standard is ratified.
 
 ### 1.1 Purpose
-This document is for guidance of the BDQ Core Maintenence Group
+This document is for guidance of the BDQ Core Maintenance Group
 
 ### 1.2 Audience
 Biodiversity Information Standards (TDWG) BDQ Core Maintenance Interest Group
@@ -42,7 +42,7 @@ Templates for proposals of new and change issues are available at https://github
 2. Review the proposal, including evaluating that the expected response follows a path an implementer can understand, that the information elements are referenced in the expected response, and whether parameters are present and formatted as desired.
 3. Confirm that the proposal is not a duplicate of an existing issue, including both Do Not Implement and Immature/Incomplete issues.
 4. Discussion at any point may conclude that the test is not able to be implemented or should not be implemented as results would be misleading or problematic, tag as DO NOT IMPLEMENT, describe why in comments on the issue, and close the issue.
-5. Discussion at any point may conclude that the test is a good one, but can't be implemented at the present time as some needed resource, such a a controlled vocabulary, does not exist (yet), tag as Imature/Incomplete.  Describe why in comments on the issue, leave open or closed as desired.
+5. Discussion at any point may conclude that the test is a good one, but can't be implemented at the present time as some needed resource, such a a controlled vocabulary, does not exist (yet), tag as Immature/Incomplete.  Describe why in comments on the issue, leave open or closed as desired.
 6. Produce example data covering each path through the expected response, add these to a validation sheet.
 7. The markdown table from the test can be exported to a csv list of proposed tests.  This csv list can be used by implementers to generate code stubs for tests to be implemented.
 8. Implementers produce at least one implementation of the test, this will provide feedback on the expected response, and whether or not the test is implementable.
@@ -82,7 +82,7 @@ Amend the data record as required, and update the Date Last Updated is REQUIRED
 ### 3.2 Additions to Test Validation Data
 The Test Validation Data provides a minimal suite of Darwin Core records to test the pathways through each Test Specification. The addition of edge cases to the existing Test Validation Data is RECOMMENDED. The addition of Validation Test Data for new Tests is REQUIRED.
 
-The Test Validation Data uses CSV format. There are two versions of the Validation Test Data.  One is easier to mainain, the other is easier for test validation frameworks to consume.  See section [3.4 Processing Test Validation Data](#34-Processing-Test-Validation-Data) for details.
+The Test Validation Data uses CSV format. There are two versions of the Validation Test Data.  One is easier to maintain, the other is easier for test validation frameworks to consume.  See section [3.4 Processing Test Validation Data](#34-Processing-Test-Validation-Data) for details.
 
 Both forms of the validation data contains columns of information for each record (e.g., link to Test, Label, Dimension) that SHOULD be helpful in understanding the context of the focus columns of Input.data, Output.data, Response.status and Response.result. The Response.comment MUST describe the reason for the Response.status. 
 
@@ -90,7 +90,7 @@ Additions to the Test Validation Data are best done by copying and pasting an ex
 
 Values in the column **LineForTest** are useful in determining the number of Test Validation records for each Test, but also flag an additional function. A LineForTest value of "88" flags an Input.data value of "[null]" while a value of "99" flags an Input.data value of "[non-printing characters]". Both of these record types are used to separate records of 'normally' expected values from records that require special handing within the testing framework.   These rows SHOULD not be present in either form of the validation data set.
 
-Validation data containing non-printing characters and nulls SHOULD only be edited in the separate file of validation data containing non-printing characters, this file MUST only be edited by sofware able to correctly handle the non-printing characters.  This file MUST NOT be edited with a spreadsheet application.  The text editors vim and emacs are recommended <!--Refs?-->.  
+Validation data containing non-printing characters and nulls SHOULD only be edited in the separate file of validation data containing non-printing characters, this file MUST only be edited by software able to correctly handle the non-printing characters.  This file MUST NOT be edited with a spreadsheet application.  The text editors vim and emacs are recommended <!--TODO Refs?-->.  
 
 ### 3.3 Updating Test Validation Data Due to Changes in Specifications or Terms
 
@@ -129,7 +129,7 @@ The bdqtestrunner utility is available for running Java implementations of tests
 
 ## 2 Proposals for Changes to existing Tests 
 
-<!--- TODO: Add template for proposals of changes to existing to maintinance repository.  It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
+<!--- TODO: Add template for proposals of changes to existing to maintenance repository.  It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
 
 Accepted changes will need to be added as new rows to the bdqcore term-version file.
 
