@@ -17,7 +17,6 @@
 #"IssueState"
 # TODO: These terms are in the CSV but not represented in the RDF
 #"IE Class",
-#"IssueLabels",
 
 iri:
   label: Term Version IRI
@@ -103,6 +102,11 @@ Examples:
   label: Example Implementation Source Code
   normative: 'false'
   term: skos:note
+IssueLabels:
+  append: Labels applied to Github Issue noted in the skos:historyNote
+  label: Github Issue Labels
+  normative: 'false'
+  term: skos:note
 "InformationElement:ActedUpon":
   label: InformationElements ActedUpon
   normative: 'true'
@@ -175,7 +179,7 @@ flags:
   normative: ''
   term: ''
 historyNoteUrl:
-  append: A link to the github issue that provides a history (changes and comments) of the development of the test.
+  append: A link to the github issue that provided rationalle management recording a history (changes and comments) of the development of the test.
   label: Developed As Github Issue
   normative: ''
   term: skos:historyNote
