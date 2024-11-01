@@ -608,7 +608,7 @@ The development of each Test, with documentation of why particular decisions wer
 | ISO/DCMI STANDARD | A reference to either an ISO (International Organization for Standardization) Standard or a DCMI (Dublin Core Metadata Initiative) Standard |  |
 | Issue | A label to indicate a test of type ISSUE, where potential problems are flagged and may need examination by the user to determine if data have quality for their use. | see bdqffdq:Issue |
 | Measure | A label to indicate a Test of Type Measure that performs a measurement according to some data quality dimension. | See bdqffdq:Measure |
-|[NAME](#NAME) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
+| [NAME](#NAME) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
 | NEEDS WORK | A label that indicates that an issue (Test) requires more work before finalising. | Supports a workflow of contributors identifying tests needing work with this tag, and review of issues with this tag in task group meetings.  |
 | [OTHER](#OTHER) | A label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. |  |
 | Parameterized | A label for a Test that a bdq:Parameter may be set prior to a Parameterized Test being run. |  |
