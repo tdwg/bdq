@@ -56,7 +56,7 @@ This document lists terms used to describe 'data quality' / 'fitness for use' in
 
 This document provides a technical understanding of the Framework (`bdqffdq:`) ontology.  
 The ontology follows open world principles and has limited restrictions.
-This document gathers normative statements about how to use the Frameowrk in a meaningful way. 
+This document gathers normative statements about how to use the Framework in a meaningful way. 
 
 ### 1.2 Audience
 
@@ -132,7 +132,7 @@ When not represented as objects, controlled value strings MUST be used as values
 
 ### 2.1 Use of Properties (normative) 
 
-This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative defintions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
+This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative definitions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
 
 This guidance describes the use of the Framework Ontology, that is the bdqffdq: vocabulary terms, in an RDF context.  This guidance MAY be used to develop models of the bdqffdq data quality Framework in more constrained forms including UML object models, information models, classes in a programing language, or database schemas.  
 
@@ -156,7 +156,7 @@ The four subclasses of bdqffdq:DataQualityNeed are bdqffdq:Validation, bdqffdq:M
 
 Each individual that is a subclass of bdqffdq:DataQualityNeed SHOULD have at least one bdqffdq:includedInPolicy relationship to an instance of a subclass of bdqffdq:Policy which is in turn related to an instance of a bdqffdq:UseCase.   
 
-User communites MAY provide new use cases, and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways.  
+User communities MAY provide new use cases, and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways.  
 
 Each instance of a subclass of a bdqffdq:DataQualityNeed SHOULD have an rdfs:label in all upper case, with underscores separating components.  Tests that have a bdqffdq:hasResourceType of bdqffdq:SingleRecord SHOULD follow the convention of the subclass of bdqffdq:DataQualityNeed in all upper case as the first word, and a representation of the bdqffdq:AbstractInformationElement as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT.  Tests that have a bdqffdq:hasResourceType of bdqffdq:MultiRecord SHOULD have "MULTIRECORD_" as the first element in their rdfs:label, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMANTIONELEMENT_CRITERIA.  The rdfs:label of the instance of the subclass of bdqffdq:DataQualityNeed SHOULD be used by humans to identify Tests.
 
@@ -180,13 +180,13 @@ The bdqffdq:hasDataQualityDimension object property MAY have individual in the b
 
 An axiom types the range of bdqffdq:hasDataQualityDimension as a bdqffdq:DataQualityDimension.
 
-Each individual instance of a bbdqffdq:Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdffdq:Criterion property.
+Each individual instance of a bddqffdq:Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
 
-Each individual instance of a bbdqffdq:Issue SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdffdq:Criterion property.
+Each individual instance of a bddqffdq:Issue SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
 
-Each individual instance of a bbdqffdq:Amendment SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdffdq:Enhancement property.
+Each individual instance of a bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Enhancement property.
 
-Each individual instance of a bbdqffdq:Measure SHOULD have exactly one bdqffdq:hasDataQualityDimension property.
+Each individual instance of a bdqffdq:Measure SHOULD have exactly one bdqffdq:hasDataQualityDimension property.
 
 A subproperty of the bdqffdq:hasInformationElement object property SHOULD have an individual that is a subclass of bdqffdq:InformationElement as its object.
 
@@ -278,7 +278,7 @@ A bdqffdq:Implementation SHOULD have one and only one bdqffdq:implementedBy obje
 
 Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
 
-Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guid concering the expression of data quality responses in forms other than RDF.  Each data quality mechanism MUST produce results coresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specfied in those guides.   
+Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guid concerning the expression of data quality responses in forms other than RDF.  Each data quality mechanism MUST produce results coresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specified in those guides.   
 
 The bdqffdq:producesAssertion object property SHOULD have an instance of bdqffdq:Implementation as its subject.
 
