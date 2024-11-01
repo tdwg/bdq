@@ -96,10 +96,10 @@ The following namespace abbreviations are used in this document:
 | ------------ | ---------- | ------- | --------- |
 | Comments (rdfs:comment) | A description of the subject resource. | Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. | non-normative |
 | Controlled Value () | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | Completeness | normative |
-| Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. | normative |
+| Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. | normative |
 | Term Version IRI (rdf:about) | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30 | normative |
 | Modified (dcterms:issued) | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 | normative |
-| Label (rdfs:label) | A human-readable name for the subject. | Completeness | normative |
+| Label (rdfs:label) | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Completeness | normative |
 | Preferred Label (skos:prefLabel) | The preferred lexical label for a resource, in a given language. | Completeness | non-normative |
 | Type (rdf:type) | The subject is an instance of a class. | bdqffdq:DataQualityDimension | normative |
 | Status (tdwgutility:status) | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |  |

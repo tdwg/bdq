@@ -95,10 +95,10 @@ The following namespace abbreviations are used in this document:
 | ------------ | ---------- | ------- | --------- |
 | Comments (rdfs:comment) | A description of the subject resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness | non-normative |
 | Controlled Value () | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | AssumedDefault | normative |
-| Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. | Data could be improved by setting an empty value to a default value | normative |
+| Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value | normative |
 | Term Version IRI (rdf:about) | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30 | normative |
 | Modified (dcterms:issued) | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 | normative |
-| Label (rdfs:label) | A human-readable name for the subject. | Assumed Default | normative |
+| Label (rdfs:label) | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Assumed Default | normative |
 | Preferred Label (skos:prefLabel) | The preferred lexical label for a resource, in a given language. | Assumed Default | non-normative |
 | Type (rdf:type) | The subject is an instance of a class. | bdqffdq:Enhancement | normative |
 | Status (tdwgutility:status) | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |  |

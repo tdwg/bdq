@@ -130,9 +130,9 @@ The following namespace abbreviations are used in this document:
 | Label (Term) | Definition | Example | Normative | 
 | ------------ | ---------- | ------- | --------- |
 | Comments (rdfs:comment) | A description of the subject resource. | Information elements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete Acted Upon or Consulted information elements. | non-normative |
-| Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. | An InformationElement described in abstract terms and not linked with one or more concrete terms. | normative |
+| Definition (skos:definition) | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | An InformationElement described in abstract terms and not linked with one or more concrete terms. | normative |
 | Term Version IRI (rdf:about) | The HTTP IRI that identifies the version of the term that is currently in force. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
-| Label (rdfs:label) | A human-readable name for the subject. | Abstract Information Element | normative |
+| Label (rdfs:label) | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Abstract Information Element | normative |
 | Preferred Label (skos:prefLabel) | The preferred lexical label for a resource, in a given language. | Abstract Information Element | non-normative |
 | Type (rdf:type) | The subject is an instance of a class. | http://www.w3.org/2002/07/owl#Class | normative |
 | Term IRI (dcterms:isVersionOf) | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement | normative |
