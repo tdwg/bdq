@@ -63,7 +63,7 @@ The bdqcore: vocabulary includes:
 
 In addition, A users guide to the use of the BDQ Core Tests is provided in the 
 - [BDQ Core User's Guide](../guide/users/index.md) and
-- A guide to implemetation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
+- A guide to implementation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
 
 ### 1.3.1 Term List Distributions for BDQ Core
 
@@ -83,7 +83,7 @@ Portions of section 2 are normative and portions are non-normative.
 
 Section 3 is normative.
 
-Any sentence or phrase begining with "For example" or "e.g." is non-normative.
+Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 Section 4 is non-normative.
 
@@ -119,11 +119,11 @@ The following namespace abbreviations are used in this document:
 
 The Authors acknowledge the centrality of the work of:
 
-- The TDWG Data Quality Interest Group - Task Group 1 [Framework on Data Qualilty](https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
+- The TDWG Data Quality Interest Group - Task Group 1 [Framework on Data Quality](https://tdwg.github.io/bdq/tg1/site/) that provided the Framework for the BDQ Core Tests.
 - The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3) for providing recommendations on use cases.
 - The TDWG [Annotations Interest Group](https://github.com/tdwg/annotations) as to how the Test results may be reported against records. 
   
-The terminology of BDQ Core is based primarily on the Fittness for use Framework (Viega 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them.  See the [list of vocabularies](../vocabularies/index.md).
+The terminology of BDQ Core is based primarily on the Fitness for use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them.  See the [list of vocabularies](../vocabularies/index.md).
 
 BDQ Core Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as bdqffdq:InformationElements as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on data sets and on unique values. Tests are paired in that all Amendment Tests are matched with a corresponding Validation Test that assesses some aspect of data quality. An Amendment Test may propose improvements to term values but BDQ Core recommends that all improvements be evaluated before application.
 
@@ -194,7 +194,7 @@ In each case, a Response.comment MUST be present with text explaining to consume
 
 #### 2.2.4 Measure Tests (normative) 
 
-Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses how measure fittnes of data for a data quality need in the abstract) with an instance of bdqffdq:MeasurementMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality is to be measured).
+Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses how measure fitness of data for a data quality need in the abstract) with an instance of bdqffdq:MeasurementMethod which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality is to be measured).
 
 Measure Tests return a Response.result of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE".  Measure Tests may directly measure properties of data.  Alternatively, Measure Tests may measure the outputs of other Tests, for example, a Measure may count the number of Response.results from all Validation Tests run on a single record (bdqffdq:SingleRecord) that are COMPLIANT.
 
@@ -219,7 +219,7 @@ Tests may operate on a bdqffdq:SingleRecord (e.g. one row of Flat Darwin Core) o
 
 The bdqffdq Framework allows for tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords.  In BDQ Core, the only MultiRecord Tests that have been defined are Measures.  We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).   
 
-The focus of the BDQ Core Tests are the SingleRecord Tests.  To allow for standard means for sumarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures. 
+The focus of the BDQ Core Tests are the SingleRecord Tests.  To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures. 
 
 In BDQ Core, for each SingleRecord Validation Test, we have defined a MultiRecord Measure Test that returns a Response.result="COMPLETE" when all records in the MultiRecord have a Response.result="COMPLIANT", and a Response.result="NOT_COMPLETE" when they are not. Under Quality Assurance, these Measure Tests are the key criterion for identifying data which have quality for a Use Case. Under Quality Assurance, a MultiRecord is filtered to remove records that do not fit the MultiRecord Measure Tests for completeness, such that a filtered MultiRecord has Response.result="COMPLETE" for all MultiRecord Measure Tests.
 
@@ -352,7 +352,7 @@ Values of bdqffdq:hasAuthoritiesDefaults SHOULD be a text string listing paramet
 
 The bdqffdq:hasAuthoritiesDefaults data property MAY be used without corresponding bdqffdq:Arguments and bdqffdq:Parameters when a Test is not parameterized, but a bdq:sourceAuthority is mentioned within a bdqffdq:hasExpectedResponse for the bdqffdq:Specification and the bdqffdq:hasAuthoritiesDefaults provides details on this source authority.  This usage allows for simpler and easier to read expected responses.
 
-Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-Reading-a-Specification) of the implementers guide contains additional guidance for handling parameters in BDQ Core Test implementations.
+Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-Reading-a-Specification) of the BDQ Core Implementer's Guide contains additional guidance for handling parameters in BDQ Core Test implementations.
 
 #### 3.3.1 Parameter Examples (non-normative)
 
@@ -388,7 +388,7 @@ Example RDF fragment showing use of Arguments and hasAuthoritiesDefaults:
         ...
     </rdf:Description>
 
-Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), where bdqffdq:hasAuthoritiesDefaults is present to provide a bdq:sourceAuthority for the Specificaiton, but the Test is not parameterized, so no hasArgument properties are present: 
+Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), where bdqffdq:hasAuthoritiesDefaults is present to provide a bdq:sourceAuthority for the Specification, but the Test is not parameterized, so no hasArgument properties are present: 
 
     <hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
     <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
