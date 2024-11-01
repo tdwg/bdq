@@ -306,8 +306,8 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 - [Introduction](../intro/index.md) This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. 
 - Guides
   - [Quick Reference Guide](../guide/users/index.md) This document is for all users.
-  - [Users Guide](../guide/users/index.md) This document is for consumers of data quality reports.
-  - [Implementers Guide](../guide/implementers/index.md) This document is for software developers needing a technical understanding of the BDQ Core Tests.
+  - [BDQ Core User's Guide](../guide/users/index.md) This document is for consumers of data quality reports.
+  - [BDQ Core Implementer's Guide](../guide/implementers/index.md) This document is for software developers needing a technical understanding of the BDQ Core Tests.
   - [bdqffdq Framework Guide](../guide/bdqffdq/index.md) This document is for those needing a technical understanding of the Framework Ontology (the bdqffdq: vocabulary).
 - Vocabularies
   - [Vocabulary Landing page](../vocabularies/index.md) This document is for those needing a technical understanding of BDQ Core and readers seeking to navigate the BDQ Core standard.
