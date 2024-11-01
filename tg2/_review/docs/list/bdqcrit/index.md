@@ -98,13 +98,13 @@ The following namespace abbreviations are used in this document:
 | Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness |
 | Controlled Value () | normative | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | Complete |
 | Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data are present and sufficiently comprehensive for use. |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/bdqcrit/terms/ Complete-2024-09-30](https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30) |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcrit/terms/ Complete-2024-09-30](https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30) |
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Complete |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. | Complete |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:Criterion |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/bdqcrit/terms/ Complete](https://rs.tdwg.org/bdqcrit/terms/Complete) |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcrit/terms/ Complete](https://rs.tdwg.org/bdqcrit/terms/Complete) |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | Complete |
 
 

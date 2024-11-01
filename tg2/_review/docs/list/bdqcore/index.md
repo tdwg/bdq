@@ -148,8 +148,8 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/bdqcore/terms/version/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20](https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20) |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/bdqcore/terms/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e](https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcore/terms/version/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20](https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20) |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcore/terms/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e](https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e |
 | Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the test. | 2024-09-04 |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the test. | AMENDMENT_COORDINATES_FROM_VERBATIM |
@@ -165,7 +165,7 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 | ExpectedResponse (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the test must be implemented. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. |
 | Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and test responses for a pass case and a fail case. | [dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",  dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"],[dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 0390210 7377243", dwc:verbatimSRS="EPSG:32754", dwc:verbatimCoordinateSystem="decimal degrees", dwc:decimalLatitude="", dwc:decimalLongitude="":: Response.status=NOT_AMENDED, Response.result="", Response.comment="In the wrong coordinate system"] |
 | Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator |
-| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L324](https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324) |
+| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/master/ src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L324](https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324) |
 | Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote | TG2 Amendment SPACE Test Completeness CORE |
 | InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum |
 | InformationElements Consulted (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:verbatimCoordinateSystem,dwc:verbatimSRS |
@@ -631,10 +631,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/32</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957</td>
 		</tr>
@@ -770,10 +766,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/54</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef</td>
 		</tr>
@@ -895,10 +887,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/41</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1032,10 +1020,6 @@ Including MultiRecord Measures
 			<td>7ecc692d-e65f-4ea5-9d54-04421ec96ab4</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/133</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:d040474f-edc7-47b8-80a0-3a3859359897</td>
 		</tr>
@@ -1161,10 +1145,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>1b66a16a-5e76-4eca-a400-d097ac136ac1</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/63</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1298,10 +1278,6 @@ Including MultiRecord Measures
 			<td>82350b56-1855-4b5a-8b44-9040efb0bf05</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/73</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af</td>
 		</tr>
@@ -1415,10 +1391,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/48</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1548,10 +1520,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/26</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:0836e914-75d8-4cda-a39f-f21a08382732</td>
 		</tr>
@@ -1673,10 +1641,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/127</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -1810,10 +1774,6 @@ Including MultiRecord Measures
 			<td>ff9e9459-d1a5-43a6-ada9-8be41772b711</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/276</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea</td>
 		</tr>
@@ -1939,10 +1899,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>17d785ee-6ac9-4ab4-9806-f4a2b0d8bbf1</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/269</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2076,10 +2032,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/52</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:2bc15408-d0d0-4166-b6a6-6fdba5704379</td>
 		</tr>
@@ -2209,10 +2161,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/86</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2346,10 +2294,6 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/93</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:8ca96a50-f1f5-4a4e-853e-755cc5aa82a7</td>
 		</tr>
@@ -2481,10 +2425,6 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/132</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:cca7732f-c336-47b0-9d69-4514d39f5950</td>
 		</tr>
@@ -2610,10 +2550,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/61</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -2747,10 +2683,6 @@ Including MultiRecord Measures
 			<td>7fd3889a-0d1d-4054-8e68-807cfa5410f2</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/102</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98</td>
 		</tr>
@@ -2874,10 +2806,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/60</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429</td>
 		</tr>
@@ -2997,10 +2925,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/55</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:2f73a662-b833-44ad-942c-a87f82262b7c</td>
 		</tr>
@@ -3118,10 +3042,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/68</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3245,10 +3165,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/128</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3378,10 +3294,6 @@ Including MultiRecord Measures
 			<td>c72cfe4a-a500-4266-84be-1faa6673c022</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd</td>
 		</tr>
@@ -3507,10 +3419,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>c3346048-0cd3-4efe-9544-89dd8f0482ea</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/115</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3642,10 +3550,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>0a7b3629-ecd9-47d2-b672-44ef47e03f7b</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/278</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3781,10 +3685,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>0127389b-a68d-4393-a84c-aa9c690bd0e7</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/71</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -3926,10 +3826,6 @@ Including MultiRecord Measures
 			<td>b1f2699b-3b7e-41a1-9e5c-f670559664ba</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/57</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:316da14e-9477-4319-bd2c-c201f3b0f461</td>
 		</tr>
@@ -4059,10 +3955,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>e35dd18a-9c69-4aef-9b70-3d36d7eb6bd4</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/284</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
@@ -4196,10 +4088,6 @@ Including MultiRecord Measures
 			<td>ef83a8c4-62f3-4e18-b589-07bc6f178cd7</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/163</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd</td>
 		</tr>
@@ -4331,10 +4219,6 @@ Including MultiRecord Measures
 			<td>a10eb348-7fc5-4b96-88e3-619300cb0079</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/286</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:AmendmentMethod</td>
 			<td>urn:uuid:05104b96-267c-432a-9f30-88552404763e</td>
 		</tr>
@@ -4461,10 +4345,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/29</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -4583,10 +4463,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>9c0a82d5-4b24-4160-a000-ee9429bef8f7,2c441806-b56b-4252-9944-e331f9f3fee6</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/287</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:IssueMethod</td>
@@ -4708,10 +4584,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/72</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:IssueMethod</td>
 			<td>urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3</td>
 		</tr>
@@ -4823,10 +4695,6 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/94</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:IssueMethod</td>
 			<td>urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75</td>
 		</tr>
@@ -4932,10 +4800,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/65</td>
 		</tr>
 	</tbody>
 </table>
@@ -5044,10 +4908,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/140</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -5142,10 +5002,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/135</td>
 		</tr>
 	</tbody>
 </table>
@@ -5242,10 +5098,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/31</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -5340,10 +5192,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/134</td>
 		</tr>
 	</tbody>
 </table>
@@ -5444,10 +5292,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -5542,10 +5386,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 	</tbody>
 </table>
@@ -5650,10 +5490,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -5756,10 +5592,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 	</tbody>
 </table>
@@ -5864,10 +5696,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -5962,10 +5790,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 	</tbody>
 </table>
@@ -6070,10 +5894,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -6168,10 +5988,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 	</tbody>
 </table>
@@ -6272,10 +6088,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -6370,10 +6182,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 	</tbody>
 </table>
@@ -6478,10 +6286,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -6577,10 +6381,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -6675,10 +6475,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 	</tbody>
 </table>
@@ -6783,10 +6579,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -6890,10 +6682,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -6988,10 +6776,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 	</tbody>
 </table>
@@ -7091,10 +6875,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 	</tbody>
 </table>
@@ -7199,10 +6979,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -7306,10 +7082,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -7405,10 +7177,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -7503,10 +7271,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 	</tbody>
 </table>
@@ -7606,10 +7370,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 	</tbody>
 </table>
@@ -7714,10 +7474,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -7812,10 +7568,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 	</tbody>
 </table>
@@ -7912,10 +7664,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -8010,10 +7758,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 	</tbody>
 </table>
@@ -8110,10 +7854,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -8208,10 +7948,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 	</tbody>
 </table>
@@ -8308,10 +8044,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -8406,10 +8138,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 	</tbody>
 </table>
@@ -8514,10 +8242,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -8612,10 +8336,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 	</tbody>
 </table>
@@ -8720,10 +8440,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -8819,10 +8535,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -8917,10 +8629,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 	</tbody>
 </table>
@@ -9025,10 +8733,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -9124,10 +8828,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -9222,10 +8922,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 	</tbody>
 </table>
@@ -9330,10 +9026,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -9437,10 +9129,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -9535,10 +9223,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 	</tbody>
 </table>
@@ -9643,10 +9327,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -9741,10 +9421,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 	</tbody>
 </table>
@@ -9849,10 +9525,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -9955,10 +9627,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 	</tbody>
 </table>
@@ -10063,10 +9731,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -10170,10 +9834,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -10268,10 +9928,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 	</tbody>
 </table>
@@ -10368,10 +10024,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -10466,10 +10118,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 	</tbody>
 </table>
@@ -10566,10 +10214,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -10664,10 +10308,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 	</tbody>
 </table>
@@ -10772,10 +10412,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -10878,10 +10514,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 	</tbody>
 </table>
@@ -10986,10 +10618,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -11092,10 +10720,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 	</tbody>
 </table>
@@ -11200,10 +10824,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -11298,10 +10918,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 	</tbody>
 </table>
@@ -11398,10 +11014,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -11497,10 +11109,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -11595,10 +11203,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 	</tbody>
 </table>
@@ -11703,10 +11307,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -11801,10 +11401,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 	</tbody>
 </table>
@@ -11909,10 +11505,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -12007,10 +11599,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 	</tbody>
 </table>
@@ -12115,10 +11703,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -12213,10 +11797,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 	</tbody>
 </table>
@@ -12321,10 +11901,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -12427,10 +12003,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 	</tbody>
 </table>
@@ -12535,10 +12107,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -12634,10 +12202,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -12732,10 +12296,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 	</tbody>
 </table>
@@ -12836,10 +12396,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -12934,10 +12490,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 	</tbody>
 </table>
@@ -13042,10 +12594,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -13148,10 +12696,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
 		</tr>
 	</tbody>
 </table>
@@ -13256,10 +12800,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -13354,10 +12894,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 	</tbody>
 </table>
@@ -13462,10 +12998,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -13560,10 +13092,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 	</tbody>
 </table>
@@ -13664,10 +13192,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -13762,10 +13286,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 	</tbody>
 </table>
@@ -13870,10 +13390,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -13969,10 +13485,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -14067,10 +13579,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 	</tbody>
 </table>
@@ -14175,10 +13683,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -14282,10 +13786,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -14380,10 +13880,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 	</tbody>
 </table>
@@ -14483,10 +13979,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 	</tbody>
 </table>
@@ -14591,10 +14083,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -14698,10 +14186,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -14797,10 +14281,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -14895,10 +14375,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
 		</tr>
 	</tbody>
 </table>
@@ -14998,10 +14474,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 	</tbody>
 </table>
@@ -15106,10 +14578,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -15204,10 +14672,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 	</tbody>
 </table>
@@ -15304,10 +14768,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -15402,10 +14862,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
 		</tr>
 	</tbody>
 </table>
@@ -15502,10 +14958,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -15600,10 +15052,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
 		</tr>
 	</tbody>
 </table>
@@ -15700,10 +15148,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -15798,10 +15242,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 	</tbody>
 </table>
@@ -15906,10 +15346,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16004,10 +15440,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 	</tbody>
 </table>
@@ -16112,10 +15544,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16211,10 +15639,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16309,10 +15733,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 	</tbody>
 </table>
@@ -16417,10 +15837,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16516,10 +15932,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16614,10 +16026,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 	</tbody>
 </table>
@@ -16722,10 +16130,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16829,10 +16233,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -16927,10 +16327,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 	</tbody>
 </table>
@@ -17035,10 +16431,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -17133,10 +16525,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 	</tbody>
 </table>
@@ -17241,10 +16629,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -17347,10 +16731,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 	</tbody>
 </table>
@@ -17455,10 +16835,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -17562,10 +16938,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -17660,10 +17032,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 	</tbody>
 </table>
@@ -17760,10 +17128,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -17858,10 +17222,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 	</tbody>
 </table>
@@ -17958,10 +17318,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -18056,10 +17412,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 	</tbody>
 </table>
@@ -18164,10 +17516,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -18270,10 +17618,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 	</tbody>
 </table>
@@ -18378,10 +17722,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -18484,10 +17824,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 	</tbody>
 </table>
@@ -18592,10 +17928,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -18690,10 +18022,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
 		</tr>
 	</tbody>
 </table>
@@ -18790,10 +18118,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -18889,10 +18213,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -18987,10 +18307,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 	</tbody>
 </table>
@@ -19095,10 +18411,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -19193,10 +18505,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 	</tbody>
 </table>
@@ -19301,10 +18609,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -19399,10 +18703,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 	</tbody>
 </table>
@@ -19507,10 +18807,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -19605,10 +18901,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 	</tbody>
 </table>
@@ -19713,10 +19005,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -19819,10 +19107,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 	</tbody>
 </table>
@@ -19927,10 +19211,6 @@ Including MultiRecord Measures
 			<td>Guids for Arguments</td>
 			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -20026,10 +19306,6 @@ Including MultiRecord Measures
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -20124,10 +19400,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 	</tbody>
 </table>
@@ -20235,10 +19507,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20354,10 +19622,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20489,10 +19753,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -20634,10 +19894,6 @@ Including MultiRecord Measures
 			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704</td>
 		</tr>
@@ -20769,10 +20025,6 @@ Including MultiRecord Measures
 			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:315a198d-3811-40dd-918a-756f598f3294</td>
 		</tr>
@@ -20890,10 +20142,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21031,10 +20279,6 @@ Including MultiRecord Measures
 			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67</td>
 		</tr>
@@ -21148,10 +20392,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21285,10 +20525,6 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6</td>
 		</tr>
@@ -21402,10 +20638,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21539,10 +20771,6 @@ Including MultiRecord Measures
 			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60</td>
 		</tr>
@@ -21662,10 +20890,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071</td>
 		</tr>
@@ -21775,10 +20999,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -21908,10 +21128,6 @@ Including MultiRecord Measures
 			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c</td>
 		</tr>
@@ -22039,10 +21255,6 @@ Including MultiRecord Measures
 			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f</td>
 		</tr>
@@ -22160,10 +21372,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22287,10 +21495,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -22432,10 +21636,6 @@ Including MultiRecord Measures
 			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0</td>
 		</tr>
@@ -22567,10 +21767,6 @@ Including MultiRecord Measures
 			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9</td>
 		</tr>
@@ -22698,10 +21894,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff</td>
 		</tr>
@@ -22825,10 +22017,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3</td>
 		</tr>
@@ -22950,10 +22138,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23099,10 +22283,6 @@ Including MultiRecord Measures
 			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</td>
 		</tr>
@@ -23220,10 +22400,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23353,10 +22529,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:bb12babf-ca13-4289-9a3d-dde52bb8aff8</td>
 		</tr>
@@ -23480,10 +22652,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</td>
 		</tr>
@@ -23597,10 +22765,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -23718,10 +22882,6 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef</td>
 		</tr>
@@ -23837,10 +22997,6 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1</td>
 		</tr>
@@ -23950,10 +23106,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24087,10 +23239,6 @@ Including MultiRecord Measures
 			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68</td>
 		</tr>
@@ -24216,10 +23364,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24353,10 +23497,6 @@ Including MultiRecord Measures
 			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676</td>
 		</tr>
@@ -24480,10 +23620,6 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4</td>
 		</tr>
@@ -24605,10 +23741,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -24750,10 +23882,6 @@ Including MultiRecord Measures
 			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b</td>
 		</tr>
@@ -24871,10 +23999,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25002,10 +24126,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25139,10 +24259,6 @@ Including MultiRecord Measures
 			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532</td>
 		</tr>
@@ -25274,10 +24390,6 @@ Including MultiRecord Measures
 			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449</td>
 		</tr>
@@ -25387,10 +24499,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25524,10 +24632,6 @@ Including MultiRecord Measures
 			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260</td>
 		</tr>
@@ -25637,10 +24741,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -25774,10 +24874,6 @@ Including MultiRecord Measures
 			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2</td>
 		</tr>
@@ -25907,10 +25003,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -26044,10 +25136,6 @@ Including MultiRecord Measures
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436</td>
 		</tr>
@@ -26179,10 +25267,6 @@ Including MultiRecord Measures
 			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</td>
 		</tr>
@@ -26296,10 +25380,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -26421,10 +25501,6 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7</td>
 		</tr>
@@ -26534,10 +25610,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -26651,10 +25723,6 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:296e08b2-c044-4cef-930e-8d29c579c8d6</td>
 		</tr>
@@ -26764,10 +25832,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -26905,10 +25969,6 @@ Including MultiRecord Measures
 			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</td>
 		</tr>
@@ -27038,10 +26098,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -27175,10 +26231,6 @@ Including MultiRecord Measures
 			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:ffae8e47-2181-4a83-b1c7-d0a893e79b67</td>
 		</tr>
@@ -27308,10 +26360,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -27449,10 +26497,6 @@ Including MultiRecord Measures
 			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd</td>
 		</tr>
@@ -27568,10 +26612,6 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</td>
 		</tr>
@@ -27681,10 +26721,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -27806,10 +26842,6 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:f2f40350-4081-4402-8b2b-95f9ad8893a7</td>
 		</tr>
@@ -27923,10 +26955,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -28060,10 +27088,6 @@ Including MultiRecord Measures
 			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5</td>
 		</tr>
@@ -28189,10 +27213,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -28326,10 +27346,6 @@ Including MultiRecord Measures
 			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174</td>
 		</tr>
@@ -28443,10 +27459,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -28580,10 +27592,6 @@ Including MultiRecord Measures
 			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2</td>
 		</tr>
@@ -28697,10 +27705,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -28834,10 +27838,6 @@ Including MultiRecord Measures
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993</td>
 		</tr>
@@ -28967,10 +27967,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guids for Arguments</td>
 			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -29108,10 +28104,6 @@ Including MultiRecord Measures
 			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
-		</tr>
-		<tr>
 			<td>bdqffdq:ValidationMethod</td>
 			<td>urn:uuid:7922ab56-6eae-4257-9691-d55d24842274</td>
 		</tr>
@@ -29229,10 +28221,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>
@@ -29360,10 +28348,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>skos:historyNote</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>bdqffdq:ValidationMethod</td>

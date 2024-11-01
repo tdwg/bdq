@@ -148,6 +148,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                    # long string without spaces
                    if example.startswith('https://') or example.startswith('http://') : 
                        spacedExample = example[:example.rfind("/")] + "/ " + example[example.rfind("/")+1:]
+                       spacedExample = spacedExample.replace("/master/","/master/ ")
+                       spacedExample = spacedExample.replace("/rs.tdwg.org/","/rs.tdwg.org/ ")
                        example = "[{}]({})".format(spacedExample,example)
             else : 
                 example = ""
