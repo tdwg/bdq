@@ -119,7 +119,7 @@ Method:
   force: 'true'
   label: Method
   normative: 'true'
-  term: bdqffdq:Method
+  term: bdqffdq:DataQualityMethod
 MethodLabel:
   append: The label for the instance of the subclass of bdqffdq:Method for this test.
   force: 'true'
