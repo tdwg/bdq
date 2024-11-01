@@ -79,9 +79,9 @@ organized_in_categories = True
 # If organized in categories, the display_order list must contain the IRIs that are values of tdwgutility_organizedInClass
 # If not organized into categories, the value is irrelevant. There just needs to be one item in the list.
 
-display_order = ['Type']
-display_label = ['Type'] # these are the section labels for the categories in the page
-display_comments = [''] # these are the comments about the category to be appended following the section labels
+display_order = ['Validation','Amendment','Issue','Measure'] # categories to split into.
+display_label = ['Validation Tests','Amendment Tests','Issue Tests','Measure Tests'] # these are the section labels for the categories in the page
+display_comments = ['','','','Including MultiRecord Measures'] # these are the comments about the category to be appended following the section labels
 display_id = ['Type'] # these are the fragment identifiers for the associated sections for the categories
 
 # ---------------
@@ -180,7 +180,7 @@ for term in termLists:
             data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
             frame = pd.read_csv(data_url, na_filter=False)
             for index,row in frame.iterrows():
-            # PJM: TODO: just use column list?
+                # PJM: TODO: just use column list?
                 # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
                 row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['SpecificationGuid'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"] ]
                 # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
@@ -215,57 +215,17 @@ for term in termLists:
     # generate the index of terms grouped by category and sorted alphabetically by lowercase term local name
     # ---------------
     
-    print('Generating term index by CURIE')
-    text = '### 3.1 Index By Term Name\n\n'
-    text += '(See also [3.2 Index By Label](#32-index-by-label))\n\n'
+    # index by name, which is the uuid, not helpful for humans.
+    index_by_name = ""
     
-    text += '**Classes**\n'
-    text += '\n'
-    for row_index,row in terms_sorted_by_localname.iterrows():
-        if row['Type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
-            curie = row['pref_ns_prefix'] + ":" + row['term_localName']
-            curie_anchor = curie.replace(':','_')
-            text += '[' + curie + '](#' + curie_anchor + ') |\n'
-    text = text[:len(text)-2] # remove final trailing vertical bar and newline
-    text += '\n\n' # put back removed newline
-    
-    for category in range(0,len(display_order)):
-        text += '**' + display_label[category] + '**\n'
-        text += '\n'
-        if organized_in_categories:
-            filtered_table = terms_sorted_by_localname[terms_sorted_by_localname['Type']==display_order[category]]
-            filtered_table.reset_index(drop=True, inplace=True)
-        else:
-            filtered_table = terms_sorted_by_localname
-            
-        for row_index,row in filtered_table.iterrows():
-            if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
-                # curie = row['pref_ns_prefix'] + ":" + row['term_localName']
-                ## PJM: Assuming term is prefix for all terms in vocabulary file
-                curie = term + ":" + row['term_localName']
-                #curie = "bdqdim:" + row['term_localName']
-                curie_anchor = curie.replace(':','_')
-                text += '[' + curie + '](#' + curie_anchor + ') |\n'
-        text = text[:len(text)-2] # remove final trailing vertical bar and newline
-        text += '\n\n' # put back removed newline
-    
-    index_by_name = text
-    
-    #print(index_by_name)
-    print()
-    
-    # ---------------
+	# ---------------
     # generate the index of terms by label
     # ---------------
     
     print('Generating term index by label')
     text = '\n\n'
     
-    # Comment out the following two lines if there is no index by local names
-    text = '### 3.2 Index By Label\n\n'
-    text += '(See also [3.1 Index By Term Name](#31-index-by-term-name))\n\n'
-    
-    text += '**Tests**\n'
+    # text += '**Tests**\n'
     text += '\n'
     for row_index,row in terms_sorted_by_label.iterrows():
         curie = "bdqcore:" + row['term_localName']
@@ -274,9 +234,13 @@ for term in termLists:
     text = text[:len(text)-2] # remove final trailing vertical bar and newline
     text += '\n\n' # put back removed newline
     
+    category_counter = 0
     for category in range(0,len(display_order)):
         if organized_in_categories:
-            text += '**' + display_label[category] + '**\n'
+            category_counter = category_counter + 1
+            text += '### 3.' + str(category_counter) + ' '  + display_label[category] + '**\n'
+            if (display_comments[category]) : 
+               text += '\n' + display_comments[category] + '\n'
             text += '\n'
             filtered_table = terms_sorted_by_label[terms_sorted_by_label['Type']==display_order[category]]
             filtered_table.reset_index(drop=True, inplace=True)
@@ -284,13 +248,13 @@ for term in termLists:
             filtered_table = terms_sorted_by_label
             
         for row_index,row in filtered_table.iterrows():
-            if row_index == 0 or (row_index != 0 and row['label'] != filtered_table.iloc[row_index - 1].loc['label']): # this is a hack to prevent duplicate labels
-                if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
+            if row_index == 0 or (row_index != 0 and row['Label'] != filtered_table.iloc[row_index - 1].loc['Label']): # this is a hack to prevent duplicate labels
+                if row['Type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
                     # curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
                     ## PJM: Assuming term is prefix for all terms in vocabulary file
                     curie = term + ":" + row['term_localName']
                     curie_anchor = curie.replace(':','_')
-                    text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
+                    text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
         text = text[:len(text)-2] # remove final trailing vertical bar and newline
         text += '\n\n' # put back removed newline
     
@@ -343,7 +307,7 @@ for term in termLists:
             text += '\t\t\t<td>' + row['Label'] + '</td>\n'
             text += '\t\t</tr>\n'
             for column in column_list : 
-                if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column!="#" : 
+                if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column!="issueNumber" : 
                     if row[column] : 
                         text += '\t\t<tr>\n'
                         if column in term_concept_dictionary.keys() : 
