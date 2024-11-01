@@ -121,7 +121,7 @@ Method:
   normative: 'true'
   term: bdqffdq:DataQualityMethod
 MethodLabel:
-  append: The label for the instance of the subclass of bdqffdq:Method for this test.
+  append: The label for the instance of the subclass of DataQualityMethod for this test.
   force: 'true'
   label: Method label
   normative: 'false'
@@ -155,13 +155,13 @@ Specification:
   normative: 'true'
   term: bdqffdq:Specification
 SpecificationLabel:
-  append: The label for the instance of the bdqffdq:Specification for this test
+  append: The label for the instance of the Specification for this test
   force: 'true'
   label: Specification label
   normative: 'false'
   term: rdfs:label
 Type:
-  append: The type of the test, one of the subtypes of bdqffdq:DataQualityNeed.
+  append: The type of the test, one of the subtypes of DataQualityNeed.
   label: Type
   normative: 'true'
   term: rdf:type
@@ -179,7 +179,7 @@ flags:
   normative: ''
   term: ''
 historyNoteUrl:
-  append: A link to the github issue that provided rationalle management recording a history (changes and comments) of the development of the test.
+  append: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the test.
   label: Developed As Github Issue
   normative: 'false'
   term: skos:historyNote
