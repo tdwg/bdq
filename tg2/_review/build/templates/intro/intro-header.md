@@ -229,6 +229,8 @@ There were many people who have made notable contributions at various times duri
 | iDigBio     | Integrated Digitized BioCollections                   |
 | IRI         | Internationalized Resource Identifier                 |
 | ISO         | International Standards Organization                  |
+| QA          | Quality Assurance                                     |
+| QC          | Quality Control                                       |
 | TDWG        | Biodiversity Information Standards                    |
 | TG1         | Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality |
 | TG2         | Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions |
