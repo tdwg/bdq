@@ -81,7 +81,7 @@ The bdqcore: vocabulary includes:
 - This document, a term-list for the vocabulary, containing the vocabulary terms and their metadata.
 - A [landing page](../bdqcore/index.md) document with normative guidance on the use of the bdqcore vocabulary.
 
-In addition, A users guide to the use of the BDQ Core Tests is provided in the [Users Guide](../guide/users/index.md) and a guide to implemetation of the BDQ Core Tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
+In addition, A users guide to the use of the BDQ Core Tests is provided in the [BDQ Core User's Guide](../guide/users/index.md) and a guide to implemetation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
 
 ### 1.4 Term List Distributions
 
@@ -160,8 +160,9 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 | Enhancement (bdqffdq:Enhancement) | Description of a means by which data could be improved. | FillInFrom | normative |
 | ExpectedResponse (bdqffdq:hasExpectedResponse) | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the test must be implemented. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. | normative |
 | Examples (skos:example) | An example of the use of a concept. In present context: Examples of input and output data and test responses for a pass case and a fail case. | [dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",  dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"],[dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 0390210 7377243", dwc:verbatimSRS="EPSG:32754", dwc:verbatimCoordinateSystem="decimal degrees", dwc:decimalLatitude="", dwc:decimalLongitude="":: Response.status=NOT_AMENDED, Response.result="", Response.comment="In the wrong coordinate system"] | non-normative |
-| Example Implementations (????) |  | Kurator | non-normative |
-| Example Implementation Source Code (????) |  | https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324 | non-normative |
+| Example Implementations (skos:note) | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator | non-normative |
+| Example Implementation Source Code (skos:note) | A general note, for any purpose. In present context: A link to code that implements the Test. | https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324 | non-normative |
+| Github Issue Labels (skos:note) | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote | TG2 Amendment SPACE Test Completeness CORE | non-normative |
 | InformationElements ActedUpon (bdqffdq:composedOf) | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum | normative |
 | InformationElements Consulted (bdqffdq:composedOf) | Specific vocabulary term that comprises a non-abstract Information Element. | dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:verbatimCoordinateSystem,dwc:verbatimSRS | normative |
 | Method (bdqffdq:Method) |  |  | normative |
@@ -175,7 +176,7 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 | Specification label (rdfs:label) | A human-readable name for the subject. In present context: The label for the instance of the bdqffdq:Specification for this test |  | non-normative |
 | Type (rdf:type) | The subject is an instance of a class. In present context: The type of the test, one of the subtypes of bdqffdq:DataQualityNeed. | Amendment | normative |
 | Use Cases (bdqffdq:hasUseCase) | Relates a Policy to a UseCase. In present context: One or more Use Cases where this test would apply. | bdq:Spatial-Temporal_Patterns, bdq:Record-Management | non-normative |
-| Developed As Github Issue (skos:historyNote) | A note about the past state/use/meaning of a concept. In present context: A link to the github issue that provides a history (changes and comments) of the development of the test. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |
+| Developed As Github Issue (skos:historyNote) | A note about the past state/use/meaning of a concept. In present context: A link to the github issue that provided rationalle management recording a history (changes and comments) of the development of the test. | https://api.github.com/repos/tdwg/bdq/issues/32 |  |
 
 
 <!--- TODO: Confirm that metadata for 1.9 has these values ---> 

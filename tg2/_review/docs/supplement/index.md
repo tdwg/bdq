@@ -89,7 +89,7 @@ This document is relevant to curators, aggregators, data publishers, data analys
 
 ### 1.3 Associated Documents
 
-This document provides practical information that goes beyond the normative guidance in the [Users Guide](../guide/users/index.md) and [Implemeters Guide](../guide/implementers/index.md) for those who wish to use or implement BDQ Core.
+This document provides practical information that goes beyond the normative guidance in the [BDQ Core Users Guide](../guide/users/index.md) and [BDQ Core Implemeters Guide](../guide/implementers/index.md) for those who wish to use or implement BDQ Core.
 
 ### 1.4 Status of the content of this document
 
@@ -147,25 +147,25 @@ The following issues describing potential tests were tagged as [DO NOT IMPLEMENT
 
 | Issue | Name | Description |
 | ----- | ---- | ----------- |
-| [274](https://github.com/tdwg/bdq/issues/274) | VALIDATION_MODIFIED_INRANGE | Is the value of dcterms:modified entirely with the Parameter Range? |
-| [266](https://github.com/tdwg/bdq/issues/266) | VALIDATION_WATERBODY_NOTEMPTY | Is there a value in dwc:waterbody? |
-| [231](https://github.com/tdwg/bdq/issues/231) | VALIDATION_IDENTIFICATIONQUALIFIER_NOTEMPTY | Is there a value in dwc:identificationQualifier? |
-| [141](https://github.com/tdwg/bdq/issues/141) | VALIDATION_YEAR_STANDARD | Can the value for year be interpreted as a valid year? |
-| [139](https://github.com/tdwg/bdq/issues/139) | VALIDATION_GEOGRAPHY_STANDARD | Can the individual values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality be unambiguously resolved from bdq:sourceAuthority? |
-| [129](https://github.com/tdwg/bdq/issues/129) | AMENDMENT_YEAR_STANDARDIZED | Attempt to amend the year |
-| [118](https://github.com/tdwg/bdq/issues/118) | AMENDMENT_GEOGRAPHY_STANDARDIZED | Propose amendment to one or more of the values dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality using bdq:sourceAuthority. |
-| [100](https://github.com/tdwg/bdq/issues/100) | AMENDMENT_MINDEPTHMAXDEPTH_TRANSPOSED | Attempt to transpose minimum and maximum depth if minimum depth is greater than maximum depth |
-| [95](https://github.com/tdwg/bdq/issues/95) | VALIDATION_GEOGRAPHY_CONSISTENT | Is the combination of the values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality consistent with the bdq:sourceAuthority? |
-| [90](https://github.com/tdwg/bdq/issues/90) | AMENDMENT_KINGDOM_STANDARDIZED | Can the value for kingdom be standardized against the source authority? |
-| [89](https://github.com/tdwg/bdq/issues/89) | ISSUE_DECIMALLATITUDEDECIMALLONGITUDE_CONVERSIONFAILED | Latitude and longitude could not be converted using the default geodetic datum |
-| [80](https://github.com/tdwg/bdq/issues/80) | AMENDMENT_PHYLUM_STANDARDIZED | Can the value of dwc:phylum be standardized using the Source Authority? |
 | [53](https://github.com/tdwg/bdq/issues/53) | AMENDMENT_CLASS_STANDARDIZED | Can the value of dwc:class be standardized using the Source Authority? |
-| [44](https://github.com/tdwg/bdq/issues/44) | AMENDMENT_MINELEVATIONMAXELEVATION_TRANSPOSED | If \"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters, can they be meaningfully swapped? |
-| [37](https://github.com/tdwg/bdq/issues/37) | ISSUE_DAYMONTH_SWAPPED | Is it likely that the day and month have been swapped? |
-| [35](https://github.com/tdwg/bdq/issues/35) | MEASURE_VALIDATIONTESTS_RUN | Total number of tests of output type Validation that have been attempted to have been run against the record |
 | [34](https://github.com/tdwg/bdq/issues/34) | AMENDMENT_DAYMONTH_TRANSPOSED | Swap dwc:month and dwc:day if dwc:month is greater than 12 and dwc:day is less than 12. |
 | [27](https://github.com/tdwg/bdq/issues/27) | AMENDMENT_FAMILY_STANDARDIZED | Can the value of dwc:family be standardized using the Source Authority? |
+| [118](https://github.com/tdwg/bdq/issues/118) | AMENDMENT_GEOGRAPHY_STANDARDIZED | Propose amendment to one or more of the values dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality using bdq:sourceAuthority. |
+| [90](https://github.com/tdwg/bdq/issues/90) | AMENDMENT_KINGDOM_STANDARDIZED | Can the value for kingdom be standardized against the source authority? |
+| [100](https://github.com/tdwg/bdq/issues/100) | AMENDMENT_MINDEPTHMAXDEPTH_TRANSPOSED | Attempt to transpose minimum and maximum depth if minimum depth is greater than maximum depth |
+| [44](https://github.com/tdwg/bdq/issues/44) | AMENDMENT_MINELEVATIONMAXELEVATION_TRANSPOSED | If \"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters, can they be meaningfully swapped? |
 | [25](https://github.com/tdwg/bdq/issues/25) | AMENDMENT_ORDER_STANDARDIZED | Can the value of dwc:order be standardized using the Source Authority? |
+| [80](https://github.com/tdwg/bdq/issues/80) | AMENDMENT_PHYLUM_STANDARDIZED | Can the value of dwc:phylum be standardized using the Source Authority? |
+| [129](https://github.com/tdwg/bdq/issues/129) | AMENDMENT_YEAR_STANDARDIZED | Attempt to amend the year |
+| [37](https://github.com/tdwg/bdq/issues/37) | ISSUE_DAYMONTH_SWAPPED | Is it likely that the day and month have been swapped? |
+| [89](https://github.com/tdwg/bdq/issues/89) | ISSUE_DECIMALLATITUDEDECIMALLONGITUDE_CONVERSIONFAILED | Latitude and longitude could not be converted using the default geodetic datum |
+| [35](https://github.com/tdwg/bdq/issues/35) | MEASURE_VALIDATIONTESTS_RUN | Total number of tests of output type Validation that have been attempted to have been run against the record |
+| [95](https://github.com/tdwg/bdq/issues/95) | VALIDATION_GEOGRAPHY_CONSISTENT | Is the combination of the values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality consistent with the bdq:sourceAuthority? |
+| [139](https://github.com/tdwg/bdq/issues/139) | VALIDATION_GEOGRAPHY_STANDARD | Can the individual values of the terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality be unambiguously resolved from bdq:sourceAuthority? |
+| [231](https://github.com/tdwg/bdq/issues/231) | VALIDATION_IDENTIFICATIONQUALIFIER_NOTEMPTY | Is there a value in dwc:identificationQualifier? |
+| [274](https://github.com/tdwg/bdq/issues/274) | VALIDATION_MODIFIED_INRANGE | Is the value of dcterms:modified entirely with the Parameter Range? |
+| [266](https://github.com/tdwg/bdq/issues/266) | VALIDATION_WATERBODY_NOTEMPTY | Is there a value in dwc:waterbody? |
+| [141](https://github.com/tdwg/bdq/issues/141) | VALIDATION_YEAR_STANDARD | Can the value for year be interpreted as a valid year? |
 
 ### 2.2 Use Case Development
 
@@ -177,7 +177,7 @@ Note that the evaluation of a Test can only take place within the context of a s
 
 ### 2.3 Data Quality Control and Data Quality Assurance
 
-The Fitness for Use Framework (Veiga et al. 2017) (bdqffdq: namespace) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose/use case, that is to assure that data used for some purpose are fit for that purpose.
+The Fitness for Use Framework (Veiga 2016, Veiga et al. 2017) (bdqffdq: namespace) draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data.  Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose/use case, that is to assure that data used for some purpose are fit for that purpose.
 
 The specification of the BDQ Core Tests within the Framework allows the same set of Tests to apply to both Data Quality Control (detecting and correcting errors) and Data Quality Assurance (filtering out problematic records to limit data to that with quality for meeting a particular need). The design of the Test Types Validations and Measures are intended to be agnostic as to whether their use is for Data Quality Control (finding problematic data), or Data Quality Assurance (filtering out NOT_COMPLIANT records).
 
@@ -644,12 +644,12 @@ The development of each Test, with documentation of why particular decisions wer
 | --- | ---------- | ------- |
 | Amendment | A label to indicate a Test of Type Amendment which may propose a change or addition to at least one [Darwin Core Term](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that is intended to improve one or more components of the quality of the record. | See bdqffdq:Amendment |
 | CORE | Conclusion that a Test is useful for evaluating biodiversity data quality as represented by the values of Darwin Core terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined, and straight forward to implement.  The CORE tests have become the tests defined as part of BDQ Core. |  |
-| DO NOT IMPLEMENT | Conclusion that a test is not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. |  |
+| DO NOT IMPLEMENT | Conclusion that a test is not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. | See Section 2.1.1 |
 | Immature/Incomplete | Conclusion that a test requires substantial work needed to develop the specification to the point where the test can be reliably and usefully implemented. This may indicate work that is wholly internal to the test specification such as developing a consistent Expected Response, or may indicate that external work is needed to develop an agreed vocabulary for values of the tested term. An immature/incomplete test may be made CORE, Supplementary, or DO NOT IMPLEMENT when relevant criteria are satisfied. |  |
 | ISO/DCMI STANDARD | A reference to either an ISO (International Organization for Standardization) Standard or a DCMI (Dublin Core Metadata Initiative) Standard |  |
 | Issue | A label to indicate a test of type ISSUE, where potential problems are flagged and may need examination by the user to determine if data have quality for their use. | see bdqffdq:Issue |
 | Measure | A label to indicate a Test of Type Measure that performs a measurement according to some data quality dimension. | See bdqffdq:Measure |
-|[NAME](#NAME) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
+| [NAME](#NAME) | A label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. |  |
 | NEEDS WORK | A label that indicates that an issue (Test) requires more work before finalising. | Supports a workflow of contributors identifying tests needing work with this tag, and review of issues with this tag in task group meetings.  |
 | [OTHER](#OTHER) | A label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. |  |
 | Parameterized | A label for a Test that a bdq:Parameter may be set prior to a Parameterized Test being run. |  |
@@ -728,7 +728,7 @@ Only a subset of all [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Cor
 
 **"References"** [non-normative]: A list of references that will assist in a thorough understanding of the Test, for example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
 
-**Example Implementations (Mechanisms)** [non-normative]: A link to one or more agencies that have an implementation of the Test, for example "https://github.com/FilteredPush/event_date_qc".
+**Example Implementations (Mechanisms)** [non-normative]: A link to one or more entities that have an implementation of the Test, for example "https://github.com/FilteredPush/event_date_qc".
 
 **Link to Specification Source Code** [non-normative]: A link to code that implements the Test, for example "https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169".
 

@@ -141,6 +141,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047"
@@ -312,6 +317,11 @@
         "@id": "urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -497,6 +507,11 @@
         "@id": "urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -691,6 +706,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1"
@@ -863,6 +883,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/1abbd3f02eb6c28129764defab78f72156972864/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L489"
+            },
+            {
+                "@value": "TG2 Amendment TIME Test Conformance ISO/DCMI STANDARD CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2024-09-16"
@@ -1023,6 +1054,11 @@
         "@id": "urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -1214,6 +1250,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4"
@@ -1388,6 +1429,11 @@
         "@id": "urn:uuid:104854fb-68a4-41cc-8fa5-1ab76fbaa93b",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Measure NAME SPACE TIME OTHER Test CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -1613,6 +1659,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-09-04"
@@ -1777,6 +1828,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L182)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4"
@@ -1908,6 +1970,17 @@
         "@id": "urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: FilteredPush event_date_qc [DwCEventDQ.validationEventdateInrange()](https://github.com/FilteredPush/event_date_qc/blob/c17d6e8340f7dd5dfa63a761d4e1cb66c126980a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2229)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -2094,6 +2167,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030"
@@ -2272,6 +2350,11 @@
         "@id": "urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -2515,6 +2598,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3"
@@ -2667,6 +2755,11 @@
         "@id": "urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test Conformance ISO/DCMI STANDARD CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -2826,6 +2919,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush: geo_ref_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: [geo_ref_qc DwCGeoRefDQ.validationCountryNotEmpty](https://github.com/FilteredPush/geo_ref_qc/blob/fcad4a3757db9bd6ba36fe41064ce015eeede2e3/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L478)"
+            },
+            {
+                "@value": "TG2 Validation SPACE CODED Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db"
@@ -2973,6 +3077,14 @@
         "@id": "urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FP-Akka"
+            },
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -3153,6 +3265,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a"
@@ -3284,6 +3401,11 @@
         "@id": "urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -3432,6 +3554,17 @@
         "@id": "urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L217)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Completeness CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -3602,6 +3735,17 @@
         "@id": "urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:geo_ref_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L80"
+            },
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -3813,6 +3957,11 @@
         "@id": "urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -4037,6 +4186,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: FilteredPush event_date_qc [DwCEventDQ.amendmentEventFromEventdate()](https://github.com/FilteredPush/event_date_qc/blob/89436b476975fb40ab2883c4e48717bdf957c0a8/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2010) unit test in [DwcEventDQTest](https://github.com/FilteredPush/event_date_qc/blob/89436b476975fb40ab2883c4e48717bdf957c0a8/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L1569)"
+            },
+            {
+                "@value": "TG2 Amendment TIME CODED Test Completeness ISO/DCMI STANDARD CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16"
@@ -4184,6 +4344,17 @@
         "@id": "urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324"
+            },
+            {
+                "@value": "TG2 Amendment SPACE Test Consistency CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -4343,6 +4514,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24"
@@ -4496,6 +4672,11 @@
         "@id": "urn:uuid:315a198d-3811-40dd-918a-756f598f3294",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Consistency CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -4771,6 +4952,14 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FP-KurationServices, Arctos, MCZbase, Symbiota"
+            },
+            {
+                "@value": "TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-09-04"
@@ -4950,6 +5139,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a"
@@ -5103,6 +5297,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c"
@@ -5235,6 +5434,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test VOCABULARY Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06"
@@ -5366,6 +5570,17 @@
         "@id": "urn:uuid:381b0edb-0fb4-4a8e-a77b-badcfa286961",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc [DwCEventDQ.amendmentEventdateStandardized()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L545) A minimal set of unit tests is in [DwCEventDQTestDefinitions](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwCEventDQTestDefinitions.java#L338)  unit tests for the underlying verbatim date extraction code are in [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L632) and [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L788)"
+            },
+            {
+                "@value": "TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -5523,6 +5738,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0"
@@ -5654,6 +5874,11 @@
         "@id": "urn:uuid:3c402f21-5347-419c-a720-8bbad7c38577",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -5812,6 +6037,17 @@
         "@id": "urn:uuid:3f868855-cc39-4a1b-8050-bfa246416a47",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)"
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc [DwCEventDQ.validationEventdateStandard() ](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L494)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -5980,6 +6216,17 @@
         "@id": "urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/029466e0dc5ef649e7768ab19f75c86094023fce/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1179 minimal set of unit tests at https://github.com/FilteredPush/event_date_qc/blob/029466e0dc5ef649e7768ab19f75c86094023fce/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L1149"
+            },
+            {
+                "@value": "TG2 Validation TIME Test Consistency CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -6163,6 +6410,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04"
@@ -6289,6 +6541,17 @@
         "@id": "urn:uuid:4c6a5522-ae8c-42d3-a396-8fc3aee49ef9",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: [event_date_qc  DwCOtherDateDQ.validationDateidentifiedStandard()](https://github.com/FilteredPush/event_date_qc/blob/be60f348609363d560fe16552bca4cc2975c0766/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L58)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -6524,6 +6787,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0"
@@ -6707,6 +6975,11 @@
         "@id": "urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment NAME Test VOCABULARY Completeness Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -6906,6 +7179,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue NAME SPACE TIME Test Resolution CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b"
@@ -7045,6 +7323,11 @@
         "@id": "urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -7265,6 +7548,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
@@ -7433,6 +7721,17 @@
         "@id": "urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/37d349b79f05a76eeb264bafe2315ce88493ecb7/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L181"
+            },
+            {
+                "@value": "TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -7613,6 +7912,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789"
@@ -7766,6 +8070,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241"
@@ -7913,6 +8222,11 @@
         "@id": "urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -8066,6 +8380,11 @@
         "@id": "urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -8225,6 +8544,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7"
@@ -8377,6 +8701,11 @@
         "@id": "urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -8535,6 +8864,17 @@
         "@id": "urn:uuid:7922ab56-6eae-4257-9691-d55d24842274",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc [DwCEventDQ.validationYearInrange()]( https://github.com/FilteredPush/event_date_qc/blob/07f5a338c595c345cd6a0243df511cc752386d99/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2163)  [unit test](https://github.com/FilteredPush/event_date_qc/blob/07f5a338c595c345cd6a0243df511cc752386d99/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L1945)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -8720,6 +9060,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc [DwCEventDQ.amendmentEventdateFromVerbatim()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L320) For a minimum set of unit tests see: [DwcEventDQTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L441), see also unit tests for underlying implementation in [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L632) and [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L788)"
+            },
+            {
+                "@value": "TG2 Amendment TIME CODED Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16"
@@ -8862,6 +9213,11 @@
         "@id": "urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Likeliness CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -9034,6 +9390,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/8740a00b52ef41cdda5fc7fa1689e5d95a23a94b/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1207 Unit test at  https://github.com/FilteredPush/event_date_qc/blob/8740a00b52ef41cdda5fc7fa1689e5d95a23a94b/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L881"
+            },
+            {
+                "@value": "TG2 Validation TIME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922"
@@ -9165,6 +9532,17 @@
         "@id": "urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush rec_occur_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/bef180191258796f777ece7e267040d2cb2b609d/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L630"
+            },
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -9330,6 +9708,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1003 unit tests at https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L493"
+            },
+            {
+                "@value": "TG2 Amendment TIME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-25"
@@ -9483,6 +9872,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue OTHER Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7"
@@ -9615,6 +10009,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502"
@@ -9742,6 +10141,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush:geo_ref_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: [geo_ref_qc DwCGeoRefDQ,validationCountrycodeNotempty()](https://github.com/FilteredPush/geo_ref_qc/blob/78afb5f2c8b8e2ebede1de48cb7a40fd1503748f/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1060)"
+            },
+            {
+                "@value": "TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62"
@@ -9868,6 +10278,11 @@
         "@id": "urn:uuid:940621f5-4f24-48de-8b36-256101ca4987",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test Completeness CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -10025,6 +10440,17 @@
         "@id": "urn:uuid:94510668-a59f-41d3-84bb-30cd9715cb62",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FP-Akka"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/FP-KurationServices/blob/master/src/main/java/org/filteredpush/kuration/util/SciNameServiceUtil.java#L97"
+            },
+            {
+                "@value": "TG2 Validation NAME Test Consistency CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -10187,6 +10613,11 @@
         "@id": "urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment SPACE Test Completeness Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -10352,6 +10783,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7"
@@ -10483,6 +10919,11 @@
         "@id": "urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -10735,6 +11176,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606"
@@ -10887,6 +11333,11 @@
         "@id": "urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -11052,6 +11503,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6"
@@ -11205,6 +11661,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e"
@@ -11357,6 +11818,11 @@
         "@id": "urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Likeliness Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -11516,6 +11982,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"
@@ -11673,6 +12144,17 @@
         "@id": "urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/rec_occur_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/86d413c2b193bb6983e0ad07b3dc0084de118af5/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L479"
+            },
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -11832,6 +12314,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7"
@@ -11964,6 +12451,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2"
@@ -12095,6 +12587,11 @@
         "@id": "urn:uuid:b1b04dc2-e74b-43f3-9f48-60ac08afcadb",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -12248,6 +12745,11 @@
         "@id": "urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -12455,6 +12957,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a"
@@ -12640,6 +13147,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: [event_date_qc DwCEventDQ.validationDayInrange()](https://github.com/FilteredPush/event_date_qc/blob/ddbc25e6a12e4cb1c3898cebc36a4225d2945296/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L809)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d"
@@ -12792,6 +13310,17 @@
         "@id": "urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc [DwCEventDQ.validationMonthStandard()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L673) Unit test in [DwcEventDQTest]{https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L242)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -12946,6 +13475,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: A potential minimal implementation is at: https://github.com/FilteredPush/event_date_qc/blob/238f234a4947b3c2820fb2fe3987326f9ead5e54/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1114 unit test at  https://github.com/FilteredPush/event_date_qc/blob/238f234a4947b3c2820fb2fe3987326f9ead5e54/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L824"
+            },
+            {
+                "@value": "TG2 Amendment TIME Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"
@@ -13077,6 +13617,17 @@
         "@id": "urn:uuid:c1af0cfd-311e-4982-922a-dc67e0c2c975",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/f224e5a1e6db81bc6ca725f520dd06a71fcfb54e/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1055 with unit test at https://github.com/FilteredPush/event_date_qc/blob/f224e5a1e6db81bc6ca725f520dd06a71fcfb54e/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L671 Internals of recognized string values (roman numerals, month names and abbreviations in multiple languages) use a combination of event_date_qc's DateUtils.cleanMonth() (see https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DateUtils.java#L2111  and Joda time's month recognition)"
+            },
+            {
+                "@value": "TG2 Amendment TIME Test Conformance CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -13236,6 +13787,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L832 Unit test at https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L609"
+            },
+            {
+                "@value": "TG2 Validation TIME Test Conformance CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671"
@@ -13393,6 +13955,17 @@
         "@id": "urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L888  Unit test at https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L609"
+            },
+            {
+                "@value": "TG2 Validation TIME Test Conformance CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -13558,6 +14131,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator:event_date_qc"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/4665e4d3b43ce7ddf319b3d7a5d3dbfee1411250/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L828   Unit Test at:  https://github.com/FilteredPush/event_date_qc/blob/96a8981d997cceb2f39ba47d63f0b98c1b56680c/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L402"
+            },
+            {
+                "@value": "TG2 Amendment TIME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-09-12"
@@ -13689,6 +14273,11 @@
         "@id": "urn:uuid:d040474f-edc7-47b8-80a0-3a3859359897",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -13843,6 +14432,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Measure NAME SPACE TIME OTHER Test CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351"
@@ -13967,6 +14561,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Measure NAME SPACE OTHER Test CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0"
@@ -14090,6 +14689,17 @@
         "@id": "urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L109)"
+            },
+            {
+                "@value": "TG2 Measure TIME CODED Test CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -14222,6 +14832,17 @@
         "@id": "urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+            },
+            {
+                "@value": "Example Implementations Source Code: event_date_qc [DwCEventDQ.validationDayStandard()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L622)"
+            },
+            {
+                "@value": "TG2 Validation TIME CODED Test Conformance CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -14376,6 +14997,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e"
@@ -14507,6 +15133,11 @@
         "@id": "urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -14665,6 +15296,11 @@
         "@id": "urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -14845,6 +15481,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4"
@@ -15023,6 +15664,11 @@
         "@id": "urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -15206,6 +15852,17 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "Example Implementations: Kurator"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/kurator-org/kurator-validation/blob/master/packages/kurator_dwca/workflows/dwca_geography_assessor.yaml"
+            },
+            {
+                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac"
@@ -15375,6 +16032,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699"
@@ -15506,6 +16168,11 @@
         "@id": "urn:uuid:f5bd0eee-4cdf-4455-876d-a46d92373a4e",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -15660,6 +16327,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b"
@@ -15813,6 +16485,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation NAME Test Completeness CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f"
@@ -15944,6 +16621,11 @@
         "@id": "urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
@@ -16102,6 +16784,11 @@
         "@id": "urn:uuid:fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -16282,6 +16969,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf"
@@ -16439,6 +17131,11 @@
         "@id": "urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -16619,6 +17316,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e"
@@ -16776,6 +17478,11 @@
         "@id": "urn:uuid:5e1ab035-a79f-4048-9330-e073d4b6c2c9",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -16956,6 +17663,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834"
@@ -17113,6 +17825,11 @@
         "@id": "urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -17293,6 +18010,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff"
@@ -17450,6 +18172,11 @@
         "@id": "urn:uuid:05104b96-267c-432a-9f30-88552404763e",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+            }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
@@ -17635,6 +18362,11 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
         ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue SPACE Test Conformance Parameterized CORE"
+            }
+        ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
             {
                 "@id": "urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b"
@@ -17734,12 +18466,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (3) measures  in UseCase bdq:Taxon-Management"
+                "@value": "MeasurementPolicy: (4) measures  in UseCase bdq:Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Taxon-Management"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -17751,17 +18483,20 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16"
             }
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Taxon-Management",
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "bdq:Taxon-Management"
+                "@value": "bdq:Record-Management"
             }
         ]
     },
@@ -17772,12 +18507,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species"
+                "@value": "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -17789,9 +18524,6 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
@@ -17815,9 +18547,6 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
             },
             {
@@ -17839,40 +18568,16 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-09-06"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-09-05"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-09-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-09-05"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-09-07"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07"
@@ -17880,134 +18585,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species"
+                "@value": "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships"
             }
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species",
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "bdq:Alien-Species"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:022bd662-3052-4771-8e54-f4f74803ccc5",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-09-17"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-09-04"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-09-06"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-09-06"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-09-06"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-09-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07"
-            }
-        ],
-        "http://www.w3.org/2004/02/skos/core#prefLabel": [
-            {
-                "@value": "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management"
+                "@value": "bdq:Biotic-Relationships"
             }
         ]
     },
@@ -18242,13 +18831,129 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management",
+        "@id": "urn:uuid:022bd662-3052-4771-8e54-f4f74803ccc5",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Taxon-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-09-17"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-09-04"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Taxon-Management",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "bdq:Record-Management"
+                "@value": "bdq:Taxon-Management"
             }
         ]
     },
@@ -18259,20 +18964,17 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "AmendmentPolicy: (10) amendments  in UseCase bdq:Alien-Species"
+                "@value": "AmendmentPolicy: (7) amendments  in UseCase bdq:Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-09-06"
@@ -18287,13 +18989,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2024-09-07"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-09-07"
@@ -18307,12 +19003,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "AmendmentPolicy: (8) amendments  in UseCase bdq:Taxon-Management"
+                "@value": "AmendmentPolicy: (28) amendments  in UseCase bdq:Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Taxon-Management"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -18320,19 +19016,79 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2024-09-16"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-09-04"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-09-04"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-09-04"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-09-06"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-25"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-09-12"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2024-09-05"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
@@ -18349,12 +19105,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "IssuePolicy: (1) issues  in UseCase bdq:Alien-Species"
+                "@value": "IssuePolicy: (1) issues  in UseCase bdq:Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [

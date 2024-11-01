@@ -80,6 +80,10 @@
 	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:994ce265-fa64-4c76-a3cb-3aadd74fa9b9">
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:2c673ad9-f7df-4cf7-9c84-e730c25a12e1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
@@ -114,6 +118,7 @@
 
 <rdf:Description rdf:about="urn:uuid:d7d0977d-c8d4-4f76-9fec-5da1c0b242f7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4365c5a8-2a44-493c-acbc-c6ed57b2c6ad">
@@ -160,6 +165,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e1acf301-4f03-424a-af72-94ad1ad3201b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:59566872-1968-40f5-916a-42297d58ac7b">
@@ -196,6 +202,7 @@
 
 <rdf:Description rdf:about="urn:uuid:9489fa31-fe80-4e3a-b4ed-d547df73c29a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4badb4f9-f739-486f-aa0f-4fa351ed2e84">
@@ -242,6 +249,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f643ba35-9ddb-4e70-9959-01a6849331ed">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:db818cf0-569e-4eb9-a309-a151d04b7bb4">
@@ -278,6 +286,7 @@
 
 <rdf:Description rdf:about="urn:uuid:ec957d61-c1aa-4040-94ff-cbf439df3a52">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:315b59c1-85ab-428a-824c-9c9639f5fa7e">
@@ -324,6 +333,7 @@
 
 <rdf:Description rdf:about="urn:uuid:51b11dac-0a61-4ebf-a0b7-69244821f481">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:ce7203a9-bb58-4780-833e-c759b8824fc6">
@@ -360,6 +370,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c4635758-9f98-4982-9d41-ff57ee475dc7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:18eca445-c05b-443e-9819-d6ec516d963e">
@@ -406,6 +417,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c39f0686-c40f-4652-8bf7-020b85d365d2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:86175f22-dbda-4322-8f6a-9af7f02f4f38">
@@ -442,6 +454,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a36114dc-3370-4c9e-8cad-e0f871754365">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6a4e4bdf-dc92-4a93-b127-093224b44c19">
@@ -488,6 +501,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c08463be-2be5-4f41-a70d-3a231958b4bb">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2042e1fa-8bf7-457e-bd43-cb48bd8b838d">
@@ -524,6 +538,7 @@
 
 <rdf:Description rdf:about="urn:uuid:62c9ba6a-b8d3-4746-9c97-d4143f976439">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2212fef0-54f8-4508-b925-4aa99b7a4715">
@@ -578,6 +593,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e79ed5f7-8da5-4212-9476-e150a6c372b5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c">
@@ -614,6 +630,7 @@
 
 <rdf:Description rdf:about="urn:uuid:fd524e7d-a7fe-4c75-bfaa-0fc7d96cc8b7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f">
@@ -660,6 +677,7 @@
 
 <rdf:Description rdf:about="urn:uuid:69a7c952-ecf0-4cb0-b005-b244926e8f03">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6ff94a83-1f03-4f3d-aa10-14a16aa3fff9">
@@ -696,6 +714,7 @@
 
 <rdf:Description rdf:about="urn:uuid:34e79155-98da-4d5f-afde-60c95b7f1a6e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5231f13b-bc40-40b3-b542-85d0f17c5b0c">
@@ -742,6 +761,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f7786d53-07c1-4253-add9-3bf24d8a97c4">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5f5af361-e5fe-44de-9be4-5b02795a2adb">
@@ -778,6 +798,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5c06b6ae-7229-49cc-a0e8-4c0bae153b4b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:68e86c5a-f444-4aff-b54c-47bc100bcf4b">
@@ -824,6 +845,7 @@
 
 <rdf:Description rdf:about="urn:uuid:3ec54cad-c181-4dd6-8bd6-6119eb6ad6c0">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:657e5f22-d146-4109-8f57-676fe7eb777f">
@@ -860,6 +882,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a684cc71-8c74-4c7e-b0db-3f93a874048e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3cac6091-6898-48ea-86d9-3f5cd71c1efa">
@@ -906,6 +929,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e0078022-251d-4c34-9b52-d63f94f601dd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:977ed65e-416f-46e8-85a3-079c6b735fa8">
@@ -942,6 +966,7 @@
 
 <rdf:Description rdf:about="urn:uuid:63e51c38-5bb5-4422-9df0-3ea88bde5e17">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5fae3e9c-b1cc-4346-a845-e7f1573481ea">
@@ -988,6 +1013,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f9cd9d66-e4d2-42da-877a-90e4a7ac3cf3">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1c07234e-42de-45c5-9083-7b3e812835fb">
@@ -1024,6 +1050,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c7fe0448-b77d-4eb2-8123-d96a63ef4aa8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2a5be256-6d25-4d05-bcc7-3b43a383d443">
@@ -1070,6 +1097,7 @@
 
 <rdf:Description rdf:about="urn:uuid:180a834f-d0e1-4abc-b31d-37558ef6352d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:44734c77-85b6-485b-bc43-2d96c0dde693">
@@ -1106,6 +1134,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a25d6216-e349-4a6e-bd2b-8857ca48628f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:c4969180-ef8f-4243-bf1a-a04cd115cfe7">
@@ -1152,6 +1181,7 @@
 
 <rdf:Description rdf:about="urn:uuid:18cf676f-83ab-4c52-825c-2f3849bcae9d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:a634c093-6502-489e-98fc-a365fd7d5d61">
@@ -1188,6 +1218,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5fbbcdab-6cf5-482a-b963-1af053625f3a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:35b82564-c496-461e-88ec-cc606d7a6112">
@@ -1234,6 +1265,7 @@
 
 <rdf:Description rdf:about="urn:uuid:b95086d3-3d4d-4c95-9ea8-8b5894d0aede">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017">
@@ -1270,6 +1302,7 @@
 
 <rdf:Description rdf:about="urn:uuid:d358d5cf-d6e6-4cd6-b195-7aa8643e4244">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e">
@@ -1324,6 +1357,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e2857b1c-9c3d-4445-9f1e-32000e2243ce">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262">
@@ -1360,6 +1394,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c3b3862b-5ea3-494b-9a09-8bb3d9dfe016">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8">
@@ -1406,6 +1441,7 @@
 
 <rdf:Description rdf:about="urn:uuid:2a044176-8820-4745-a797-9541c7e06ab2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f">
@@ -1442,6 +1478,7 @@
 
 <rdf:Description rdf:about="urn:uuid:66e40165-c61e-461b-b91d-7d2b3c3427fe">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91">
@@ -1488,6 +1525,7 @@
 
 <rdf:Description rdf:about="urn:uuid:d1b7295f-9a2a-4a52-a066-6e3eac61b0c2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c">
@@ -1524,6 +1562,7 @@
 
 <rdf:Description rdf:about="urn:uuid:b64c6792-c08c-46da-b98b-e0bb0363c2ed">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e4de3444-b469-426d-abed-30b345328da4">
@@ -1570,6 +1609,7 @@
 
 <rdf:Description rdf:about="urn:uuid:8768b9a9-2054-401a-8d85-60791d94df91">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0782e4e5-010f-4e59-82d7-618a84ead70a">
@@ -1606,6 +1646,7 @@
 
 <rdf:Description rdf:about="urn:uuid:2ffe66fb-9208-4ad5-a0e8-0df1fcd52e5f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:221a02d3-c01e-48c8-9726-8ce423cc6434">
@@ -1652,6 +1693,7 @@
 
 <rdf:Description rdf:about="urn:uuid:fd0d38cd-1a3d-46cd-83ac-aab2a367e21f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:33e0b049-5d42-48d2-a825-c29b294eab9b">
@@ -1688,6 +1730,7 @@
 
 <rdf:Description rdf:about="urn:uuid:95b63dab-dd45-49e0-892f-44a73e76fc00">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:d2f89397-78f3-4e67-8994-79102470d305">
@@ -1734,6 +1777,7 @@
 
 <rdf:Description rdf:about="urn:uuid:cda169b0-4a95-447d-8654-bdab5e180947">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b">
@@ -1770,6 +1814,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0f7cc4a7-55b8-4108-bfdf-2b35d7f69262">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25">
@@ -1816,6 +1861,7 @@
 
 <rdf:Description rdf:about="urn:uuid:28e09744-e189-487c-90f7-5dd4c88d7306">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f7580626-6b32-499a-ad51-0aa22e3eaa4a">
@@ -1852,6 +1898,7 @@
 
 <rdf:Description rdf:about="urn:uuid:612e903c-56df-4e9a-afba-11a766900cfe">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5311be07-b9ce-4609-9859-bfb68ab958fc">
@@ -1898,6 +1945,7 @@
 
 <rdf:Description rdf:about="urn:uuid:4383a0b8-ae96-4fbd-9537-394ffe6ce310">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Consistency CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:06899170-252f-4938-9f98-95089ac0bc07">
@@ -1934,6 +1982,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0e8be8ac-143b-4f80-9b70-f037c041bc7a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Consistency CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:755db673-962e-4c3a-a033-fb5b05b1d66b">
@@ -1980,6 +2029,7 @@
 
 <rdf:Description rdf:about="urn:uuid:4d16917f-0c46-4d05-a7da-0512e6a37627">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:79471c9d-a97c-4cb0-8c61-e74f1f15abce">
@@ -2016,6 +2066,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f27a494c-aacf-4796-b1ff-f6187056e79d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fee0daaa-9273-469c-9c7d-a62fafe05874">
@@ -2062,6 +2113,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e780c2f1-4160-4ef2-b959-f3db56ceb62c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6ffe12f7-a29e-46a8-a3eb-8b7186214f4f">
@@ -2098,6 +2150,7 @@
 
 <rdf:Description rdf:about="urn:uuid:b189b2d9-a38f-464e-9a20-cdd584950a8b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b268bebc-75ed-40c4-8526-907be35e54f4">
@@ -2152,6 +2205,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5f314145-e988-4684-b507-7429c796d996">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30">
@@ -2188,6 +2242,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f9ef8fc4-3169-48ae-ab8f-ab1d58fb82d7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51">
@@ -2234,6 +2289,7 @@
 
 <rdf:Description rdf:about="urn:uuid:1ead6f88-824f-4d1f-a34b-11a1c3f8a871">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:33abe762-eeca-41d0-a2b1-9847e2a07a59">
@@ -2270,6 +2326,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c779729f-1217-4023-ae22-405f271fae34">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:be57619a-9c9d-459f-8fb6-02aa912cd696">
@@ -2316,6 +2373,7 @@
 
 <rdf:Description rdf:about="urn:uuid:63ea1bbd-0184-4f59-83cb-302bb672fde0">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6d868cda-6c34-4b02-9420-cbc51376114f">
@@ -2352,6 +2410,7 @@
 
 <rdf:Description rdf:about="urn:uuid:624278a4-eebe-4d0d-89ea-416b697cdb9a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:a8a6e3a3-7df2-477a-ba35-552151f6f771">
@@ -2398,6 +2457,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e8e0076e-930c-45bd-bc49-85f341b7b729">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:71b0f5c6-1e71-4dbb-bce3-9aa9366f2643">
@@ -2434,6 +2494,7 @@
 
 <rdf:Description rdf:about="urn:uuid:799beb58-39b8-40cf-b8a3-68aca8ec5beb">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:7097d191-ad02-4dae-870e-fa88541cd0a7">
@@ -2480,6 +2541,7 @@
 
 <rdf:Description rdf:about="urn:uuid:ab20eec9-6bc3-40e6-95ab-76c2c79a7e6c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3f846a5d-629b-45f4-94a0-2c32abe437e2">
@@ -2516,6 +2578,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0f6f7d29-be39-4285-8e17-d71a9e350d38">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5fc8b4cc-9da2-4f6a-8fb9-00f6ca3576f7">
@@ -2562,6 +2625,7 @@
 
 <rdf:Description rdf:about="urn:uuid:63695de6-91f6-4f10-8bf7-59163c6e3ad9">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:03c7280e-d1b9-459b-8bec-8bbd7ee6c886">
@@ -2598,6 +2662,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f43da890-5389-4465-a2ac-628ffbc79207">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1424d363-511c-4230-94e1-1b07dea73db5">
@@ -2644,6 +2709,7 @@
 
 <rdf:Description rdf:about="urn:uuid:789f9110-5dca-411f-a742-1399175aa5be">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:d2fb98d8-70fc-4f24-8b20-71304f1ce35f">
@@ -2680,6 +2746,7 @@
 
 <rdf:Description rdf:about="urn:uuid:3cce3c7b-a343-4aed-be6d-7a66c4fa03a0">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:53c80627-1b2c-491e-bc9f-1b5ccf121a08">
@@ -2726,6 +2793,7 @@
 
 <rdf:Description rdf:about="urn:uuid:7647f9b5-28e4-4c31-948e-80b984422b0a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46">
@@ -2762,6 +2830,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5a87d516-fae8-4d9d-b979-c9d3f299df99">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:296e60bb-6872-420d-9769-d3f26d205714">
@@ -2808,6 +2877,7 @@
 
 <rdf:Description rdf:about="urn:uuid:10cfdb9f-a8d4-42fa-81be-3811d3c9f03a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Likeliness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:663022f5-df42-471d-861c-c8198ffbde65">
@@ -2844,6 +2914,7 @@
 
 <rdf:Description rdf:about="urn:uuid:fc17791a-b09e-45ac-ab3d-cd745d202c2d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Likeliness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0a4b0450-5f8d-4425-9bf3-dc79498741c0">
@@ -2890,6 +2961,7 @@
 
 <rdf:Description rdf:about="urn:uuid:36fcff08-e64e-4640-984f-5263b0407a97">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0">
@@ -2926,6 +2998,7 @@
 
 <rdf:Description rdf:about="urn:uuid:9409ef24-baf9-4dfc-b4a8-7b6459cc1d54">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42">
@@ -2972,6 +3045,7 @@
 
 <rdf:Description rdf:about="urn:uuid:faa91223-c9f0-476d-a4d0-b42e13fc9022">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3d5fc575-6ea0-4bff-bca9-172b6bb3b19d">
@@ -3008,6 +3082,7 @@
 
 <rdf:Description rdf:about="urn:uuid:73019d00-f6a5-4617-808b-6dc940f36654">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:7c49e2d3-5d57-460f-b98a-8bba82b7156f">
@@ -3054,6 +3129,7 @@
 
 <rdf:Description rdf:about="urn:uuid:00d3e89b-b730-41f2-a5a2-8cf5e802a0c4">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:333806e5-44f2-4761-80af-df91f9240385">
@@ -3090,6 +3166,7 @@
 
 <rdf:Description rdf:about="urn:uuid:cf1fc4ae-bcec-4d85-ac3e-bbc50f116d66">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:123392d9-c81c-4f3a-82bd-6f053eb41b65">
@@ -3136,6 +3213,7 @@
 
 <rdf:Description rdf:about="urn:uuid:cde5acd3-b95d-444b-817c-8a20adadf279">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea">
@@ -3172,6 +3250,7 @@
 
 <rdf:Description rdf:about="urn:uuid:573e9d1a-f687-4efa-977d-5c696012c571">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75">
@@ -3218,6 +3297,7 @@
 
 <rdf:Description rdf:about="urn:uuid:4de30040-b177-4b0d-a2f3-4c659f179494">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2549297e-3643-41bb-b9d1-29a29b9026ed">
@@ -3254,6 +3334,7 @@
 
 <rdf:Description rdf:about="urn:uuid:1683d750-e0bb-4ad7-baa9-9e59735d7de1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:728b4db4-aff0-484f-9a5d-976b1f36cfb4">
@@ -3300,6 +3381,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a0cfa157-3665-42dd-8dcc-3a5d53d4f217">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Consistency CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:13ff592f-feb2-4350-95dc-fd8c8e434994">
@@ -3336,6 +3418,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f7719d75-d067-401b-af69-92cf82b12ba1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Consistency CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:88fe8922-3eb1-4faa-b4aa-fe3daf742438">
@@ -3382,6 +3465,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5f76cfec-04ca-41a9-86bf-67824fd8e7e5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:94bce01c-2184-47ee-89c2-49acf77456f1">
@@ -3418,6 +3502,7 @@
 
 <rdf:Description rdf:about="urn:uuid:57b42703-ccce-4f51-8c2c-c044d3af6c01">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:21fed9f3-89e6-466a-b7ce-4277038c84ea">
@@ -3464,6 +3549,7 @@
 
 <rdf:Description rdf:about="urn:uuid:6fba2f6c-4d87-4be6-bb3a-b553551c1d47">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f003048a-ad67-493c-8b87-e5f2cfb26981">
@@ -3500,6 +3586,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c5482b41-234c-4ac0-b6f0-bebb1f93c51d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:ef127cb0-c5c2-4bb0-aa4a-df4a42dfcabe">
@@ -3546,6 +3633,7 @@
 
 <rdf:Description rdf:about="urn:uuid:d354faf8-cf72-48bd-93d5-10cd931df17c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:91019397-5086-4383-b998-7bd1eeb78b9e">
@@ -3582,6 +3670,7 @@
 
 <rdf:Description rdf:about="urn:uuid:3a7890d7-f8f5-4f27-a07d-97e8ea4d5b09">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4209fe3a-1fae-4cdb-b3cc-29696b4e7964">
@@ -3628,6 +3717,7 @@
 
 <rdf:Description rdf:about="urn:uuid:1a5a97a2-925f-449e-a475-4a5e5494184f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e7f2383d-9406-497e-86b1-163b65955533">
@@ -3664,6 +3754,7 @@
 
 <rdf:Description rdf:about="urn:uuid:de8001c9-2897-4fed-bbb3-b9b5c284e3ed">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:64a7fd81-396c-4000-a11d-f89d62a57740">
@@ -3710,6 +3801,7 @@
 
 <rdf:Description rdf:about="urn:uuid:7de2e2b3-2734-4f0d-b4d1-25942d628a6f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e7ca116b-2b24-4995-af09-44ee80824188">
@@ -3746,6 +3838,7 @@
 
 <rdf:Description rdf:about="urn:uuid:d80952fd-a95b-4e83-b0db-55b85edd10ef">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:ea0e998b-503c-4fff-92aa-9d96f56a65d8">
@@ -3792,6 +3885,7 @@
 
 <rdf:Description rdf:about="urn:uuid:7b36926a-b3b2-4a3e-828e-696fb28a1d6e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b749a6bd-db12-4808-a137-52c96c66ce03">
@@ -3828,6 +3922,7 @@
 
 <rdf:Description rdf:about="urn:uuid:ce0298ca-cda6-4952-81e1-9a2791483cb5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e281f245-452f-4afb-a900-3269ce97ff05">
@@ -3874,6 +3969,7 @@
 
 <rdf:Description rdf:about="urn:uuid:127afdaf-1d01-47c8-9999-3bff64432c88">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Likeliness Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:50426d4a-f11e-4402-b96e-f9c91c62d0da">
@@ -3910,6 +4006,7 @@
 
 <rdf:Description rdf:about="urn:uuid:00aa23d4-1278-4726-b6b2-6f08c37fce85">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Likeliness Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:43bdbdf5-cfa7-455c-80e3-dbd14117bb69">
@@ -3956,6 +4053,7 @@
 
 <rdf:Description rdf:about="urn:uuid:ba3bb2e3-b593-48ea-83b3-899e3a91ecd2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e032ea6a-012d-436d-a442-da167a466b02">
@@ -3992,6 +4090,7 @@
 
 <rdf:Description rdf:about="urn:uuid:66546be0-df63-4e9e-a339-a81f253ad317">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:66e20810-2936-4932-950f-53e7680c7ca1">
@@ -4038,6 +4137,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a1252d6a-3cb8-4fce-bdba-453c82325a6f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8f1c623f-3e2c-4a6d-bc35-627100cab43b">
@@ -4074,6 +4174,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c8273994-3c92-480e-a127-4e35a41bccae">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1319a50d-2ded-4328-b3c2-2e9cb5e7c6bb">
@@ -4120,6 +4221,7 @@
 
 <rdf:Description rdf:about="urn:uuid:63076250-647e-470e-9d0d-14a81681266f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:47010a99-41fa-41b7-9aac-189de9edc232">
@@ -4156,6 +4258,7 @@
 
 <rdf:Description rdf:about="urn:uuid:b7faf32c-2560-4198-906a-5cad6cae4c24">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:60d3d418-4eed-4190-9690-ae945fe34736">
@@ -4202,6 +4305,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e3f80cb9-61c0-4fa4-9767-d7d4f415321d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:336865b2-1b21-49f6-a5f6-1112ed397400">
@@ -4238,6 +4342,7 @@
 
 <rdf:Description rdf:about="urn:uuid:968490ca-88c7-499b-8dc2-8f14db98eff1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:7dc4a4bd-8c04-45c5-9d1a-46080473e3d6">
@@ -4284,6 +4389,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5a90c547-205b-423f-9158-400652da905f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0c659160-9952-4ada-ac10-5a46ee52423a">
@@ -4320,6 +4426,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0cfe094e-c200-4a8c-b144-7fb0545e4cab">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fcbc5474-422f-4e72-8419-48fee6bf578e">
@@ -4366,6 +4473,7 @@
 
 <rdf:Description rdf:about="urn:uuid:c5ab8254-22df-4d08-86e1-6633707ab22b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:7701481b-dcb3-445a-ae50-b6bcde2163dd">
@@ -4402,6 +4510,7 @@
 
 <rdf:Description rdf:about="urn:uuid:b4b92d16-40bf-4a3d-a802-112e9c282f23">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0f948339-0ec9-451f-b6ea-6272404be2c1">
@@ -4448,6 +4557,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5001024d-da6b-4499-a616-d76322e2043b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f71db764-f571-4668-9a18-a3cafa5410c7">
@@ -4484,6 +4594,7 @@
 
 <rdf:Description rdf:about="urn:uuid:b6cbae5f-c4bd-4947-9a76-930592c52bb1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:df76475a-0207-4f98-b898-c1623d759442">
@@ -4530,6 +4641,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0f4b32e4-23c8-49ec-aa9f-3b7970d52b19">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8fae3a40-10fd-433c-bd4a-368bd356a7f1">
@@ -4566,6 +4678,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0fc63cd3-953a-4a11-b193-aab8100c7720">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:797b3653-1b79-4047-8f9a-82061b558a47">
@@ -4612,6 +4725,7 @@
 
 <rdf:Description rdf:about="urn:uuid:8b66559e-bbe2-497f-ae9b-2c85863db5ad">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9e2719f2-9006-454a-b0d3-afd931f9c05d">
@@ -4648,6 +4762,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e8700081-32c3-45d0-9aae-d322ac94d864">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9d7932d2-8b74-460c-a33a-74128d299c7a">
@@ -4694,6 +4809,7 @@
 
 <rdf:Description rdf:about="urn:uuid:893fd474-eab3-4265-865f-6cfe7635aa6b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:c211fdc8-fae5-4fa5-a8b8-0664a643b6a5">
@@ -4730,6 +4846,7 @@
 
 <rdf:Description rdf:about="urn:uuid:6878bd5c-cac6-4d0b-aa0e-119f1dcc010c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4b92124d-ee59-4183-b3da-77833996c053">
@@ -4776,6 +4893,7 @@
 
 <rdf:Description rdf:about="urn:uuid:ebb501d7-405b-44fc-af0e-711d653f41e5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d">
@@ -4812,6 +4930,7 @@
 
 <rdf:Description rdf:about="urn:uuid:317a82e3-3734-4163-b9e2-b13d93a8ce04">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e7bcd71f-7156-4e5b-9732-3fac13338f83">
@@ -4858,6 +4977,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e4baa0f4-ee8c-4521-b9c0-89e6976d6c91">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6317c75a-e514-4840-8b69-81e2e87461d0">
@@ -4894,6 +5014,7 @@
 
 <rdf:Description rdf:about="urn:uuid:3703bd95-abdc-4364-9152-b1774b17da6e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e251b99c-9726-44e3-b44d-6fa0feacc3b3">
@@ -4940,6 +5061,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e9dd8019-0fbd-45a3-817e-f99bea3f8b19">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:aa2e919c-5655-488e-90ca-10f8bbd233ca">
@@ -4976,6 +5098,7 @@
 
 <rdf:Description rdf:about="urn:uuid:2f70455e-1821-4968-b67e-29fc684a1c6c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:68db640c-ed46-4503-8d3a-31d23eb6c73c">
@@ -5022,6 +5145,7 @@
 
 <rdf:Description rdf:about="urn:uuid:66a9248a-4d93-443e-8f86-88b04e859d88">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:dc982344-5bc9-49b5-85f8-434f1e304eba">
@@ -5058,6 +5182,7 @@
 
 <rdf:Description rdf:about="urn:uuid:686b728d-20c5-4593-8022-e8cc575dd737">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:ec660fd1-3b67-47b3-907d-80e6799f43b9">
@@ -5104,6 +5229,7 @@
 
 <rdf:Description rdf:about="urn:uuid:f61b4a56-28d2-45da-9f25-05a95890ab34">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8c7b24de-6e84-4c07-9d61-f07fee762281">
@@ -5140,6 +5266,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a6efb3ed-c977-4e6f-9b60-ba9d639bdd86">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:778976c3-2c33-4b8d-9135-a4d8ef36385f">
@@ -5186,6 +5313,7 @@
 
 <rdf:Description rdf:about="urn:uuid:acff5571-4240-4308-817b-6c467060ae36">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6232150a-9abc-469f-b533-44d61aa85054">
@@ -5222,6 +5350,7 @@
 
 <rdf:Description rdf:about="urn:uuid:683c56f0-23ec-4130-8e5e-28ea0ef66501">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:809e0413-0fb4-4e44-bfa7-b3b728372fb8">
@@ -5268,6 +5397,7 @@
 
 <rdf:Description rdf:about="urn:uuid:8857d693-f25b-48aa-ba9b-29b692011bf2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:a908512b-be44-4987-bbc9-a27c4d2d6bd6">
@@ -5304,6 +5434,7 @@
 
 <rdf:Description rdf:about="urn:uuid:486dd6c7-6034-4b63-9da8-842c317ea4af">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:523f85e9-a15f-493a-82da-fe08119925ea">
@@ -5350,6 +5481,7 @@
 
 <rdf:Description rdf:about="urn:uuid:5c3ccce4-1a9d-4f04-b306-cb6c6f601f9e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4f0adc36-22b1-4534-a994-1246be02c1a8">
@@ -5386,6 +5518,7 @@
 
 <rdf:Description rdf:about="urn:uuid:afb83bc1-4c79-4254-9938-ee470d2eecc2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1e548db5-3f69-43b3-ad99-98c75305762e">
@@ -5432,6 +5565,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e3f91e30-4a96-4772-a941-3107a27c6229">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8f3b709b-0a01-4e0e-a43a-b43a9ee8aec8">
@@ -5468,6 +5602,7 @@
 
 <rdf:Description rdf:about="urn:uuid:7805aa92-8bb4-4cde-8095-45073bb1f9df">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2b29c224-435f-49fd-b010-16def638be27">
@@ -5514,6 +5649,7 @@
 
 <rdf:Description rdf:about="urn:uuid:11927fb0-e11d-4e20-8fde-a9910103df2a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:c26bf0a3-98e8-4a5e-8219-0fa576c28cfa">
@@ -5550,6 +5686,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0d1254e9-aaee-4a0d-9dd4-8959ada7f0c6">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation NAME Test Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f711c764-0ee2-4e73-a0d1-82ae94634f7d">
@@ -5596,6 +5733,7 @@
 
 <rdf:Description rdf:about="urn:uuid:17c7a364-86bb-41ec-a7c1-07087bea1c92">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b4bee0db-cb2a-422c-89a5-e0e866feb1cc">
@@ -5632,6 +5770,7 @@
 
 <rdf:Description rdf:about="urn:uuid:dfee6537-6ecc-4359-95ce-553050d8be59">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3863808c-ea76-4490-a09c-a87cfebb2fb4">
@@ -5678,6 +5817,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a5a657d0-7c16-4938-b542-057ffe4150cd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:50d4e600-ca37-4f18-8022-e7646f622fe2">
@@ -5714,6 +5854,7 @@
 
 <rdf:Description rdf:about="urn:uuid:64c18cac-e64d-4985-95d6-79dc22b5a15f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:34f8599a-e720-4b9d-af0a-67096be7500c">
@@ -5760,6 +5901,7 @@
 
 <rdf:Description rdf:about="urn:uuid:06f4a965-9424-47fe-81f8-4264c30b6bf1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b051707d-1f01-48a9-8251-7a0ffecbe2ec">
@@ -5796,6 +5938,7 @@
 
 <rdf:Description rdf:about="urn:uuid:0437ef18-2a7b-422c-8dbc-11dac268955b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:420ffd9b-7eda-47a6-af3a-df69cf63b6d5">
@@ -5842,6 +5985,7 @@
 
 <rdf:Description rdf:about="urn:uuid:92c8e64a-7279-4934-8071-5807d1796cbd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1449904c-2de3-4fd7-a63e-53882160a132">
@@ -5878,6 +6022,7 @@
 
 <rdf:Description rdf:about="urn:uuid:3cf9d546-bd23-4eb5-a866-4bafac20092f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9f00505f-133d-47b5-9c81-4dc266896ad6">
@@ -5924,6 +6069,7 @@
 
 <rdf:Description rdf:about="urn:uuid:e581e111-a7ef-4f16-9899-175b131b304e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38">
@@ -5960,6 +6106,7 @@
 
 <rdf:Description rdf:about="urn:uuid:a2fcd8ee-3f1d-4aa7-af2e-95cf159fe3e2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<skos:note>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:33f44f83-93ea-488a-bd24-2c34e6b8f513">
