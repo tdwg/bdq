@@ -563,10 +563,6 @@ Including MultiRecord Measures
 			<td>Amendment Coordinates From Verbatim</td>
 		</tr>
 		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
-		</tr>
-		<tr>
 			<td>InformationElements ActedUpon</td>
 			<td>dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum</td>
 		</tr>
@@ -649,7 +645,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -684,10 +680,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment Coordinates Transposed</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -784,7 +776,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -819,10 +811,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -907,7 +895,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -942,10 +930,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dcterms:license Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1038,7 +1022,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1073,10 +1057,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:basisOfRecord Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1165,7 +1145,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1200,10 +1180,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:countryCode from Coordinates</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1296,7 +1272,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1331,10 +1307,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1411,7 +1383,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1446,10 +1418,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:dateIdentified Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1538,7 +1506,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1573,10 +1541,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:day Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1661,7 +1625,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1696,10 +1660,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:degreeOfEstablishment Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1792,7 +1752,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1827,10 +1787,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:establishmentMeans Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1919,7 +1875,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -1954,10 +1910,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:Event from dwc:eventDate</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2050,7 +2002,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2085,10 +2037,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:eventDate From dwc:verbatimEventDate</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2181,7 +2129,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2216,10 +2164,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:eventDate from dwc:year dwc:month dwc:day</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2312,7 +2256,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2347,10 +2291,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2443,7 +2383,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2478,10 +2418,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:eventDate Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2570,7 +2506,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2605,10 +2541,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:geodeticDatum Assumed Default</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2701,7 +2633,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2736,10 +2668,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:geodeticDatum Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2824,7 +2752,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2859,10 +2787,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2943,7 +2867,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -2978,10 +2902,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3062,7 +2982,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3097,10 +3017,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:month Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3185,7 +3101,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3220,10 +3136,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:occurrenceStatus Assumed Default</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3312,7 +3224,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3347,10 +3259,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:occurrenceStatus Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3439,7 +3347,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3474,10 +3382,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:pathway Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3570,7 +3474,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3605,10 +3509,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:scientificName from dwc:scientificNameID</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3705,7 +3605,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3740,10 +3640,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:scientificNameID from dwc:Taxon</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3844,7 +3740,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -3879,10 +3775,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:sex Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3975,7 +3867,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4010,10 +3902,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:taxonRank Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4106,7 +3994,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4141,10 +4029,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Amendment dwc:typeStatus Standardized</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4237,7 +4121,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4272,10 +4156,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Issue Annotation Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>oa:target</td>
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
@@ -4348,7 +4228,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4383,10 +4263,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Issue Coordinates Center Of Country</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4483,7 +4359,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4518,10 +4394,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Issue dwc:dataGeneralizations Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4602,7 +4474,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4637,10 +4509,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Issue dwc:establishmentMeans Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4713,7 +4581,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4748,10 +4616,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measure Amendments Proposed</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>bdq:Amendment</td>
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
@@ -4804,7 +4668,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4839,10 +4703,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measure dwc:eventDate Duration In Seconds</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4911,7 +4771,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -4946,10 +4806,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measure Validation Tests Compliant</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>bdq:Validation</td>
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
@@ -5006,7 +4862,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5041,10 +4897,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measure Validation Tests Not Compliant</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>bdq:Validation</td>
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
@@ -5101,7 +4953,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5136,10 +4988,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measure Validation Tests Prerequisites Not Met</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>bdq:Validation</td>
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
@@ -5196,7 +5044,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5231,10 +5079,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5295,7 +5139,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5330,10 +5174,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5390,7 +5230,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5425,10 +5265,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Classification Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5493,7 +5329,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5528,10 +5364,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5596,7 +5428,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5631,10 +5463,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5699,7 +5527,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5734,10 +5562,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5794,7 +5618,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5829,10 +5653,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5897,7 +5717,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -5932,10 +5752,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5992,7 +5808,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6027,10 +5843,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6091,7 +5903,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6126,10 +5938,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6186,7 +5994,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6221,10 +6029,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6289,7 +6093,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6324,10 +6128,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6384,7 +6184,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6419,10 +6219,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6479,7 +6275,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6514,10 +6310,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6582,7 +6374,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6617,10 +6409,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:class Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6685,7 +6473,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6720,10 +6508,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:coordinateUncertaintyInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6780,7 +6564,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6815,10 +6599,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6879,7 +6659,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -6914,10 +6694,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:stateProvince Unambiguous</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6982,7 +6758,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7017,10 +6793,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7085,7 +6857,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7120,10 +6892,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:country Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7180,7 +6948,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7215,10 +6983,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7275,7 +7039,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7310,10 +7074,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7374,7 +7134,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7409,10 +7169,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7477,7 +7233,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7512,10 +7268,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7572,7 +7324,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7607,10 +7359,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:day In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7667,7 +7415,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7702,10 +7450,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:day Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7762,7 +7506,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7797,10 +7541,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7857,7 +7597,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7892,10 +7632,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7952,7 +7688,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -7987,10 +7723,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8047,7 +7779,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8082,10 +7814,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8142,7 +7870,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8177,10 +7905,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8245,7 +7969,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8280,10 +8004,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:endDayOfYear In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8340,7 +8060,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8375,10 +8095,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:establishmentMeans Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8443,7 +8159,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8478,10 +8194,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8538,7 +8250,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8573,10 +8285,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8633,7 +8341,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8668,10 +8376,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8736,7 +8440,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8771,10 +8475,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8831,7 +8531,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8866,10 +8566,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8926,7 +8622,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -8961,10 +8657,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:family Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9029,7 +8721,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9064,10 +8756,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:genus Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9132,7 +8820,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9167,10 +8855,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9227,7 +8911,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9262,10 +8946,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9330,7 +9010,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9365,10 +9045,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9425,7 +9101,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9460,10 +9136,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:maximumDepthInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9528,7 +9200,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9563,10 +9235,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:maximumElevationInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9631,7 +9299,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9666,10 +9334,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9734,7 +9398,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9769,10 +9433,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9837,7 +9497,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9872,10 +9532,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9932,7 +9588,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -9967,10 +9623,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:month Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10027,7 +9679,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10062,10 +9714,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:namePublishedInYear Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10122,7 +9770,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10157,10 +9805,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceID Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10217,7 +9861,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10252,10 +9896,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10312,7 +9952,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10347,10 +9987,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10415,7 +10051,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10450,10 +10086,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:order Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10518,7 +10150,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10553,10 +10185,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:pathway Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10621,7 +10249,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10656,10 +10284,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:phylum Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10724,7 +10348,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10759,10 +10383,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10827,7 +10447,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10862,10 +10482,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10922,7 +10538,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -10957,10 +10573,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameAuthorship Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11017,7 +10629,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11052,10 +10664,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Complete</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11112,7 +10720,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11147,10 +10755,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11207,7 +10811,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11242,10 +10846,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:sex Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11310,7 +10910,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11345,10 +10945,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:startDayOfYear In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11405,7 +11001,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11440,10 +11036,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:stateProvince Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11508,7 +11100,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11543,10 +11135,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11603,7 +11191,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11638,10 +11226,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11706,7 +11290,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11741,10 +11325,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11801,7 +11381,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11836,10 +11416,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11904,7 +11480,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -11939,10 +11515,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:typeStatus Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12007,7 +11579,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12042,10 +11614,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:year In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12110,7 +11678,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12145,10 +11713,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:year Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12205,7 +11769,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12240,10 +11804,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12300,7 +11860,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12335,10 +11895,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12399,7 +11955,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12434,10 +11990,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12494,7 +12046,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12529,10 +12081,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12597,7 +12145,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12632,10 +12180,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12700,7 +12244,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12735,10 +12279,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12803,7 +12343,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12838,10 +12378,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12898,7 +12434,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -12933,10 +12469,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13001,7 +12533,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13036,10 +12568,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13096,7 +12624,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13131,10 +12659,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13195,7 +12719,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13230,10 +12754,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13290,7 +12810,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13325,10 +12845,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13393,7 +12909,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13428,10 +12944,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13488,7 +13000,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13523,10 +13035,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13583,7 +13091,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13618,10 +13126,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13686,7 +13190,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13721,10 +13225,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13789,7 +13289,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13824,10 +13324,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:coordinateUncertaintyInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13884,7 +13380,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -13919,10 +13415,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13983,7 +13475,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14018,10 +13510,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:stateProvince Unambiguous</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14086,7 +13574,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14121,10 +13609,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14189,7 +13673,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14224,10 +13708,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:country Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14284,7 +13764,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14319,10 +13799,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14379,7 +13855,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14414,10 +13890,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14478,7 +13950,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14513,10 +13985,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14581,7 +14049,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14616,10 +14084,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14676,7 +14140,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14711,10 +14175,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:day In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14771,7 +14231,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14806,10 +14266,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:day Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14866,7 +14322,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14901,10 +14357,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14961,7 +14413,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -14996,10 +14448,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15056,7 +14504,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15091,10 +14539,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15151,7 +14595,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15186,10 +14630,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15246,7 +14686,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15281,10 +14721,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15349,7 +14785,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15384,10 +14820,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:endDayOfYear In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15444,7 +14876,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15479,10 +14911,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:establishmentMeans Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15547,7 +14975,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15582,10 +15010,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15642,7 +15066,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15677,10 +15101,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15737,7 +15157,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15772,10 +15192,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15840,7 +15256,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15875,10 +15291,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15935,7 +15347,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -15970,10 +15382,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16030,7 +15438,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16065,10 +15473,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:family Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16133,7 +15537,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16168,10 +15572,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:genus Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16236,7 +15636,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16271,10 +15671,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16331,7 +15727,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16366,10 +15762,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16434,7 +15826,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16469,10 +15861,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16529,7 +15917,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16564,10 +15952,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumDepthInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16632,7 +16016,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16667,10 +16051,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumElevationInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16735,7 +16115,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16770,10 +16150,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16838,7 +16214,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16873,10 +16249,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16941,7 +16313,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -16976,10 +16348,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17036,7 +16404,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17071,10 +16439,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:month Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17131,7 +16495,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17166,10 +16530,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:namePublishedInYear Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17226,7 +16586,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17261,10 +16621,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceID Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17321,7 +16677,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17356,10 +16712,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17416,7 +16768,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17451,10 +16803,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17519,7 +16867,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17554,10 +16902,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:order Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17622,7 +16966,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17657,10 +17001,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:pathway Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17725,7 +17065,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17760,10 +17100,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:phylum Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17828,7 +17164,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17863,10 +17199,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17931,7 +17263,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -17966,10 +17298,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18026,7 +17354,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18061,10 +17389,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameAuthorship Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18121,7 +17445,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18156,10 +17480,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Complete</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18216,7 +17536,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18251,10 +17571,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18311,7 +17627,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18346,10 +17662,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:sex Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18414,7 +17726,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18449,10 +17761,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18509,7 +17817,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18544,10 +17852,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:stateProvince Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18612,7 +17916,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18647,10 +17951,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18707,7 +18007,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18742,10 +18042,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18810,7 +18106,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18845,10 +18141,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18905,7 +18197,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -18940,10 +18232,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19008,7 +18296,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19043,10 +18331,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19111,7 +18395,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19146,10 +18430,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:year In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19214,7 +18494,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19249,10 +18529,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:year Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19309,7 +18585,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19344,10 +18620,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19404,7 +18676,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19439,10 +18711,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Vaildation dwc:geodeticDatum Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19527,7 +18795,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19562,10 +18830,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19642,7 +18906,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19677,10 +18941,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation Classification Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19773,7 +19033,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19808,10 +19068,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation Coordinates dwc:countryCode Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19912,7 +19168,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -19947,10 +19203,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation Coordinates dwc:stateProvince Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20043,7 +19295,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20078,10 +19330,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation Coordinates Not Zero</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20162,7 +19410,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20197,10 +19445,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation Coordinates Terrestrial Marine</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20297,7 +19541,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20332,10 +19576,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dc:type Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20412,7 +19652,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20447,10 +19687,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20543,7 +19779,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20578,10 +19814,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dcterms:license Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20658,7 +19890,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20693,10 +19925,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dcterms:license Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20789,7 +20017,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20824,10 +20052,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dcterms:Location Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20908,7 +20132,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -20943,10 +20167,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:basisOfRecord Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21019,7 +20239,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21054,10 +20274,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:basisOfRecord Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>Record-level</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21146,7 +20362,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21181,10 +20397,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:class Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21273,7 +20485,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21308,10 +20520,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:coordinateUncertaintyInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21392,7 +20600,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21427,10 +20635,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:country dwc:countryCode Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21515,7 +20719,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21550,10 +20754,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:country dwc:stateProvince Unambiguous</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21654,7 +20854,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21689,10 +20889,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:country Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21785,7 +20981,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21820,10 +21016,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:country Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21912,7 +21104,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -21947,10 +21139,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:countryCode Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22035,7 +21223,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22070,10 +21258,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22158,7 +21342,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22193,10 +21377,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:dateIdentified In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22301,7 +21481,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22336,10 +21516,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:dateIdentified Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Identification</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22420,7 +21596,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22455,10 +21631,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:day In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22547,7 +21719,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22582,10 +21754,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:day Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22670,7 +21838,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22705,10 +21873,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:decimalLatitude In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22785,7 +21949,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22820,10 +21984,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:decimalLatitude Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22900,7 +22060,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -22935,10 +22095,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:decimalLongitude In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23015,7 +22171,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23050,10 +22206,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:decimalLongitude Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23126,7 +22278,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23161,10 +22313,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:degreeofEstablishment Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23257,7 +22405,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23292,10 +22440,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:endDayOfYear In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23384,7 +22528,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23419,10 +22563,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:establishmentMeans Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23515,7 +22655,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23550,10 +22690,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:Event Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23638,7 +22774,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23673,10 +22809,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:Event Temporal Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23761,7 +22893,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23796,10 +22928,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:eventDate In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23900,7 +23028,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -23935,10 +23063,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:eventDate Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24019,7 +23143,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24054,10 +23178,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:eventDate Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24146,7 +23266,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24181,10 +23301,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:family Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24277,7 +23393,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24312,10 +23428,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:genus Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24408,7 +23520,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24443,10 +23555,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:geodeticDatum Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24519,7 +23627,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24554,10 +23662,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:kingdom Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24650,7 +23754,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24685,10 +23789,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:kingdom Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24761,7 +23861,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24796,10 +23896,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:maximumDepthInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24892,7 +23988,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -24927,10 +24023,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:maximumElevationInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25023,7 +24115,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25058,10 +24150,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:minimumDepthInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25154,7 +24242,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25189,10 +24277,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:minimumElevationInMeters In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25285,7 +24369,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25320,10 +24404,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25400,7 +24480,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25435,10 +24515,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:month Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25519,7 +24595,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25554,10 +24630,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:namePublishedInYear Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25630,7 +24702,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25665,10 +24737,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:occurrenceID Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25741,7 +24809,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25776,10 +24844,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:occurrenceStatus Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25852,7 +24916,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -25887,10 +24951,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:occurrenceStatus Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25987,7 +25047,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26022,10 +25082,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:order Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26118,7 +25174,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26153,10 +25209,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:pathway Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26249,7 +25301,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26284,10 +25336,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:phylum Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26380,7 +25428,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26415,10 +25463,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:scientificName Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26515,7 +25559,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26550,10 +25594,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:scientificName Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26630,7 +25670,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26665,10 +25705,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:scientificNameAuthorship Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26741,7 +25777,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26776,10 +25812,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:scientificNameID Complete</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26860,7 +25892,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -26895,10 +25927,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:scientificNameID Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26975,7 +26003,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27010,10 +26038,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:sex Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27106,7 +26130,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27141,10 +26165,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:startDayOfYear In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27233,7 +26253,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27268,10 +26288,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:stateProvince Found</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dcterms:Location</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27364,7 +26380,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27399,10 +26415,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:Taxon Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27479,7 +26491,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27514,10 +26526,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:Taxon Unambiguous</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27610,7 +26618,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27645,10 +26653,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:taxonRank Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27725,7 +26729,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27760,10 +26764,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:taxonRank Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27856,7 +26856,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -27891,10 +26891,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:typeStatus Standard</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Occurrence</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -27987,7 +26983,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -28022,10 +27018,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:year In Range</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -28122,7 +27114,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -28157,10 +27149,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation dwc:year Not Empty</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Event</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -28241,7 +27229,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 <table>
 	<thead>
 		<tr>
@@ -28276,10 +27264,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Preferred Label</td>
 			<td>Validation Polynomial Consistent</td>
-		</tr>
-		<tr>
-			<td>IE Class</td>
-			<td>dwc:Taxon</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -28368,7 +27352,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-
+[🠱](#3-Term-Indices)
 
 
 ## Acronyms
