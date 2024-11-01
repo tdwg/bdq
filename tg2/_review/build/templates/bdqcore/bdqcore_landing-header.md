@@ -151,7 +151,7 @@ Validation Tests in BDQ Core evaluate values in one or more [Darwin Core Terms](
 
 The response of a Validation Test (an instance of a bdqffdq:ValidationAssertion) MUST take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.
+1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.
 3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
   - A Response.result of either "COMPLIANT" if the values of the Information Elements meet the criteria, or "NOT_COMPLIANT" when they do not.
@@ -166,7 +166,7 @@ We have used Issue Tests for a small number of cases where we wished to flag a v
 
 The response of an Issue Test (an instance of a bdqffdq:IssueAssertion) MUST take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
+1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.  In this case, the Response.result MUST be empty.
 3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case:
   - A Response.result="POTENTIAL_ISSUE", a Response.result="NOT_ISSUE", or a Response.result="IS_ISSUE".
@@ -183,7 +183,7 @@ An Amendment Test MAY propose a change to one or more Darwin Core Term values, o
 
 The response of an Amendment Test (an instance of a bdqffdq:AmendmentAssertion) MUST take one of four forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.
+1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.
 3. A Response.status of "FILLED_IN" when the prerequisites for running the Test have been met and a proposal is made to fill in a value for one or more input terms that were empty, and in this situation:
   - A Response.result containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
@@ -198,13 +198,13 @@ Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses
 
 Measure Tests return a Response.result of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE".  Measure Tests may directly measure properties of data.  Alternatively, Measure Tests may measure the outputs of other Tests, for example, a Measure may count the number of Response.results from all Validation Tests run on a single record (bdqffdq:SingleRecord) that are COMPLIANT.
 
-The only Measure defined in BDQ Core that directly examines data is Test [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53).  This Test returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarises the results of running the Validation and Amendment Tests and in one case provides an indication of the length of the period of the value of dwc:eventDate.
+The only Measure defined in BDQ Core that directly examines data is Test [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53).  This Test returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g. to at least one day for phenology studies, to at least one year for other purposes) that generally summarizes the results of running the Validation and Amendment Tests and in one case provides an indication of the length of the period of the value of dwc:eventDate.
 
 Most SingleRecord Measure Tests defined in BDQ Core count the number of Validation or Amendment Tests with a specified Response.Result in a bdqffdq:SingleRecord. 
 
 The response of a Measure Test (an instance of a bdqffdq:MeasureAssertion) MUST take one of three forms. 
 
-1. A Response.status of "EXTERNAL_PRREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
+1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g. a source authority, bdq:sourceAuthority) is unavailable, and running the same Test on the same data at a different time may result in a different result.  In this case, the Response.result MUST be empty.  
 2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.  In this case, the Response.result MUST be empty.
 3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case either:
   - A Response.result="COMPLETE", or a Response.result="NOT_COMPLETE".
@@ -223,7 +223,7 @@ The focus of the BDQ Core Tests are the SingleRecord Tests.  To allow for standa
 
 In BDQ Core, for each SingleRecord Validation Test, we have defined a MultiRecord Measure Test that returns a Response.result="COMPLETE" when all records in the MultiRecord have a Response.result="COMPLIANT", and a Response.result="NOT_COMPLETE" when they are not. Under Quality Assurance, these Measure Tests are the key criterion for identifying data which have quality for a Use Case. Under Quality Assurance, a MultiRecord is filtered to remove records that do not fit the MultiRecord Measure Tests for completeness, such that a filtered MultiRecord has Response.result="COMPLETE" for all MultiRecord Measure Tests.
 
-In BDQ Core, for each SingleRecord Validation Test, we have also defined a MultiRecord Measure Test that returns a Response.result counting the number of Response.results from that Validation Test that are COMPLIANT (or in a few cases, COMPLIANT or INTERNAL_PREREQUSIITES_NOT_MET).  Under Quality Control, these MultiRecord Measures allow calculation of how much the quality of a data set would be improved by accepting changes proposed by Amendments, and allow identification of areas in the data where quality improvement is most needed to fit the needs of some Use Case.
+In BDQ Core, for each SingleRecord Validation Test, we have also defined a MultiRecord Measure Test that returns a Response.result counting the number of Response.results from that Validation Test that are COMPLIANT (or in a few cases, COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET).  Under Quality Control, these MultiRecord Measures allow calculation of how much the quality of a data set would be improved by accepting changes proposed by Amendments, and allow identification of areas in the data where quality improvement is most needed to fit the needs of some Use Case.
 
 See the [bdqcore mathematical formulation](../bdqffdq/index.md#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative) for the formal expression of how measures are intended to be used used in Quality Control and Quality Assurance.
 
@@ -298,10 +298,10 @@ A Response MUST be represented as either RDF or as a data structure.
 
 When responses are in the form of RDF, the RDF MUST meet the following conditions: 
 
-1. The response MUST be an instance of bdqffdq:Assertion or one of its subclasses (bdqffdq:IssueAssertion, bdqffdq:MeasurementAssertion, bdqffdq:AmendmentAssertion, bdqffdq:IssueAssertion).  An instance of a subclass of bdqffdq:Assertion SHOULD be used.  
+1. The response MUST be an instance of bdqffdq:Assertion or one of its sub-classes (bdqffdq:IssueAssertion, bdqffdq:MeasurementAssertion, bdqffdq:AmendmentAssertion, bdqffdq:IssueAssertion).  An instance of a subclass of bdqffdq:Assertion SHOULD be used.  
 2. The Assertion MUST have exactly one bdqffdq:hasResponseStatus object property linking it to one of the named individuals that has type bdqffdq:ResponseStatus (bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, bdqffdq:AMENDED, bdqffdq:FILLED_IN, or bdqffdq:RUN_HAS_RESULT).
 3. The Assertion MUST have a bdqffdq:hasResponseResult object property or bdqffdq:hasResponseResultValue data property, unless the object of the bdqffdq:hasResponseStatus indicates that none should be present.
-  - If the object of the bdqffdq:hasResponseStatus is bdqffdq:RUN_HAS_RESULT, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResult object property linking it to one of the named individuals that has type bdqffdq:ResponseResult (bdqffdq:COMPLETE, bdqffdq:COMPLIANT, bdqffdq:IS_ISSUE, bdqffdq:NOT_COMPLETE, bdqffdq:NOT_COMLIANT, bdqffdq:NOT_ISSUE, or bdqffdq:POTENTIAL_ISSUE).
+  - If the object of the bdqffdq:hasResponseStatus is bdqffdq:RUN_HAS_RESULT, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResult object property linking it to one of the named individuals that has type bdqffdq:ResponseResult (bdqffdq:COMPLETE, bdqffdq:COMPLIANT, bdqffdq:IS_ISSUE, bdqffdq:NOT_COMPLETE, bdqffdq:NOT_COMPLIANT, bdqffdq:NOT_ISSUE, or bdqffdq:POTENTIAL_ISSUE).
   - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:AMENDED or bdqffdq:FILLED_IN, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResultValue data property linking it to structured data presenting the result of the Amendment.  The string in the bdqffdq:hasResponseResultValue SHOULD be a json list of key:value pairs, where the keys are specific information elements (e.g. dwc:eventDate), and the values are the new values proposed by the amendment.
   - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, then no bdqffdq:hasResponseResult SHOULD be present.
 4. The Assertion MUST have at least one bdqffdq:hasResponseComment data property.  This bdqffdq:hasResponseComment must provide a human readable text explanation of why the conclusion expressed in the assertion was reached.  The bdqffdq:hasResponseComment MAY be repeated to provide the comment in different languages.  Each bdqffdq:hasResponseComment SHOULD be a self standing and complete explanation.
@@ -312,7 +312,7 @@ When the Response is represented as a data structure in a form other than RDF, t
 1. Have properties corresponding to Response.status, Response.result, and Response.comment.  These properties SHOULD have these names.
 2. Have one Response.status property, containing a string constant that MUST be one of the local names of one of the named individuals in bdqffdq with a type bdqffdq:ResponseStatus ( "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", "NOT_AMENDED", "AMENDED", "FILLED_IN", or "RUN_HAS_RESULT").
 3. Have one Response.result property.
-  - If the Response.status is "RUN_HAS_RESULT" then the value of the Response.result property MUST be a string constant that is one of the local names of one of the named individuals of type bdqffdq:ResponseResult ("COMPLETE", "COMPLIANT", "IS_ISSUE", "NOT_COMPLETE", "NOT_COMLIANT", "NOT_ISSUE", or "POTENTIAL_ISSUE").
+  - If the Response.status is "RUN_HAS_RESULT" then the value of the Response.result property MUST be a string constant that is one of the local names of one of the named individuals of type bdqffdq:ResponseResult ("COMPLETE", "COMPLIANT", "IS_ISSUE", "NOT_COMPLETE", "NOT_COMPLIANT", "NOT_ISSUE", or "POTENTIAL_ISSUE").
   -  If the Response.status is one of  "AMENDED" or "FILLED_IN" then the value of the Response.result property MUST be structured data presenting the result of the Amendment.  The string in the Response.result SHOULD be a json list of key:value pairs, where the keys are specific information elements (e.g. dwc:eventDate), and the values are the new values proposed by the amendment.
   - If the Response.status is one of "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", or "NOT_AMENDED", then the Response.result MUST be empty or null.
 4. Have one Response.comment property.  This Response.comment must provide a human readable text explanation of why the conclusion expressed in the assertion was reached.  Internationalization of the Response.comment MAY be provided, nothing in this section should be taken as a constraint on how that may be accomplished.
