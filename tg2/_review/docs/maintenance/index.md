@@ -39,20 +39,20 @@ Templates for proposals of new and change issues are available at https://github
 
 ### 2.1 Suggested Lifecycle for a Proposal
 1. Tag as Proposed
-2. Review the proposal, including evaluating that the expected response follows a path an implementor can understand, that the information elements are referenced in the expected response, and whether parameters are present and formatted as desired.
-3. Confirm that the proposal is not a duplicate of an existing issue, including both Do Not Implement and Imature/Incomplete issues.
-4. Discussion at any point may conclude that the test is not able to be implemented or should not be implemented as results would be misleading or problematic, tag as Do Not Implement, desribe why in comments on the issue, and close the issue.
+2. Review the proposal, including evaluating that the expected response follows a path an implementer can understand, that the information elements are referenced in the expected response, and whether parameters are present and formatted as desired.
+3. Confirm that the proposal is not a duplicate of an existing issue, including both Do Not Implement and Immature/Incomplete issues.
+4. Discussion at any point may conclude that the test is not able to be implemented or should not be implemented as results would be misleading or problematic, tag as DO NOT IMPLEMENT, describe why in comments on the issue, and close the issue.
 5. Discussion at any point may conclude that the test is a good one, but can't be implemented at the present time as some needed resource, such a a controlled vocabulary, does not exist (yet), tag as Imature/Incomplete.  Describe why in comments on the issue, leave open or closed as desired.
 6. Produce example data covering each path through the expected response, add these to a validation sheet.
-7. The markdown table from the test can be exported to a csv list of proposed tests.  This csv list can be used by implementors to generate code stubs for tests to be implemented.
-8. Implementors produce at least one implementation of the test, this will provide feedback on the expected response, and whether or not the test is implementable.
-9. Implementors run the implementation against the validation data, this will result in idenfification of problems that may be defects in the implementation, errors in the validation data, or problems in the specification.  
+7. The markdown table from the test can be exported to a csv list of proposed tests.  This csv list can be used by implementers to generate code stubs for tests to be implemented.
+8. Implementers produce at least one implementation of the test, this will provide feedback on the expected response, and whether or not the test is implementable.
+9. Implementers run the implementation against the validation data, this will result in identification of problems that may be defects in the implementation, errors in the validation data, or problems in the specification.  
 10. Confirm that the normative and non-normative elements are filled in as needed, including any references and links to source code for implementations.
 11. Confirm that the Proposed test is linked to at least one use case.  
 12. Once at least one implementation exists that passes all validation tests (produces exactly the expected Response.status, exactly the expected Response.result, and some Response.comment for each validation case/row), the Proposed test can be evaluated for inclusion in the standard.  
 13. At acceptance, tag the issue as CORE, remove the Proposed tab, export the markdown table into the normative term versions csv, generate derivatives as needed, and close the issue.
 
-### 2.2 Software tools for workign with test descriptions
+### 2.2 Software Tools for Working with Test Descriptions
 
 The bdq_issue_to_csv utility is available for converting markdown tables in issues into lines of csv.
 
@@ -61,12 +61,12 @@ The bdq_issue_to_csv utility is available for converting markdown tables in issu
 The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) records where each record provides-
 
 - Input.data: The values of bdqffdq:InformationElements (bdq:InformationElementsConsulted and bdq:InformationElementsActedUpon) required as input to the test
-- Output.data: For Amenedment Type Tests, the output values of amended bdq:InformationElementsActedUpon
+- Output.data: For Amendment Type Tests, the output values of amended bdq:InformationElementsActedUpon
 - A Response.status that informs the expected status of running the Test on the input data
 - A Response.result that informs the expected outcome of running the Test on the input data
 - A Response.comment that explains the reasoning for the Response of running the Test on the input data
 - Date Last Updated
-- Anciliary information that provides a context for generating and maintaining Test Validation Data
+- Ancillary information that provides a context for generating and maintaining Test Validation Data
   - The URL for the GitHub Issue Test page
   - The Test number (the number on the end of the URL for the GitHub Issue page
   - The Test GUID
@@ -90,7 +90,7 @@ Additions to the Test Validation Data are best done by copying and pasting an ex
 
 Values in the column **LineForTest** are useful in determining the number of Test Validation records for each Test, but also flag an additional function. A LineForTest value of "88" flags an Input.data value of "[null]" while a value of "99" flags an Input.data value of "[non-printing characters]". Both of these record types are used to separate records of 'normally' expected values from records that require special handing within the testing framework.   These rows SHOULD not be present in either form of the validation data set.
 
-Validation data containing non-printing characters and nulls SHOULD only be edited in the separate file of validation data containing non-printing characters, this file MUST only be edited by sofware able to correctly handle the non-printing characters.  This file MUST NOT be edited with a spreadsheet application.  The text editors vim and emacs are recomended.  
+Validation data containing non-printing characters and nulls SHOULD only be edited in the separate file of validation data containing non-printing characters, this file MUST only be edited by sofware able to correctly handle the non-printing characters.  This file MUST NOT be edited with a spreadsheet application.  The text editors vim and emacs are recommended <!--Refs?-->.  
 
 ### 3.3 Updating Test Validation Data Due to Changes in Specifications or Terms
 
@@ -107,11 +107,11 @@ Test validation data is most easily input into validation frameworks when presen
 
 <!--- Paul **TODO**  Cleanup this text --->
 
-The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transfomred version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. 
+The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transformed version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. 
 
 Two tools to move between the two representations:
 
-To squish sparse information element columns into a single colum: 
+To compress sparse information element columns into a single column: 
 
 https://github.com/tdwg/bdq/blob/master/tg2/core/squish_validation_data.py
 
@@ -121,7 +121,7 @@ https://github.com/FilteredPush/bdqtestrunner/blob/master/src/main/java/org/filt
 
 These tools SHOULD NOT be used on the validation data file containing non-printing characters.
 
-Changes to squish_validation_data.py may be provided that would allow round tripping of that file between forms (with the replacment of non printing characters and nulls with specified string markers in a squished file editable in a spreadsheet application.
+Changes to squish_validation_data.py may be provided that would allow round tripping of that file between forms (with the replacement of non printing characters and nulls with specified string markers in a squished file editable in a spreadsheet application.
 
 ### 3.5 Tools for validating implementations against the validation data
 
@@ -133,7 +133,7 @@ The bdqtestrunner utility is available for running Java implementations of tests
 
 Accepted changes will need to be added as new rows to the bdqcore term-version file.
 
-Note the distinction between the issued date and date last modified.  The date last modified SHOULD only be changed if the changes are substatnive to implementers (would cause them to change their code).  The purpose of date last modified is to allow implementers to not have to review their code when changes wouldn't affect that code.  Implementers who note the date last updated for each test within their implementations can run sofware checks on their code to see if new changes require examination of their code.  Non-substantive changes (such as addition of more non-normative known implementations) to the metadata about a test can be distinguished by only updating the (required) value of issued in the term-version file without a change to the date last modified. 
+Note the distinction between the issued date and date last modified.  The date last modified SHOULD only be changed if the changes are substantive to implementers (would cause them to change their code).  The purpose of date last modified is to allow implementers to not have to review their code when changes wouldn't affect that code.  Implementers who note the date last updated for each test within their implementations can run software checks on their code to see if new changes require examination of their code.  Non-substantive changes (such as addition of more non-normative known implementations) to the metadata about a test can be distinguished by only updating the (required) value of issued in the term-version file without a change to the date last modified. 
 
 Proposed substantive changes SHOULD have a software implementation.
 
