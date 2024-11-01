@@ -48,7 +48,7 @@ This document is relevant to curators, aggregators, data publishers, data analys
 
 ### 1.3 Associated Documents
 
-This document provides practical information that goes beyond the normative guidance in the [Users Guide](../guide/users/index.md) and [Implemeters Guide](../guide/implementers/index.md) for those who wish to use or implement BDQ Core.
+This document provides practical information that goes beyond the normative guidance in the [BDQ Core Users Guide](../guide/users/index.md) and [BDQ Core Implemeters Guide](../guide/implementers/index.md) for those who wish to use or implement BDQ Core.
 
 ### 1.4 Status of the content of this document
 
@@ -603,7 +603,7 @@ The development of each Test, with documentation of why particular decisions wer
 | --- | ---------- | ------- |
 | Amendment | A label to indicate a Test of Type Amendment which may propose a change or addition to at least one [Darwin Core Term](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that is intended to improve one or more components of the quality of the record. | See bdqffdq:Amendment |
 | CORE | Conclusion that a Test is useful for evaluating biodiversity data quality as represented by the values of Darwin Core terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined, and straight forward to implement.  The CORE tests have become the tests defined as part of BDQ Core. |  |
-| DO NOT IMPLEMENT | Conclusion that a test is not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. |  |
+| DO NOT IMPLEMENT | Conclusion that a test is not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. | See Section 2.1.1 |
 | Immature/Incomplete | Conclusion that a test requires substantial work needed to develop the specification to the point where the test can be reliably and usefully implemented. This may indicate work that is wholly internal to the test specification such as developing a consistent Expected Response, or may indicate that external work is needed to develop an agreed vocabulary for values of the tested term. An immature/incomplete test may be made CORE, Supplementary, or DO NOT IMPLEMENT when relevant criteria are satisfied. |  |
 | ISO/DCMI STANDARD | A reference to either an ISO (International Organization for Standardization) Standard or a DCMI (Dublin Core Metadata Initiative) Standard |  |
 | Issue | A label to indicate a test of type ISSUE, where potential problems are flagged and may need examination by the user to determine if data have quality for their use. | see bdqffdq:Issue |
