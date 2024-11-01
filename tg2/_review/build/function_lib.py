@@ -55,7 +55,10 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
         "Term Name":"The term name is a controlled value that represents the class, property, or concept described by the term definition.",
         "term_localName":"The term name is a controlled value that represents the class, property, or concept described by the term definition.",
         "Controlled Value":"A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters.",
-        "Modified":"The date in ISO 8601 Date format on which the most recent version of the term was issued."
+        "Modified":"The date in ISO 8601 Date format on which the most recent version of the term was issued.",
+        "Decision":"The HTTP IRI representing the record of the Executive Committee decision affecting the term.",
+        "Label":"A a word or short phrase that serves as a human-readable name for the term.",
+        "Definition":"The normative definition of the term, written in English."
     }  
     definitionTable = ""
     definitionTable = definitionTable + "| Label (Term) | Definition | Example | Normative | \n"
