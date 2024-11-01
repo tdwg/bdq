@@ -51,7 +51,7 @@ The document provides the context in which the BDQ Core Tests exist.
 
 ### 1.2 Audience
 
-This document is for Users and Implementors of BDQ Core who require a technical understanding of the Tests.
+This document is for Users and Implementers of BDQ Core who require a technical understanding of the Tests.
 
 ### 1.3 Associated Documents
 
