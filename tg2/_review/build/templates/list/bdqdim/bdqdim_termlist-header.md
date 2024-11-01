@@ -87,7 +87,7 @@ The following namespace abbreviations are used in this document:
 | Prefix | IRI |
 | --- | --- |
 | bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
-| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
+| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
 | bdq:     | https://rs.tdwg.org/bdq/terms/   |
 

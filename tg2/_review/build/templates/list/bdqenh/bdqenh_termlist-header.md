@@ -87,7 +87,7 @@ The following namespace abbreviations are used in this document:
 | ------ | --- |
 | bdq:     | https://rs.tdwg.org/bdq/terms/    |
 | bdqenh:  | https://rs.tdwg.org/bdqenh/terms/ |
-| bbqffdq: | http://rs.tdwg.org/bdq/bdqffdq/   |
+| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/   |
 | bbdcore: | http://rs.tdwg.org/bdq/bdqcore/   |
 
 ### 1.8 Key to Vocabulary Terms
