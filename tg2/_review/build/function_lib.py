@@ -61,8 +61,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
         "Definition":"The normative definition of the term, written in English."
     }  
     definitionTable = ""
-    definitionTable = definitionTable + "| Label (Term) | Definition | Example | Normative | \n"
-    definitionTable = definitionTable + "| ------------ | ---------- | ------- | --------- |\n"
+    definitionTable = definitionTable + "| Label (Term) | Normative | Definition | Example |\n"
+    definitionTable = definitionTable + "| ------------ | --------- | ---------- | ------- |\n"
     termrow = terms_sorted_by_localname.iloc[0]
     for key, value in term_concept_dictionary.items() :
         force = False
@@ -144,6 +144,11 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                         if key in row.keys() and row[key] :
                             example = row[key]
                             break
+                if example and example.find(' ')==-1 and len(example) > 20 : 
+                   # long string without spaces
+                   if example.startswith('https://') or example.startswith('http://') : 
+                       spacedExample = example[:example.rfind("/")] + "/ " + example[example.rfind("/")+1:]
+                       example = "[{}]({})".format(spacedExample,example)
             else : 
                 example = ""
             normative = value['normative']
@@ -151,7 +156,7 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                  normative = "normative"
             elif normative == "false" :
                  normative = "non-normative"
-            definitionTable = definitionTable + "| {} ({}) | {} | {} | {} |\n".format(label,termname,definition,example,normative)
+            definitionTable = definitionTable + "| {} ({}) | {} | {} | {} |\n".format(label,termname,normative,definition,example)
     return definitionTable
 
 # Function build_authors_contributors_markdown builds a markdown list of authors and contributors from 

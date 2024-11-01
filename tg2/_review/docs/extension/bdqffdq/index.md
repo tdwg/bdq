@@ -127,13 +127,13 @@ The following namespace abbreviations are used in this document:
 
 ### 1.7 Key to Vocabulary Terms
 
-| Label (Term) | Definition | Example | Normative | 
-| ------------ | ---------- | ------- | --------- |
-| Name (rdf:value) | Idiomatic property used for structured values. | https://rs.tdwg.org/bdqffdq/terms/COMPLETE | normative |
-| Type (rdf:type) | The subject is an instance of a class. | https://rs.tdwg.org/bdqffdq/terms/ResponseResult | normative |
-| Range (rdfs:range) | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | n0b31bd9072da4a28bde3d2565029d4f1b1 | normative |
-| DifferentFrom (owl:differentFrom) | The property that determines that two given individuals are different. | https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE | normative |
-| Label (rdfs:label) | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE | normative |
+| Label (Term) | Normative | Definition | Example |
+| ------------ | --------- | ---------- | ------- |
+| Name (rdf:value) | normative | Idiomatic property used for structured values. | [https://rs.tdwg.org/bdqffdq/terms/ COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) |
+| Type (rdf:type) | normative | The subject is an instance of a class. | [https://rs.tdwg.org/bdqffdq/terms/ ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult) |
+| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction in the form [ owl:someValuesFrom bdqffdq:targetedMeasure ]. | na990c12f9f8845c9a6ce2d4309d545bcb1 |
+| DifferentFrom (owl:differentFrom) | normative | The property that determines that two given individuals are different. | [https://rs.tdwg.org/bdqffdq/terms/ NOT_COMPLETE](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE) |
+| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE |
 
 
 ## 2 Use of Terms (normative)
