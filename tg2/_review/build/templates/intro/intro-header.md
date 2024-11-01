@@ -53,7 +53,7 @@ This document is a general introduction to BDQ Core standard designed for anyone
 
 ### 1.3 Associated Documents
 
-Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").  Those intereseted in composing new tests, or seeking to represent test results as linked open data should consult the [Framework Ontology guide](../guide/bdqffdq/index.md).
+Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide"), while those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").  Those interested in composing new tests, or seeking to represent test results as linked open data should consult the [Framework Ontology guide](../guide/bdqffdq/index.md).
 
 ### 1.4. Status of the Content of This Document
 
@@ -147,7 +147,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java implementations of the BDQ Core tests which pass against the validation data.  See [9 Existing Test Implementations](../guide/implementers/index.md/#9-Existing-Test-Implementations-non-normative) in the implementer's guide for details.  
 
-Additional code is available to help support implmentation of tests and the use of bdqcore, dwc, and bdqffdq terms in rdf.  See the discussion in [section 8.6 Existing Sofware tools](#86-Existing-Sofware-tools-non-normative) of the implementer's guide.
+Additional code is available to help support implementation of tests and the use of bdqcore, dwc, and bdqffdq terms in rdf.  See the discussion in [section 8.6 Existing Sofware tools](#86-Existing-Sofware-tools-non-normative) of the BDQ Core Implementer's Guide.
 
 <!--- TODO: note partial implementations in iDigBio, ALA, OBIS, GBIF, and R packages --->
 
@@ -175,7 +175,7 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 ### 4.1 Acknowledgements
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at Biodiversity Informatuion Standards (TDWG) annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also gratefull for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at Biodiversity Information Standards (TDWG) annual meetings (in Jonkopping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also grateful for all those who responded to our email questions.
 
 We'd also gratefully aknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
 
@@ -187,7 +187,7 @@ The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP
 
 ### 4.2 Contributions
 
-Many people have contributed valuable commments through the development of the BDQ Core standard.  
+Many people have contributed valuable comments through the development of the BDQ Core standard.  
 
 #### 4.2.1 Authors 
 
@@ -203,18 +203,18 @@ We recognize four people as authors of the standard, having contributed consiste
 There were many people who have made notable contributions at various times during the development of BDQ Core.
  
 - **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Convener of TDWG Data Quality Task Group 4 (Best Practices for Development of Vocabularies of Value); test descriptions; vocabulary development.
-- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors; migrated test descriptors into markdown tables in github issues.
+- **Alexander Thompson (iDigBio)**: Key contributions to initial development of test descriptors; migrated test descriptors into markdown tables in GitHub issues.
 - **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to test evaluation; explanatory workflow diagrams; editing BDQ Core documents.
 - **António Mauro Saraiva (Universidade de São Paulo)**: Co-convenor of the TDWG Data Quality Interest Group; development of the Framework for Data Quality (TDWG Data Quality Task Group 1); facilitated test development workshop.
 - **Alan Koch Veiga (Universidade de São Paulo)**: Developed the Framework on Data Quality as his dissertation (Veiga 2016), Convener of the TDWG Data Quality Task Group 1 (Framework for Data Quality).
-- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology reprentation of Framework on Data Quality; developer of kurator-ffdq Java class representation of the Framework.
-- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Intitial contribitions to data quality discussions; vocabulary definitions and early test development.
-- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions; clarification of GBIF vocabulary and API resources for the BDQ Core Tsts.
-- **Dmitry Schigel (Global Biodiversity Information Facility)**: Intitial contribitions to data quality discussions and vocabulary definitions; GBIF Representative to the Data Quality Interest Group in early years.
-- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the ontology of the Data Quality Framework; guided intital development of the ontology representation of the Framework.
+- **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology representation of Framework on Data Quality; developer of kurator-ffdq Java class representation of the Framework.
+- **Christian Gendreau (Agriculture and Agri-Food Canada)**: Initial contribitions to data quality discussions; vocabulary definitions and early test development.
+- **Tim Roberston (Global Biodiversity Information Facility)**: Contributions to test descriptions; clarification of GBIF vocabulary and API resources for the BDQ Core Tests.
+- **Dmitry Schigel (Global Biodiversity Information Facility)**: Initial contributions to data quality discussions and vocabulary definitions; GBIF Representative to the Data Quality Interest Group in early years.
+- **Robert A. Morris (late, of UMass Boston)**: Competency questions for the ontology of the Data Quality Framework; guided initial development of the ontology representation of the Framework.
 - **Miles Nicholls (Atlas of Living Australia)**: Convener of TDWG Data Quality Task Group 3 (Data Quality Use Cases); Use Case analysis.
 - **Emily Rose Rees (Atlas of Living Australia)**: Use Case analysis in TDWG Data Quality Task Group 3 (Data Quality Use Cases).
-- **Abigail Benson (U.S. Geological Survey)**: Intitial contribitions to data quality discussions and vocabulary definitions.
+- **Abigail Benson (U.S. Geological Survey)**: Initial contributions to data quality discussions and vocabulary definitions.
 
 ## 5 Acronyms
 
@@ -311,7 +311,7 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
   - [bdqffdq Framework Guide](../guide/bdqffdq/index.md) This document is for those needing a technical understanding of the Framework Ontology (the bdqffdq: vocabulary).
 - Vocabularies
   - [Vocabulary Landing page](../vocabularies/index.md) This document is for those needing a technical understanding of BDQ Core and readers seeking to navigate the BDQ Core standard.
-    - [bdqcore: Landing page](../bdqcore/index.md) This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementors. 
+    - [bdqcore: Landing page](../bdqcore/index.md) This document is for those needing a technical understanding of the BDQ Core Tests, both Users and Implementers. 
     - [bdqffdq; Landing page](../bdqffdq/index.md) Technical users who need to understand how to describe data quality with the framework.
     - [Term List for bdqffdq:](../list/bdqffdq/index.md) This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology (the bdqffdq: vocabulary).
     - [bdqffdq: Vocabulary Extension](../extension/bdqffdq/index.md) This document is for those needing a technical understanding of the bdqffdq Framework. 
