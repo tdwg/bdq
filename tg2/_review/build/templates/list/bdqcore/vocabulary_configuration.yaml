@@ -63,7 +63,7 @@ MethodGuid:
   term: bdqffdq:DataQualityMethod
 AuthoritiesDefaults:
   label: SourceAuthorities/Defaults
-  normative: ''
+  normative: 'true'
   term: bdqffdq:hasAuthoritiesDefaults
 Criterion:
   label: Criterion
@@ -129,7 +129,7 @@ MethodLabel:
 Notes:
   append: Additional information to supplement the Specification.
   label: Notes
-  normative: ''
+  normative: 'false'
   term: skos:note
 Parameters:
   label: Parameters
@@ -138,16 +138,16 @@ Parameters:
 References:
   append: The minimum set of references that are required for an understanding of the nature of the test.
   label: References
-  normative: ''
+  normative: 'false'
   term: dcterms:bibliographicCitation
 Resource Type:
   label: ResourceType
-  normative: ''
+  normative: 'true'
   term: bdqffdq:ResourceType
 Source:
   append: The origin of the concept of the test.
   label: Source
-  normative: ''
+  normative: 'false'
   term: skos:historyNote
 Specification:
   force: 'true'
@@ -181,7 +181,7 @@ flags:
 historyNoteUrl:
   append: A link to the github issue that provided rationalle management recording a history (changes and comments) of the development of the test.
   label: Developed As Github Issue
-  normative: ''
+  normative: 'false'
   term: skos:historyNote
 organized_in:
   label: ''
