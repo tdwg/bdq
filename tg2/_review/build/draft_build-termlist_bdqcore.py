@@ -76,11 +76,11 @@ vocab_type = 1 # 1 is simple vocabulary, 2 is simple controlled vocabulary, 3 is
 # If so, those categories can be used to group terms in the generated term list document.
 organized_in_categories = True
 
-# If organized in categories, the display_order list must contain the IRIs that are values of tdwgutility_organizedInClass
+# If organized in categories, the display_order list must contain the IRIs that are values of the term given in display_id
 # If not organized into categories, the value is irrelevant. There just needs to be one item in the list.
 
 display_order = ['Validation','Amendment','Issue','Measure'] # categories to split into.
-display_label = ['Validation Tests','Amendment Tests','Issue Tests','Measure Tests'] # these are the section labels for the categories in the page
+display_label = ['Index to Validation Tests','Index to Amendment Tests','Index to Issue Tests','Index to Measure Tests'] # these are the section labels for the categories in the page
 display_comments = ['','','','Including MultiRecord Measures'] # these are the comments about the category to be appended following the section labels
 display_id = ['Type'] # these are the fragment identifiers for the associated sections for the categories
 
@@ -225,20 +225,20 @@ for term in termLists:
     print('Generating term index by label')
     text = '\n\n'
     
-    # text += '**Tests**\n'
     text += '\n'
-    for row_index,row in terms_sorted_by_label.iterrows():
-        curie = "bdqcore:" + row['term_localName']
-        curie_anchor = curie.replace(':','_')
-        text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
-    text = text[:len(text)-2] # remove final trailing vertical bar and newline
-    text += '\n\n' # put back removed newline
+    if not organized_in_categories:
+        for row_index,row in terms_sorted_by_label.iterrows():
+            curie = "bdqcore:" + row['term_localName']
+            curie_anchor = curie.replace(':','_')
+            text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
+        text = text[:len(text)-2] # remove final trailing vertical bar and newline
+        text += '\n\n' # put back removed newline
     
     category_counter = 0
     for category in range(0,len(display_order)):
         if organized_in_categories:
             category_counter = category_counter + 1
-            text += '### 3.' + str(category_counter) + ' '  + display_label[category] + '**\n'
+            text += '### 3.' + str(category_counter) + ' '  + display_label[category] + '\n'
             if (display_comments[category]) : 
                text += '\n' + display_comments[category] + '\n'
             text += '\n'
