@@ -157,6 +157,7 @@ These "Test Descriptors" are terms that are necessary to comprehensively describ
 | DateLastUpdated (bdqffdq:hasDateLastUpdated) |  | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |
 | Guids for Arguments (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 7ecc692d-e65f-4ea5-9d54-04421ec96ab4 |
 | Guid for Specification (bdqffdq:Specification) | normative | A specific statement about how to evaluate a data quality need. | urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04 |
+| Guid for DataQualityMethod (bdqffdq:DataQualityMethod) | normative | A solutions concept that relates a data quality need to a Specification. | urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957 |
 | SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]} |
 | Criterion (bdqffdq:Criterion) | normative | Rule against which data are evaluated for conformance to quality criteria. | NotEmpty |
 | Description (rdfs:comment) | non-normative | A description of the subject resource. In present context: A brief description of what the test does | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. |
@@ -579,6 +580,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.</td>
 		</tr>
@@ -627,16 +632,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -696,6 +693,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -758,16 +759,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -825,6 +818,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
@@ -877,16 +874,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -948,6 +937,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d040474f-edc7-47b8-80a0-3a3859359897</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
 		</tr>
@@ -1004,16 +997,8 @@ Including MultiRecord Measures
 			<td>7ecc692d-e65f-4ea5-9d54-04421ec96ab4</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:d040474f-edc7-47b8-80a0-3a3859359897</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1075,6 +1060,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3c402f21-5347-419c-a720-8bbad7c38577</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
@@ -1127,16 +1116,8 @@ Including MultiRecord Measures
 			<td>1b66a16a-5e76-4eca-a400-d097ac136ac1</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:3c402f21-5347-419c-a720-8bbad7c38577</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1198,6 +1179,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
 		</tr>
@@ -1254,16 +1239,8 @@ Including MultiRecord Measures
 			<td>82350b56-1855-4b5a-8b44-9040efb0bf05</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1321,6 +1298,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
@@ -1365,16 +1346,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1430,6 +1403,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0836e914-75d8-4cda-a39f-f21a08382732</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -1488,16 +1465,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:0836e914-75d8-4cda-a39f-f21a08382732</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1555,6 +1524,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:c15d57ce-301c-4db0-8146-399cd59382ad</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.</td>
 		</tr>
@@ -1607,16 +1580,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:c15d57ce-301c-4db0-8146-399cd59382ad</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1678,6 +1643,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
@@ -1734,16 +1703,8 @@ Including MultiRecord Measures
 			<td>ff9e9459-d1a5-43a6-ada9-8be41772b711</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:fda457b6-f844-49ca-aee5-1b99968cf7ea</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1805,6 +1766,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
@@ -1857,16 +1822,8 @@ Including MultiRecord Measures
 			<td>17d785ee-6ac9-4ab4-9806-f4a2b0d8bbf1</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -1928,6 +1885,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2bc15408-d0d0-4166-b6a6-6fdba5704379</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.</td>
 		</tr>
@@ -1984,16 +1945,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:2bc15408-d0d0-4166-b6a6-6fdba5704379</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2055,6 +2008,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7c915d24-1fda-4d72-97d4-8bd5e2136c97</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.</td>
 		</tr>
@@ -2111,16 +2068,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:7c915d24-1fda-4d72-97d4-8bd5e2136c97</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2182,6 +2131,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8ca96a50-f1f5-4a4e-853e-755cc5aa82a7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.</td>
 		</tr>
@@ -2238,16 +2191,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:8ca96a50-f1f5-4a4e-853e-755cc5aa82a7</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2309,6 +2254,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:647bf697-e432-4b31-9a69-778396e14a82</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:cca7732f-c336-47b0-9d69-4514d39f5950</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.</td>
 		</tr>
@@ -2365,16 +2314,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:cca7732f-c336-47b0-9d69-4514d39f5950</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:647bf697-e432-4b31-9a69-778396e14a82</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2430,6 +2371,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:381b0edb-0fb4-4a8e-a77b-badcfa286961</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -2488,16 +2433,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:381b0edb-0fb4-4a8e-a77b-badcfa286961</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2559,6 +2496,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:defaultGeodeticDatum default = "EPSG:4326"</td>
 		</tr>
@@ -2615,16 +2556,8 @@ Including MultiRecord Measures
 			<td>7fd3889a-0d1d-4054-8e68-807cfa5410f2</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2682,6 +2615,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
@@ -2734,16 +2671,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2805,6 +2734,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2f73a662-b833-44ad-942c-a87f82262b7c</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.</td>
 		</tr>
@@ -2849,16 +2782,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:2f73a662-b833-44ad-942c-a87f82262b7c</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -2920,6 +2845,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:47bdaece-0c20-4ba3-b453-4c78b92b4c94</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.</td>
 		</tr>
@@ -2964,16 +2893,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:47bdaece-0c20-4ba3-b453-4c78b92b4c94</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3031,6 +2952,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:c1af0cfd-311e-4982-922a-dc67e0c2c975</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.</td>
 		</tr>
@@ -3083,16 +3008,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:c1af0cfd-311e-4982-922a-dc67e0c2c975</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3158,6 +3075,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>dwc:defaultOccurrenceStatus default = "present"</td>
 		</tr>
@@ -3206,16 +3127,8 @@ Including MultiRecord Measures
 			<td>c72cfe4a-a500-4266-84be-1faa6673c022</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3277,6 +3190,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
 		</tr>
@@ -3329,16 +3246,8 @@ Including MultiRecord Measures
 			<td>c3346048-0cd3-4efe-9544-89dd8f0482ea</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3400,6 +3309,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:5e1ab035-a79f-4048-9330-e073d4b6c2c9</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
@@ -3456,16 +3369,8 @@ Including MultiRecord Measures
 			<td>0a7b3629-ecd9-47d2-b672-44ef47e03f7b</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:5e1ab035-a79f-4048-9330-e073d4b6c2c9</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3531,6 +3436,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -3587,16 +3496,8 @@ Including MultiRecord Measures
 			<td>0127389b-a68d-4393-a84c-aa9c690bd0e7</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3662,6 +3563,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:566faded-60b6-44bf-a335-dc78d5013582</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:316da14e-9477-4319-bd2c-c201f3b0f461</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -3722,16 +3627,8 @@ Including MultiRecord Measures
 			<td>b1f2699b-3b7e-41a1-9e5c-f670559664ba</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:316da14e-9477-4319-bd2c-c201f3b0f461</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:566faded-60b6-44bf-a335-dc78d5013582</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3793,6 +3690,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
@@ -3849,16 +3750,8 @@ Including MultiRecord Measures
 			<td>e35dd18a-9c69-4aef-9b70-3d36d7eb6bd4</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -3920,6 +3813,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}</td>
 		</tr>
@@ -3976,16 +3873,8 @@ Including MultiRecord Measures
 			<td>ef83a8c4-62f3-4e18-b589-07bc6f178cd7</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -4047,6 +3936,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:05104b96-267c-432a-9f30-88552404763e</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -4103,16 +3996,8 @@ Including MultiRecord Measures
 			<td>a10eb348-7fc5-4b96-88e3-619300cb0079</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:AmendmentMethod</td>
-			<td>urn:uuid:05104b96-267c-432a-9f30-88552404763e</td>
-		</tr>
-		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -4172,6 +4057,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0dacd2f5-591c-47c1-9d05-2de81675b6cc</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -4285,6 +4174,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</td>
 		</tr>
@@ -4341,16 +4234,8 @@ Including MultiRecord Measures
 			<td>9c0a82d5-4b24-4160-a000-ee9429bef8f7,2c441806-b56b-4252-9944-e331f9f3fee6</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:IssueMethod</td>
-			<td>urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e</td>
-		</tr>
-		<tr>
 			<td>IssueMethod label</td>
 			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -4408,6 +4293,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:dataGeneralizations?</td>
 		</tr>
@@ -4456,16 +4345,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:IssueMethod</td>
-			<td>urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3</td>
-		</tr>
-		<tr>
 			<td>IssueMethod label</td>
 			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -4523,6 +4404,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:establishmentMeans?</td>
 		</tr>
@@ -4563,16 +4448,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:IssueMethod</td>
-			<td>urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75</td>
-		</tr>
-		<tr>
 			<td>IssueMethod label</td>
 			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -4628,6 +4505,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3dcd847e-25bf-4ae2-8428-8e74e054d9e6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -4715,6 +4596,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -4820,6 +4705,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d25368be-5f39-4a47-adf3-9c1293499599</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measures the number of distinct VALIDATION tests that have a Response.status="COMPLIANT" for a given record.</td>
 		</tr>
@@ -4909,6 +4798,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:104854fb-68a4-41cc-8fa5-1ab76fbaa93b</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -5002,6 +4895,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d1a8d273-8cd0-4f64-bcd4-1c3d2a42ccfa</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>The number of distinct VALIDATION tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.</td>
 		</tr>
@@ -5091,6 +4988,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -5188,6 +5089,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:07e4c491-0d13-409d-b966-fbb9721e81cf</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</td>
 		</tr>
@@ -5277,6 +5182,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -5378,6 +5287,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -5475,6 +5388,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:315a198d-3811-40dd-918a-756f598f3294</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -5576,6 +5493,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT</td>
 		</tr>
@@ -5665,6 +5586,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -5766,6 +5691,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:95c2e363-5a99-4276-937d-98008ca893f9</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -5855,6 +5784,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -5952,6 +5885,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:940621f5-4f24-48de-8b36-256101ca4987</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -6041,6 +5978,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6142,6 +6083,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -6233,6 +6178,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:31c40ce6-eecd-4304-bda7-0234993b079d</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -6322,6 +6271,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6423,6 +6376,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -6522,6 +6479,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -6611,6 +6572,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6706,6 +6671,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -6807,6 +6776,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -6906,6 +6879,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -6997,6 +6974,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -7086,6 +7067,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -7181,6 +7166,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -7282,6 +7271,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:4c6a5522-ae8c-42d3-a396-8fc3aee49ef9</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
@@ -7371,6 +7364,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:bb12babf-ca13-4289-9a3d-dde52bb8aff8</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7464,6 +7461,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
@@ -7553,6 +7554,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7646,6 +7651,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -7735,6 +7744,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -7828,6 +7841,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:908fc823-75a9-437e-be7c-5c72cd6b149e</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -7917,6 +7934,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -8018,6 +8039,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -8107,6 +8132,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -8208,6 +8237,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
@@ -8299,6 +8332,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:87d34104-0a79-4f51-aeeb-1115ec56e237</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -8388,6 +8425,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -8489,6 +8530,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -8580,6 +8625,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3f868855-cc39-4a1b-8050-bfa246416a47</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
@@ -8669,6 +8718,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -8770,6 +8823,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -8869,6 +8926,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6d1f3f11-98d9-4b26-a8e7-56fbc066c705</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -8958,6 +9019,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -9059,6 +9124,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f5bd0eee-4cdf-4455-876d-a46d92373a4e</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -9148,6 +9217,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -9249,6 +9322,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -9346,6 +9423,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -9447,6 +9528,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -9546,6 +9631,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT</td>
 		</tr>
@@ -9635,6 +9724,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -9728,6 +9821,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -9817,6 +9914,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:296e08b2-c044-4cef-930e-8d29c579c8d6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -9910,6 +10011,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:af9591f4-d0ee-4301-bc59-d6a68d1d6813</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -9999,6 +10104,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -10100,6 +10209,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -10197,6 +10310,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ffae8e47-2181-4a83-b1c7-d0a893e79b67</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -10298,6 +10415,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -10395,6 +10516,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -10496,6 +10621,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -10585,6 +10714,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f6c58791-279d-458b-b4ee-058a73a002ee</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -10678,6 +10811,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f2f40350-4081-4402-8b2b-95f9ad8893a7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT</td>
 		</tr>
@@ -10769,6 +10906,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b1b04dc2-e74b-43f3-9f48-60ac08afcadb</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -10858,6 +10999,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -10959,6 +11104,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:c3d0ce9b-2f40-4cd7-8e67-085b137e8e89</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
 		</tr>
@@ -11048,6 +11197,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -11149,6 +11302,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:9c5798cd-6176-41ed-8e91-35e3df1fa6d4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -11238,6 +11395,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -11339,6 +11500,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:dbb803cb-8b37-4db3-a562-b4f6036f9d17</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -11428,6 +11593,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -11529,6 +11698,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -11626,6 +11799,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7922ab56-6eae-4257-9691-d55d24842274</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -11727,6 +11904,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
@@ -11818,6 +11999,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:94510668-a59f-41d3-84bb-30cd9715cb62</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
@@ -11907,6 +12092,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12004,6 +12193,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:07e4c491-0d13-409d-b966-fbb9721e81cf</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -12093,6 +12286,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12194,6 +12391,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -12291,6 +12492,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:315a198d-3811-40dd-918a-756f598f3294</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12392,6 +12597,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT</td>
 		</tr>
@@ -12481,6 +12690,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12582,6 +12795,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:95c2e363-5a99-4276-937d-98008ca893f9</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -12671,6 +12888,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12768,6 +12989,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:940621f5-4f24-48de-8b36-256101ca4987</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -12857,6 +13082,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -12958,6 +13187,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -13049,6 +13282,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:31c40ce6-eecd-4304-bda7-0234993b079d</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -13138,6 +13375,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13239,6 +13480,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -13338,6 +13583,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -13427,6 +13676,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13522,6 +13775,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13623,6 +13880,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -13722,6 +13983,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -13813,6 +14078,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -13902,6 +14171,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -13997,6 +14270,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -14098,6 +14375,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:4c6a5522-ae8c-42d3-a396-8fc3aee49ef9</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT</td>
 		</tr>
@@ -14187,6 +14468,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:bb12babf-ca13-4289-9a3d-dde52bb8aff8</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14280,6 +14565,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -14369,6 +14658,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14462,6 +14755,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -14551,6 +14848,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14644,6 +14945,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:908fc823-75a9-437e-be7c-5c72cd6b149e</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -14733,6 +15038,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -14834,6 +15143,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -14923,6 +15236,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -15024,6 +15341,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT</td>
 		</tr>
@@ -15115,6 +15436,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:87d34104-0a79-4f51-aeeb-1115ec56e237</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -15204,6 +15529,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -15305,6 +15634,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -15396,6 +15729,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3f868855-cc39-4a1b-8050-bfa246416a47</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT</td>
 		</tr>
@@ -15485,6 +15822,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -15586,6 +15927,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -15685,6 +16030,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6d1f3f11-98d9-4b26-a8e7-56fbc066c705</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -15774,6 +16123,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -15875,6 +16228,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f5bd0eee-4cdf-4455-876d-a46d92373a4e</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -15964,6 +16321,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -16065,6 +16426,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -16162,6 +16527,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -16263,6 +16632,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -16362,6 +16735,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -16451,6 +16828,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -16544,6 +16925,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -16633,6 +17018,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:296e08b2-c044-4cef-930e-8d29c579c8d6</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -16726,6 +17115,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:af9591f4-d0ee-4301-bc59-d6a68d1d6813</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -16815,6 +17208,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -16916,6 +17313,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -17013,6 +17414,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ffae8e47-2181-4a83-b1c7-d0a893e79b67</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -17114,6 +17519,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -17211,6 +17620,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -17312,6 +17725,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -17401,6 +17818,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f6c58791-279d-458b-b4ee-058a73a002ee</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17494,6 +17915,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f2f40350-4081-4402-8b2b-95f9ad8893a7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT</td>
 		</tr>
@@ -17585,6 +18010,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b1b04dc2-e74b-43f3-9f48-60ac08afcadb</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -17674,6 +18103,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -17775,6 +18208,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:c3d0ce9b-2f40-4cd7-8e67-085b137e8e89</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
@@ -17864,6 +18301,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -17965,6 +18406,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:9c5798cd-6176-41ed-8e91-35e3df1fa6d4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -18054,6 +18499,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -18155,6 +18604,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:dbb803cb-8b37-4db3-a562-b4f6036f9d17</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -18244,6 +18697,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -18345,6 +18802,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -18442,6 +18903,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7922ab56-6eae-4257-9691-d55d24842274</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -18543,6 +19008,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
@@ -18632,6 +19101,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:94510668-a59f-41d3-84bb-30cd9715cb62</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -18725,6 +19198,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
@@ -18777,16 +19254,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -18844,6 +19313,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:07e4c491-0d13-409d-b966-fbb9721e81cf</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?</td>
 		</tr>
@@ -18888,16 +19361,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:07e4c491-0d13-409d-b966-fbb9721e81cf</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -18959,6 +19424,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -19015,16 +19484,8 @@ Including MultiRecord Measures
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19084,6 +19545,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -19150,16 +19615,8 @@ Including MultiRecord Measures
 			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19221,6 +19678,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:315a198d-3811-40dd-918a-756f598f3294</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
 		</tr>
@@ -19277,16 +19738,8 @@ Including MultiRecord Measures
 			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:315a198d-3811-40dd-918a-756f598f3294</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19344,6 +19797,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?</td>
 		</tr>
@@ -19392,16 +19849,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19467,6 +19916,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
@@ -19523,16 +19976,8 @@ Including MultiRecord Measures
 			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19590,6 +20035,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:95c2e363-5a99-4276-937d-98008ca893f9</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dc:type?</td>
 		</tr>
@@ -19634,16 +20083,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:95c2e363-5a99-4276-937d-98008ca893f9</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19699,6 +20140,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -19761,16 +20206,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19828,6 +20265,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:940621f5-4f24-48de-8b36-256101ca4987</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dcterms:license?</td>
 		</tr>
@@ -19872,16 +20313,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:940621f5-4f24-48de-8b36-256101ca4987</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -19943,6 +20376,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
 		</tr>
@@ -19999,16 +20436,8 @@ Including MultiRecord Measures
 			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20066,6 +20495,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in any of the Darwin Core spatial terms that could specify a location?</td>
 		</tr>
@@ -20114,16 +20547,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20181,6 +20606,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:31c40ce6-eecd-4304-bda7-0234993b079d</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:basisOfRecord?</td>
 		</tr>
@@ -20221,16 +20650,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:31c40ce6-eecd-4304-bda7-0234993b079d</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20292,6 +20713,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
@@ -20344,16 +20769,8 @@ Including MultiRecord Measures
 			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20415,6 +20832,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -20467,16 +20888,8 @@ Including MultiRecord Measures
 			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:6d096b24-0eb1-4e6e-804f-6810e781d16f</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20534,6 +20947,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509?</td>
 		</tr>
@@ -20582,16 +20999,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20649,6 +21058,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -20701,16 +21114,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20770,6 +21175,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -20836,16 +21245,8 @@ Including MultiRecord Measures
 			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -20907,6 +21308,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -20963,16 +21368,8 @@ Including MultiRecord Measures
 			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21034,6 +21431,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:country?</td>
 		</tr>
@@ -21086,16 +21487,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21153,6 +21546,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:countryCode?</td>
 		</tr>
@@ -21205,16 +21602,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21272,6 +21661,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
@@ -21324,16 +21717,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21397,6 +21782,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -21463,16 +21852,8 @@ Including MultiRecord Measures
 			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21530,6 +21911,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:4c6a5522-ae8c-42d3-a396-8fc3aee49ef9</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:dateIdentified a valid ISO date?</td>
 		</tr>
@@ -21578,16 +21963,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:4c6a5522-ae8c-42d3-a396-8fc3aee49ef9</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21643,6 +22020,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:bb12babf-ca13-4289-9a3d-dde52bb8aff8</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -21701,16 +22082,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:bb12babf-ca13-4289-9a3d-dde52bb8aff8</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification for: VALIDATION_DAY_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21768,6 +22141,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:day an integer between 1 and 31 inclusive?</td>
 		</tr>
@@ -21820,16 +22197,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21887,6 +22256,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?</td>
 		</tr>
@@ -21931,16 +22304,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -21998,6 +22363,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:decimalLatitude?</td>
 		</tr>
@@ -22042,16 +22411,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22109,6 +22470,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?</td>
 		</tr>
@@ -22153,16 +22518,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22220,6 +22577,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:908fc823-75a9-437e-be7c-5c72cd6b149e</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:decimalLongitude?</td>
 		</tr>
@@ -22260,16 +22621,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:908fc823-75a9-437e-be7c-5c72cd6b149e</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22331,6 +22684,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
@@ -22387,16 +22744,8 @@ Including MultiRecord Measures
 			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22458,6 +22807,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?</td>
 		</tr>
@@ -22510,16 +22863,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22581,6 +22926,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
@@ -22637,16 +22986,8 @@ Including MultiRecord Measures
 			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22704,6 +23045,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?</td>
 		</tr>
@@ -22756,16 +23101,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:449f44fe-0fef-42ff-a446-d693653b55d4</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22823,6 +23160,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:87d34104-0a79-4f51-aeeb-1115ec56e237</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?</td>
 		</tr>
@@ -22875,16 +23216,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:87d34104-0a79-4f51-aeeb-1115ec56e237</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -22944,6 +23277,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -23010,16 +23347,8 @@ Including MultiRecord Measures
 			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23077,6 +23406,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:eventDate?</td>
 		</tr>
@@ -23125,16 +23458,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23190,6 +23515,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:3f868855-cc39-4a1b-8050-bfa246416a47</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -23248,16 +23577,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:3f868855-cc39-4a1b-8050-bfa246416a47</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23319,6 +23640,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -23375,16 +23700,8 @@ Including MultiRecord Measures
 			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23446,6 +23763,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -23502,16 +23823,8 @@ Including MultiRecord Measures
 			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:b6cb27ac-e9b8-4a0c-b986-3e34069d8449</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23569,6 +23882,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:6d1f3f11-98d9-4b26-a8e7-56fbc066c705</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:geodeticDatum?</td>
 		</tr>
@@ -23609,16 +23926,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:6d1f3f11-98d9-4b26-a8e7-56fbc066c705</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23680,6 +23989,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -23736,16 +24049,8 @@ Including MultiRecord Measures
 			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:7072bf93-bffc-4d83-ad51-b351c6e53260</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23803,6 +24108,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f5bd0eee-4cdf-4455-876d-a46d92373a4e</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:kingdom?</td>
 		</tr>
@@ -23843,16 +24152,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f5bd0eee-4cdf-4455-876d-a46d92373a4e</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -23914,6 +24215,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -23970,16 +24275,8 @@ Including MultiRecord Measures
 			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24041,6 +24338,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -24097,16 +24398,8 @@ Including MultiRecord Measures
 			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24168,6 +24461,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
 		</tr>
@@ -24224,16 +24521,8 @@ Including MultiRecord Measures
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24295,6 +24584,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
@@ -24351,16 +24644,8 @@ Including MultiRecord Measures
 			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24418,6 +24703,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?</td>
 		</tr>
@@ -24462,16 +24751,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24529,6 +24810,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive?</td>
 		</tr>
@@ -24577,16 +24862,8 @@ Including MultiRecord Measures
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:bb630881-2a79-4750-ae0f-36d0df2191f7</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24644,6 +24921,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:namePublishedInYear?</td>
 		</tr>
@@ -24684,16 +24965,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24751,6 +25024,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:296e08b2-c044-4cef-930e-8d29c579c8d6</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:occurrenceID?</td>
 		</tr>
@@ -24791,16 +25068,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:296e08b2-c044-4cef-930e-8d29c579c8d6</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24858,6 +25127,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:af9591f4-d0ee-4301-bc59-d6a68d1d6813</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:occurrenceStatus?</td>
 		</tr>
@@ -24898,16 +25171,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:af9591f4-d0ee-4301-bc59-d6a68d1d6813</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -24967,6 +25232,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -25029,16 +25298,8 @@ Including MultiRecord Measures
 			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25100,6 +25361,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -25156,16 +25421,8 @@ Including MultiRecord Measures
 			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25227,6 +25484,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:ffae8e47-2181-4a83-b1c7-d0a893e79b67</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
@@ -25283,16 +25544,8 @@ Including MultiRecord Measures
 			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:ffae8e47-2181-4a83-b1c7-d0a893e79b67</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25354,6 +25607,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -25410,16 +25667,8 @@ Including MultiRecord Measures
 			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25479,6 +25728,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -25541,16 +25794,8 @@ Including MultiRecord Measures
 			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:275ae9b2-4085-4946-9580-6a63844174cd</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25608,6 +25853,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:scientificName?</td>
 		</tr>
@@ -25652,16 +25901,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25719,6 +25960,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f6c58791-279d-458b-b4ee-058a73a002ee</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:scientificNameAuthorship?</td>
 		</tr>
@@ -25759,16 +26004,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f6c58791-279d-458b-b4ee-058a73a002ee</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25826,6 +26063,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f2f40350-4081-4402-8b2b-95f9ad8893a7</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Does the value of dwc:scientificNameID contain a complete identifier?</td>
 		</tr>
@@ -25874,16 +26115,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f2f40350-4081-4402-8b2b-95f9ad8893a7</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -25941,6 +26174,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:b1b04dc2-e74b-43f3-9f48-60ac08afcadb</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:scientificNameID?</td>
 		</tr>
@@ -25985,16 +26222,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:b1b04dc2-e74b-43f3-9f48-60ac08afcadb</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26056,6 +26285,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
@@ -26112,16 +26345,8 @@ Including MultiRecord Measures
 			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26183,6 +26408,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:c3d0ce9b-2f40-4cd7-8e67-085b137e8e89</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?</td>
 		</tr>
@@ -26235,16 +26464,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:c3d0ce9b-2f40-4cd7-8e67-085b137e8e89</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26306,6 +26527,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
@@ -26362,16 +26587,8 @@ Including MultiRecord Measures
 			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26429,6 +26646,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:9c5798cd-6176-41ed-8e91-35e3df1fa6d4</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in any of the terms needed to determine that the taxon exists?</td>
 		</tr>
@@ -26473,16 +26694,8 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:9c5798cd-6176-41ed-8e91-35e3df1fa6d4</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26544,6 +26757,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
@@ -26600,16 +26817,8 @@ Including MultiRecord Measures
 			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26667,6 +26876,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:dbb803cb-8b37-4db3-a562-b4f6036f9d17</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:taxonRank?</td>
 		</tr>
@@ -26711,16 +26924,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:dbb803cb-8b37-4db3-a562-b4f6036f9d17</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26782,6 +26987,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
@@ -26838,16 +27047,8 @@ Including MultiRecord Measures
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -26909,6 +27110,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5</td>
+		</tr>
+		<tr>
 			<td>SourceAuthorities/Defaults</td>
 			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
 		</tr>
@@ -26965,16 +27170,8 @@ Including MultiRecord Measures
 			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -27034,6 +27231,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:7922ab56-6eae-4257-9691-d55d24842274</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
@@ -27096,16 +27297,8 @@ Including MultiRecord Measures
 			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:7922ab56-6eae-4257-9691-d55d24842274</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -27163,6 +27356,10 @@ Including MultiRecord Measures
 			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66</td>
+		</tr>
+		<tr>
 			<td>Description</td>
 			<td>Is there a value in dwc:year?</td>
 		</tr>
@@ -27211,16 +27408,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
@@ -27276,6 +27465,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Guid for Specification</td>
 			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+		</tr>
+		<tr>
+			<td>Guid for DataQualityMethod</td>
+			<td>urn:uuid:94510668-a59f-41d3-84bb-30cd9715cb62</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -27334,16 +27527,8 @@ Including MultiRecord Measures
 			<td>bdq:Record-Management, bdq:Taxon-Management</td>
 		</tr>
 		<tr>
-			<td>bdqffdq:ValidationMethod</td>
-			<td>urn:uuid:94510668-a59f-41d3-84bb-30cd9715cb62</td>
-		</tr>
-		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>bdqffdq:Specification</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>

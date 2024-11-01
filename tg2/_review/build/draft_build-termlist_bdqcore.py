@@ -153,7 +153,7 @@ for term in termLists:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
     # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
+    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
@@ -182,7 +182,7 @@ for term in termLists:
             for index,row in frame.iterrows():
                 # PJM: TODO: just use column list?
                 # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-                row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['SpecificationGuid'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"] ]
+                row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['SpecificationGuid'], row["MethodGuid"], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"] ]
                 # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
         
                 table_list.append(row_list)
@@ -325,18 +325,18 @@ for term in termLists:
             queryResult = graph.query(sparql)
             print(sparql)
             for r in queryResult : 
-                text += '\t\t<tr>\n'
-                text += '\t\t\t<td>bdqffdq:'+testType+'Method</td>\n'
-                text += '\t\t\t<td>' + str(r['method']) + '</td>\n'
-                text += '\t\t</tr>\n'
+                #text += '\t\t<tr>\n'
+                #text += '\t\t\t<td>bdqffdq:'+testType+'Method</td>\n'
+                #text += '\t\t\t<td>' + str(r['method']) + '</td>\n'
+                #text += '\t\t</tr>\n'
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>'+testType+'Method label</td>\n'
                 text += '\t\t\t<td>' + str(r['label']) + '</td>\n'
                 text += '\t\t</tr>\n'
-                text += '\t\t<tr>\n'
-                text += '\t\t\t<td>bdqffdq:Specification</td>\n'
-                text += '\t\t\t<td>' + str(r['specification']) + '</td>\n'
-                text += '\t\t</tr>\n'
+                #text += '\t\t<tr>\n'
+                #text += '\t\t\t<td>bdqffdq:Specification</td>\n'
+                #text += '\t\t\t<td>' + str(r['specification']) + '</td>\n'
+                #text += '\t\t</tr>\n'
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>Specification label</td>\n'
                 text += '\t\t\t<td>' + str(r['specificationLabel']) + '</td>\n'
