@@ -57,6 +57,7 @@ Templates for proposals of new and change issues are available at https://github
 The bdq_issue_to_csv utility is available for converting markdown tables in issues into lines of csv.
 
 ## 3 Test Validation Data
+
 The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) records where each record provides-
 
 - Input.data: The values of bdqffdq:InformationElements (bdq:InformationElementsConsulted and bdq:InformationElementsActedUpon) required as input to the test
@@ -71,7 +72,7 @@ The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) record
   - The Test GUID
   - TestType: Either Validation, Issue, Measure or Amendment
   - Test Label: The last two components of the full Test Label that enables sorting by the Information Element focus of the Test
-  - The Data Dimension: What dimension of the data does the Test focus on, either NAME, SPACE, TIME, or OTHER (for definitions - see the Glossary in the BDQ Core Introduction)
+  - The Data Dimension: What dimension of the data (what general category of information element) does the Test focus on, either NAME, SPACE, TIME, or OTHER (for definitions - see the Glossary in the BDQ Core Introduction)
   - The record unique identifier
   - The within Test unique identifier (see below on special values)
 
