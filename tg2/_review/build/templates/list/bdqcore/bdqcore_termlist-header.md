@@ -67,7 +67,7 @@ The bdqcore: vocabulary includes:
 - This document, a term-list for the vocabulary, containing the vocabulary terms and their metadata.
 - A [landing page](../bdqcore/index.md) document with normative guidance on the use of the bdqcore vocabulary.
 
-In addition, A users guide to the use of the BDQ Core Tests is provided in the [Users Guide](../guide/users/index.md) and a guide to implemetation of the BDQ Core Tests is provided in the [Implementers Guide](../guide/implementers/index.md) 
+In addition, A users guide to the use of the BDQ Core Tests is provided in the [BDQ Core User's Guide](../guide/users/index.md) and a guide to implemetation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
 
 ### 1.4 Term List Distributions
 
