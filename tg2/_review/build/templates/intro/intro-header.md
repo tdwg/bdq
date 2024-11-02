@@ -220,23 +220,23 @@ There were many people who have made notable contributions at various times duri
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
-| ALA         | Atlas of Living Australia                             | 
-| BDQ         | TDWG Biodiversity Data Quality                        |
-| BISON       | Biodiversity Information Serving Our Nation           |
-| CRIA        | Centro de Referência em Informação Ambiental          |
-| EPSG        | European Petroleum Survey Group                       |
-| GBIF        | Global Biodiversity Information Facility              |
-| iDigBio     | Integrated Digitized BioCollections                   |
-| IRI         | Internationalized Resource Identifier                 |
-| ISO         | International Standards Organization                  |
-| QA          | Quality Assurance                                     |
-| QC          | Quality Control                                       |
-| SDS         | TDWG Standards Documentation Standard                 |
-| TDWG        | Biodiversity Information Standards                    |
-| TG1         | Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality |
-| TG2         | Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions |
-| TG3         | Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases     |
-| TG4         | Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Value |
+| ALA         | [Atlas of Living Australia](https://ala.org.au)                             | 
+| BDQ         | TDWG [Biodiversity Data Quality](https://github.com/tdwg/bdq)                       |
+| BISON       | [Biodiversity Information Serving Our Nation](https://www.gbif.us/about/)           |
+| CRIA        | [Centro de Referência em Informação Ambiental](https://www.cria.org.br/)          |
+| EPSG        | [European Petroleum Survey Group](https://epsg.org/home.html)                     |
+| GBIF        | [Global Biodiversity Information Facility](https://gbif.org)             |
+| iDigBio     | [Integrated Digitized BioCollections](https://www.idigbio.org/)                   |
+| IRI         | [Internationalized Resource Identifier](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier)                 |
+| ISO         | [International Standards Organization](https://www.iso.org/home.html)                  |
+| QA          | [Quality Assurance](https://en.wikipedia.org/wiki/Quality_assurance)                                     |
+| QC          | [Quality Control](https://en.wikipedia.org/wiki/Quality_control)                                       |
+| SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/)                 |
+| TDWG        | [Biodiversity Information Standards](https://tdwg.org)                    |
+| TG1         | Biodiversity Data Quality Interest Group - [Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
+| TG2         | Biodiversity Data Quality Interest Group - [Task Group 2: Data Quality Tests and Assertions](https://github.com/tdwg/bdq/tree/master/tg2) |
+| TG3         | Biodiversity Data Quality Interest Group - [Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3)     |
+| TG4         | Biodiversity Data Quality Interest Group - [Task Group 4: Best Practices for Development of Vocabularies of Value](https://github.com/tdwg/bdq/tree/master/tg4) |
 
 ## 6 Glossary
 
