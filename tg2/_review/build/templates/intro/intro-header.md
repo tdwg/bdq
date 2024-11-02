@@ -221,7 +221,7 @@ There were many people who have made notable contributions at various times duri
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
 | ALA         | [Atlas of Living Australia](https://ala.org.au)                             | 
-| BDQ         | TDWG [Biodiversity Data Quality](https://github.com/tdwg/bdq)                       |
+| BDQ         | [TDWG Biodiversity Data Quality](https://github.com/tdwg/bdq)                       |
 | BISON       | [Biodiversity Information Serving Our Nation](https://www.gbif.us/about/)           |
 | CRIA        | [Centro de Referência em Informação Ambiental](https://www.cria.org.br/)          |
 | EPSG        | [European Petroleum Survey Group](https://epsg.org/home.html)                     |
@@ -233,10 +233,10 @@ There were many people who have made notable contributions at various times duri
 | QC          | [Quality Control](https://en.wikipedia.org/wiki/Quality_control)                                       |
 | SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/)                 |
 | TDWG        | [Biodiversity Information Standards](https://tdwg.org)                    |
-| TG1         | Biodiversity Data Quality Interest Group - [Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
-| TG2         | Biodiversity Data Quality Interest Group - [Task Group 2: Data Quality Tests and Assertions](https://github.com/tdwg/bdq/tree/master/tg2) |
-| TG3         | Biodiversity Data Quality Interest Group - [Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3)     |
-| TG4         | Biodiversity Data Quality Interest Group - [Task Group 4: Best Practices for Development of Vocabularies of Value](https://github.com/tdwg/bdq/tree/master/tg4) |
+| TG1         | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
+| TG2         | [Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://github.com/tdwg/bdq/tree/master/tg2) |
+| TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3)     |
+| TG4         | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Value](https://github.com/tdwg/bdq/tree/master/tg4) |
 
 ## 6 Glossary
 
