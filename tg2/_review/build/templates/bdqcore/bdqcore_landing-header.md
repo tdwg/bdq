@@ -129,7 +129,7 @@ BDQ Core Tests focus on values of a subset of [Darwin Core Terms](https://dwc.td
 
 Some BDQ Core Tests also require reference to external data such as standard vocabularies of terms or names. 
 
-While the most important BDQ Core Tests apply to a SingleRecord (bdqffdq:SingeRecord), Test results may also be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord.  Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
+While the most important BDQ Core Tests apply to a SingleRecord (bdqffdq:SingleRecord), Test results may also be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord.  Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
 
 ### 2.1 Characteristics of the Tests (non-normative)
 
@@ -298,7 +298,7 @@ A Response MUST be represented as either RDF or as a data structure.
 
 When responses are in the form of RDF, the RDF MUST meet the following conditions: 
 
-1. The response MUST be an instance of bdqffdq:Assertion or one of its sub-classes (bdqffdq:IssueAssertion, bdqffdq:MeasurementAssertion, bdqffdq:AmendmentAssertion, bdqffdq:IssueAssertion).  An instance of a subclass of bdqffdq:Assertion SHOULD be used.  
+1. The response MUST be an instance of bdqffdq:Assertion or one of its subclasses (bdqffdq:IssueAssertion, bdqffdq:MeasurementAssertion, bdqffdq:AmendmentAssertion, bdqffdq:IssueAssertion).  An instance of a subclass of bdqffdq:Assertion SHOULD be used.  
 2. The Assertion MUST have exactly one bdqffdq:hasResponseStatus object property linking it to one of the named individuals that has type bdqffdq:ResponseStatus (bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, bdqffdq:AMENDED, bdqffdq:FILLED_IN, or bdqffdq:RUN_HAS_RESULT).
 3. The Assertion MUST have a bdqffdq:hasResponseResult object property or bdqffdq:hasResponseResultValue data property, unless the object of the bdqffdq:hasResponseStatus indicates that none should be present.
   - If the object of the bdqffdq:hasResponseStatus is bdqffdq:RUN_HAS_RESULT, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResult object property linking it to one of the named individuals that has type bdqffdq:ResponseResult (bdqffdq:COMPLETE, bdqffdq:COMPLIANT, bdqffdq:IS_ISSUE, bdqffdq:NOT_COMPLETE, bdqffdq:NOT_COMPLIANT, bdqffdq:NOT_ISSUE, or bdqffdq:POTENTIAL_ISSUE).
@@ -328,7 +328,7 @@ Nothing in this section should be taken as a requirement to how bdqffdq:Assertio
 
 ### 3.2 Resource Types (normative)
 
-Each BDQ Core Test (each instance of a bdqffdq:DataQualityNeed) MUST have exactly one bdqffdq:hasResourceType object property that relates the Test to a ResouceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
+Each BDQ Core Test (each instance of a bdqffdq:DataQualityNeed) MUST have exactly one bdqffdq:hasResourceType object property that relates the Test to a ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
 
 Tests operate on data, the data may be understood as representing a single record or multiple records.  The single record (bdqffdq:SingleRecord) BDQ Core Tests MAY be applied to a single Flat Darwin Core Record, or to a single instance of a Darwin Core Observation, Taxon, Event, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al 2012).  For example,  a bdqcore: SingleRecord Test (that is, a bdqcore: Test with a bdqffdq:hasResourceType of bdqffdq:SingleRecord) SHOULD NOT take multiple rows of Flat Darwin core as input.  A bdqcore: SingleRecord Test SHOULD NOT take multiple objects of the same core type as input when taking structured Darwin Core as input (for example, input data Darwin Core data in RDF should be presented to a bdqcore: SingleRecord Test one dwc:Occurrence at a time, although the Occurrence could be linked to multiple other instances of other classes such as identifications).
 

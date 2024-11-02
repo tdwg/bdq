@@ -736,7 +736,7 @@ InformationElements (sub-types of bdqffdq:InformationElement) are bdqffdq:ActedU
 
 #### 7.1.2 Example (non-normative)
 
-Below is an example, taken from MCZbase, of a portion of a data quality report, run on demand, for a single specimen using an implementation of BDQ Core Tests integrated into that collection management system.
+Below is an example, taken from MCZbase (Kennedy et al. 2024), of a portion of a data quality report, run on demand, for a single specimen using an implementation of BDQ Core Tests integrated into that collection management system.
 
 This example shows Tests that were run, using the rdfs:comment on the bdqffdq:Validation to identify the action taken by the Test to the collection management staff reading the report. Then in columns for a pre-amendment phase, the result (Response.status or Response.result) of the Test, and the Response.comment explaining why the Test returned the result it did.  Below this report are listed any proposed changes from Amendment Tests, then in the table, the result and comment from repeating the Validation Tests in a post-amendment phase, treating the data as if the results of any amendments had been accepted. Amendments are not applied automatically. Users must explicitly change the data if they want to accept the proposals from the amendments.  In the presentation, COMPLIANT values are styled in green and NOT_COMPLIANT values in red.  A subset of the results are shown here, so compliant result percentages included values not shown.
 

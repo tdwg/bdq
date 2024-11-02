@@ -41,7 +41,7 @@ Draft Standard for Submission
 - [1 Introduction](#1-introduction)
 - [1.1 Purpose](#11-purpose)
 - [1.2 Audience](#12-audience)
-- [1.3 Asociated Documents](#13-asociated-documents)
+- [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Term List Distributions](#14-term-list-distributions)
 - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
 - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
@@ -75,7 +75,7 @@ This document lists the BDQ Core Tests, provides values for the terms that descr
 
 Users who need to understand the BDQ Core Tests, including all technical details required in the standard. 
 
-### 1.3 Asociated Documents
+### 1.3 Associated Documents
 
 The bdqcore: vocabulary includes: 
 

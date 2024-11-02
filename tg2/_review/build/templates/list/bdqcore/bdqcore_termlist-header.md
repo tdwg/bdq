@@ -59,7 +59,7 @@ This document lists the BDQ Core Tests, provides values for the terms that descr
 
 Users who need to understand the BDQ Core Tests, including all technical details required in the standard. 
 
-### 1.3 Asociated Documents
+### 1.3 Associated Documents
 
 The bdqcore: vocabulary includes: 
 

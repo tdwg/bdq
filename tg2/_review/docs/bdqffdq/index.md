@@ -166,7 +166,7 @@ When not represented as objects, controlled value strings MUST be used as values
 
 This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology.  This guidance builds on the normative definitions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
 
-This guidance describes the use of the Framework Ontology, that is the bdqffdq: vocabulary terms, in an RDF context.  This guidance MAY be used to develop models of the bdqffdq data quality Framework in more constrained forms including UML object models, information models, classes in a programing language, or database schemas.  
+This guidance describes the use of the Framework Ontology, that is the bdqffdq: vocabulary terms, in an RDF context.  This guidance MAY be used to develop models of the bdqffdq data quality Framework in more constrained forms including UML object models, information models, classes in a programming language, or database schemas.  
 
 Section [2.2.6](#216-identifying-the-test-that-produced-an-assertion) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an Assertion produced by a Test and the particular Test that produced it.
 
@@ -192,7 +192,7 @@ User communities MAY provide new use cases, and MAY compose instances that are s
 
 Each instance of a subclass of a bdqffdq:DataQualityNeed SHOULD have an rdfs:label in all upper case, with underscores separating components.  Tests that have a bdqffdq:hasResourceType of bdqffdq:SingleRecord SHOULD follow the convention of the subclass of bdqffdq:DataQualityNeed in all upper case as the first word, and a representation of the bdqffdq:AbstractInformationElement as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT.  Tests that have a bdqffdq:hasResourceType of bdqffdq:MultiRecord SHOULD have "MULTIRECORD_" as the first element in their rdfs:label, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMANTIONELEMENT_CRITERIA.  The rdfs:label of the instance of the subclass of bdqffdq:DataQualityNeed SHOULD be used by humans to identify Tests.
 
-Each instance of a subclass of bdqffdq:DataQualityNeed MUST have exactly one bdqffdq:hasResourceType object property linking it to a bdqffdq:SingleRecord or a bsqffdq:MultiRecord.
+Each instance of a subclass of bdqffdq:DataQualityNeed MUST have exactly one bdqffdq:hasResourceType object property linking it to a bdqffdq:SingleRecord or a bdqffdq:MultiRecord.
 
 The bdqffdq:hasCriterion object property SHOULD have an individual with a type that is a bdqffdq:Validation or a bdqffdq:Issue as its subject.
 
@@ -212,9 +212,9 @@ The bdqffdq:hasDataQualityDimension object property MAY have individual in the b
 
 An axiom types the range of bdqffdq:hasDataQualityDimension as a bdqffdq:DataQualityDimension.
 
-Each individual instance of a bddqffdq:Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
+Each individual instance of a bdqffdq:Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
 
-Each individual instance of a bddqffdq:Issue SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
+Each individual instance of a bdqffdq:Issue SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
 
 Each individual instance of a bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Enhancement property.
 
@@ -310,7 +310,7 @@ A bdqffdq:Implementation SHOULD have one and only one bdqffdq:implementedBy obje
 
 Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
 
-Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guid concerning the expression of data quality responses in forms other than RDF.  Each data quality mechanism MUST produce results coresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specified in those guides.   
+Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guide concerning the expression of data quality responses in forms other than RDF.  Each data quality mechanism MUST produce results corresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specified in those guides.   
 
 The bdqffdq:producesAssertion object property SHOULD have an instance of bdqffdq:Implementation as its subject.
 
