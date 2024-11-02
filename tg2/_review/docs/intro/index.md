@@ -256,23 +256,23 @@ There were many people who have made notable contributions at various times duri
 
 | **Acronym** | **Explanation**                                                                                                |
 |-------------|----------------------------------------------------------------------------------------------------------------|
-| ALA         | Atlas of Living Australia                             | 
-| BDQ         | TDWG Biodiversity Data Quality                        |
-| BISON       | Biodiversity Information Serving Our Nation           |
-| CRIA        | Centro de Referência em Informação Ambiental          |
-| EPSG        | European Petroleum Survey Group                       |
-| GBIF        | Global Biodiversity Information Facility              |
-| iDigBio     | Integrated Digitized BioCollections                   |
-| IRI         | Internationalized Resource Identifier                 |
-| ISO         | International Standards Organization                  |
-| QA          | Quality Assurance                                     |
-| QC          | Quality Control                                       |
-| SDS         | TDWG Standards Documentation Standard                 |
-| TDWG        | Biodiversity Information Standards                    |
-| TG1         | Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality |
-| TG2         | Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions |
-| TG3         | Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases     |
-| TG4         | Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Value |
+| ALA         | [Atlas of Living Australia](https://ala.org.au)                             | 
+| BDQ         | [TDWG Biodiversity Data Quality](https://github.com/tdwg/bdq)                       |
+| BISON       | [Biodiversity Information Serving Our Nation](https://www.gbif.us/about/)           |
+| CRIA        | [Centro de Referência em Informação Ambiental](https://www.cria.org.br/)          |
+| EPSG        | [European Petroleum Survey Group](https://epsg.org/home.html)                     |
+| GBIF        | [Global Biodiversity Information Facility](https://gbif.org)             |
+| iDigBio     | [Integrated Digitized BioCollections](https://www.idigbio.org/)                   |
+| IRI         | [Internationalized Resource Identifier](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier)                 |
+| ISO         | [International Standards Organization](https://www.iso.org/home.html)                  |
+| QA          | [Quality Assurance](https://en.wikipedia.org/wiki/Quality_assurance)                                     |
+| QC          | [Quality Control](https://en.wikipedia.org/wiki/Quality_control)                                       |
+| SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/)                 |
+| TDWG        | [Biodiversity Information Standards](https://tdwg.org)                    |
+| TG1         | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
+| TG2         | [Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://github.com/tdwg/bdq/tree/master/tg2) |
+| TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3)     |
+| TG4         | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Value](https://github.com/tdwg/bdq/tree/master/tg4) |
 
 ## 6 Glossary
 
@@ -316,19 +316,19 @@ Glossary of terms used in BDQ Core that are additional to those included in the 
 | Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an owl ontology, present as the bdqffdq: vocabulary in BDQ Core. | bdqffdq: |
 | GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ Core |
-| [NAME](../../supplement/#NAME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. | bdqffdq:InformationElement |
+| [NAME](../supplement/index.md#NAME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. | bdqffdq:InformationElement |
 | non-printing characters | ASCII 0-32 and 127 decimal. Non printing characters or formatting marks that are not displayed at printing. These may include pilcrow, space, non-breaking space, tab character. etc. For the purposes of the tests they are treated as bdq:Empty. | Data |
 | null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", etc. These serializations should be treated as bdq:NotEmpty. | Data |
-| [OTHER](../../supplement/#OTHER) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. | bdqffdq:InformationElement |
+| [OTHER](../supplement/index.md#OTHER) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. | bdqffdq:InformationElement |
 | POLYNOMIAL | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. See the test [VALIDATION_POLYNOMIAL_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b). | bdqffdq:InformationElement |
 | Roman numerals | Numbers written with the characters I, V, X, L, C, D, and M in the latin alphabet, each letter representing an integer and combined to form arbitrary integers. Roman numerals are interpreted as the equivalent integer for months (e.g. "X" as "10") in certain tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data | 
-| [SPACE](../../supplement/#SPACE) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. | bdqffdq:InformationElement |
+| [SPACE](../supplement/index.md#SPACE) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. | bdqffdq:InformationElement |
 | SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Test |
 | Test | An individual consideration of a DataQualityNeed with a Method which links it to an instance of a Specification, these instances being composed of InformationElements, Arguments, and Parameters. | BDQ Core | 
 |  | Technical: A composition of an instance of a subclass of bdqffdq:DataQualityNeed (which expresses a data quality need in the abstract) with an instance of a subclass of bdqffdq:DataQualityMethod which links it to an instance of a bdqffdq:Specification (which spells out how to concretely evaluate the need), these class instances being composed with bdqffdq:InformationElements, bdqffdq:Arguments, and bdqffdq:Parameters. For example, the Test [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134).| BDQ Core | 
 | TestField | Column heading in the markdown of the tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Test |
 | Test Type | There are four types of tests, viz. Validation (bdqffdq:Validation), Amendment (bdqffdq:Amendment), Issue (bdqffdq:Issue), and Measure (bdqffdq:Measure). | Test |
-| [TIME](../../supplement/#TIME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. | bdqffdq:InformationElement |
+| [TIME](../supplement/index.md#TIME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. | bdqffdq:InformationElement |
 | VERBATIM | A general category of specific bdq:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
 | whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output but which themselves are not printed.   1) A field that only includes whitespace is treated as bdq:Empty. 2) In bdqffdq:Validation tests that require the looking up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation test is run again. | Data |
 | YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
