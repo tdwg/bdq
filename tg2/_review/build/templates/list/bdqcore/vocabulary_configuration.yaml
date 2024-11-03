@@ -31,17 +31,17 @@ term_localName:
   normative: 'true'
   term: rdf:value
 issued:
-  append: The most recent date for any change to any element of the test.
+  append: The most recent date for any change to any element of the Test.
   label: Modified
   normative: ''
   term: dcterms:issued
 Label:
-  append: A descriptive label for humans to use to identify the test.
+  append: A descriptive label for humans to use to identify the Test.
   label: Label
   normative: 'true'
   term: rdfs:label
 prefLabel:
-  append: An easy to read label for the test, similar to the Label, but in words.
+  append: An easy to read label for the Test, similar to the Label, but in words.
   label: Preferred Label
   normative: 'true'
   term: skos:prefLabel
@@ -70,7 +70,7 @@ Criterion:
   normative: 'true'
   term: bdqffdq:Criterion
 Description:
-  append: A brief description of what the test does
+  append: A brief description of what the Test does.
   label: Description
   normative: 'false'
   term: rdfs:comment
@@ -83,12 +83,12 @@ Enhancement:
   normative: 'true'
   term: bdqffdq:Enhancement
 ExpectedResponse:
-  append: The formal definition of how the test must be implemented.
+  append: The formal definition of how the Test must be implemented.
   label: ExpectedResponse
   normative: 'true'
   term: bdqffdq:hasExpectedResponse
 Examples: 
-  append: Examples of input and output data and test responses for a pass case and a fail case.
+  append: Examples of input and output data and Test responses for a pass case and a fail case.
   label: Examples
   normative: 'false'
   term: skos:example
@@ -103,7 +103,7 @@ Examples:
   normative: 'false'
   term: skos:note
 IssueLabels:
-  append: Labels applied to Github Issue noted in the skos:historyNote
+  append: Labels applied to Github Issue noted in the skos:historyNote.
   label: Github Issue Labels
   normative: 'false'
   term: skos:note
@@ -121,7 +121,7 @@ Method:
   normative: 'true'
   term: bdqffdq:DataQualityMethod
 MethodLabel:
-  append: The label for the instance of the subclass of DataQualityMethod for this test.
+  append: The label for the instance of the subclass of DataQualityMethod for this Test.
   force: 'true'
   label: Method label
   normative: 'false'
@@ -136,7 +136,7 @@ Parameters:
   normative: 'true'
   term: bdqffdq:Parameter
 References:
-  append: The minimum set of references that are required for an understanding of the nature of the test.
+  append: The minimum set of references that are required for an understanding of the nature of the Test.
   label: References
   normative: 'false'
   term: dcterms:bibliographicCitation
@@ -145,7 +145,7 @@ Resource Type:
   normative: 'true'
   term: bdqffdq:ResourceType
 Source:
-  append: The origin of the concept of the test.
+  append: The origin of the concept of the Test.
   label: Source
   normative: 'false'
   term: skos:historyNote
@@ -155,18 +155,18 @@ Specification:
   normative: 'true'
   term: bdqffdq:Specification
 SpecificationLabel:
-  append: The label for the instance of the Specification for this test
+  append: The label for the instance of the Specification for this Test.
   force: 'true'
   label: Specification label
   normative: 'false'
   term: rdfs:label
 Type:
-  append: The type of the test, one of the subtypes of DataQualityNeed.
+  append: The type of the Test, one of the subtypes of DataQualityNeed.
   label: Type
   normative: 'true'
   term: rdf:type
 UseCases:
-  append: One or more Use Cases where this test would apply.
+  append: One or more Use Cases where this Test would apply.
   label: Use Cases
   normative: 'false'
   term: bdqffdq:hasUseCase
@@ -179,7 +179,7 @@ flags:
   normative: ''
   term: ''
 historyNoteUrl:
-  append: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the test.
+  append: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the Test.
   label: Developed As Github Issue
   normative: 'false'
   term: skos:historyNote
