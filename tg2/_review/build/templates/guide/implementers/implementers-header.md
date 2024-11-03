@@ -847,18 +847,16 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 ### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api <!--- (**TODO: Cite**) ---> 
+The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test validation data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/).  This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (Lowery and Morris 2024).
 
-Java annotations can be used to match test implementation methods to tests and information elements to method parameters <!-- TODO: Complete this thought --->
+Java annotations can be used to match test implementation methods to tests and information elements to method parameters.  The [ffdq-api]() (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular tests, and then again through Java reflection, bind Darwin Core terms and other Information Elements in input data onto appropriate method parameters.
 
 ### 8.6.2 Tools to assist with implementations and RDF presentation (non-normative) 
 
-The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api.  In addition, a Java library, kurator-ffdq (Lowery et al., 2024) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java.  The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
+The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api (Lowery and Morris 2024), and are intented to be used with rdfbeans to serialize Java result objects produced by test implementations into bdqffdq:Assertion objects in RDF.  In addition, a Java library, kurator-ffdq (Lowery et al., 2024) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java.  The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
 
-<!--- TODO: Add citations --->
-
-- [ffdq-api](https://github.com/kurator-org/ffdq-api) Java annotations for decorating Test implementations.
-- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al., 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.
+- [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) Java annotations for decorating Test implementations.
+- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.
 
 These libraries are available in Maven Central, source code is archived in zenodo.
 
@@ -868,7 +866,7 @@ A set of open source Java libraries provide classes which implement each of the 
 
 <!--- TODO: Add citations --->
 
-- [event_date_qc](https://github.com/filteredpush/event_date_qc) Tests related to spatial terms.
+- [event_date_qc](https://github.com/filteredpush/event_date_qc) (Morris & Lowery 2024) Tests related to spatial terms.
 - [sci_name_qc](https://github.com/filteredpush/sci_name_qc) Tests related to taxonomy and identification terms.
 - [geo_ref_qc](https://github.com/filteredpush/geo_ref_qc) Tests related to spatial terms.
 - [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) Tests related to metadata terms.
