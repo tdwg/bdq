@@ -53,11 +53,11 @@ This document is a general introduction to BDQ Core standard designed for anyone
 
 ### 1.3 Associated Documents
 
-- The documentation of BDQ Core is based on the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/)
 - Those who want a quick view of the Tests should consult the [BDQ Core Tests Quick Reference Guide](../terms/bdqcore/index.md).  
 - Those interested in more detail on the interpretation of test results should consult the [BDQ Core User's Guide](../guide/users/index.md "BDQ Core Users Guide").
 - Those interested in the implementation of tests following the BDQ Core should consult the [BDQ Core Implementer's Guide](../guide/implementers/index.md "BDQ Core Implementation Guide").
 - Those interested in composing new tests, or seeking to represent test results as linked open data should consult the [Framework Ontology guide](../guide/bdqffdq/index.md).
+- The documentation of BDQ Core follows the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).
 
 ### 1.4. Status of the Content of This Document
 

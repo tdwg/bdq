@@ -128,76 +128,11 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 ### 1.9 Key to Vocabulary Terms
 
-These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the Test should be coded.
+These "Test Descriptors" (terms used to describe the terms in this vocabulary) are the set of terms that are necessary to comprehensively describe each Test. Some terms, such as the IRI and term_localName are intended for machine consumption. Some terms such as the "Description" are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the "Specification" ensure that implementers have no ambiguity about how the Test should be coded.
+
+Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
 
 {term_key}
-
-<!--- TODO: Confirm that metadata for 1.9 has these values ---> 
-<!---
-In Section 4 the values of the rdfs:Label, skos:prefLabel, Versioned IRI,
-Resource Type, Specification, Information Elements ActedUpon, Information
-Elements Consulted, and Parameters are normative.  The values of
-Description, Examples, Use Cases, and Notes are non-normative.
---->
-
-<!--- @Tasilee text for comparison with generated table.  Some of these will need to be incorporated into definitions in the generated table.
-
-**Term Name**. The full identifier for the Test in the form of "bdqcore:"test GUID, for example "bdqcore:42408a00-bf71-4892-a399-4325e2bc1fb8"
-
-**Label**. An easy-to-read English descriptive label in the form of Test Type_Darwin Core Term(s) used_criterion, for example "VALIDATION_BASISOFRECORD_STANDARD"
-
-**iri**. A composite of the web address of the Test with its GUID and date last updated appended, for example " https://rs.tdwg.org/bdqcore/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2023-09-18 "
-
-**term-iri**. The unversioned form of the iri, as for example " https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849" 
-
-**issued**. The most recent date for any change to any element of the Test (ISO 8601), for example "2023-01-17" 
-
-**DateLastUpdated**. The date an element of the Test that would affect implementations was last updated (ISO 8601), for example "2024-09-30" 
-
-**prefLabel**. An easy to read label for the Test, for example "Validation dcterms:license Standard"
-
-**IE Class**. The Darwin Core Information Element class, for example "Record-level"
-
-**InformationElement:ActedUpon**. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are the focus of the Test, for example "dwc:country, dwc:countryCode"
-
-**InformationElement:Consulted**. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are required to be consulted in the process of evaluating the InformationElements:ActedUpon, for example "dwc:countryCode"
-
-**Specification**. The formal definition of how the Test must be implemented, for example "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT"
-
-**AuthoritiesDefaults**. The source authority that the Test must consult to provide a response. The format is ideally in two parts, the first part referring to what the authority is, and if available, a second part that provides an API that can be used for evaluation. For example "bdq:sourceAuthority default = "ISO 3166 Country Codes" {[ https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
-
-**Description**. A breif English description of what the Test does
-
-**Criterion Label**. A combination of the Dimension (bdqdim:) value and the bdqcrit: value, for example "Conformance: standard"
-
-**Type**. The type of the Test, one of Validation, Issue, Amendment or Measure, for example "**VALIDATION**_DECIMALLONGITUDE_INRANGE"
-
-**Resource Type**. The Test either operates on a Single Record or Multiple Records 
-
-**Dimension**. The Data Quality Dimension focus of the Test: One of "Completeness", "Conformance", "Consistency", "Likeliness", "Reliability" or "Resolution"
-
-**Enhancement**. For Amendment Tests: The type of enhancement that is bring proposed. One of "Assumed Default", "Converted", "Fill in From", "STandardized" and "Transposed".
-
-**Examples**. Two examples of input and output data and Test responses for a 'pass' and 'fail' case, for example "[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is a valid country name in the bdq:sourceAuthority"], [dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Tasmania is not found at the level of national in the bdq:sourceAuthority"]
-
-**Source**. The origin of the concept of the Test, for example "ALA" (The Atlas of Living Australia)
-
-**References**. The minimum set of references that are required for an understanding of the nature of the Test
-
-**Notes**. Additional information that may not be obvious from the Specification, for example for the Test [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), the Notes are "Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters".
-
-**UseCases**. An example of one or more Use Cases where this Test would apply. Note that one Test will likely have many Use Cases, and one Use Case will likely have many applicable Tests.
-
-**skos:historyNote**. A link (URL) to the GitHub issue that provides a history (changes and comments) of the development of the Test, for example https://github.com/tdwg/bdq/issues/36.
-
-**bdqffdq:AmendmentMethod**. For AMENDMENTs: A URN to the AmendmentMethodLabel in for form of "urn:uuid:GUID", for example "urn:uuid:1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a"
-
-**AmendmentMethod label**. For AMENDMENTs: The nature of the method of AMENDMENT, for example "AmendmentMethod: Proposes an amendment to the value of dc:type using the DCMI type vocabulary. Amendment for SingleRecord with Specification for: [AMENDMENT_DCTYPE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904).
-
-**bdqffdq:Specification**. For AMENDMENTs: A urn in the form of "urn:uuid:GUID" that points to the Specification label, for example "urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88"
-
-**Specification label**. A descriptive label for the specification of an AMENDMENT, for example "Specification for: AMENDMENT_LICENSE_STANDARDIZED".
---->
 
 ## 2 Normative Guidance
 

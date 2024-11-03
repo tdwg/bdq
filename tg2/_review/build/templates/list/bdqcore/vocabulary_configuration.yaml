@@ -43,7 +43,7 @@ Label:
 prefLabel:
   append: An easy to read label for the test, similar to the Label, but in words.
   label: Preferred Label
-  normative: 'false'
+  normative: 'true'
   term: skos:prefLabel
 DateLastUpdated:
   label: DateLastUpdated
@@ -191,4 +191,3 @@ status:
   label: Status
   normative: ''
   term: tdwgutility:status
-
