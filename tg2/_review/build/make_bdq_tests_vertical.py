@@ -1,4 +1,4 @@
-# Script to build dist/bdqcore_tests_vertical.csv from vocabulary/bdqcore_terms.csv
+# Script to build dist/bdqcore_tests_vertical.csv from vocabulary/bdqcore_term_versions.csv
 #
 # @author Paul J. Morris 
 #
@@ -7,7 +7,7 @@
 import pandas
 import re
 import sys
-with open ("../vocabulary/bdqcore_terms.csv") as csvfile: 
+with open ("../vocabulary/bdqcore_term_versions.csv") as csvfile: 
 	try: 
 		sys.stdout = open("../dist/bdqcore_tests_vertical.csv","w")
 		# Header

@@ -144,15 +144,14 @@ for term in termLists:
     vocabulary_configuration_yaml_file = 'templates/list/{}/vocabulary_configuration.yaml'.format(term)
     outFileName = '../docs/list/{}/index.md'.format(term)
     outRDFFileName = '../dist/{}.xml'.format(term)
-    # there isn't one for bdqcore, closest is bdqcore_terms.csv
-    term_history_csv = "../vocabulary/bdqcore_terms.csv".format(term)
+    term_history_csv = "../vocabulary/bdqcore_term_versions.csv".format(term)
 
     # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
     # load from local file
     with open(document_configuration_yaml_file) as dcfy:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
-    # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
+    # Note: This doesn't quite include everything in the RDF, need to query RDF for a few values.
     column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status"]
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:

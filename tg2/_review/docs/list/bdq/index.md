@@ -231,6 +231,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Alien-Species</td>
 		</tr>
@@ -271,6 +275,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>Used in Measure of Single Record Tests</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -315,6 +323,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td>Used in Measure of Single Record Tests</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>AllValidationTestsRunOnSingleRecord</td>
 		</tr>
@@ -355,6 +367,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>Used in test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -399,6 +415,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td>Used in test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>annotationSystem</td>
 		</tr>
@@ -439,6 +459,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -483,6 +507,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Biotic-Relationships</td>
 		</tr>
@@ -523,6 +551,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>See test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -567,6 +599,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>DefaultSourceAuthority</td>
 		</tr>
@@ -607,6 +643,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -651,6 +691,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>earliestValidDate</td>
 		</tr>
@@ -691,6 +735,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>See also: bdq:notEmpty.  In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   The phrasing 'in the context of the evauation' is to allow the test implementations to be independed of, and agnostic about the data strucutures presented to a framework for executing the tests and the framework within which the tests are run.  The term bdq:Empty is defined to be more generaly usable than just with bdqcore.  Note: A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:notEmpty and their invalidity must be separately detected.   The definition of bdq:empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:empty should be used as a data value to represent some form of 'Null', 'Unknown', 'Not Recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -735,6 +783,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380)</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>geospatialLand</td>
 		</tr>
@@ -775,6 +827,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>Used in test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -819,6 +875,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>latestValidDate</td>
 		</tr>
@@ -859,6 +919,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -903,6 +967,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>maximumValidElevationInMeters</td>
 		</tr>
@@ -943,6 +1011,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -987,6 +1059,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>minimumValidElevationInMeters</td>
 		</tr>
@@ -1027,6 +1103,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>See also: bdq:empty.  In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a test specification.  Common string serializations of null such as \N and NULL are treated as bdq:notEmpty. If '\N' is present in a data set, tests are expected to explicitly treat that value as bdq:notEmpty, and then try to evaluate it against whatever other criteria may apply.  The term bdq:NotEmpty is defined to be more generaly usable than the scope of bdqcore: tests. </td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -1071,6 +1151,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Record-Management</td>
 		</tr>
@@ -1111,6 +1195,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -1155,6 +1243,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Spatial-Temporal Patterns</td>
 		</tr>
@@ -1195,6 +1287,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -1239,6 +1335,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 			<td></td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Taxon-Management</td>
 		</tr>
@@ -1279,6 +1379,10 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		<tr>
 			<td>Comments</td>
 			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>

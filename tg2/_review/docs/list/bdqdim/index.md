@@ -179,6 +179,10 @@ Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have ex
 			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Completeness</td>
 		</tr>
@@ -219,6 +223,10 @@ Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have ex
 		<tr>
 			<td>Comments</td>
 			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -263,6 +271,10 @@ Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have ex
 			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Consistency</td>
 		</tr>
@@ -303,6 +315,10 @@ Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have ex
 		<tr>
 			<td>Comments</td>
 			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -347,6 +363,10 @@ Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have ex
 			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Reliability</td>
 		</tr>
@@ -387,6 +407,10 @@ Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have ex
 		<tr>
 			<td>Comments</td>
 			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>

@@ -49,6 +49,7 @@ This document is for software developers needing a technical understanding of th
 - [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md)
 - [BDQ Core Vocabularies](../../vocabularies/index.md)
 - [BDQ Core User's Guide](../users/index.md)
+- Convenient for implementers, [CSV file of just the SingleRecord tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_singlerecord_tests_current.csv)
 
 ### 1.4 Status of the Content of this document
 
@@ -154,20 +155,39 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
 
 ### 2.3 Reading Test Descriptors (non-normative)
 
+The Tests defined in BDQ Core are described in the [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md), with more detail in the [bdqcore term-list](../list/bdqcore/index.md) document.  Also for the convenience of implementers a [CSV file of just the SingleRecord tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_singlerecord_tests_current.csv) is available.  Viewing the data in this file in a spreadsheet program can be an effective way to examine and compare the descriptions of the tests.
+
 #### 2.3.1 Key Parts of a Test Descriptor
 
-- termLocalName
-- skos:prefLabel
-- specification - expected response
-- specification - authorities/defaults
-- information elements
-- parameters
+The descriptions of the tests are complex.  The following are the most important terms to understand for implementation:
+
+- term_LocalName, the machine readable identifier for the test, in the form of a UUID, this can be used for software to locate test implementations.
+- Label, a human readable identifier for the test, e.g. `VALIDATION_COUNTRYCODE_STANDARD` (rdfs:label on instances of Validation, Amendment, Measure, Issue).
+- specification - expected response, the description of the expected behavior of a test implementation (bdqffdq:hasExpectedResponse).
+- specification - authorities/defaults, information about source authorities and parameters listed in the expected response, including default values for parameters (bdqffdq:hasAuthoritiesDefaults).
+- information elements - the inputs to the test (Information Elements ActedUpon and Consulted).
+- parameters - optional inputs to a test that can change the behavior of the test (bdqffdq:hasParameter, bdqffdq:Argument).
+- skos:example - examples of expected inputs and outputs from a test implementation (skos:example on instances of bdqffdq:Specification).
+- Notes - additional notes about the test, including clarification and guidance for implementation (skos:note on instances of Validation, Amendment, Measure, Issue).
 
 #### 2.3.2 Reading a Specification 
 
+Consider these properties of an example Specification (for the Validation [VALIDATION_PHYLUM_FOUND](../terms/bdqcore/index.md#VALIDATION_PHYLUM_FOUND)): 
+
+hasExpectedResponse
+: EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+
+hasAuthoritiesDefaults
+: bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}
+
+example
+: dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
+
+Given these properties, it should be straightforward to understand the expected behavior of an implementation of this test.  This section gives further guidance on how to interpret these properties in order to produce an implementation that follows this specification.
+
 #### 2.3.2.1 Response as Shorthand for a Set of bdqffdq Concepts (non-normative)
 
-We regularly use Response, Response.status, Response.result, and Response.comment as shorthand for a more complicated set of bdqffdq: classes, object properties and datatype properties.  The table below describes how these concepts are related.
+We regularly (particularly in examples) use Response, Response.status, Response.result, and Response.comment as shorthand for a more complicated set of bdqffdq: classes, object properties and datatype properties.  The table below describes how these concepts are related.
 
 | Concept | bdqffdq Term(s) | Description |
 | ------- | ------- | ----------- |

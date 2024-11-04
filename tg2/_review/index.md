@@ -29,18 +29,23 @@ Preferred Citation
 - [BDQ Core Vocabularies](docs/vocabularies/index.md)
   - [BDQ Core Tests and Assertions Landing Page](docs/bdqcore/index.md):
     - [BDQ Core Tests and Assertions List of Terms](docs/list/bdqcore/index.md):
-      - File: [CSV List of Tests](vocabulary/bdqcore_terms.csv "Convenience CSV list of test descriptors.")
+      - File: [CSV List of Single Record Tests](dist/bdqcore_singlerecord_tests_current.csv "Convenience CSV list of all SingleRecord test descriptors.")
       - File: [Tests in RDF/XML](dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
       - File: [Tests in Turtle](dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
       - File: [Tests in json-ld](dist/bdqcore.json "Json-ld serialization of OWL representation of the tests descriptors.")
+      - File: [CSV List of Tests](vocabulary/bdqcore_term_versions.csv "CSV term-version list of all test descriptors.")
   - [Fitness For Use Ontology Landing Page](docs/bdqffdq/index.md):
     - [Fitness For Use Framework Ontology List of Terms](docs/list/bdqffdq/index.md):
     - [Fitness For Use Framework Ontology Extension List](docs/extension/bdqffdq/index.md):
     - File [bdqffdq: Owl](vocabulary/bdqffdq.owl "Owl ontology for the bdqffdq framework.")
   - [Biodiversity Data Quality Controlled Vocabulary List of Terms](docs/list/bdq/index.md)
+    - File [bdq: RDF](dist/bdq.rdf "RDF/XML serialization of the bdq terms.")
   - [Data Quality Dimension Controlled Vocabulary List of Terms](docs/list/bdqdim/index.md)
+    - File [bdqdim: RDF](dist/bdqdim.rdf "RDF/XML serialization of the bdqdim terms.")
   - [Data Quality Criterion Controlled Vocabulary List of Terms](docs/list/bdqcrit/index.md)
+    - File [bdqcrit: RDF](dist/bdqcrit.rdf "RDF/XML serialization of the bdqcrit terms.")
   - [Data Quality Enhancement Controlled Vocabulary List of Terms](docs/list/bdqenh/index.md)
+    - File [bdqenh: RDF](dist/bdqenh.rdf "RDF/XML serialization of the bdqcrit terms.")
 - [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)
   - File: [Test Validation Data](docs/guide/implementers/TG2_test_validation_data.csv)
   - File: [Test Validation Data for non-printing characters](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)

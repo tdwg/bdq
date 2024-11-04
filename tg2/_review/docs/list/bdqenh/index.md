@@ -178,6 +178,10 @@ Instances of bdqffdq:Measure, bdqffdq:Validation, and bdqffdq:Issue SHOULD NOT h
 			<td>Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>AssumedDefault</td>
 		</tr>
@@ -218,6 +222,10 @@ Instances of bdqffdq:Measure, bdqffdq:Validation, and bdqffdq:Issue SHOULD NOT h
 		<tr>
 			<td>Comments</td>
 			<td>As in spatial coordinate transformations.  Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced in with a conforming value.  Corresponding dimension is bdqdim:Conformance</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -262,6 +270,10 @@ Instances of bdqffdq:Measure, bdqffdq:Validation, and bdqffdq:Issue SHOULD NOT h
 			<td>As in filling in from verbatim terms.  Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms.  Corresponding dimension is bdqdim:Completeness.</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>FillInFrom</td>
 		</tr>
@@ -304,6 +316,10 @@ Instances of bdqffdq:Measure, bdqffdq:Validation, and bdqffdq:Issue SHOULD NOT h
 			<td>Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced in with a conforming value.  Corresponding dimension is bdqdim:Conformance</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Standardized</td>
 		</tr>
@@ -344,6 +360,10 @@ Instances of bdqffdq:Measure, bdqffdq:Validation, and bdqffdq:Issue SHOULD NOT h
 		<tr>
 			<td>Comments</td>
 			<td>Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values.  Corresponding dimension is bdqdim:Consistency.</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>

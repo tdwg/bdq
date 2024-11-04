@@ -184,6 +184,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 			<td>Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Complete</td>
 		</tr>
@@ -224,6 +228,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 		<tr>
 			<td>Comments</td>
 			<td>A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.   Corresponding dimension is bdqdim:Consistency</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -268,6 +276,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 			<td>Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority.  Corresponding dimension is bdqdim:Conformance</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Found</td>
 		</tr>
@@ -308,6 +320,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 		<tr>
 			<td>Comments</td>
 			<td>Data in a bdqffdq:InformationElement conform to an expected range of values.  Corresponding dimension is bdqdim:Conformance</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -352,6 +368,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 			<td>Data in a bdqffdq:InformationElement is likely to be true or expected values.  Corresponding dimension is bdqdim:Likeliness</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Likely</td>
 		</tr>
@@ -392,6 +412,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 		<tr>
 			<td>Comments</td>
 			<td>Some value is present in a bdqffdq:InformationElement.  Corresponding dimension is bdqdim:Completeness.   See also bdq:EMPTY and bdq:NOT_EMPTY</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>
@@ -436,6 +460,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 			<td>Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard.  Corresponding dimension is bdqdim:Conformance</td>
 		</tr>
 		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
 			<td>Controlled value</td>
 			<td>Standard</td>
 		</tr>
@@ -476,6 +504,10 @@ Instances of bdqffdq:Measure and bdqffdq:Amendment SHOULD NOT have bdqffdq:hasCr
 		<tr>
 			<td>Comments</td>
 			<td>Data in a bdqffdq:InformationElement adequately identifies a unique entity.  Corresponding dimension is bdqdim:Conformance</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
 		</tr>
 		<tr>
 			<td>Controlled value</td>

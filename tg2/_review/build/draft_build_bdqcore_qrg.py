@@ -36,7 +36,7 @@ from function_lib import build_authors_contributors_markdown, build_contributors
 # Configuration 
 
 # Vocabulary file
-inputTermsCsvFilename = "../vocabulary/bdqcore_terms.csv"
+inputTermsCsvFilename = "../vocabulary/bdqcore_term_versions.csv"
 # output file 
 outputDirectory = "../docs/terms/bdqcore/"
 outputFilename = "{}index.md".format(outputDirectory)

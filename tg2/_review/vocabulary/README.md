@@ -6,11 +6,11 @@ It also contains the master file for the bdqffdq ontology, bdqffdq.owl. which is
 
 List of files: 
 
-    ├── bdq_term_versions.csv  Term Version file for bdq vocabulary.  Copied from bdq/tg2/vocabularies/bdq_terms.csv
-    ├── bdqdim_term_versions.csv  Term Version file for dimension vocabulary, copied from bdq/tg2/vocabularies/bdqdim_terms.csv
-    ├── bdqenh_term_versions.csv  Term version file for Enhancement vocabulary, copied from bdq/tg2/vocabularies/bdqenh_terms.csv
-    ├── bdqcrit_term_versions.csv Term version file Criterion vocabulary, copied from bdq/tg2/vocabularies/bdqcrit_terms.csv
-    ├── bdqcore_terms.csv  CSV list of test descriptions, copied from bdq/tg2/core/TG2_tests.csv with multi record measures appended
+    ├── bdq_term_versions.csv  Term Version file for bdq vocabulary.  **Editable**
+    ├── bdqdim_term_versions.csv  Term Version file for dimension vocabulary. **Editable**
+    ├── bdqenh_term_versions.csv  Term version file for Enhancement vocabulary. **Editable**
+    ├── bdqcrit_term_versions.csv Term version file Criterion vocabulary. **Editable**
     ├── bdqffdq.owl The bdqffdq owl ontology.  **Edit with protege**.
+    ├── bdqcore_term_versions.csv  Term version file of bdqcore (test descriptions) vocabulary, copied from bdq/tg2/core/TG2_tests.csv with multi record measures appended
     └── README.md this file
 
