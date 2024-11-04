@@ -494,6 +494,11 @@ for term in termLists:
     #            #text += '\t\t\t<td>' + convert_link(convert_code(row['usage'])) + '</td>\n'
     #            text += '\t\t</tr>\n'
     #
+            text += '\t\t<tr>\n'
+            text += '\t\t\t<td>Status</td>\n'
+            text += '\t\t\t<td>' + row['status'] + '</td>\n'
+            text += '\t\t</tr>\n'
+
             if vocab_type == 2 or vocab_type ==3: # controlled vocabulary
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>Controlled value</td>\n'
