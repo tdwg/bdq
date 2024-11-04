@@ -583,6 +583,8 @@ terms_sorted_by_label = terms_df.sort_values(by='label')
 terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
 
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
+# Range returned as an anonomus class id, present an example value as shown in list
+definitionTable = re.sub("[a-z0-9]{35}","[ owl:someValuesFrom bdqffdq:forValidation ]",definitionTable)
 # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
