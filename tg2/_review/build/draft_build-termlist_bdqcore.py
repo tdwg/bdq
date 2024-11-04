@@ -153,7 +153,7 @@ for term in termLists:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
     # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Criterion Label","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
+    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids"]
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
@@ -182,7 +182,7 @@ for term in termLists:
             for index,row in frame.iterrows():
                 # PJM: TODO: just use column list?
                 # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-                row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['SpecificationGuid'], row["MethodGuid"], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"] ]
+                row_list = [ row['Label'], row['issueNumber'], row["historyNoteUrl"], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['SpecificationGuid'], row["MethodGuid"], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"], row["status"] ]
                 # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
         
                 table_list.append(row_list)
@@ -192,6 +192,8 @@ for term in termLists:
     print(column_list)
     # Turn list of lists into dataframe
     terms_df = pd.DataFrame(table_list, columns = column_list)
+    # Limit output to just current terms 
+    terms_df = terms_df.loc[terms_df['status']=='recommended']
     
     terms_sorted_by_label = terms_df.sort_values(by='Label')
     #terms_sorted_by_localname = terms_df.sort_values(by='term_localName')
@@ -291,7 +293,7 @@ for term in termLists:
     if True:
         filtered_table = terms_sorted_by_localname
     
-        # row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Criterion Label'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
+        # row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
         for row_index,row in filtered_table.iterrows():
             text += '<table>\n'
             curie =  "bdqcore:" + row['term_localName']
