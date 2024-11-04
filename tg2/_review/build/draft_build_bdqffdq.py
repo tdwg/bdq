@@ -19,6 +19,9 @@ from function_lib import build_term_key, build_authors_contributors_markdown, bu
 
 # Configuration: common configuration
 
+# set debug = True for additional debugging output
+debug = False
+
 prefixes = """
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -628,6 +631,8 @@ text = text + "- [Different From Axioms](#41-Different From Axioms)\n"
 text = text + "\n## 4 Vocabulary Extension\n"
 text = text + "\n### 4.1 Range Axioms\n"
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
+if debug: 
+   print(sparql)
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -647,6 +652,8 @@ for r in queryResult :
 
 text = text + "### 4.2 Different From Axioms\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  }  ORDER BY ?type ?subject"
+if debug: 
+   print(sparql)
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -698,8 +705,6 @@ outputObject.write(output)
 outputObject.close()
 
 ################
-print("Done")
-
-
+print('Done ({})'.format(__file__))
     
 

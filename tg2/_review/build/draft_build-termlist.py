@@ -21,6 +21,9 @@ from function_lib import build_term_key, build_authors_contributors_markdown, bu
 # Configuration section
 # -----------------
 
+# set debug = True for additional debugging output
+debug = False
+
 # prefixes for sparql queries
 prefixes = """
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -118,8 +121,8 @@ if has_namespace:
 print('Loading term list metadata')
 term_lists_info = []
 
-
-print(term_list_document)
+if debug :
+    print(term_list_document)
 #frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
 frame = pd.read_csv(term_list_document, na_filter=False)
 for termList in termLists:
@@ -131,8 +134,9 @@ for termList in termLists:
             term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
             term_list_dict['list_iri'] = row['list']
     term_lists_info.append(term_list_dict)
-print(term_lists_info)
-print()
+if debug :
+    print(term_lists_info)
+    print()
 
 # ---------------
 # Create metadata table and populate using data from namespace databases in GitHub
@@ -198,7 +202,8 @@ for term in termLists:
                 #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
                 if vocab_type == 2:
                     row_list += [row['controlled_value_string']]
-                    print(row_list)
+                    if debug :
+                        print(row_list)
         #        elif vocab_type == 3:
         #            if row['skos_broader'] =='':
         #                row_list += [row['controlled_value_string'], '']
@@ -222,10 +227,12 @@ for term in termLists:
         #        row_list.append(version_iri)
         
                 table_list.append(row_list)
-                print(row_list)
+                if debug :
+                    print(row_list)
         
     print('processing data')
-    print(column_list)
+    if debug :
+        print(column_list)
     # Turn list of lists into dataframe
     terms_df = pd.DataFrame(table_list, columns = column_list)
     
@@ -236,7 +243,8 @@ for term in termLists:
     terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
     #terms_sorted_by_localname
     print('done retrieving')
-    print()
+    if debug :
+        print()
     
     # ---------------
     # generate the index of terms grouped by category and sorted alphabetically by lowercase term local name
@@ -277,9 +285,6 @@ for term in termLists:
         text += '\n\n' # put back removed newline
     
     index_by_name = text
-    
-    #print(index_by_name)
-    print()
     
     # ---------------
     # generate the index of terms by label
@@ -324,9 +329,6 @@ for term in termLists:
         text += '\n\n' # put back removed newline
     
     index_by_label = text
-    print()
-    
-    #print(index_by_label)
     
     ## PJM: Decisions won't apply for draft standards.
     # decisions_df = pd.read_csv('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/decisions/decisions-links.csv', na_filter=False)
@@ -540,7 +542,8 @@ for term in termLists:
         text += '\n'
     term_table = text
     print('done generating')
-    print()
+    if debug :
+        print()
     
     #print(term_table)
     
@@ -559,7 +562,8 @@ for term in termLists:
     headerObject.close()
     
     # Substitute values of ratification_date and contributors into the header template
-    print(document_configuration_yaml)
+    if debug : 
+        print(document_configuration_yaml)
     header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
     header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
     header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
@@ -634,5 +638,5 @@ for term in termLists:
     outputObject.write(rdfOutput)
     outputObject.close()
     
-print('done')
+print('done ({})'.format(__file__))
 

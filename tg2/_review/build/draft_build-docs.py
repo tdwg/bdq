@@ -27,6 +27,9 @@ from function_lib import build_authors_contributors_markdown, build_contributors
 # Configuration section
 # -----------------
 
+# set debug = True for additional debugging output
+debug = False
+
 # This is a Python dictionary of the folders and files to be processed for templates to turn into documents.
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
@@ -139,7 +142,8 @@ for templatePath, document in directories.items() :
 	text = ""
 
 	# Substitute values of ratification_date and contributors into the header template
-	print(document_configuration_yaml)
+	if debug :
+		print(document_configuration_yaml)
 	header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
 	header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
 	header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
@@ -416,5 +420,5 @@ for templatePath, document in directories.items() :
 		print(file)
 		shutil.copy(file, outputDirectory)
 
-print('done')
+print('done ({})'.format(__file__))
 

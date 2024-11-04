@@ -22,6 +22,9 @@ from function_lib import build_authors_contributors_markdown, build_authors_mark
 # Configuration section
 # -----------------
 
+# set debug = True for additional debugging output
+debug = False
+
 # This is a Python list of the names of the term lists for which documents are to be produced.
 # One set of documents is produced for each term.  See assumptions below.
 termLists = ['bdqcore']
@@ -109,8 +112,8 @@ if has_namespace:
 print('Loading term list metadata')
 term_lists_info = []
 
-
-print(term_list_document)
+if debug :
+    print(term_list_document)
 #frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
 frame = pd.read_csv(term_list_document, na_filter=False)
 for termList in termLists:
@@ -122,8 +125,9 @@ for termList in termLists:
             term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
             term_list_dict['list_iri'] = row['list']
     term_lists_info.append(term_list_dict)
-print(term_lists_info)
-print()
+if debug :
+    print(term_lists_info)
+    print()
 
 # ---------------
 # Load rdf
@@ -185,10 +189,12 @@ for term in termLists:
                 # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
         
                 table_list.append(row_list)
-                print(row_list)
+                if debug :
+                    print(row_list)
         
     print('processing data')
-    print(column_list)
+    if debug :
+        print(column_list)
     # Turn list of lists into dataframe
     terms_df = pd.DataFrame(table_list, columns = column_list)
     # Limit output to just current terms 
@@ -201,7 +207,8 @@ for term in termLists:
     terms_sorted_by_localname = terms_df.iloc[terms_df.prefLabel.str.lower().argsort()]
     #terms_sorted_by_localname
     print('done retrieving')
-    print()
+    if debug :
+        print()
 
 
     # Create column list - custom list for bdqcore terms.
@@ -260,9 +267,6 @@ for term in termLists:
         text += '\n\n' # put back removed newline
     
     index_by_label = text
-    print()
-    
-    #print(index_by_label)
     
     ## PJM: Decisions won't apply for draft standards.
     # decisions_df = pd.read_csv('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/decisions/decisions-links.csv', na_filter=False)
@@ -324,7 +328,8 @@ for term in termLists:
             iri = row['term_localName'] + '-' + row['issued']
             sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" bdqcore:"+iri+" .  FILTER ( ?predicate = rdfs:label ) }"
             queryResult = graph.query(sparql)
-            print(sparql)
+            if debug :
+                print(sparql)
             for r in queryResult : 
                 #text += '\t\t<tr>\n'
                 #text += '\t\t\t<td>bdqffdq:'+testType+'Method</td>\n'
@@ -360,7 +365,8 @@ for term in termLists:
         text += '\n'
     term_table = text
     print('done generating')
-    print()
+    if debug :
+        print()
     
     #print(term_table)
     
@@ -380,7 +386,8 @@ for term in termLists:
     
 
     # Substitute values of ratification_date and contributors into the header template
-    print(document_configuration_yaml)
+    if debug :
+        print(document_configuration_yaml)
     header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
     header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
     header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
@@ -459,5 +466,5 @@ for term in termLists:
     outputObject.write(output)
     outputObject.close()
     
-print('done')
+print('done ({})'.format(__file__))
 
