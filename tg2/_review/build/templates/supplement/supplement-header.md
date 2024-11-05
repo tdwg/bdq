@@ -290,7 +290,7 @@ Given an Assertion, what Test was run with which argument values for which param
     }
     GROUP BY ?test ?label ?description ?mechanism
 
-What Validations share the same information elements with Amendments:
+What Validations share the same ActedUpon information elements with Amendments:
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -299,10 +299,28 @@ What Validations share the same information elements with Amendments:
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     SELECT distinct ?vlabel ?term ?alabel
  	WHERE { 
-       ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?valiation bdqffdq:hasActedUponInformationElement ?ie .
+       ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?validation bdqffdq:hasActedUponInformationElement ?ie .
        ?ie bdqffdq:composedOf ?term . ?iea bdqffdq:composedOf ?term . ?amendment bdqffdq:hasActedUponInformationElement ?iea . 
         ?amendment a bdqffdq:Amendment . ?amendment rdfs:label ?alabel . 
     }
+    ORDER BY ?term
+
+What information elements are acted upon by more that one Annotation: 
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT ?term ( count( distinct ?alabel) as ?ct )
+    WHERE {
+       ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?validation bdqffdq:hasActedUponInformationElement ?ie .
+       ?ie bdqffdq:composedOf ?term . ?iea bdqffdq:composedOf ?term . ?amendment bdqffdq:hasActedUponInformationElement ?iea .
+        ?amendment a bdqffdq:Amendment . ?amendment rdfs:label ?alabel .
+    }
+    GROUP BY ?term 
+    HAVING ( ?ct > 1 )
+    ORDER BY ?term
 
 ### 2.4.1 Framework Competency Question including an oa:annotation
 
