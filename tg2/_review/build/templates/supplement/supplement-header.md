@@ -322,6 +322,28 @@ What information elements are acted upon by more that one Annotation:
     HAVING ( ?ct > 1 )
     ORDER BY ?term
 
+What Amendments act upon Information Elements that are acted upon by more than one Amendment:
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT distinct ?amend ?amendName
+    WHERE { 
+       ?amend bdqffdq:hasActedUponInformationElement ?iec . ?iec bdqffdq:composedOf ?term .  ?amend a bdqffdq:Amendment . ?amend rdfs:label ?amendName .
+       { SELECT ?term (COUNT (distinct ?amendment) as ?ct ) 
+            WHERE { 
+             ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?validation bdqffdq:hasActedUponInformationElement ?ie .
+             ?ie bdqffdq:composedOf ?term . ?iea bdqffdq:composedOf ?term . ?amendment bdqffdq:hasActedUponInformationElement ?iea .
+             ?amendment a bdqffdq:Amendment . ?amendment rdfs:label ?alabel .
+           }
+           GROUP BY ?term 
+           HAVING ( ?ct > 1 )
+       } 
+    } 
+
+
 ### 2.4.1 Framework Competency Question including an oa:annotation
 
 Given an a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
