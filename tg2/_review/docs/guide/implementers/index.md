@@ -64,7 +64,11 @@ Draft Standard for Submission
 - [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
 - [6.4 Order of Test Execution.](#64-order-of-test-execution)
 - [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment (normative)](#641-phases-pre-amendment,-amendment,-post-amendment-normative)
+- [6.4.1.1 Explanation of Phases (non-normative)](#6411-explanation-of-phases-non-normative)
+- [6.4.1.2 Phases and Quality Assurance (normative)](#6412-phases-and-quality-assurance-normative)
+- [6.4.1.2 Phases and Quality Control (normative)](#6412-phases-and-quality-control-normative)
 - [6.4.2 Test Dependencies (normative)](#642-test-dependencies-normative)
+- [6.4.2.1 Terms for describing Test Dependencies (non-normative)](#6421-terms-for-describing-test-dependencies-non-normative)
 - [6.4.3 Implementing a concrete Test (normative)](#643-implementing-a-concrete-test-normative)
 - [6.4.4 Presenting Darwin Core Data to a Method that Implements a Test](#644-presenting-darwin-core-data-to-a-method-that-implements-a-test)
 - [6.4.4.1 Binding Darwin Core Data (normative)](#6441-binding-darwin-core-data-normative)
@@ -488,11 +492,13 @@ Tests may be run-
 
 Data may be presented to an execution framework as Flat Darwin Core, or as Structured Darwin Core, or in another structure that can be mapped to the InformationElements of relevant Tests.  The commonalities the Tests support are clearly defined specific tests which produce standard outputs from input Information Elements onto which domain specific terms (i.e. Darwin Core) are mapped.  
 
+Multiple sequential and parallell workflows that process streams of data are possible.  One possible workflow for test exectution is to group the unique values of applicable InformationElements within a bdqffdq:MultiRecord from each Validation or Measure Test, and then execute the Validation or Measure Tests on the unique values, and then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogus to performing tests as SQL queries.  Another possible workflow is to present each data record sequentially to all of the Validation and Measure Tests.  Yet another is to split the data into streams by Information Element, and then, in paralell, present data in each streams to relevant tests.  
+
 ### 6.3 Considerations for Test Execution (normative)
 
 Many Tests invoke external bdq:sourceAuthorities, some of these are downloadable vocabulary files, others are webservices with changing data.
 
-Implementation of Tests SHOULD locally cache the results of calls to remote web services, particularly if they operate on a sequence of bdqffdq:SingleRecords instead of operating on distinct values of bdqffdq:InformationElements.  Data sets typically contain many repeated values, and remote web services SHOULD NOT be subject to repeated requests using the same question. 
+Implementations of Tests SHOULD locally cache the results of calls to remote web services, particularly if they operate on a sequence of bdqffdq:SingleRecords instead of operating on distinct values of bdqffdq:InformationElements.  Data sets typically contain many repeated values, and remote web services SHOULD NOT be subject to repeated requests using the same question. 
 
 Some source authorities are highly stable small vocabularies.  Implementers MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a bdq:sourceAuthority for a Test. Implementers SHOULD monitor for changes to that vocabulary and update local data when changes occur. 
 
@@ -502,44 +508,52 @@ Some source authorities are highly stable small vocabularies.  Implementers MAY 
 
 Tests MAY be run in a Pre-Amendment phase, Amendment phase, and Post-amendment phase.
 
-A good practice for executing the Tests is to execute all of the bdqffdq:SingleRecord Validation and Measure Tests in a pre-amendment phase, then to execute all of the Amendment Tests in an amendment phase, then to re-execute all of the Validation Tests on the data with the proposed changes from the amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made about the quality of the data as they were initially presented, and how much the quality of the data would be improved if the amendments were accepted. Within pre-amendment and post-amendment phases, the Validation and Measures Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set. One possible workflow for Tests is to aggregate the unique values of applicable InformationElements within a bdqffdq:MultiRecord for each Validation or Measure Test, then to execute the Validation or Measure Test on just the unique values, then de-aggregate the results back to each bdqffdq:SingleRecord. This is analogous to implementing Tests as SQL queries.
+#### 6.4.1.1 Explanation of Phases (non-normative)
 
-Recommended process with the current suite of BDQ Core Tests is to run all pertinent bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent Under Quality Assurance, MultiRecord measures that return "COMPLETE" or "NOT_COMPLETE" MAY be used as filters for quality for purpose, exclude records from the data set until all bdqffdq:MultiRecord Measures Tests of this sort are returning "COMPLETE", this under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.
+A good practice for executing the BDQ Core Tests is to follow a sequence that begins by executing all bdqffdq:SingleRecord Validation and Measure Tests in a pre-amendment phase. Then, to execute all Amendment Tests in an amendment phase. Finally, re-run all Validation Tests on the data with the proposed changes asserted by the ammendments applied to the data in a post-amendment phase.  Such a sequence of phases allows assertions to be made first about the quality of the data as they were initially presented, and then about how much the quality of the data would be improved if all proposed changes from the Amendments were accepted.  The order and method of running Validation and Measure tests within the pre-amendment and post-amendment phases is not specified by BDQ Core.  Within pre-amendment and post-amendment phases, the Validation and Measures Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a data set.
 
-Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  
+#### 6.4.1.2 Phases and Quality Assurance (normative)
+
+It is RECOMMENDED, for Quality Assurance, with the current suite of BDQ Core Tests, to run all pertinent (to a Use Case) bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent MultiRecord Measures that return `COMPLETE` or `NOT_COMPLETE`.   These Measures MAY be used as filters.  Exclude records from the data set until all MultiRecord Measure Tests return "COMPLETE".  This, under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.  This process ensures that the data are fit for the intended use.  This process MAY be performed in a single Validation and Measure phase without Amendments.  This process MAY be performed on a post-amendment phase with all or selected proposed changes from Amendments accepted into the data stream.  Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  Acceptance of proposals for changes to the data into a database of record MUST NOT be done blindly.
+
+#### 6.4.1.2 Phases and Quality Control (normative)
+
+Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed amendments would improve the data.  Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  Acceptance of proposals for changes to the data into a database of record MUST NOT be done blindly.
+
+Numeric values from MultiRecord Measure tests under Quality Control MAY be used to identify areas of targeted work effort to improve data quality in a database of record for one or more UseCases.
 
 #### 6.4.2 Test Dependencies (normative)
 
-The BDQ Core Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run. While the Tests are designed to be as independent as possible, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). The order of execution of some Amendment Tests can affect results. 
+The BDQ Core Tests are largely agnostic to the extent to which they are run in parallel and the sequence in which particular Tests are run.  
 
-When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed. Similarly when Amendment Tests are executed in parallel these sequences SHOULD be applied.
+While BDQ Core Tests are designed to be independent, some Amendment Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012).  In consequence the order of execution of some Amendment Tests can affect results.  This is a particular concern when developing workflows with paralell data streams.  When Amendment Tests are executed in a workflow where downstream amendments operate on data with the changes proposed by upstream amendments applied, the following sequences SHOULD be followed.
 
-<!--- TODO: the following guidance in list and table form is contradictory --->
+Given that Amendment Tests propose a value to a primary term (e.g., dwc:eventDate, dwc:taxonID) from secondary terms (e.g., dwc:day, dwc:year, dwc:scientificName), primary-from-secondary SHOULD be applied before secondary-from-primary. Where multiple amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered. 
 
-Given that Amendment Tests propose a value to a primary term from secondary terms, priority over those which back fill secondary terms from a primary term, The Test [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) SHOULD be run after the following amendments that propose changes to dwc:eventDate: 
+For dwc:eventDate - 
 
-- [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812),
-- [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d),
-- [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b),
-- [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7).
+| Order | Test                                                       |
+|-------|------------------------------------------------------------|
+| 1 | [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812) |
+| 2 | [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b) |
+| 3 | [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d) |
+| 4 | [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) |
+| 5 | [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d)
 
-[AMENDMENT_SCIENTIFICNAME_FROM_TAXONID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) SHOULD be run after the Amendment test which proposes changes to dwc:TaxonID: [AMENDMENT_TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889). 
+Similarly, for dwc:taxonID -
 
-Where multiple amendments on secondary terms could propose conflicting changes to a primary term, the sequence of Amendment Tests SHOULD be ordered.
+| Order | Test                                                       |
+|-------|------------------------------------------------------------|
+| 1 | [AMENDMENT_TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889) |
+| 2 | [AMENDMENT_SCIENTIFICNAME_FROM_TAXONID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) |
 
-<!--- TODO: The table below is clearer than the list above, but less complete, and contradicts it --->
+The diagrams of the linkages between Validation and Amendment Tests and Information Elements Acted Upon ... <!--- Awaiting link info: Unsure if it is best to link to TIME and NAME separately and then add SPACE and OTHER after, or simply link to all the diagrams as visual guides --->
 
-The following Amendment Tests SHOULD be composed to run in an ordered sequence:
+BDQ Core does not specify how these ordering of these Tests should be accomplished.
 
-| order       | Test                                                       |
-|-------------|------------------------------------------------------------|
-| first       | AMENDMENT_EVENTDATE_FROM_VERBATIM                          | 
-| second      | AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR    |
-| and finally | AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY                      |
+Ordering of Tests COULD be done by describing an Amendment Test with an expected response that specifies the execution of each Test in order.  Such a composition of Amendment Tests would be the preferred method of sequencing under the Framework, but to keep Tests as granular a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support bdqffdq:UseCases, BDQ Core does not provide such a test specification.   Ordering of Tests could could be done by providing a configuration file for a Test execution framework specifying test dependencies.  Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence.  The order specified above SHOULD be followed.
 
-<!--- TODO: Link in diagram(s?) that show sequence --->
-
-BDQ Core does not specify how these ordering of these Tests should be accomplished.  This could be done by describing an Amendment Test with an expected response that specifies the execution of each of these Tests in order.  Such a composition of Amendment Tests would be the preferred method of sequencing under the Framework, but to keep Tests as granular a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support bdqffdq:UseCases, BDQ Core does not provide such requirements. Ordering could also could be done by providing a configuration file for a Test execution framework specifying Test dependencies. Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence.  
+#### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
 The bdqffdq: ontology does not include a property to describe sequence inter-dependencies among amendments.  
 
