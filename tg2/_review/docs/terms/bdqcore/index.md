@@ -3572,7 +3572,10 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 #### Information Elements
 
 Acted Upon: 
-dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
+dwc:countryCode
+
+Consulted: 
+dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
 

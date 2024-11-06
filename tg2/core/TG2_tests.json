@@ -7068,7 +7068,192 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Issue"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasResourceType": [
+            {
+                "@id": "bdqffdq:SingleRecord"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations."
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
+            {
+                "@id": "bdqdim:Resolution"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasCriterion": [
+            {
+                "@id": "bdqcrit:NotEmpty"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
+            {
+                "@id": "urn:uuid:8c10d361-5bf7-4c9d-8464-c813cdf7dda3"
+            }
+        ],
+        "http://purl.org/dc/terms/issued": [
+            {
+                "@value": "2024-09-05",
+                "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": "Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10.; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Is there a value in dwc:dataGeneralizations?"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "https://github.com/tdwg/bdq/issues/72"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ISSUE_DATAGENERALIZATIONS_NOTEMPTY"
+            }
+        ],
+        "http://purl.org/dc/terms/isVersionOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Issue dwc:dataGeneralizations Not Empty for SingleRecord"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Issue",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"
+            }
+        ]
+    },
+    {
+        "@id": "bdqdim:Resolution",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Resolution"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:8c10d361-5bf7-4c9d-8464-c813cdf7dda3",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
+        ],
+        "skos:prefLabel": [
+            {
+                "@value": "Information Element ActedUpon dwc:dataGeneralizations"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "http://rs.tdwg.org/dwc/terms/dataGeneralizations"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element ActedUpon dwc:dataGeneralizations"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue NAME SPACE TIME Test Resolution CORE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
+            {
+                "@id": "urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "Source: ALA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/IssueMethod",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Specification"
+        ],
+        "http://www.w3.org/2004/02/skos/core#example": [
+            {
+                "@value": "dwc:dataGeneralizations=\"placed on quarter degree grid\": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment=\"dwc:dataGeneralizations is bdq:NotEmpty\""
+            },
+            {
+                "@value": "dwc:dataGeneralizations=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment=\"dwc:dataGeneralizations is bdq:Empty\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
+            {
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
+            {
+                "@value": "POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7094,12 +7279,17 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
-                "@id": "urn:uuid:6f6a46c6-9979-41a2-83c2-fd196e89c8c1"
+                "@id": "urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+            {
+                "@id": "urn:uuid:5fde6511-799d-479b-ab43-db69237e896e"
             }
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-25",
+                "@value": "2024-11-05",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7135,6 +7325,30 @@
         ]
     },
     {
+        "@id": "urn:uuid:5fde6511-799d-479b-ab43-db69237e896e",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Consulted"
+        ],
+        "skos:prefLabel": [
+            {
+                "@value": "Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "http://rs.tdwg.org/dwc/terms/decimalLatitude"
+            },
+            {
+                "@id": "http://rs.tdwg.org/dwc/terms/decimalLongitude"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude"
+            }
+        ]
+    },
+    {
         "@id": "urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"
@@ -7146,7 +7360,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -9591,6 +9805,164 @@
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Issue"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasResourceType": [
+            {
+                "@id": "bdqffdq:SingleRecord"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": ""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
+            {
+                "@id": "bdqdim:Completeness"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasCriterion": [
+            {
+                "@id": "bdqcrit:NotEmpty"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
+            {
+                "@id": "urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba"
+            }
+        ],
+        "http://purl.org/dc/terms/issued": [
+            {
+                "@value": "2024-09-05",
+                "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Is there a value in dwc:establishmentMeans?"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "https://github.com/tdwg/bdq/issues/94"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ISSUE_ESTABLISHMENTMEANS_NOTEMPTY"
+            }
+        ],
+        "http://purl.org/dc/terms/isVersionOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Issue dwc:establishmentMeans Not Empty for SingleRecord"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
+        ],
+        "skos:prefLabel": [
+            {
+                "@value": "Information Element ActedUpon dwc:establishmentMeans"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "http://rs.tdwg.org/dwc/terms/establishmentMeans"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element ActedUpon dwc:establishmentMeans"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue OTHER Test Completeness CORE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
+            {
+                "@id": "urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "Source: ALA, CRIA"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Specification"
+        ],
+        "http://www.w3.org/2004/02/skos/core#example": [
+            {
+                "@value": "dwc:establishmentMeans=\"?\": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment=\"dwc:establishmentMeans is bdq:NotEmpty\""
+            },
+            {
+                "@value": "dwc:establishmentMeans=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment=\"dwc:establishmentMeans is bdq:Empty\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
+            {
+                "@value": ""
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
+            {
+                "@value": "POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY"
             }
         ]
     },
@@ -14343,17 +14715,6 @@
         ]
     },
     {
-        "@id": "bdqdim:Resolution",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "Resolution"
-            }
-        ]
-    },
-    {
         "@id": "urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"
@@ -16286,27 +16647,6 @@
         ]
     },
     {
-        "@id": "urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
-        ],
-        "skos:prefLabel": [
-            {
-                "@value": "Information Element ActedUpon dwc:establishmentMeans"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
-            {
-                "@id": "http://rs.tdwg.org/dwc/terms/establishmentMeans"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "Information Element ActedUpon dwc:establishmentMeans"
-            }
-        ]
-    },
-    {
         "@id": "urn:uuid:f89147ba-03e5-432b-8040-0a2a4921d676",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"
@@ -17954,6 +18294,201 @@
         ]
     },
     {
+        "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Issue"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasResourceType": [
+            {
+                "@id": "bdqffdq:SingleRecord"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
+            {
+                "@id": "bdqdim:Conformance"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasCriterion": [
+            {
+                "@id": "bdqcrit:Likely"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
+            {
+                "@id": "urn:uuid:6f6a46c6-9979-41a2-83c2-fd196e89c8c1"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+            {
+                "@id": "urn:uuid:5be9ff68-1232-4f09-a3ef-5d78ccdecf8c"
+            }
+        ],
+        "http://purl.org/dc/terms/issued": [
+            {
+                "@value": "2024-09-05",
+                "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": "<ul> <li> Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> </ul>"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Are the supplied geographic coordinates within a defined buffer of the center of the country?"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "https://github.com/tdwg/bdq/issues/287"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ISSUE_COORDINATES_CENTEROFCOUNTRY"
+            }
+        ],
+        "http://purl.org/dc/terms/isVersionOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Issue Coordinates Center Of Country for SingleRecord"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:5be9ff68-1232-4f09-a3ef-5d78ccdecf8c",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Consulted"
+        ],
+        "skos:prefLabel": [
+            {
+                "@value": "Information Element Consulted dwc:coordinateUncertaintyInMeters"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element Consulted dwc:coordinateUncertaintyInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue SPACE Test Conformance Parameterized CORE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
+            {
+                "@id": "urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "Source: GBIF"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Specification"
+        ],
+        "http://www.w3.org/2004/02/skos/core#example": [
+            {
+                "@value": "dwc:decimalLatitude=\"-35.38804\", dwc:decimalLongitude=\"-65.154964\", dwc:countryCode=\"AR\": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment=\"coordinates fall within buffered distance in the bdq:sourceAuthority for dwc:countryCode\""
+            },
+            {
+                "@value": "dwc:decimalLatitude=\"-34.184199\", dwc:decimalLongitude=\"-65.509403\", dwc:countryCode=\"AR\": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment=\"coordinates fall outside buffered distance in the bdq:sourceAuthority for dwc:countryCode\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
+            {
+                "@value": "bdq:spatialBufferInMeters default = \"5000\",bdq:sourceAuthority default = \"GBIF Catalogue of Country Centroides\" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE. bdq:spatialBufferInMeters default = \"5000\",bdq:sourceAuthority default = \"GBIF Catalogue of Country Centroides\" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
+            {
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
+            {
+                "@id": "urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "5000"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdq:spatialBufferInMeters:\"5000\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "bdq:spatialBufferInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "bdq:spatialBufferInMeters",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
         "@id": "urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
@@ -18522,7 +19057,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-09-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
@@ -18541,6 +19076,54 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssuePolicy: (1) issues  in UseCase bdq:Alien-Species"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssuePolicy: (3) issues  in UseCase bdq:Spatial-Temporal_Patterns"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05"
             }
         ]
     }

@@ -2367,14 +2367,97 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Issue">
+	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05">
+	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
+	<skos:note>This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="bdqdim:Resolution">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
+	<rdfs:label>Resolution</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05">
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Resolution"/>
+	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8c10d361-5bf7-4c9d-8464-c813cdf7dda3">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
+	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:dataGeneralizations</prefLabel>
+	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/dataGeneralizations"/>
+	<rdfs:label>Information Element ActedUpon dwc:dataGeneralizations</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05">
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8c10d361-5bf7-4c9d-8464-c813cdf7dda3"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
+	<dcterms:bibliographicCitation>Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10.; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</dcterms:bibliographicCitation>
+	<rdfs:comment>Is there a value in dwc:dataGeneralizations?</rdfs:comment>
+	<skos:historyNote>https://github.com/tdwg/bdq/issues/72</skos:historyNote>
+	<rdfs:label>ISSUE_DATAGENERALIZATIONS_NOTEMPTY</rdfs:label>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2"/>
+	<skos:prefLabel>Issue dwc:dataGeneralizations Not Empty for SingleRecord</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/IssueMethod">
+	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3">
+	<skos:note>TG2 Issue NAME SPACE TIME Test Resolution CORE</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+	<skos:example>dwc:dataGeneralizations="placed on quarter degree grid": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:dataGeneralizations is bdq:NotEmpty"</skos:example>
+	<skos:example>dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:dataGeneralizations is bdq:Empty"</skos:example>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/"></hasAuthoritiesDefaults>
+	<rdfs:comment>POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE</hasExpectedResponse>
+	<rdfs:label>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5daad04c-fd7c-4972-ac3a-66f149170bf3">
+	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b"/>
+	<skos:historyNote>Source: ALA</skos:historyNote>
+	<rdfs:label>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</rdfs:label>
+	<forIssue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"/>
+	<skos:prefLabel>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:FillInFrom"/>
 	<skos:note>This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related tests. In this test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6f6a46c6-9979-41a2-83c2-fd196e89c8c1"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-25</dcterms:issued>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:95627d76-281b-499a-b66a-3e9f3327c38d">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
+	<prefLabel xmlns="skos:">Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude</prefLabel>
+	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLatitude"/>
+	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLongitude"/>
+	<rdfs:label>Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05">
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:95627d76-281b-499a-b66a-3e9f3327c38d"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-05</dcterms:issued>
 	<dcterms:bibliographicCitation>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/73</skos:historyNote>
@@ -2386,7 +2469,7 @@
 <rdf:Description rdf:about="urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<skos:note>TG2 Amendment SPACE Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff">
@@ -3163,6 +3246,55 @@
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<rdfs:label>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</rdfs:label>
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
+	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
+	<skos:note></skos:note>
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
+	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
+	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:establishmentMeans</prefLabel>
+	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/establishmentMeans"/>
+	<rdfs:label>Information Element ActedUpon dwc:establishmentMeans</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05">
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<rdfs:comment>Is there a value in dwc:establishmentMeans?</rdfs:comment>
+	<skos:historyNote>https://github.com/tdwg/bdq/issues/94</skos:historyNote>
+	<rdfs:label>ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</rdfs:label>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700"/>
+	<skos:prefLabel>Issue dwc:establishmentMeans Not Empty for SingleRecord</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<skos:note>TG2 Issue OTHER Test Completeness CORE</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+	<skos:example>dwc:establishmentMeans="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:establishmentMeans is bdq:NotEmpty"</skos:example>
+	<skos:example>dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:establishmentMeans is bdq:Empty"</skos:example>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/"></hasAuthoritiesDefaults>
+	<rdfs:comment>POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE</hasExpectedResponse>
+	<rdfs:label>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75">
+	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7"/>
+	<skos:historyNote>Source: ALA, CRIA</skos:historyNote>
+	<rdfs:label>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</rdfs:label>
+	<forIssue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"/>
+	<skos:prefLabel>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06">
@@ -4612,14 +4744,6 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The duration of a day is 86400 seconds. Implementations should treat all days as 86400 seconds, but should include leap days (but not leap seconds) in durations that encompass them.  Consumers should treat assertions about event date duration as approximations, see: https://xkcd.com/2867/</skos:note>
-</rdf:Description>
-
-<rdf:Description rdf:about="bdqdim:Resolution">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
-	<rdfs:label>Resolution</rdfs:label>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16">
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Resolution"/>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-16</dcterms:issued>
@@ -5219,16 +5343,6 @@
 	<skos:note>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
-	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:establishmentMeans</prefLabel>
-	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/establishmentMeans"/>
-	<rdfs:label>Information Element ActedUpon dwc:establishmentMeans</rdfs:label>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/&lt;/li&gt; &lt;li&gt;Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</dcterms:bibliographicCitation>
@@ -5763,6 +5877,74 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</skos:prefLabel>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
+	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
+	<skos:note>We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums</skos:note>
+	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
+	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Likely"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6f6a46c6-9979-41a2-83c2-fd196e89c8c1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:5be9ff68-1232-4f09-a3ef-5d78ccdecf8c">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
+	<prefLabel xmlns="skos:">Information Element Consulted dwc:coordinateUncertaintyInMeters</prefLabel>
+	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"/>
+	<rdfs:label>Information Element Consulted dwc:coordinateUncertaintyInMeters</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05">
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5be9ff68-1232-4f09-a3ef-5d78ccdecf8c"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
+	<dcterms:bibliographicCitation>&lt;ul&gt; &lt;li&gt; Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728&lt;/li&gt; &lt;/ul&gt;</dcterms:bibliographicCitation>
+	<rdfs:comment>Are the supplied geographic coordinates within a defined buffer of the center of the country?</rdfs:comment>
+	<skos:historyNote>https://github.com/tdwg/bdq/issues/287</skos:historyNote>
+	<rdfs:label>ISSUE_COORDINATES_CENTEROFCOUNTRY</rdfs:label>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e"/>
+	<skos:prefLabel>Issue Coordinates Center Of Country for SingleRecord</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<skos:note>TG2 Issue SPACE Test Conformance Parameterized CORE</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+	<skos:example>dwc:decimalLatitude="-35.38804", dwc:decimalLongitude="-65.154964", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="coordinates fall within buffered distance in the bdq:sourceAuthority for dwc:countryCode"</skos:example>
+	<skos:example>dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="coordinates fall outside buffered distance in the bdq:sourceAuthority for dwc:countryCode"</skos:example>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE. bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</hasExpectedResponse>
+	<rdfs:label>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">5000</hasArgumentValue>
+	<rdfs:label>Default value for bdq:spatialBufferInMeters:"5000"</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="bdq:spatialBufferInMeters">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7">
+	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:spatialBufferInMeters"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b">
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e">
+	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b"/>
+	<skos:historyNote>Source: GBIF</skos:historyNote>
+	<rdfs:label>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</rdfs:label>
+	<forIssue xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05"/>
+	<skos:prefLabel>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</skos:prefLabel>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"/>
 	<rdfs:label>MeasurementPolicy: (4) measures  in UseCase bdq:Spatial-Temporal_Patterns</rdfs:label>
@@ -5962,13 +6144,29 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-09-06"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-09-25"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
+	<rdfs:label>IssuePolicy: (1) issues  in UseCase bdq:Alien-Species</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
+	<rdfs:label>IssuePolicy: (3) issues  in UseCase bdq:Spatial-Temporal_Patterns</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05"/>
 </rdf:Description>
 
 </rdf:RDF>

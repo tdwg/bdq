@@ -1089,7 +1089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2024-11-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1101,7 +1101,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude</td>
+			<td>dwc:countryCode</td>
+		</tr>
+		<tr>
+			<td>InformationElements Consulted</td>
+			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
 			<td>Parameters</td>
@@ -1174,14 +1178,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 	</tbody>
 </table>
