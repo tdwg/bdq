@@ -343,6 +343,31 @@ What Amendments act upon Information Elements that are acted upon by more than o
        } 
     } 
 
+### 2.4.1 Listing Identifiers for Tests
+
+The following competency question obtains a list of identifiers of Validation Tests: 
+
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    SELECT ?label ?term_localName ?iri ?term_iri
+    WHERE { 
+      ?iri a bdqffdq:Validation . 
+      ?iri rdfs:label ?label . 
+      ?iri dcterms:isVersionOf ?term_iri . 
+      BIND (REPLACE(STR(?term_iri),"https://rs.tdwg.org/bdqcore/terms/","") as ?term_localName ) 
+    }
+
+Example results: 
+
+| Label | Term Name | Term Version IRI | Term IRI |
+| ----  | --------- | ---------------- | -------- | 
+| VALIDATION_MINELEVATION_INRANGE | 0bb8297d-8f8a-42d2-80c1-558f29efe798 | <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04> | <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> |
+| VALIDATION_MONTH_STANDARD | 01c6dafa-0886-4b7e-9881-2c3018c98bdc | <https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2024-09-05> | <https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc> |
+
+The label is intended as the identifier of a Test for humans, the Term Name as a machine readable identifier.
 
 ### 2.4.1 Framework Competency Question including an oa:annotation
 

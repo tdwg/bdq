@@ -131,7 +131,7 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 These "Test Descriptors" (terms used to describe the terms in this vocabulary) are the set of terms that are necessary to comprehensively describe each Test. Some terms, such as the `IRI` and `term_localName` are intended for machine consumption. Some terms such as the `Description` are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the `Specification` ensure that implementers have no ambiguity about how the Test should be coded.
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
+Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.  See section [2.4.1 Listing Identifiers for Tests](#241-Listing-Identifiers-for-Tests) in the Supplement for a competency question clarifying the relationships among Label, Term IRI, Term Version IRI, and Term Name.
 
 {term_key}
 
