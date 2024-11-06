@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Test Specification Controlled Vocabulary List of Terms
+# Biodiversity Data Quality Controlled Vocabulary List of Terms
 
 Title
-: Test Specification Controlled Vocabulary List of Terms
+: Biodiversity Data Quality Controlled Vocabulary List of Terms
 
 Date version issued
 : 2024-09-10
@@ -33,7 +33,7 @@ Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Test Specification Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 Draft Standard for Submission
 
@@ -1427,7 +1427,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Test Specification Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
 
 **Biodiversity Information Standards (TDWG)**
 

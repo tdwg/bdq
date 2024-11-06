@@ -3,7 +3,7 @@
 # ----------------
 
 # Official title of the document assigned by authors.
-documentTitle: Test Specification Controlled Vocabulary List of Terms
+documentTitle: Biodiversity Data Quality Controlled Vocabulary List of Terms
 
 # Abstract of document written by authors.
 abstract: 'This document is a reference for the (Draft) BDQ Core Standard, documenting vocabulary values largely used as bdqffdq:Parameters, but including a few other terms used in test Specifications.'

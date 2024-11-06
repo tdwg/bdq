@@ -1179,6 +1179,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4166,6 +4174,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4269,6 +4285,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4363,6 +4387,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
