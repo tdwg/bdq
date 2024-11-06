@@ -2,7 +2,7 @@
 # Paul J. Morris 
 # 2024-10-07
 # This script contains a library of reusable functions to support scripts to 
-# build of documents and term lists for tdwg standards and draft standards
+# build of documents and term lists for TDWG standards and draft standards
 
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
@@ -167,17 +167,17 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
 # an object expected to be loaded from an authors_configuration.yaml file.
 # a template file used with this function would be expected to contain a line: 
 # {authors_contributors}  
-# preceeded and followed by blank lines, not preceeded by a line containing Contributors or preceded by ': ' 
+# preceded and followed by blank lines, not preceded by a line containing Contributors or preceded by ': ' 
 # and code using the output of this function would be expected to 
 # be used by a builder script that does a replacement in the form
 # contributors = build_authors_contributors_markdown(contributors_yaml)
 # header = header.replace('{authors_contributors}', contributors)
 #
-# @param contributors_object an object with properties contributor_ird, contributor_literal, affiliation, affilitation_uri,
+# @param contributors_object an object with properties contributor_iri, contributor_literal, affiliation, affiliation_uri,
 #  contributor_role, role_uri where the value of contributor_role is author or contributor, empty values will result in
 #  elements being omitted from the markdown. 
 #
-# @return a text string representing the list of authors and contributors in the form specfied by section 3.2.3.1 of the
+# @return a text string representing the list of authors and contributors in the form specified by section 3.2.3.1 of the
 #  standards documentation section, that is [contributor_literal](contributor_iri) ([affiliation](affiliation_uri)), but
 #  providing separate lists for authors and contributors following the semantics of role_uri, with these lists
 #  being rendered as separate (Authors\n: authors and Contributors\n: contributors) markdown definition list lists: 
@@ -228,19 +228,19 @@ def build_authors_contributors_markdown(contributors_object) :
 # an object expected to be loaded from an authors_configuration.yaml file.
 # a template file used with this function would be expected to contain the lines (
 # in the form of a markdown definition list): 
-# Contibutors
+# Contributors
 # : {contributors}  
-# preceeded and followed by blank lines 
+# preceded and followed by blank lines 
 # and code using the output of this function would be expected to 
 # be used by a builder script that does a replacement in the form
 # contributors = build_contributor_markdown(contributors_yaml)
 # header = header.replace('{contributors}', contributors)
 #
-# @param contributors_object an object with properties contributor_ird, contributor_literal, affiliation, affilitation_uri,
+# @param contributors_object an object with properties contributor_iri, contributor_literal, affiliation, affiliation_uri,
 #  contributor_role, role_uri where the value of contributor_role is not used in rendering the markdown list, empty values will result in
 #  elements being omitted from the markdown. 
 #
-# @return a text string representing the list of authors and contributors in the form specfied by section 3.2.3.1 of the
+# @return a text string representing the list of authors and contributors in the form specified by section 3.2.3.1 of the
 #  standards documentation section, that is [contributor_literal](contributor_iri) ([affiliation](affiliation_uri)).
 # 
 # @see build_authors_contributors_markdown(contributors_object)
@@ -270,17 +270,17 @@ def build_contributors_markdown(contributors_object) :
 # in the form of a markdown definition list): 
 # Authors
 # : {authors}  
-# preceeded and followed by blank lines 
+# preceded and followed by blank lines 
 # and code using the output of this function would be expected to 
 # be used by a builder script that does a replacement in the form
 # authors = build_authors_markdown(contributors_yaml)
 # header = header.replace('{authors}', contributors)
 #
-# @param contributors_object an object with properties contributor_iri, contributor_literal, affiliation, affilitation_uri,
+# @param contributors_object an object with properties contributor_iri, contributor_literal, affiliation, affiliation_uri,
 #  contributor_role, role_uri where the value of contributor_role is used to determine inclusion, empty values will result in
 #  elements being omitted from the markdown.  
 #
-# @return a text string representing the list of authors in the form specfied by section 3.2.3.1 of the
+# @return a text string representing the list of authors in the form specified by section 3.2.3.1 of the
 #  standards documentation section, that is [contributor_literal](contributor_iri) ([affiliation](affiliation_uri))
 #  limited to entries in contributor_yaml where the contributor_role = author.
 # 
