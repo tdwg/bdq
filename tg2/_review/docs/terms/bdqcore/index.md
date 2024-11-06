@@ -3657,7 +3657,10 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN d
 #### Information Elements
 
 Acted Upon: 
-dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters,dwc:decimalLatitude,dwc:decimalLongitude
+dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters
+
+Consulted: 
+dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
 

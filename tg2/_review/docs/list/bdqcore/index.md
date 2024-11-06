@@ -2410,7 +2410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2024-11-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2422,7 +2422,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters,dwc:decimalLatitude,dwc:decimalLongitude</td>
+			<td>dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters</td>
+		</tr>
+		<tr>
+			<td>InformationElements Consulted</td>
+			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
 			<td>Parameters</td>
@@ -2495,14 +2499,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>

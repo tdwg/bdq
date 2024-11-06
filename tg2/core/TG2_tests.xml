@@ -2447,7 +2447,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:95627d76-281b-499a-b66a-3e9f3327c38d">
+<rdf:Description rdf:about="urn:uuid:1784fb92-afb5-4c97-b3eb-9533dec5d6a8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
 	<prefLabel xmlns="skos:">Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLatitude"/>
@@ -2456,7 +2456,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05">
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:95627d76-281b-499a-b66a-3e9f3327c38d"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1784fb92-afb5-4c97-b3eb-9533dec5d6a8"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-05</dcterms:issued>
 	<dcterms:bibliographicCitation>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.</rdfs:comment>
@@ -3467,7 +3467,7 @@
 	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:AssumedDefault"/>
@@ -3475,19 +3475,18 @@
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17">
+<rdf:Description rdf:about="urn:uuid:6172815e-4f10-47d4-bd55-16b691f3f527">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
-	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude, dwc:decimalLongitude</prefLabel>
+	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/geodeticDatum"/>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"/>
-	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLatitude"/>
-	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/decimalLongitude"/>
-	<rdfs:label>Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude, dwc:decimalLongitude</rdfs:label>
+	<rdfs:label>Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-14</dcterms:issued>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06">
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6172815e-4f10-47d4-bd55-16b691f3f527"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1784fb92-afb5-4c97-b3eb-9533dec5d6a8"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Maptiler (2019) EPSG.io. https://epsg.io/&lt;/li&gt; &lt;li&gt;EPSG (2024) About the EPSG Dataset. https://epsg.org/&lt;/li&gt; &lt;li&gt;Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/&lt;/li&gt; &lt;li&gt;Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/&lt;/li&gt; &lt;li&gt;Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853&lt;/li&gt; &lt;li&gt;Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/102</skos:historyNote>
@@ -3499,7 +3498,7 @@
 <rdf:Description rdf:about="urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<skos:note>TG2 Amendment SPACE Test Completeness Parameterized CORE</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997">
@@ -6146,7 +6145,7 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05"/>

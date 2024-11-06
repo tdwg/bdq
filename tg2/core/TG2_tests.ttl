@@ -1649,7 +1649,7 @@
   skos:note "This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related tests. In this test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:6ac5db2f-e866-4fd1-9ac2-b427be59281c>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
   dcterms:issued "2024-11-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.";
   rdfs:comment "Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.";
@@ -1658,7 +1658,7 @@
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae>;
   skos:prefLabel "Amendment dwc:countryCode from Coordinates for SingleRecord" .
 
-<urn:uuid:6ac5db2f-e866-4fd1-9ac2-b427be59281c> a <https://rs.tdwg.org/bdqffdq/terms/Consulted>;
+<urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea> a <https://rs.tdwg.org/bdqffdq/terms/Consulted>;
   <skos:prefLabel> "Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude";
   <https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:decimalLatitude, dwc:decimalLongitude;
   rdfs:label "Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude" .
@@ -2385,14 +2385,15 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_POLYNOMIAL_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:AssumedDefault>;
   skos:note "The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system.  If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
+  dcterms:issued "2024-11-06"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/102";
@@ -2400,15 +2401,14 @@
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7>;
   skos:prefLabel "Amendment dwc:geodeticDatum Assumed Default for SingleRecord" .
 
-<urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude, dwc:decimalLongitude";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters,
-    dwc:decimalLatitude, dwc:decimalLongitude;
-  rdfs:label "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude, dwc:decimalLongitude" .
+<urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
+  <skos:prefLabel> "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters;
+  rdfs:label "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters" .
 
 <urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
   skos:note "TG2 Amendment SPACE Test Completeness Parameterized CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT";
@@ -3349,7 +3349,8 @@
   skos:note "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
     "Example Implementations Source Code: event_date_qc [DwCEventDQ.validationDayStandard()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L622)",
     "TG2 Validation TIME CODED Test Conformance CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358>;
+  skos:historyNote "Source: TDWG2018 DQIG Meeting; TG2-Gainesville" .
 
 <urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:day=\"15\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:day is in range\"",
@@ -3359,8 +3360,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_DAY_STANDARD" .
 
-<urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307> skos:historyNote "Source: TDWG2018 DQIG Meeting; TG2-Gainesville";
-  rdfs:label "ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD";
+<urn:uuid:d9bfd4f7-e158-43ee-8ac4-1bc51bf33307> rdfs:label "ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD";
   skos:prefLabel "ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD";
   <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2024-09-05> .
 
@@ -4348,7 +4348,7 @@
     <https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05>,
     <https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14>,
+    <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06>,
     <https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05>,

@@ -7284,7 +7284,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
             {
-                "@id": "urn:uuid:5fde6511-799d-479b-ab43-db69237e896e"
+                "@id": "urn:uuid:6903c554-9267-4524-951f-166ba4b1f79f"
             }
         ],
         "http://purl.org/dc/terms/issued": [
@@ -7325,7 +7325,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:5fde6511-799d-479b-ab43-db69237e896e",
+        "@id": "urn:uuid:6903c554-9267-4524-951f-166ba4b1f79f",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Consulted"
         ],
@@ -10542,7 +10542,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -10568,12 +10568,17 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
-                "@id": "urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17"
+                "@id": "urn:uuid:e82a9c76-5ed2-4256-b9db-120869d386c6"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+            {
+                "@id": "urn:uuid:6903c554-9267-4524-951f-166ba4b1f79f"
             }
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-10-14",
+                "@value": "2024-11-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10609,13 +10614,13 @@
         ]
     },
     {
-        "@id": "urn:uuid:9e2a587e-a505-4f5f-9cb4-30625d184e17",
+        "@id": "urn:uuid:e82a9c76-5ed2-4256-b9db-120869d386c6",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
         ],
         "skos:prefLabel": [
             {
-                "@value": "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude, dwc:decimalLongitude"
+                "@value": "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
@@ -10624,17 +10629,11 @@
             },
             {
                 "@id": "http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"
-            },
-            {
-                "@id": "http://rs.tdwg.org/dwc/terms/decimalLatitude"
-            },
-            {
-                "@id": "http://rs.tdwg.org/dwc/terms/decimalLongitude"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude, dwc:decimalLongitude"
+                "@value": "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters"
             }
         ]
     },
@@ -10650,7 +10649,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -19063,7 +19062,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"
