@@ -540,6 +540,8 @@ For dwc:eventDate -
 | 4 | [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) |
 | 5 | [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d)
 
+See [TIME Tests diagram](../../supplement/index.md#TIME) for the relationships between the Tests and associated Information Elements ActedUpon that operate on aspects of date and time (Darwin Core class Event). 
+
 Similarly, for dwc:taxonID -
 
 | Order | Test                                                       |
@@ -547,7 +549,7 @@ Similarly, for dwc:taxonID -
 | 1 | [AMENDMENT_TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889) |
 | 2 | [AMENDMENT_SCIENTIFICNAME_FROM_TAXONID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) |
 
-The diagrams of the linkages between Validation and Amendment Tests and Information Elements Acted Upon ... <!--- Awaiting link info: Unsure if it is best to link to TIME and NAME separately and then add SPACE and OTHER after, or simply link to all the diagrams as visual guides --->
+The corresponding [NAME Tests diagram](../../supplement/index.md#NAME) displays the Tests and associated Information Elements ActedUpon that operate on aspects of taxonomic name (Darwin Core class Taxon). See also, the [diagrams for the SPACE Tests](../../supplement/index.md#SPACE) and the [OTHER Tests](../../supplement/index.md#OTHER)
 
 BDQ Core does not specify how these ordering of these Tests should be accomplished.
 
