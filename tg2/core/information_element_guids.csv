@@ -195,3 +195,7 @@
 "urn:uuid:79c96804-409c-44a5-bd7d-f149a7c0805e","Information Element ActedUpon bdq:VALIDATION_PATHWAY_STANDARD.Response"
 "urn:uuid:c449482f-64cd-4152-a434-3492ebdd4401","Information Element ActedUpon bdq:VALIDATION_SEX_STANDARD.Response"
 "urn:uuid:521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e","Information Element ActedUpon bdq:VALIDATION_TYPESTATUS_STANDARD.Response"
+"urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea","Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude"
+"urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71","Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters"
+"urn:uuid:1784fb92-afb5-4c97-b3eb-9533dec5d6a8","Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude"
+"urn:uuid:6172815e-4f10-47d4-bd55-16b691f3f527","Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters"
