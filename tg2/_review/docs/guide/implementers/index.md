@@ -553,7 +553,7 @@ The corresponding [NAME Tests diagram](../../supplement/index.md#NAME) displays 
 
 BDQ Core does not specify how these ordering of these Tests should be accomplished.
 
-Ordering of Tests COULD be done by describing an Amendment Test with an expected response that specifies the execution of each Test in order.  Such a composition of Amendment Tests would be the preferred method of sequencing under the Framework, but to keep Tests as granular a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support bdqffdq:UseCases, BDQ Core does not provide such a test specification.   Ordering of Tests could could be done by providing a configuration file for a Test execution framework specifying test dependencies.  Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence.  The order specified above SHOULD be followed.
+Ordering of Tests COULD be done by describing an Amendment Test with an expected response that specifies the execution of each Test in order.  Such a composition of Amendment Tests would be the preferred method of sequencing under the Framework, but to keep Tests as granular a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support bdqffdq:UseCases, BDQ Core does not provide such a test specification.   Ordering of Tests could be done by providing a configuration file for a Test execution framework specifying test dependencies.  Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence.  The order specified above SHOULD be followed.
 
 #### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
