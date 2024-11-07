@@ -754,7 +754,7 @@ This implementation is dependent on the schema the data is stored in, in particu
 
 This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test Specification, which requires day to be an integer), for values of day such as "8.5"
 
-Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run.  For example, the FilteredPush implementations in event_date_qc, sci_name_qc, rec_occur_qc, and geo_ref_qc, expect that all data will be presented to the Test methods as strings.  Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
+Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run.  For example, the FilteredPush implementations in event_date_qc (Morris & Lowery 2024), sci_name_qc (Morris & Dou 2024), rec_occur_qc, and geo_ref_qc, expect that all data will be presented to the Test methods as strings.  Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
 
 ## 7 Presentation of Results
 
@@ -967,7 +967,7 @@ A set of open source Java libraries provide classes which implement each of the 
 <!--- TODO: Add citations --->
 
 - [event_date_qc](https://github.com/filteredpush/event_date_qc) (Morris & Lowery 2024) Tests related to spatial terms.
-- [sci_name_qc](https://github.com/filteredpush/sci_name_qc) Tests related to taxonomy and identification terms.
+- [sci_name_qc](https://github.com/filteredpush/sci_name_qc) (Morris & Dou 2024) Tests related to taxonomy and identification terms.
 - [geo_ref_qc](https://github.com/filteredpush/geo_ref_qc) Tests related to spatial terms.
 - [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) Tests related to metadata terms.
 
