@@ -68,7 +68,7 @@ The bdqffdq: vocabulary is a specification of a framework for describing data qu
 
 The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
 
-This document describes the use of a set of terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These terms are based on Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, & Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12 (6): https://doi.org/10.1371/journal.pone.0178731>, with a few changes for increased clarity.
+This document describes the use of a set of terms used to describe 'data quality' and 'fitness for use' in the context of biodiversity data.  These terms are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
 ### 1.1 Purpose
 
