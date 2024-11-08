@@ -366,7 +366,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 [MeasurementAssertion](#MeasurementAssertion)
 [MeasurementMethod](#MeasurementMethod)
 [MeasurementPolicy](#MeasurementPolicy)
-[MeaurementConcept](#MeaurementConcept)
+[MeasurementConcept](#MeasurementConcept)
 [Mechanism](#Mechanism)
 [NeedConcept](#NeedConcept)
 [Parameter](#Parameter)
@@ -523,7 +523,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ### Consulted
 
 - Name: bdqffdq:Consulted
-- Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element.
+- Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another InformationElement.
 - SubClass Of: InformationElement
 
 ********************
@@ -579,7 +579,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ### DataResource
 
 - Name: bdqffdq:DataResource
-- Definition: A thing to which a data quality assertion applies.
+- Definition: A thing to whch a data quality assertion applies.
 - SubClass Of: ReportConcept
 
 ********************
@@ -830,7 +830,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
-- Definition: Category of object properties that apply to Amendments
+- Definition: Category of object properties that apply to Amendmentts
 
 ********************
 
@@ -844,7 +844,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ### composedOf
 
 - Name: bdqffdq:composedOf
-- Definition: Specific vocabulary term that comprises a non-abstract Information Element.
+- Definition: Specific vocabulary term that comprises a non-abstract InformationElement.
 
 ********************
 

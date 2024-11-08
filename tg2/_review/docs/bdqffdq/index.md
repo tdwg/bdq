@@ -472,7 +472,7 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 [MeasurementAssertion](#MeasurementAssertion)
 [MeasurementMethod](#MeasurementMethod)
 [MeasurementPolicy](#MeasurementPolicy)
-[MeaurementConcept](#MeaurementConcept)
+[MeasurementConcept](#MeasurementConcept)
 [Mechanism](#Mechanism)
 [NeedConcept](#NeedConcept)
 [Parameter](#Parameter)
@@ -656,9 +656,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: [bdqffdq:Consulted](https://rs.tdwg.org/bdqffdq/terms/Consulted)
 - Preferred Label: Acted Upon
-- Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element.
+- Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another InformationElement.
 - SubClass Of: InformationElement
-- Comments: An Information Element the content of which is examined to assert a result on one or more other Information Elements.
+- Comments: An InformationElement the content of which is examined to assert a result on one or more other InformationElements.
 - View in: [term-list](../list/bdqffdq/index.md#Consulted)
 
 ********************
@@ -860,7 +860,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 - Name: [bdqffdq:Measure](https://rs.tdwg.org/bdqffdq/terms/Measure)
 - Preferred Label: Measure
 - Definition: A data quality need that expresses how the fitness of data for some use may be measured.
-- SubClass Of: DataQualityNeed; MeaurementConcept
+- SubClass Of: DataQualityNeed; MeasurementConcept
 - Comments: Contextualized Dimension in the original framework Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.   
 Describes the criteria for measuring an aspect of data quality related to some data quality need.   May be criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be criteria for asserting a numeric measurement.  COMPLETE or NOT_COMPLETE measures are fundamental to data quality control, as set of data are filtered to the subset of data that have quality for some need if all records are COMPLETE for all pertenent Measures.   
 A Measure is the data quality needs concept that parallels a MeasurementMethod at the solutions level, and a MeasurementAssertion at the report level.  
@@ -876,7 +876,7 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 - Name: [bdqffdq:MeasurementAssertion](https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion)
 - Preferred Label: Measurement Assertion
 - Definition: An assertion expressing the result of an implementation measuring a particular data quality need in a particular data resource.
-- SubClass Of: Assertion; MeaurementConcept
+- SubClass Of: Assertion; MeasurementConcept
 - Comments: The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod following some Specification to assess some data quality Measurement.   
 In bdqffdq, the MeasurementAssertion is expected to carry a ResponseResult of COMPLETE or NOT_COMPLETE or a numeric measured value value (e.g. a measure of dwc:eventDate duration in seconds).  
 DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
@@ -889,7 +889,7 @@ DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀
 - Name: [bdqffdq:MeasurementMethod](https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod)
 - Preferred Label: Measurement Method
 - Definition: A data quality solution concept that relates a Measure to its Specifications.
-- SubClass Of: DataQualityMethod; MeaurementConcept
+- SubClass Of: DataQualityMethod; MeasurementConcept
 - Comments: The MeasurementMethod in bdqffdq is a data quality Solutions level concept describing the relationship between a Specification (technical description of a test) and a Measurement (a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements).  
 MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 - View in: [term-list](../list/bdqffdq/index.md#MeasurementMethod)
@@ -901,7 +901,7 @@ MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 - Name: [bdqffdq:MeasurementPolicy](https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy)
 - Preferred Label: Measurement Policy
 - Definition: A need concept that relates a UseCase to a set of supporting Measures.
-- SubClass Of: MeaurementConcept; Policy
+- SubClass Of: MeasurementConcept; Policy
 - Comments: The MeasurementPolicy in bdqffdq is a data quality Needs level concept that describes how some Measurement relates to a UseCase. This relationship defines which measures are supported by a given UseCase.  
 MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
 - View in: [term-list](../list/bdqffdq/index.md#MeasurementPolicy)
@@ -1125,7 +1125,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:composedOf
 - Preferred Label: composed Of
-- Definition: Specific vocabulary term that comprises a non-abstract Information Element.
+- Definition: Specific vocabulary term that comprises a non-abstract InformationElement.
 - Comments: Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.
 - View in: [term-list](../list/bdqffdq/index.md#composedOf)
 
@@ -1538,7 +1538,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 - Name: bdqffdq:hasResponseResultValue
 - Preferred Label: has response result value
 - Definition: Data property carrying the value of an Assertion when not an object.
-- Comments: Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value.
+- Comments: Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value.
 - View in: [term-list](../list/bdqffdq/index.md#hasResponseResultValue)
 
 ********************
