@@ -591,7 +591,7 @@ Implementers MAY use any approach to passing data into Test implementations appr
 
 If Test implementations are functions that take Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correct matching of input Darwin Core terms to the parameters of the test (function or method).  
 
-In Java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well, here is a simplified code snippet from the FilteredPush event_date_qc library that uses Java annotations, e.g. @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which Information Element. 
+In Java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well, here is a simplified code snippet from the FilteredPush event_date_qc library (Morris & Lowery 2024) that uses Java annotations, e.g. @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which Information Element. 
 
     public Response validationEnddayofyearInrange(
             @ActedUpon(value="dwc:endDayOfYear") String endDay,
@@ -599,7 +599,7 @@ In Java, annotating method parameters and using reflection to bind between the e
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
-Additional metadata can be added in Java annotations, here, from the FilteredPush event_date_qc library annotations enable an implementation framework to look a Test implementation by the Test GUID, and can provide metadata about the Test to users, and for maintenance, can be used to determine if an implementation is up to date with the latest version of a Test specification.
+Additional metadata can be added in Java annotations, here, from the FilteredPush event_date_qc (Morris & Lowery 2024) library annotations enable an implementation framework to look a Test implementation by the Test GUID, and can provide metadata about the Test to users, and for maintenance, can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
@@ -716,7 +716,7 @@ Specification hasExpectedResponse
 Information Elements Acted Upon
 : dwc:day
 
-Below is an example implementation from the FilteredPush event_date_qc library (Morris 2024).  In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its IRI or term_localName and match an input Darwin Core term to a (Java) parameter in the method signature.  The implementation walks through the elements of the specification in sequence, and return the first matching response in a response object (which has Response.state, Response.result (here called value), and Response.comment properties.  
+Below is an example implementation from the FilteredPush event_date_qc library (Morris & Lowery 2024).  In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its IRI or term_localName and match an input Darwin Core term to a (Java) parameter in the method signature.  The implementation walks through the elements of the specification in sequence, and return the first matching response in a response object (which has Response.state, Response.result (here called value), and Response.comment properties.  
 
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
     @Provides("47ff73ba-0028-4f79-9ce1-ee7008d66498")

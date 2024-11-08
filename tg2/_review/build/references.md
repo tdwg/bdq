@@ -58,7 +58,7 @@ The following references have been extracted from the "References" descriptor on
 <li>Morris P, Hanken J, Lowery D, Ludäscher B, Macklin J, McPhillips T, Wieczorek J, Zhang Q (2018) Kurator: Tools for Improving Fitness for Use of Biodiversity Data. Biodiversity Information Science and Standards 2: e26539. https://doi.org/10.3897/biss.2.26539</li>
 <li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Initial release of bdq_issue_to_csv utility (v0.0.5). Zenodo. https://doi.org/10.5281/zenodo.13937571</li>
 <li>Morris PJ, Dou L (2024) FilteredPush/sci_name_qc: Release vesion 1.1.2 of the sci_name_qc library implementing BDQ Core NAME tests. (v1.1.2). Zenodo. https://doi.org/10.5281/zenodo.14052951</li>
-<li>Morris PJ, Lowery D (2024) FilteredPush/event_date_qc: Release version 3.0.2 of the event_date_qc library, compliant implementation of all the TG2 Core Time Tests. (v3.0.2). Zenodo. https://doi.org/10.5281/zenodo.8136725</li>
+<li>Morris PJ, Lowery D (2024) FilteredPush/event_date_qc: Release version 3.0.5 of the event_date_qc library, compliant implementation of all the BDQ Core Time Tests. Zenodo. https://doi.org/10.5281/zenodo.14056663</li>
 <li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
 <li>Natural Earth (2009)  Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>

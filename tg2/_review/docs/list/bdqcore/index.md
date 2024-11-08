@@ -3448,6 +3448,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -3574,6 +3582,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 	</tbody>
 </table>
@@ -3820,6 +3836,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -19432,6 +19456,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -20835,6 +20867,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -23648,6 +23688,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_FAMILY_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -23770,6 +23818,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -23997,6 +24053,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_KINGDOM_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -24099,6 +24163,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24913,6 +24985,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -25369,6 +25449,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_ORDER_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -25615,6 +25703,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_PHYLUM_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -25738,6 +25834,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -25845,6 +25949,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -25947,6 +26059,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26059,6 +26179,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -26165,6 +26293,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26638,6 +26774,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXON_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -26760,6 +26904,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -26990,6 +27142,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27462,6 +27622,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>

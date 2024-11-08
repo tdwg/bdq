@@ -647,7 +647,7 @@ In general, assessing whether a date in biodiversity data was Julian or Gregoria
 
 If a time zone is not included as a component of date and time, the date and time information is expected to be consistent throughout the event terms
 
-Time is treated as out of scope for BDQ Core Use Cases.  In cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced. For example, the event_date_qc implementation of [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) contains the commented out block of code below that is pertinent to time zone issues.   It would populate eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should, but may not have, taken account of a local time zone in populating dwc:day, dwc:month, dwc:year, dwc:startDayOfYear and dwc:endDayOfYear. dwc:day, dwc:month, dwc:year, dwc:startDayOfYear, dwc:endDayOfYear and dwc:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
+Time is treated as out of scope for BDQ Core Use Cases.  In cases where time zone data is important, dates within a MultiRecord from multiple sources may have multiple plus or minus one day errors introduced. For example, the event_date_qc (Morris & Lowery 2024) implementation of [AMENDMENT_EVENT_FROM_EVENTDATE](https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d) contains the commented out block of code below that is pertinent to time zone issues.   It would populate eventTime from eventDate, converting a local time in eventDate to UTC, where other blocks in the Amendment should, but may not have, taken account of a local time zone in populating dwc:day, dwc:month, dwc:year, dwc:startDayOfYear and dwc:endDayOfYear. dwc:day, dwc:month, dwc:year, dwc:startDayOfYear, dwc:endDayOfYear and dwc:eventTime should all be consistent, but there aren't unit tests in place to confirm this).
 
 // Time could also be populated, but it isn't in scope for this issue.
 // Here is a minimal implementation,
@@ -766,7 +766,7 @@ Only a subset of all [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Cor
 
 **"References"** [non-normative]: A list of references that will assist in a thorough understanding of the Test, for example: "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)"
 
-**Example Implementations (Mechanisms)** [non-normative]: A link to one or more entities that have an implementation of the Test, for example "https://github.com/FilteredPush/event_date_qc".
+**Example Implementations (Mechanisms)** [non-normative]: One or more entities that have an implementation of the Test, for example "Kurator/Filtered Push event_date_qc library".
 
 **Link to Specification Source Code** [non-normative]: A link to code that implements the Test, for example "https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169".
 
