@@ -44,7 +44,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual Framework (Veiga 2016, Veiga et al. 2017), it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
+The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data.  The conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders.  The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about each Test.
 
