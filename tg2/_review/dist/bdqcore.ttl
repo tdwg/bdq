@@ -417,14 +417,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM" .
 
-<https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:eventDate?";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/33";
@@ -441,14 +441,14 @@
   rdfs:label "Information Element ActedUpon dwc:eventDate" .
 
 <urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
-    "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L182)",
+  skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
+    "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L200)",
     "TG2 Validation TIME CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4>;
   skos:historyNote "Source: TG2-Gainesville";
   rdfs:label "ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08> .
 
 <urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:eventDate=\"1964-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:eventdate is bdq:NotEmpty\"",
@@ -806,14 +806,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED" .
 
-<https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:fb8a2da5-dbda-43e7-9116-3fcaede12985>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:year?";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/49";
@@ -827,14 +827,14 @@
   rdfs:label "Information Element ActedUpon dwc:year" .
 
 <urn:uuid:2a0843de-32f9-473e-984a-619dace9ee66> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
-    "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L217)",
+  skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
+    "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L235)",
     "TG2 Validation TIME CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77>;
   skos:historyNote "Source: TG2-Gainesville";
   rdfs:label "ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08> .
 
 <urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:year=\"1949\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:year is bdq:NotEmpty\"",
@@ -3311,13 +3311,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; Report the number of tests of output type VALIDATION run against the record that were COMPLIANT (passed)";
   rdfs:label "Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT" .
 
-<https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The duration of a day is 86400 seconds. Implementations should treat all days as 86400 seconds, but should include leap days (but not leap seconds) in durations that encompass them.  Consumers should treat assertions about event date duration as approximations, see: https://xkcd.com/2867/";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Resolution>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601";
   rdfs:comment "What is the duration of dwc:eventDate in seconds?";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/140";
@@ -3326,13 +3326,13 @@
   skos:prefLabel "Measure dwc:eventDate Duration In Seconds for SingleRecord" .
 
 <urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
-    "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L109)",
+  skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
+    "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L124)",
     "TG2 Measure TIME CODED Test CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb>;
   skos:historyNote "Source: Alex Thompson";
   rdfs:label "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08>;
   skos:prefLabel "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" .
 
 <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -4197,7 +4197,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24>,
     <https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25>,
     <https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25>,
-    <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16> .
+    <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08> .
 
 <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
   rdfs:label "bdq:Spatial-Temporal_Patterns" .
@@ -4206,9 +4206,9 @@
   rdfs:label "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species";
   <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Alien-Species>;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04>,
-    <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2024-09-04>,
@@ -4249,13 +4249,13 @@
     <https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-09-24>,
     <https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04>,
-    <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27>,
     <https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-09-26>,
     <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-09-06>,

@@ -54,7 +54,7 @@ Templates for proposals of new and change issues are available at https://github
 
 ### 2.2 Software Tools for Working with Test Descriptions
 
-The bdq_issue_to_csv utility is available for converting markdown tables in issues into lines of csv.
+The bdq_issue_to_csv utility (Morris 2024) is available ([zenodo](https://doi.org/10.5281/zenodo.13937570), [github](https://github.com/kurator-org/bdq_issue_to_csv)) for converting markdown tables in issues into lines of csv (ready for use as a term-version file.  See the bdq_issue_to_csv README and the [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/make_test_csv.sh) shell script for details, including working with kurator-ffdq (Lowery et al. 2024) [zenodo](https://doi.org/10.5281/zenodo.14026643), [github](https://github.com/kurator-org/kurator-ffdq) for generation of RDF serializations from the term-version csv file.
 
 ## 3 Test Validation Data
 

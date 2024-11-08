@@ -1737,7 +1737,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1768,7 +1768,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-04",
+                "@value": "2024-11-08",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -1842,10 +1842,10 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+                "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
             },
             {
-                "@value": "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L182)"
+                "@value": "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L200)"
             },
             {
                 "@value": "TG2 Validation TIME CODED Test Completeness CORE"
@@ -1873,7 +1873,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08"
             }
         ]
     },
@@ -3478,7 +3478,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3509,7 +3509,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-04",
+                "@value": "2024-11-08",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3572,10 +3572,10 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+                "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
             },
             {
-                "@value": "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L217)"
+                "@value": "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L235)"
             },
             {
                 "@value": "TG2 Validation TIME CODED Test Completeness CORE"
@@ -3603,7 +3603,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
             }
         ]
     },
@@ -14730,7 +14730,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -14756,7 +14756,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-16",
+                "@value": "2024-11-08",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -14798,10 +14798,10 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
+                "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)."
             },
             {
-                "@value": "Example Implementations Source Code: event_date_qc v3.0.0 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L109)"
+                "@value": "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L124)"
             },
             {
                 "@value": "TG2 Measure TIME CODED Test CORE"
@@ -14824,7 +14824,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasurement": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18627,7 +18627,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-09-16"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08"
             }
         ]
     },
@@ -18662,13 +18662,13 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
@@ -18801,7 +18801,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-10-14"
@@ -18819,7 +18819,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-09-26"

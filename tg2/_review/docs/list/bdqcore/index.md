@@ -4540,7 +4540,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4596,11 +4596,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc v3.0.0 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L109)</td>
+			<td>event_date_qc v3.0.5 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L124)</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8472,7 +8472,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11846,7 +11846,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15576,7 +15576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18950,7 +18950,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23364,7 +23364,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23420,11 +23420,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc v3.0.0 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L182)</td>
+			<td>event_date_qc v3.0.5 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L200)</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -23437,14 +23437,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27430,7 +27422,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27486,11 +27478,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc v3.0.0 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L217)</td>
+			<td>event_date_qc v3.0.5 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L235)</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -27503,14 +27495,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_YEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>

@@ -408,13 +408,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/33";
@@ -435,7 +435,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2024-09-04>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2024-11-08>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY" .
 
 <urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -445,13 +445,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/33";
@@ -464,7 +464,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2024-09-04>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2024-11-08>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY" .
 
 <urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -915,13 +915,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/49";
@@ -939,7 +939,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2024-09-04>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2024-11-08>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY" .
 
 <urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -949,13 +949,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2024-11-08>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT";
   skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/49";
@@ -968,7 +968,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2024-09-04>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2024-11-08>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY" .
 
 <urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
