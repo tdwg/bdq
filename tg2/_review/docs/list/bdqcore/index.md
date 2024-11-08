@@ -3350,7 +3350,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3421,6 +3421,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1156</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority.   When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.   Implementors can be aware of the current  GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122  The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records.   Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementors will need to support at least the "gbif:" pseudo-namespace.</td>
 		</tr>
@@ -3439,14 +3447,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 	</tbody>
 </table>
@@ -3477,7 +3477,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3549,7 +3549,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FP-KurationServices, Arctos, MCZbase, Symbiota</td>
+			<td>Kurator/FilteredPush sci_name_qc Library, FP-KurationServices, Arctos, MCZbase, Symbiota</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L397 https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L476</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3570,14 +3574,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 	</tbody>
 </table>
@@ -3731,7 +3727,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3798,6 +3794,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2276</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>For reference, information about possible values of dwc:taxonRank can be found at https://registry.gbif.org/vocabulary/TaxonRank/concepts</td>
 		</tr>
@@ -3816,14 +3820,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -5106,7 +5102,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6298,7 +6294,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8642,7 +8638,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-17</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8745,7 +8741,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8943,7 +8939,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9046,7 +9042,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9743,7 +9739,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10131,7 +10127,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10337,7 +10333,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10440,7 +10436,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10543,7 +10539,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10638,7 +10634,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10733,7 +10729,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10828,7 +10824,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11224,7 +11220,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11319,7 +11315,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11517,7 +11513,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11921,7 +11917,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12210,7 +12206,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13402,7 +13398,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15746,7 +15742,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-17</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15849,7 +15845,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16047,7 +16043,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16150,7 +16146,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16847,7 +16843,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17235,7 +17231,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17441,7 +17437,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17544,7 +17540,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17647,7 +17643,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17742,7 +17738,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17837,7 +17833,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17932,7 +17928,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18328,7 +18324,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18423,7 +18419,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18621,7 +18617,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19025,7 +19021,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19342,7 +19338,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19409,6 +19405,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2567</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>A fail condition may arise either from the taxon terms being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of classification values. Additional tests could be devised against a taxonomic authority to report the distinct failure conditions. This test specifically does not consider the content of dwc:higherClassification.</td>
 		</tr>
@@ -19427,14 +19431,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20750,7 +20746,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20813,6 +20809,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1349</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
@@ -20831,14 +20835,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -23558,7 +23554,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-17</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23625,6 +23621,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L175</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
@@ -23643,14 +23647,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -23681,7 +23677,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23748,6 +23744,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2003</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against which to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
@@ -23766,14 +23770,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -23907,7 +23903,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23974,6 +23970,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1390</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
@@ -23992,14 +23996,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24030,7 +24026,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24085,6 +24081,14 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3024</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
@@ -24095,14 +24099,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24843,7 +24839,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24898,6 +24894,14 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3094</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
@@ -24908,14 +24912,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25279,7 +25275,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25346,6 +25342,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1463</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
@@ -25364,14 +25368,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -25525,7 +25521,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25592,6 +25588,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L134</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the test will designate the source authority against to check. The same test might return distinct results when using distinct source authorities.</td>
 		</tr>
@@ -25610,14 +25614,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -25648,7 +25644,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25716,7 +25712,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FP-Akka</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L216</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25737,14 +25737,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -25775,7 +25767,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25834,6 +25826,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1430</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
@@ -25844,14 +25844,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25882,7 +25874,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25937,6 +25929,14 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3059</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
@@ -25947,14 +25947,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25985,7 +25977,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26044,6 +26036,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li><li>Wikipedia (2024) LSID (Life Science Identifier). https://en.wikipedia.org/wiki/LSID</li><li>Wikipedia (2024) Uniform Resource Name (URN). https://en.wikipedia.org/wiki/Uniform_Resource_Name</ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2907</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.  Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.</td>
 		</tr>
@@ -26058,14 +26058,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 	</tbody>
 </table>
@@ -26096,7 +26088,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26155,6 +26147,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1849</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME Test Completeness CORE</td>
 		</tr>
@@ -26165,14 +26165,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26568,7 +26560,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26623,6 +26615,14 @@ Including MultiRecord Measures
 			<td>Lee Belbin</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1765</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.</td>
 		</tr>
@@ -26637,14 +26637,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26675,7 +26667,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26742,6 +26734,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L796  https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L843</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>There are any number of potential controlled vocabularies that might be used for this test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon.  If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record.   The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty.  Note that test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific test for a subset of Information Elements from this test.</td>
 		</tr>
@@ -26760,14 +26760,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -26905,7 +26897,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26972,6 +26964,14 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2165</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
@@ -26990,14 +26990,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27389,7 +27381,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-08</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27449,11 +27441,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FP-Akka</td>
+			<td>Kurator/FilteredPush sci_name_qc Library, FP-Akka</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/FP-KurationServices/blob/master/src/main/java/org/filteredpush/kuration/util/SciNameServiceUtil.java#L97</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1554</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27470,14 +27462,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
