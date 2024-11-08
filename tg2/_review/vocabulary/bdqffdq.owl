@@ -68,7 +68,7 @@ bdqffdq:composedOf rdf:type owl:ObjectProperty ;
                    dcterms:issued "2024-09-30"^^xsd:date ;
                    rdfs:comment "Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year." ;
                    rdfs:label "composed Of" ;
-                   skos:definition "Specific vocabulary term that comprises a non-abstract Information Element." ;
+                   skos:definition "Specific vocabulary term that comprises a non-abstract InformationElement." ;
                    skos:prefLabel "composed Of" .
 
 
@@ -514,7 +514,7 @@ bdqffdq:hasResponseComment rdf:type owl:DatatypeProperty ;
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
                                dcterms:issued "2024-09-30"^^xsd:date ;
-                               rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon Information Elements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value." ;
+                               rdfs:comment "Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value." ;
                                rdfs:label "has response result value" ;
                                skos:definition "Data property carrying the value of an Assertion when not an object." ;
                                skos:prefLabel "has response result value" .
@@ -636,9 +636,9 @@ bdqffdq:Assertion rdf:type owl:Class ;
 bdqffdq:Consulted rdf:type owl:Class ;
                   rdfs:subClassOf bdqffdq:InformationElement ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
-                  rdfs:comment "An Information Element the content of which is examined to assert a result on one or more other Information Elements."@en ;
+                  rdfs:comment "An InformationElement the content of which is examined to assert a result on one or more other InformationElements."@en ;
                   rdfs:label "Consulted"@en ;
-                  skos:definition "An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another Information Element." ;
+                  skos:definition "An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another InformationElement." ;
                   skos:prefLabel "Acted Upon" .
 
 
@@ -835,7 +835,7 @@ bdqffdq:IssuePolicy rdf:type owl:Class ;
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
 bdqffdq:Measure rdf:type owl:Class ;
                 rdfs:subClassOf bdqffdq:DataQualityNeed ,
-                                bdqffdq:MeaurementConcept ;
+                                bdqffdq:MeasurementConcept ;
                 dcterms:issued "2024-09-30"^^xsd:date ;
                 rdfs:comment """Contextualized Dimension in the original framework Describes an instance of the measure concept in terms of the associated information elements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord. 
 
@@ -854,7 +854,7 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}"""@en ;
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
 bdqffdq:MeasurementAssertion rdf:type owl:Class ;
                              rdfs:subClassOf bdqffdq:Assertion ,
-                                             bdqffdq:MeaurementConcept ;
+                                             bdqffdq:MeasurementConcept ;
                              dcterms:issued "2024-09-30"^^xsd:date ;
                              rdfs:comment """The MeasurementAssertion is a report level concept that describes the results of the execution of of a test that performs a MeasurementMethod following some Specification to assess some data quality Measurement. 
 
@@ -869,7 +869,7 @@ DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod
 bdqffdq:MeasurementMethod rdf:type owl:Class ;
                           rdfs:subClassOf bdqffdq:DataQualityMethod ,
-                                          bdqffdq:MeaurementConcept ;
+                                          bdqffdq:MeasurementConcept ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment """The MeasurementMethod in bdqffdq is a data quality Solutions level concept describing the relationship between a Specification (technical description of a test) and a Measurement (a dimension in the context of resource type (SingleRecord or MultiRecord) and associated information elements).
 
@@ -881,7 +881,7 @@ MM(me) = {s | s ⊂ S ⋀ me ∈ ME}""" ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy
 bdqffdq:MeasurementPolicy rdf:type owl:Class ;
-                          rdfs:subClassOf bdqffdq:MeaurementConcept ,
+                          rdfs:subClassOf bdqffdq:MeasurementConcept ,
                                           bdqffdq:Policy ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment """The MeasurementPolicy in bdqffdq is a data quality Needs level concept that describes how some Measurement relates to a UseCase. This relationship defines which measures are supported by a given UseCase.
@@ -892,8 +892,8 @@ MP(u) = {me | me ⊂ ME ⋀ u ∈ U }""" ;
                           skos:prefLabel "Measurement Policy"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/MeaurementConcept
-bdqffdq:MeaurementConcept rdf:type owl:Class ;
+###  https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept
+bdqffdq:MeasurementConcept rdf:type owl:Class ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:label "Measurement Concept"@en ;
                           skos:definition "A term involved in measurement of data quality with regards to expressed data quality needs."@en ;
