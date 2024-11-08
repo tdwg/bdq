@@ -579,7 +579,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ### DataResource
 
 - Name: bdqffdq:DataResource
-- Definition: A thing to whch a data quality assertion applies.
+- Definition: A thing to which a data quality assertion applies.
 - SubClass Of: ReportConcept
 
 ********************
@@ -666,7 +666,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 - Name: bdqffdq:Measure
 - Definition: A data quality need that expresses how the fitness of data for some use may be measured.
-- SubClass Of: DataQualityNeed; MeaurementConcept
+- SubClass Of: DataQualityNeed; MeasurementConcept
 
 ********************
 
@@ -674,7 +674,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 - Name: bdqffdq:MeasurementAssertion
 - Definition: An assertion expressing the result of an implementation measuring a particular data quality need in a particular data resource.
-- SubClass Of: Assertion; MeaurementConcept
+- SubClass Of: Assertion; MeasurementConcept
 
 ********************
 
@@ -682,7 +682,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 - Name: bdqffdq:MeasurementMethod
 - Definition: A data quality solution concept that relates a Measure to its Specifications.
-- SubClass Of: DataQualityMethod; MeaurementConcept
+- SubClass Of: DataQualityMethod; MeasurementConcept
 
 ********************
 
@@ -690,7 +690,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 
 - Name: bdqffdq:MeasurementPolicy
 - Definition: A need concept that relates a UseCase to a set of supporting Measures.
-- SubClass Of: MeaurementConcept; Policy
+- SubClass Of: MeasurementConcept; Policy
 
 ********************
 
@@ -830,7 +830,7 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
-- Definition: Category of object properties that apply to Amendmentts
+- Definition: Category of object properties that apply to Amendments
 
 ********************
 
