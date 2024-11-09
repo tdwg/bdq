@@ -3346,7 +3346,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -3362,7 +3362,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": ""
+                "@value": "This test supports conformance with the recommendation in the comment on dwc:countryCode: \"Recommended best practice is to use an ISO 3166-1-alpha-2 country code. \"  Three letter codes should be amended to the matching two letter code."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -3377,7 +3377,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-18",
+                "@value": "2024-11-09",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3388,7 +3388,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code."
+                "@value": "Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code."
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -3424,7 +3424,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -3458,17 +3458,17 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
+                "@value": "bdq:sourceAuthority default = \"ISO 3166-1-alpha-2\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"ISO 3166-1-alpha-2\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -19143,7 +19143,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16"

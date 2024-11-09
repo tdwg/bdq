@@ -1208,7 +1208,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -1216,11 +1216,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2024-11-09</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-18</td>
+			<td>2024-11-09</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -1232,7 +1232,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -1244,11 +1244,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+			<td>bdq:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.</td>
+			<td>Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code.</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -1275,6 +1275,10 @@ Including MultiRecord Measures
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.</li></ul></td>
 		</tr>
 		<tr>
+			<td>Notes</td>
+			<td>This test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code. "  Three letter codes should be amended to the matching two letter code.</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Amendment SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
@@ -1285,14 +1289,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -23438,6 +23434,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -27495,6 +27499,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_YEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>

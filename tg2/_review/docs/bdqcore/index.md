@@ -557,7 +557,7 @@ Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](ht
   - View in Term-List: [Link](../list/bdqcore/index.md#bdqcore_8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae)
 
 - <a id="bdqcore_fec5ffe6-3958-4312-82d9-ebcca0efb350"></a>AMENDMENT_COUNTRYCODE_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.
+  - Description: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code.
   - View in Quick Reference Guide: [Link](../terms/bdqcore/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED)
   - View in Term-List: [Link](../list/bdqcore/index.md#bdqcore_fec5ffe6-3958-4312-82d9-ebcca0efb350)
 

@@ -3606,16 +3606,16 @@ This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude
 ###  AMENDMENT_COUNTRYCODE_STANDARDIZED
 
 ####  Amendment dwc:countryCode Standard
-https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350/2024-09-18
+https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350/2024-11-09
 Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO country code.
+Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code.
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3624,7 +3624,7 @@ dwc:countryCode
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+bdq:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 #### Examples
 
@@ -3636,6 +3636,10 @@ dwc:countryCode="Aust.": Response.status=NOT_AMENDED, Response.result=, Response
 #### Use Cases
 
 bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+
+#### Notes
+
+This test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code. "  Three letter codes should be amended to the matching two letter code.
 
 [🠱](#indexes-to-the-tests)
 ********************
