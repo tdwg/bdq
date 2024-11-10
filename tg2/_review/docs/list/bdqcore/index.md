@@ -1290,6 +1290,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
