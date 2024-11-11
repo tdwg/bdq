@@ -4432,12 +4432,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:7d2a151e-ece9-4720-a386-7f9826b7601e"
+                "@id": "urn:uuid:1cedc9a5-aefe-4b49-a16f-7865f12ddedd"
             }
         ]
     },
     {
-        "@id": "urn:uuid:7d2a151e-ece9-4720-a386-7f9826b7601e",
+        "@id": "urn:uuid:1cedc9a5-aefe-4b49-a16f-7865f12ddedd",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -18224,12 +18224,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
+                "@value": "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -18244,23 +18244,23 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:63b0193f-a8df-4345-8d60-caf667cd62b0"
+                "@id": "urn:uuid:812e7a8c-88d8-4cf1-af32-66b7aba0d9df"
             }
         ]
     },
     {
-        "@id": "urn:uuid:63b0193f-a8df-4345-8d60-caf667cd62b0",
+        "@id": "urn:uuid:812e7a8c-88d8-4cf1-af32-66b7aba0d9df",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
             {
-                "@value": "Darwin Core typeStatus"
+                "@value": "GBIF TypeStatus Vocabulary"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Default value for bdq:sourceAuthority:\"Darwin Core typeStatus\""
+                "@value": "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
@@ -18387,12 +18387,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
+                "@value": "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -18407,23 +18407,23 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079"
+                "@id": "urn:uuid:3d0c752a-ed4c-4f38-9403-035ec056ec66"
             }
         ]
     },
     {
-        "@id": "urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079",
+        "@id": "urn:uuid:3d0c752a-ed4c-4f38-9403-035ec056ec66",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
             {
-                "@value": "Darwin Core typeStatus"
+                "@value": "GBIF TypeStatus Vocabulary"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Default value for bdq:sourceAuthority:\"Darwin Core typeStatus\""
+                "@value": "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [

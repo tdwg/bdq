@@ -1530,7 +1530,7 @@
 	<rdfs:label>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:d826b3d6-03cb-4a05-b636-6dcd99a470b6">
+<rdf:Description rdf:about="urn:uuid:83c618a7-e89b-4211-a028-049a8e992062">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">10m-admin-1 boundaries UNION with Exclusive Economic Zones</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"10m-admin-1 boundaries UNION with Exclusive Economic Zones"</rdfs:label>
@@ -1538,7 +1538,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d826b3d6-03cb-4a05-b636-6dcd99a470b6"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:83c618a7-e89b-4211-a028-049a8e992062"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef">
@@ -5850,21 +5850,21 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example>dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"</skos:example>
 	<skos:example>dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &amp;#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &amp;#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &amp;#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</hasExpectedResponse>
 	<rdfs:label>Specification for: VALIDATION_TYPESTATUS_STANDARD</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:63b0193f-a8df-4345-8d60-caf667cd62b0">
+<rdf:Description rdf:about="urn:uuid:293498d3-9aa9-4366-a43b-ecfbe4ea0aa2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Darwin Core typeStatus</hasArgumentValue>
-	<rdfs:label>Default value for bdq:sourceAuthority:"Darwin Core typeStatus"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF TypeStatus Vocabulary</hasArgumentValue>
+	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF TypeStatus Vocabulary"</rdfs:label>
 	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:63b0193f-a8df-4345-8d60-caf667cd62b0"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:293498d3-9aa9-4366-a43b-ecfbe4ea0aa2"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5">
@@ -5901,21 +5901,21 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example>dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"</skos:example>
 	<skos:example>dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &amp;#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &amp;#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &amp;#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.</hasExpectedResponse>
 	<rdfs:label>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079">
+<rdf:Description rdf:about="urn:uuid:25a4804e-6eda-4470-88e5-00864a920337">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Darwin Core typeStatus</hasArgumentValue>
-	<rdfs:label>Default value for bdq:sourceAuthority:"Darwin Core typeStatus"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF TypeStatus Vocabulary</hasArgumentValue>
+	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF TypeStatus Vocabulary"</rdfs:label>
 	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:25a4804e-6eda-4470-88e5-00864a920337"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:05104b96-267c-432a-9f30-88552404763e">

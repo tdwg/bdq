@@ -2208,7 +2208,7 @@ This test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 ###  VALIDATION_TYPESTATUS_STANDARD
 
 ####  Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048/2024-08-03
+https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048/2024-11-11
 Acts upon  SingleRecord
 
 #### Description
@@ -2230,7 +2230,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
+bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}
 
 #### Examples
 
@@ -4393,7 +4393,7 @@ For reference, a list of synonyms for dwc:sex values can be found at https://reg
 ###  AMENDMENT_TYPESTATUS_STANDARDIZED
 
 ####  Amendment dwc:typeStatus Standardized
-https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805/2024-08-16
+https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805/2024-11-11
 Acts upon  SingleRecord
 
 #### Description
@@ -4415,7 +4415,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}
+bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}
 
 #### Examples
 
@@ -7492,7 +7492,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-08-03
+https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0/2024-11-11
 Acts upon  MultiRecord
 
 #### Description
@@ -7732,7 +7732,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-08-03
+https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88/2024-11-11
 Acts upon  MultiRecord
 
 #### Description

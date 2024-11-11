@@ -699,6 +699,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -2500,6 +2508,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -2606,6 +2622,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3054,6 +3078,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -3842,7 +3874,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2024-08-16</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -3854,7 +3886,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-08-16</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -3882,7 +3914,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -3929,12 +3961,16 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>Guids for Arguments</td>
-			<td>a10eb348-7fc5-4b96-88e3-619300cb0079</td>
-		</tr>
-		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -11600,7 +11636,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2024-08-03</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -11612,7 +11648,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-08-03</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -11636,7 +11672,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -11673,10 +11709,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>Guids for Arguments</td>
-			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -18704,7 +18736,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2024-08-03</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -18716,7 +18748,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-08-03</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -18740,7 +18772,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -18777,10 +18809,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>Guids for Arguments</td>
-			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -19185,6 +19213,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20368,6 +20404,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -21533,6 +21577,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27116,7 +27168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-08-03</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -27128,7 +27180,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-08-03</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -27156,7 +27208,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core typeStatus" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -27203,12 +27255,16 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>Guids for Arguments</td>
-			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
-		</tr>
-		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
