@@ -28,7 +28,7 @@
   dcterms:issued "2024-09-18"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/20";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/20";
   rdfs:label "VALIDATION_COUNTRYCODE_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe>;
   skos:prefLabel "Validation dwc:countryCode Standard for SingleRecord" .
@@ -79,7 +79,7 @@
   dcterms:issued "2024-09-24"^^xsd:date;
   dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/21";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/21";
   rdfs:label "VALIDATION_COUNTRY_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134>;
   skos:prefLabel "Validation dwc:country Found for SingleRecord" .
@@ -126,7 +126,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/22";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/22";
   rdfs:label "VALIDATION_PHYLUM_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f>;
   skos:prefLabel "Validation dwc:phylum Found for SingleRecord" .
@@ -169,7 +169,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/24";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/24";
   rdfs:label "VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e>;
   skos:prefLabel "Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters for SingleRecord" .
@@ -252,7 +252,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/28";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/28";
   rdfs:label "VALIDATION_FAMILY_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c>;
   skos:prefLabel "Validation dwc:family Found for SingleRecord" .
@@ -295,7 +295,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/30";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/30";
   rdfs:label "VALIDATION_DECIMALLONGITUDE_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1>;
   skos:prefLabel "Validation dwc:decimalLongitude In Range for SingleRecord" .
@@ -333,7 +333,7 @@
   dcterms:issued "2024-09-24"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "A count of the number of distinct VALIDATION tests that have a Response.status=\"NOT_COMPLIANT\" for a given record.";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/31";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/31";
   rdfs:label "MEASURE_VALIDATIONTESTS_NOTCOMPLIANT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a>;
   skos:prefLabel "Measure Validation Tests Not Compliant for SingleRecord" .
@@ -427,7 +427,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:eventDate?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/33";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/33";
   rdfs:label "VALIDATION_EVENTDATE_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985>;
   skos:prefLabel "Validation dwc:eventDate Not Empty for SingleRecord" .
@@ -468,7 +468,7 @@
   dcterms:issued "2024-10-14"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/";
   rdfs:comment "Is the value of dwc:eventDate entirely with the Parameter Range?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/36";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/36";
   rdfs:label "VALIDATION_EVENTDATE_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432>;
   skos:prefLabel "Validation dwc:eventDate In Range for SingleRecord" .
@@ -508,7 +508,7 @@
   dcterms:issued "2024-11-11"^^xsd:date;
   dcterms:bibliographicCitation "Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/; Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/";
   rdfs:comment "Does the value of dcterms:license occur in bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/38";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/38";
   rdfs:label "VALIDATION_LICENSE_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1>;
   skos:prefLabel "Validation dcterms:license Standard for SingleRecord" .
@@ -550,7 +550,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_; Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica; Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:minimumElevationInMeters within the Parameter range?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/39";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/39";
   rdfs:label "VALIDATION_MINELEVATION_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798>;
   skos:prefLabel "Validation dwc:minimumElevationInMeters In Range for SingleRecord" .
@@ -594,7 +594,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in any of the Darwin Core spatial terms that could specify a location?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/40";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/40";
   rdfs:label "VALIDATION_LOCATION_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9>;
   skos:prefLabel "Validation dcterms:Location Not Empty for SingleRecord" .
@@ -671,7 +671,7 @@
   dcterms:issued "2024-09-27"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in dwc:country?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/42";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/42";
   rdfs:label "VALIDATION_COUNTRY_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c>;
   skos:prefLabel "Validation dwc:country Not Empty for SingleRecord" .
@@ -707,7 +707,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)";
   rdfs:comment "Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/46";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/46";
   rdfs:label "VALIDATION_SCIENTIFICNAME_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45>;
   skos:prefLabel "Validation dwc:scientificName Found for SingleRecord" .
@@ -750,7 +750,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:occurrenceID?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/47";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/47";
   rdfs:label "VALIDATION_OCCURRENCEID_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4>;
   skos:prefLabel "Validation dwc:occurrenceID Not Empty for SingleRecord" .
@@ -816,7 +816,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:year?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/49";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/49";
   rdfs:label "VALIDATION_YEAR_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f>;
   skos:prefLabel "Validation dwc:year Not Empty for SingleRecord" .
@@ -854,7 +854,7 @@
   dcterms:issued "2024-09-26"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents";
   rdfs:comment "Do the geographic coordinates fall on or within the boundaries of the territory given in dwc:countryCode or its Exclusive Economic Zone?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/50";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/50";
   rdfs:label "VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9>;
   skos:prefLabel "Validation Coordinates dwc:countryCode Consistent for SingleRecord" .
@@ -903,7 +903,7 @@
   dcterms:issued "2024-09-06"^^xsd:date;
   dcterms:bibliographicCitation "WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org/</li> <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org/; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org/ ; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; Natural Earth (2009) Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip; Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse";
   rdfs:comment "Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/51";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/51";
   rdfs:label "VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380>;
   skos:prefLabel "Validation Coordinates Terrestrial Marine for SingleRecord" .
@@ -1021,9 +1021,9 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_COORDINATES_TRANSPOSED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:183e8845-113b-4421-993e-dffa869a3991> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:59a2f383-eb25-4bb2-b0e0-939dbe2c8cea> .
 
-<urn:uuid:183e8845-113b-4421-993e-dffa869a3991> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:59a2f383-eb25-4bb2-b0e0-939dbe2c8cea> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries UNION with Exclusive Economic Zones";
   rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -1074,7 +1074,7 @@
   dcterms:issued "2024-09-06"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents ; Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; ESRI (2020) World Administrative Divisions. https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b; ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames";
   rdfs:comment "Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/56";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/56";
   rdfs:label "VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c>;
   skos:prefLabel "Validation Coordinates dwc:stateProvince Consistent for SingleRecord" .
@@ -1174,7 +1174,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:basisOfRecord?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/58";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/58";
   rdfs:label "VALIDATION_BASISOFRECORD_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536>;
   skos:prefLabel "Validation dwc:basisOfRecord Not Empty for SingleRecord" .
@@ -1210,7 +1210,7 @@
   dcterms:issued "2024-11-10"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/59";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/59";
   rdfs:label "VALIDATION_GEODETICDATUM_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1>;
   skos:prefLabel "Vaildation dwc:geodeticDatum Standard for SingleRecord" .
@@ -1310,7 +1310,7 @@
   dcterms:issued "2024-09-27"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html/li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/62";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/62";
   rdfs:label "VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c>;
   skos:prefLabel "Validation dwc:country dwc:countryCode Consistent for SingleRecord" .
@@ -1383,7 +1383,7 @@
   dcterms:issued "2024-09-16"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/";
   rdfs:comment "Is the value of dwc:eventDate a valid ISO date?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/66";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/66";
   rdfs:label "VALIDATION_EVENTDATE_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803>;
   skos:prefLabel "Validation dwc:eventDate Standard for SingleRecord" .
@@ -1416,7 +1416,7 @@
   dcterms:issued "2024-09-04"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/67";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/67";
   rdfs:label "VALIDATION_EVENT_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f>;
   skos:prefLabel "Validation dwc:Event Consistent for SingleRecord" .
@@ -1495,7 +1495,7 @@
   dcterms:issued "2024-09-16"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/";
   rdfs:comment "Is the value of dwc:dateIdentified a valid ISO date?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/69";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/69";
   rdfs:label "VALIDATION_DATEIDENTIFIED_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8>;
   skos:prefLabel "Validation dwc:dateIdentified Standard for SingleRecord" .
@@ -1526,7 +1526,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/70";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/70";
   rdfs:label "VALIDATION_TAXON_UNAMBIGUOUS";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590>;
   skos:prefLabel "Validation dwc:Taxon Unambiguous for SingleRecord" .
@@ -1758,7 +1758,7 @@
   dcterms:issued "2024-10-14"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/";
   rdfs:comment "Is the value of dwc:dateIdentified within Parameter ranges and either overlap or is later than dwc:eventDate?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/76";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/76";
   rdfs:label "VALIDATION_DATEIDENTIFIED_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e>;
   skos:prefLabel "Validation dwc:dateIdentified In Range for SingleRecord" .
@@ -1799,7 +1799,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/77";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/77";
   rdfs:label "VALIDATION_CLASS_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b>;
   skos:prefLabel "Validation dwc:class Found for SingleRecord" .
@@ -1841,7 +1841,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li>  </ul>";
   rdfs:comment "Is there a value in dwc:geodeticDatum?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/78";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/78";
   rdfs:label "VALIDATION_GEODETICDATUM_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44>;
   skos:prefLabel "Validation dwc:geodeticDatum Not Empty for SingleRecord" .
@@ -1871,7 +1871,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/79";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/79";
   rdfs:label "VALIDATION_DECIMALLATITUDE_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83>;
   skos:prefLabel "Validation dwc:decimalLatitude In Range for SingleRecord" .
@@ -1907,7 +1907,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/81";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/81";
   rdfs:label "VALIDATION_KINGDOM_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e>;
   skos:prefLabel "Validation dwc:kingdom Found for SingleRecord" .
@@ -1950,7 +1950,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Is there a value in dwc:scientificName?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/82";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/82";
   rdfs:label "VALIDATION_SCIENTIFICNAME_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595>;
   skos:prefLabel "Validation dwc:scientificName Not Empty for SingleRecord" .
@@ -1982,7 +1982,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/83";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/83";
   rdfs:label "VALIDATION_ORDER_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3>;
   skos:prefLabel "Validation dwc:order Found for SingleRecord" .
@@ -2025,7 +2025,7 @@
   dcterms:issued "2024-10-14"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is the value of dwc:year within the Parameter range?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/84";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/84";
   rdfs:label "VALIDATION_YEAR_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8>;
   skos:prefLabel "Validation dwc:year In Range for SingleRecord" .
@@ -2102,7 +2102,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul>";
   rdfs:comment "Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/87";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/87";
   rdfs:label "VALIDATION_COORDINATES_NOTZERO";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871>;
   skos:prefLabel "Validation Coordinates Not Zero for SingleRecord" .
@@ -2136,7 +2136,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/88";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/88";
   rdfs:label "VALIDATION_EVENTTEMPORAL_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f>;
   skos:prefLabel "Validation dwc:Event Temporal Not Empty for SingleRecord" .
@@ -2174,7 +2174,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/";
   rdfs:comment "Does the value in dc:type occur as a value in the DCMI type vocabulary?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/91";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/91";
   rdfs:label "VALIDATION_DCTYPE_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5>;
   skos:prefLabel "Validation dc:type Standard for SingleRecord" .
@@ -2282,7 +2282,7 @@
   dcterms:issued "2024-09-06"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in dwc:decimalLongitude?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/96";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/96";
   rdfs:label "VALIDATION_DECIMALLONGITUDE_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a>;
   skos:prefLabel "Validation dwc:decimalLongitude Not Empty for SingleRecord" .
@@ -2312,7 +2312,7 @@
   dcterms:issued "2024-11-10"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list";
   rdfs:comment "Is there a value in dwc:countryCode?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/98";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/98";
   rdfs:label "VALIDATION_COUNTRYCODE_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4>;
   skos:prefLabel "Validation dwc:countryCode Not Empty for SingleRecord" .
@@ -2343,7 +2343,7 @@
   dcterms:issued "2024-09-06"^^xsd:date;
   dcterms:bibliographicCitation "Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/; Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/";
   rdfs:comment "Is there a value in dcterms:license?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/99";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/99";
   rdfs:label "VALIDATION_LICENSE_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849>;
   skos:prefLabel "Validation dcterms:license Not Empty for SingleRecord" .
@@ -2373,7 +2373,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/101";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/101";
   rdfs:label "VALIDATION_POLYNOMIAL_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b>;
   skos:prefLabel "Validation Polynomial Consistent for SingleRecord" .
@@ -2457,7 +2457,7 @@
   dcterms:issued "2024-09-06"^^xsd:date;
   dcterms:bibliographicCitation "Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/";
   rdfs:comment "Is there a value in dc:type?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/103";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/103";
   rdfs:label "VALIDATION_DCTYPE_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169>;
   skos:prefLabel "Validation dc:type Not Empty for SingleRecord" .
@@ -2488,7 +2488,7 @@
   dcterms:issued "2024-10-14"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/104";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/104";
   rdfs:label "VALIDATION_BASISOFRECORD_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8>;
   skos:prefLabel "Validation dwc:basisOfRecord Standard for SingleRecord" .
@@ -2525,7 +2525,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in any of the terms needed to determine that the taxon exists?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/105";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/105";
   rdfs:label "VALIDATION_TAXON_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75>;
   skos:prefLabel "Validation dwc:Taxon Not Empty for SingleRecord" .
@@ -2567,7 +2567,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020). Extreme points on Earth (https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)";
   rdfs:comment "Is the value of dwc:minimumDepthInMeters within the Parameter range?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/107";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/107";
   rdfs:label "VALIDATION_MINDEPTH_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92>;
   skos:prefLabel "Validation dwc:minimumDepthInMeters In Range for SingleRecord" .
@@ -2611,7 +2611,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/108";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/108";
   rdfs:label "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396>;
   skos:prefLabel "Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters for SingleRecord" .
@@ -2642,7 +2642,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020) Great-circle distance. https://en.wikipedia.org/wiki/Great-circle_distance</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/109";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/109";
   rdfs:label "VALIDATION_COORDINATEUNCERTAINTY_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57>;
   skos:prefLabel "Validation dwc:coordinateUncertaintyInMeters In Range for SingleRecord" .
@@ -2678,7 +2678,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li> <li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica </li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:maximumElevationInMeters of a single record within a valid range?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/112";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/112";
   rdfs:label "VALIDATION_MAXELEVATION_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7>;
   skos:prefLabel "Validation dwc:maximumElevationInMeters In Range for SingleRecord" .
@@ -2757,7 +2757,7 @@
   dcterms:issued "2024-10-14"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/116";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/116";
   rdfs:label "VALIDATION_OCCURRENCESTATUS_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47>;
   skos:prefLabel "Validation dwc:occurrenceStatus Standard for SingleRecord" .
@@ -2795,7 +2795,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:occurrenceStatus?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/117";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/117";
   rdfs:label "VALIDATION_OCCURRENCESTATUS_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf>;
   skos:prefLabel "Validation dwc:occurrenceStatus Not Empty for SingleRecord" .
@@ -2826,7 +2826,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in dwc:decimalLatitude?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/119";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/119";
   rdfs:label "VALIDATION_DECIMALLATITUDE_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275>;
   skos:prefLabel "Validation dwc:decimalLatitude Not Empty for SingleRecord" .
@@ -2857,7 +2857,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Is there a value in dwc:scientificNameID?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/120";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/120";
   rdfs:label "VALIDATION_SCIENTIFICNAMEID_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa>;
   skos:prefLabel "Validation dwc:scientificNameID Not Empty for SingleRecord" .
@@ -2889,7 +2889,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/122";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/122";
   rdfs:label "VALIDATION_GENUS_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec>;
   skos:prefLabel "Validation dwc:genus Found for SingleRecord" .
@@ -2932,7 +2932,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
   rdfs:comment "Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/123";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/123";
   rdfs:label "VALIDATION_CLASSIFICATION_CONSISTENT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f>;
   skos:prefLabel "Validation Classification Consistent for SingleRecord" .
@@ -2976,7 +2976,7 @@
   dcterms:issued "2024-09-16"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601; Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/";
   rdfs:comment "Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive or 29, 30 or 31 given the relative month and year?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/125";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/125";
   rdfs:label "VALIDATION_DAY_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e>;
   skos:prefLabel "Validation dwc:day In Range for SingleRecord" .
@@ -3013,7 +3013,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/126";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/126";
   rdfs:label "VALIDATION_MONTH_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc>;
   skos:prefLabel "Validation dwc:month Standard for SingleRecord" .
@@ -3121,7 +3121,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/130";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/130";
   rdfs:label "VALIDATION_STARTDAYOFYEAR_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46>;
   skos:prefLabel "Validation dwc:startDayOfYear In Range for SingleRecord" .
@@ -3159,7 +3159,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/131";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/131";
   rdfs:label "VALIDATION_ENDDAYOFYEAR_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8>;
   skos:prefLabel "Validation dwc:endDayOfYear In Range for SingleRecord" .
@@ -3270,7 +3270,7 @@
   dcterms:issued "2024-09-25"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "The number of distinct VALIDATION tests that have a Response.status=\"EXTERNAL_PREREQUISITES_NOT_MET\" or \"INTERNAL_PREREQUISITES_NOT_MET\" for a given record.";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/134";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/134";
   rdfs:label "MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d>;
   skos:prefLabel "Measure Validation Tests Prerequisites Not Met for SingleRecord" .
@@ -3299,7 +3299,7 @@
   dcterms:issued "2024-09-25"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Measures the number of distinct VALIDATION tests that have a Response.status=\"COMPLIANT\" for a given record.";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/135";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/135";
   rdfs:label "MEASURE_VALIDATIONTESTS_COMPLIANT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73>;
   skos:prefLabel "Measure Validation Tests Compliant for SingleRecord" .
@@ -3328,7 +3328,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/; Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601";
   rdfs:comment "What is the duration of dwc:eventDate in seconds?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/140";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/140";
   rdfs:label "MEASURE_EVENTDATE_DURATIONINSECONDS";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53>;
   skos:prefLabel "Measure dwc:eventDate Duration In Seconds for SingleRecord" .
@@ -3363,7 +3363,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is the value of dwc:day an integer between 1 and 31 inclusive?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/147";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/147";
   rdfs:label "VALIDATION_DAY_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498>;
   skos:prefLabel "Validation dwc:day Standard for SingleRecord" .
@@ -3396,7 +3396,7 @@
   dcterms:issued "2024-09-07"^^xsd:date;
   dcterms:bibliographicCitation "GBIF (2015) Taxonomic Rank GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/rank.xml";
   rdfs:comment "Is there a value in dwc:taxonRank?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/161";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/161";
   rdfs:label "VALIDATION_TAXONRANK_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890>;
   skos:prefLabel "Validation dwc:taxonRank Not Empty for SingleRecord" .
@@ -3432,7 +3432,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts";
   rdfs:comment "Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/162";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/162";
   rdfs:label "VALIDATION_TAXONRANK_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e>;
   skos:prefLabel "Validation dwc:taxonRank Standard for SingleRecord" .
@@ -3508,7 +3508,7 @@
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:maximumDepthInMeters within the Parameter range?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/187";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/187";
   rdfs:label "VALIDATION_MAXDEPTH_INRANGE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939>;
   skos:prefLabel "Validation dwc:maximumDepthInMeters In Range for SingleRecord" .
@@ -3550,7 +3550,7 @@
   dcterms:issued "2024-09-25"^^xsd:date;
   dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2";
   rdfs:comment "Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/199";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/199";
   rdfs:label "VALIDATION_STATEPROVINCE_FOUND";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a>;
   skos:prefLabel "Validation dwc:stateProvince Found for SingleRecord" .
@@ -3592,7 +3592,7 @@
   dcterms:issued "2024-09-18"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li> <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2";
   rdfs:comment "Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/201";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/201";
   rdfs:label "VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11>;
   skos:prefLabel "Validation dwc:country dwc:stateProvince Unambiguous for SingleRecord" .
@@ -3635,7 +3635,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei; Wikipedia (2024) LSID (Life Science Identifier). https://en.wikipedia.org/wiki/LSID; Wikipedia (2024) Uniform Resource Name (URN). https://en.wikipedia.org/wiki/Uniform_Resource_Name</ul>";
   rdfs:comment "Does the value of dwc:scientificNameID contain a complete identifier?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/212";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/212";
   rdfs:label "VALIDATION_SCIENTIFICNAMEID_COMPLETE";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8>;
   skos:prefLabel "Validation dwc:scientificNameID Complete for SingleRecord" .
@@ -3670,7 +3670,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:kingdom?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/216";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/216";
   rdfs:label "VALIDATION_KINGDOM_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098>;
   skos:prefLabel "Validation dwc:kingdom Not Empty for SingleRecord" .
@@ -3702,7 +3702,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:scientificNameAuthorship?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/244";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/244";
   rdfs:label "VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc>;
   skos:prefLabel "Validation dwc:scientificNameAuthorship Not Empty for SingleRecord" .
@@ -3739,7 +3739,7 @@
   dcterms:issued "2024-11-08"^^xsd:date;
   dcterms:bibliographicCitation "";
   rdfs:comment "Is there a value in dwc:namePublishedInYear?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/259";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/259";
   rdfs:label "VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70>;
   skos:prefLabel "Validation dwc:namePublishedInYear Not Empty for SingleRecord" .
@@ -3776,7 +3776,7 @@
   dcterms:issued "2024-09-07"^^xsd:date;
   dcterms:bibliographicCitation "Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084";
   rdfs:comment "Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/268";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/268";
   rdfs:label "VALIDATION_ESTABLISHMENTMEANS_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f>;
   skos:prefLabel "Validation dwc:establishmentMeans Standard for SingleRecord" .
@@ -3850,7 +3850,7 @@
   dcterms:issued "2024-09-07"^^xsd:date;
   dcterms:bibliographicCitation "Darwin Core Maintenance Group (2021) Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://dwc.tdwg.org/dwc/doc/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084";
   rdfs:comment "Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/275";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/275";
   rdfs:label "VALIDATION_DEGREEOFESTABLISHMENT_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a>;
   skos:prefLabel "Validation dwc:degreeofEstablishment Standard for SingleRecord" .
@@ -3929,7 +3929,7 @@
   dcterms:issued "2024-09-07"^^xsd:date;
   dcterms:bibliographicCitation "Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084 h.ttps://doi.org/10.3897/biss.3.38084";
   rdfs:comment "Does the value of dwc:pathway occur in the bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/277";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/277";
   rdfs:label "VALIDATION_PATHWAY_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93>;
   skos:prefLabel "Validation dwc:pathway Standard for SingleRecord" .
@@ -4008,7 +4008,7 @@
   dcterms:issued "2024-09-07"^^xsd:date;
   dcterms:bibliographicCitation "<ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml";
   rdfs:comment "Does the value of dwc:sex occur in bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/283";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/283";
   rdfs:label "VALIDATION_SEX_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404>;
   skos:prefLabel "Validation dwc:sex Standard for SingleRecord" .
@@ -4087,7 +4087,7 @@
   dcterms:issued "2024-11-11"^^xsd:date;
   dcterms:bibliographicCitation "<ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul>";
   rdfs:comment "Does the value of dwc:typeStatus occur in bdq:sourceAuthority?";
-  skos:historyNote "https://api.github.com/repos/tdwg/bdq/issues/285";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/285";
   rdfs:label "VALIDATION_TYPESTATUS_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048>;
   skos:prefLabel "Validation dwc:typeStatus Standard for SingleRecord" .
@@ -4112,9 +4112,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_TYPESTATUS_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:507b6c27-93ad-4745-9fb5-6a00edf8532f> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:f2df4b1a-44ad-4e26-8d89-6dd8b5a8d68d> .
 
-<urn:uuid:507b6c27-93ad-4745-9fb5-6a00edf8532f> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:f2df4b1a-44ad-4e26-8d89-6dd8b5a8d68d> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TypeStatus Vocabulary";
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -4149,9 +4149,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:028927b1-1629-4416-a771-c68ffe6a29d3> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:33761f05-f28e-4e1b-b799-0a45dffd9bd1> .
 
-<urn:uuid:028927b1-1629-4416-a771-c68ffe6a29d3> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:33761f05-f28e-4e1b-b799-0a45dffd9bd1> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TypeStatus Vocabulary";
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .

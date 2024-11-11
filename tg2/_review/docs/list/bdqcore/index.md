@@ -184,7 +184,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Specification label (rdfs:label) | non-normative | A human-readable name for the subject. In present context: The label for the instance of the Specification for this Test. |  |
 | Type (rdf:type) | normative | The subject is an instance of a class. In present context: The type of the Test, one of the subtypes of DataQualityNeed. | Amendment |
 | Use Cases (bdqffdq:hasUseCase) | non-normative | Relates a Policy to a UseCase. In present context: One or more Use Cases where this Test would apply. | bdq:Spatial-Temporal_Patterns, bdq:Record-Management |
-| Developed As Github Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the Test. | [https://api.github.com/repos/tdwg/bdq/issues/ 32](https://api.github.com/repos/tdwg/bdq/issues/32) |
+| Developed As Github Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 32](https://github.com/tdwg/bdq/issues/32) |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 
 
@@ -478,7 +478,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/32</td>
+			<td>https://github.com/tdwg/bdq/issues/32</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -593,7 +593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/54</td>
+			<td>https://github.com/tdwg/bdq/issues/54</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -724,7 +724,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/41</td>
+			<td>https://github.com/tdwg/bdq/issues/41</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -839,7 +839,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/133</td>
+			<td>https://github.com/tdwg/bdq/issues/133</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -962,7 +962,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/63</td>
+			<td>https://github.com/tdwg/bdq/issues/63</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1081,7 +1081,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/73</td>
+			<td>https://github.com/tdwg/bdq/issues/73</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1208,7 +1208,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/48</td>
+			<td>https://github.com/tdwg/bdq/issues/48</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1319,7 +1319,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/26</td>
+			<td>https://github.com/tdwg/bdq/issues/26</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1438,7 +1438,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/127</td>
+			<td>https://github.com/tdwg/bdq/issues/127</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1553,7 +1553,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/276</td>
+			<td>https://github.com/tdwg/bdq/issues/276</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1676,7 +1676,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/269</td>
+			<td>https://github.com/tdwg/bdq/issues/269</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1795,7 +1795,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/52</td>
+			<td>https://github.com/tdwg/bdq/issues/52</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -1918,7 +1918,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/86</td>
+			<td>https://github.com/tdwg/bdq/issues/86</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2041,7 +2041,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/93</td>
+			<td>https://github.com/tdwg/bdq/issues/93</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2164,7 +2164,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/132</td>
+			<td>https://github.com/tdwg/bdq/issues/132</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2287,7 +2287,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/61</td>
+			<td>https://github.com/tdwg/bdq/issues/61</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2406,7 +2406,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/102</td>
+			<td>https://github.com/tdwg/bdq/issues/102</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2533,7 +2533,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/60</td>
+			<td>https://github.com/tdwg/bdq/issues/60</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2648,7 +2648,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/55</td>
+			<td>https://github.com/tdwg/bdq/issues/55</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2759,7 +2759,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/68</td>
+			<td>https://github.com/tdwg/bdq/issues/68</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2870,7 +2870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/128</td>
+			<td>https://github.com/tdwg/bdq/issues/128</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -2985,7 +2985,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/75</td>
+			<td>https://github.com/tdwg/bdq/issues/75</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3104,7 +3104,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/115</td>
+			<td>https://github.com/tdwg/bdq/issues/115</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3223,7 +3223,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/278</td>
+			<td>https://github.com/tdwg/bdq/issues/278</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3346,7 +3346,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/71</td>
+			<td>https://github.com/tdwg/bdq/issues/71</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3481,7 +3481,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/57</td>
+			<td>https://github.com/tdwg/bdq/issues/57</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3616,7 +3616,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/284</td>
+			<td>https://github.com/tdwg/bdq/issues/284</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3739,7 +3739,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/163</td>
+			<td>https://github.com/tdwg/bdq/issues/163</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3870,7 +3870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/286</td>
+			<td>https://github.com/tdwg/bdq/issues/286</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -3989,7 +3989,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/29</td>
+			<td>https://github.com/tdwg/bdq/issues/29</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4100,7 +4100,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/287</td>
+			<td>https://github.com/tdwg/bdq/issues/287</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4227,7 +4227,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/72</td>
+			<td>https://github.com/tdwg/bdq/issues/72</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4338,7 +4338,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/94</td>
+			<td>https://github.com/tdwg/bdq/issues/94</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4441,7 +4441,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/65</td>
+			<td>https://github.com/tdwg/bdq/issues/65</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4532,7 +4532,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/140</td>
+			<td>https://github.com/tdwg/bdq/issues/140</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4639,7 +4639,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/135</td>
+			<td>https://github.com/tdwg/bdq/issues/135</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4734,7 +4734,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/31</td>
+			<td>https://github.com/tdwg/bdq/issues/31</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4829,7 +4829,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/134</td>
+			<td>https://github.com/tdwg/bdq/issues/134</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -4924,7 +4924,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5023,7 +5023,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
+			<td>https://github.com/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5118,7 +5118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
+			<td>https://github.com/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5221,7 +5221,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
+			<td>https://github.com/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5324,7 +5324,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
+			<td>https://github.com/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5427,7 +5427,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5522,7 +5522,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
+			<td>https://github.com/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5625,7 +5625,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5720,7 +5720,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5819,7 +5819,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -5914,7 +5914,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6017,7 +6017,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6112,7 +6112,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6207,7 +6207,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6310,7 +6310,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6413,7 +6413,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
+			<td>https://github.com/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6508,7 +6508,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
+			<td>https://github.com/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6607,7 +6607,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
+			<td>https://github.com/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6710,7 +6710,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
+			<td>https://github.com/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6813,7 +6813,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
+			<td>https://github.com/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -6908,7 +6908,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7003,7 +7003,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7102,7 +7102,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
+			<td>https://github.com/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7205,7 +7205,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
+			<td>https://github.com/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7300,7 +7300,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
+			<td>https://github.com/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7395,7 +7395,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
+			<td>https://github.com/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7490,7 +7490,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
+			<td>https://github.com/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7585,7 +7585,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
+			<td>https://github.com/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7680,7 +7680,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
+			<td>https://github.com/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7775,7 +7775,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
+			<td>https://github.com/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7870,7 +7870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
+			<td>https://github.com/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -7973,7 +7973,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
+			<td>https://github.com/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8068,7 +8068,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
+			<td>https://github.com/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8171,7 +8171,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8266,7 +8266,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8361,7 +8361,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
+			<td>https://github.com/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8464,7 +8464,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
+			<td>https://github.com/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8559,7 +8559,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
+			<td>https://github.com/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8654,7 +8654,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
+			<td>https://github.com/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8757,7 +8757,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
+			<td>https://github.com/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8860,7 +8860,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
+			<td>https://github.com/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -8955,7 +8955,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
+			<td>https://github.com/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9058,7 +9058,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
+			<td>https://github.com/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9153,7 +9153,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
+			<td>https://github.com/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9256,7 +9256,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
+			<td>https://github.com/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9359,7 +9359,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
+			<td>https://github.com/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9462,7 +9462,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
+			<td>https://github.com/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9565,7 +9565,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
+			<td>https://github.com/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9660,7 +9660,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
+			<td>https://github.com/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9755,7 +9755,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
+			<td>https://github.com/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9850,7 +9850,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
+			<td>https://github.com/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -9945,7 +9945,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
+			<td>https://github.com/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10040,7 +10040,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
+			<td>https://github.com/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10143,7 +10143,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
+			<td>https://github.com/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10246,7 +10246,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
+			<td>https://github.com/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10349,7 +10349,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
+			<td>https://github.com/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10452,7 +10452,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10555,7 +10555,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10650,7 +10650,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
+			<td>https://github.com/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10745,7 +10745,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
+			<td>https://github.com/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10840,7 +10840,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
+			<td>https://github.com/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -10935,7 +10935,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
+			<td>https://github.com/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11038,7 +11038,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
+			<td>https://github.com/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11133,7 +11133,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
+			<td>https://github.com/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11236,7 +11236,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
+			<td>https://github.com/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11331,7 +11331,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
+			<td>https://github.com/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11434,7 +11434,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
+			<td>https://github.com/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11529,7 +11529,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
+			<td>https://github.com/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11632,7 +11632,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
+			<td>https://github.com/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11731,7 +11731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
+			<td>https://github.com/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11834,7 +11834,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
+			<td>https://github.com/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -11929,7 +11929,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12024,7 +12024,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12123,7 +12123,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
+			<td>https://github.com/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12218,7 +12218,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
+			<td>https://github.com/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12321,7 +12321,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
+			<td>https://github.com/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12424,7 +12424,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
+			<td>https://github.com/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12527,7 +12527,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12622,7 +12622,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
+			<td>https://github.com/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12725,7 +12725,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12820,7 +12820,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -12919,7 +12919,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13014,7 +13014,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13117,7 +13117,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13212,7 +13212,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13307,7 +13307,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13410,7 +13410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13513,7 +13513,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
+			<td>https://github.com/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13608,7 +13608,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
+			<td>https://github.com/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13707,7 +13707,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
+			<td>https://github.com/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13810,7 +13810,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
+			<td>https://github.com/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -13913,7 +13913,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
+			<td>https://github.com/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14008,7 +14008,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14103,7 +14103,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14202,7 +14202,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
+			<td>https://github.com/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14305,7 +14305,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
+			<td>https://github.com/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14400,7 +14400,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
+			<td>https://github.com/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14495,7 +14495,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
+			<td>https://github.com/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14590,7 +14590,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
+			<td>https://github.com/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14685,7 +14685,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
+			<td>https://github.com/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14780,7 +14780,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
+			<td>https://github.com/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14875,7 +14875,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
+			<td>https://github.com/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -14970,7 +14970,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
+			<td>https://github.com/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15073,7 +15073,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
+			<td>https://github.com/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15168,7 +15168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
+			<td>https://github.com/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15271,7 +15271,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15366,7 +15366,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15461,7 +15461,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
+			<td>https://github.com/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15564,7 +15564,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
+			<td>https://github.com/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15659,7 +15659,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
+			<td>https://github.com/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15754,7 +15754,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
+			<td>https://github.com/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15857,7 +15857,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
+			<td>https://github.com/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -15960,7 +15960,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
+			<td>https://github.com/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16055,7 +16055,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
+			<td>https://github.com/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16158,7 +16158,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
+			<td>https://github.com/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16253,7 +16253,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
+			<td>https://github.com/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16356,7 +16356,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
+			<td>https://github.com/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16459,7 +16459,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
+			<td>https://github.com/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16562,7 +16562,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
+			<td>https://github.com/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16665,7 +16665,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
+			<td>https://github.com/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16760,7 +16760,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
+			<td>https://github.com/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16855,7 +16855,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
+			<td>https://github.com/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -16950,7 +16950,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
+			<td>https://github.com/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17045,7 +17045,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
+			<td>https://github.com/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17140,7 +17140,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
+			<td>https://github.com/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17243,7 +17243,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
+			<td>https://github.com/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17346,7 +17346,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
+			<td>https://github.com/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17449,7 +17449,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
+			<td>https://github.com/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17552,7 +17552,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17655,7 +17655,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17750,7 +17750,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
+			<td>https://github.com/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17845,7 +17845,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
+			<td>https://github.com/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -17940,7 +17940,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
+			<td>https://github.com/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18035,7 +18035,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
+			<td>https://github.com/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18138,7 +18138,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
+			<td>https://github.com/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18233,7 +18233,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
+			<td>https://github.com/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18336,7 +18336,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
+			<td>https://github.com/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18431,7 +18431,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
+			<td>https://github.com/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18534,7 +18534,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
+			<td>https://github.com/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18629,7 +18629,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
+			<td>https://github.com/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18732,7 +18732,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
+			<td>https://github.com/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18831,7 +18831,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
+			<td>https://github.com/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -18934,7 +18934,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
+			<td>https://github.com/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19029,7 +19029,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19124,7 +19124,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19239,7 +19239,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/24</td>
+			<td>https://github.com/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19346,7 +19346,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/123</td>
+			<td>https://github.com/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19477,7 +19477,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/50</td>
+			<td>https://github.com/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19608,7 +19608,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/56</td>
+			<td>https://github.com/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19731,7 +19731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/87</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19842,7 +19842,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/51</td>
+			<td>https://github.com/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -19969,7 +19969,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20076,7 +20076,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/91</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20199,7 +20199,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/99</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20306,7 +20306,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/38</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20429,7 +20429,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/40</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20540,7 +20540,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/58</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20643,7 +20643,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/104</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20762,7 +20762,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/77</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -20889,7 +20889,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/109</td>
+			<td>https://github.com/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21000,7 +21000,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/62</td>
+			<td>https://github.com/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21115,7 +21115,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/201</td>
+			<td>https://github.com/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21246,7 +21246,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/21</td>
+			<td>https://github.com/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21369,7 +21369,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/42</td>
+			<td>https://github.com/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21488,7 +21488,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/98</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21603,7 +21603,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/20</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21718,7 +21718,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/76</td>
+			<td>https://github.com/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21853,7 +21853,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/69</td>
+			<td>https://github.com/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -21964,7 +21964,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/125</td>
+			<td>https://github.com/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22083,7 +22083,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/147</td>
+			<td>https://github.com/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22198,7 +22198,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/79</td>
+			<td>https://github.com/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22305,7 +22305,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/119</td>
+			<td>https://github.com/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22412,7 +22412,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/30</td>
+			<td>https://github.com/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22519,7 +22519,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/96</td>
+			<td>https://github.com/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22622,7 +22622,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/275</td>
+			<td>https://github.com/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22745,7 +22745,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/131</td>
+			<td>https://github.com/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22864,7 +22864,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/268</td>
+			<td>https://github.com/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -22987,7 +22987,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/67</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23102,7 +23102,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/88</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23217,7 +23217,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/36</td>
+			<td>https://github.com/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23348,7 +23348,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/33</td>
+			<td>https://github.com/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23459,7 +23459,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/66</td>
+			<td>https://github.com/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23578,7 +23578,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/28</td>
+			<td>https://github.com/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23709,7 +23709,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/122</td>
+			<td>https://github.com/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23840,7 +23840,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/78</td>
+			<td>https://github.com/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -23943,7 +23943,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/81</td>
+			<td>https://github.com/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24074,7 +24074,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/216</td>
+			<td>https://github.com/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24185,7 +24185,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/187</td>
+			<td>https://github.com/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24308,7 +24308,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/112</td>
+			<td>https://github.com/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24431,7 +24431,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/107</td>
+			<td>https://github.com/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24554,7 +24554,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/39</td>
+			<td>https://github.com/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24677,7 +24677,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/108</td>
+			<td>https://github.com/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24784,7 +24784,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/126</td>
+			<td>https://github.com/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -24895,7 +24895,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/259</td>
+			<td>https://github.com/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25006,7 +25006,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/47</td>
+			<td>https://github.com/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25109,7 +25109,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/117</td>
+			<td>https://github.com/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25212,7 +25212,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/116</td>
+			<td>https://github.com/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25339,7 +25339,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/83</td>
+			<td>https://github.com/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25470,7 +25470,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/277</td>
+			<td>https://github.com/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25593,7 +25593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/22</td>
+			<td>https://github.com/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25724,7 +25724,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25855,7 +25855,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/82</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -25970,7 +25970,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/244</td>
+			<td>https://github.com/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26081,7 +26081,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/212</td>
+			<td>https://github.com/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26200,7 +26200,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/120</td>
+			<td>https://github.com/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26315,7 +26315,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/283</td>
+			<td>https://github.com/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26438,7 +26438,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/130</td>
+			<td>https://github.com/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26557,7 +26557,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/199</td>
+			<td>https://github.com/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26680,7 +26680,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/105</td>
+			<td>https://github.com/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26795,7 +26795,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/70</td>
+			<td>https://github.com/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -26926,7 +26926,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/161</td>
+			<td>https://github.com/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -27033,7 +27033,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/162</td>
+			<td>https://github.com/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -27164,7 +27164,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/285</td>
+			<td>https://github.com/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -27283,7 +27283,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/84</td>
+			<td>https://github.com/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -27410,7 +27410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/49</td>
+			<td>https://github.com/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
@@ -27521,7 +27521,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://api.github.com/repos/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
