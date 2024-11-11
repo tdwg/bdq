@@ -115,6 +115,7 @@ The following references have been extracted from the "References" descriptor on
 <li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Version 1.0.0 release of bdq_issue_to_csv utility for creating bdqcore: term-version file. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14057551</li>
 <li>Morris PJ, Dou L (2024) FilteredPush/sci_name_qc: Release vesion 1.1.2 of the sci_name_qc library implementing BDQ Core NAME tests. (v1.1.2). Zenodo. https://doi.org/10.5281/zenodo.14052951</li>
 <li>Morris PJ, Lowery D (2024) FilteredPush/event_date_qc: Release version 3.0.5 of the event_date_qc library, compliant implementation of all the BDQ Core Time Tests. Zenodo. https://doi.org/10.5281/zenodo.14056663</li>
+<li>Morris PJ, Lowery D, Wieczorek J (2024) FilteredPush/geo_ref_qc: Release version 2.0.0 of the geo_ref_qc library, compliant implementation of all the BDQ Core Space Tests (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.14064325</li>
 <li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
 <li>Natural Earth (2009)  Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
