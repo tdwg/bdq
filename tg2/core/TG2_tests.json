@@ -2087,7 +2087,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-10-14",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-11",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2118,7 +2118,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-10-14",
+                "@value": "2024-11-11",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2206,7 +2206,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-11"
             }
         ]
     },
@@ -2225,12 +2225,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\\"
+                "@value": "bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\\"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -4273,7 +4273,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-09-04",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4309,7 +4309,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-04",
+                "@value": "2024-11-10",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -4373,7 +4373,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -4412,22 +4412,48 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
+                "@value": "bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED bdq:sourceAuthority default = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}"
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED"
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "Specification for: AMENDMENT_COORDINATES_TRANSPOSED"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
+            {
+                "@id": "urn:uuid:7d2a151e-ece9-4720-a386-7f9826b7601e"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:7d2a151e-ece9-4720-a386-7f9826b7601e",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "10m-admin-1 boundaries UNION with Exclusive Economic Zones"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "bdq:sourceAuthority"
             }
         ]
     },
@@ -5223,7 +5249,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-09-18",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-10",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5254,7 +5280,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-18",
+                "@value": "2024-11-10",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5317,7 +5343,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance CORE"
+                "@value": "TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5342,7 +5368,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-10"
             }
         ]
     },
@@ -5381,7 +5407,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5412,7 +5438,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-06",
+                "@value": "2024-11-10",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5454,12 +5480,12 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment SPACE Test VOCABULARY Conformance CORE"
+                "@value": "TG2 Amendment SPACE Test VOCABULARY NEEDS WORK Conformance CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7475,7 +7501,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-11",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7511,7 +7537,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2024-11-11",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7609,12 +7635,12 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE"
+                "@value": "TG2 Amendment OTHER Test VOCABULARY NEEDS WORK Completeness Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-11"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -10153,7 +10179,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-09-27",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-10",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10184,7 +10210,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-27",
+                "@value": "2024-11-10",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10252,7 +10278,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-09-27"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-10"
             }
         ]
     },
@@ -10276,12 +10302,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value \"XZ\"; otherwise NOT_COMPLIANT"
+                "@value": "COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value \"XZ\"; otherwise NOT_COMPLIANT"
+                "@value": "COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -10596,7 +10622,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-11",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -10632,7 +10658,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-06",
+                "@value": "2024-11-11",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10698,12 +10724,12 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment SPACE Test Completeness Parameterized CORE"
+                "@value": "TG2 Amendment SPACE Test NEEDS WORK Completeness Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-11"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -10737,7 +10763,7 @@
                 "@value": "dwc:geodeticDatum=\"[null]\", dwc:decimalLatitude=\"-30.00\", dwc:decimalLongitude=\"130.00\", dwc:coordinateUncertaintyInMeters=\"50\": Response.status=AMENDED, Response.result=dwc:geodeticDatum=\"EPSG:4326\", dwc:coordinateUncertaintyInMeters=\"2836\", Response.comment=\"dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value\""
             },
             {
-                "@value": "dwc:geodeticDatum=\"WGS84\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:geodeticDatum contains an interpretable value\""
+                "@value": "dwc:geodeticDatum=\"WGS84\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:geodeticDatum contains a value\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
@@ -18060,7 +18086,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -18091,7 +18117,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2024-11-11",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18179,7 +18205,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
             }
         ]
     },
@@ -18203,12 +18229,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \\ bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \\"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT."
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -18244,7 +18270,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18275,7 +18301,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2024-11-11",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18322,7 +18348,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18366,12 +18392,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \\ bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"Darwin Core typeStatus\" {[https://dwc.tdwg.org/list/#dwc_typeStatus]} {dwc:typeStatus vocabulary API [https://gbif.github.io/parsers/apidocs/org/gbif/api/vocabulary/TypeStatus.html]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \\"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED."
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -18752,7 +18778,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18834,7 +18860,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-10"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27"
@@ -18876,7 +18902,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-09-27"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-10"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
@@ -19049,7 +19075,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19095,7 +19121,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-11"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"
@@ -19113,7 +19139,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
             }
         ]
     },
@@ -19149,13 +19175,13 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16"
@@ -19173,10 +19199,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-11"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-11"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05"

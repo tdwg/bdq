@@ -362,7 +362,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\
+bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }
 
 #### Examples
 
@@ -599,7 +599,7 @@ The upper limit is one half the equatorial circumference of the earth.
 ###  VALIDATION_COUNTRYCODE_NOTEMPTY
 
 ####  Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4/2024-09-27
+https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4/2024-11-10
 Acts upon  SingleRecord
 
 #### Description
@@ -608,7 +608,7 @@ Is there a value in dwc:countryCode?
 
 #### Specification
 
-COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2217,7 +2217,7 @@ Does the value of dwc:typeStatus occur in bdq:sourceAuthority?
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -3514,7 +3514,7 @@ Transformations between coordinate reference systems should not be made as a par
 ###  AMENDMENT_COORDINATES_TRANSPOSED
 
 ####  Amendment Coordinates Transposed
-https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082/2023-09-17
+https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082/2024-11-11
 Acts upon  SingleRecord
 
 #### Description
@@ -3523,7 +3523,7 @@ Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLong
 
 #### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3533,9 +3533,13 @@ dwc:decimalLatitude,dwc:decimalLongitude
 Consulted: 
 dwc:countryCode
 
+#### Parameters
+
+bdq:sourceAuthority
+
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
 
 #### Examples
 
@@ -3678,7 +3682,7 @@ bdq:defaultGeodeticDatum default = "EPSG:4326"
 
 dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
 
-dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an interpretable value"
+dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains a value"
 
 
 #### Use Cases
@@ -4398,7 +4402,7 @@ Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthori
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -5088,7 +5092,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-09-27
+https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651/2024-11-10
 Acts upon  MultiRecord
 
 #### Description
@@ -5097,7 +5101,7 @@ Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COM
 
 #### Specification
 
-COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -5838,7 +5842,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty
-https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-09-27
+https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909/2024-11-10
 Acts upon  MultiRecord
 
 #### Description
@@ -5847,7 +5851,7 @@ Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT
 
 #### Specification
 
-COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -7497,7 +7501,7 @@ Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMP
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -7737,7 +7741,7 @@ Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 

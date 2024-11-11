@@ -161,7 +161,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Guids for Arguments (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 7ecc692d-e65f-4ea5-9d54-04421ec96ab4 |
 | Guid for Specification (bdqffdq:Specification) | normative | A specific statement about how to evaluate a data quality need. | urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04 |
 | Guid for DataQualityMethod (bdqffdq:DataQualityMethod) | normative | A solutions concept that relates a data quality need to a Specification. | urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957 |
-| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]} |
+| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]} |
 | Criterion (bdqffdq:Criterion) | normative | Rule against which data are evaluated for conformance to quality criteria. | NotEmpty |
 | Description (rdfs:comment) | non-normative | A description of the subject resource. In present context: A brief description of what the Test does. | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. |
 | DataQualityDimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Completeness |
@@ -597,7 +597,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -605,11 +605,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -624,8 +624,12 @@ Including MultiRecord Measures
 			<td>dwc:countryCode</td>
 		</tr>
 		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
 			<td>ExpectedResponse</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -637,7 +641,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -694,14 +698,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2414,7 +2410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-06</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2474,7 +2470,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"],[dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an interpretable value"]</td>
+			<td>[dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"],[dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains a value"]</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -2490,7 +2486,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test Completeness Parameterized CORE</td>
+			<td>TG2 Amendment SPACE Test NEEDS WORK Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2503,14 +2499,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -2533,7 +2521,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-09-06</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -2541,7 +2529,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2609,7 +2597,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Amendment SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2618,14 +2606,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2993,7 +2973,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3061,7 +3041,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE</td>
+			<td>TG2 Amendment OTHER Test VOCABULARY NEEDS WORK Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3074,14 +3054,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -3878,7 +3850,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3898,7 +3870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each \</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -3963,14 +3935,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -4936,7 +4900,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4996,7 +4960,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5926,7 +5890,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5954,7 +5918,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -6912,7 +6876,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-09-27</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -6920,11 +6884,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -6936,7 +6900,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -11644,7 +11608,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11660,7 +11624,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -12040,7 +12004,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12100,7 +12064,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13030,7 +12994,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13058,7 +13022,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -14016,7 +13980,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-09-27</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -14024,11 +13988,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -14040,7 +14004,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -18748,7 +18712,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18764,7 +18728,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -19144,7 +19108,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19212,7 +19176,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19221,14 +19185,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20326,7 +20282,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20358,7 +20314,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by\</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -20411,14 +20367,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -21500,7 +21448,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-09-27</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -21508,11 +21456,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-09-27</td>
+			<td>2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -21524,7 +21472,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty or has a value "XZ"; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -21585,14 +21533,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27184,7 +27124,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27204,7 +27144,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each \</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -27269,14 +27209,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
