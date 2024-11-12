@@ -158,7 +158,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_COORDINATES_FROM_VERBATIM |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment Coordinates From Verbatim |
 | DateLastUpdated (bdqffdq:hasDateLastUpdated) |  | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |
-| Guids for Arguments (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 7ecc692d-e65f-4ea5-9d54-04421ec96ab4 |
+| Guids for Arguments (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 95e1332e-eeca-4b41-8698-88ffc33cef3f |
 | Guid for Specification (bdqffdq:Specification) | normative | A specific statement about how to evaluate a data quality need. | urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04 |
 | Guid for DataQualityMethod (bdqffdq:DataQualityMethod) | normative | A solutions concept that relates a data quality need to a Specification. | urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957 |
 | SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]} |
@@ -694,6 +694,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Spatial-Temporal_Patterns, bdq:Record-Management</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>95e1332e-eeca-4b41-8698-88ffc33cef3f</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -11711,6 +11715,10 @@ Including MultiRecord Measures
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
+			<td>Guids for Arguments</td>
+			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
+		</tr>
+		<tr>
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
@@ -18809,6 +18817,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -27253,6 +27265,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
 			<td>Status</td>

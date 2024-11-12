@@ -1530,7 +1530,7 @@
 	<rdfs:label>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ee6791ac-ad54-4fdc-85e4-ca7bad859ffa">
+<rdf:Description rdf:about="urn:uuid:95e1332e-eeca-4b41-8698-88ffc33cef3f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">10m-admin-1 boundaries UNION with Exclusive Economic Zones</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"10m-admin-1 boundaries UNION with Exclusive Economic Zones"</rdfs:label>
@@ -1538,7 +1538,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ee6791ac-ad54-4fdc-85e4-ca7bad859ffa"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:95e1332e-eeca-4b41-8698-88ffc33cef3f"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef">
@@ -2583,14 +2583,14 @@
 	<rdfs:label>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:f1455cf4-aa13-4c0c-94fb-524ba1538b38">
+<rdf:Description rdf:about="urn:uuid:430adbb3-d6d5-4664-94f7-976cf62de3c2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Present</hasArgumentValue>
 	<rdfs:label>Default value for dwc:defaultOccurrenceStatus</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f1455cf4-aa13-4c0c-94fb-524ba1538b38"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:430adbb3-d6d5-4664-94f7-976cf62de3c2"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd">
@@ -5856,7 +5856,7 @@
 	<rdfs:label>Specification for: VALIDATION_TYPESTATUS_STANDARD</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:2ad986ca-c152-4efc-89cd-be46c4fbc784">
+<rdf:Description rdf:about="urn:uuid:63b0193f-a8df-4345-8d60-caf667cd62b0">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF TypeStatus Vocabulary</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF TypeStatus Vocabulary"</rdfs:label>
@@ -5864,7 +5864,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2ad986ca-c152-4efc-89cd-be46c4fbc784"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:63b0193f-a8df-4345-8d60-caf667cd62b0"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f84d0f30-9c93-43a4-8f75-8c853fc18fb5">
@@ -5907,7 +5907,7 @@
 	<rdfs:label>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:7befb490-c0f1-4d55-bc15-acda03936f9d">
+<rdf:Description rdf:about="urn:uuid:c14220b1-b46e-4b8f-9fad-34cc7a3ecdb8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF TypeStatus Vocabulary</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF TypeStatus Vocabulary"</rdfs:label>
@@ -5915,7 +5915,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7befb490-c0f1-4d55-bc15-acda03936f9d"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c14220b1-b46e-4b8f-9fad-34cc7a3ecdb8"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:05104b96-267c-432a-9f30-88552404763e">
