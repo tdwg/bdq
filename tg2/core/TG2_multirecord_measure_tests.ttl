@@ -537,13 +537,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-11-11>
+<https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225>;
-  dcterms:issued "2024-11-11"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/38";
@@ -561,7 +561,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5f5af361-e5fe-44de-9be4-5b02795a2adb>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-11-11>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-11-12>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD" .
 
 <urn:uuid:5f5af361-e5fe-44de-9be4-5b02795a2adb> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -571,13 +571,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-11-11>
+<https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225>;
-  dcterms:issued "2024-11-11"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/38";
@@ -590,7 +590,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:68e86c5a-f444-4aff-b54c-47bc100bcf4b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-11-11>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-11-12>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD" .
 
 <urn:uuid:68e86c5a-f444-4aff-b54c-47bc100bcf4b> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1233,13 +1233,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2024-11-10>
+<https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:32f5c5c1-ec68-462a-8f73-f54c5236c0d1>;
-  dcterms:issued "2024-11-10"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/59";
@@ -1257,23 +1257,23 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:33e0b049-5d42-48d2-a825-c29b294eab9b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2024-11-10>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2024-11-12>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD" .
 
 <urn:uuid:33e0b049-5d42-48d2-a825-c29b294eab9b> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) \"not recorded\" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) \"not recorded\" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2024-11-10>
+<https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:32f5c5c1-ec68-462a-8f73-f54c5236c0d1>;
-  dcterms:issued "2024-11-10"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/59";
@@ -1286,14 +1286,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:d2f89397-78f3-4e67-8994-79102470d305>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2024-11-10>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2024-11-12>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD" .
 
 <urn:uuid:d2f89397-78f3-4e67-8994-79102470d305> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) \"not recorded\" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) \"not recorded\" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD" .
 
 <https://rs.tdwg.org/bdqcore/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2024-09-27>
@@ -4543,8 +4543,8 @@
 
 <urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "";
-  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD" .
 
@@ -4572,7 +4572,7 @@
 
 <urn:uuid:33f44f83-93ea-488a-bd24-2c34e6b8f513> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "";
-  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD" .

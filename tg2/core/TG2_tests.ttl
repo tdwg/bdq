@@ -498,14 +498,14 @@
 
 <bdq:earliestValidDate> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
-<https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-11>
+<https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The license at the record level might be derived from the license of the data set from which the record is retrieved. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.   The  canonical form of the Creative Commons license IRI has nothing after the version  e.g. https://creativecommons.org/licenses/by/4.0/, but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code.   However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI.  As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Standard>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:d3daaab7-b042-4dc7-a92f-77f19988f351>;
-  dcterms:issued "2024-11-11"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/; Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/";
   rdfs:comment "Does the value of dcterms:license occur in bdq:sourceAuthority?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/38";
@@ -524,7 +524,7 @@
   skos:historyNote "Source: John Wieczorek";
   rdfs:label "ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD";
   skos:prefLabel "ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-11> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12> .
 
 <urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dcterms:license=\"https://creativecommons.org/licenses/by/4.0/\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,  Response.comment=\"dcterms:license matches a term in the bdq:sourceAuthority\"",
@@ -1021,9 +1021,9 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_COORDINATES_TRANSPOSED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:59a2f383-eb25-4bb2-b0e0-939dbe2c8cea> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:48fad5a0-2a28-4498-954b-7693baad9dd9> .
 
-<urn:uuid:59a2f383-eb25-4bb2-b0e0-939dbe2c8cea> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:48fad5a0-2a28-4498-954b-7693baad9dd9> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "10m-admin-1 boundaries UNION with Exclusive Economic Zones";
   rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -1200,14 +1200,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-10>
+<https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  skos:note "Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\".";
+  skos:note "Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\", but as this is not a valid EPSG code, the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\".";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Standard>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b>;
-  dcterms:issued "2024-11-10"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/59";
@@ -1226,24 +1226,24 @@
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD";
   skos:prefLabel "ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-10> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12> .
 
 <urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:geodeticDatum=\"epsg:4326\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority\"",
     "dwc:geodeticDatum=\"7030\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) \"not recorded\" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) \"not recorded\" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_GEODETICDATUM_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10>
+<https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized>;
-  skos:note "Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts.";
+  skos:note "Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts. For the purposes of this test \"not recorded\" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b>;
-  dcterms:issued "2024-11-10"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/60";
@@ -1253,7 +1253,7 @@
 
 <urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
   skos:note "TG2 Amendment SPACE Test VOCABULARY NEEDS WORK Conformance CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10>;
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10>;
   skos:historyNote "Source: Paul Morris";
   rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED";
@@ -2402,7 +2402,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_POLYNOMIAL_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-11>
+<https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:AssumedDefault>;
@@ -2410,7 +2410,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
-  dcterms:issued "2024-11-11"^^xsd:date;
+  dcterms:issued "2024-11-12"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/102";
@@ -2425,7 +2425,7 @@
 
 <urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
   skos:note "TG2 Amendment SPACE Test NEEDS WORK Completeness Parameterized CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-11>;
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT";
@@ -2435,8 +2435,8 @@
   skos:example "dwc:geodeticDatum=\"[null]\", dwc:decimalLatitude=\"-30.00\", dwc:decimalLongitude=\"130.00\", dwc:coordinateUncertaintyInMeters=\"50\": Response.status=AMENDED, Response.result=dwc:geodeticDatum=\"EPSG:4326\", dwc:coordinateUncertaintyInMeters=\"2836\", Response.comment=\"dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value\"",
     "dwc:geodeticDatum=\"WGS84\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:geodeticDatum contains a value\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:defaultGeodeticDatum default = \"EPSG:4326\"";
-  rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. bdq:defaultGeodeticDatum default = \"EPSG:4326\"";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.";
+  rdfs:comment "If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. bdq:defaultGeodeticDatum default = \"EPSG:4326\"";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT";
   <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:7fd3889a-0d1d-4054-8e68-807cfa5410f2> .
 
@@ -4108,13 +4108,13 @@
 <urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:typeStatus=\"Holotype\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:typeStatus found in the bdq:sourceAuthority\"",
     "dwc:typeStatus=\"cleptotype\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:typeStatus not found in the bdq:sourceAuthority\"";
-  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_TYPESTATUS_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:f2df4b1a-44ad-4e26-8d89-6dd8b5a8d68d> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:95e95756-8fe0-41b5-b8ef-cbce8fafdefd> .
 
-<urn:uuid:f2df4b1a-44ad-4e26-8d89-6dd8b5a8d68d> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:95e95756-8fe0-41b5-b8ef-cbce8fafdefd> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TypeStatus Vocabulary";
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -4145,13 +4145,13 @@
 <urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:typeStatus=\"Holo.\": Response.status=AMENDED, Response.result=dwc:typeStatus=\"Holotype\", Response.comment=\"dwc:typeStatus found in the bdq:sourceAuthority\"",
     "dwc:typeStatus=\"x\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:typeStatus not found in the bdq:sourceAuthority\"";
-  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:33761f05-f28e-4e1b-b799-0a45dffd9bd1> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:4c5511f5-9772-4e5d-9fd9-6a2c4dd04b27> .
 
-<urn:uuid:33761f05-f28e-4e1b-b799-0a45dffd9bd1> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:4c5511f5-9772-4e5d-9fd9-6a2c4dd04b27> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TypeStatus Vocabulary";
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -4270,7 +4270,7 @@
     <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04>,
-    <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-10>,
+    <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12>,
     <https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27>,
     <https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16>,
@@ -4369,14 +4369,14 @@
     <https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10>,
     <https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24>,
-    <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10>,
+    <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12>,
     <https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05>,
     <https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-11>,
-    <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-11>,
+    <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12>,
     <https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05>,

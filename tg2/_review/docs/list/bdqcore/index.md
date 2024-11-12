@@ -2410,7 +2410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-08-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-12-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -2418,11 +2418,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-08-18</td>
+			<td>2024-12-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -2442,7 +2442,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:NotEmpty; FILLED_IN dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
+			<td>If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -2508,14 +2508,6 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -2537,7 +2529,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-10</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -2545,11 +2537,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-10</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-7-24</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -2609,7 +2601,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts.</td>
+			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -2622,14 +2614,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3914,7 +3898,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -4928,7 +4912,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -4936,11 +4920,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-10</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -4952,7 +4936,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -5918,7 +5902,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -5926,11 +5910,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -11672,7 +11656,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -12028,7 +12012,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -12036,11 +12020,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-10</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -12052,7 +12036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -13018,7 +13002,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -13026,11 +13010,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -18772,7 +18756,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -19128,7 +19112,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -19136,11 +19120,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-10</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -19152,7 +19136,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is (1) "not recorded" or (2) a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -19200,7 +19184,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".</td>
+			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded", but as this is not a valid EPSG code, the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -19213,14 +19197,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20310,7 +20286,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -20318,11 +20294,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2024-11-12</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-17</td>
+			<td>2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -20403,14 +20379,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27208,7 +27176,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus]}</td>
+			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
