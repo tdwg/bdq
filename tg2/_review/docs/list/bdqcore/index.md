@@ -3021,11 +3021,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>dwc:defaultOccurrenceStatus</td>
+			<td>bdq:defaultOccurrenceStatus</td>
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -3037,7 +3037,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>dwc:defaultOccurrenceStatus default = "Present"</td>
+			<td>bdq:defaultOccurrenceStatus default = "Present"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -3078,6 +3078,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>759dc2d8-f40f-4bad-b333-e90690929f6c</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -3963,6 +3967,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships</td>
+		</tr>
+		<tr>
+			<td>Guids for Arguments</td>
+			<td>a10eb348-7fc5-4b96-88e3-619300cb0079</td>
 		</tr>
 		<tr>
 			<td>Status</td>

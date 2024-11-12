@@ -1737,15 +1737,18 @@
 <urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:occurrenceStatus=\"\", dwc:individualCount=\"\", dwc:organismQuantity=\"\": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"dwc:occurrenceStatus is bdq:Empty; assumed \"Present\"\"",
     "dwc:occurrenceStatus=\"X\", dwc:individualCount=\"10\", dwc:organismQuantity=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:occurrenceStatus is bdq:NotEmpty\"";
-  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "dwc:defaultOccurrenceStatus default = \"Present\"";
-  rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED dwc:defaultOccurrenceStatus default = \"Present\"";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED";
+  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:defaultOccurrenceStatus default = \"Present\"";
+  rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"Present\"";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:38fc9a11-68b3-4ddc-acd5-f1b0ff0ce483> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c> .
 
-<urn:uuid:38fc9a11-68b3-4ddc-acd5-f1b0ff0ce483> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Present";
-  rdfs:label "Default value for dwc:defaultOccurrenceStatus" .
+  rdfs:label "Default value for bdq:defaultOccurrenceStatus:\"Present\"";
+  <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:defaultOccurrenceStatus> .
+
+<bdq:defaultOccurrenceStatus> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
 <https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
@@ -2239,14 +2242,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty> .
-
-<urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon dwc:establishmentMeans";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:establishmentMeans;
-  rdfs:label "Information Element ActedUpon dwc:establishmentMeans" .
-
-<https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05>
+  <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba>;
   dcterms:issued "2024-09-05"^^xsd:date;
   dcterms:bibliographicCitation "";
@@ -2255,6 +2251,11 @@
   rdfs:label "ISSUE_ESTABLISHMENTMEANS_NOTEMPTY";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700>;
   skos:prefLabel "Issue dwc:establishmentMeans Not Empty for SingleRecord" .
+
+<urn:uuid:09023be7-9359-48a8-873b-3e65d43427ba> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
+  <skos:prefLabel> "Information Element ActedUpon dwc:establishmentMeans";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> dwc:establishmentMeans;
+  rdfs:label "Information Element ActedUpon dwc:establishmentMeans" .
 
 <urn:uuid:8fc9b64a-557b-46ee-aa51-d23b6cf26d75> a <https://rs.tdwg.org/bdqffdq/terms/IssueMethod>;
   skos:note "TG2 Issue OTHER Test Completeness CORE";
@@ -4149,9 +4150,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:559683a0-d3ed-408f-8d50-67683a084237> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079> .
 
-<urn:uuid:559683a0-d3ed-408f-8d50-67683a084237> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "GBIF TypeStatus Vocabulary";
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .

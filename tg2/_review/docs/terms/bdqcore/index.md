@@ -4223,7 +4223,7 @@ Proposes an amendment of the value of dwc:occurrenceStatus to the default parame
 
 #### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4235,11 +4235,11 @@ dwc:individualCount,dwc:organismQuantity
 
 #### Parameters
 
-dwc:defaultOccurrenceStatus
+bdq:defaultOccurrenceStatus
 
 #### Default Parameter Values
 
-dwc:defaultOccurrenceStatus default = "Present"
+bdq:defaultOccurrenceStatus default = "Present"
 
 #### Examples
 

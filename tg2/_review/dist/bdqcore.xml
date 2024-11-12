@@ -2577,20 +2577,28 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example>dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "Present""</skos:example>
 	<skos:example>dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">dwc:defaultOccurrenceStatus default = "Present"</hasAuthoritiesDefaults>
-	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED dwc:defaultOccurrenceStatus default = "Present"</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</hasExpectedResponse>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:defaultOccurrenceStatus default = "Present"</hasAuthoritiesDefaults>
+	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = "Present"</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</hasExpectedResponse>
 	<rdfs:label>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:430adbb3-d6d5-4664-94f7-976cf62de3c2">
+<rdf:Description rdf:about="urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Present</hasArgumentValue>
-	<rdfs:label>Default value for dwc:defaultOccurrenceStatus</rdfs:label>
+	<rdfs:label>Default value for bdq:defaultOccurrenceStatus:"Present"</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="bdq:defaultOccurrenceStatus">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c">
+	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:defaultOccurrenceStatus"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:430adbb3-d6d5-4664-94f7-976cf62de3c2"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd">
@@ -5907,7 +5915,7 @@
 	<rdfs:label>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:c14220b1-b46e-4b8f-9fad-34cc7a3ecdb8">
+<rdf:Description rdf:about="urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF TypeStatus Vocabulary</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF TypeStatus Vocabulary"</rdfs:label>
@@ -5915,7 +5923,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c14220b1-b46e-4b8f-9fad-34cc7a3ecdb8"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:05104b96-267c-432a-9f30-88552404763e">

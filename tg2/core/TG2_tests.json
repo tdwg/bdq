@@ -7679,17 +7679,17 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "dwc:defaultOccurrenceStatus default = \"Present\""
+                "@value": "bdq:defaultOccurrenceStatus default = \"Present\""
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED dwc:defaultOccurrenceStatus default = \"Present\""
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"Present\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED"
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -7699,12 +7699,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:a70c7952-3ec9-4461-afb8-070bd7e2e862"
+                "@id": "urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c"
             }
         ]
     },
     {
-        "@id": "urn:uuid:a70c7952-3ec9-4461-afb8-070bd7e2e862",
+        "@id": "urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -7715,8 +7715,19 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Default value for dwc:defaultOccurrenceStatus"
+                "@value": "Default value for bdq:defaultOccurrenceStatus:\"Present\""
             }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "bdq:defaultOccurrenceStatus"
+            }
+        ]
+    },
+    {
+        "@id": "bdq:defaultOccurrenceStatus",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
     },
     {
@@ -18407,12 +18418,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:56df2458-af5f-403c-99c0-821cd2361fd4"
+                "@id": "urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079"
             }
         ]
     },
     {
-        "@id": "urn:uuid:56df2458-af5f-403c-99c0-821cd2361fd4",
+        "@id": "urn:uuid:a10eb348-7fc5-4b96-88e3-619300cb0079",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
