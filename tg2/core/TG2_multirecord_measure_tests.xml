@@ -3186,7 +3186,7 @@
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-12">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:MultiRecord"/>
 	<skos:note>For Quality Assurance, filter record set until this measure is COMPLETE.</skos:note>
@@ -3200,9 +3200,9 @@
 	<rdfs:label>Information Element ActedUpon bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-12">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:67e7259e-3421-4f5d-a31d-a92ce73d0baa"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-10</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
 	<rdfs:comment>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/98</skos:historyNote>
@@ -3213,7 +3213,7 @@
 
 <rdf:Description rdf:about="urn:uuid:cde5acd3-b95d-444b-817c-8a20adadf279">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
-	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</skos:note>
+	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea">
@@ -3229,17 +3229,17 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea"/>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</rdfs:label>
-	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10"/>
+	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-12"/>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-12">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:MultiRecord"/>
 	<skos:note>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:67e7259e-3421-4f5d-a31d-a92ce73d0baa"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-10</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
 	<rdfs:comment>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/98</skos:historyNote>
@@ -3250,7 +3250,7 @@
 
 <rdf:Description rdf:about="urn:uuid:573e9d1a-f687-4efa-977d-5c696012c571">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
-	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY NEEDS WORK Completeness CORE</skos:note>
+	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75">
@@ -3266,7 +3266,7 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75"/>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</rdfs:label>
-	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10"/>
+	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-12"/>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</skos:prefLabel>
 </rdf:Description>
 
@@ -4026,7 +4026,7 @@
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2024-10-14">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2024-11-12">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:MultiRecord"/>
 	<skos:note>For Quality Assurance, filter record set until this measure is COMPLETE.</skos:note>
@@ -4040,9 +4040,9 @@
 	<rdfs:label>Information Element ActedUpon bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2024-10-14">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2024-11-12">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3f67a77a-85c0-495d-948a-5ea0dec89ec7"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-14</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
 	<rdfs:comment>Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/116</skos:historyNote>
@@ -4069,17 +4069,17 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e032ea6a-012d-436d-a442-da167a466b02"/>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</rdfs:label>
-	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2024-10-14"/>
+	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2024-11-12"/>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2024-10-14">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2024-11-12">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:MultiRecord"/>
 	<skos:note>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3f67a77a-85c0-495d-948a-5ea0dec89ec7"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-14</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
 	<rdfs:comment>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/116</skos:historyNote>
@@ -4106,7 +4106,7 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:66e20810-2936-4932-950f-53e7680c7ca1"/>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</rdfs:label>
-	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2024-10-14"/>
+	<forMeasurement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2024-11-12"/>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</skos:prefLabel>
 </rdf:Description>
 

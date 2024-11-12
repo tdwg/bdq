@@ -1046,7 +1046,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded", but as this is not a valid EPSG code, the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
+Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". "not recorded" is however not a valid EPSG code, so the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2099,7 +2099,7 @@ bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gb
 
 #### Examples
 
-dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"
+dwc:occurrenceStatus="Present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"
 
 dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"
 
@@ -2110,7 +2110,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3651,7 +3651,7 @@ This test supports conformance with the recommendation in the comment on dwc:cou
 ###  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
 
 ####  Amendment dwc:geodeticDatum Assumed Default
-https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7/2024-12-11
+https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7/2024-11-12
 Acts upon  SingleRecord
 
 #### Description
@@ -3699,7 +3699,7 @@ The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLon
 ###  AMENDMENT_GEODETICDATUM_STANDARDIZED
 
 ####  Amendment dwc:geodeticDatum Standardized
-https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-11-11
+https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-11-12
 Acts upon  SingleRecord
 
 #### Description
@@ -4214,7 +4214,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 ###  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
 
 ####  Amendment dwc:occurrenceStatus Assumed Default
-https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5/2024-08-23
+https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5/2024-11-12
 Acts upon  SingleRecord
 
 #### Description
@@ -4239,11 +4239,11 @@ dwc:defaultOccurrenceStatus
 
 #### Default Parameter Values
 
-dwc:defaultOccurrenceStatus default = "present"
+dwc:defaultOccurrenceStatus default = "Present"
 
 #### Examples
 
-dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "present""
+dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "Present""
 
 dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"
 
@@ -4251,6 +4251,10 @@ dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Res
 #### Use Cases
 
 bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+
+#### Notes
+
+There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4284,7 +4288,7 @@ bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gb
 
 #### Examples
 
-dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="present", Response.comment="Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent"
+dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="Present", Response.comment="Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent"
 
 dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"
 
@@ -4295,7 +4299,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.
+The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. There is however, currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.
 
 [🠱](#indexes-to-the-tests)
 ********************
