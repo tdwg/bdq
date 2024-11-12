@@ -19,14 +19,17 @@
 #"IE Class",
 
 iri:
+  # fully qualified IRI including the version
   label: Term Version IRI
   normative: 'true'
   term: rdf:about
 term_iri:
+  # the IRI for the term in general, without the version
   label: Term IRI
   normative: 'true'
   term: dcterms:isVersionOf
 term_localName:
+  # the bare UUID for the test 
   label: Term Name
   normative: 'true'
   term: rdf:value
@@ -36,18 +39,21 @@ issued:
   normative: ''
   term: dcterms:issued
 Label:
+  # This is the all upper case single word identifier
   append: A descriptive label for humans to use to identify the Test.
   label: Label
   normative: 'true'
   term: rdfs:label
 prefLabel:
+  # This is the identifier split into words for readability, expect translations to be added.
   append: An easy to read label for the Test, similar to the Label, but in words.
   label: Preferred Label
   normative: 'true'
   term: skos:prefLabel
 DateLastUpdated:
+  # non-normative, the most recent change of relevance to implementations might be non-normative
   label: DateLastUpdated
-  normative: ''
+  normative: 'false'  
   term: bdqffdq:hasDateLastUpdated
 ArgumentGuids:
   label: Guids for Arguments
@@ -175,19 +181,24 @@ controlled_value_string:
   normative: 'true'
   term: ''
 flags:
+  # not used yet, but expect this to be needed for long term support.
   label: ''
   normative: ''
   term: ''
 historyNoteUrl:
+  # Currently all tdwg/bdq issue numbers, but in future could be on a bdqcore repository.
+  # Expect multiplicity here for rationale management of changes to tests after acceptance.
   append: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the Test.
   label: Developed As Github Issue
   normative: 'false'
   term: skos:historyNote
 organized_in:
+  # not used yet
   label: ''
   normative: ''
   term: ''
 status:
+  # For future term-version use if tests are deprecated
   label: Status
   normative: ''
   term: tdwgutility:status
