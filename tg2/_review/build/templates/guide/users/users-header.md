@@ -124,7 +124,7 @@ Issues Tests with a Response.status of RUN_HAS_RESULT MAY have a Response.result
 
 ### 2.3 Amendments Propose Changes (normative)
 
-Amendment Tests **propose changes** to data.  It is up to the consumers of data quality reports to choose whether or not to accept those changes, particularly into authoritative databases of record.  Consumers of data quality reports MAY choose to change data based on assertions made by Amendment Tests, or consumers of data quality reports MAY choose to not change their data based on assertions made by Amendment Tests.  Databases of record SHOULD NOT automatically alter data based on assertions made by Amendment Tests without human evaluation.   
+Amendment Tests **propose changes** to data.  It is up to the consumers of data quality reports to choose whether or not to accept those changes, particularly into authoritative databases of record.  Consumers of data quality reports MAY choose to change data based on assertions made by Amendment Tests, or consumers of data quality reports MAY choose to not change their data based on assertions made by Amendment Tests.  Databases of record SHOULD NOT automatically alter data based on assertions made by Amendment Tests without human evaluation of the proposed changes.
 
 ### 2.4 Test Parameters (normative) 
 
@@ -146,7 +146,7 @@ So, a value of dwc:minimumDepthInMeters of 2000m would be NOT_COMPLIANT in this 
 
 ## 3 Context for Quality, Uses and Purposes (non-normative)
 
-Data does not have quality in the abstract, it only has quality with respect to some use.  The [bdqffdq:](../bdqffdq/index.md) Framework for data quality used in BDQ Core, describes uses for data as Use Cases, and expects that tests are run in suites that form policy for data quality with respect to Use Cases.  That is, sets of tests are expected to be run together in order to assess quality of data for some specified use, and reports of results from test should be understood within the context of that use for the data.
+Data does not have quality in the abstract, it only has quality with respect to some use.  The [bdqffdq:](../bdqffdq/index.md) Framework for data quality used in BDQ Core, describes uses for data as Use Cases, and expects that tests are run in suites that form policy for data quality with respect to Use Cases.  That is, sets of tests are expected to be run together in order to assess quality of data for some specified use, and both tests and reports of results from tests should be understood within the context of that use for the data.
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance.  In Quality Control, tests are used to find data that lacks fitness for particular uses and the results are used to improve the quality of the data.  In Quality Assurance, data are filtered so that only data that are fit for some purpose are used for that purpose.
 
