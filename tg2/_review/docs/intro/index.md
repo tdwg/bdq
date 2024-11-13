@@ -135,7 +135,7 @@ The following namespace abbreviations are used in this document:
 
 ### 2.1 Parts of the Standard
 
-The full set of documents comprising the BDQ Core standard is listed on the [BDQ Core landing page](../index.md).
+The full set of documents comprising the BDQ Core standard is listed on the [BDQ Core landing page](../../index.md).
 
 ### 2.1 Vocabularies
 
