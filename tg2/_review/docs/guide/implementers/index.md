@@ -467,7 +467,7 @@ When a Test is Parameterized, and a value other than the default value is used f
 
 For example 'VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642'.
 
-When a non-default Argument is used, a new instance of an Implementation linked to a new instance of a Specification linked to an instance of an Argument asserting the non-default value SHOULD be used.   When Assertions are represented in RDF, an Assertion produced by a test run with a non-default Argument value MUST NOT be linked to the instance of the Specification with the Argument with the default value, but MUST be linked to novel instances of Implementation, Specification, and Argument, such that a query on the Assertion can identify what Argument value was used for the Parameter to produce the Assertion.  This provides the non-default value for software consumers.
+When a non-default Argument is used, a new instance of an Implementation linked to a new instance of a Specification linked to an instance of an Argument asserting the non-default value SHOULD be used.   When Assertions are represented in RDF, an Assertion produced by a test run with a non-default Argument value MUST NOT be linked to the instance of the Specification with the Argument with the default value, but MUST be linked to novel instances of Implementation, Specification, and Argument, such that a query on the Assertion can identify what Argument value was used for the Parameter to produce the Assertion.  It is the novel instances of these classes that provides the non-default value for software consumers.
 
 When a non-default Argument is used, a Response.comment SHOULD include the Parameter and the non-default value.  This provides the non-default value for human consumers.
 
@@ -1019,7 +1019,15 @@ Java annotations can be used to match test implementation methods to tests and i
 The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by test implementations into bdqffdq:Assertion objects in RDF.  In addition, a Java library, kurator-ffdq (Lowery et al., 2024) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java.  The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
 
 - [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) Java annotations for decorating Test implementations.
-- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.
+- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Kurator-ffdq is also able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.  
+
+For more information on stub method generation used by the Kurator/FilteredPush libraries, see the following README files:
+
+- event_date_qc/generation [README](https://github.com/FilteredPush/event_date_qc/blob/master/generation/README.md)
+- sci_name_qc/generation [README](https://github.com/FilteredPush/sci_name_qc/blob/master/generation/README.md)
+- geo_ref_qc/generation [README](https://github.com/FilteredPush/geo_ref_qc/blob/master/generation/README.md)
+- rec_occur_qc/generation [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)
+- and kurator-ffdq [README](https://github.com/kurator-org/kurator-ffdq/blob/master/README.md)
 
 These libraries are available in Maven Central, source code is archived in zenodo.
 
@@ -1027,7 +1035,7 @@ These libraries are available in Maven Central, source code is archived in zenod
 
 A set of open source Java libraries provide classes which implement each of the bdqffdq:SingleRecord Tests that operate directly on data. These libraries are not part of the BDQ Core standard, but have been implemented as part of the process of writing the standard.
 
-<!--- TODO: Add citations --->
+<!--- TODO: Add citation for rec_occur_qc --->
 
 - [event_date_qc](https://github.com/filteredpush/event_date_qc) (Morris & Lowery 2024) Tests related to spatial terms.
 - [sci_name_qc](https://github.com/filteredpush/sci_name_qc) (Morris & Dou 2024) Tests related to taxonomy and identification terms.
