@@ -150,7 +150,7 @@ Some Tests are parameterized.  When a Test is Parameterized, and a value other t
 
 Values of parameters other than the defaults SHOULD also be present in the Response.comment.
 
-More normative guidance can be found in the [implementer's guide](../implemeters/index.md#61-Parameters-and-Changing-the-Behavior-of-a-Test-normative).
+More normative guidance can be found in the [implementer's guide](../implementers/index.md#61-Parameters-and-Changing-the-Behavior-of-a-Test-normative).
 
 ### 2.4.1 Test Parameters Example (non-normative) 
 
