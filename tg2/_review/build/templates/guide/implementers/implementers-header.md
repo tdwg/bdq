@@ -956,7 +956,15 @@ Java annotations can be used to match test implementation methods to tests and i
 The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters.  The Java Annotations are themselves related to bdqffdq Framework concepts and are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by test implementations into bdqffdq:Assertion objects in RDF.  In addition, a Java library, kurator-ffdq (Lowery et al., 2024) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java.  The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
 
 - [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) Java annotations for decorating Test implementations.
-- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.
+- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2024) Java class representation of bdqffdq: classes, able to produce stub code for Test implementations in Java or Python.  Kurator-ffdq is also able (code is rusty as of v3.0.0) to run Java test implementations annotated with ffdq-api annotations and produce data quality report spreadsheets.  
+
+For more information on stub method generation used by the Kurator/FilteredPush libraries, see the following README files:
+
+- event_date_qc/generation [README](https://github.com/FilteredPush/event_date_qc/blob/master/generation/README.md)
+- sci_name_qc/generation [README](https://github.com/FilteredPush/sci_name_qc/blob/master/generation/README.md)
+- geo_ref_qc/generation [README](https://github.com/FilteredPush/geo_ref_qc/blob/master/generation/README.md)
+- rec_occur_qc/generation [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)
+- and kurator-ffdq [README](https://github.com/kurator-org/kurator-ffdq/blob/master/README.md)
 
 These libraries are available in Maven Central, source code is archived in zenodo.
 
@@ -964,7 +972,7 @@ These libraries are available in Maven Central, source code is archived in zenod
 
 A set of open source Java libraries provide classes which implement each of the bdqffdq:SingleRecord Tests that operate directly on data. These libraries are not part of the BDQ Core standard, but have been implemented as part of the process of writing the standard.
 
-<!--- TODO: Add citations --->
+<!--- TODO: Add citation for rec_occur_qc --->
 
 - [event_date_qc](https://github.com/filteredpush/event_date_qc) (Morris & Lowery 2024) Tests related to spatial terms.
 - [sci_name_qc](https://github.com/filteredpush/sci_name_qc) (Morris & Dou 2024) Tests related to taxonomy and identification terms.
