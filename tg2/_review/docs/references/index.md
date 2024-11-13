@@ -113,6 +113,7 @@ The following references have been extracted from the "References" descriptor on
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li>
 <li>Morris P, Hanken J, Lowery D, Ludäscher B, Macklin J, McPhillips T, Wieczorek J, Zhang Q (2018) Kurator: Tools for Improving Fitness for Use of Biodiversity Data. Biodiversity Information Science and Standards 2: e26539. https://doi.org/10.3897/biss.2.26539</li>
 <li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Version 1.0.0 release of bdq_issue_to_csv utility for creating bdqcore: term-version file. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14057551</li>
+<li>Morris PJ (2024b) bdqtestrunner <!-- TODO: Release version, add citation -->  </li>
 <li>Morris PJ, Dou L (2024) FilteredPush/sci_name_qc: Release vesion 1.1.2 of the sci_name_qc library implementing BDQ Core NAME tests. (v1.1.2). Zenodo. https://doi.org/10.5281/zenodo.14052951</li>
 <li>Morris PJ, Lowery D (2024) FilteredPush/event_date_qc: Release version 3.0.5 of the event_date_qc library, compliant implementation of all the BDQ Core Time Tests. Zenodo. https://doi.org/10.5281/zenodo.14056663</li>
 <li>Morris PJ, Lowery D, Wieczorek J (2024) FilteredPush/geo_ref_qc: Release version 2.0.0 of the geo_ref_qc library, compliant implementation of all the BDQ Core Space Tests (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.14064325</li>

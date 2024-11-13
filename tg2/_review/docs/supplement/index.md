@@ -74,6 +74,7 @@ Draft Standard for Submission
 - [5.1 Developing BDQ Core Tests Using Github Issues](#51-developing-bdq-core-tests-using-github-issues)
 - [5.2 Github Tags and Categorizing Issues](#52-github-tags-and-categorizing-issues)
 - [5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors](#53-using-markdown-tables-in-github-issues-to-develop-test-descriptors)
+- [6 Code used to build BDQ Core Components](#6-code-used-to-build-bdq-core-components)
 
 
 ## 1 Introduction
@@ -453,7 +454,7 @@ BDQ Core Tests were designed to provide an adequate coverage of basic informatio
 
 We originally rendered the Tests in the form that flagged a **FAIL**, for example a dwc:eventDate that did not conform to ISO 8601-1 date. Our reasoning was this strategy aligned with all of the sources of the Tests in that we all sought to identify **issues** with values in the record that would reduce its quality. However, the Data Quality Framework (Veiga 2016, Veiga et al. 2017) worked in the opposite direction: Identifying values in a record that **PASSED** a Test; increased 'quality'. To align with the Framework, we renamed all BDQ Core Tests from FAIL to PASS type, for example, COUNTRYCODE_NOTSTANDARD became COUNTRYCODE_STANDARD. This reversal of 'fail' to 'pass' was also reflected in the comparison of the Framework's 'Data Quality Dimension' versus our early concept of 'Warning Type' (see Section 3.2).
 
-Second and subsequent evaluations of the candidate BDQ Core Tests reduced the number to about 100 that seemed to fulfill the criteria above. Tests came and went as we provided more consistent and comprehensive documentation against what we called the Test Descriptors. The Tests also changed as we began to implement them. We modified a Test Specification to then find that we would not be able to implement it due to potential ambiguous responses from the Test or that a Test response may be misleading. By far the greatest changes to the candidate tests came about when we implemented them and ran them against the Test Validation Data (see the [Implementer's Guide](../guide/implementers/index.md#81-introduction-non-normative)).
+Second and subsequent evaluations of the candidate BDQ Core Tests reduced the number to about 100 that seemed to fulfill the criteria above. Tests came and went as we provided more consistent and comprehensive documentation against what we called the Test Descriptors. The Tests also changed as we began to implement them. We modified a Test Specification to then find that we would not be able to implement it due to potential ambiguous responses from the Test or that a Test response may be misleading. By far the greatest changes to the candidate tests came about when we implemented them and ran them against the Test Validation Data (see the [Implementer's Guide](../guide/implementers/index.md#81-introduction-non-normative)) (using bdq_issue_to_csv (Morris 2024b) to extract a csv file of validation data from a working spreadsheet to execute implementations with bdqcoretestrunner (Morris 2024)).
 
 At one point, we aligned the documentation for over sixty tests that were tagged in GitHub as Supplementary, Immature/Incomplete and DO NOT IMPLEMENT. In doing so, we realized that the consistent documentation now provided a more nuanced evaluation and subsequently moved a number of these tests back into BDQ Core. The opposite was also true: The implementation of the Tests and running against the validation test data clearly demonstrated that some Tests were removed from BDQ Core. Where there were recognized nuances with the Tests that may not be obvious from the Specification, we documented the issues in the Test Notes.
 
@@ -714,11 +715,13 @@ From [xkcd.com/2867](https://xkcd.com/2867/), by Randall Munroe, xkcd.com.  Lice
 
 The Tests were developed as issues in the tdwg/bdq GitHub environment. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on GitHub Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the Authors, the values within the template could be easily modified and documented.  The comments in the issues served as a tool for rationale management, documenting why particular decisions were made about the tests during their development.
 
-GitHub's API also provided ample latitude to 'scrape' and filter Issues using GitHub tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.   The [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) library (Morris 2024) uses GitHub's API to obtain a json representation of the GitHub issues, then parses the agreed upon format for markdown tables for describing issues into a CSV file (destined to be come the [term-version csv](../../vocabulary/bdqcore_term_versions.csv) file for the bdqcore: vocabulary.  The [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) library (Lowery et al. 2024), which contains a Java representation of bdqffdq: classes is used to process the term-version file into RDF representations of the tests (e.g. [bdqcore.xml](../../dist/bdqcore.xml) (and can also query combined bdqffdq: and bdqcore: rdf, and can also execute appropriately annotated Java test implementations and produce data quality reports).
+GitHub's API also provided ample latitude to 'scrape' and filter Issues using GitHub tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.   The [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) library (Morris 2024) uses GitHub's API to obtain a json representation of the GitHub issues, then parses the agreed upon format for markdown tables for describing issues into a CSV file (destined to be come the [term-version csv](../../vocabulary/bdqcore_term_versions.csv) file for the bdqcore: vocabulary.  The [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) library (Lowery et al. 2024), which contains a Java representation of bdqffdq: classes is used to process the term-version file into RDF representations of the tests (e.g. [bdqcore.xml](../../dist/bdqcore.xml) (and can also query combined bdqffdq: and bdqcore: rdf, and can generate stub python and java methods for test implementations, and can also execute appropriately annotated Java test implementations and produce data quality reports).  
 
 ### 5.2 Github Tags and Categorizing Issues
 
-The development of each Test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each Test issue was tagged with the following GitHub issue tags to assist in finding, evaluating, and asserting conclusions about each Test. 
+The development of each Test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each Test issue was tagged with the following GitHub issue labels to assist in finding, evaluating, and asserting conclusions about each Test. 
+
+These tags are retained as the "Github Issue Labels" (a skos:note on each Method instance) in BDQ Core.
 
 | tag | definition | comment |
 | --- | ---------- | ------- |
@@ -813,6 +816,30 @@ Only a subset of all [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Cor
 **Link to Specification Source Code** [non-normative]: A link to code that implements the Test, for example "https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169".
 
 **Notes** [non-normative]: Additional comments that the Authors believed necessary for an accurate understanding of the Test or issues that implementers needed to be aware of. Example: For [TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889), “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
+
+## 6 Code used to build BDQ Core Components
+
+The specifications for the BDQ Core Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of tests developed in the BDQ TG2 Gainesville meeting).  It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (python by Lee Belbin, and Java (bdq_issue_to_csv (Morris 2024))) to extract the markdown tables to CSV lists of tests.  The descriptors in the issue markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing BDQ Core for submission), so this code has changed over time.  The kurator-ffdq (Lowery et al. 2024) code developed by David Lowery is capable of loading a csv list of test descriptors into a set of Java classes that can be serialized as RDF.  This code was maintained and the configuration changed over time to accomodate changes in the test CSV file.  Kurator-ffdq was regularly used to produce RDF representations of the tests.  Kurator-ffdq is also able to generate stub Java (and python) methods, and this functionality was used to add tests to and maintain 4 FilteredPush/Kurator libraries of test implementations.  
+
+BDQ Core `_review` is built with the following three sets of shell scripts:
+
+- bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh)
+- [bdq/tg2/\_make_review/copy_files.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/copy_files.sh)
+- [bdq/tg2/\_make_review/do_build.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/do_build.sh)
+
+For details on the test validation data see: 
+
+- bdqtestrunner [README](https://github.com/FilteredPush/bdqtestrunner/blob/master/README.md)
+- [bdq/tg2/core/squish_validation_data.py](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/core/squish_validation_data.py)
+
+For more information see the following README files: 
+
+- bdq_issue_to_csv [README](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/README.md)
+- kurator-ffdq [README](https://github.com/kurator-org/kurator-ffdq/blob/master/README.md)
+- event_date_qc/generation [README](https://github.com/FilteredPush/event_date_qc/blob/master/generation/README.md)
+- sci_name_qc/generation [README](https://github.com/FilteredPush/sci_name_qc/blob/master/generation/README.md)
+- geo_ref_qc/generation [README](https://github.com/FilteredPush/geo_ref_qc/blob/master/generation/README.md)
+- rec_occur_qc/generation [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)
 
 ## Acronyms
 

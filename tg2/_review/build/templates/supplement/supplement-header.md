@@ -778,9 +778,22 @@ Only a subset of all [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Cor
 
 The specifications for the BDQ Core Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of tests developed in the BDQ TG2 Gainesville meeting).  It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (python by Lee Belbin, and Java (bdq_issue_to_csv (Morris 2024))) to extract the markdown tables to CSV lists of tests.  The descriptors in the issue markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing BDQ Core for submission), so this code has changed over time.  The kurator-ffdq (Lowery et al. 2024) code developed by David Lowery is capable of loading a csv list of test descriptors into a set of Java classes that can be serialized as RDF.  This code was maintained and the configuration changed over time to accomodate changes in the test CSV file.  Kurator-ffdq was regularly used to produce RDF representations of the tests.  Kurator-ffdq is also able to generate stub Java (and python) methods, and this functionality was used to add tests to and maintain 4 FilteredPush/Kurator libraries of test implementations.  
 
-See: 
+BDQ Core `_review` is built with the following three sets of shell scripts:
 
-- bdq_issue_to_csv   build script
-- _make_review copy_files.sh
-- _make_review do_build.sh 
+- bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh)
+- [bdq/tg2/\_make_review/copy_files.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/copy_files.sh)
+- [bdq/tg2/\_make_review/do_build.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/do_build.sh)
 
+For details on the test validation data see: 
+
+- bdqtestrunner [README](https://github.com/FilteredPush/bdqtestrunner/blob/master/README.md)
+- [bdq/tg2/core/squish_validation_data.py](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/core/squish_validation_data.py)
+
+For more information see the following README files: 
+
+- bdq_issue_to_csv [README](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/README.md)
+- kurator-ffdq [README](https://github.com/kurator-org/kurator-ffdq/blob/master/README.md)
+- event_date_qc/generation [README](https://github.com/FilteredPush/event_date_qc/blob/master/generation/README.md)
+- sci_name_qc/generation [README](https://github.com/FilteredPush/sci_name_qc/blob/master/generation/README.md)
+- geo_ref_qc/generation [README](https://github.com/FilteredPush/geo_ref_qc/blob/master/generation/README.md)
+- rec_occur_qc/generation [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)

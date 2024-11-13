@@ -56,6 +56,35 @@ Templates for proposals of new and change issues are available at https://github
 
 The bdq_issue_to_csv utility (Morris 2024) is available ([zenodo](https://doi.org/10.5281/zenodo.13937570), [github](https://github.com/kurator-org/bdq_issue_to_csv)) for converting markdown tables in issues into lines of csv (ready for use as a term-version file.  See the bdq_issue_to_csv README and the [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/make_test_csv.sh) shell script for details, including working with kurator-ffdq (Lowery et al. 2024) [zenodo](https://doi.org/10.5281/zenodo.14026643), [github](https://github.com/kurator-org/kurator-ffdq) for generation of RDF serializations from the term-version csv file.
 
+#### 2.2.1 Tools used to build the BDQ Core submission, and related code
+
+BDQ Core `_review` is built with the following three sets of shell scripts:
+
+- bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh)
+- [bdq/tg2/\_make_review/copy_files.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/copy_files.sh)
+- [bdq/tg2/\_make_review/do_build.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/do_build.sh)
+
+It is expected that supplementary tests and proposed tests under development will be maintained from issues, and the full process described in bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh) will be needed to produce CSV and RDF from markdown tables in github issues.  This is expected to be different from the process for working with tests that have been accepted into BDQ Core, where the github issues are historical rationale management only and the authoritative file for Tests that are part of BDQ Core will be a term-version file (where the build process will need to extract only the latest versions of test records).  
+
+The bdqcore term-version file does not contain all of the UUIDs needed to produce stable RDF - additional files are used for that: 
+
+- tg2/core/TG2_tests_additional_guids.csv (which should all be included in the term-version file for bdqcore, kurator-ffdq may still be reading from this file instead)
+- tg2/core/information_element_guids.csv
+- tg2/core/TG2_tests_argument_guids.csv
+- tg1/supplementary/TG2_supplementary_additional_guids.csv
+
+These files are a workaround and need better enginering.  A tool to confirm that UUIDs are not accidentally duplicated would also be valuable.
+
+For details on the test validation data see: 
+
+- bdqtestrunner [README](https://github.com/FilteredPush/bdqtestrunner/blob/master/README.md) used in the BDQ Core development process.
+- [bdq/tg2/core/squish_validation_data.py](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/core/squish_validation_data.py) expected to be a needed tool for maintinance of the test validation data in the future (as of the 540eae5b1 commit, this does not round trip between the single column Input.data colum for human maintinance and the one column per input Darwin Core term version consumed by bdqtestrunner as empty terms are not correctly handled).
+
+For more information see the following README files: 
+
+- bdq_issue_to_csv [README](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/README.md)
+- kurator-ffdq [README](https://github.com/kurator-org/kurator-ffdq/blob/master/README.md) 
+
 ## 3 Test Validation Data
 
 The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2011) records where each record provides-
