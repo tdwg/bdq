@@ -220,7 +220,7 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
 
 ### 2.3 Reading Test Descriptors (non-normative)
 
-The Tests defined in BDQ Core are described in the [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md), with more detail in the [bdqcore term-list](../list/bdqcore/index.md) document.  Also for the convenience of implementers a [CSV file of just the SingleRecord tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_singlerecord_tests_current.csv) is available.  Viewing the data in this file in a spreadsheet program can be an effective way to examine and compare the descriptions of the tests.
+The Tests defined in BDQ Core are described in the [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md), with more detail in the [bdqcore term-list](../../list/bdqcore/index.md) document.  Also for the convenience of implementers a [CSV file of just the SingleRecord tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_singlerecord_tests_current.csv) is available.  Viewing the data in this file in a spreadsheet program can be an effective way to examine and compare the descriptions of the tests.
 
 #### 2.3.1 Key Parts of a Test Descriptor
 
@@ -237,7 +237,7 @@ The descriptions of the tests are complex.  The following are the most important
 
 #### 2.3.2 Reading a Specification 
 
-Consider these properties of an example Specification (for the Validation [VALIDATION_PHYLUM_FOUND](../terms/bdqcore/index.md#VALIDATION_PHYLUM_FOUND)): 
+Consider these properties of an example Specification (for the Validation [VALIDATION_PHYLUM_FOUND](../../terms/bdqcore/index.md#VALIDATION_PHYLUM_FOUND)): 
 
 hasExpectedResponse
 : EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
