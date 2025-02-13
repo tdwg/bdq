@@ -629,7 +629,7 @@ These vocabularies all fed into a formal description of the Tests as terms in th
 
 A few terms in the vocabulary table were seen as glossary terms (e.g. "geodetic datum") for which a formal vocabulary is not required.  These are presented in tables as a glossary in relevant descriptive documents. 
 
-### 3,11 Principles of Test Design
+### 3.11 Principles of Test Design
 
 The bdqffdq ontology provides a description of the specifications for a test, a standard interface for test invocation, and a description of the content of test results.  Tests are thus all specified following the bdqffdq ontology.
 
