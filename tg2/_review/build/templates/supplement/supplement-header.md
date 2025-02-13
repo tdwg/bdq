@@ -92,6 +92,8 @@ An internationally agreed standard suite of core tests and resulting assertions 
 - Capable of elevating the significance of an issue (e.g., no value for dcterms:license), or
 - Aspirational in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record)
 
+These can be considered as the basic principles in the development of the Tests, and are elaborated in Section 3.11. 
+
 The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE Tests largely cover data quality with regards to what organism has occurred where, at what place and time, and are a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that we considered to be critical metadata about occurrence records.
 
 A number of Tests were framed, but considered out of scope for CORE data quality needs and were tagged as "Supplementary" in GitHub. These Tests are likely to have a role in specific use cases. Implementers are free to implement a subset of the CORE Tests or Supplementary or new Tests when there is a particular data quality need within their domain. For example, the testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Over the period of this project, many Tests were removed from CORE on the basis that they could not be currently implemented in a manner that would result in predictable results. 
@@ -631,53 +633,51 @@ A few terms in the vocabulary table were seen as glossary terms (e.g. "geodetic 
 
 ### 3.11 Principles of Test Design
 
-The bdqffdq ontology provides a description of the specifications for a test, a standard interface for test invocation, and a description of the content of test results.  Tests are thus all specified following the bdqffdq ontology.
+This is an elaboation of the summary of the key criteria of the BDQ Core Tests in Section 2.1.
 
-All tests require both a concise description of the specification and a pair of examples.
+Test The bdqffdq ontology provides a description of the specifications for a test, a standard interface for test invocation, and a description of the content of test results.  Tests are thus all specified following the bdqffdq ontology.
 
-Each test specification must be as simple as possible.
+Tests should be informative when applied to data found in the wild. Each Test provides information about some aspect of the 'quality' / 'fitness for use' of the data. While the Tests have been developed to address a wide variety of needs, we accept that some tests may of course, not be applicable in some domains; some tests may be irrelevant in some contexts. Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the community acceptance and understanding of Darwin Core.
 
-Each test specification of the expected ressponse should follow a standard form, 
+All tests require both a concise description of the specification and a pair of examples, one for a pass scenario and one for a fail. The Specification has been designed to communicate concisely about the nature of the Tests to implementers; where any ambiguity will invalidate a Test.
 
-Each test specification should be as atomic as possible, dealing with only a single evaluation.  For example, evaluating dwc:minimumDepthInMeters should involve separate tests to evaluate if a value is present, if the value is numeric, if the value is within a reasonable range, or if the minimumDepthInMeters is smaller or equal to the maximumDepthInMeters.  These should not be combined into a single test, though tests that rely upon an interpretable value may build on a logic that evaluate as INTERNAL_PREREQUISITES_NOT_MET if no value is present or if it is not interpretable before proceeding to the central assertion of the test.
+Each Test specification must be as simple as possible. The more complex a Test, the more difficult it will be to implement and to evaluate against real-world data. While the human-readable Decription of the test may be open to interpretation, Test Specifications were written to allow for no ambiguity. In some cases, this has meant that some Specifications are lengthy, but required if implementation and interpretation are to be accurate.
 
-A consistent concept of EMPTY is used across all tests, tests must reference this concept rather than test specific concepts of empty values.
+Each Test Specification follows a standard form. Specification should be as atomic as possible, dealing with only a single evaluation.  For example, evaluating dwc:minimumDepthInMeters should involve separate tests to evaluate if a value is present, if the value is numeric, if the value is within a reasonable range, or if the minimumDepthInMeters is smaller or equal to the maximumDepthInMeters.  These should not be combined into a single test, though tests that rely upon an interpretable value may build on a logic that evaluate as INTERNAL_PREREQUISITES_NOT_MET if no value is present or if it is not interpretable before proceeding to the central assertion of the test.
 
-Tests should be informative when applied to data found in the wild.
+A consistent concept and definition of EMPTY is used across all Tests, tests must reference this concept rather than test various other concepts of empty values.
 
-Tests must be possible, and preferably simple, to implement
-
-Tests should be mandatory for enhancements, ?? TODO: unclear what is meant here ??
-
-In general, have power in that they will not likely result in 0% or 100% of all record hits (e.g. a validation should not in general be expected to return NOT_COMPLIANT for almost all data in the wild), however, Tests may identify non-compliant data in a large portion of cases if they make an important point about quality that should be, but is not currently met by the community (e.g. EMPTY dcterms:license).
-
-Tests should be widely applicable, address quality needs, and must be tied to at least one identified Use Case.   Test developmen should not start with "here's a term, these are sane values it could hold", but rather with "here is an identified need for quality in the values in this term".  
-
-Tests evaluate values based on the normative defintition of the term, and against non-normative guidance provided with the term, and may bring in other concepts from the real world (e.g. practical limits on elevation and depth) or vocabularies.
-
-When testing consistency between or among terms, values in one term that is non-EMPTY are not held to be inconsistent with EMPTY terms.
-
-Tests must not ascribe precision where it is unknown.   
-
-Spatial intersections may require spatial buffering, e.g., COUNTRYCODE_FROM_COORDINATES, and this should be made explicit in test definitions.
+VALIDATION Type Tests are mandatory before running the equivalent VALIDATION type Test. For example, a VALIDATION of a Darwin Core term such as dwc:occurrenceStatus is first evaluated against a Source Authority BEFORE an AMENDMENT Test may be run against that term. Generally, the process for applying BDQ Core Tests is VALIDATE-AMEND-REVALIDATE.
 
 Ammendments which propose conversions or transformations of values should do so in a way that is reversible.
 
-If testing the value of terms that have practical ranges (e.g., dwc:maximumElevationInMeters) some actual value should be used as a limit (e.g., the height of Mount Everest: 8848m provides an appropriate value as a limit to the largest valid maximum elevation value).
+In general, Tests have power in that they will not likely result in 0% or 100% of all record hits (e.g. a VALIDATION type Test should not in general be expected to return NOT_COMPLIANT for almost all data in the wild or COMPLIANT for all wild data). Tests may however identify non-compliant data in a large portion of cases where we highlight an important point about quality that should be, but is not currently met by the community, e.g. where dcterms:license is EMPTY. 
+
+Tests are widely applicable, address quality needs, and must be tied to at least one identified Use Case.  Test development should not start with "here's a term, these are sane values it could hold", but rather with "here is an identified need for quality in the values in this term".  
+
+Tests evaluate values based on the normative definition of the term, and against non-normative guidance provided with the term, and may bring in other concepts from the real world (e.g. practical limits on elevation and depth) or vocabularies.
+
+When testing consistency between or among terms, values in one term that is non-EMPTY are not held to be inconsistent with EMPTY terms. **@chicoreus...need a good example.**
+
+Tests must not ascribe precision where it is unknown. **@chicoreus...need a good example.**
+
+Spatial buffering is explcitly REQUIRED in the Specification for spatial intersections Tests (e.g., point in polygon). For example, the Test COUNTRYCODE_FROM_COORDINATES.
+
+If testing the value of terms that have practical ranges (e.g., dwc:maximumElevationInMeters), real-world values should be used as a limit. For example, the height of Mount Everest: 8848m provides an appropriate value as a limit to the largest valid maximum elevation value.
 
 Tests should be deterministic.  When presented with the same data and the same configuration, different test implementations and different runs of the same test ad different times on the same data and configuration should produce the same results.  Each test which references a controlled vocabulary must do so with an explicit statement of what the source authority for that vocabulary is.  
 
-Tests may be parameterized to accomodate national requirements or use case specific variations in quality needs.  For example, “minimum depth in meters is greater than indicated on GEBCO chart”.  Defaults in different Use Cases will need to be accommodated- e.g., WGS84 assumed as a geodetic datum in many cases, but not all, and such cases should be addressed by parameterizing tests to allow for different behaviors of the same test for different data quality needs.
+Tests may be parameterized to accomodate national requirements or use case specific variations in quality needs.  For example, “minimum depth in meters is greater than indicated on GEBCO chart”.  Defaults in different Use Cases will need to be accommodated. For example, WGS84 is assumed as a geodetic datum in many cases, but not all, and such cases should be addressed by parameterizing tests to allow for different behaviors of the same test for different data quality needs.
 
 Ammendments must be explicit about whether they propose to fill in EMPTY values, or propose changes to existing values.  
 
-Leading/trailing whitespace in values shall cause validations against controlled vocabularies to be NOT_COMPLIANT, shall be proposed to be removed by amendments, and may be ignored when evaluating numeric values.
+Leading/trailing whitespace or non-printing characters in values shall cause validations against controlled vocabularies to be NOT_COMPLIANT, shall be proposed to be removed by amendments, and may be ignored when evaluating numeric values.
 
-In general, tests are possible for terms where the value is bounded by real world extents, or an agreed vocabulary.
+In general, tests are only possible for terms where the value is bounded by real world extents, or by an agreed vocabulary.
 
-Tests should not attempt to validate the content of literal verbatim (e.g., verbatimLocality) terms, though such terms may be informative for evaluation or amendment of other terms.
+Tests should not attempt to validate the content of literal verbatim terms (e.g., dwc:verbatimLocality), though such terms may be informative for validation or amendment of other terms.
 
-For each concept area (e.g. DarwinCore class), a canonical term or set of terms is identified, and tests are structured around improving that canonical concept, e.g. for Taxon terms, the dwc:scientificNameId, with ammendments defined that seek to validate that canonical term or populate empty values from other terms, with the canonical term given priority as the term to which consumers of data should look for quality data.
+For each concept area (e.g. DarwinCore class), a canonical term or set of terms is identified, and tests are structured around improving that canonical concept. For example, for Taxon terms, the dwc:scientificNameId, with ammendments defined that seek to validate that canonical term or populate empty values from other terms, with the canonical term given priority as the term to which consumers of data should look for quality data.
 
 ## 4 Date and Time Issues
 
