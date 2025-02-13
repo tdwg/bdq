@@ -629,6 +629,56 @@ These vocabularies all fed into a formal description of the Tests as terms in th
 
 A few terms in the vocabulary table were seen as glossary terms (e.g. "geodetic datum") for which a formal vocabulary is not required.  These are presented in tables as a glossary in relevant descriptive documents. 
 
+### 3,11 Principles of Test Design
+
+The bdqffdq ontology provides a description of the specifications for a test, a standard interface for test invocation, and a description of the content of test results.  Tests are thus all specified following the bdqffdq ontology.
+
+All tests require both a concise description of the specification and a pair of examples.
+
+Each test specification must be as simple as possible.
+
+Each test specification of the expected ressponse should follow a standard form, 
+
+Each test specification should be as atomic as possible, dealing with only a single evaluation.  For example, evaluating dwc:minimumDepthInMeters should involve separate tests to evaluate if a value is present, if the value is numeric, if the value is within a reasonable range, or if the minimumDepthInMeters is smaller or equal to the maximumDepthInMeters.  These should not be combined into a single test, though tests that rely upon an interpretable value may build on a logic that evaluate as INTERNAL_PREREQUISITES_NOT_MET if no value is present or if it is not interpretable before proceeding to the central assertion of the test.
+
+A consistent concept of EMPTY is used across all tests, tests must reference this concept rather than test specific concepts of empty values.
+
+Tests should be informative when applied to data found in the wild.
+
+Tests must be possible, and preferably simple, to implement
+
+Tests should be mandatory for enhancements, ?? TODO: unclear what is meant here ??
+
+In general, have power in that they will not likely result in 0% or 100% of all record hits (e.g. a validation should not in general be expected to return NOT_COMPLIANT for almost all data in the wild), however, Tests may identify non-compliant data in a large portion of cases if they make an important point about quality that should be, but is not currently met by the community (e.g. EMPTY dcterms:license).
+
+Tests should be widely applicable, address quality needs, and must be tied to at least one identified Use Case.   Test developmen should not start with "here's a term, these are sane values it could hold", but rather with "here is an identified need for quality in the values in this term".  
+
+Tests evaluate values based on the normative defintition of the term, and against non-normative guidance provided with the term, and may bring in other concepts from the real world (e.g. practical limits on elevation and depth) or vocabularies.
+
+When testing consistency between or among terms, values in one term that is non-EMPTY are not held to be inconsistent with EMPTY terms.
+
+Tests must not ascribe precision where it is unknown.   
+
+Spatial intersections may require spatial buffering, e.g., COUNTRYCODE_FROM_COORDINATES, and this should be made explicit in test definitions.
+
+Ammendments which propose conversions or transformations of values should do so in a way that is reversible.
+
+If testing the value of terms that have practical ranges (e.g., dwc:maximumElevationInMeters) some actual value should be used as a limit (e.g., the height of Mount Everest: 8848m provides an appropriate value as a limit to the largest valid maximum elevation value).
+
+Tests should be deterministic.  When presented with the same data and the same configuration, different test implementations and different runs of the same test ad different times on the same data and configuration should produce the same results.  Each test which references a controlled vocabulary must do so with an explicit statement of what the source authority for that vocabulary is.  
+
+Tests may be parameterized to accomodate national requirements or use case specific variations in quality needs.  For example, “minimum depth in meters is greater than indicated on GEBCO chart”.  Defaults in different Use Cases will need to be accommodated- e.g., WGS84 assumed as a geodetic datum in many cases, but not all, and such cases should be addressed by parameterizing tests to allow for different behaviors of the same test for different data quality needs.
+
+Ammendments must be explicit about whether they propose to fill in EMPTY values, or propose changes to existing values.  
+
+Leading/trailing whitespace in values shall cause validations against controlled vocabularies to be NOT_COMPLIANT, shall be proposed to be removed by amendments, and may be ignored when evaluating numeric values.
+
+In general, tests are possible for terms where the value is bounded by real world extents, or an agreed vocabulary.
+
+Tests should not attempt to validate the content of literal verbatim (e.g., verbatimLocality) terms, though such terms may be informative for evaluation or amendment of other terms.
+
+For each concept area (e.g. DarwinCore class), a canonical term or set of terms is identified, and tests are structured around improving that canonical concept, e.g. for Taxon terms, the dwc:scientificNameId, with ammendments defined that seek to validate that canonical term or populate empty values from other terms, with the canonical term given priority as the term to which consumers of data should look for quality data.
+
 ## 4 Date and Time Issues
 
 BDQ Core avoids analysis of two 'time' and 'date' issues, time zones and geographic and temporal variation in the change from Julian to Gregorian calendars.
