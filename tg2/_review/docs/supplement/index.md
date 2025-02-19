@@ -136,7 +136,7 @@ An internationally agreed standard suite of core tests and resulting assertions 
 - Capable of elevating the significance of an issue (e.g., no value for dcterms:license), or
 - Aspirational in the sense of encouraging priority developments in the biodiversity informatics domain (e.g., testing for any annotations against a record)
 
-These can be considered as the basic principles in the development of the Tests, and are elaborated in Section 3.11. 
+These can be considered as the basic principles in the development of the Tests, and are elaborated in [Section 3.11](#311-principles-of-test-design).
 
 The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE Tests largely cover data quality with regards to what organism has occurred where, at what place and time, and are a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that we considered to be critical metadata about occurrence records.
 
@@ -677,11 +677,13 @@ A few terms in the vocabulary table were seen as glossary terms (e.g. "geodetic 
 
 ### 3.11 Principles of Test Design
 
-This is an elaboation of the summary of the key criteria of the BDQ Core Tests in Section 2.1.
+This is an elaboation of the summary of the key criteria of the BDQ Core Tests in [Section 2.1](#21-definition-of-core).
 
-Test The bdqffdq ontology provides a description of the specifications for a test, a standard interface for test invocation, and a description of the content of test results.  Tests are thus all specified following the bdqffdq ontology.
+The bdqffdq ontology provides a description of the specifications for a test, a standard interface for test invocation, and a description of the content of test results.  Tests are thus all specified following the bdqffdq ontology.
 
-Tests should be informative when applied to data found in the wild. Each Test provides information about some aspect of the 'quality' / 'fitness for use' of the data. While the Tests have been developed to address a wide variety of needs, we accept that some tests may of course, not be applicable in some domains; some tests may be irrelevant in some contexts. Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the community acceptance and understanding of Darwin Core.
+Tests should be informative when applied to data found in the wild. Each Test provides information about some aspect of the 'quality' / 'fitness for use' of the data for some specified purpose. While the Tests have been developed to address a wide variety of needs, we accept that some tests may of course, not be applicable in some domains; some tests may be irrelevant in some contexts.  A suite of tests assembled for some Use Case should all be informative for that Use Case.
+
+Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the community acceptance and understanding of Darwin Core.
 
 All tests require both a concise description of the specification and a pair of examples, one for a pass scenario and one for a fail. The Specification has been designed to communicate concisely about the nature of the Tests to implementers; where any ambiguity will invalidate a Test.
 
@@ -693,7 +695,6 @@ A consistent concept and definition of EMPTY is used across all Tests, tests mus
 
 VALIDATION Type Tests are mandatory before running the equivalent VALIDATION type Test. For example, a VALIDATION of a Darwin Core term such as dwc:occurrenceStatus is first evaluated against a Source Authority BEFORE an AMENDMENT Test may be run against that term. Generally, the process for applying BDQ Core Tests is VALIDATE-AMEND-REVALIDATE.
 
-Ammendments which propose conversions or transformations of values should do so in a way that is reversible.
 
 In general, Tests have power in that they will not likely result in 0% or 100% of all record hits (e.g. a VALIDATION type Test should not in general be expected to return NOT_COMPLIANT for almost all data in the wild or COMPLIANT for all wild data). Tests may however identify non-compliant data in a large portion of cases where we highlight an important point about quality that should be, but is not currently met by the community, e.g. where dcterms:license is EMPTY. 
 
@@ -701,13 +702,15 @@ Tests are widely applicable, address quality needs, and must be tied to at least
 
 Tests evaluate values based on the normative definition of the term, and against non-normative guidance provided with the term, and may bring in other concepts from the real world (e.g. practical limits on elevation and depth) or vocabularies.
 
-When testing consistency between or among terms, values in one term that is non-EMPTY are not held to be inconsistent with EMPTY terms. **@chicoreus...need a good example.**
+When testing consistency between or among terms, values in one term that is non-EMPTY are not held to be inconsistent with EMPTY terms. For example, in the Test [VALIDATION_EVENT_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f), if dwc:eventDate is '2016-12-04' and dwc:day is '4', and the other event terms are empty, the absence of values in dwc:year and dwc:month does not make the values that are present inconsistent.
 
-Tests must not ascribe precision where it is unknown. **@chicoreus...need a good example.**
+Ammendments which propose conversions or transformations of values should do so in a way that is reversible.  For example in [MINDEPTHMAXDEPTH_FROM_VERBATIM](c5658b83-4471-4f57-9d94-bf7d0a96900c) a verbatim depth of "10 feet" should be converted to 3.048 to fill in the minimum and maximum depths in meters.
+
+Except where required for reversablity, tests must not ascribe precision where it is unknown.  For example, in [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7), when the value "EPSG:4326" is assumed to be the datum, the value of coordinateUncertaintyInMeters is increased to reflect the added uncertainty, not left unchanged reflecting a potentially false higher precision.  
 
 Spatial buffering is explcitly REQUIRED in the Specification for spatial intersections Tests (e.g., point in polygon). For example, the Test COUNTRYCODE_FROM_COORDINATES.
 
-If testing the value of terms that have practical ranges (e.g., dwc:maximumElevationInMeters), real-world values should be used as a limit. For example, the height of Mount Everest: 8848m provides an appropriate value as a limit to the largest valid maximum elevation value.
+If testing the value of terms that have practical ranges (e.g., dwc:maximumElevationInMeters), real-world values should be used as a limit. For example, the height of Mount Everest: 8848m provides an appropriate value as a limit to the largest valid maximum elevation value. 
 
 Tests should be deterministic.  When presented with the same data and the same configuration, different test implementations and different runs of the same test ad different times on the same data and configuration should produce the same results.  Each test which references a controlled vocabulary must do so with an explicit statement of what the source authority for that vocabulary is.  
 
