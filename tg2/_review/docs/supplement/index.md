@@ -681,7 +681,9 @@ A few terms in the vocabulary table were seen as glossary terms (e.g. "geodetic 
 
 ### 3.11 Principles of Test Design
 
-This is an elaboration of the summary of the key criteria of the BDQ Core Tests in [Section 2.1](#21-definition-of-core).
+This section provides an elaboration of the summary of the key criteria of the BDQ Core Tests in [Section 2.1](#21-definition-of-core).
+
+The principles of data quality test design emphasize simplicity, clarity, and atomicity in test specifications. Tests should be deterministic, reversible when applicable, and avoid false precision while using realistic benchmarks. They should refrain from validating verbatim terms, and be designed to produce consistent, meaningful results across different implementations and datasets.
 
 #### 3.11.1 General concepts for specifications
 
