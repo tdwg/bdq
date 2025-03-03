@@ -1804,10 +1804,10 @@
 	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
-	<skos:note>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". "not recorded" is however not a valid EPSG code, so the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".</skos:note>
+	<skos:note>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 </rdf:Description>
@@ -1819,11 +1819,11 @@
 	<rdfs:label>Information Element ActedUpon dwc:geodeticDatum</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-03</dcterms:issued>
 	<dcterms:bibliographicCitation>Maptiler (2019) EPSG.io. https://epsg.io/&lt;/li&gt; &lt;li&gt;EPSG (2024) About the EPSG Dataset. https://epsg.org/&lt;/li&gt; &lt;li&gt;Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/&lt;/li&gt; &lt;li&gt;Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/&lt;/li&gt; &lt;li&gt;Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853&lt;/li&gt; &lt;li&gt;Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</dcterms:bibliographicCitation>
-	<rdfs:comment>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</rdfs:comment>
+	<rdfs:comment>Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/59</skos:historyNote>
 	<rdfs:label>VALIDATION_GEODETICDATUM_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1"/>
@@ -1832,16 +1832,16 @@
 
 <rdf:Description rdf:about="urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<skos:note>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</skos:note>
+	<skos:note>TG2 Validation SPACE Test VOCABULARY Conformance CORE</skos:note>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<skos:example>dwc:geodeticDatum="epsg:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"</skos:example>
+	<skos:example>dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"</skos:example>
 	<skos:example>dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: VALIDATION_GEODETICDATUM_STANDARD</rdfs:label>
 </rdf:Description>
 
@@ -1850,17 +1850,17 @@
 	<skos:historyNote>Source: ALA, GBIF</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
-	<skos:note>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</skos:note>
+	<skos:note>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see  https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-03</dcterms:issued>
 	<dcterms:bibliographicCitation>Maptiler (2019) EPSG.io. https://epsg.io/&lt;/li&gt; &lt;li&gt;EPSG (2024) About the EPSG Dataset. https://epsg.org/&lt;/li&gt; &lt;li&gt;Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/&lt;/li&gt; &lt;li&gt;Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/&lt;/li&gt; &lt;li&gt;Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853&lt;/li&gt; &lt;li&gt;Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/60</skos:historyNote>
@@ -1871,8 +1871,8 @@
 
 <rdf:Description rdf:about="urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<skos:note>TG2 Amendment SPACE Test VOCABULARY NEEDS WORK Conformance CORE</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12"/>
+	<skos:note>TG2 Amendment SPACE Test VOCABULARY Conformance CORE</skos:note>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10">
@@ -1880,8 +1880,8 @@
 	<skos:example>dwc:geodeticDatum="WGS84": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", Response.comment="dwc:geodeticDatum contains a valid code in the bdq:sourceAuthority"</skos:example>
 	<skos:example>dwc:geodeticDatum="WGS8": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an ambiguous value"</skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</hasExpectedResponse>
+	<rdfs:comment>EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</hasExpectedResponse>
 	<rdfs:label>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
@@ -2521,7 +2521,7 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
@@ -2531,9 +2531,9 @@
 	<rdfs:label>AssumedDefault</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13">
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:AssumedDefault"/>
-	<skos:note>There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)</skos:note>
+	<skos:note>There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 </rdf:Description>
 
@@ -2544,7 +2544,7 @@
 	<rdfs:label>Information Element ActedUpon dwc:occurrenceStatus</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e251108c-ae49-46fa-b5db-d955fd0f4fa4"/>
 </rdf:Description>
 
@@ -2556,9 +2556,9 @@
 	<rdfs:label>Information Element Consulted dwc:individualCount, dwc:organismQuantity</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13">
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2c32cfc9-66d2-4512-9ebb-b3253c7b5dd5"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-13</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/75</skos:historyNote>
@@ -2570,35 +2570,35 @@
 <rdf:Description rdf:about="urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<skos:note>TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<skos:example>dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "Present""</skos:example>
+	<skos:example>dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "present""</skos:example>
 	<skos:example>dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:defaultOccurrenceStatus default = "Present"</hasAuthoritiesDefaults>
-	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = "Present"</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:defaultOccurrenceStatus default = "present"</hasAuthoritiesDefaults>
+	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = "present"</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</hasExpectedResponse>
 	<rdfs:label>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c">
+<rdf:Description rdf:about="urn:uuid:bc6fc873-9e8f-42ec-9037-7b09d2ebb3a4">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Present</hasArgumentValue>
-	<rdfs:label>Default value for bdq:defaultOccurrenceStatus:"Present"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">present</hasArgumentValue>
+	<rdfs:label>Default value for bdq:defaultOccurrenceStatus:"present"</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="bdq:defaultOccurrenceStatus">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c">
+<rdf:Description rdf:about="urn:uuid:bc6fc873-9e8f-42ec-9037-7b09d2ebb3a4">
 	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:defaultOccurrenceStatus"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bc6fc873-9e8f-42ec-9037-7b09d2ebb3a4"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd">
@@ -3504,7 +3504,7 @@
 	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:AssumedDefault"/>
@@ -3520,10 +3520,10 @@
 	<rdfs:label>Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71"/>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-03</dcterms:issued>
 	<dcterms:bibliographicCitation>Maptiler (2019) EPSG.io. https://epsg.io/&lt;/li&gt; &lt;li&gt;EPSG (2024) About the EPSG Dataset. https://epsg.org/&lt;/li&gt; &lt;li&gt;Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/&lt;/li&gt; &lt;li&gt;Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/&lt;/li&gt; &lt;li&gt;Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853&lt;/li&gt; &lt;li&gt;Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/102</skos:historyNote>
@@ -3534,8 +3534,8 @@
 
 <rdf:Description rdf:about="urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<skos:note>TG2 Amendment SPACE Test NEEDS WORK Completeness Parameterized CORE</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12"/>
+	<skos:note>TG2 Amendment SPACE Test Completeness Parameterized CORE</skos:note>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997">
@@ -3952,14 +3952,14 @@
 	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
-	<skos:note>The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. There is however, currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.</skos:note>
+	<skos:note>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core.    Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e251108c-ae49-46fa-b5db-d955fd0f4fa4"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-03</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/115</skos:historyNote>
@@ -3971,28 +3971,28 @@
 <rdf:Description rdf:about="urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<skos:note>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<skos:example>dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="Present", Response.comment="Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent"</skos:example>
+	<skos:example>dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="present", Response.comment="Input field contains an interpretable value. "</skos:example>
 	<skos:example>dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Regex present/absent" {["^(present\</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Regex present/absent" {["^(present\</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</hasExpectedResponse>
 	<rdfs:label>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:c3346048-0cd3-4efe-9544-89dd8f0482ea">
+<rdf:Description rdf:about="urn:uuid:91f2fbdd-6809-4cc4-aac6-de895e35427b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF OccurrenceStatus Vocabulary</hasArgumentValue>
-	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF OccurrenceStatus Vocabulary"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Regex present/absent</hasArgumentValue>
+	<rdfs:label>Default value for bdq:sourceAuthority:"Regex present/absent"</rdfs:label>
 	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3346048-0cd3-4efe-9544-89dd8f0482ea"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:91f2fbdd-6809-4cc4-aac6-de895e35427b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2">
@@ -4002,14 +4002,14 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
-	<skos:note>The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
+	<skos:note>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the dwc:occurrenceStatus vocabulary for this test. There is currently a mismatch between the (authoritative) lower case values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the vocabulary at GBIF (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), which capitalized the first character. This test must return NOT_COMPLIANT if there are case differences, leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e251108c-ae49-46fa-b5db-d955fd0f4fa4"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-12</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-03</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/116</skos:historyNote>
@@ -4027,23 +4027,23 @@
 
 <rdf:Description rdf:about="urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<skos:example>dwc:occurrenceStatus="Present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"</skos:example>
+	<skos:example>dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"</skos:example>
 	<skos:example>dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Regex present/absent" {["^(present\</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "Regex present/absent" {["^(present\</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:33c250e0-dc02-4acd-8fc9-985d208fbd1f">
+<rdf:Description rdf:about="urn:uuid:70e8211d-6588-4a88-a97d-af703e288f87">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF OccurrenceStatus Vocabulary</hasArgumentValue>
-	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF OccurrenceStatus Vocabulary"</rdfs:label>
+	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Regex present/absent</hasArgumentValue>
+	<rdfs:label>Default value for bdq:sourceAuthority:"Regex present/absent"</rdfs:label>
 	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:33c250e0-dc02-4acd-8fc9-985d208fbd1f"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:70e8211d-6588-4a88-a97d-af703e288f87"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:acc05ff6-b1c8-4001-8aad-930a9b9ccaf8">
@@ -4051,7 +4051,7 @@
 	<skos:historyNote>Source: ALA</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05">
@@ -6003,16 +6003,16 @@
 
 <rdf:Description rdf:about="urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"/>
-	<rdfs:label>MeasurementPolicy: (4) measures  in UseCase bdq:Spatial-Temporal_Patterns</rdfs:label>
+	<rdfs:label>MeasurementPolicy: (4) measures  in UseCase bdq:Record-Management</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Record-Management">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
-	<rdfs:label>bdq:Spatial-Temporal_Patterns</rdfs:label>
+	<rdfs:label>bdq:Record-Management</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68">
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"/>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Record-Management"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
@@ -6021,20 +6021,19 @@
 
 <rdf:Description rdf:about="urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
-	<rdfs:label>ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species</rdfs:label>
+	<rdfs:label>ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Alien-Species">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
-	<rdfs:label>bdq:Alien-Species</rdfs:label>
+	<rdfs:label>bdq:Biotic-Relationships</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d">
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2024-09-04"/>
@@ -6042,64 +6041,63 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-09-07"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"/>
-	<skos:prefLabel>ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species</skos:prefLabel>
+	<skos:prefLabel>ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
-	<rdfs:label>ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"/>
+	<rdfs:label>ValidationPolicy: (69) validations  in UseCase bdq:Record-Management</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Record-Management"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-18"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-09-24"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2024-09-04"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-10-14"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-09-26"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2024-09-06"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"/>
@@ -6107,19 +6105,31 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2024-09-16"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"/>
-	<skos:prefLabel>ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns</skos:prefLabel>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"/>
+	<skos:prefLabel>ValidationPolicy: (69) validations  in UseCase bdq:Record-Management</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:022bd662-3052-4771-8e54-f4f74803ccc5">
@@ -6170,24 +6180,21 @@
 
 <rdf:Description rdf:about="urn:uuid:10e8008c-c947-4327-867e-7899de98eb2c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"/>
-	<rdfs:label>AmendmentPolicy: (10) amendments  in UseCase bdq:Alien-Species</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<rdfs:label>AmendmentPolicy: (7) amendments  in UseCase bdq:Biotic-Relationships</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2024-09-07"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"/>
-	<rdfs:label>AmendmentPolicy: (19) amendments  in UseCase bdq:Spatial-Temporal_Patterns</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"/>
+	<rdfs:label>AmendmentPolicy: (28) amendments  in UseCase bdq:Record-Management</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Record-Management"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2024-09-16"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"/>
@@ -6195,34 +6202,41 @@
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-25"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-09-12"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2024-09-05"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-11-08"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"/>
+	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
-	<rdfs:label>IssuePolicy: (1) issues  in UseCase bdq:Alien-Species</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Alien-Species"/>
+	<rdfs:label>IssuePolicy: (1) issues  in UseCase bdq:Biotic-Relationships</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
-	<rdfs:label>IssuePolicy: (3) issues  in UseCase bdq:Spatial-Temporal_Patterns</rdfs:label>
-	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"/>
+	<rdfs:label>IssuePolicy: (1) issues  in UseCase bdq:Record-Management</rdfs:label>
+	<hasUseCase xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Record-Management"/>
 	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"/>
-	<includesInPolicy xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05"/>
 </rdf:Description>
 
 </rdf:RDF>

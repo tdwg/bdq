@@ -5249,7 +5249,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5260,7 +5260,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". \"not recorded\" is however not a valid EPSG code, so the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\"."
+                "@value": "Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". While \"not recorded\" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"EPSG:4326\"."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -5280,7 +5280,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-03-03",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5291,7 +5291,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?"
+                "@value": "Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -5343,7 +5343,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE"
+                "@value": "TG2 Validation SPACE Test VOCABULARY Conformance CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5368,7 +5368,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03"
             }
         ]
     },
@@ -5379,7 +5379,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "dwc:geodeticDatum=\"epsg:4326\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority\""
+                "@value": "dwc:geodeticDatum=\"EPSG:4326\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority\""
             },
             {
                 "@value": "dwc:geodeticDatum=\"7030\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum\""
@@ -5387,17 +5387,17 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}"
+                "@value": "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value \"not recorded\"; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value \"not recorded\"; otherwise NOT_COMPLIANT"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5407,7 +5407,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5423,7 +5423,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts. For the purposes of this test \"not recorded\" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED."
+                "@value": "Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see  https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this test \"not recorded\" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -5438,7 +5438,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-03-03",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5480,12 +5480,12 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment SPACE Test VOCABULARY NEEDS WORK Conformance CORE"
+                "@value": "TG2 Amendment SPACE Test VOCABULARY Conformance CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5529,12 +5529,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}"
+                "@value": "EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value \"not recorded\"; otherwise NOT_AMENDED bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED"
+                "@value": "EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value \"not recorded\"; otherwise NOT_AMENDED"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -7501,7 +7501,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7517,7 +7517,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)"
+                "@value": "There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -7537,7 +7537,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-02-13",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7640,7 +7640,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7671,7 +7671,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "dwc:occurrenceStatus=\"\", dwc:individualCount=\"\", dwc:organismQuantity=\"\": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"dwc:occurrenceStatus is bdq:Empty; assumed \"Present\"\""
+                "@value": "dwc:occurrenceStatus=\"\", dwc:individualCount=\"\", dwc:organismQuantity=\"\": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"dwc:occurrenceStatus is bdq:Empty; assumed \"present\"\""
             },
             {
                 "@value": "dwc:occurrenceStatus=\"X\", dwc:individualCount=\"10\", dwc:organismQuantity=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:occurrenceStatus is bdq:NotEmpty\""
@@ -7679,12 +7679,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:defaultOccurrenceStatus default = \"Present\""
+                "@value": "bdq:defaultOccurrenceStatus default = \"present\""
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"Present\""
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"present\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -7699,23 +7699,23 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c"
+                "@id": "urn:uuid:ed6ff139-ee7e-4e45-bf9e-9f3876938218"
             }
         ]
     },
     {
-        "@id": "urn:uuid:759dc2d8-f40f-4bad-b333-e90690929f6c",
+        "@id": "urn:uuid:ed6ff139-ee7e-4e45-bf9e-9f3876938218",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
             {
-                "@value": "Present"
+                "@value": "present"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Default value for bdq:defaultOccurrenceStatus:\"Present\""
+                "@value": "Default value for bdq:defaultOccurrenceStatus:\"present\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
@@ -10633,7 +10633,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -10669,7 +10669,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-03-03",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10735,12 +10735,12 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment SPACE Test NEEDS WORK Completeness Parameterized CORE"
+                "@value": "TG2 Amendment SPACE Test Completeness Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12036,7 +12036,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -12052,7 +12052,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "The original recommended controlled vocabulary for this term consisted of \"present\" and \"absent\", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. There is however, currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence."
+                "@value": "The recommended controlled vocabulary for this term consists of \"present\" and \"absent\", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core.    Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -12067,7 +12067,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-03-03",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12114,7 +12114,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12145,7 +12145,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "dwc:occurrenceStatus=\"1\": Response.status=AMENDED, Response.result=dwc:occurrenceStatus=\"Present\", Response.comment=\"Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent\""
+                "@value": "dwc:occurrenceStatus=\"1\": Response.status=AMENDED, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"Input field contains an interpretable value. \""
             },
             {
                 "@value": "dwc:occurrenceStatus=\"X\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"Input field contains uninterpretable value \"X\""
@@ -12153,12 +12153,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}"
+                "@value": "bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -12173,23 +12173,23 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:c3346048-0cd3-4efe-9544-89dd8f0482ea"
+                "@id": "urn:uuid:7c1bd181-2f54-49cc-bb5b-dd2d0a38e921"
             }
         ]
     },
     {
-        "@id": "urn:uuid:c3346048-0cd3-4efe-9544-89dd8f0482ea",
+        "@id": "urn:uuid:7c1bd181-2f54-49cc-bb5b-dd2d0a38e921",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
             {
-                "@value": "GBIF OccurrenceStatus Vocabulary"
+                "@value": "Regex present/absent"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Default value for bdq:sourceAuthority:\"GBIF OccurrenceStatus Vocabulary\""
+                "@value": "Default value for bdq:sourceAuthority:\"Regex present/absent\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
@@ -12199,7 +12199,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12210,7 +12210,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "The original recommended controlled vocabulary for this term consisted of \"present\" and \"absent\", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters."
+                "@value": "The recommended controlled vocabulary for this term consists of \"present\" and \"absent\", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the dwc:occurrenceStatus vocabulary for this test. There is currently a mismatch between the (authoritative) lower case values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the vocabulary at GBIF (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), which capitalized the first character. This test must return NOT_COMPLIANT if there are case differences, leading or trailing whitespace or there are leading or trailing non-printing characters."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -12230,7 +12230,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-03-03",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12303,7 +12303,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"
             }
         ]
     },
@@ -12314,7 +12314,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "dwc:occurrenceStatus=\"Present\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:occurrenceStatus matches a term in the bdq:sourceAuthority\""
+                "@value": "dwc:occurrenceStatus=\"present\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:occurrenceStatus matches a term in the bdq:sourceAuthority\""
             },
             {
                 "@value": "dwc:occurrenceStatus=\"presence\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority\""
@@ -12322,12 +12322,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}"
+                "@value": "bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"GBIF OccurrenceStatus Vocabulary\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {\"dwc:occurrenceStatus vocabulary API\" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -12342,23 +12342,23 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:33c250e0-dc02-4acd-8fc9-985d208fbd1f"
+                "@id": "urn:uuid:ae0878ca-01d5-433c-93de-f558ffa94949"
             }
         ]
     },
     {
-        "@id": "urn:uuid:33c250e0-dc02-4acd-8fc9-985d208fbd1f",
+        "@id": "urn:uuid:ae0878ca-01d5-433c-93de-f558ffa94949",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
             {
-                "@value": "GBIF OccurrenceStatus Vocabulary"
+                "@value": "Regex present/absent"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Default value for bdq:sourceAuthority:\"GBIF OccurrenceStatus Vocabulary\""
+                "@value": "Default value for bdq:sourceAuthority:\"Regex present/absent\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
@@ -18645,12 +18645,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (4) measures  in UseCase bdq:Spatial-Temporal_Patterns"
+                "@value": "MeasurementPolicy: (4) measures  in UseCase bdq:Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -18669,13 +18669,13 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns",
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "bdq:Spatial-Temporal_Patterns"
+                "@value": "bdq:Record-Management"
             }
         ]
     },
@@ -18686,12 +18686,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species"
+                "@value": "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -18703,9 +18703,6 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
@@ -18729,9 +18726,6 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
             },
             {
@@ -18747,16 +18741,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
@@ -18765,28 +18753,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-09-07"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
@@ -18794,18 +18764,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species"
+                "@value": "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships"
             }
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species",
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "bdq:Alien-Species"
+                "@value": "bdq:Biotic-Relationships"
             }
         ]
     },
@@ -18816,12 +18786,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns"
+                "@value": "ValidationPolicy: (69) validations  in UseCase bdq:Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -18832,7 +18802,13 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-09-24"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2024-09-04"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04"
@@ -18842,6 +18818,9 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-10-14"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04"
@@ -18856,10 +18835,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2024-09-04"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-09-26"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06"
@@ -18871,13 +18850,16 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2024-09-04"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16"
@@ -18889,19 +18871,25 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2024-09-05"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2024-09-05"
@@ -18914,6 +18902,12 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-12"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2024-09-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
@@ -18937,13 +18931,22 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2024-09-16"
@@ -18961,6 +18964,12 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2024-09-05"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2024-09-05"
             },
             {
@@ -18970,12 +18979,33 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns"
+                "@value": "ValidationPolicy: (69) validations  in UseCase bdq:Record-Management"
             }
         ]
     },
@@ -19113,12 +19143,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "AmendmentPolicy: (10) amendments  in UseCase bdq:Alien-Species"
+                "@value": "AmendmentPolicy: (7) amendments  in UseCase bdq:Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -19126,28 +19156,19 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2024-09-07"
-            },
-            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
@@ -19161,12 +19182,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "AmendmentPolicy: (19) amendments  in UseCase bdq:Spatial-Temporal_Patterns"
+                "@value": "AmendmentPolicy: (28) amendments  in UseCase bdq:Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -19192,7 +19213,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16"
@@ -19210,13 +19234,19 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-25"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"
@@ -19225,7 +19255,25 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-09-12"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2024-09-05"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-11-08"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
             }
         ]
     },
@@ -19236,12 +19284,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "IssuePolicy: (1) issues  in UseCase bdq:Alien-Species"
+                "@value": "IssuePolicy: (1) issues  in UseCase bdq:Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Alien-Species"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
@@ -19257,23 +19305,17 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "IssuePolicy: (3) issues  in UseCase bdq:Spatial-Temporal_Patterns"
+                "@value": "IssuePolicy: (1) issues  in UseCase bdq:Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/Record-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05"
             }
         ]
     }

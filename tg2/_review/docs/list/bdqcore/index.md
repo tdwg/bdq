@@ -2422,7 +2422,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2498,7 +2498,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test NEEDS WORK Completeness Parameterized CORE</td>
+			<td>TG2 Amendment SPACE Test Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2511,14 +2511,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -2541,7 +2533,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2024-11-12</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -2549,11 +2541,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -2565,7 +2557,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -2613,11 +2605,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
+			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see  https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
+			<td>TG2 Amendment SPACE Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2626,14 +2618,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2993,7 +2977,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-12</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2024-11-13</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -3001,11 +2985,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-02-13</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-11-12</td>
+			<td>2024-11-13</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -3037,7 +3021,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:defaultOccurrenceStatus default = "Present"</td>
+			<td>bdq:defaultOccurrenceStatus default = "present"</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -3061,7 +3045,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "Present""],[dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"]</td>
+			<td>[dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "present""],[dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"]</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -3069,7 +3053,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)</td>
+			<td>There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -3080,20 +3064,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>Guids for Arguments</td>
-			<td>759dc2d8-f40f-4bad-b333-e90690929f6c</td>
-		</tr>
-		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -3116,7 +3088,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2024-07-26</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -3124,11 +3096,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-07-26</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -3156,7 +3128,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
+			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -3180,7 +3152,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="Present", Response.comment="Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent"],[dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"]</td>
+			<td>[dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="present", Response.comment="Input field contains an interpretable value. "],[dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"]</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -3188,7 +3160,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. There is however, currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.</td>
+			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core.    Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -3199,20 +3171,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>Guids for Arguments</td>
-			<td>c3346048-0cd3-4efe-9544-89dd8f0482ea</td>
-		</tr>
-		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -4940,7 +4900,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2024-11-11</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -4948,11 +4908,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-11-11</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -4964,7 +4924,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -4976,7 +4936,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
+			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -5008,7 +4968,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10056,7 +10016,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -10064,11 +10024,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-18</td>
+			<td>2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -10092,7 +10052,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
+			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -10129,10 +10089,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>Guids for Arguments</td>
-			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -12044,7 +12000,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2024-11-11</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -12052,11 +12008,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-11-11</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -12068,7 +12024,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -12080,7 +12036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
+			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -12112,7 +12068,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17160,7 +17116,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -17168,11 +17124,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-18</td>
+			<td>2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -17196,7 +17152,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
+			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -17233,10 +17189,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Use Cases</td>
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>Guids for Arguments</td>
-			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -19148,7 +19100,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2024-11-11</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -19156,11 +19108,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2024-11-11</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -19172,7 +19124,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -19184,11 +19136,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
+			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</td>
+			<td>Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19208,7 +19160,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="epsg:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"]</td>
+			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"]</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -19220,11 +19172,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". "not recorded" is however not a valid EPSG code, so the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".</td>
+			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY NEEDS WORK Conformance CORE</td>
+			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19233,14 +19185,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25236,7 +25180,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -25244,11 +25188,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-03</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
-			<td>2023-09-18</td>
+			<td>2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
@@ -25276,7 +25220,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}</td>
+			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -25300,7 +25244,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="Present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"],[dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"]</td>
+			<td>[dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"],[dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -25316,7 +25260,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
+			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the dwc:occurrenceStatus vocabulary for this test. There is currently a mismatch between the (authoritative) lower case values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the vocabulary at GBIF (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), which capitalized the first character. This test must return NOT_COMPLIANT if there are case differences, leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -25327,20 +25271,8 @@ Including MultiRecord Measures
 			<td>bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships</td>
 		</tr>
 		<tr>
-			<td>Guids for Arguments</td>
-			<td>33c250e0-dc02-4acd-8fc9-985d208fbd1f</td>
-		</tr>
-		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>

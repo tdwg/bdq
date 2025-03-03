@@ -1013,16 +1013,16 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 ###  VALIDATION_GEODETICDATUM_STANDARD
 
 ####  Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1/2024-11-11
+https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1/2025-03-03
 Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?
+Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1031,11 +1031,11 @@ dwc:geodeticDatum
 
 #### Default Parameter Values
 
-bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
+bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}
 
 #### Examples
 
-dwc:geodeticDatum="epsg:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"
+dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"
 
 dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"
 
@@ -1046,7 +1046,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". "not recorded" is however not a valid EPSG code, so the Test will return NOT_COMPLIANT. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326".
+Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2073,7 +2073,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 ###  VALIDATION_OCCURRENCESTATUS_STANDARD
 
 ####  Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47/2025-02-18
 Acts upon  SingleRecord
 
 #### Description
@@ -2095,11 +2095,11 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
+bdq:sourceAuthority default = "Regex present/absent" {["^(present\
 
 #### Examples
 
-dwc:occurrenceStatus="Present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"
+dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"
 
 dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"
 
@@ -2110,7 +2110,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the dwc:occurrenceStatus vocabulary for this test. There is currently a mismatch between the (authoritative) lower case values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the vocabulary at GBIF (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), which capitalized the first character. This test must return NOT_COMPLIANT if there are case differences, leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3699,7 +3699,7 @@ The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLon
 ###  AMENDMENT_GEODETICDATUM_STANDARDIZED
 
 ####  Amendment dwc:geodeticDatum Standardized
-https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2024-11-12
+https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0/2025-03-03
 Acts upon  SingleRecord
 
 #### Description
@@ -3708,7 +3708,7 @@ Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuth
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3732,7 +3732,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.
+Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see  https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4214,7 +4214,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 ###  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
 
 ####  Amendment dwc:occurrenceStatus Assumed Default
-https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5/2024-11-12
+https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5/2024-11-13
 Acts upon  SingleRecord
 
 #### Description
@@ -4239,11 +4239,11 @@ bdq:defaultOccurrenceStatus
 
 #### Default Parameter Values
 
-bdq:defaultOccurrenceStatus default = "Present"
+bdq:defaultOccurrenceStatus default = "present"
 
 #### Examples
 
-dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "Present""
+dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "present""
 
 dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"
 
@@ -4254,7 +4254,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)
+There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4262,7 +4262,7 @@ There is currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrence
 ###  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
 
 ####  Amendment dwc:occurrenceStatus Standardized
-https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75/2024-07-26
+https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75/2025-03-03
 Acts upon  SingleRecord
 
 #### Description
@@ -4284,11 +4284,11 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF OccurrenceStatus Vocabulary" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus]} {"dwc:occurrenceStatus vocabulary API" [https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts]}
+bdq:sourceAuthority default = "Regex present/absent" {["^(present\
 
 #### Examples
 
-dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="Present", Response.comment="Input field contains interpretable value. This may be pushing it a little, but I would have interpreted 1/0 as present/absent"
+dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="present", Response.comment="Input field contains an interpretable value. "
 
 dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"
 
@@ -4299,7 +4299,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-The original recommended controlled vocabulary for this term consisted of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. There is however, currently a mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the vocabulary at bdq:sourceAuthority that we are using (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence.
+The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core.    Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -5426,7 +5426,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
 
 ####  Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2024-11-11
+https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63/2025-03-03
 Acts upon  MultiRecord
 
 #### Description
@@ -5435,7 +5435,7 @@ Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are C
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -6176,7 +6176,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
 
 ####  Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2024-11-11
+https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e/2025-03-03
 Acts upon  MultiRecord
 
 #### Description
@@ -6185,7 +6185,7 @@ Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid geographic EPSG code for a CRS, Datum, or ellipsoid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -7406,7 +7406,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
 
 ####  Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7/2025-02-18
 Acts upon  MultiRecord
 
 #### Description
@@ -7646,7 +7646,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard
-https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2023-09-18
+https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862/2025-02-18
 Acts upon  MultiRecord
 
 #### Description
