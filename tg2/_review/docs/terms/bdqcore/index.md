@@ -3656,7 +3656,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.
+Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.
 
 #### Specification
 

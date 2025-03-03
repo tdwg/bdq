@@ -2413,7 +2413,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
   dcterms:issued "2025-03-03"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
-  rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.";
+  rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/102";
   rdfs:label "AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7>;

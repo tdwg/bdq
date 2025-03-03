@@ -612,7 +612,7 @@ Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](ht
   - View in Term-List: [Link](../list/bdqcore/index.md#bdqcore_710fe118-17e1-440f-b428-88ba3f547d6d)
 
 - <a id="bdqcore_7498ca76-c4d4-42e2-8103-acacccbdffa7"></a>AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
-  - Description: Proposes an amendment to fill in dwc:geodeticDatum using a prameterized value if the dwc:geodeticDatum is empty.
+  - Description: Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.
   - View in Quick Reference Guide: [Link](../terms/bdqcore/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT)
   - View in Term-List: [Link](../list/bdqcore/index.md#bdqcore_7498ca76-c4d4-42e2-8103-acacccbdffa7)
 
