@@ -18,14 +18,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix fn: <http://www.w3.org/2005/xpath-functions#> .
 
-<https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-18>
+<https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Standard>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
-  dcterms:issued "2024-09-18"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/20";
@@ -52,12 +52,14 @@
 <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/InformationElement> .
 
 <urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99",
+    "TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047>;
   skos:historyNote "Source: TG2";
   rdfs:label "ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD";
   skos:prefLabel "ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-18> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-05> .
 
 <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod> rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod> .
 
@@ -69,14 +71,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_COUNTRYCODE_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-09-24>
+<https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "Non-country information such as \"high seas\" will fail this test (High Seas should use dwc:countryCode = \"XZ\" and have dwc:country empty).  Getty Place Types for administrative level \"nation\"  are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation.  Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test should find any matches at the Getty \"nation\" level including internationalized names and historical representations of that nation (where boundaries are  same). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Found>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27>;
-  dcterms:issued "2024-09-24"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/21";
@@ -93,12 +95,14 @@
   rdfs:label "Information Element ActedUpon dwc:country" .
 
 <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158",
+    "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND";
   skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-09-24> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-05> .
 
 <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is a valid country name in the bdq:sourceAuthority\"",
@@ -159,14 +163,14 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:06adabf0-e6d4-4f99-819f-7dd38c796617>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/24";
@@ -183,12 +187,14 @@
   rdfs:label "Information Element ActedUpon dwc:minimumDepthInMeters, dwc:maximumDepthInMeters" .
 
 <urn:uuid:07e4c491-0d13-409d-b966-fbb9721e81cf> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L268",
+    "TG2 Validation SPACE CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1>;
   skos:historyNote "Source: ALA, GBIF, OBIS";
   rdfs:label "ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH";
   skos:prefLabel "ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2024-09-04> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-05> .
 
 <urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:minimumDepthInMeters=\"0\", dwc:maximumDepthInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumDepthInMeters = dwc:maximumDepthInMeters\"",
@@ -285,14 +291,14 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:bda769d4-d876-4bd0-8026-89bed5aad0eb>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/30";
@@ -309,12 +315,14 @@
   rdfs:label "Information Element ActedUpon dwc:decimalLongitude" .
 
 <urn:uuid:0ff56b48-f00e-45bd-822e-e04afbcef3e1> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L343",
+    "TG2 Validation SPACE CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4>;
   skos:historyNote "Source: ALA, GBIF, OBIS";
   rdfs:label "ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05> .
 
 <urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLongitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLongitude is in range\"",
@@ -367,7 +375,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were attempted to be run; REPORT of the number of tests of output type VALIDATION run against the record that have Response.result=\"NOT_COMPLIANT\"";
   rdfs:label "Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT" .
 
-<https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
@@ -375,7 +383,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:10a04e3b-9254-49b6-8095-166179cd3707>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:2ad22c2b-cebb-4924-b0e4-b36c64535010>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/32";
@@ -402,8 +410,10 @@
   rdfs:label "Information Element Consulted dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:verbatimCoordinateSystem, dwc:verbatimSRS" .
 
 <urn:uuid:10ad79a1-c93f-4ab2-accf-780867f93957> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test Completeness CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-09-04>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402",
+    "TG2 Amendment SPACE CODED Test Completeness CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04>;
   skos:historyNote "Source: ALA";
   rdfs:label "AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM";
@@ -540,14 +550,14 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"Creative Commons 4.0 Licenses or CC0\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:af5393af-6a71-4e39-aa70-7609ee10d1d0>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_; Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica; Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:minimumElevationInMeters within the Parameter range?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/39";
@@ -561,12 +571,14 @@
   rdfs:label "Information Element ActedUpon dwc:minimumElevationInMeters" .
 
 <urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L582",
+    "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05> .
 
 <urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:minimumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is IN_RANGE\"",
@@ -584,14 +596,14 @@
 
 <bdq:minimumValidElevationInMeters> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
-<https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "Only fails if all of the relevant fields of the Darwin Core Location class are EMPTY or do not exist.  Relevant Darwin Core fields include dwc:locationID, dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:waterBody, dwc:islandGroup, dwc:island, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:locality, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT. Elevation and/or depth alone are deemed insufficient to meaningfully locate a position on the earth.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:033157e4-b8c3-466b-ba9a-38bc9b3ad86d>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in any of the Darwin Core spatial terms that could specify a location?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/40";
@@ -609,12 +621,14 @@
   rdfs:label "Information Element ActedUpon dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:waterBody, dwc:island, dwc:islandGroup, dwc:locality, dwc:locationID, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT" .
 
 <urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Completeness CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672",
+    "TG2 Validation SPACE CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3>;
   skos:historyNote "Source: Lee Belbin";
   rdfs:label "ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2024-09-04> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-05> .
 
 <urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:locationID=\"https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9\", dwc:higherGeographyID=\"\", dwc:higherGeography=\"\",  dwc:continent=\"\", dwc:waterBody=\"\", dwc:islandGroup=\"\", dwc:island=\"\", dwc:country=\"\", dwc:countryCode=\"\", dwc:stateProvince=\"\", dwc:county=\"\", dwc:municipality=\"\", dwc:locality=\"\", dwc:verbatimLocality=\"\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\", dwc:geodeticDatum=\"\", dwc:verbatimCoordinates=\"\", dwc:verbatimLatitude=\"\", dwc:verbatimLongitude=\"\", dwc:footprintWKT=\"\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:LocationID is bdq:NotEmpty\"",
@@ -660,7 +674,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_DCTYPE_STANDARDIZED" .
 
-<https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27>
+<https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "Country is expected to be either bdq:Empty or ideally have a value of \"High seas\" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.";
@@ -668,7 +682,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:d24a7b73-972a-4fdd-a790-91acb5fcf725>;
-  dcterms:issued "2024-09-27"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in dwc:country?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/42";
@@ -682,12 +696,13 @@
   rdfs:label "Information Element Consulted dwc:countryCode" .
 
 <urn:uuid:23e9d641-1349-4998-bdff-117e32c30eff> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "Example Implementations: FilteredPush: geo_ref_qc", "Example Implementations Source Code: [geo_ref_qc DwCGeoRefDQ.validationCountryNotEmpty](https://github.com/FilteredPush/geo_ref_qc/blob/fcad4a3757db9bd6ba36fe41064ce015eeede2e3/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L478)",
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747",
     "TG2 Validation SPACE CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db>;
   rdfs:label "ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-05> .
 
 <urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is bdq:NotEmpty\"",
@@ -776,14 +791,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09>
+<https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized>;
   skos:note "This test supports conformance with the recommendation in the comment on dwc:countryCode: \"Recommended best practice is to use an ISO 3166-1-alpha-2 country code. \"  Three letter codes should be amended to the matching two letter code.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
-  dcterms:issued "2024-11-09"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.";
   rdfs:comment "Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/48";
@@ -792,8 +807,10 @@
   skos:prefLabel "Amendment dwc:countryCode Standard for SingleRecord" .
 
 <urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931",
+    "TG2 Amendment SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a>;
   rdfs:label "AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED";
   skos:prefLabel "AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED" .
@@ -844,14 +861,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_YEAR_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-09-26>
+<https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country.  Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:6f6a46c6-9979-41a2-83c2-fd196e89c8c1>;
-  dcterms:issued "2024-09-26"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents";
   rdfs:comment "Do the geographic coordinates fall on or within the boundaries of the territory given in dwc:countryCode or its Exclusive Economic Zone?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/50";
@@ -869,13 +886,14 @@
   rdfs:label "Information Element ActedUpon dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude" .
 
 <urn:uuid:2afcbce1-7cf8-4c5c-9df4-d267dc2df704> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "Example Implementations: Kurator:geo_ref_qc", "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L80",
-    "TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1005",
+    "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f>;
   skos:historyNote "Source: ALA, GBIF, iDigBio";
   rdfs:label "ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT";
   skos:prefLabel "ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2024-09-26> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-05> .
 
 <urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:countryCode=\"AR\", dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"Coordinates match dwc:countryCode\"",
@@ -892,7 +910,7 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06>
+<https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation tests treat \"brackish\" in WoRMS as both marine and terrestrial.   Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.";
@@ -900,7 +918,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9d387033-c581-4fb5-9af2-73ec89c99e77>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:328124cc-fa45-495a-9c39-b7b5d9aa79c5>;
-  dcterms:issued "2024-09-06"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org/</li> <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org/; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org/ ; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; Natural Earth (2009) Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip; Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse";
   rdfs:comment "Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/51";
@@ -919,12 +937,14 @@
   rdfs:label "Information Element Consulted dwc:scientificName" .
 
 <urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198",
+    "TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305>;
   skos:historyNote "Source: ALA, OBIS";
   rdfs:label "ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT";
   skos:prefLabel "ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-05> .
 
 <urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\", dwc:scientificName=\"Aegla neuquensis\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"The species is freshwater aquatic and the coordinates fall in a lake and thus COMPLIANT\"",
@@ -986,7 +1006,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_EVENT_FROM_EVENTDATE" .
 
-<https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10>
+<https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Transposed>;
@@ -994,7 +1014,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9d387033-c581-4fb5-9af2-73ec89c99e77>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:d24a7b73-972a-4fdd-a790-91acb5fcf725>;
-  dcterms:issued "2024-11-10"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/54";
@@ -1006,9 +1026,10 @@
   rdfs:label "Transposed" .
 
 <urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "Example Implementations: Kurator", "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324",
-    "TG2 Amendment SPACE Test Consistency CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473",
+    "TG2 Amendment SPACE CODED Test Consistency CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e>;
   skos:historyNote "Source: iDigBio, GBIF, BISON, FP, Kurator, ALA";
   rdfs:label "AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED";
@@ -1028,7 +1049,7 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"10m-admin-1 boundaries UNION with Exclusive Economic Zones\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24>
+<https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
@@ -1036,7 +1057,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:06adabf0-e6d4-4f99-819f-7dd38c796617>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:6ce80718-30e4-4458-beb3-6b03d30f66ed>;
-  dcterms:issued "2024-09-24"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/55";
@@ -1050,8 +1071,10 @@
   rdfs:label "Information Element Consulted dwc:verbatimDepth" .
 
 <urn:uuid:2f73a662-b833-44ad-942c-a87f82262b7c> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test Completeness CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121",
+    "TG2 Amendment SPACE CODED Test Completeness CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d>;
   rdfs:label "AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM";
   skos:prefLabel "AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM" .
@@ -1064,14 +1087,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdq:NotEmpty or dwc:verbatimDepth is bdq:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.";
   rdfs:label "Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM" .
 
-<https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-09-06>
+<https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The geographic determination service is expected to return a list of names of first-level administrative divisions for geometries that the geographic point falls on or within, including a 3 km buffer around the administrative geometry. A match on any of those names should constitute a consistency, and dwc:countryCode should not be needed to make this determination, that is, this test does not attempt to disambiguate potential duplicate first-level administrative division names. The level of buffering may be related to the scale of the underlying GIS layer being used. At a global scale, typical map scales used for borders and coastal areas are either 1:3M or 1:1M (Dooley 2005, Chapter 4). Horizontal accuracy at those scales is around 1.5-2.5km and 0.5-0.85 km respectively (Chapman & Wieczorek 2020).";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:de507979-dc94-4cb9-9c87-9d33972f4a4e>;
-  dcterms:issued "2024-09-06"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents ; Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.; ESRI (2020) World Administrative Divisions. https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b; ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames";
   rdfs:comment "Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/56";
@@ -1086,12 +1109,14 @@
   rdfs:label "Information Element ActedUpon dwc:stateProvince, dwc:decimalLatitude, dwc:decimalLongitude" .
 
 <urn:uuid:315a198d-3811-40dd-918a-756f598f3294> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Consistency CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1378",
+    "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab>;
   skos:historyNote "Source: ALA";
   rdfs:label "ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT";
   skos:prefLabel "ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-09-06> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05> .
 
 <urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:stateProvince=\"Tasmania\", dwc:decimalLatitude=\"-42.85\", dwc:decimalLongitude=\"146.75\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"Input fields contain interpretable values\"",
@@ -1113,12 +1138,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
   skos:note "Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:92a6c199-f1d7-493e-b643-57d09c5131dd>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:3d755ac9-e1ff-405e-b076-6a8fbbd5a804>;
-  dcterms:issued "2024-11-08"^^xsd:date;
-  dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
-  rdfs:comment "Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.";
-  skos:historyNote "https://github.com/tdwg/bdq/issues/57" .
+  <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:92a6c199-f1d7-493e-b643-57d09c5131dd> .
 
 <urn:uuid:92a6c199-f1d7-493e-b643-57d09c5131dd> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
   <skos:prefLabel> "Information Element ActedUpon dwc:scientificNameID";
@@ -1136,6 +1156,11 @@
   rdfs:label "Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:scientificName, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank" .
 
 <https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08>
+  <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:3d755ac9-e1ff-405e-b076-6a8fbbd5a804>;
+  dcterms:issued "2024-11-08"^^xsd:date;
+  dcterms:bibliographicCitation "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei";
+  rdfs:comment "Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.";
+  skos:historyNote "https://github.com/tdwg/bdq/issues/57";
   rdfs:label "AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889>;
   skos:prefLabel "Amendment dwc:scientificNameID from dwc:Taxon for SingleRecord" .
@@ -1200,16 +1225,16 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03>
+<https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". While \"not recorded\" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"EPSG:4326\".";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Standard>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b>;
-  dcterms:issued "2025-03-03"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
-  rdfs:comment "Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?";
+  rdfs:comment "Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/59";
   rdfs:label "VALIDATION_GEODETICDATUM_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1>;
@@ -1221,29 +1246,31 @@
   rdfs:label "Information Element ActedUpon dwc:geodeticDatum" .
 
 <urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Conformance CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500",
+    "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD";
   skos:prefLabel "ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05> .
 
 <urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:geodeticDatum=\"EPSG:4326\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority\"",
-    "dwc:geodeticDatum=\"7030\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum\"";
+    "dwc:geodeticDatum=\"7030\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 7030 is a bare number without an authority.";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}";
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value \"not recorded\"; otherwise NOT_COMPLIANT bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value \"not recorded\"; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_GEODETICDATUM_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03>
+<https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized>;
   skos:note "Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value \"not recorded\". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as \"WGS84\", \"WGS_84\", \"WGS:84\", \"WGS 84\" all with standard value \"epsg:4326\". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see  https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this test \"not recorded\" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b>;
-  dcterms:issued "2025-03-03"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/60";
@@ -1252,8 +1279,10 @@
   skos:prefLabel "Amendment dwc:geodeticDatum Standardized for SingleRecord" .
 
 <urn:uuid:35ac2bb4-d1f8-4a32-a591-32f614d97429> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test VOCABULARY Conformance CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1568",
+    "TG2 Amendment SPACE CODED Test VOCABULARY Conformance CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10>;
   skos:historyNote "Source: Paul Morris";
   rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED";
@@ -1263,8 +1292,8 @@
   skos:example "dwc:geodeticDatum=\"WGS84\": Response.status=AMENDED, Response.result=dwc:geodeticDatum=\"EPSG:4326\", Response.comment=\"dwc:geodeticDatum contains a valid code in the bdq:sourceAuthority\"",
     "dwc:geodeticDatum=\"WGS8\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:geodeticDatum contains an ambiguous value\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  rdfs:comment "EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value \"not recorded\"; otherwise NOT_AMENDED bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value \"not recorded\"; otherwise NOT_AMENDED";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value \"not recorded\"; otherwise NOT_AMENDED bdq:sourceAuthority = \"EPSG\" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value \"not recorded\"; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED" .
 
 <https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16>
@@ -1300,14 +1329,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_EVENTDATE_STANDARDIZED" .
 
-<https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27>
+<https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The country code determination service should be able to match the name of a country in the original or any language in the source authority.   When dwc:countryCode=\"XZ\" to mark the high seas, country should be empty until a time when a dwc:country=\"High seas\" or similar is adopted.  This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9cada38d-ed7c-485d-8b9b-ea57e4124253>;
-  dcterms:issued "2024-09-27"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html/li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/62";
@@ -1321,12 +1350,14 @@
   rdfs:label "Information Element ActedUpon dwc:country, dwc:countryCode" .
 
 <urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675",
+    "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0>;
   skos:historyNote "Source: GBIF";
   rdfs:label "ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT";
   skos:prefLabel "ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-05> .
 
 <urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:country=\"Australia\", dwc:countryCode=\"AU\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country matches dwc:countryCode\"",
@@ -1444,7 +1475,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_EVENT_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
@@ -1452,7 +1483,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:3d5994c8-29df-4399-965c-c2c596a6767f>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:0c598386-f49e-40b3-bbcc-b217e7d2b449>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/68";
@@ -1471,8 +1502,10 @@
   rdfs:label "Information Element Consulted dwc:verbatimElevation" .
 
 <urn:uuid:47bdaece-0c20-4ba3-b453-4c78b92b4c94> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test Completeness CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775",
+    "TG2 Amendment SPACE CODED Test Completeness CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2>;
   rdfs:label "AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM";
   skos:prefLabel "AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM" .
@@ -1654,7 +1687,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE";
   rdfs:label "Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05>
+<https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
@@ -1662,7 +1695,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
-  dcterms:issued "2024-11-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound; Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf; Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/; Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.";
   rdfs:comment "Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/73";
@@ -1676,8 +1709,10 @@
   rdfs:label "Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude" .
 
 <urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019",
+    "TG2 Amendment SPACE CODED Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff>;
   skos:historyNote "Source: ALA, GBIF, iDigBio";
   rdfs:label "AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES";
@@ -1741,9 +1776,9 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"present\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,  dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:0e9fc00e-3a3f-4be4-aa20-a5ae93b0f77d> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:d12f3d41-bb7b-4244-baca-867352e3730b> .
 
-<urn:uuid:0e9fc00e-3a3f-4be4-aa20-a5ae93b0f77d> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:d12f3d41-bb7b-4244-baca-867352e3730b> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "present";
   rdfs:label "Default value for bdq:defaultOccurrenceStatus:\"present\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:defaultOccurrenceStatus> .
@@ -1834,14 +1869,14 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF Backbone Taxonomy\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li>  </ul>";
   rdfs:comment "Is there a value in dwc:geodeticDatum?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/78";
@@ -1850,11 +1885,13 @@
   skos:prefLabel "Validation dwc:geodeticDatum Not Empty for SingleRecord" .
 
 <urn:uuid:6d1f3f11-98d9-4b26-a8e7-56fbc066c705> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Completeness CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105",
+    "TG2 Validation SPACE CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241>;
   rdfs:label "ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-05> .
 
 <urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:geodeticDatum=\"UTM\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:geodeticDatum is bdq:NotEmpty\"",
@@ -1864,14 +1901,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e7528e9b-e4d8-42bf-b6e1-169587ca69b8>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/79";
@@ -1885,12 +1922,14 @@
   rdfs:label "Information Element ActedUpon dwc:decimalLatitude" .
 
 <urn:uuid:6f3a7ebb-e857-42e0-8051-4d06feeb4ab2> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2140",
+    "TG2 Validation SPACE CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01>;
   skos:historyNote "Source: ALA, GBIF, OBIS";
   rdfs:label "ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05> .
 
 <urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLatitude=\"0.0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatitude is in RANGE\"",
@@ -2095,14 +2134,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM" .
 
-<https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "A record with 0.0 is interpreted as the string \"0\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Likeliness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Likely>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9d387033-c581-4fb5-9af2-73ec89c99e77>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul>";
   rdfs:comment "Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/87";
@@ -2114,12 +2153,14 @@
   rdfs:label "Likely" .
 
 <urn:uuid:8454615d-9cd4-49af-8fd3-c67e6be9c777> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Likeliness CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193",
+    "TG2 Validation SPACE CODED Test Likeliness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360>;
   skos:historyNote "Source: ALA, GBIF, OBIS";
   rdfs:label "ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO";
   skos:prefLabel "ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-05> .
 
 <urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLatitude=\"21.0534\", dwc:decimalLongitude=\"81.0554\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatitude and dwc:decimalLongitude are not zero\"",
@@ -2273,14 +2314,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE";
   rdfs:label "Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06>
+<https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:bda769d4-d876-4bd0-8026-89bed5aad0eb>;
-  dcterms:issued "2024-09-06"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in dwc:decimalLongitude?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/96";
@@ -2289,11 +2330,13 @@
   skos:prefLabel "Validation dwc:decimalLongitude Not Empty for SingleRecord" .
 
 <urn:uuid:908fc823-75a9-437e-be7c-5c72cd6b149e> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Completeness CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273",
+    "TG2 Validation SPACE CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502>;
   rdfs:label "ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05> .
 
 <urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLongitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLongitude is bdq:NotEmpty\"",
@@ -2303,14 +2346,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-12>
+<https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "This test will return 'NOT_COMPLIANT' for records on the \"High seas\" where dwc:countryCode is bdq:Empty. We recommend that data from the high seas (outside national jurisdictions) use dwc:countryCode = \"XZ\" and dwc:country = \"High seas\" until an agreement has been made.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
-  dcterms:issued "2024-11-12"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list";
   rdfs:comment "Is there a value in dwc:countryCode?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/98";
@@ -2319,12 +2362,13 @@
   skos:prefLabel "Validation dwc:countryCode Not Empty for SingleRecord" .
 
 <urn:uuid:930eb72e-fe83-48ae-9698-ca46713721a3> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "Example Implementations: FilteredPush:geo_ref_qc", "Example Implementations Source Code: [geo_ref_qc DwCGeoRefDQ,validationCountrycodeNotempty()](https://github.com/FilteredPush/geo_ref_qc/blob/78afb5f2c8b8e2ebede1de48cb7a40fd1503748f/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1060)",
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308",
     "TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62>;
   rdfs:label "ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-12> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05> .
 
 <urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:countryCode=\"Australia\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:countryCode is bdq:NotEmpty\"",
@@ -2403,7 +2447,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: VALIDATION_POLYNOMIAL_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03>
+<https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:AssumedDefault>;
@@ -2411,7 +2455,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
-  dcterms:issued "2025-03-03"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html";
   rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.";
   skos:historyNote "https://github.com/tdwg/bdq/issues/102";
@@ -2425,8 +2469,10 @@
   rdfs:label "Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters" .
 
 <urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod>;
-  skos:note "TG2 Amendment SPACE Test Completeness Parameterized CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03>;
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349",
+    "TG2 Amendment SPACE CODED Test Completeness Parameterized CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/forAmendment> <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05>;
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT";
@@ -2558,14 +2604,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_TAXON_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:fc3cb031-4e35-4b08-b9b8-b7ca7d5efd27>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020). Extreme points on Earth (https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)";
   rdfs:comment "Is the value of dwc:minimumDepthInMeters within the Parameter range?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/107";
@@ -2579,12 +2625,14 @@
   rdfs:label "Information Element ActedUpon dwc:minimumDepthInMeters" .
 
 <urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421",
+    "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-05> .
 
 <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:minimumDepthInMeters=\"1\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumDepthInMeters is in range\"",
@@ -2602,14 +2650,14 @@
 
 <bdq:minimumValidDepthInMeters> a <https://rs.tdwg.org/bdqffdq/terms/Parameter> .
 
-<https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:3d5994c8-29df-4399-965c-c2c596a6767f>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/108";
@@ -2618,12 +2666,14 @@
   skos:prefLabel "Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters for SingleRecord" .
 
 <urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497",
+    "TG2 Validation SPACE CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6>;
   skos:historyNote "Source: @Tasilee";
   rdfs:label "ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION";
   skos:prefLabel "ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-05> .
 
 <urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:minimumElevationInMeters=\"0\", dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is equal to dwc: maximumElevationInMeters\"",
@@ -2633,14 +2683,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION" .
 
-<https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The upper limit is one half the equatorial circumference of the earth.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:53bfecf4-0d88-49a2-8f12-672345ef4f50>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020) Great-circle distance. https://en.wikipedia.org/wiki/Great-circle_distance</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/109";
@@ -2654,12 +2704,14 @@
   rdfs:label "Information Element ActedUpon dwc:coordinateUncertaintyInMeters" .
 
 <urn:uuid:a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2562",
+    "TG2 Validation SPACE CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e>;
   skos:historyNote "Source: ALA";
   rdfs:label "ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-05> .
 
 <urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:coordinateUncertaintyInMeters=\"1\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:coordinateUncertaintyInMeters is in range\"",
@@ -2669,14 +2721,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:d06be5a2-809e-4b7a-9f4b-6ba1e6951d36>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li> <li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica </li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:maximumElevationInMeters of a single record within a valid range?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/112";
@@ -2690,12 +2742,14 @@
   rdfs:label "Information Element ActedUpon dwc:maximumElevationInMeters" .
 
 <urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Likeliness Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622",
+    "TG2 Validation SPACE CODED Test Likeliness Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05> .
 
 <urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumElevation is in is range\"",
@@ -2741,9 +2795,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:2f6bc6f2-4b98-4ab4-bd82-fda123d1e524> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:db0929d6-3824-46e5-8823-94cb26dc4756> .
 
-<urn:uuid:2f6bc6f2-4b98-4ab4-bd82-fda123d1e524> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:db0929d6-3824-46e5-8823-94cb26dc4756> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Regex present/absent";
   rdfs:label "Default value for bdq:sourceAuthority:\"Regex present/absent\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2779,9 +2833,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:231c2cb4-0dd6-42ea-a399-1c3d08091716> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:52fb6563-a3fa-4732-924c-d7ea8e8c6b96> .
 
-<urn:uuid:231c2cb4-0dd6-42ea-a399-1c3d08091716> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:52fb6563-a3fa-4732-924c-d7ea8e8c6b96> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Regex present/absent";
   rdfs:label "Default value for bdq:sourceAuthority:\"Regex present/absent\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2817,14 +2871,14 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e7528e9b-e4d8-42bf-b6e1-169587ca69b8>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is there a value in dwc:decimalLatitude?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/119";
@@ -2833,12 +2887,14 @@
   skos:prefLabel "Validation dwc:decimalLatitude Not Empty for SingleRecord" .
 
 <urn:uuid:b12c8663-25e8-4c8a-abfc-edf4334d1aef> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Completeness CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2688",
+    "TG2 Validation SPACE CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2>;
   skos:historyNote "Source: TG2-Gainesville";
   rdfs:label "ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY";
   skos:prefLabel "ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05> .
 
 <urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLatitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatiitude is bdq:NotEmpty\"",
@@ -3277,12 +3333,7 @@
   skos:prefLabel "Measure Validation Tests Prerequisites Not Met for SingleRecord" .
 
 <urn:uuid:d1a8d273-8cd0-4f64-bcd4-1c3d2a42ccfa> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Measure NAME SPACE TIME OTHER Test CORE";
-  <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351>;
-  skos:historyNote "Source: TG2-Gainesville";
-  rdfs:label "MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25>;
-  skos:prefLabel "MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" .
+  skos:note "TG2 Measure NAME SPACE TIME OTHER Test CORE" .
 
 <urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "[Response.status=RUN_HAS_RESULT, Response.result=\"27\", Response.comment=\"27 VALIDATION tests had either INTERNAL_PREREQUISITES_NOT_MET\" or \"EXTERNAL_PREREQUISITES_NOT_MET\"]";
@@ -3290,6 +3341,13 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status=\"INTERNAL_PREREQUISITES_NOT_MET\" or \"EXTERNAL_PREREQUISITES_NOT_MET\")";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if no tests of type VALIDATION were run; Report the number of tests of output type VALIDATION that did not run because prerequisites for those tests were not met (Result.status=\"INTERNAL_PREREQUISITES_NOT_MET\" or \"EXTERNAL_PREREQUISITES_NOT_MET\")";
   rdfs:label "Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" .
+
+<urn:uuid:d1a8d273-8cd0-4f64-bcd4-1c3d2a42ccfa> <https://rs.tdwg.org/bdqffdq/terms/hasSpecification>
+    <urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351>;
+  skos:historyNote "Source: TG2-Gainesville";
+  rdfs:label "MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET";
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25>;
+  skos:prefLabel "MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" .
 
 <https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
@@ -3337,7 +3395,12 @@
 <urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).",
     "Example Implementations Source Code: event_date_qc v3.0.5 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L124)",
-    "TG2 Measure TIME CODED Test CORE" .
+    "TG2 Measure TIME CODED Test CORE";
+  <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb>;
+  skos:historyNote "Source: Alex Thompson";
+  rdfs:label "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS";
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08>;
+  skos:prefLabel "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" .
 
 <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:eventDate=\"1880-05-08/10\": Response.status=RUN_HAS_RESULT, Response.result=\"259200\", Response.comment=\"dwc:eventDate duration is 3 days = 259,200 seconds\"",
@@ -3346,13 +3409,6 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.";
   rdfs:label "Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" .
-
-<urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07> <https://rs.tdwg.org/bdqffdq/terms/hasSpecification>
-    <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb>;
-  skos:historyNote "Source: Alex Thompson";
-  rdfs:label "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2024-11-08>;
-  skos:prefLabel "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" .
 
 <https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2024-09-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
@@ -3499,14 +3555,14 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TaxonRank Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:InRange>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:ced8854b-d1ce-4d71-9b77-e5d67a74c4f9>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
   rdfs:comment "Is the value of dwc:maximumDepthInMeters within the Parameter range?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/187";
@@ -3520,12 +3576,14 @@
   rdfs:label "Information Element ActedUpon dwc:maximumDepthInMeters" .
 
 <urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726",
+    "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE";
   skos:prefLabel "ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2024-09-05> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-05> .
 
 <urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:maximumDepthInMeters=\"1200\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumDepthInMeters is in range (<11,000)\"",
@@ -3541,14 +3599,14 @@
   rdfs:label "Default value for bdq:minimumValidDepthInMeters:\"0\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:minimumValidDepthInMeters> .
 
-<https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25>
+<https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "Multiple values in the dwc:stateProvince field (whether to signify on a border or in a list of possibilities) will fail this test. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Found>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:0e6f3880-8203-445f-9bff-f44f52120abe>;
-  dcterms:issued "2024-09-25"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853; ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2";
   rdfs:comment "Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/199";
@@ -3562,12 +3620,14 @@
   rdfs:label "Information Element ActedUpon dwc:stateProvince" .
 
 <urn:uuid:eebb4a3c-30e8-43e5-96f5-eded890dd174> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2802",
+    "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578>;
   skos:historyNote "Source: ALA, GBIF";
   rdfs:label "ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND";
   skos:prefLabel "ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-05> .
 
 <urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:stateProvince=\"Florida\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:stateProvince found in bdq:sourceAuthority\"",
@@ -3583,14 +3643,14 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18>
+<https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values.  This test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this test. @tucotuco: \"Of #200 and #201, #201 is the strongest test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level\".";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Unambiguous>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:63ee37ac-d0ae-4578-82f8-7a956d92baf0>;
-  dcterms:issued "2024-09-18"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li> <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2";
   rdfs:comment "Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/201";
@@ -3604,13 +3664,14 @@
   rdfs:label "Information Element ActedUpon dwc:country, dwc:stateProvince" .
 
 <urn:uuid:f1a7f272-9040-42da-9b64-62abedefb1b0> a <https://rs.tdwg.org/bdqffdq/terms/ValidationMethod>;
-  skos:note "Example Implementations: Kurator", "Example Implementations Source Code: https://github.com/kurator-org/kurator-validation/blob/master/packages/kurator_dwca/workflows/dwca_geography_assessor.yaml",
-    "TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3020",
+    "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac>;
   skos:historyNote "Source: VertNet, Kurator";
   rdfs:label "ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS";
   skos:prefLabel "ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS";
-  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18> .
+  <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-05> .
 
 <urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:country=\"Argentina\", dwc:stateProvince=\"Rio Negro\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country and dwc:stateProvince are unambiguous\"",
@@ -4157,7 +4218,7 @@
   rdfs:label "Default value for bdq:sourceAuthority:\"GBIF TypeStatus Vocabulary\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
 
-<https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-05>
   a <https://rs.tdwg.org/bdqffdq/terms/Issue>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   skos:note "We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums";
@@ -4165,7 +4226,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Likely>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:6f6a46c6-9979-41a2-83c2-fd196e89c8c1>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:5be9ff68-1232-4f09-a3ef-5d78ccdecf8c>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-05"^^xsd:date;
   dcterms:bibliographicCitation "<ul> <li> Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> </ul>";
   rdfs:comment "Are the supplied geographic coordinates within a defined buffer of the center of the country?";
   skos:historyNote "https://github.com/tdwg/bdq/issues/287";
@@ -4179,11 +4240,13 @@
   rdfs:label "Information Element Consulted dwc:coordinateUncertaintyInMeters" .
 
 <urn:uuid:0239b59b-db0e-4e6a-8ba8-2f89abf9e78e> a <https://rs.tdwg.org/bdqffdq/terms/IssueMethod>;
-  skos:note "TG2 Issue SPACE Test Conformance Parameterized CORE";
+  skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)",
+    "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3632",
+    "TG2 Issue SPACE CODED Test Conformance Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b>;
   skos:historyNote "Source: GBIF";
   rdfs:label "IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY";
-  <https://rs.tdwg.org/bdqffdq/terms/forIssue> <https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forIssue> <https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-05>;
   skos:prefLabel "IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY" .
 
 <urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -4216,7 +4279,7 @@
 <urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
   rdfs:label "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships";
   <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
-  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04>,
+  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04>,
@@ -4224,10 +4287,10 @@
     <https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05>,
+    <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06>,
+    <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08>,
@@ -4246,54 +4309,54 @@
 <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
   rdfs:label "ValidationPolicy: (69) validations  in UseCase bdq:Record-Management";
   <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Record-Management>;
-  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-18>,
-    <https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2024-09-24>,
+  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12>,
-    <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04>,
-    <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2024-09-04>,
-    <https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2024-09-27>,
+    <https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2024-09-06>,
-    <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2024-09-06>,
+    <https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04>,
-    <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03>,
-    <https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2024-09-27>,
+    <https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05>,
+    <https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06>,
-    <https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-12>,
+    <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2024-09-05>,
+    <https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03>,
     <https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05>,
+    <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08>,
@@ -4304,9 +4367,9 @@
     <https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07>,
     <https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2024-09-25>,
-    <https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2024-09-18>,
+    <https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08>,
@@ -4322,24 +4385,24 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management>;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04>,
     <https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2024-09-05>,
+    <https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2024-09-06>,
+    <https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06>,
     <https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14>,
     <https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2024-09-05>,
+    <https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08>,
     <https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08>,
@@ -4371,23 +4434,23 @@
   rdfs:label "AmendmentPolicy: (28) amendments  in UseCase bdq:Record-Management";
   <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Record-Management>;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2024-09-16>,
-    <https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05>,
-    <https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2024-11-09>,
+    <https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16>,
-    <https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2024-11-10>,
-    <https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2024-09-24>,
+    <https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-05>,
+    <https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-03>,
+    <https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14>,
-    <https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2024-09-04>,
+    <https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08>,
-    <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2024-11-05>,
+    <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13>,
     <https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16>,
     <https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2024-09-25>,
-    <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-03>,
+    <https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05>,
     <https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03>,
     <https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05>,
     <https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2024-09-05>,

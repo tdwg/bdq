@@ -154,7 +154,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcore/terms/version/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20](https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20) |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcore/terms/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e](https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e |
-| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2024-09-04 |
+| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2025-03-05 |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_COORDINATES_FROM_VERBATIM |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment Coordinates From Verbatim |
 | DateLastUpdated (bdqffdq:hasDateLastUpdated) | non-normative | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |
@@ -168,9 +168,9 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | FillInFrom |
 | ExpectedResponse (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the Test must be implemented. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. |
 | Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",  dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"],[dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 0390210 7377243", dwc:verbatimSRS="EPSG:32754", dwc:verbatimCoordinateSystem="decimal degrees", dwc:decimalLatitude="", dwc:decimalLongitude="":: Response.status=NOT_AMENDED, Response.result="", Response.comment="In the wrong coordinate system"] |
-| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator |
-| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/master/ src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L324](https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324) |
-| Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote. | TG2 Amendment SPACE Test Completeness CORE |
+| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324) |
+| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L402](https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402) |
+| Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote. | TG2 Amendment SPACE CODED Test Completeness CORE |
 | InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:decimalLatitude, dwc:decimalLongitude, dwc:geodeticDatum |
 | InformationElements Consulted (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:verbatimCoordinateSystem, dwc:verbatimSRS |
 | Method (bdqffdq:DataQualityMethod) | normative | A solutions concept that relates a data quality need to a Specification. |  |
@@ -490,7 +490,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -553,12 +553,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Transformations between coordinate reference systems should not be made as a part of this test. Though coordinate precision of the verbatim coordinates could also be interpreted during the process of amending decimal coordinates from verbatim coordinates, that amendment is recommended to be an independent test. Note that dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimCoordinates might all be populated, and they may or not be perfectly consistent with each other. An ideal implementation should check for the consistency of these three fields and not amend them if they are inconsistent.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test Completeness CORE</td>
+			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -567,14 +575,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -605,7 +605,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-10</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -677,11 +677,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L324</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -689,7 +689,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test Consistency CORE</td>
+			<td>TG2 Amendment SPACE CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -702,14 +702,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1097,7 +1089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1168,12 +1160,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related tests. In this test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Amendment SPACE CODED Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1186,14 +1186,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 	</tbody>
 </table>
@@ -1224,7 +1216,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-09</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1283,12 +1275,20 @@ Including MultiRecord Measures
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code. "  Three letter codes should be amended to the matching two letter code.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Amendment SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1297,14 +1297,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2422,7 +2414,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2493,12 +2485,20 @@ Including MultiRecord Measures
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system.  If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test Completeness Parameterized CORE</td>
+			<td>TG2 Amendment SPACE CODED Test Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2511,14 +2511,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -2549,7 +2541,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2565,7 +2557,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ExpectedResponse</td>
-			<td>EEXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Guid for Specification</td>
@@ -2612,12 +2604,20 @@ Including MultiRecord Measures
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1568</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see  https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Amendment SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2626,14 +2626,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2664,7 +2656,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-24</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2723,12 +2715,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>If dwc:verbatimDepth has a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform fathoms to meters by multiplying by 1.8288 and retaining added significant digits (verbatim depth of 10 fathoms to minimum and maximum depths in meters of 18.288). Implementations should be capable of interpreting verbatim data in at least meters, fathoms, and feet, in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test Completeness CORE</td>
+			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2737,14 +2737,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2775,7 +2767,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2834,12 +2826,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>If the dwc:verbatimElevation as a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform yards to meters by multiplying by 0.9144 and retaining added significant digits (verbatim elevation of 10 yards to minimum and maximum depths in meters of 9.144). Implementations should be capable of interpreting verbatim data in at least meters,  yards, feet, and kilometers in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment SPACE Test Completeness CORE</td>
+			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2848,14 +2848,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -4116,7 +4108,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4187,12 +4179,20 @@ Including MultiRecord Measures
 			<td><ul> <li> Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> </ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3632</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Issue SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Issue SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4205,14 +4205,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4940,7 +4932,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5000,7 +4992,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5039,7 +5031,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5095,7 +5087,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5237,7 +5229,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-26</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5297,7 +5289,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5340,7 +5332,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5400,7 +5392,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5443,7 +5435,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5499,7 +5491,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Likeliness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5538,7 +5530,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5598,7 +5590,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6033,7 +6025,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6089,7 +6081,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6429,7 +6421,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6485,7 +6477,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6524,7 +6516,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6584,7 +6576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6623,7 +6615,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6683,7 +6675,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6726,7 +6718,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-24</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6786,7 +6778,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6829,7 +6821,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6924,7 +6916,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7019,7 +7011,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7079,7 +7071,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7506,7 +7498,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7562,7 +7554,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7601,7 +7593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7657,7 +7649,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7696,7 +7688,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7752,7 +7744,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7791,7 +7783,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7847,7 +7839,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8876,7 +8868,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8932,7 +8924,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9169,7 +9161,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9229,7 +9221,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9272,7 +9264,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9332,7 +9324,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Likeliness Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9375,7 +9367,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9435,7 +9427,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9478,7 +9470,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9538,7 +9530,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9581,7 +9573,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9637,7 +9629,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11145,7 +11137,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11205,7 +11197,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12040,7 +12032,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12100,7 +12092,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12139,7 +12131,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12195,7 +12187,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12337,7 +12329,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-26</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12397,7 +12389,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12440,7 +12432,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12500,7 +12492,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12543,7 +12535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12599,7 +12591,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Likeliness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12638,7 +12630,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12698,7 +12690,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13133,7 +13125,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13189,7 +13181,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13529,7 +13521,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13585,7 +13577,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13624,7 +13616,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13684,7 +13676,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13723,7 +13715,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13783,7 +13775,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13826,7 +13818,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-24</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13886,7 +13878,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13929,7 +13921,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14024,7 +14016,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14119,7 +14111,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14179,7 +14171,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14606,7 +14598,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14662,7 +14654,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14701,7 +14693,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14757,7 +14749,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14796,7 +14788,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14852,7 +14844,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14891,7 +14883,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14947,7 +14939,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15976,7 +15968,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16032,7 +16024,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16269,7 +16261,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16329,7 +16321,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16372,7 +16364,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16432,7 +16424,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Likeliness Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16475,7 +16467,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16535,7 +16527,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16578,7 +16570,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16638,7 +16630,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16681,7 +16673,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16737,7 +16729,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18245,7 +18237,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18305,7 +18297,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19140,7 +19132,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19172,7 +19164,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19192,7 +19184,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 1730 (EPSG:1730) is an ellipsoid not a datum"]</td>
+			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 7030 is a bare number without an authority.]</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -19203,12 +19195,20 @@ Including MultiRecord Measures
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.  Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19217,14 +19217,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -19255,7 +19247,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19314,8 +19306,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L268</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19324,14 +19324,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 	</tbody>
 </table>
@@ -19493,7 +19485,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-26</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19561,11 +19553,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:geo_ref_qc</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/master/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L80</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1005</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19573,7 +19565,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19586,14 +19578,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -19624,7 +19608,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19691,12 +19675,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853.</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents </li><li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li><li>ESRI (2020) World Administrative Divisions. https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b</li><li>ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1378</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The geographic determination service is expected to return a list of names of first-level administrative divisions for geometries that the geographic point falls on or within, including a 3 km buffer around the administrative geometry. A match on any of those names should constitute a consistency, and dwc:countryCode should not be needed to make this determination, that is, this test does not attempt to disambiguate potential duplicate first-level administrative division names. The level of buffering may be related to the scale of the underlying GIS layer being used. At a global scale, typical map scales used for borders and coastal areas are either 1:3M or 1:1M (Dooley 2005, Chapter 4). Horizontal accuracy at those scales is around 1.5-2.5km and 0.5-0.85 km respectively (Chapman & Wieczorek 2020).</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19709,14 +19701,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -19747,7 +19731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19806,12 +19790,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>A record with 0.0 is interpreted as the string "0"</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Likeliness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19820,14 +19812,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -19858,7 +19842,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19929,12 +19913,20 @@ Including MultiRecord Measures
 			<td><ul><li>WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org/</li> <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org/</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org/ </li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li><li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li><li>Natural Earth (2009) Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li><li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation tests treat "brackish" in WoRMS as both marine and terrestrial.   Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19947,14 +19939,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20445,7 +20429,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20504,12 +20488,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Only fails if all of the relevant fields of the Darwin Core Location class are EMPTY or do not exist.  Relevant Darwin Core fields include dwc:locationID, dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:waterBody, dwc:islandGroup, dwc:island, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:locality, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT. Elevation and/or depth alone are deemed insufficient to meaningfully locate a position on the earth.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20518,14 +20510,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20905,7 +20889,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20964,12 +20948,20 @@ Including MultiRecord Measures
 			<td><ul><li>Wikipedia (2020) Great-circle distance. https://en.wikipedia.org/wiki/Great-circle_distance</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2562</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The upper limit is one half the equatorial circumference of the earth.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20978,14 +20970,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -21016,7 +21000,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21079,12 +21063,20 @@ Including MultiRecord Measures
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html/li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The country code determination service should be able to match the name of a country in the original or any language in the source authority.   When dwc:countryCode="XZ" to mark the high seas, country should be empty until a time when a dwc:country="High seas" or similar is adopted.  This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -21093,14 +21085,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -21131,7 +21115,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21199,11 +21183,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/kurator-org/kurator-validation/blob/master/packages/kurator_dwca/workflows/dwca_geography_assessor.yaml</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3020</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21211,7 +21195,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -21224,14 +21208,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -21262,7 +21238,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-24</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21329,12 +21305,20 @@ Including MultiRecord Measures
 			<td><ul><li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Non-country information such as "high seas" will fail this test (High Seas should use dwc:countryCode = "XZ" and have dwc:country empty).  Getty Place Types for administrative level "nation"  are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation.  Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are  same). This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -21347,14 +21331,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -21385,7 +21361,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-27</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21445,11 +21421,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush: geo_ref_qc</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>[geo_ref_qc DwCGeoRefDQ.validationCountryNotEmpty](https://github.com/FilteredPush/geo_ref_qc/blob/fcad4a3757db9bd6ba36fe41064ce015eeede2e3/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L478)</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21466,14 +21442,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21504,7 +21472,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21560,11 +21528,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush:geo_ref_qc</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>[geo_ref_qc DwCGeoRefDQ,validationCountrycodeNotempty()](https://github.com/FilteredPush/geo_ref_qc/blob/78afb5f2c8b8e2ebede1de48cb7a40fd1503748f/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1060)</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21581,14 +21549,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21619,7 +21579,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21682,12 +21642,20 @@ Including MultiRecord Measures
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li><li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas.  Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries.  This test should accept both XZ and ZZ as COMPLIANT country codes. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -21696,14 +21664,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22214,7 +22174,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22273,8 +22233,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2140</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -22283,14 +22251,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22321,7 +22281,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22380,8 +22340,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2688</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -22390,14 +22358,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22428,7 +22388,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22487,8 +22447,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L343</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -22497,14 +22465,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22535,7 +22495,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22590,8 +22550,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -22600,14 +22568,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23856,7 +23816,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23911,8 +23871,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li>  </ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -23921,14 +23889,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24201,7 +24161,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24268,12 +24228,20 @@ Including MultiRecord Measures
 			<td><ul><li>Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman AD and Wieczorek JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24286,14 +24254,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24324,7 +24284,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24391,12 +24351,20 @@ Including MultiRecord Measures
 			<td><ul><li>Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li> <li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica </li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Likeliness Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24409,14 +24377,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24447,7 +24407,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24514,12 +24474,20 @@ Including MultiRecord Measures
 			<td><ul><li>Wikipedia (2020). Extreme points on Earth (https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters.  We have rounded up bdq:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24532,14 +24500,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24570,7 +24530,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24637,12 +24597,20 @@ Including MultiRecord Measures
 			<td><ul><li>Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li><li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica</li><li>Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L582</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this test but we support the odd false positive.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24655,14 +24623,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24693,7 +24653,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24752,8 +24712,16 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test Conformance CORE</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24762,14 +24730,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 	</tbody>
 </table>
@@ -26569,7 +26529,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2025-03-05</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26636,12 +26596,20 @@ Including MultiRecord Measures
 			<td><ul><li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li><li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2802</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Multiple values in the dwc:stateProvince field (whether to signify on a border or in a list of possibilities) will fail this test. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26654,14 +26622,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 	</tbody>
 </table>

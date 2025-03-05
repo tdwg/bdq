@@ -907,7 +907,7 @@ Example RDF Fragment from Specification for [VALIDATION_COUNTRYCODE_STANDARD](ht
   - View in Term-List: [Link](../list/bdqcore/index.md#bdqcore_239ec40e-a729-4a8e-ba69-e0bf03ac1c44)
 
 - <a id="bdqcore_7e0c0418-fe16-4a39-98bd-80e19d95b9d1"></a>VALIDATION_GEODETICDATUM_STANDARD
-  - Description: Is the value of dwc:geodeticDatum valid according to the bdq:sourceAuthority?
+  - Description: Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?
   - View in Quick Reference Guide: [Link](../terms/bdqcore/index.md#VALIDATION_GEODETICDATUM_STANDARD)
   - View in Term-List: [Link](../list/bdqcore/index.md#bdqcore_7e0c0418-fe16-4a39-98bd-80e19d95b9d1)
 
