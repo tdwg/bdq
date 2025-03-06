@@ -127,7 +127,7 @@ The [BDQ User's Guide](../guide/users/index.md) is intended to contain everythin
 
 The [BDQ Implementer's Guide](../guide/implementers/index.md) is intended to contain everything needed to understand the requirements for compliant implementations of the tests. 
 
-The [Framework Ontology guide](../guide/bdqffdq/index.md) describes how the Framework Ontology (bdqffdq:) is used to describe the BDQ Core Tests, and can be used to describe new tests or new compositions of tests for new uses.  The ontology is also intended to allow test results to be represented as linked open data or in W3C oa:Annotations. 
+The [Framework Ontology Guide](../guide/bdqffdq/index.md) describes how the Framework Ontology (bdqffdq:) is used to describe the BDQ Core Tests, and can be used to describe new tests or new compositions of tests for new uses.  The ontology is also intended to allow test results to be represented as linked open data or in W3C oa:Annotations. 
 
 [Synthetic and Modified Data](../synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
 
@@ -179,7 +179,7 @@ The bdqffdq: vocabulary enables the wrapping of the results of bdqcore: tests wi
 
 ### 4.1 Acknowledgments
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA) and at Biodiversity Information Standards (TDWG) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also grateful for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of BDQ Core, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA, and at Biodiversity Information Standards (TDWG) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various Virtual meetings). The Authors are also grateful for all those who responded to our email questions.
 
 We'd also gratefully acknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
 
