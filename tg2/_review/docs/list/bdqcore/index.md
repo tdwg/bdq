@@ -576,6 +576,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -703,6 +711,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -732,7 +748,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -795,12 +811,20 @@ Including MultiRecord Measures
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>dc:type holds literals (e.g. PhysicalObject), while dcterms:type holds an IRI for the resource (e.g. http://purl.org/dc/dcmitype/PhysicalObject), see the Darwin Core RDF guide https://dwc.tdwg.org/rdf/#32-imported-dublin-core-terms-for-which-only-literal-objects-are-appropriate-normative.   Implementations of this Amendment are expected be able to amend IRI values to the literals, as well as removing leading/trailing whitespace and correcting case errors in the literal.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -809,14 +833,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -847,7 +863,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -914,12 +930,20 @@ Including MultiRecord Measures
 			<td><ul><li>Dublin Core (2020) Dublin Core Metadata Initiative. License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li><li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The license at the record level might be derived from the license of the data set from which the record is retrieved.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -932,14 +956,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -970,7 +986,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1033,12 +1049,20 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen.  For tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1051,14 +1075,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1187,6 +1203,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -1297,6 +1321,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1561,7 +1593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1628,12 +1660,20 @@ Including MultiRecord Measures
 			<td><ul><li>Darwin Core Maintenance Group (2021) Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1759</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>For reference, synonyms for values of dwc:degreeOfEstablishment can be found at https://registry.gbif.org/vocabulary/DegreeOfEstablishment/concepts.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1646,14 +1686,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1684,7 +1716,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1751,8 +1783,16 @@ Including MultiRecord Measures
 			<td><ul><li>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1765,14 +1805,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2512,6 +2544,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -2627,6 +2667,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -2738,6 +2786,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -2848,6 +2904,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2993,7 +3057,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-02-13</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3060,12 +3124,20 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3074,14 +3146,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -3112,7 +3176,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3175,12 +3239,20 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core.    Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3189,14 +3261,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3227,7 +3291,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-18</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3294,12 +3358,20 @@ Including MultiRecord Measures
 			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</i></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>For reference, synonyms for values of dwc:pathway can be found at https://registry.gbif.org/vocabulary/Pathway/concepts.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3312,14 +3384,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3620,7 +3684,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3687,12 +3751,20 @@ Including MultiRecord Measures
 			<td><ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3705,14 +3777,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3874,7 +3938,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3941,12 +4005,20 @@ Including MultiRecord Measures
 			<td><ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>Valuable for data quality needs related to voucher specimens in natural science collections.   Almost all occurrence data will have no value in dwc:typeStatus.  For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3959,14 +4031,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -4206,6 +4270,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4235,7 +4307,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4294,12 +4366,20 @@ Including MultiRecord Measures
 			<td><ul><li>Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10.</li><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L138</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Issue NAME SPACE TIME Test Resolution CORE</td>
+			<td>TG2 Issue NAME SPACE TIME CODED Test Resolution CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4308,14 +4388,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4346,7 +4418,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4401,8 +4473,16 @@ Including MultiRecord Measures
 			<td>ALA, CRIA</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L241</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Issue OTHER Test Completeness CORE</td>
+			<td>TG2 Issue OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -4411,14 +4491,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -5633,7 +5705,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5689,7 +5761,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5728,7 +5800,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5788,7 +5860,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5827,7 +5899,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5883,7 +5955,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5922,7 +5994,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5982,7 +6054,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6120,7 +6192,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6176,7 +6248,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6215,7 +6287,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6275,7 +6347,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7878,7 +7950,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7938,7 +8010,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8076,7 +8148,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8136,7 +8208,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9858,7 +9930,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9914,7 +9986,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9953,7 +10025,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10009,7 +10081,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10048,7 +10120,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10108,7 +10180,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10250,7 +10322,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10310,7 +10382,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10939,7 +11011,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10999,7 +11071,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11636,7 +11708,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11696,7 +11768,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12733,7 +12805,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12789,7 +12861,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12828,7 +12900,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12888,7 +12960,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12927,7 +12999,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12983,7 +13055,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13022,7 +13094,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13082,7 +13154,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13220,7 +13292,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13276,7 +13348,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13315,7 +13387,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13375,7 +13447,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14978,7 +15050,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15038,7 +15110,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15176,7 +15248,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15236,7 +15308,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16958,7 +17030,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17014,7 +17086,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17053,7 +17125,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17109,7 +17181,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17148,7 +17220,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17208,7 +17280,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17350,7 +17422,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17410,7 +17482,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18039,7 +18111,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18099,7 +18171,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18736,7 +18808,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18796,7 +18868,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19218,6 +19290,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -19324,6 +19404,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 	</tbody>
 </table>
@@ -19579,6 +19667,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -19702,6 +19798,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -19812,6 +19916,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -19940,6 +20052,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -19969,7 +20089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20028,8 +20148,16 @@ Including MultiRecord Measures
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20038,14 +20166,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20076,7 +20196,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20140,11 +20260,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush rec_occur_qc</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/bef180191258796f777ece7e267040d2cb2b609d/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L630</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20152,7 +20272,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20161,14 +20281,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20199,7 +20311,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-06</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20254,12 +20366,20 @@ Including MultiRecord Measures
 			<td><ul><li>Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li><li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The license at the record level might be derived from the license of the data set from which the record is retrieved</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20268,14 +20388,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20306,7 +20418,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-12</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20373,12 +20485,20 @@ Including MultiRecord Measures
 			<td><ul><li>Dublin Core (2020) License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li><li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The license at the record level might be derived from the license of the data set from which the record is retrieved. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.   The  canonical form of the Creative Commons license IRI has nothing after the version  e.g. https://creativecommons.org/licenses/by/4.0/, but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code.   However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI.  As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20391,14 +20511,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20511,6 +20623,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -20540,7 +20660,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20595,8 +20715,16 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20605,14 +20733,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20643,7 +20763,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20706,12 +20826,20 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml. This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -20724,14 +20852,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20971,6 +21091,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -21085,6 +21213,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -21209,6 +21345,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -21332,6 +21476,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRY_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -21443,6 +21595,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -21549,6 +21709,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21664,6 +21832,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22252,6 +22428,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -22358,6 +22542,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22466,6 +22658,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -22569,6 +22769,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -22598,7 +22806,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22665,12 +22873,20 @@ Including MultiRecord Measures
 			<td><ul><li>Darwin Core Maintenance Group (2021) Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://dwc.tdwg.org/dwc/doc/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -22683,14 +22899,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22840,7 +23048,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22907,12 +23115,20 @@ Including MultiRecord Measures
 			<td><ul><li>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084. https://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1429</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -22925,14 +23141,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -23890,6 +24098,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -24255,6 +24471,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -24377,6 +24601,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24501,6 +24733,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINDEPTH_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -24624,6 +24864,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINELEVATION_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -24730,6 +24978,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 	</tbody>
 </table>
@@ -24982,7 +25238,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25037,8 +25293,16 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L173</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -25047,14 +25311,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25085,7 +25341,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25140,8 +25396,16 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L489</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test Completeness CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -25150,14 +25414,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25188,7 +25444,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-03</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25252,11 +25508,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/rec_occur_qc</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/86d413c2b193bb6983e0ad07b3dc0084de118af5/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L479</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L418</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25264,7 +25520,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -25273,14 +25529,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25442,7 +25690,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25509,12 +25757,20 @@ Including MultiRecord Measures
 			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084 h.ttps://doi.org/10.3897/biss.3.38084</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1875</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -25527,14 +25783,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -26287,7 +26535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26354,12 +26602,20 @@ Including MultiRecord Measures
 			<td><ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. For reference, a list of synonyms for dwc:sex values can be found at https://registry.gbif.org/vocabulary/Sex/concepts.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26372,14 +26628,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -26622,6 +26870,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -27136,7 +27392,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-11</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27203,12 +27459,20 @@ Including MultiRecord Measures
 			<td><ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2246</td>
+		</tr>
+		<tr>
 			<td>Notes</td>
 			<td>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -27221,14 +27485,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>

@@ -2117,7 +2117,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2148,7 +2148,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-12",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2211,7 +2211,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -2236,7 +2242,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-06"
             }
         ]
     },
@@ -2718,7 +2724,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -2749,7 +2755,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2812,12 +2818,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test Conformance ISO/DCMI STANDARD CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -3230,7 +3242,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2024-09-04",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3261,7 +3273,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-04",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3324,7 +3336,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L173"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -3349,7 +3367,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-06"
             }
         ]
     },
@@ -5157,7 +5175,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5188,7 +5206,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-04",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5251,7 +5269,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5276,7 +5300,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
             }
         ]
     },
@@ -5932,7 +5956,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5963,7 +5987,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-10-14",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -6005,12 +6029,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7214,7 +7244,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -7245,7 +7275,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7327,7 +7357,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Issue NAME SPACE TIME Test Resolution CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L138"
+            },
+            {
+                "@value": "TG2 Issue NAME SPACE TIME CODED Test Resolution CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7347,7 +7383,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7597,7 +7633,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7633,7 +7669,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-02-13",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7731,12 +7767,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Completeness Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Completeness Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7795,12 +7837,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:ea26f14f-d274-4f9e-a7c7-98ae6d7000a7"
+                "@id": "urn:uuid:5cc3cbba-a8fd-4d9d-98c7-2a61fd50a604"
             }
         ]
     },
     {
-        "@id": "urn:uuid:ea26f14f-d274-4f9e-a7c7-98ae6d7000a7",
+        "@id": "urn:uuid:5cc3cbba-a8fd-4d9d-98c7-2a61fd50a604",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -9696,7 +9738,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9727,7 +9769,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -9769,13 +9811,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: FilteredPush rec_occur_qc"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/bef180191258796f777ece7e267040d2cb2b609d/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L630"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070"
             },
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -9800,7 +9842,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
             }
         ]
     },
@@ -10014,7 +10056,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -10045,7 +10087,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10108,7 +10150,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Issue OTHER Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L241"
+            },
+            {
+                "@value": "TG2 Issue OTHER CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -10128,7 +10176,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-06"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10448,7 +10496,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2024-09-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10479,7 +10527,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-06",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10521,7 +10569,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -10541,7 +10595,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-06"
             }
         ]
     },
@@ -10957,7 +11011,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10988,7 +11042,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-06",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11030,7 +11084,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -11055,7 +11115,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
             }
         ]
     },
@@ -11094,7 +11154,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11125,7 +11185,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-10-14",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11167,7 +11227,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -11192,7 +11258,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
             }
         ]
     },
@@ -12186,7 +12252,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -12217,7 +12283,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-03",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12259,12 +12325,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12323,12 +12395,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:5051814b-ad9f-4569-95ad-37d7186da53c"
+                "@id": "urn:uuid:ac64f0d2-60d2-4c4d-bb0b-f63f7de1244b"
             }
         ]
     },
     {
-        "@id": "urn:uuid:5051814b-ad9f-4569-95ad-37d7186da53c",
+        "@id": "urn:uuid:ac64f0d2-60d2-4c4d-bb0b-f63f7de1244b",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -12349,7 +12421,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12380,7 +12452,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-03",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12422,13 +12494,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: FilteredPush/rec_occur_qc"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/86d413c2b193bb6983e0ad07b3dc0084de118af5/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L479"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L418"
             },
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12453,7 +12525,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06"
             }
         ]
     },
@@ -12492,12 +12564,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:4d25eced-fe5b-4894-8679-cf8cecc5f7bc"
+                "@id": "urn:uuid:f695b7f7-088d-471e-828f-a8d17d407a11"
             }
         ]
     },
     {
-        "@id": "urn:uuid:4d25eced-fe5b-4894-8679-cf8cecc5f7bc",
+        "@id": "urn:uuid:f695b7f7-088d-471e-828f-a8d17d407a11",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -12518,7 +12590,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12549,7 +12621,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12591,7 +12663,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L489"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12616,7 +12694,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06"
             }
         ]
     },
@@ -14502,7 +14580,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2024-09-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -14533,7 +14611,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-05",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -14575,12 +14653,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -16898,7 +16982,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16929,7 +17013,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16971,7 +17055,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1429"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -16996,7 +17086,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06"
             }
         ]
     },
@@ -17061,7 +17151,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17092,7 +17182,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17134,12 +17224,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17224,7 +17320,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17255,7 +17351,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17318,7 +17414,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17343,7 +17445,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-06"
             }
         ]
     },
@@ -17408,7 +17510,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17439,7 +17541,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17481,12 +17583,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1759"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17571,7 +17679,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17602,7 +17710,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17665,7 +17773,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1875"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17690,7 +17804,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06"
             }
         ]
     },
@@ -17755,7 +17869,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17786,7 +17900,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-18",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17828,12 +17942,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17918,7 +18038,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17949,7 +18069,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18012,7 +18132,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18037,7 +18163,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06"
             }
         ]
     },
@@ -18102,7 +18228,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18133,7 +18259,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18175,12 +18301,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18265,7 +18397,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -18296,7 +18428,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-11",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18359,7 +18491,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2246"
+            },
+            {
+                "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18384,7 +18522,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
             }
         ]
     },
@@ -18449,7 +18587,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18480,7 +18618,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-11",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18522,12 +18660,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Amendment OTHER Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338"
+            },
+            {
+                "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18879,7 +19023,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2024-09-16"
@@ -18900,25 +19044,25 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
@@ -18927,13 +19071,13 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18994,7 +19138,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2024-10-14"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-11-12"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05"
@@ -19009,7 +19153,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2024-11-08"
@@ -19021,7 +19165,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05"
@@ -19069,7 +19213,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2024-09-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
@@ -19078,16 +19222,16 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
@@ -19105,10 +19249,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-03"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05"
@@ -19165,16 +19309,16 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19212,7 +19356,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2024-09-04"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2024-09-16"
@@ -19239,7 +19383,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
@@ -19248,10 +19392,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2024-09-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
@@ -19287,10 +19431,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19327,25 +19471,25 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06"
             }
         ]
     },
@@ -19372,7 +19516,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05"
@@ -19396,7 +19540,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2024-09-16"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-10-14"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05"
@@ -19408,7 +19552,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-02-13"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2024-09-16"
@@ -19420,7 +19564,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-03"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2024-09-05"
@@ -19432,22 +19576,22 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2024-09-12"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-11-08"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2024-09-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2024-09-18"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2024-11-11"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06"
             }
         ]
     },
@@ -19468,7 +19612,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-06"
             }
         ]
     },
@@ -19489,7 +19633,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2024-09-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
             }
         ]
     }
