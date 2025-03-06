@@ -834,6 +834,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -957,6 +965,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -1075,6 +1091,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1359,7 +1383,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1419,11 +1443,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/1abbd3f02eb6c28129764defab78f72156972864/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L489</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L300</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1431,7 +1455,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment TIME Test Conformance ISO/DCMI STANDARD CORE</td>
+			<td>TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1440,14 +1464,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1478,7 +1494,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1534,11 +1550,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>A potential minimal implementation is at: https://github.com/FilteredPush/event_date_qc/blob/238f234a4947b3c2820fb2fe3987326f9ead5e54/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1114 unit test at  https://github.com/FilteredPush/event_date_qc/blob/238f234a4947b3c2820fb2fe3987326f9ead5e54/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L824</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1621</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1546,7 +1562,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment TIME Test Conformance CORE</td>
+			<td>TG2 Amendment TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -1555,14 +1571,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1687,6 +1695,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -1806,6 +1822,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -1835,7 +1859,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1899,11 +1923,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>FilteredPush event_date_qc [DwCEventDQ.amendmentEventFromEventdate()](https://github.com/FilteredPush/event_date_qc/blob/89436b476975fb40ab2883c4e48717bdf957c0a8/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2010) unit test in [DwcEventDQTest](https://github.com/FilteredPush/event_date_qc/blob/89436b476975fb40ab2883c4e48717bdf957c0a8/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L1569)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2073</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1920,14 +1944,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
 	</tbody>
 </table>
@@ -1958,7 +1974,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2022,11 +2038,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc [DwCEventDQ.amendmentEventdateFromVerbatim()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L320) For a minimum set of unit tests see: [DwcEventDQTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L441), see also unit tests for underlying implementation in [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L632) and [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L788)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L334  For a minimum set of unit tests see: [DwcEventDQTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L605), see also unit tests for underlying implementation in [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L632) and [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L788)</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2043,14 +2059,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2081,7 +2089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2145,11 +2153,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1003 unit tests at https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L493</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1395</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2157,7 +2165,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment TIME Test Completeness CORE</td>
+			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2166,14 +2174,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
 		</tr>
 	</tbody>
 </table>
@@ -2204,7 +2204,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-12</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2268,11 +2268,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/4665e4d3b43ce7ddf319b3d7a5d3dbfee1411250/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L828   Unit Test at:  https://github.com/FilteredPush/event_date_qc/blob/96a8981d997cceb2f39ba47d63f0b98c1b56680c/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L402</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1296</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2280,7 +2280,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment TIME Test Completeness CORE</td>
+			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -2289,14 +2289,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
 		</tr>
 	</tbody>
 </table>
@@ -2327,7 +2319,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2387,11 +2379,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc [DwCEventDQ.amendmentEventdateStandardized()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L545) A minimal set of unit tests is in [DwCEventDQTestDefinitions](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwCEventDQTestDefinitions.java#L338)  unit tests for the underlying verbatim date extraction code are in [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L632) and [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L788)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L559 A minimal set of unit tests is in [DwCEventDQTestDefinitions](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwCEventDQTestDefinitions.java#L338)  unit tests for the underlying verbatim date extraction code are in [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L632) and [DateUtilsTest](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DateUtilsTest.java#L788)</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2408,14 +2400,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2942,7 +2926,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2998,11 +2982,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/f224e5a1e6db81bc6ca725f520dd06a71fcfb54e/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1055 with unit test at https://github.com/FilteredPush/event_date_qc/blob/f224e5a1e6db81bc6ca725f520dd06a71fcfb54e/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L671 Internals of recognized string values (roman numerals, month names and abbreviations in multiple languages) use a combination of event_date_qc's DateUtils.cleanMonth() (see https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DateUtils.java#L2111  and Joda time's month recognition)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1535 with unit test at https://github.com/FilteredPush/event_date_qc/blob/f224e5a1e6db81bc6ca725f520dd06a71fcfb54e/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L671 Internals of recognized string values (roman numerals, month names and abbreviations in multiple languages) use a combination of event_date_qc's DateUtils.cleanMonth() (see https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DateUtils.java#L2111  and Joda time's month recognition)</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3010,7 +2994,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment TIME Test Conformance CORE</td>
+			<td>TG2 Amendment TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3019,14 +3003,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3147,6 +3123,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -3261,6 +3245,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3384,6 +3376,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3778,6 +3778,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SEX_STANDARDIZED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4031,6 +4039,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -4389,6 +4405,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4491,6 +4515,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4612,7 +4644,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4668,11 +4700,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc v3.0.5 [DwCEventDQ.measureEventdateDurationinseconds()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L124)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7182,7 +7214,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7242,7 +7274,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -7285,7 +7317,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7380,7 +7412,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7475,7 +7507,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8053,7 +8085,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8109,7 +8141,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Conformance CORE</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8251,7 +8283,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8307,7 +8339,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Consistency CORE</td>
+			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8346,7 +8378,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8402,7 +8434,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Completeness CORE</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8441,7 +8473,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8544,7 +8576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8639,7 +8671,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9740,7 +9772,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11114,7 +11146,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11170,7 +11202,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Conformance CORE</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11811,7 +11843,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11914,7 +11946,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14282,7 +14314,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14342,7 +14374,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -14385,7 +14417,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14480,7 +14512,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14575,7 +14607,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15153,7 +15185,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15209,7 +15241,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Conformance CORE</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15351,7 +15383,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15407,7 +15439,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Consistency CORE</td>
+			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15446,7 +15478,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15502,7 +15534,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Completeness CORE</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -15541,7 +15573,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15644,7 +15676,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15739,7 +15771,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16840,7 +16872,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18214,7 +18246,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18270,7 +18302,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Conformance CORE</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18911,7 +18943,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19014,7 +19046,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20167,6 +20199,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -20282,6 +20322,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -20388,6 +20436,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20511,6 +20567,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20734,6 +20798,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -20852,6 +20924,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -21870,7 +21950,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21942,11 +22022,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/37d349b79f05a76eeb264bafe2315ce88493ecb7/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L181</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L124</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21954,7 +22034,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
+			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -21967,14 +22047,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22005,7 +22077,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22061,11 +22133,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>[event_date_qc  DwCOtherDateDQ.validationDateidentifiedStandard()](https://github.com/FilteredPush/event_date_qc/blob/be60f348609363d560fe16552bca4cc2975c0766/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L58)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L61</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -22078,14 +22150,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22116,7 +22180,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22176,11 +22240,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>[event_date_qc DwCEventDQ.validationDayInrange()](https://github.com/FilteredPush/event_date_qc/blob/ddbc25e6a12e4cb1c3898cebc36a4225d2945296/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L809)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L829</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -22197,14 +22261,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification for: VALIDATION_DAY_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DAY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22235,7 +22291,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22291,11 +22347,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc [DwCEventDQ.validationDayStandard()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L622)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L639</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -22312,14 +22368,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22900,6 +22948,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -22929,7 +22985,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22989,11 +23045,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L888  Unit test at https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L609</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1189</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23001,7 +23057,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Conformance CORE</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -23010,14 +23066,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -23142,6 +23190,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -23171,7 +23227,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-04</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23227,11 +23283,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/029466e0dc5ef649e7768ab19f75c86094023fce/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1179 minimal set of unit tests at https://github.com/FilteredPush/event_date_qc/blob/029466e0dc5ef649e7768ab19f75c86094023fce/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L1149</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1754</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23239,7 +23295,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Consistency CORE</td>
+			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -23248,14 +23304,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -23286,7 +23334,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23342,11 +23390,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/8740a00b52ef41cdda5fc7fa1689e5d95a23a94b/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1207 Unit test at  https://github.com/FilteredPush/event_date_qc/blob/8740a00b52ef41cdda5fc7fa1689e5d95a23a94b/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L881</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1968</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23354,7 +23402,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Completeness CORE</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -23363,14 +23411,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23401,7 +23441,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23469,11 +23509,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>FilteredPush event_date_qc [DwCEventDQ.validationEventdateInrange()](https://github.com/FilteredPush/event_date_qc/blob/c17d6e8340f7dd5dfa63a761d4e1cb66c126980a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2229)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2365</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23494,14 +23534,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTDATE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -23532,7 +23564,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23588,11 +23620,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc v3.0.5 [DwCEventDQ.validationEventdateNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L200)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L196</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -23605,14 +23637,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23643,7 +23667,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-16</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23703,11 +23727,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc [DwCEventDQ.validationEventdateStandard() ](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L494)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L507</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23724,14 +23748,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTDATE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25016,7 +25032,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25072,11 +25088,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush/Kurator:event_date_qc [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc [DwCEventDQ.validationMonthStandard()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L673) Unit test in [DwcEventDQTest]{https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L242)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L690 Unit test in [DwcEventDQTest]{https://github.com/FilteredPush/event_date_qc/blob/v3.0.0/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L242)</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -25089,14 +25105,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25312,6 +25320,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -25414,6 +25430,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25529,6 +25553,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25783,6 +25815,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -26629,6 +26669,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SEX_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -26658,7 +26706,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-05</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26718,11 +26766,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L832 Unit test at https://github.com/FilteredPush/event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L609</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1087</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -26730,7 +26778,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME Test Conformance CORE</td>
+			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26739,14 +26787,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -27486,6 +27526,14 @@ Including MultiRecord Measures
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -27515,7 +27563,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-10-14</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27579,11 +27627,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>FilteredPush:event_date_qc</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc [DwCEventDQ.validationYearInrange()]( https://github.com/FilteredPush/event_date_qc/blob/07f5a338c595c345cd6a0243df511cc752386d99/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2163)  [unit test](https://github.com/FilteredPush/event_date_qc/blob/07f5a338c595c345cd6a0243df511cc752386d99/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L1945)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2277</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27604,14 +27652,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -27642,7 +27682,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27698,11 +27738,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795).</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>event_date_qc v3.0.5 [DwCEventDQ.validationYearNotEmpty()](https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L235)</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L231</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -27715,14 +27755,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_YEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>

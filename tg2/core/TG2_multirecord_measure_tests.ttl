@@ -408,13 +408,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2024-11-08>
+<https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a>;
-  dcterms:issued "2024-11-08"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/33";
@@ -435,7 +435,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2024-11-08>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY" .
 
 <urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -445,13 +445,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2024-11-08>
+<https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a>;
-  dcterms:issued "2024-11-08"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/33";
@@ -464,7 +464,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2024-11-08>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY" .
 
 <urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -474,13 +474,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:53b35bee-878a-4142-954b-92c03865a63c>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/36";
@@ -498,7 +498,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:6ff94a83-1f03-4f3d-aa10-14a16aa3fff9>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE" .
 
 <urn:uuid:6ff94a83-1f03-4f3d-aa10-14a16aa3fff9> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -508,13 +508,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:53b35bee-878a-4142-954b-92c03865a63c>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/36";
@@ -527,7 +527,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5231f13b-bc40-40b3-b542-85d0f17c5b0c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE" .
 
 <urn:uuid:5231f13b-bc40-40b3-b542-85d0f17c5b0c> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -915,13 +915,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2024-11-08>
+<https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b>;
-  dcterms:issued "2024-11-08"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/49";
@@ -939,7 +939,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2024-11-08>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY" .
 
 <urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -949,13 +949,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2024-11-08>
+<https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b>;
-  dcterms:issued "2024-11-08"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/49";
@@ -968,7 +968,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2024-11-08>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY" .
 
 <urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1359,13 +1359,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/66";
@@ -1383,7 +1383,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f7580626-6b32-499a-ad51-0aa22e3eaa4a>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD" .
 
 <urn:uuid:f7580626-6b32-499a-ad51-0aa22e3eaa4a> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1393,13 +1393,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/66";
@@ -1412,7 +1412,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5311be07-b9ce-4609-9859-bfb68ab958fc>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD" .
 
 <urn:uuid:5311be07-b9ce-4609-9859-bfb68ab958fc> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1422,13 +1422,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c2949d73-f230-443b-a9c4-16af595f09a3>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/67";
@@ -1442,11 +1442,11 @@
   rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENT_CONSISTENT.Response" .
 
 <urn:uuid:4383a0b8-ae96-4fbd-9537-394ffe6ce310> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Consistency CORE";
+  skos:note "TG2 Validation TIME CODED Test Consistency CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:06899170-252f-4938-9f98-95089ac0bc07>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2024-09-04>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT" .
 
 <urn:uuid:06899170-252f-4938-9f98-95089ac0bc07> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1456,13 +1456,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6-2024-09-04>
+<https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c2949d73-f230-443b-a9c4-16af595f09a3>;
-  dcterms:issued "2024-09-04"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/67";
@@ -1471,11 +1471,11 @@
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent for MultiRecord" .
 
 <urn:uuid:0e8be8ac-143b-4f80-9b70-f037c041bc7a> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Consistency CORE";
+  skos:note "TG2 Validation TIME CODED Test Consistency CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:755db673-962e-4c3a-a033-fb5b05b1d66b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6-2024-09-04>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT" .
 
 <urn:uuid:755db673-962e-4c3a-a033-fb5b05b1d66b> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1485,13 +1485,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:bbb2cdf1-1565-48b9-8d6c-f5cee70a6e56>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/69";
@@ -1509,7 +1509,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:79471c9d-a97c-4cb0-8c61-e74f1f15abce>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD" .
 
 <urn:uuid:79471c9d-a97c-4cb0-8c61-e74f1f15abce> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1519,13 +1519,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:bbb2cdf1-1565-48b9-8d6c-f5cee70a6e56>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/69";
@@ -1538,7 +1538,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:fee0daaa-9273-469c-9c7d-a62fafe05874>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD" .
 
 <urn:uuid:fee0daaa-9273-469c-9c7d-a62fafe05874> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1611,13 +1611,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS" .
 
-<https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Likeliness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:ba87601b-dcc0-424d-973d-3869f35586d0>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/76";
@@ -1634,11 +1634,11 @@
   rdfs:label "Information Element ActedUpon bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response" .
 
 <urn:uuid:5f314145-e988-4684-b507-7429c796d996> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
+  skos:note "TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE" .
 
 <urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -1648,13 +1648,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Likeliness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:ba87601b-dcc0-424d-973d-3869f35586d0>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/76";
@@ -1663,11 +1663,11 @@
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified In Range for MultiRecord" .
 
 <urn:uuid:f9ef8fc4-3169-48ae-ab8f-ab1d58fb82d7> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
+  skos:note "TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE" .
 
 <urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -2055,13 +2055,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND" .
 
-<https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:904e3e78-82d3-4d8a-90db-2be4bead51cc>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/84";
@@ -2079,7 +2079,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE" .
 
 <urn:uuid:4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -2089,13 +2089,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2024-10-14>
+<https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:904e3e78-82d3-4d8a-90db-2be4bead51cc>;
-  dcterms:issued "2024-10-14"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/84";
@@ -2108,7 +2108,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:296e60bb-6872-420d-9769-d3f26d205714>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2024-10-14>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE" .
 
 <urn:uuid:296e60bb-6872-420d-9769-d3f26d205714> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -2181,13 +2181,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO" .
 
-<https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:b6c0e87e-4b9a-4f6b-bbaf-9cf23b02ddee>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/88";
@@ -2201,11 +2201,11 @@
   rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
 
 <urn:uuid:36fcff08-e64e-4640-984f-5263b0407a97> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Completeness CORE";
+  skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY" .
 
 <urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -2215,13 +2215,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY" .
 
-<https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:b6c0e87e-4b9a-4f6b-bbaf-9cf23b02ddee>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/88";
@@ -2230,11 +2230,11 @@
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty for MultiRecord" .
 
 <urn:uuid:9409ef24-baf9-4dfc-b4a8-7b6459cc1d54> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Completeness CORE";
+  skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY" .
 
 <urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3380,13 +3380,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT" .
 
-<https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)";
   skos:historyNote "https://github.com/tdwg/bdq/issues/125";
@@ -3404,7 +3404,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:f71db764-f571-4668-9a18-a3cafa5410c7>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE" .
 
 <urn:uuid:f71db764-f571-4668-9a18-a3cafa5410c7> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3414,13 +3414,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa-2024-09-16>
+<https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a>;
-  dcterms:issued "2024-09-16"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/125";
@@ -3433,7 +3433,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:df76475a-0207-4f98-b898-c1623d759442>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa-2024-09-16>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE" .
 
 <urn:uuid:df76475a-0207-4f98-b898-c1623d759442> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3443,13 +3443,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:5a033f48-4b60-4241-b5c3-4a7cb8de33f2>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)";
   skos:historyNote "https://github.com/tdwg/bdq/issues/126";
@@ -3467,7 +3467,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:8fae3a40-10fd-433c-bd4a-368bd356a7f1>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD" .
 
 <urn:uuid:8fae3a40-10fd-433c-bd4a-368bd356a7f1> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3477,13 +3477,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:5a033f48-4b60-4241-b5c3-4a7cb8de33f2>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/126";
@@ -3496,7 +3496,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:797b3653-1b79-4047-8f9a-82061b558a47>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD" .
 
 <urn:uuid:797b3653-1b79-4047-8f9a-82061b558a47> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3506,13 +3506,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)";
   skos:historyNote "https://github.com/tdwg/bdq/issues/130";
@@ -3526,11 +3526,11 @@
   rdfs:label "Information Element ActedUpon bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:8b66559e-bbe2-497f-ae9b-2c85863db5ad> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Conformance CORE";
+  skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:9e2719f2-9006-454a-b0d3-afd931f9c05d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE" .
 
 <urn:uuid:9e2719f2-9006-454a-b0d3-afd931f9c05d> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3540,13 +3540,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/130";
@@ -3555,11 +3555,11 @@
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:startDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:e8700081-32c3-45d0-9aae-d322ac94d864> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Conformance CORE";
+  skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:9d7932d2-8b74-460c-a33a-74128d299c7a>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE" .
 
 <urn:uuid:9d7932d2-8b74-460c-a33a-74128d299c7a> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3569,13 +3569,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:dda8a095-0878-4b93-8a55-9b95f1700dae>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)";
   skos:historyNote "https://github.com/tdwg/bdq/issues/131";
@@ -3589,11 +3589,11 @@
   rdfs:label "Information Element ActedUpon bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:893fd474-eab3-4265-865f-6cfe7635aa6b> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Conformance CORE";
+  skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:c211fdc8-fae5-4fa5-a8b8-0664a643b6a5>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE" .
 
 <urn:uuid:c211fdc8-fae5-4fa5-a8b8-0664a643b6a5> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3603,13 +3603,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:dda8a095-0878-4b93-8a55-9b95f1700dae>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/131";
@@ -3618,11 +3618,11 @@
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:endDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:6878bd5c-cac6-4d0b-aa0e-119f1dcc010c> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
-  skos:note "TG2 Validation TIME Test Conformance CORE";
+  skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:4b92124d-ee59-4183-b3da-77833996c053>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE" .
 
 <urn:uuid:4b92124d-ee59-4183-b3da-77833996c053> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3632,13 +3632,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE" .
 
-<https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9a0e0a79-fe93-4270-943f-30662eb60e72>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)";
   skos:historyNote "https://github.com/tdwg/bdq/issues/147";
@@ -3656,7 +3656,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD" .
 
 <urn:uuid:745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
@@ -3666,13 +3666,13 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD" .
 
-<https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e-2024-09-05>
+<https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Measure>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:MultiRecord>;
   skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9a0e0a79-fe93-4270-943f-30662eb60e72>;
-  dcterms:issued "2024-09-05"^^xsd:date;
+  dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731";
   rdfs:comment "Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT";
   skos:historyNote "https://github.com/tdwg/bdq/issues/147";
@@ -3685,7 +3685,7 @@
   <https://rs.tdwg.org/bdqffdq/terms/hasSpecification> <urn:uuid:e7bcd71f-7156-4e5b-9732-3fac13338f83>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e-2024-09-05>;
+  <https://rs.tdwg.org/bdqffdq/terms/forMeasurement> <https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06>;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD" .
 
 <urn:uuid:e7bcd71f-7156-4e5b-9732-3fac13338f83> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
