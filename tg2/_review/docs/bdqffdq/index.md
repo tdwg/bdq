@@ -110,9 +110,9 @@ In addition, an illustrated guide to the use of the bdqffdq ontology is provided
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List            | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
-| Human Readable Vocabulary Extension | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
-| Owl Ontology                        | TBD | [https://github.com/tdwg/bdq/blob/master/tg2/\_review/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
+| Human Readable Term List            | TBD | [/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
+| Human Readable Vocabulary Extension | TBD | [/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
+| Owl Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
 
 ### 1.4 Namespace abbreviations
 

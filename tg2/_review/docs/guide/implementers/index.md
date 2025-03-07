@@ -112,7 +112,7 @@ This document is for software developers needing a technical understanding of th
 - [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md)
 - [BDQ Core Vocabularies](../../vocabularies/index.md)
 - [BDQ Core User's Guide](../users/index.md)
-- Convenient list of tests [CSV file of just the SingleRecord tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_singlerecord_tests_current.csv)
+- Convenient list of tests [CSV file of just the SingleRecord tests](../../dist/bdqcore_singlerecord_tests_current.csv)
 
 ### 1.4 Status of the Content of this document
 
@@ -220,7 +220,7 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
 
 ### 2.3 Reading Test Descriptors (non-normative)
 
-The Tests defined in BDQ Core are described in the [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md), with more detail in the [bdqcore term-list](../../list/bdqcore/index.md) document.  Also for the convenience of implementers a [CSV file of just the SingleRecord tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/\_review/dist/bdqcore_singlerecord_tests_current.csv) is available.  Viewing the data in this file in a spreadsheet program can be an effective way to examine and compare the descriptions of the tests.
+The Tests defined in BDQ Core are described in the [BDQ Core Tests Quick Reference Guide](../../terms/bdqcore/index.md), with more detail in the [bdqcore term-list](../../list/bdqcore/index.md) document.  Also for the convenience of implementers a [CSV file of just the SingleRecord tests](../../dist/bdqcore_singlerecord_tests_current.csv) is available.  Viewing the data in this file in a spreadsheet program can be an effective way to examine and compare the descriptions of the tests.
 
 #### 2.3.1 Key Parts of a Test Descriptor
 
