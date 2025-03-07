@@ -1,6 +1,6 @@
 [
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -31,7 +31,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -146,7 +146,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
@@ -174,7 +174,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
             }
         ]
     },
@@ -221,7 +221,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -252,7 +252,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -329,7 +329,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -357,7 +357,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07"
             }
         ]
     },
@@ -428,7 +428,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -459,7 +459,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -522,13 +522,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L134"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L130"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -553,7 +553,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
             }
         ]
     },
@@ -618,7 +618,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -649,7 +649,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -729,7 +729,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L268"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L268"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance CORE"
@@ -757,7 +757,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07"
             }
         ]
     },
@@ -796,7 +796,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -827,7 +827,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -912,7 +912,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L300"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L300"
             },
             {
                 "@value": "TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE"
@@ -920,7 +920,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -987,7 +987,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1018,7 +1018,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -1081,13 +1081,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L175"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L171"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -1112,7 +1112,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
             }
         ]
     },
@@ -1177,7 +1177,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1208,7 +1208,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -1285,7 +1285,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L343"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L343"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance CORE"
@@ -1313,7 +1313,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             }
         ]
     },
@@ -1537,7 +1537,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -1573,7 +1573,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -1700,7 +1700,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test Completeness CORE"
@@ -1708,7 +1708,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -1767,7 +1767,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1798,7 +1798,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -1875,7 +1875,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L196"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L196"
             },
             {
                 "@value": "TG2 Validation TIME CODED Test Completeness CORE"
@@ -1903,7 +1903,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
             }
         ]
     },
@@ -2117,7 +2117,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2148,7 +2148,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2214,7 +2214,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -2242,7 +2242,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07"
             }
         ]
     },
@@ -2307,7 +2307,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2338,7 +2338,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2404,7 +2404,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L582"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L582"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance Parameterized CORE"
@@ -2432,7 +2432,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"
             }
         ]
     },
@@ -2503,7 +2503,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2534,7 +2534,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2657,7 +2657,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Completeness CORE"
@@ -2685,7 +2685,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07"
             }
         ]
     },
@@ -2724,7 +2724,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -2755,7 +2755,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2821,7 +2821,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE"
@@ -2829,7 +2829,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -2888,7 +2888,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2924,7 +2924,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -2990,7 +2990,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Completeness CORE"
@@ -3013,7 +3013,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07"
             }
         ]
     },
@@ -3052,7 +3052,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3083,7 +3083,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3146,13 +3146,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L216"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L212"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -3177,7 +3177,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             }
         ]
     },
@@ -3242,7 +3242,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3273,7 +3273,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3339,7 +3339,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L173"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L173"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
@@ -3367,7 +3367,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07"
             }
         ]
     },
@@ -3406,7 +3406,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -3437,7 +3437,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3482,7 +3482,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
@@ -3490,7 +3490,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -3708,7 +3708,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3739,7 +3739,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -3822,7 +3822,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1005"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1005"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE"
@@ -3850,7 +3850,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07"
             }
         ]
     },
@@ -3918,7 +3918,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3954,7 +3954,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -4044,7 +4044,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE"
@@ -4072,7 +4072,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07"
             }
         ]
     },
@@ -4345,7 +4345,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4381,7 +4381,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -4437,7 +4437,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test Consistency CORE"
@@ -4445,7 +4445,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -4530,7 +4530,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4566,7 +4566,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -4632,7 +4632,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test Completeness CORE"
@@ -4640,7 +4640,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -4694,7 +4694,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -4725,7 +4725,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -4797,7 +4797,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1378"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1378"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE"
@@ -4825,7 +4825,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07"
             }
         ]
     },
@@ -4890,7 +4890,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4926,7 +4926,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5079,18 +5079,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library, FP-KurationServices, Arctos, MCZbase, Symbiota"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712), Arctos, MCZbase, Symbiota"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L397 https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L476"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L393"
             },
             {
-                "@value": "TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Amendment NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5175,7 +5175,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5206,7 +5206,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5272,7 +5272,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
@@ -5300,7 +5300,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             }
         ]
     },
@@ -5339,7 +5339,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5370,7 +5370,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5436,7 +5436,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE"
@@ -5464,7 +5464,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07"
             }
         ]
     },
@@ -5503,7 +5503,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5534,7 +5534,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5579,7 +5579,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1568"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1568"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test VOCABULARY Conformance CORE"
@@ -5587,7 +5587,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5789,7 +5789,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5820,7 +5820,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -5889,7 +5889,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE"
@@ -5917,7 +5917,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07"
             }
         ]
     },
@@ -5956,7 +5956,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5987,7 +5987,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -6032,7 +6032,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -6040,7 +6040,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -6447,7 +6447,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -6483,7 +6483,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -6573,7 +6573,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test Completeness CORE"
@@ -6581,7 +6581,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -6635,7 +6635,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -6666,7 +6666,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -6711,7 +6711,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L61"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L61"
             },
             {
                 "@value": "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE"
@@ -6734,7 +6734,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
             }
         ]
     },
@@ -6773,7 +6773,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -6804,7 +6804,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -6953,13 +6953,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L796  https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L843"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L792"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -6984,7 +6984,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             }
         ]
     },
@@ -7049,7 +7049,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7085,7 +7085,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7148,18 +7148,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1156"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1152"
             },
             {
-                "@value": "TG2 Amendment NAME Test VOCABULARY Completeness Parameterized CORE"
+                "@value": "TG2 Amendment NAME CODED Test VOCABULARY Completeness Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7435,7 +7435,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7471,7 +7471,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7540,7 +7540,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE"
@@ -7548,7 +7548,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7633,7 +7633,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7669,7 +7669,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7770,7 +7770,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Completeness Parameterized CORE"
@@ -7778,7 +7778,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7837,12 +7837,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:0a40ca9b-dda6-4ec5-a2f9-e647286887b2"
+                "@id": "urn:uuid:6e4b3900-fdb2-40e5-ae35-93d1adc7b5d8"
             }
         ]
     },
     {
-        "@id": "urn:uuid:0a40ca9b-dda6-4ec5-a2f9-e647286887b2",
+        "@id": "urn:uuid:6e4b3900-fdb2-40e5-ae35-93d1adc7b5d8",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -7869,7 +7869,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -7905,7 +7905,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -7961,7 +7961,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L124"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L124"
             },
             {
                 "@value": "TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE"
@@ -7989,7 +7989,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
             }
         ]
     },
@@ -8054,7 +8054,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8085,7 +8085,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -8148,13 +8148,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1349"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1345"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -8174,7 +8174,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             }
         ]
     },
@@ -8239,7 +8239,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8270,7 +8270,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -8315,7 +8315,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Completeness CORE"
@@ -8338,7 +8338,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"
             }
         ]
     },
@@ -8377,7 +8377,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8408,7 +8408,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -8474,7 +8474,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2140"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2140"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance CORE"
@@ -8502,7 +8502,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             }
         ]
     },
@@ -8541,7 +8541,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8572,7 +8572,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -8635,13 +8635,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1390"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1386"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -8666,7 +8666,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
             }
         ]
     },
@@ -8731,7 +8731,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8762,7 +8762,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -8804,13 +8804,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1430"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1426"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -8835,7 +8835,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             }
         ]
     },
@@ -8874,7 +8874,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8905,7 +8905,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -8968,13 +8968,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1463"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1459"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -8999,7 +8999,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
             }
         ]
     },
@@ -9402,7 +9402,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9433,7 +9433,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -9489,7 +9489,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Likeliness CORE"
@@ -9517,7 +9517,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07"
             }
         ]
     },
@@ -9738,7 +9738,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9769,7 +9769,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -9814,7 +9814,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE"
@@ -9842,7 +9842,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             }
         ]
     },
@@ -10056,7 +10056,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -10087,7 +10087,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10153,7 +10153,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L241"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L241"
             },
             {
                 "@value": "TG2 Issue OTHER CODED Test Completeness CORE"
@@ -10176,7 +10176,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10220,7 +10220,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10251,7 +10251,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10296,7 +10296,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Completeness CORE"
@@ -10319,7 +10319,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             }
         ]
     },
@@ -10358,7 +10358,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10389,7 +10389,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10434,7 +10434,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE"
@@ -10457,7 +10457,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
             }
         ]
     },
@@ -10496,7 +10496,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10527,7 +10527,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10572,7 +10572,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
@@ -10595,7 +10595,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07"
             }
         ]
     },
@@ -10634,7 +10634,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10665,7 +10665,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10737,13 +10737,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library, FP-Akka"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1554"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1570"
             },
             {
-                "@value": "TG2 Validation NAME Test Consistency CORE"
+                "@value": "TG2 Validation NAME CODED Test Consistency CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -10768,7 +10768,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
             }
         ]
     },
@@ -10807,7 +10807,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -10843,7 +10843,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -10912,7 +10912,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349"
             },
             {
                 "@value": "TG2 Amendment SPACE CODED Test Completeness Parameterized CORE"
@@ -10920,7 +10920,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -11011,7 +11011,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11042,7 +11042,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11087,7 +11087,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
@@ -11115,7 +11115,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             }
         ]
     },
@@ -11154,7 +11154,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11185,7 +11185,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11230,7 +11230,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -11258,7 +11258,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             }
         ]
     },
@@ -11323,7 +11323,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11354,7 +11354,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11489,13 +11489,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1765"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1761"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -11520,7 +11520,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             }
         ]
     },
@@ -11559,7 +11559,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11590,7 +11590,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11656,7 +11656,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance Parameterized CORE"
@@ -11684,7 +11684,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07"
             }
         ]
     },
@@ -11755,7 +11755,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11786,7 +11786,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11831,7 +11831,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance CORE"
@@ -11859,7 +11859,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07"
             }
         ]
     },
@@ -11898,7 +11898,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11929,7 +11929,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -11995,7 +11995,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2562"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2562"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance CORE"
@@ -12023,7 +12023,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
             }
         ]
     },
@@ -12062,7 +12062,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12093,7 +12093,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12159,7 +12159,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Likeliness Parameterized CORE"
@@ -12187,7 +12187,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07"
             }
         ]
     },
@@ -12252,7 +12252,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -12283,7 +12283,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12328,7 +12328,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -12336,7 +12336,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12395,12 +12395,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:2568050f-6653-400c-a0f2-cc4b874aa057"
+                "@id": "urn:uuid:5f9a308b-db12-49b4-ab8f-72dddb9ae28d"
             }
         ]
     },
     {
-        "@id": "urn:uuid:2568050f-6653-400c-a0f2-cc4b874aa057",
+        "@id": "urn:uuid:5f9a308b-db12-49b4-ab8f-72dddb9ae28d",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -12421,7 +12421,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12452,7 +12452,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12497,7 +12497,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L418"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L418"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -12525,7 +12525,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
             }
         ]
     },
@@ -12564,12 +12564,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
-                "@id": "urn:uuid:8d66d221-edf2-4470-adda-70891752d120"
+                "@id": "urn:uuid:d7d79c00-7ee9-49fd-b896-b6f47b1c4e5a"
             }
         ]
     },
     {
-        "@id": "urn:uuid:8d66d221-edf2-4470-adda-70891752d120",
+        "@id": "urn:uuid:d7d79c00-7ee9-49fd-b896-b6f47b1c4e5a",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Argument"
         ],
@@ -12590,7 +12590,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12621,7 +12621,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12666,7 +12666,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L489"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L489"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test Completeness CORE"
@@ -12694,7 +12694,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
             }
         ]
     },
@@ -12733,7 +12733,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12764,7 +12764,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12809,7 +12809,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2688"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2688"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Completeness CORE"
@@ -12837,7 +12837,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             }
         ]
     },
@@ -12876,7 +12876,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12907,7 +12907,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -12949,13 +12949,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1849"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1845"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12980,7 +12980,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
             }
         ]
     },
@@ -13019,7 +13019,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -13050,7 +13050,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -13113,13 +13113,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2003"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1999"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -13144,7 +13144,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             }
         ]
     },
@@ -13209,7 +13209,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -13240,7 +13240,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -13330,13 +13330,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2567"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2563"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -13361,7 +13361,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             }
         ]
     },
@@ -14580,7 +14580,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -14611,7 +14611,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -14656,7 +14656,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -14664,7 +14664,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -15007,7 +15007,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -15033,7 +15033,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -15078,7 +15078,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120"
             },
             {
                 "@value": "TG2 Measure TIME CODED Test CORE"
@@ -15101,7 +15101,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasurement": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15288,7 +15288,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15319,7 +15319,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-07",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -15382,7 +15382,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
+            },
+            {
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2127"
+            },
+            {
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -15407,7 +15413,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
             }
         ]
     },
@@ -15446,7 +15452,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15477,7 +15483,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -15519,13 +15525,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2165"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2161"
             },
             {
-                "@value": "TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -15550,7 +15556,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
             }
         ]
     },
@@ -15615,7 +15621,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -15646,7 +15652,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -15688,18 +15694,18 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2276"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2272"
             },
             {
-                "@value": "TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE"
+                "@value": "TG2 Amendment NAME CODED Test VOCABULARY Conformance Parameterized CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -15784,7 +15790,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15815,7 +15821,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -15881,7 +15887,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test Conformance Parameterized CORE"
@@ -15909,7 +15915,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07"
             }
         ]
     },
@@ -15974,7 +15980,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16005,7 +16011,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16071,7 +16077,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2802"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2802"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -16099,7 +16105,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
             }
         ]
     },
@@ -16164,7 +16170,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16195,7 +16201,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16264,7 +16270,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3020"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3020"
             },
             {
                 "@value": "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -16292,7 +16298,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07"
             }
         ]
     },
@@ -16357,7 +16363,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16388,7 +16394,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16441,13 +16447,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2907"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2903"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -16472,7 +16478,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
             }
         ]
     },
@@ -16511,7 +16517,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16542,7 +16548,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16584,13 +16590,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3024"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3021"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -16615,7 +16621,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
             }
         ]
     },
@@ -16654,7 +16660,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16685,7 +16691,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16748,13 +16754,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3059"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3055"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -16779,7 +16785,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
             }
         ]
     },
@@ -16818,7 +16824,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16849,7 +16855,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-11-08",
+                "@value": "2025-03-06",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16912,13 +16918,13 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library"
+                "@value": "Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3094"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3090"
             },
             {
-                "@value": "TG2 Validation NAME Test Completeness CORE"
+                "@value": "TG2 Validation NAME CODED Test Completeness CORE"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -16943,7 +16949,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
             }
         ]
     },
@@ -16982,7 +16988,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17013,7 +17019,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17058,7 +17064,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1429"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1429"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -17086,7 +17092,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             }
         ]
     },
@@ -17151,7 +17157,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17182,7 +17188,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17227,7 +17233,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -17235,7 +17241,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17320,7 +17326,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17351,7 +17357,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17417,7 +17423,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -17445,7 +17451,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07"
             }
         ]
     },
@@ -17510,7 +17516,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17541,7 +17547,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17586,7 +17592,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1759"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1759"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -17594,7 +17600,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17679,7 +17685,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17710,7 +17716,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17776,7 +17782,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1875"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1875"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -17804,7 +17810,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
             }
         ]
     },
@@ -17869,7 +17875,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17900,7 +17906,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -17945,7 +17951,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -17953,7 +17959,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18038,7 +18044,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -18069,7 +18075,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18135,7 +18141,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE"
@@ -18163,7 +18169,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
             }
         ]
     },
@@ -18228,7 +18234,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18259,7 +18265,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18304,7 +18310,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance CORE"
@@ -18312,7 +18318,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18397,7 +18403,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -18428,7 +18434,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18494,7 +18500,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2246"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2246"
             },
             {
                 "@value": "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -18522,7 +18528,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ]
     },
@@ -18587,7 +18593,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18618,7 +18624,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18663,7 +18669,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338"
             },
             {
                 "@value": "TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE"
@@ -18671,7 +18677,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18756,7 +18762,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-05",
+        "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -18792,7 +18798,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-05",
+                "@value": "2025-03-07",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -18858,7 +18864,7 @@
                 "@value": "Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)"
             },
             {
-                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3632"
+                "@value": "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3632"
             },
             {
                 "@value": "TG2 Issue SPACE CODED Test Conformance Parameterized CORE"
@@ -18881,7 +18887,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18982,7 +18988,7 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"
             }
         ]
     },
@@ -19014,16 +19020,16 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
@@ -19032,52 +19038,52 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19114,64 +19120,64 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
@@ -19180,31 +19186,31 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
@@ -19213,58 +19219,58 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06"
@@ -19282,43 +19288,43 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19344,97 +19350,97 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2024-09-07"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19471,25 +19477,25 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
         ]
     },
@@ -19510,49 +19516,49 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06"
@@ -19561,10 +19567,10 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-05"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06"
@@ -19576,22 +19582,22 @@
                 "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2024-11-08"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
         ]
     },
@@ -19612,7 +19618,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
             }
         ]
     },

@@ -154,7 +154,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcore/terms/version/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20](https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20) |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcore/terms/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e](https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e |
-| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2025-03-05 |
+| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2025-03-07 |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_COORDINATES_FROM_VERBATIM |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment Coordinates From Verbatim |
 | DateLastUpdated (bdqffdq:hasDateLastUpdated) | non-normative | Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation. | 2024-08-20 |
@@ -169,7 +169,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | ExpectedResponse (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the Test must be implemented. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. |
 | Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",  dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"],[dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 0390210 7377243", dwc:verbatimSRS="EPSG:32754", dwc:verbatimCoordinateSystem="decimal degrees", dwc:decimalLatitude="", dwc:decimalLongitude="":: Response.status=NOT_AMENDED, Response.result="", Response.comment="In the wrong coordinate system"] |
 | Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324) |
-| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L402](https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402) |
+| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L402](https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402) |
 | Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote. | TG2 Amendment SPACE CODED Test Completeness CORE |
 | InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:decimalLatitude, dwc:decimalLongitude, dwc:geodeticDatum |
 | InformationElements Consulted (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:verbatimCoordinateSystem, dwc:verbatimSRS |
@@ -490,7 +490,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -558,7 +558,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -575,14 +575,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -613,7 +605,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -689,7 +681,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -710,14 +702,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 	</tbody>
 </table>
@@ -748,7 +732,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -816,7 +800,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -833,14 +817,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -871,7 +847,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -943,7 +919,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -964,14 +940,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1002,7 +970,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1070,7 +1038,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1091,14 +1059,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1129,7 +1089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1205,7 +1165,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1226,14 +1186,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 	</tbody>
 </table>
@@ -1264,7 +1216,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1328,7 +1280,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1345,14 +1297,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1383,7 +1327,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1447,7 +1391,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L300</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L300</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1464,14 +1408,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1617,7 +1553,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1689,7 +1625,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1759</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1759</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1710,14 +1646,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1748,7 +1676,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -1820,7 +1748,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -1837,14 +1765,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2486,7 +2406,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2562,7 +2482,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2583,14 +2503,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -2621,7 +2533,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2689,7 +2601,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1568</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1568</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2706,14 +2618,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2744,7 +2648,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2808,7 +2712,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2825,14 +2729,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -2863,7 +2759,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -2927,7 +2823,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2944,14 +2840,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 	</tbody>
 </table>
@@ -3097,7 +2985,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3169,7 +3057,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3186,14 +3074,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 	</tbody>
 </table>
@@ -3224,7 +3104,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3292,7 +3172,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3309,14 +3189,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3347,7 +3219,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3419,7 +3291,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3440,14 +3312,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3478,7 +3342,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3550,11 +3414,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1156</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1152</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3562,7 +3426,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment NAME Test VOCABULARY Completeness Parameterized CORE</td>
+			<td>TG2 Amendment NAME CODED Test VOCABULARY Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3575,14 +3439,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 	</tbody>
 </table>
@@ -3613,7 +3469,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3685,11 +3541,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library, FP-KurationServices, Arctos, MCZbase, Symbiota</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712), Arctos, MCZbase, Symbiota</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L397 https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L476</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L393</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3697,7 +3553,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3710,14 +3566,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 	</tbody>
 </table>
@@ -3748,7 +3596,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3820,7 +3668,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3841,14 +3689,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -3879,7 +3719,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -3947,11 +3787,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2276</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2272</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3959,7 +3799,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Amendment NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Amendment NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -3972,14 +3812,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -4010,7 +3842,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4082,7 +3914,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4103,14 +3935,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -4252,7 +4076,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4328,7 +4152,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3632</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3632</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4349,14 +4173,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4506,7 +4322,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4566,7 +4382,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L241</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L241</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -4579,14 +4395,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -4708,7 +4516,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -4768,7 +4576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5100,7 +4908,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5199,7 +5007,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5294,7 +5102,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5354,7 +5162,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -5397,7 +5205,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5500,7 +5308,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5603,7 +5411,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5698,7 +5506,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5801,7 +5609,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5896,7 +5704,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -5995,7 +5803,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6090,7 +5898,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6193,7 +6001,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6288,7 +6096,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6383,7 +6191,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6486,7 +6294,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6546,7 +6354,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -6589,7 +6397,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6684,7 +6492,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6783,7 +6591,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6886,7 +6694,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -6989,7 +6797,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7084,7 +6892,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7179,7 +6987,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7278,7 +7086,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7381,7 +7189,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7666,7 +7474,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7761,7 +7569,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7856,7 +7664,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -7951,7 +7759,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8046,7 +7854,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8244,7 +8052,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8640,7 +8448,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8830,7 +8638,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8890,7 +8698,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -8933,7 +8741,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -8993,7 +8801,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9036,7 +8844,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9131,7 +8939,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9191,7 +8999,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9234,7 +9042,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9290,7 +9098,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -9329,7 +9137,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9432,7 +9240,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9535,7 +9343,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9638,7 +9446,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9741,7 +9549,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9931,7 +9739,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -9987,7 +9795,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10026,7 +9834,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10121,7 +9929,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10216,7 +10024,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10315,7 +10123,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10375,7 +10183,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10418,7 +10226,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10521,7 +10329,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10581,7 +10389,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10624,7 +10432,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10684,7 +10492,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10727,7 +10535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10783,7 +10591,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10822,7 +10630,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10878,7 +10686,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -10917,7 +10725,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -10973,7 +10781,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11012,7 +10820,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11068,7 +10876,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11107,7 +10915,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11305,7 +11113,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11408,7 +11216,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11464,7 +11272,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11503,7 +11311,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11563,7 +11371,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11606,7 +11414,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11662,7 +11470,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11701,7 +11509,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -11761,7 +11569,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -11804,7 +11612,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12105,7 +11913,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12161,7 +11969,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Consistency CORE</td>
+			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12200,7 +12008,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12299,7 +12107,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12394,7 +12202,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12454,7 +12262,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -12497,7 +12305,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12600,7 +12408,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12703,7 +12511,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12798,7 +12606,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12901,7 +12709,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -12996,7 +12804,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13095,7 +12903,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13190,7 +12998,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13293,7 +13101,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13388,7 +13196,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13483,7 +13291,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13586,7 +13394,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13646,7 +13454,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -13689,7 +13497,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13784,7 +13592,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13883,7 +13691,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -13986,7 +13794,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14089,7 +13897,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14184,7 +13992,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14279,7 +14087,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14378,7 +14186,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14481,7 +14289,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14766,7 +14574,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14861,7 +14669,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -14956,7 +14764,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15051,7 +14859,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15146,7 +14954,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15344,7 +15152,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15740,7 +15548,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15930,7 +15738,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -15990,7 +15798,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16033,7 +15841,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16093,7 +15901,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16136,7 +15944,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16231,7 +16039,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16291,7 +16099,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16334,7 +16142,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16390,7 +16198,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -16429,7 +16237,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16532,7 +16340,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16635,7 +16443,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16738,7 +16546,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -16841,7 +16649,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17031,7 +16839,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17087,7 +16895,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17126,7 +16934,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17221,7 +17029,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17316,7 +17124,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17415,7 +17223,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17475,7 +17283,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17518,7 +17326,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17621,7 +17429,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17681,7 +17489,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17724,7 +17532,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17784,7 +17592,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17827,7 +17635,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17883,7 +17691,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -17922,7 +17730,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -17978,7 +17786,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18017,7 +17825,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18073,7 +17881,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18112,7 +17920,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18168,7 +17976,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18207,7 +18015,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18405,7 +18213,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18508,7 +18316,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18564,7 +18372,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18603,7 +18411,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18663,7 +18471,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18706,7 +18514,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18762,7 +18570,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18801,7 +18609,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -18861,7 +18669,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -18904,7 +18712,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19205,7 +19013,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19261,7 +19069,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Consistency CORE</td>
+			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19300,7 +19108,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19368,7 +19176,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19385,14 +19193,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -19423,7 +19223,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19487,7 +19287,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L268</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L268</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -19500,14 +19300,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 	</tbody>
 </table>
@@ -19538,7 +19330,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19606,11 +19398,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2567</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2563</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19618,7 +19410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Consistency Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -19631,14 +19423,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -19669,7 +19453,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19741,7 +19525,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1005</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1005</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19762,14 +19546,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -19800,7 +19576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19872,7 +19648,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1378</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1378</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19893,14 +19669,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -19931,7 +19699,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -19995,7 +19763,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20012,14 +19780,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -20050,7 +19810,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20126,7 +19886,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20147,14 +19907,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -20185,7 +19937,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20249,7 +20001,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -20262,14 +20014,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20300,7 +20044,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20368,7 +20112,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20385,14 +20129,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20423,7 +20159,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20483,7 +20219,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20500,14 +20236,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20538,7 +20266,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20610,7 +20338,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20631,14 +20359,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -20669,7 +20389,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20733,7 +20453,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20750,14 +20470,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20788,7 +20500,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20848,7 +20560,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -20861,14 +20573,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -20899,7 +20603,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -20967,7 +20671,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20988,14 +20692,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -21026,7 +20722,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21090,11 +20786,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1349</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1345</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21102,7 +20798,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -21115,14 +20811,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -21153,7 +20841,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21217,7 +20905,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2562</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2562</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21234,14 +20922,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -21272,7 +20952,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21340,7 +21020,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21357,14 +21037,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -21395,7 +21067,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21467,7 +21139,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3020</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3020</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21488,14 +21160,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -21526,7 +21190,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21598,7 +21262,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21619,14 +21283,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -21657,7 +21313,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21721,7 +21377,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21738,14 +21394,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21776,7 +21424,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21836,7 +21484,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21853,14 +21501,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21891,7 +21531,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -21959,7 +21599,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21976,14 +21616,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22014,7 +21646,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22090,7 +21722,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L124</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L124</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -22111,14 +21743,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22149,7 +21773,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22209,7 +21833,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L61</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L61</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -22222,14 +21846,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22494,7 +22110,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22558,7 +22174,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2140</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2140</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -22571,14 +22187,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22609,7 +22217,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22673,7 +22281,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2688</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2688</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -22686,14 +22294,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22724,7 +22324,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22788,7 +22388,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L343</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L343</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -22801,14 +22401,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -22839,7 +22431,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -22899,7 +22491,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -22912,14 +22504,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22950,7 +22534,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23022,7 +22606,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23043,14 +22627,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -23200,7 +22776,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23272,7 +22848,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1429</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1429</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23293,14 +22869,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -23692,7 +23260,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23752,7 +23320,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L196</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L196</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -23765,14 +23333,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -23922,7 +23482,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -23990,11 +23550,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L175</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L171</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -24002,7 +23562,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24015,14 +23575,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24053,7 +23605,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24121,11 +23673,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2003</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1999</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -24133,7 +23685,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24146,14 +23698,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24184,7 +23728,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24244,7 +23788,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -24257,14 +23801,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24295,7 +23831,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24363,11 +23899,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1390</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1386</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -24375,7 +23911,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24388,14 +23924,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -24426,7 +23954,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24482,15 +24010,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3024</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3021</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -24499,14 +24027,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -24537,7 +24057,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24609,7 +24129,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -24630,14 +24150,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24668,7 +24180,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24740,7 +24252,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -24761,14 +24273,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24799,7 +24303,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -24871,7 +24375,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -24892,14 +24396,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -24930,7 +24426,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25002,7 +24498,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L582</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L582</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25023,14 +24519,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -25061,7 +24549,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25125,7 +24613,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -25138,14 +24626,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 	</tbody>
 </table>
@@ -25287,7 +24767,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25343,15 +24823,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3094</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3090</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -25360,14 +24840,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25398,7 +24870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25458,7 +24930,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L173</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L173</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -25471,14 +24943,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25509,7 +24973,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25569,7 +25033,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L489</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L489</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -25582,14 +25046,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -25620,7 +25076,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25688,7 +25144,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L418</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L418</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25705,14 +25161,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -25743,7 +25191,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25811,11 +25259,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1463</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1459</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25823,7 +25271,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -25836,14 +25284,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -25874,7 +25314,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -25946,7 +25386,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1875</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1875</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25967,14 +25407,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -26005,7 +25437,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26073,11 +25505,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L134</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L130</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -26085,7 +25517,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26098,14 +25530,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -26136,7 +25560,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26204,11 +25628,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L216</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L212</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -26216,7 +25640,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26229,14 +25653,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -26267,7 +25683,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26327,15 +25743,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1430</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1426</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26344,14 +25760,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26382,7 +25790,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26438,15 +25846,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3059</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3055</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26455,14 +25863,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26493,7 +25893,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26553,11 +25953,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2907</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2903</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -26565,7 +25965,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26574,14 +25974,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 	</tbody>
 </table>
@@ -26612,7 +26004,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26672,15 +26064,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1849</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1845</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -26689,14 +26081,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -26727,7 +26111,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -26799,7 +26183,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -26820,14 +26204,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -26977,7 +26353,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-05</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27049,7 +26425,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2802</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2802</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27070,14 +26446,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -27108,7 +26476,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27164,11 +26532,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1765</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1761</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27176,7 +26544,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -27185,14 +26553,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27223,7 +26583,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27291,11 +26651,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L796  https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L843</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L792</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27303,7 +26663,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -27316,14 +26676,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 	</tbody>
 </table>
@@ -27354,7 +26706,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-07</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27413,8 +26765,16 @@ Including MultiRecord Measures
 			<td><ul><li>GBIF (2015) Taxonomic Rank GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/rank.xml</li></ul></td>
 		</tr>
 		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2127</td>
+		</tr>
+		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -27423,14 +26783,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -27461,7 +26813,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27529,11 +26881,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2165</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2161</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27541,7 +26893,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test VOCABULARY Conformance Parameterized CORE</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -27554,14 +26906,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27592,7 +26936,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -27664,7 +27008,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2246</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2246</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -27685,14 +27029,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -27961,7 +27297,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-11-08</td>
+			<td>2025-03-06</td>
 		</tr>
 		<tr>
 			<td>DateLastUpdated</td>
@@ -28021,11 +27357,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library, FP-Akka</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1554</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1570</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -28033,7 +27369,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME Test Consistency CORE</td>
+			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>Use Cases</td>
@@ -28042,14 +27378,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Status</td>
 			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
