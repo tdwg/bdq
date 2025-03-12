@@ -101,11 +101,11 @@ The following namespace abbreviations are used in this document:
 
 The full set of documents comprising the BDQ Core standard is listed on the [BDQ Core landing page](../../index.md).
 
-### 2.1 Vocabularies
+### 2.2 Vocabularies
 
 The focus of this standard is on (1) a framework for describing data quality and (2) the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata expressed with bdqffdq: and other vocabularies.  Four additional vocabularies used in defining the tests are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](../vocabularies/index.md). 
 
-### 2.2 Test Guidance
+### 2.3 Test Guidance
 
 Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. The BDQ Core standard suite of tests and assertions is meant to be used by data collectors, data providers, and data users to assess and potentially improve data quality.  
 
@@ -117,11 +117,11 @@ Test specifications _sensu latu_ consist of the metadata (e.g., identifier, pref
 
 The specifications _sensu strictu_ for tests include expected responses from tests consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the test that was run, whether the information elements were those consulted or those acted upon.
 
-### 2.3 Test Lists
+### 2.4 Test Lists
 
 The [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) is a quick reference guide to the tests defined in BDQ Core. 
 
-### 2.4 Guides and other documents. 
+### 2.5 Guides and other documents. 
 
 The [BDQ User's Guide](../guide/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run.  It is intended to be read with the quick reference guide to the tests.
 
@@ -131,11 +131,11 @@ The [Framework Ontology Guide](../guide/bdqffdq/index.md) describes how the Fram
 
 [Synthetic and Modified Data](../synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
 
-### 2.5 Implementation Validation Data 
+### 2.6 Implementation Validation Data 
 
 See the [BDQ Implementer's Guide](../guide/implementers/index.md) for information on a set of data for validating test implementations.. 
 
-### 2.6 Test Execution Environments and Workflows
+### 2.7 Test Execution Environments and Workflows
 
 Neither the test descriptions nor the framework impose constraints on environments or workflows for execution.  One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
 
@@ -147,7 +147,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 2.7 Implementations of Tests 'In the Wild'
+### 2.8 Implementations of Tests 'In the Wild'
 
 Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java implementations of the BDQ Core tests which pass against the validation data.  See [9 Existing Test Implementations](../guide/implementers/index.md/#9-Existing-Test-Implementations-non-normative) in the implementer's guide for details.  
 
