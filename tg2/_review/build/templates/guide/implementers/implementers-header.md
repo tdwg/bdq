@@ -453,7 +453,7 @@ A good practice for executing the BDQ Core Tests is to follow a sequence that be
 
 It is RECOMMENDED, for Quality Assurance, with the current suite of BDQ Core Tests, to run all pertinent (to a Use Case) bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent MultiRecord Measures that return `COMPLETE` or `NOT_COMPLETE`.   These Measures MAY be used as filters.  Exclude records from the data set until all MultiRecord Measure Tests return "COMPLETE".  This, under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.  This process ensures that the data are fit for the intended use.  This process MAY be performed in a single Validation and Measure phase without Amendments.  This process MAY be performed on a post-amendment phase with all or selected proposed changes from Amendments accepted into the data stream.  Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  Acceptance of proposals for changes to the data into a database of record MUST NOT be done blindly.
 
-#### 6.4.1.2 Phases and Quality Control (normative)
+#### 6.4.1.3 Phases and Quality Control (normative)
 
 Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed amendments would improve the data.  Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  Acceptance of proposals for changes to the data into a database of record MUST NOT be done blindly.
 
@@ -524,7 +524,7 @@ Implementations MAY define objects corresponding to the set of InformationElemen
 
 Implementers MAY use any approach to passing data into Test implementations appropriate for their language(s) and environment.
 
-#### 6.4.4.1 Examples of matching input Darwin Core to Method parameters (non-normative) 
+#### 6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative) 
 
 If Test implementations are functions that take Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correct matching of input Darwin Core terms to the parameters of the test (function or method).  
 
@@ -768,13 +768,13 @@ Reports SHOULD identify Tests to consumers of those reports using at least the r
 
 Reports MAY describe Tests to consumers of those reports using the rdfs:comment for the Test class, e.g. "Does the value of dwc:country occur in the bdq:sourceAuthority?" for [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134).  
 
-### 7.1.1 InformationElements ActedUpon and Consulted in Results (normative)
+### 7.1.2 InformationElements ActedUpon and Consulted in Results (normative)
 
 InformationElements may be bdqffdq:ActedUpon or bdqffdq:Consulted (the sub-types of bdqffdq:InformationElement). Presentations of data quality results MAY use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon InformationElements are those for which a Validation Test is asserting compliance/non-compliance, or an Amendment Test that is proposing an improvement to the data. Consulted InformationElements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812), the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted.  Implementers may wish to clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
 
 Presentations of data quality reports SHOULD NOT assert that Consulted Information Elements for a Validation are NOT_COMPLIANT with respect to that Validation.
 
-#### 7.1.2 Example (non-normative)
+#### 7.1.3 Example (non-normative)
 
 Below is an example, taken from MCZbase (Kennedy et al. 2024), of a portion of a data quality report, run on demand, for a single specimen using an implementation of BDQ Core Tests integrated into that collection management system.
 
