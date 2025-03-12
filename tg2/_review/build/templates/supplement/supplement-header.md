@@ -371,7 +371,7 @@ Example results:
 
 The label is intended as the identifier of a Test for humans, the Term Name as a machine readable identifier.
 
-### 2.4.1 Framework Competency Question including an oa:annotation
+### 2.4.2 Framework Competency Question including an oa:annotation
 
 Given a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
 
