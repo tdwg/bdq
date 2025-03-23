@@ -130,21 +130,13 @@ A change to Test data may also precipitate the need to change one or both of the
 
 Test validation data is most easily input into validation frameworks when presented in a CSV file with one column per information element (e.g., Darwin Core term).  However, such sparse data is very difficult for humans to edit and maintain with spreadsheet software.  It is much easier to maintain is a sheet where all the input information elements for a validation row are concatenated as a list of key-value pairs in one spreadsheet column. 
 
-<!--- Paul **TODO**  Cleanup this text --->
+The original test validation data was developed in an excel spreadsheet by Lee Belbin in a compressed format which has columns to identify test rows, which test a row pertains to, inputs and expected outputs.  Exports of just the validation data sheet can be found in bdqtestrunner (Morris 2024b) e.g. [Test_data_98_2025_03_05.csv](https://github.com/FilteredPush/bdqtestrunner/blob/master/src/main/resources/Test_data_98_2025_03_05.csv)   In this format, a single column contains list of darwin core terms as keys paired with values providing the relevant Information Elements for the given test.   This file was transformed by bdqtestrunner into an [expanded version](../guide/implementers/TG2_test_validation_data.csv)  where each Information Element forms a separate column (then split into a file containing normal characters and a second file where particular text strings were changed to null and other non-printing characters).   The transformed version is simpler to use as input for a testing framework (and was used by bdqtestrunner for validation of the Kurator/FilteredPush test implementations) that can take flat Darwin Core as input (and doesn't need special case parsing of key:value pairs of darwin core terms from one column in the csv.  It is, however is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records.  Thus two versions of the Test Validation Data are provided for maintenance, and maintainers are encouraged to use the compressed version for maintenance and the expanded version for testing.  
 
-The original compressed format version [link] has a single column containing the values for the relevant Information Elements. This file is transformed by xxx into an expanded version [link] where each Information Element forms a separate column. The transformed version is simpler to use by the testing framework. It is easier to edit the compressed version of the Test Validation Data to change an existing record or add one or more new records. 
-
-There are two tools to move between the two representations. To compress sparse information element columns into a single column: 
-
-https://github.com/tdwg/bdq/blob/master/tg2/core/squish_validation_data.py
-
-To expand the single input information elements column into multiple columns one for each information element: 
-
-https://github.com/FilteredPush/bdqtestrunner/blob/master/src/main/java/org/filteredpush/qc/bdqtestrunner/TestOfTestSpreasheetUtility.java
+A pair of tools are provided move between the two representations. To compress sparse information element columns into a single column use [squish_validation_data.py]( https://github.com/tdwg/bdq/blob/master/tg2/core/squish_validation_data.py)  To expand the single input information elements column into multiple columns one for each information element use [TestOfTestSpreasheetUtility.java](https://github.com/FilteredPush/bdqtestrunner/blob/master/src/main/java/org/filteredpush/qc/bdqtestrunner/TestOfTestSpreasheetUtility.java)
 
 These tools SHOULD NOT be used on the validation data file containing non-printing characters.
 
-Changes to squish_validation_data.py may be provided that would allow round tripping of that file between forms (with the replacement of non-printing characters and NULLs with specified string markers in a squished file editable in a spreadsheet application.
+Changes to squish_validation_data.py may be provided that would allow round tripping of the non-printing characters file between forms (with the replacement of non-printing characters and NULLs with specified string markers in a squished file editable in a spreadsheet application.  This would allow a compressed non-printing characters file to be used for maintenance and the expanded file to be used for testing.  Currently, only the expanded non-printing characters file is provided for both maintinance and testing.  
 
 ### 3.5 Tools for validating implementations against the validation data
 
