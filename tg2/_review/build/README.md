@@ -5,6 +5,7 @@ This directory contains build files to generate files that constitute the propos
 Editable master copies of templates for human readable vocabulary lists and human readable documentation live here.
 
 <pre>
+├── README.md  This file.
 ├── authors_configuration.yaml  Configuration file for the list of authors and contributors.
 ├── draft_build_bdqcore_qrg.py  Script to build the BDQCore Quick Reference Guide.
 ├── draft_build_bdqffdq.py  Script to build markdown documents for the BDQFFDQ Framework Ontology from the owl ontology.
@@ -13,7 +14,6 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── draft_build-termlist.py  Script to build termlist files for docs/list/ from templates (plus rdf for dist/), draft refers to this being to build a draft standard.
 ├── function_lib.py  Shared functions reused across build scripts.
 ├── make_bdq_tests_vertical.py  Script to build an artifact containing a list of tests. ** NOTE: purpose unclear.**
-├── README.md  This file.
 ├── references.md  The list of references for inclusion in other files.
 ├── temp_namespaces.yaml  Configuration file used by draft_build-termlist.py to replace an rs.tdwg.org resource unavailable for a draft standard.
 ├── temp_term-lists.csv  CSV file used by draft_build-termlist.py to replace an rs.tdwg.org resource unavailable for a draft standard.
@@ -113,7 +113,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
     │       ├── bdqcore_quickreference-footer.md
     │       ├── bdqcore_quickreference-header.md
     │       └── document_configuration.yaml
-    ├── vocabularies templates used by draft_build-docs.py to build docs/vocabularies/
+    └── vocabularies  Templates used by draft_build-docs.py to build docs/vocabularies/.
         ├── document_configuration.yaml
         ├── vocabularies-footer.md
         └── vocabularies-header.md

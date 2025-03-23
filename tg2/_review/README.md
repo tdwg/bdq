@@ -5,15 +5,17 @@ The best place to begin to review the proposal is on the [BDQ Core landing page]
 Summary of files in this directory: 
 
 <pre>
+├── README.md  This file. **Editable.**
+├── index.md  Landing page for the standard. **Editable.**
 ├── build  Build scripts and templates to assemble pages.
-│   ├── see [build/README.md](build/README.md)
+│   ├── see build/README.md
 ├── dist  Generated CSV distribution files for building other artifacts.
 │   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py).
-│   ├── bdqcore_singlerecord_tests_current.csv  CSV list of current bdqcore SingleRecord tests, for the convenience of implementers.
-│   ├── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name.
 │   ├── bdqcore.json  JSON serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl.
 │   ├── bdqcore.ttl  Turtle serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl.
 │   ├── bdqcore.xml  RDF/XML serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml.
+│   ├── bdqcore_singlerecord_tests_current.csv  CSV list of current bdqcore SingleRecord tests, for the convenience of implementers.
+│   ├── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name.
 │   ├── bdqcrit.xml  Generated RDF for bdqcrit vocabulary (built with draft_build-termlist.py).
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py).
 │   └── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py).
@@ -69,10 +71,8 @@ Summary of files in this directory:
 │   │       ├── qrg_index_by_ie_class.md  Generated file. **Do not edit.**
 │   │       ├── qrg_index_by_usecase.md  Generated file. **Do not edit.**
 │   │       └── qrg_multirecord_index.md  Generated file. **Do not edit.**
-│   ├── vocabularies
+│   └── vocabularies
 │       └── index.md  Generated file. **Do not edit.**
-├── index.md  Landing page for the standard. **Editable.**
-├── README.md  This file. **Editable.**
 └── vocabulary  Term version files for vocabularies.
-    ├── see [vocabulary/README.md](vocabulary/README.md)
+    └── see vocabulary/README.md
 </pre>
