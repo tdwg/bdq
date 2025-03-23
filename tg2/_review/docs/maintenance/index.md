@@ -152,7 +152,7 @@ The bdqtestrunner utility is available for running Java implementations of tests
 
 ## 4 Proposals for Changes to existing Tests 
 
-<!--- TODO: Add template for proposals of changes to existing to maintenance repository.  It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
+<!--- TODO: Once in maintenance mode, add a template for proposals of changes to the maintenance repository.  It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
 
 Accepted changes will need to be added as new rows to the bdqcore term-version file.
 
