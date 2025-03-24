@@ -3,7 +3,7 @@
 # ----------------
 
 # Official title of the document assigned by authors.
-documentTitle: 'Fitness For Use Framework Ontology Guide'
+documentTitle: Fitness For Use Framework Ontology Guide
 
 # Abstract of document written by authors.
 abstract: 'This document is a users guide for the (Draft) BDQ Core Standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.'
