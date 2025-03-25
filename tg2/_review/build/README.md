@@ -109,7 +109,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
     │   └── synthetic-header.md
     ├── terms  Templates used to produce /docs/terms/{term}/index.md 
     │   └── bdqcore_qrg  Templates used by draft_build_bdqcore_qrg.py to build docs/terms/bdqcore/index.md Quick Reference Guide.
-    │       ├── bdqcore_qrg_term_descriptions.md
+    │       ├── bdqcore_qrg_term_descriptions-header.md 
     │       ├── bdqcore_quickreference-footer.md
     │       ├── bdqcore_quickreference-header.md
     │       └── document_configuration.yaml

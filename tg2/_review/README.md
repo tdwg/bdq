@@ -64,7 +64,7 @@ Summary of files in this directory:
 │   │   └── index.md  Generated file. **Do not edit.**
 │   ├── terms  Build targets for Quick Reference Guides.
 │   │   └── bdqcore
-│   │       ├── bdqcore_qrg_term_descriptions.md  Terms used in the Quick Reference Guide to BDQ Core Tests. **Editable.**
+│   │       ├── bdqcore_qrg_term_descriptions.md  Terms key for index.md. Generated file. **Do not edit.**
 │   │       ├── index.md  Generated file. **Do not edit.**
 │   │       ├── qrg_index_by_dimension.md  Generated file. **Do not edit.**
 │   │       ├── qrg_index_by_ie_actedupon.md  Generated file. **Do not edit.**

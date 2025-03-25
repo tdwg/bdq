@@ -7,6 +7,12 @@ Part of the [BDQ Core Tests Quick Reference Guide](index.md)
 
 <!-- This is the list of descriptions of bdqcore terms included in the Quick Reference Guide. -->
 
+<!-- Generated list, TODO: Doesn't include correct set of term definitions. -->
+
+{term_key}
+
+<!-- Original separately created list of term definitions TODO: Remove when generated list above is correct -->
+
 **rdfs:Label** [normative]: A brief human-readable label for consumers and implementers using the structure TESTTYPE_INFORMATIONELEMENT_CRITERION (e.g., VALIDATION_COUNTRYCODE_STANDARD)
 
 **skos:prefLabel** [normative]: A human readable label that follows the pattern 'Test Type' 'Focus Information Element' 'Criterion'. Example: ```Validation dwc:countryCode Standard```

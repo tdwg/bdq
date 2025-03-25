@@ -27,16 +27,19 @@ import pandas	# provides data frames
 import re		# regular expression library
 import sys		# input/output
 import yaml		# Library to parse yaml files
+import rdflib	# Library to parse RDF files
+import pandas as pd  # library to handle data loaded from csv as data frames
 # To copy files from build/templates/ to /docs/
 import glob
 import shutil
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
+from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
 
 # Configuration 
 
 # Vocabulary file
 inputTermsCsvFilename = "../vocabulary/bdqcore_term_versions.csv"
+inputTermsOwlFilename = "../vocabulary/bdqffdq.owl"
 # output file 
 outputDirectory = "../docs/terms/bdqcore/"
 outputFilename = "{}index.md".format(outputDirectory)
@@ -45,6 +48,7 @@ outputInformationElementIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_a
 outputIEClassIndexFilename = "../docs/terms/bdqcore/qrg_index_by_ie_class.md"
 outputDimensionIndexFilename = "../docs/terms/bdqcore/qrg_index_by_dimension.md"
 outputMultiRecordMeasureIndexFilename = "../docs/terms/bdqcore/qrg_multirecord_index.md"
+outputKeyFilename = '{}bdqcore_qrg_term_descriptions.md'.format(outputDirectory)
 # Files for header/footer
 contributors_yaml_file = 'authors_configuration.yaml'
 term_list_document = "temp_term-lists.csv"
@@ -53,16 +57,61 @@ sourceDirectory = 'templates/terms/bdqcore_qrg/'
 headerFileName = '{}bdqcore_quickreference-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqcore_quickreference-footer.md'.format(sourceDirectory)
 document_configuration_yaml_file = '{}/document_configuration.yaml'.format(sourceDirectory)
+keyHeaderFileName = '{}bdqcore_qrg_term_descriptions-header.md'.format(sourceDirectory)
+# footerFileName is reused for keyFile
 
 has_namespace = True
 namespace_uri = 'https://rs.tdwg.org/bdqcore'
 pref_namespace_prefix = "bdqcore"
+
+prefixes = """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
+PREFIX bdqcrit: <https://rs.tdwg.org/bdqcrit/terms/>
+PREFIX bdqenh: <https://rs.tdwg.org/bdqenh/terms/>
+"""
 
 # Setup for header/footer templates
 
 # Load the contributors YAML file from its local location.
 with open(contributors_yaml_file) as cyf:
 	contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
+
+## TODO: Build key file for focabulary 
+
+# This is the configuration file to build a key to the terms used to describe the vocabulary terms.
+vocabulary_configuration_yaml_file = "vocabulary_configuration.yaml"
+
+# Name, Preferred Label, Definition, SubClass Of, Range, Comments, DifferentFrom
+# Load the vocabulary configuration YAML file from its local location.  
+with open(vocabulary_configuration_yaml_file) as vcfy:
+   term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
+
+
+# build definition table
+graph = rdflib.Graph()
+graph.parse(inputTermsOwlFilename, format="ttl")
+# TODO: range, differentFrom 
+# column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'range', 'differentFrom']
+column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+queryResult = graph.query(sparql)
+
+terms_df = pd.DataFrame(queryResult, columns = column_list)
+terms_sorted_by_label = terms_df.sort_values(by='label')
+terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
+
+# TODO filter to: 
+# rdfs:Label, skos:prefLabel, termversionIRI, resourceType, description, specification, informationElementsActedUpon, informationElementsConsulted, parameters, defaultParameterValues, examples, useCases, notes
+
+#terms_sorted_by_label = terms_sorted_by_label[terms_sorted_by_label['prefLabel'].isin()]
+
+definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
 
 with open ("../vocabulary/bdq_term_versions.csv") as vocabfile: 
 	try: 
@@ -382,8 +431,19 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 	
 		# Temporary solution to list of definitions not in quick reference guide.
 		# Copy list of definitions file bdqcore_qrg_term_descriptions.md
-		for file in glob.glob('{}bdqcore_qrg_term_descriptions.md'.format(sourceDirectory)):
-			shutil.copy(file, outputDirectory)
+		#for file in glob.glob('{}bdqcore_qrg_term_descriptions.md'.format(sourceDirectory)):
+		#	shutil.copy(file, outputDirectory)
+		## TODO: Create and use header/footer templates to generate term_descriptions file.
+		## TODO: Use definitionTable to replace term_key in term_descriptions header file.
+		keyHeaderObject = open(keyHeaderFileName, 'rt', encoding='utf-8')
+		keyHeader = keyHeaderObject.read()
+		keyHeaderObject.close()
+		keyHeader = keyHeader.replace('{term_key}', definitionTable)
+		outputKeyFile = open(outputKeyFilename,"w")
+		outputKeyFile.write(keyHeader)
+		outputKeyFile.write("\n")
+		outputKeyFile.write(footer)
+		outputKeyFile.close()
 
 	except pandas.errors.ParserError as e:
 		sys.exit("Error reading core test csv file: {}".format(e)) 
