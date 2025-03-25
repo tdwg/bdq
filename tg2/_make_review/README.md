@@ -7,6 +7,8 @@ copy_files.sh  Copies authoritative files from outside the _review tree into th
 do_build.sh Executes the python scripts in _review/build/ to build artifacts from the templates, configuration files, and vocabulary documents in the _review tree.
 
 Third party Python libraries required by the scripts:
+```
 pandas
 pyyaml
 rdflib
+```
