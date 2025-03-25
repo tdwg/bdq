@@ -56,9 +56,11 @@ local_metadata_config_file = 'temp_namespaces.yaml'
 sourceDirectory = 'templates/terms/bdqcore_qrg/'
 headerFileName = '{}bdqcore_quickreference-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqcore_quickreference-footer.md'.format(sourceDirectory)
-document_configuration_yaml_file = '{}/document_configuration.yaml'.format(sourceDirectory)
+document_configuration_yaml_file = '{}document_configuration.yaml'.format(sourceDirectory)
 keyHeaderFileName = '{}bdqcore_qrg_term_descriptions-header.md'.format(sourceDirectory)
 # footerFileName is reused for keyFile
+# This is the configuration file to build a key to the terms used to describe the vocabulary terms.
+vocabulary_configuration_yaml_file = "{}../../list/bdqcore/vocabulary_configuration.yaml".format(sourceDirectory)
 
 has_namespace = True
 namespace_uri = 'https://rs.tdwg.org/bdqcore'
@@ -82,16 +84,12 @@ PREFIX bdqenh: <https://rs.tdwg.org/bdqenh/terms/>
 with open(contributors_yaml_file) as cyf:
 	contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
 
-## TODO: Build key file for focabulary 
-
-# This is the configuration file to build a key to the terms used to describe the vocabulary terms.
-vocabulary_configuration_yaml_file = "vocabulary_configuration.yaml"
-
-# Name, Preferred Label, Definition, SubClass Of, Range, Comments, DifferentFrom
-# Load the vocabulary configuration YAML file from its local location.  
+## Build key of vocabulary used in the quick reference guide
+terms_in_qrg = [ 'skos:prefLabel', 'rdfs:label', 'rdf:about', 'rdfs:comment','bdqffdq:hasAuthoritiesDefaults','bdqffdq:hasExpectedResponse','skos:example','bdqffdq:composedOf','skos:note','bdqffdq:Parameter','bdqffdq:Specification','rdf:type','bdqffdq:hasUseCase' ]
+# Load the vocabulary configuration YAML file from its local location and filter to just the terms used in the quick reference guide
 with open(vocabulary_configuration_yaml_file) as vcfy:
-   term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
-
+	term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
+	term_concept_dictionary = {key: value for key, value in term_concept_dictionary.items() if value.get('term') in terms_in_qrg}
 
 # build definition table
 graph = rdflib.Graph()
@@ -105,11 +103,6 @@ queryResult = graph.query(sparql)
 terms_df = pd.DataFrame(queryResult, columns = column_list)
 terms_sorted_by_label = terms_df.sort_values(by='label')
 terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
-
-# TODO filter to: 
-# rdfs:Label, skos:prefLabel, termversionIRI, resourceType, description, specification, informationElementsActedUpon, informationElementsConsulted, parameters, defaultParameterValues, examples, useCases, notes
-
-#terms_sorted_by_label = terms_sorted_by_label[terms_sorted_by_label['prefLabel'].isin()]
 
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
 
@@ -184,6 +177,16 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			header = header.replace('{pref_namespace_prefix}', pref_namespace_prefix)
 	
 		warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
+
+		# Provide a list of definitions of terms in the quick reference guide in a separate document.
+		keyHeaderObject = open(keyHeaderFileName, 'rt', encoding='utf-8')
+		keyHeader = keyHeaderObject.read()
+		keyHeaderObject.close()
+		keyHeader = keyHeader.replace('{term_key}', definitionTable)
+		# file is written below.  If not needed, place {term_key} tag into header file for qrg and 
+		# remove references to outputKeyFile below (after construction of footer.
+
+		# write the header to the output file
 		print(warning)
 		print(header)
 
@@ -428,18 +431,10 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 		footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 		print(footer)
-	
-		# Temporary solution to list of definitions not in quick reference guide.
-		# Copy list of definitions file bdqcore_qrg_term_descriptions.md
-		#for file in glob.glob('{}bdqcore_qrg_term_descriptions.md'.format(sourceDirectory)):
-		#	shutil.copy(file, outputDirectory)
-		## TODO: Create and use header/footer templates to generate term_descriptions file.
-		## TODO: Use definitionTable to replace term_key in term_descriptions header file.
-		keyHeaderObject = open(keyHeaderFileName, 'rt', encoding='utf-8')
-		keyHeader = keyHeaderObject.read()
-		keyHeaderObject.close()
-		keyHeader = keyHeader.replace('{term_key}', definitionTable)
+
+		# Write out the key to the terms used in the quick reference guide in a separate file.	
 		outputKeyFile = open(outputKeyFilename,"w")
+		outputKeyFile.write(warning)
 		outputKeyFile.write(keyHeader)
 		outputKeyFile.write("\n")
 		outputKeyFile.write(footer)
