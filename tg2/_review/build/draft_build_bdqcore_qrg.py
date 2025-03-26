@@ -62,6 +62,11 @@ keyHeaderFileName = '{}bdqcore_qrg_term_descriptions-header.md'.format(sourceDir
 # This is the configuration file to build a key to the terms used to describe the vocabulary terms.
 vocabulary_configuration_yaml_file = "{}../../list/bdqcore/vocabulary_configuration.yaml".format(sourceDirectory)
 
+# TODO: Post ratification of the standard, this will have to be changed to the location for the docs-versions.csv file
+# expected to be: githubBaseUri = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + github_branch + '/'
+github_branch = 'master'
+githubBaseUri = 'https://raw.githubusercontent.com/tdwg/bdq/' + github_branch + '/tg2/core/generation/'
+
 has_namespace = True
 namespace_uri = 'https://rs.tdwg.org/bdqcore'
 pref_namespace_prefix = "bdqcore"
@@ -91,20 +96,59 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
 	term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 	term_concept_dictionary = {key: value for key, value in term_concept_dictionary.items() if value.get('term') in terms_in_qrg}
 
-# build definition table
-graph = rdflib.Graph()
-graph.parse(inputTermsOwlFilename, format="ttl")
-# TODO: range, differentFrom 
-# column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'range', 'differentFrom']
-column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
-queryResult = graph.query(sparql)
-
-terms_df = pd.DataFrame(queryResult, columns = column_list)
-terms_sorted_by_label = terms_df.sort_values(by='label')
-terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
+# build definition table (key) for terms used in the quick reference guide
+#
+# Code copied from the build bdqcore terms-list script, modified to construct the key for the terms used in the quick reference guide.
+termLists = ['bdqcore']
+term = 'bdqcore'
+term_history_csv = "../vocabulary/bdqcore_term_versions.csv".format(term)
+term_lists_info = []
+# column_list tuned to just columns in the quick reference guide.
+column_list = ["Label","iri","term_iri","term_localName","prefLabel","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","AuthoritiesDefaults","Description","Type","Resource Type","Examples","Notes","UseCases","status"]
+# Likely will be provided from rs.tdwg.org after ratification, currently obtain from local file
+#frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
+frame = pd.read_csv(term_list_document, na_filter=False)
+for termList in termLists:
+    term_list_dict = {'list_iri': termList}
+    term_list_dict = {'database': termList}
+    for index,row in frame.iterrows():
+        if row['database'] == termList:
+            term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
+            term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
+            term_list_dict['list_iri'] = row['list']
+    term_lists_info.append(term_list_dict)
+# Create list of lists metadata table
+table_list = []
+for term_list in term_lists_info:
+    if (term_list['pref_ns_prefix']==term) : 
+        # retrieve versions metadata for term list
+        # PJM: This is unavailable for a draft standard.
+        versions_url = githubBaseUri + term_list['database'] + '-versions/' + term_list['database'] + '-versions.csv'
+        #versions_df = pd.read_csv(versions_url, na_filter=False)
+        
+        # retrieve current term metadata for term list
+        # data_url = githubBaseUri + term_list['database'] + '/' + term_list['database'] + '.csv'
+        # PJM: Using local file
+        data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
+        frame = pd.read_csv(data_url, na_filter=False)
+        for index,row in frame.iterrows():
+            # PJM: TODO: just use column list?
+            # row_list tuned to just columns in the quick reference guide.
+            row_list = [ row['Label'], row['iri'], row['term_iri'], row['term_localName'], row['prefLabel'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Examples'], row['Notes'], row['UseCases'], row["status"] ]
+    
+            table_list.append(row_list)
+    
+# Turn list of lists into dataframe
+terms_df = pd.DataFrame(table_list, columns = column_list)
+# Limit output to just current terms 
+terms_df = terms_df.loc[terms_df['status']=='recommended']
+terms_sorted_by_label = terms_df.sort_values(by='Label')
+# This makes sort case insensitive
+terms_sorted_by_localname = terms_df.iloc[terms_df.prefLabel.str.lower().argsort()]
 
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
+
+# Load the vocabulary and produce the quick reference guide
 
 with open ("../vocabulary/bdq_term_versions.csv") as vocabfile: 
 	try: 

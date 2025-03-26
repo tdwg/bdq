@@ -7,7 +7,7 @@ Part of the [BDQ Core Tests Quick Reference Guide](index.md)
 
 <!-- This is the list of descriptions of bdqcore terms included in the Quick Reference Guide. -->
 
-<!-- Generated list, TODO: Doesn't include correct set of term definitions. -->
+<!-- Generated list, approximates the correct set of term definitions, labels don't fully match and not all items are labeled. -->
 
 {term_key}
 
