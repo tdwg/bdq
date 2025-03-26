@@ -6,7 +6,7 @@
 documentTitle: Fitness For Use Framework Ontology Guide
 
 # Abstract of document written by authors.
-abstract: 'This document is a users guide for the (Draft) BDQ Core Standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.'
+abstract: 'This document is a users guide for the BDQ Core Standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'
@@ -51,7 +51,7 @@ current_iri: http://rs.tdwg.org/bdq/terms/
 # Date of first ratification of the document. Will match the doc_modified value for the first
 # version of the document. For lists of terms, this will also match the date that the
 # first version of the vocabulary was issued (date_issued).
-doc_created: '2024-09-10'
+doc_created: '2025-03-26'
 
 # ----------------
 # Do not edit below this line
@@ -69,5 +69,4 @@ comment: 'Draft Standard for Submission'
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2024-09-10'
-
+doc_modified: '2025-03-26'

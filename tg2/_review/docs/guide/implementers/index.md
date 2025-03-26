@@ -6,25 +6,25 @@ Title
 : BDQ Core Implementer's Guide
 
 Date version issued
-: 2024-09-10
+: 2025-03-26
 
 Date created
-: 2024-09-10
+: 2025-03-26
 
 Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Abstract
-: This document is a users guide for the (Draft) BDQ Core Standard, providing guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
+: This document is a users guide for the BDQ Core Standard, providing guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.
 
 Authors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-26>
 
 Draft Standard for Submission
 
@@ -66,13 +66,13 @@ Draft Standard for Submission
 - [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment (normative)](#641-phases-pre-amendment,-amendment,-post-amendment-normative)
 - [6.4.1.1 Explanation of Phases (non-normative)](#6411-explanation-of-phases-non-normative)
 - [6.4.1.2 Phases and Quality Assurance (normative)](#6412-phases-and-quality-assurance-normative)
-- [6.4.1.2 Phases and Quality Control (normative)](#6412-phases-and-quality-control-normative)
+- [6.4.1.3 Phases and Quality Control (normative)](#6413-phases-and-quality-control-normative)
 - [6.4.2 Test Dependencies (normative)](#642-test-dependencies-normative)
 - [6.4.2.1 Terms for describing Test Dependencies (non-normative)](#6421-terms-for-describing-test-dependencies-non-normative)
 - [6.4.3 Implementing a concrete Test (normative)](#643-implementing-a-concrete-test-normative)
 - [6.4.4 Presenting Darwin Core Data to a Method that Implements a Test](#644-presenting-darwin-core-data-to-a-method-that-implements-a-test)
 - [6.4.4.1 Binding Darwin Core Data (normative)](#6441-binding-darwin-core-data-normative)
-- [6.4.4.1 Examples of matching input Darwin Core to Method parameters (non-normative)](#6441-examples-of-matching-input-darwin-core-to-method-parameters-non-normative)
+- [6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative)](#6442-examples-of-matching-input-darwin-core-to-method-parameters-non-normative)
 - [6.4.5 Example Test Implementations (non-normative)](#645-example-test-implementations-non-normative)
 - [6.4.5.1 Example in Pseudocode (non-normative)](#6451-example-in-pseudocode-non-normative)
 - [6.4.5.2 Example in Java (non-normative)](#6452-example-in-java-non-normative)
@@ -81,8 +81,8 @@ Draft Standard for Submission
 - [7 Presentation of Results](#7-presentation-of-results)
 - [7.1 Data Quality Reports](#71-data-quality-reports)
 - [7.1.1 Identifying Tests (normative)](#711-identifying-tests-normative)
-- [7.1.1 InformationElements ActedUpon and Consulted in Results (normative)](#711-informationelements-actedupon-and-consulted-in-results-normative)
-- [7.1.2 Example (non-normative)](#712-example-non-normative)
+- [7.1.2 InformationElements ActedUpon and Consulted in Results (normative)](#712-informationelements-actedupon-and-consulted-in-results-normative)
+- [7.1.3 Example (non-normative)](#713-example-non-normative)
 - [7.2 Annotations (normative)](#72-annotations-normative)
 - [8 Validating Test Implementations (normative)](#8-validating-test-implementations-normative)
 - [8.1 Introduction to Validation (non-normative)](#81-introduction-to-validation-non-normative)
@@ -516,7 +516,7 @@ A good practice for executing the BDQ Core Tests is to follow a sequence that be
 
 It is RECOMMENDED, for Quality Assurance, with the current suite of BDQ Core Tests, to run all pertinent (to a Use Case) bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent MultiRecord Measures that return `COMPLETE` or `NOT_COMPLETE`.   These Measures MAY be used as filters.  Exclude records from the data set until all MultiRecord Measure Tests return "COMPLETE".  This, under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase.  This process ensures that the data are fit for the intended use.  This process MAY be performed in a single Validation and Measure phase without Amendments.  This process MAY be performed on a post-amendment phase with all or selected proposed changes from Amendments accepted into the data stream.  Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  Acceptance of proposals for changes to the data into a database of record MUST NOT be done blindly.
 
-#### 6.4.1.2 Phases and Quality Control (normative)
+#### 6.4.1.3 Phases and Quality Control (normative)
 
 Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase.  This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed amendments would improve the data.  Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  Acceptance of proposals for changes to the data into a database of record MUST NOT be done blindly.
 
@@ -587,7 +587,7 @@ Implementations MAY define objects corresponding to the set of InformationElemen
 
 Implementers MAY use any approach to passing data into Test implementations appropriate for their language(s) and environment.
 
-#### 6.4.4.1 Examples of matching input Darwin Core to Method parameters (non-normative) 
+#### 6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative) 
 
 If Test implementations are functions that take Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correct matching of input Darwin Core terms to the parameters of the test (function or method).  
 
@@ -831,13 +831,13 @@ Reports SHOULD identify Tests to consumers of those reports using at least the r
 
 Reports MAY describe Tests to consumers of those reports using the rdfs:comment for the Test class, e.g. "Does the value of dwc:country occur in the bdq:sourceAuthority?" for [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134).  
 
-### 7.1.1 InformationElements ActedUpon and Consulted in Results (normative)
+### 7.1.2 InformationElements ActedUpon and Consulted in Results (normative)
 
 InformationElements may be bdqffdq:ActedUpon or bdqffdq:Consulted (the sub-types of bdqffdq:InformationElement). Presentations of data quality results MAY use ActedUpon and Consulted identification of Information Elements to identify to users which specific values assertions are being made about, and what values are being used to support those assertions. ActedUpon InformationElements are those for which a Validation Test is asserting compliance/non-compliance, or an Amendment Test that is proposing an improvement to the data. Consulted InformationElements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812), the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted.  Implementers may wish to clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
 
 Presentations of data quality reports SHOULD NOT assert that Consulted Information Elements for a Validation are NOT_COMPLIANT with respect to that Validation.
 
-#### 7.1.2 Example (non-normative)
+#### 7.1.3 Example (non-normative)
 
 Below is an example, taken from MCZbase (Kennedy et al. 2024), of a portion of a data quality report, run on demand, for a single specimen using an implementation of BDQ Core Tests integrated into that collection management system.
 
@@ -1072,7 +1072,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-26>
 
 **Biodiversity Information Standards (TDWG)**
 

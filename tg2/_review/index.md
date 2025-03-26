@@ -15,7 +15,7 @@ Status
 : Draft Standard
 
 Abstract
-: Biodiversity Data Quality (BDQ) Core is a **Draft** TDWG standard maintained by the [Biodiversity Data Quality Core Maintenance Interest Group](https://www.tdwg.org/standards/bdq/#maintenance-group">). BDQ Core is based on a Data Quality Fitness for Use Framework (Veiga 2016, Veiga et al. 2017), which provides a vocabulary for how to describe and evaluate data quality. BDQ Core consists of a suite of tests and related vocabularies (see Chapman et al. 2020) that evaluate the 'quality' or 'fitness for use' of biodiversity data described using the [Darwin Core standard](https://dwc.tdwg.org/).
+: Biodiversity Data Quality (BDQ) Core is a TDWG standard maintained by the [Biodiversity Data Quality Core Maintenance Interest Group](https://www.tdwg.org/standards/bdq/#maintenance-group">). BDQ Core is based on a Data Quality Fitness for Use Framework (Veiga 2016, Veiga et al. 2017), which provides a vocabulary for how to describe and evaluate data quality. BDQ Core consists of a suite of tests and related vocabularies (see Chapman et al. 2020) that evaluate the 'quality' or 'fitness for use' of biodiversity data described using the [Darwin Core standard](https://dwc.tdwg.org/).
 
 Preferred Citation
 : Biodiversity Data Quality Core Maintenance Group. 2024. Biodiversity Data Quality Core. https://www.tdwg.org/standards/bdq

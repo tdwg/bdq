@@ -18,7 +18,7 @@ Abstract
 : **Biodiversity Data Quality (BDQ) Core** is a standard designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, example data, and expected responses from tests against the example data to support the validation of implemented tests.
 
 Authors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
 Contributors
 : [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), [David Lowery](https://github.com/lowery) , [Christian Gendreau](https://orcid.org/0000-0003-4898-4291) ([Agriculture and Agri-Food Canada](http://www.wikidata.org/entity/Q1046164)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) , [Miles Nicholls](https://orcid.org/0000-0002-3302-0070) ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), [Emily Rose Rees](https://orcid.org/0000-0003-0112-6716) ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), [Abigail Benson](https://orcid.org/0000-0002-4391-107X) ([U.S. Geological Survey](https://www.wikidata.org/wiki/Q193755))
@@ -42,13 +42,13 @@ Draft Standard for Submission
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 Introduction to the BDQ Core Standard](#2-introduction-to-the-bdq-core-standard)
 - [2.1 Parts of the Standard](#21-parts-of-the-standard)
-- [2.1 Vocabularies](#21-vocabularies)
-- [2.2 Test Guidance](#22-test-guidance)
-- [2.3 Test Lists](#23-test-lists)
-- [2.4 Guides and other documents.](#24-guides-and-other-documents)
-- [2.5 Implementation Validation Data](#25-implementation-validation-data)
-- [2.6 Test Execution Environments and Workflows](#26-test-execution-environments-and-workflows)
-- [2.7 Implementations of Tests 'In the Wild'](#27-implementations-of-tests-'in-the-wild')
+- [2.2 Vocabularies](#22-vocabularies)
+- [2.3 Test Guidance](#23-test-guidance)
+- [2.4 Test Lists](#24-test-lists)
+- [2.5 Guides and other documents.](#25-guides-and-other-documents)
+- [2.6 Implementation Validation Data](#26-implementation-validation-data)
+- [2.7 Test Execution Environments and Workflows](#27-test-execution-environments-and-workflows)
+- [2.8 Implementations of Tests 'In the Wild'](#28-implementations-of-tests-'in-the-wild')
 - [3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
 - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control,-data-quality-assurance-normative)
 - [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
@@ -137,11 +137,11 @@ The following namespace abbreviations are used in this document:
 
 The full set of documents comprising the BDQ Core standard is listed on the [BDQ Core landing page](../../index.md).
 
-### 2.1 Vocabularies
+### 2.2 Vocabularies
 
 The focus of this standard is on (1) a framework for describing data quality and (2) the description of a set of tests and assertions using that framework.  The framework is instantiated formally as an ontology (namespace abbreviation bdqffdq:).  The tests are instantiated formally as a vocabulary (namespace abbreviation `bdqcore:`), with test names, labels, descriptions, expected responses and other metadata expressed with bdqffdq: and other vocabularies.  Four additional vocabularies used in defining the tests are defined by this standard. Together the vocabularies serve to support the specification of suites of biodiversity data quality assessments and amendments to improve data for particular purposes. Each vocabulary is described in full in its distinct Term List document, linked from and summarized together on [BDQ Core Vocabularies](../vocabularies/index.md). 
 
-### 2.2 Test Guidance
+### 2.3 Test Guidance
 
 Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. The BDQ Core standard suite of tests and assertions is meant to be used by data collectors, data providers, and data users to assess and potentially improve data quality.  
 
@@ -153,11 +153,11 @@ Test specifications _sensu latu_ consist of the metadata (e.g., identifier, pref
 
 The specifications _sensu strictu_ for tests include expected responses from tests consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the test that was run, whether the information elements were those consulted or those acted upon.
 
-### 2.3 Test Lists
+### 2.4 Test Lists
 
 The [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) is a quick reference guide to the tests defined in BDQ Core. 
 
-### 2.4 Guides and other documents. 
+### 2.5 Guides and other documents. 
 
 The [BDQ User's Guide](../guide/users/index.md) is intended to contain everything needed to understand the nature or the tests and the responses from them when they are run.  It is intended to be read with the quick reference guide to the tests.
 
@@ -167,11 +167,11 @@ The [Framework Ontology Guide](../guide/bdqffdq/index.md) describes how the Fram
 
 [Synthetic and Modified Data](../synthetic/index.md) Describes how to mark synthetic and altered data that may be used to validate test implementations to distinguish it from real data.
 
-### 2.5 Implementation Validation Data 
+### 2.6 Implementation Validation Data 
 
 See the [BDQ Implementer's Guide](../guide/implementers/index.md) for information on a set of data for validating test implementations.. 
 
-### 2.6 Test Execution Environments and Workflows
+### 2.7 Test Execution Environments and Workflows
 
 Neither the test descriptions nor the framework impose constraints on environments or workflows for execution.  One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
 
@@ -183,7 +183,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 2.7 Implementations of Tests 'In the Wild'
+### 2.8 Implementations of Tests 'In the Wild'
 
 Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java implementations of the BDQ Core tests which pass against the validation data.  See [9 Existing Test Implementations](../guide/implementers/index.md/#9-Existing-Test-Implementations-non-normative) in the implementer's guide for details.  
 

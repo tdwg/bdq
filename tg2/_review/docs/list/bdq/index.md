@@ -6,10 +6,10 @@ Title
 : Biodiversity Data Quality Controlled Vocabulary List of Terms
 
 Date version issued
-: 2024-09-10
+: 2025-03-26
 
 Date created
-: 2024-09-10
+: 2025-03-26
 
 Part of TDWG Standard
 : <http://example.org/to_be_determined>
@@ -18,28 +18,28 @@ Preferred namespace abbreviation
 : bdq
 
 This version
-: <http://rs.tdwg.org/bdq/terms/2024-09-10>
+: <http://rs.tdwg.org/bdq/terms/2025-03-26>
 
 Latest version
 : <http://rs.tdwg.org/bdq/terms/>
 
 Abstract
-: This document is a reference for the (Draft) BDQ Core Standard, documenting vocabulary values largely used as bdqffdq:Parameters, but including a few other terms used in test Specifications.
+: This document is a reference for the BDQ Core Standard, documenting vocabulary values largely used as bdqffdq:Parameters, but including a few other terms used in test Specifications.
 
 Authors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-26>
 
 Draft Standard for Submission
 
 ## 1 Introduction
 
-This document includes terms that are part of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/2024-09-10>). For details and rationale, see Chapman et al. (2020).
+This document includes terms that are part of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/2025-03-26>). For details and rationale, see Chapman et al. (2020).
 
 ### 1.1 Purpose
 
@@ -1427,7 +1427,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-26>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -6,25 +6,25 @@ Title
 : BDQ Core Supplemental Information
 
 Date version issued
-: 2024-09-10
+: 2025-03-26
 
 Date created
-: 2024-09-10
+: 2025-03-26
 
 Part of TDWG Standard
 : <http://example.org/to_be_determined>
 
 Abstract
-: This document provides information supplementary to the (Draft) BDQ Core Standard, describing some of the history of the development of the standard, and rationale management  for decisions made while describing the tests..
+: This document provides information supplementary to the BDQ Core Standard, describing some of the history of its development, and rationale management for decisions made while describing the tests.
 
 Authors:
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-03-26>
 
 Draft Standard for Submission
 
@@ -44,7 +44,7 @@ Draft Standard for Submission
 - [2.3 Data Quality Control and Data Quality Assurance](#23-data-quality-control-and-data-quality-assurance)
 - [2.4 Framework Competency Questions](#24-framework-competency-questions)
 - [2.4.1 Listing Identifiers for Tests](#241-listing-identifiers-for-tests)
-- [2.4.1 Framework Competency Question including an oa:annotation](#241-framework-competency-question-including-an-oaannotation)
+- [2.4.2 Framework Competency Question including an oa:annotation](#242-framework-competency-question-including-an-oaannotation)
 - [3 Developing the Tests](#3-developing-the-tests)
 - [3.1 Types of Test](#31-types-of-test)
 - [3.1.1 Validation](#311-validation)
@@ -419,7 +419,7 @@ Example results:
 
 The label is intended as the identifier of a Test for humans, the Term Name as a machine readable identifier.
 
-### 2.4.1 Framework Competency Question including an oa:annotation
+### 2.4.2 Framework Competency Question including an oa:annotation
 
 Given a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
 
@@ -932,7 +932,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-03-26>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -6,10 +6,10 @@ Title
 : BDQ Core Tests and Assertions Landing Page
 
 Date version issued
-: 2024-09-10
+: 2025-03-26
 
 Date created
-: 2024-09-10
+: 2025-03-26
 
 Part of TDWG Standard
 : <http://example.org/to_be_determined>
@@ -18,22 +18,22 @@ Preferred namespace abbreviation
 : {pref_namespace_prefix}
 
 This version
-: <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+: <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
 
 Latest version
 : <http://rs.tdwg.org/bdqcore/terms/>
 
 Abstract
-: This document is a reference for the (Draft) BDQ Core Standard, documenting the tests in the bdqcore: vocabulary, using terms from the bdqffdq ontology.
+: This document is a reference for the BDQ Core Standard, documenting the tests in the bdqcore: vocabulary, using terms from the bdqffdq ontology.
 
 Authors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([VertNet](http://www.wikidata.org/entity/Q98382028))
+: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
 Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Tests and Assertions Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
 
 Draft Standard for Submission
 
@@ -1117,7 +1117,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. BDQ Core Tests and Assertions Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2024-09-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
 
 **Biodiversity Information Standards (TDWG)**
 

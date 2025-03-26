@@ -1,6 +1,6 @@
 Files in this folder are for submission of BDQ Core for review as proposal for a new TDWG.
 
-The best place to begin to review the proposal is on the [BDQ Core landing page](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md).
+The best place to begin to review the proposal is on the [Biodiversity Data Quality Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) page.
 
 Summary of files in this directory: 
 

@@ -6,7 +6,7 @@
 documentTitle: Data Quality Criterion Controlled Vocabulary List of Terms
 
 # Abstract of document written by authors.
-abstract: 'This document describes the vocabulary terms used in the (Draft) BDQ Core Standard as values of bdqffdq:Criterion, originally defined in Veiga 2016 and Veiga et al. 2017.'
+abstract: 'This document describes the vocabulary terms used in the BDQ Core Standard as values of bdqffdq:Criterion, originally defined in Veiga 2016 and Veiga et al. 2017.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'
@@ -51,7 +51,7 @@ current_iri: http://rs.tdwg.org/bdq/bdqcrit/terms/
 # Date of first ratification of the document. Will match the doc_modified value for the first
 # version of the document. For lists of terms, this will also match the date that the
 # first version of the vocabulary was issued (date_issued).
-doc_created: '2024-09-10'
+doc_created: '2025-03-26'
 
 # ----------------
 # Do not edit below this line
@@ -69,5 +69,4 @@ comment: 'Draft Standard for Submission'
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2024-09-10'
-
+doc_modified: '2025-03-26'
