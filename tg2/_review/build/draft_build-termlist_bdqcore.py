@@ -42,6 +42,8 @@ PREFIX bdqcore: <https://rs.tdwg.org/bdqcore/terms/>
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
+# TODO: Post ratification of the standard, this will have to be changed to the location for the docs-versions.csv file
+# expected to be: githubBaseUri = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + github_branch + '/'
 githubBaseUri = 'https://raw.githubusercontent.com/tdwg/bdq/' + github_branch + '/tg2/core/generation/'
 
 # ----------------
@@ -415,6 +417,10 @@ for term in termLists:
     # Determine whether there was a previous version of the document.
     if document_configuration_yaml['doc_created'] != document_configuration_yaml['doc_modified']:
         # Load versions list from document versions data in the rs.tdwg.org repo and find most recent version.
+		# TODO: This file will need to be created post ratification, it contains the columsn current_iri and version_iri
+		## example from Darwin Core:
+		## current_iri,version_iri
+		## http://rs.tdwg.org/abcd/doc/primer/,http://rs.tdwg.org/abcd/doc/primer/2006-07-27
         versions_data_url = githubBaseUri + 'docs/docs-versions.csv'
         versions_list_df = pd.read_csv(versions_data_url, na_filter=False)
         # Slice all rows for versions of this document.
