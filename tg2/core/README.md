@@ -27,7 +27,7 @@ test_label_mappings.csv
 
 ## Test validation data 
 
-These files are for implementors to validate that their implementations of the BDQ Core tests produce expected results.  They consist of one line per validation, with columns specifying the test being validated by that row, one column for each of the inputs for the information elements and parameters for a single test, and columns holding the expected outputs.  Each test has multiple validation rows.  
+These files are for implementers to validate that their implementations of the BDQ Core tests produce expected results.  They consist of one line per validation, with columns specifying the test being validated by that row, one column for each of the inputs for the information elements and parameters for a single test, and columns holding the expected outputs.  Each test has multiple validation rows.  
 
 TG2_test_validation_data.csv
 TG2_test_validation_data_nonprintingchars.csv

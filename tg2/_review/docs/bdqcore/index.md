@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# BDQ Core Tests and Assertions Landing Page
+# BDQ Core Tests and Assertions
 
 Title
-: BDQ Core Tests and Assertions Landing Page
+: BDQ Core Tests and Assertions
 
 Date version issued
 : 2025-03-26
@@ -33,7 +33,7 @@ Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
 
 Draft Standard for Submission
 
@@ -1117,7 +1117,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions Landing Page. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-26>
 
 **Biodiversity Information Standards (TDWG)**
 
