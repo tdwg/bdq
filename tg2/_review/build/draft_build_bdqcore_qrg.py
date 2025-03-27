@@ -343,7 +343,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		outputMultiRecordMeasureIndex.write("\n")
 		outputMultiRecordMeasureIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
 		outputMultiRecordMeasureIndex.write("\n")
-		outputMultiRecordMeasureIndex.write("## Index of MultiRecord Measure Tests in the BDQ Core tests.\n")
+		outputMultiRecordMeasureIndex.write("## Index of MultiRecord Measure Tests in the BDQ Core Tests.\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
 			outputMultiRecordMeasureIndex.write("- [{}](index.md#{})\n".format(row['Label'],row['Label'].lower()))
 
@@ -416,7 +416,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("********************")
 			print()
 		print()
-		print("## Measures operating on test Responses for MultiRecords (data sets).")
+		print("## Measures operating on Test Responses for MultiRecords (data sets).")
 		print()
 		for index, row in multirecordDataFrame.iterrows():
 			print("### ",row['Label'])
