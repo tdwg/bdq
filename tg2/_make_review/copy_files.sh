@@ -3,14 +3,19 @@
 #
 # Run from within the bdq/tg2/_make_review/ directory of a git checkout of the tdwg/bdq repository.
 
-# bdqcore files containing test descriptions
+# bdqcore files containing test description
 
+# TODO: The following term-versions file will become the master copy.
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqcore_term_versions.csv
+# TODO: replace the next step with invocation of:
+# draft_build_bdqcore_singlerecord_tests_current.py
 cp ../core/TG2_tests.csv ../_review/dist/bdqcore_singlerecord_tests_current.csv
+# TODO: Replace these steps with creation of these files with kurator-ffdq
 cp ../core/TG2_tests.xml ../_review/dist/bdqcore.xml
 cp ../core/TG2_tests.ttl ../_review/dist/bdqcore.ttl
 cp ../core/TG2_tests.json ../_review/dist/bdqcore.json
 
+# TODO: The above term-versions file will become the master copy, and include the multi-record measures.
 # append multi-record measures to csv list of core tests
 grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqcore_term_versions.csv
 
