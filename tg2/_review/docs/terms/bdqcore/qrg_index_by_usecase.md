@@ -7,7 +7,7 @@ Part of the [BDQ Core Quick Reference Guide](index.md)
 
 ## Index of Tests by UseCase
 ### bdq:Taxon-Management
-A bdqffdq:Use Case that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
+A bdqffdq:UseCase that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
 - [VALIDATION_BASISOFRECORD_STANDARD](index.md#VALIDATION_BASISOFRECORD_STANDARD)
@@ -105,7 +105,7 @@ Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) 
 
 
 ### bdq:Spatial-Temporal_Patterns
-error extracting definition
+Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) where the information elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
 - [VALIDATION_BASISOFRECORD_STANDARD](index.md#VALIDATION_BASISOFRECORD_STANDARD)

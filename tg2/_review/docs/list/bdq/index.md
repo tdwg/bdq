@@ -146,7 +146,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 [bdq:Alien-Species](#bdq_Alien-Species) |
 [bdq:Biotic-Relationships](#bdq_Biotic-Relationships) |
 [bdq:Record-Management](#bdq_Record-Management) |
-[bdq:Spatial-TemporalPatterns](#bdq_Spatial-TemporalPatterns) |
+[bdq:Spatial-Temporal_Patterns](#bdq_Spatial-Temporal_Patterns) |
 [bdq:Taxon-Management](#bdq_Taxon-Management) 
 
 **bdqffdq:InformationElement**
@@ -190,7 +190,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 [Alien-Species](#bdq_Alien-Species) |
 [Biotic-Relationships](#bdq_Biotic-Relationships) |
 [Record-Management](#bdq_Record-Management) |
-[Spatial-Temporal Patterns](#bdq_Spatial-TemporalPatterns) |
+[Spatial-Temporal Patterns](#bdq_Spatial-Temporal_Patterns) |
 [Taxon-Management](#bdq_Taxon-Management) 
 
 **bdqffdq:InformationElement**
@@ -1214,13 +1214,13 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Spatial-TemporalPatterns"></a>Term Name  bdq:Spatial-TemporalPatterns</th>
+			<th colspan="2"><a id="bdq_Spatial-Temporal_Patterns"></a>Term Name  bdq:Spatial-Temporal_Patterns</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms/Spatial-TemporalPatterns">https://rs.tdwg.org/bdq/terms/Spatial-TemporalPatterns</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/Spatial-Temporal_Patterns">https://rs.tdwg.org/bdq/terms/Spatial-Temporal_Patterns</a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -1228,7 +1228,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Spatial-TemporalPatterns-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Spatial-TemporalPatterns-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal_Patterns-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal_Patterns-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1328,7 +1328,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:Use Case that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
+			<td>A bdqffdq:UseCase that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>

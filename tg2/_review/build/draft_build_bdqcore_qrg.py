@@ -416,7 +416,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("********************")
 			print()
 		print()
-		print("## Measures operating on Test Responses for MultiRecords (data sets).")
+		print("## Measures operating on Test Responses for MultiRecords (data sets)")
 		print()
 		for index, row in multirecordDataFrame.iterrows():
 			print("### ",row['Label'])
