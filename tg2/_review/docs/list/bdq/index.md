@@ -1,15 +1,15 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Biodiversity Data Quality Controlled Vocabulary List of Terms
+# BDQ Controlled Vocabulary List of Terms
 
 Title
-: Biodiversity Data Quality Controlled Vocabulary List of Terms
+: BDQ Controlled Vocabulary List of Terms
 
 Date version issued
-: 2025-03-26
+: 2025-03-28
 
 Date created
-: 2025-03-26
+: 2025-03-28
 
 Part of TDWG Standard
 : <http://example.org/to_be_determined>
@@ -18,7 +18,7 @@ Preferred namespace abbreviation
 : bdq
 
 This version
-: <http://rs.tdwg.org/bdq/terms/2025-03-26>
+: <http://rs.tdwg.org/bdq/terms/2025-03-28>
 
 Latest version
 : <http://rs.tdwg.org/bdq/terms/>
@@ -33,13 +33,13 @@ Creator
 : TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-26>
+: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-28>
 
 Draft Standard for Submission
 
 ## 1 Introduction
 
-This document includes terms that are part of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/2025-03-26>). For details and rationale, see Chapman et al. (2020).
+This document includes terms that are part of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/2025-03-28>). For details and rationale, see Chapman et al. (2020).
 
 ### 1.1 Purpose
 
@@ -730,11 +730,11 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An evaluation of a value, that in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </td>
+			<td>An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See also: bdq:notEmpty.  In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty.   The phrasing 'in the context of the evauation' is to allow the test implementations to be independed of, and agnostic about the data strucutures presented to a framework for executing the tests and the framework within which the tests are run.  The term bdq:Empty is defined to be more generaly usable than just with bdqcore.  Note: A bdqffdq:InformationElement containing invalid characters (e.g. letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:notEmpty and their invalidity must be separately detected.   The definition of bdq:empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:empty should be used as a data value to represent some form of 'Null', 'Unknown', 'Not Recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
+			<td>See also: bdq:notEmpty. In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a test specification, it therefore means empty if the data set being evaluated does not contain the term matching the information element, or if the data set contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the tests and the framework within which the tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqcore. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an information element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:notEmpty and their invalidity must be separately detected. The definition of bdq:empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1098,11 +1098,11 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An evaluation of a value, that in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. </td>
+			<td>An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See also: bdq:empty.  In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a test specification.  Common string serializations of null such as \N and NULL are treated as bdq:notEmpty. If '\N' is present in a data set, tests are expected to explicitly treat that value as bdq:notEmpty, and then try to evaluate it against whatever other criteria may apply.  The term bdq:NotEmpty is defined to be more generaly usable than the scope of bdqcore: tests. </td>
+			<td>See also: bdq:empty. In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a test specification. Common string serializations of null such as '\N', 'NA', 'NaN', and NULL are treated as bdq:notEmpty. If '\N' is present in a data set, tests are expected to explicitly treat that value as bdq:notEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdq:NotEmpty is defined to be more broadly usable than the scope of bdqcore: tests. </td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1427,7 +1427,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-26>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-03-28>
 
 **Biodiversity Information Standards (TDWG)**
 

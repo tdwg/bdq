@@ -23,7 +23,7 @@ If you have questions or suggestions, submit these to the [BDQ Core Issues](htt
 
 Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement Class](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), 
 
-This document also includes [Measures operating on Test Responses for MultiRecords (data sets).](#measures-operating-on-test-responses-for-multirecords-data-sets) indexed in [MultiRecord Measures](qrg_multirecord_index.md)
+This document also includes [Measures operating on Test Responses for MultiRecords (datasets).](#measures-operating-on-test-responses-for-multirecords-data-sets) indexed in [MultiRecord Measures](qrg_multirecord_index.md)
 
 ## Alphabetical Index to SingleRecord Tests
 
@@ -4577,7 +4577,7 @@ For reference, information about possible values of dwc:taxonRank can be found a
 ********************
 
 
-## Measures operating on Test Responses for MultiRecords (data sets)
+## Measures operating on Test Responses for MultiRecords (datasets)
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 

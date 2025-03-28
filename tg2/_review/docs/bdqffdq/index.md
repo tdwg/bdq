@@ -80,7 +80,7 @@ The BDQ Conceptual Framework ontology formally describes the terms and relations
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about each Test.
 
-The Framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
+The Framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.  The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
@@ -1692,12 +1692,12 @@ The bdqffdq ontology is framed with limited constraints and no rdfs:range axioms
 
 ## Fundamental Concepts
 * U = Use Case
-* D = Dimension (e.g. Completeness)  
-* IE = Information Element (e.g. coordinates)
+* D = Dimension (e.g., Completeness)  
+* IE = Information Element (e.g., coordinates)
 * M = Mechanism 
-* C = Criterion (e.g. “in controlled vocabulary”)
-* E = Enhancement (description of a means by which data could be improved e.g. recommend replacement value from a controlled vocabulary).
-* S = Specification (specification of how a criterion is to be evaluated e.g. “Iterate records and calculate the proportion of records with scientific name different from null”)
+* C = Criterion (e.g., “in controlled vocabulary”)
+* E = Enhancement (description of a means by which data could be improved, e.g., recommend replacement value from a controlled vocabulary).
+* S = Specification (specification of how a criterion is to be evaluated, e.g., “Iterate records and calculate the proportion of records with scientific name different from null”)
 
 ## Properties
 * US = Usages 
@@ -1811,7 +1811,7 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
     it(am1) = {me1, va2}
 
-* Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion data set must have all records with coordinates.
+* Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion dataset must have all records with coordinates.
 
 ### Data Quality Solutions
 
