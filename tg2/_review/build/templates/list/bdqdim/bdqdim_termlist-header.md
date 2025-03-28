@@ -57,7 +57,7 @@ DataQualityDimension as used in the context of BDQ Core, was originally defined 
 
 DataQualityDimensions are measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
 
-Each test in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) against a single bdqffdq:DataQualityDimension. For example, the test VALIDATION_COUNTRY_FOUND tests the value of dwc:country against a source authority for a use case, (e.g.  bdq:Record-Management).  The appropriate type of bdqffq:DataQualityDimension in this case is bdqdim:Conformance: i.e. how well does the country value conform to an appropriate reference standard when you are evaluating the quality of a Darwin Core record (in the context of the use case with which VALIDATION_COUNTRY_FOUND is composed)?
+Each test in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) against a single bdqffdq:DataQualityDimension. For example, the test VALIDATION_COUNTRY_FOUND tests the value of dwc:country against a source authority for a use case, (e.g., bdq:Record-Management). The appropriate type of bdqffq:DataQualityDimension in this case is bdqdim:Conformance: i.e., how well does the country value conform to an appropriate reference standard when you are evaluating the quality of a Darwin Core record (in the context of the use case with which VALIDATION_COUNTRY_FOUND is composed)?
 
 DataQualityDimension applies to all Test Types (all subclasses of bsqffdq:DataQualityNeed that is, bdqffdq:VALIDATION, bdqffdq:ISSUE, bdqffdq:MEASURE and bdqffdq:AMENDMENT).
 
@@ -97,7 +97,7 @@ The following namespace abbreviations are used in this document:
 
 {term_key}
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
+Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
 
 ## 2 Use of Terms (normative)
 

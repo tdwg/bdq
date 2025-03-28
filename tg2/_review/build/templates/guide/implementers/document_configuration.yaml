@@ -6,7 +6,7 @@
 documentTitle: 'BDQ Core Implementer''s Guide'
 
 # Abstract of document written by authors.
-abstract: 'This document is a users guide for the BDQ Core Standard, providing guidance for those wishing to create sofware implementations (bdqffdq:Mechanism) of BDQ Core tests.'
+abstract: 'This document is a users guide for the BDQ Core Standard, providing guidance for those wishing to create software implementations (bdqffdq:Mechanism) of BDQ Core tests.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'
@@ -51,7 +51,7 @@ current_iri: http://rs.tdwg.org/bdq/terms/
 # Date of first ratification of the document. Will match the doc_modified value for the first
 # version of the document. For lists of terms, this will also match the date that the
 # first version of the vocabulary was issued (date_issued).
-doc_created: '2025-03-26'
+doc_created: '2025-03-28'
 
 # ----------------
 # Do not edit below this line
@@ -69,4 +69,4 @@ comment: 'Draft Standard for Submission'
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2025-03-26'
+doc_modified: '2025-03-28'

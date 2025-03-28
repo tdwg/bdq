@@ -38,7 +38,7 @@ Bibliographic citation
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary has been designed using this framework and is framed in the terms and concepts from the framework.  
 
-The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
+The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
 
 This document describes the use of a set of terms used to describe 'data quality' and 'fitness for use' in the context of biodiversity data.  These terms are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
@@ -115,9 +115,9 @@ See the [bdqffdq: landing page](../bdqffdq/index.md) for a concise description a
 
 #### 3.2 Description of the bdqffdq ontology
 
-The bdqffdq framework describes data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some data set to have quality for that use.  That is, bdqffdq lets users describe how to evaluate if some data set is fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  Under the framework, data do not have quality in the abstract, but only can be evaluated for quality with respect to a specified purpose.  The term that purposes and uses of data in bdqffdq is UseCase.  
+The bdqffdq framework describes data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some dataset to have quality for that use.  That is, bdqffdq lets users describe how to evaluate if some dataset is fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  Under the framework, data do not have quality in the abstract, but only can be evaluated for quality with respect to a specified purpose.  The term that purposes and uses of data in bdqffdq is UseCase.  
 
-The framework can be conceptually divided into three horizontal layers or slices: Data Quality Needs, Data Quality Solutions, and Data Quality Reports.  Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular data sets. 
+The framework can be conceptually divided into three horizontal layers or slices: Data Quality Needs, Data Quality Solutions, and Data Quality Reports.  Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets. 
 
 The framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers.  These concepts are Measures, Validations, Amendments, and Issues.   
 
@@ -158,7 +158,7 @@ Amendments propose changes to data or processes that, if accepted, may improve t
 
 Formally, in the Data Quality Needs level, the framework starts with a Use Case, a framing of some use to which data may be put.  Use cases are related to the formal description of data quality needs through policies and contexts.  Contexts (ContextualizedCriterion, ContextualizedDimension, ContextualizedEnhancement, ContextualizedIssue) relate the specification of a need, such as a Validation, to the information elements that need to be examined, and to the resource type that is operated on.  Each of the tests described in this standard has a formal specification that includes each of these elements.   A Use Case includes a set of policies, policies relate the use case to contexts, contexts link information elements to needs and to resource types, a need specify what properties data must have to have quality.   
 
-Data quality needs can relate to the data quality of single records (bdqffdq:SingleRecord) or of data sets (bdqffdq:MultiRecord).
+Data quality needs can relate to the data quality of single records (bdqffdq:SingleRecord) or of datasets (bdqffdq:MultiRecord).
 
 ![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource Class.")
 
@@ -175,7 +175,7 @@ Formally, in the Data Quality Needs level, the framework starts with a Use Case,
 
 The framework expects that Quality Assurance is provided for through specification of a set of Measures defined to operate on a MultiRecord, and which specify a Response.result of COMPLETE or NOT_COMPLETE.  A MultiRecord Measure may specify that it is COMPLETE if all instances of a SingleRecord Validation are COMPLIANT.  
 
-For Quality Control, MultiRecord Measures may be defined to return a count of Response.result of COMPLIANT for validations, and thus can provide a measure of how fit a data set is for some purpose, and what sort of work would be required to make it fit for that purpose.   
+For Quality Control, MultiRecord Measures may be defined to return a count of Response.result of COMPLIANT for validations, and thus can provide a measure of how fit a dataset is for some purpose, and what sort of work would be required to make it fit for that purpose.   
 
 ![Diagram of ValidationAssertion, AmendmentAssertion, MeasureAssertion and IssueAssertion classes as subtype of Assertion class, with Assertion as a rectangular node, ReportConcepts as its parent above it, and the other 4 classes below the Assertion and linked to it. ](assertions.png "Report concept parallels to the 4 central assertion types in the framework.")
 
@@ -294,7 +294,7 @@ Each Implementation uses one and only one Specification.
 Each Implementation is implemented by one and only one Mechansism.
 Each Implementation produces one to many Assertions.
 
-It is important that the chain of relationships from an instance of a bdqffdq:Assertion to a DataQualityNeed (e.g. an instance of a bdqffdq:Validation) be a chain of one to one relationships.  To identify what test with what parameters made an assertion, it must be possible to follow the chain of relationships from an assertion to a single implementation to a single specification (with zero to many parameters) to a single method to a single DataQualityNeed (e.g. a validation, with one to many information elements).  Multiplicity should only be possible following on through policy to use cases (an assertion may pertain to multiple use cases), or when going from a DataQualityNeed to assertions.  It is expected that an instance of a Validation would produce many instances of ValidationAssertions, each of those ValidationAssertions must be able to be related to the sole Validation that produced it.  
+It is important that the chain of relationships from an instance of a bdqffdq:Assertion to a DataQualityNeed (e.g., an instance of a bdqffdq:Validation) be a chain of one to one relationships.  To identify what test with what parameters made an assertion, it must be possible to follow the chain of relationships from an assertion to a single implementation to a single specification (with zero to many parameters) to a single method to a single DataQualityNeed (e.g., a validation, with one to many information elements).  Multiplicity should only be possible following on through policy to use cases (an assertion may pertain to multiple use cases), or when going from a DataQualityNeed to assertions.  It is expected that an instance of a Validation would produce many instances of ValidationAssertions, each of those ValidationAssertions must be able to be related to the sole Validation that produced it.  
 
 ## 4 Term index
 

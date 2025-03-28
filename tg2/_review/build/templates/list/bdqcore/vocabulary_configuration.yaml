@@ -2,14 +2,14 @@
 # Configuration for key to terms in vocabulary
 # ----------------
 
-# For each header in csv term-version file, provide the following: 
+# For each header in the CSV term-version file, provide the following: 
 
-#csvheader:
+# CSV header:
 #  label: the label to show for this term, required
 #  normative: true to list the term as normative, required
 #  term: the curie for the term as used, required
 #  append: Local meaning to append to the end of the definition, optional
-#  force: If true, show this entry in the key even if the csvheader is not present in the term-version file, optional
+#  force: If true, show this entry in the key even if the CSV header is not present in the term-version file, optional
 
 # These terms are in the CSV but not represented in the RDF
 #"issueNumber"

@@ -19,12 +19,12 @@ The bdqffdq ontology is framed with limited constraints and no rdfs:range axioms
 
 ## Fundamental Concepts
 * U = Use Case
-* D = Dimension (e.g. Completeness)  
-* IE = Information Element (e.g. coordinates)
+* D = Dimension (e.g., Completeness)  
+* IE = Information Element (e.g., coordinates)
 * M = Mechanism 
-* C = Criterion (e.g. “in controlled vocabulary”)
-* E = Enhancement (description of a means by which data could be improved e.g. recommend replacement value from a controlled vocabulary).
-* S = Specification (specification of how a criterion is to be evaluated e.g. “Iterate records and calculate the proportion of records with scientific name different from null”)
+* C = Criterion (e.g., “in controlled vocabulary”)
+* E = Enhancement (description of a means by which data could be improved, e.g., recommend replacement value from a controlled vocabulary).
+* S = Specification (specification of how a criterion is to be evaluated, e.g., “Iterate records and calculate the proportion of records with scientific name different from null”)
 
 ## Properties
 * US = Usages 
@@ -138,7 +138,7 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
     it(am1) = {me1, va2}
 
-* Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion data set must have all records with coordinates.
+* Recommending coordinates based on textual locality improves the coordinate completeness of single records and may result in compliance with the criterion dataset must have all records with coordinates.
 
 ### Data Quality Solutions
 

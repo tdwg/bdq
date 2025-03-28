@@ -38,12 +38,12 @@ Biodiversity Data Quality Core, hereafter referred to as 'BDQ Core', consists of
 * a generic fitness for use framework (bdqffdq:) whose terms and semantics are embodied in the Framework Ontology,
 * a set of controlled vocabularies for the terms bdqffdq:DataQualityDimension, bdqffdq:Enhancement, and bdqffdq:Criterion,
 * a supporting vocabulary of terms (bdq:) used in the specification of the previously mentioned Tests,
-* an exemplar data set to use as input for validation of the behavior of implementations of the previously mentioned Tests,
+* an exemplar dataset to use as input for validation of the behavior of implementations of the previously mentioned Tests,
 * a guide to implementation of the Tests,
 * a guide to the interpretation of the results of the Tests, and
 * a guide to the Framework Ontology for describing data quality.
 
-Not part of BDQ Core, but dependent on it, is an exemplar implementation of the Tests, written in Java&#174;, the behavior of which has been validated against the uses the previously mentioned validation data set.
+Not part of BDQ Core, but dependent on it, is an exemplar implementation of the Tests, written in Java&#174;, the behavior of which has been validated against the uses the previously mentioned validation dataset.
 
 BDQ Core covers a specification of Tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record depends on the use to which it is applied: a record that is unsuitable to be used in one application may be suitable for another application (Belbin et al. 2013). Data does not have quality in the abstract, it only has quality with respect to some use, within BDQ Core, bdqffdq:UseCases provide a formal representation of uses to which data may be put. The set of Tests and UseCases defined in BDQ Core are a starting point, not a limitation. The BDQ Core Tests may be composed differently for different uses, and additional Tests are expected. 
 
@@ -79,7 +79,7 @@ This document is a general introduction to BDQ Core standard designed for anyone
     - [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) For anyone needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
     - [Biodiversity Data Quality Controlled Vocabulary List of Terms](../list/bdq/index.md) For anyone needing a technical understanding of the BDQ Core Tests. 
 - Additional Documents
-  - [BDQ Core: Identifying Synthetic and Modified Data](../synthetic/index.md) For anyone interested in the creation of data sets for the validation of implementations of BDQ Core Tests, to see how to mark their data. Also for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines. 
+  - [BDQ Core: Identifying Synthetic and Modified Data](../synthetic/index.md) For anyone interested in the creation of datasets for the validation of implementations of BDQ Core Tests, to see how to mark their data. Also for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines. 
   - [BDQ Core Supplemental Information](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
 
 ### 1.4. Status of the Content of This Document
@@ -298,7 +298,7 @@ Glossary of terms used in BDQ Core that are in addition to those included in the
 | ---- | ---- | ---- |
 | COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
 | CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
-| Database of record | An information system which holds an authoritative or master record of some data. Records in a database of record are held to be correct over different values for the same records that might be found in other data sets. This is in distinction from aggregated data sets, derived research data set, data sets for portals and other holders of non-authoritative copies of the data. | BDQ Core |
+| Database of record | An information system which holds an authoritative or master record of some data. Records in a database of record are held to be correct over different values for the same records that might be found in other datasets. This is in distinction from aggregated datasets, derived research dataset, datasets for portals and other holders of non-authoritative copies of the data. | BDQ Core |
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
 | Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Core Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |

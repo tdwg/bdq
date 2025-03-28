@@ -48,7 +48,7 @@ The BDQ Conceptual Framework ontology formally describes the terms and relations
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about each Test.
 
-The Framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some data set to have quality for that use, that is for some data set to be fit for a specified purpose.  The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
+The Framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.  The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data.  These are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
