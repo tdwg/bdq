@@ -58,7 +58,7 @@ Draft Standard for Submission
 - [3 Use of Terms (normative)](#3-use-of-terms-normative)
 - [3.1 Structure of Response (normative)](#31-structure-of-response-normative)
 - [3.2 Resource Types (normative)](#32-resource-types-normative)
-- [3.3 Parameterising the Tests (normative)](#33-parameterising-the-tests-normative)
+- [3.3 Parameterizing the Tests (normative)](#33-parameterizing-the-tests-normative)
 - [3.3.1 Parameter Examples (non-normative)](#331-parameter-examples-non-normative)
 - [4 Term indices](#4-term-indices)
 - [4.1 Index By Test Label](#41-index-by-test-label)
@@ -94,9 +94,9 @@ In addition, A users guide to the use of the BDQ Core Tests is provided in the
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqcore/index.md | Complete term list for the bdqcore: vocabulary  | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.xml | An rdf representation of the Tests in an RDF/XML serialization | 
-| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.ttl | An rdf representation of the Tests in a Turtle serialization | 
-| JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.json | An rdf representation of the Tests in a json-ld serialization | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.xml | An RDF representation of the Tests in an RDF/XML serialization | 
+| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.ttl | An RDF representation of the Tests in a Turtle serialization | 
+| JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.json | An RDF representation of the Tests in a JSON-LD serialization | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqcore_term_versions.csv | CSV file listing the Tests | 
 | SingleRecord Test CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore_singlerecord_tests_current.csv | CSV file listing just the SingleRecord tests. |
 
@@ -327,7 +327,7 @@ When responses are in the form of RDF, the RDF MUST meet the following condition
 2. The Assertion MUST have exactly one bdqffdq:hasResponseStatus object property linking it to one of the named individuals that has type bdqffdq:ResponseStatus (bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, bdqffdq:AMENDED, bdqffdq:FILLED_IN, or bdqffdq:RUN_HAS_RESULT).
 3. The Assertion MUST have a bdqffdq:hasResponseResult object property or bdqffdq:hasResponseResultValue data property, unless the object of the bdqffdq:hasResponseStatus indicates that none should be present.
   - If the object of the bdqffdq:hasResponseStatus is bdqffdq:RUN_HAS_RESULT, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResult object property linking it to one of the named individuals that has type bdqffdq:ResponseResult (bdqffdq:COMPLETE, bdqffdq:COMPLIANT, bdqffdq:IS_ISSUE, bdqffdq:NOT_COMPLETE, bdqffdq:NOT_COMPLIANT, bdqffdq:NOT_ISSUE, or bdqffdq:POTENTIAL_ISSUE).
-  - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:AMENDED or bdqffdq:FILLED_IN, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResultValue data property linking it to structured data presenting the result of the Amendment.  The string in the bdqffdq:hasResponseResultValue SHOULD be a json list of key:value pairs, where the keys are specific information elements (e.g., dwc:eventDate), and the values are the new values proposed by the amendment.
+  - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:AMENDED or bdqffdq:FILLED_IN, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResultValue data property linking it to structured data presenting the result of the Amendment.  The string in the bdqffdq:hasResponseResultValue SHOULD be a JSON list of key:value pairs, where the keys are specific information elements (e.g., dwc:eventDate), and the values are the new values proposed by the amendment.
   - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, then no bdqffdq:hasResponseResult SHOULD be present.
 4. The Assertion MUST have at least one bdqffdq:hasResponseComment data property.  This bdqffdq:hasResponseComment must provide a human readable text explanation of why the conclusion expressed in the assertion was reached.  The bdqffdq:hasResponseComment MAY be repeated to provide the comment in different languages.  Each bdqffdq:hasResponseComment SHOULD be a self standing and complete explanation.
 5. The Assertion MAY have a bdqffdq:hasResponseQualifier object property.
@@ -338,7 +338,7 @@ When the Response is represented as a data structure in a form other than RDF, t
 2. Have one Response.status property, containing a string constant that MUST be one of the local names of one of the named individuals in bdqffdq with a type bdqffdq:ResponseStatus ( "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", "NOT_AMENDED", "AMENDED", "FILLED_IN", or "RUN_HAS_RESULT").
 3. Have one Response.result property.
   - If the Response.status is "RUN_HAS_RESULT" then the value of the Response.result property MUST be a string constant that is one of the local names of one of the named individuals of type bdqffdq:ResponseResult ("COMPLETE", "COMPLIANT", "IS_ISSUE", "NOT_COMPLETE", "NOT_COMPLIANT", "NOT_ISSUE", or "POTENTIAL_ISSUE").
-  -  If the Response.status is one of  "AMENDED" or "FILLED_IN" then the value of the Response.result property MUST be structured data presenting the result of the Amendment.  The string in the Response.result SHOULD be a json list of key:value pairs, where the keys are specific information elements (e.g., dwc:eventDate), and the values are the new values proposed by the amendment.
+  -  If the Response.status is one of  "AMENDED" or "FILLED_IN" then the value of the Response.result property MUST be structured data presenting the result of the Amendment.  The string in the Response.result SHOULD be a JSON list of key:value pairs, where the keys are specific information elements (e.g., dwc:eventDate), and the values are the new values proposed by the amendment.
   - If the Response.status is one of "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", or "NOT_AMENDED", then the Response.result MUST be empty or null.
 4. Have one Response.comment property.  This Response.comment must provide a human readable text explanation of why the conclusion expressed in the assertion was reached.  Internationalization of the Response.comment MAY be provided, nothing in this section should be taken as a constraint on how that may be accomplished.
 5. A Response.qualifier property may be included.
@@ -361,7 +361,7 @@ The BDQ Core Test [ISSUE_ANNOTATION_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/
 
 BDQ Core MultiRecord (bdqffdq:MultiRecord) Tests operate on a dataset as a whole. BDQ Core MultiRecord Tests in bdqcore: sum up results across all records for each bdqffdq:SingleRecord Test.
 
-### 3.3 Parameterising the Tests (normative)
+### 3.3 Parameterizing the Tests (normative)
 
 Where a Test is parameterized, a parameter (e.g., bdq:sourceAuthority) is specified in the text of the hasExpectedResponse data type property of the instance of the bdqffdq:Specification for the Test.  Such a bdqffdq:Specification MUST also have a bdqffdq:hasArgument object property linking it to an instance of a bdqffdq:Argument, which MUST have a bdqffdq:hasArgumentValue data type property carrying the default value for the parameter, and this bdqffdq:Argument MUST have a bdqffdq:hasParameter object property linking it to a bdqffdq:Parameter.  The bdqffdq:Parameter SHOULD be a class instance in the bdq: namespace (e.g., bdq:sourceAuthority).  
 

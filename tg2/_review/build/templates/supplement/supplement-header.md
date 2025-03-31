@@ -540,7 +540,7 @@ BDQ Core Tests are agnostic about the form in which the data are stored or trans
 
 The Tests are also agnostic about uses for quality assurance, where output data are filtered down to those for which (in effect) all Validations are Compliant, or for quality control where the results of Validations, Issues, Measures, and Amendments can be used to improve the quality of the data.
 
-### 3.5 Parameterising the Tests
+### 3.5 Parameterizing the Tests
 
 Parameterized Tests are those for which we detected a likelihood of different data quality needs within the community of CORE users and CORE needs. For example, the existence of national requirements for spatial data to be represented with a particular datum. When we identified that within Core data quality needs, different portions of the community have different authorities that they are required to adopt for particular terms, we defined Parameters for the Tests. The Parameter values allow a particular Test to behave differently when given different parameter values.  This allowed the development of generic Tests that provide support for non functional requirements that vary within the community. An example of such a Test is [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7), which takes the Parameter bdq:defaultGeodeticDatum, with a default value that fills most users’ needs of “EPSG:4326”. But we recognized that some users may have requirements that for data to have quality, they must associate dwc:decimalLatitude and dwc:decimalLongitude with a different spatial reference system in dwc:geodeticDatum. Other Tests related to georeferences are similarly parameterized, with a similar default, understanding that most users will be working with dwc:geodeticDatum="EPSG:4326", but others will have requirements for a different spatial reference system. Similarly, parameters are specified for depth and elevation information based on global maximum values, while user communities may have data that falls entirely within some smaller geographic region and may want to impose tighter constraints on depth and elevation for their data to have quality. For example for quality control, to identify records needing evaluation where the specified elevation is larger than any elevation within the region.
 
@@ -766,21 +766,17 @@ Supplementary tests have been exported to a CSV list of tests and have RDF repre
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the implementation, in the validation data, or a problem in the Test Specification), discuss as a group, make changes as needed, and repeat.
 
-Diagram of the '<a name="NAME">NAME</a>'-oriented tests and InformationElementsActedUpon
+#### 5.2.1 Diagram of the NAME-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'NAME'-oriented tests and InformationElementsActedUpon.](TestsName.png "NAME by InformationElements")
 
-
-Diagram of the '<a name="SPACE">SPACE</a>'-oriented tests and InformationElementsActedUpon
+#### 5.2.2 Diagram of the SPACE-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'SPACE'-oriented tests and InformationElementsActedUpon.](TestsSpace.png "SPACE by InformationElements")
 
-
-Diagram of the '<a name="TIME">TIME</a>'-oriented tests and InformationElementsActedUpon.
+#### 5.2.3 Diagram of the TIME-oriented tests and InformationElementsActedUpon.
 ![Diagram of the 'TIME'-oriented tests and InformationElementsActedUpon.](TestsTime.png "TIME by InformationElements")
 
-
-Diagram of the '<a name="OTHER">OTHER</a>'- oriented tests and InformationElementsActedUpon
+#### 5.2.4 Diagram of the OTHER-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.png "OTHER by InformationElements")
-
 
 ### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
 
@@ -808,7 +804,7 @@ Each test issue in GitHub begins with a table in markdown format describing the 
 
 **Term_Actions** [non-normative]: The last two components of the Label, useful in filtering Tests in CSV files, for example: "COUNTRYCODE_STANDARD"
 
-**Parameter(s)** [normative]: Parameters that modify the behavior of the Test, along with default values or links to Source Authorities (see [3.5 Parameterising the Tests](#35-parameterising-the-tests)). A parameter value exists only where there are a number of alternate options for a Source Authority. For example, "bdq:sourceAuthority default = "GBIF Backbone Taxonomy"" is parameterized as it allows for regional taxonomic authorities; whereas "bdq:sourceAuthority is "EPSG:" [https://epsg.io]"" is not parameterized as there is a single Source Authority. Example: bdq:defaultGeodeticDatum.
+**Parameter(s)** [normative]: Parameters that modify the behavior of the Test, along with default values or links to Source Authorities (see [3.5 Parameterizing the Tests](#35-parameterizing-the-tests)). A parameter value exists only where there are a number of alternate options for a Source Authority. For example, "bdq:sourceAuthority default = "GBIF Backbone Taxonomy"" is parameterized as it allows for regional taxonomic authorities; whereas "bdq:sourceAuthority is "EPSG:" [https://epsg.io]"" is not parameterized as there is a single Source Authority. Example: bdq:defaultGeodeticDatum.
 
 **Source Authority** [normative]: A reference to an authority required by the Test along with a default value where Tests may require reference to an external reference such as standard vocabularies of terms or names. The structure of the information in Source Authority ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (and if available), refer to an API that will assist implementers of Tests.  For example, bdq:sourceAuthority="Normative String Identifier" {"normative resource"} {informative list of API endpoints or other resources}. The "Normative String Identifier" is critical when the bdq:sourceAuthority is a parameter, this would be the string that would be the parameter value. In some cases, the API component will refer to a 'third party' site which will hopefully remain in sync with the standard, for example, a GBIF vocabulary API site would ideally be synced with a Darwin Core site. When a Test uses more than one sourceAuthority at the same time, these are given separate names, for example, "bdq:taxonIsMarine" and "bdq:geospatialLand" are the two sourceAuthority Parameters for [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380).
 

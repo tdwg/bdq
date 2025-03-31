@@ -17,7 +17,7 @@ xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 >
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -31,7 +31,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Alien-Species"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/AllAmendmentTestsRunOnSingleRecord-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/AllAmendmentTestsRunOnSingleRecord-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -45,7 +45,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:InformationElement"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/AllAmendmentTestsRunOnSingleRecord"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/AllValidationTestsRunOnSingleRecord-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/AllValidationTestsRunOnSingleRecord-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -59,7 +59,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:InformationElement"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/AllValidationTestsRunOnSingleRecord"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/annotationAlertIf-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/annotationAlertIf-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -73,7 +73,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/annotationAlertIf"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/annotationSystem-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/annotationSystem-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -87,7 +87,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/annotationSystem"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/assumptionOnUnknownBiome-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/assumptionOnUnknownBiome-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -101,7 +101,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/assumptionOnUnknownBiome"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Biotic-Relationships-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/Biotic-Relationships-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -115,7 +115,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Biotic-Relationships"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/defaultGeodeticDatum-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/defaultGeodeticDatum-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -129,7 +129,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/defaultGeodeticDatum"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/DefaultSourceAuthority-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/DefaultSourceAuthority-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -143,7 +143,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/DefaultSourceAuthority"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/defaultValue-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/defaultValue-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -157,7 +157,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/defaultValue"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/earliestValidDate-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/earliestValidDate-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -171,7 +171,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/earliestValidDate"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Empty-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/Empty-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -185,7 +185,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Empty"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/geospatialLand-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/geospatialLand-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -199,7 +199,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/geospatialLand"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/bdq:includeEventDate-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -213,7 +213,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/includeEventDate"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/latestValidDate-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/latestValidDate-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -227,7 +227,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/latestValidDate"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/maximumValidDepthInMeters-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/maximumValidDepthInMeters-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -241,7 +241,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/maximumValidDepthInMeters"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/maximumValidElevationInMeters-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/maximumValidElevationInMeters-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -255,7 +255,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/maximumValidElevationInMeters"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/minimumValidDepthInMeters-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/minimumValidDepthInMeters-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -269,7 +269,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/minimumValidDepthInMeters"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/minimumValidElevationInMeters-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/minimumValidElevationInMeters-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -283,7 +283,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/minimumValidElevationInMeters"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/NotEmpty-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/NotEmpty-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -297,7 +297,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/NotEmpty"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Record-Management-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/Record-Management-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -311,7 +311,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Record-Management"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/sourceAuthority-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/sourceAuthority-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -325,7 +325,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/sourceAuthority"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal_Patterns-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/Spatial-Temporal_Patterns-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -339,7 +339,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Spatial-Temporal_Patterns"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/spatialBufferInMeters-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/spatialBufferInMeters-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -353,7 +353,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/spatialBufferInMeters"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/Taxon-Management-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/Taxon-Management-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -367,7 +367,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdq/terms/Taxon-Management"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms//version/taxonIsMarine-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdq/terms/version/taxonIsMarine-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>

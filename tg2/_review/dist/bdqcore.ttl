@@ -3193,7 +3193,7 @@
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized>;
-  skos:note "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order. In these cases, the result will be AMENDED numeric equivalents.";
+  skos:note "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:a16e8cb6-dbf5-44a9-becc-8bef83a37456>;
   dcterms:issued "2025-03-06"^^xsd:date;

@@ -13940,7 +13940,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order. In these cases, the result will be AMENDED numeric equivalents."
+                "@value": "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [

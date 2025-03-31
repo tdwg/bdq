@@ -93,7 +93,7 @@ The following namespace abbreviations are used in this document:
 | Comments (rdfs:comment) | non-normative | A description of the subject resource. | Used in Measure of Single Record Tests |
 | Controlled Value () | normative | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | Alien-Species |
 | Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the information elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdq/terms//version/ Alien-Species-2024-09-30](https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30) |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdq/terms/version/ Alien-Species-2024-09-30](https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30) |
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Alien-Species |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. | Alien-Species |
@@ -216,7 +216,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Alien-Species-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30">https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -262,7 +262,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/AllAmendmentTestsRunOnSingleRecord-2024-09-30">https://rs.tdwg.org/bdq/terms//version/AllAmendmentTestsRunOnSingleRecord-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/AllAmendmentTestsRunOnSingleRecord-2024-09-30">https://rs.tdwg.org/bdq/terms/version/AllAmendmentTestsRunOnSingleRecord-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -308,7 +308,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/AllValidationTestsRunOnSingleRecord-2024-09-30">https://rs.tdwg.org/bdq/terms//version/AllValidationTestsRunOnSingleRecord-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/AllValidationTestsRunOnSingleRecord-2024-09-30">https://rs.tdwg.org/bdq/terms/version/AllValidationTestsRunOnSingleRecord-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -354,7 +354,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/annotationAlertIf-2024-09-30">https://rs.tdwg.org/bdq/terms//version/annotationAlertIf-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/annotationAlertIf-2024-09-30">https://rs.tdwg.org/bdq/terms/version/annotationAlertIf-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -400,7 +400,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/annotationSystem-2024-09-30">https://rs.tdwg.org/bdq/terms//version/annotationSystem-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/annotationSystem-2024-09-30">https://rs.tdwg.org/bdq/terms/version/annotationSystem-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -446,7 +446,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/assumptionOnUnknownBiome-2024-09-30">https://rs.tdwg.org/bdq/terms//version/assumptionOnUnknownBiome-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/assumptionOnUnknownBiome-2024-09-30">https://rs.tdwg.org/bdq/terms/version/assumptionOnUnknownBiome-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -492,7 +492,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Biotic-Relationships-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Biotic-Relationships-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/Biotic-Relationships-2024-09-30">https://rs.tdwg.org/bdq/terms/version/Biotic-Relationships-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -538,7 +538,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/defaultGeodeticDatum-2024-09-30">https://rs.tdwg.org/bdq/terms//version/defaultGeodeticDatum-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/defaultGeodeticDatum-2024-09-30">https://rs.tdwg.org/bdq/terms/version/defaultGeodeticDatum-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -584,7 +584,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/DefaultSourceAuthority-2024-09-30">https://rs.tdwg.org/bdq/terms//version/DefaultSourceAuthority-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/DefaultSourceAuthority-2024-09-30">https://rs.tdwg.org/bdq/terms/version/DefaultSourceAuthority-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -630,7 +630,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/defaultValue-2024-09-30">https://rs.tdwg.org/bdq/terms//version/defaultValue-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/defaultValue-2024-09-30">https://rs.tdwg.org/bdq/terms/version/defaultValue-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -676,7 +676,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/earliestValidDate-2024-09-30">https://rs.tdwg.org/bdq/terms//version/earliestValidDate-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/earliestValidDate-2024-09-30">https://rs.tdwg.org/bdq/terms/version/earliestValidDate-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -722,7 +722,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Empty-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Empty-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/Empty-2024-09-30">https://rs.tdwg.org/bdq/terms/version/Empty-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -768,7 +768,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/geospatialLand-2024-09-30">https://rs.tdwg.org/bdq/terms//version/geospatialLand-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/geospatialLand-2024-09-30">https://rs.tdwg.org/bdq/terms/version/geospatialLand-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -814,7 +814,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30">https://rs.tdwg.org/bdq/terms//version/bdq:includeEventDate-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/bdq:includeEventDate-2024-09-30">https://rs.tdwg.org/bdq/terms/version/bdq:includeEventDate-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -860,7 +860,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/latestValidDate-2024-09-30">https://rs.tdwg.org/bdq/terms//version/latestValidDate-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/latestValidDate-2024-09-30">https://rs.tdwg.org/bdq/terms/version/latestValidDate-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -906,7 +906,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/maximumValidDepthInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms//version/maximumValidDepthInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/maximumValidDepthInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms/version/maximumValidDepthInMeters-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -952,7 +952,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/maximumValidElevationInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms//version/maximumValidElevationInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/maximumValidElevationInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms/version/maximumValidElevationInMeters-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -998,7 +998,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/minimumValidDepthInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms//version/minimumValidDepthInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/minimumValidDepthInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms/version/minimumValidDepthInMeters-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1044,7 +1044,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/minimumValidElevationInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms//version/minimumValidElevationInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/minimumValidElevationInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms/version/minimumValidElevationInMeters-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1090,7 +1090,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/NotEmpty-2024-09-30">https://rs.tdwg.org/bdq/terms//version/NotEmpty-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/NotEmpty-2024-09-30">https://rs.tdwg.org/bdq/terms/version/NotEmpty-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1136,7 +1136,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Record-Management-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Record-Management-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/Record-Management-2024-09-30">https://rs.tdwg.org/bdq/terms/version/Record-Management-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1182,7 +1182,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/sourceAuthority-2024-09-30">https://rs.tdwg.org/bdq/terms//version/sourceAuthority-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/sourceAuthority-2024-09-30">https://rs.tdwg.org/bdq/terms/version/sourceAuthority-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1228,7 +1228,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal_Patterns-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Spatial-Temporal_Patterns-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/Spatial-Temporal_Patterns-2024-09-30">https://rs.tdwg.org/bdq/terms/version/Spatial-Temporal_Patterns-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1274,7 +1274,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/spatialBufferInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms//version/spatialBufferInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/spatialBufferInMeters-2024-09-30">https://rs.tdwg.org/bdq/terms/version/spatialBufferInMeters-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1320,7 +1320,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/Taxon-Management-2024-09-30">https://rs.tdwg.org/bdq/terms//version/Taxon-Management-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/Taxon-Management-2024-09-30">https://rs.tdwg.org/bdq/terms/version/Taxon-Management-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1366,7 +1366,7 @@ Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resourc
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdq/terms//version/taxonIsMarine-2024-09-30">https://rs.tdwg.org/bdq/terms//version/taxonIsMarine-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdq/terms/version/taxonIsMarine-2024-09-30">https://rs.tdwg.org/bdq/terms/version/taxonIsMarine-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>

@@ -4079,7 +4079,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs moth/day order. In these cases, the result will be AMENDED numeric equivalents.
+Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4526,7 +4526,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 #### Notes
 
-The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority.   When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.   Implementors can be aware of the current  GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122  The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records.   Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.
+The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority.   When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID.   Implementors can be aware of the current  GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122  The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records.   Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementors will need to support at least the "gbif:" pseudo-namespace.
 
 [🠱](#indexes-to-the-tests)
 ********************

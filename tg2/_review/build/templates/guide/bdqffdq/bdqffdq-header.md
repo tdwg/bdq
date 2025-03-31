@@ -201,7 +201,7 @@ Assertions are expected to assert Response objects, these will involve, in RDF, 
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
-See the bdqcore: landing page section on the [Structure of a Response](../../bdqcore/index.md#21-Structure-of-Response-normative) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See the [Structure of a Response](../../bdqcore/index.md#31-Structure-of-Response-normative) section of the [BDQ Core Tests and Assertions](../../bdqcore/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
 ### 3.6 Organization of the bdqcore classes 
 
