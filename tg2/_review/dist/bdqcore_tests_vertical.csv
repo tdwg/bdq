@@ -26,7 +26,7 @@
 "VALIDATION_MAXDEPTH_INRANGE","Validation dwc:maximumDepthInMeters In Range","bdqcore:3f1db29a-bfa5-40db-9fd1-fde020d81939"
 "VALIDATION_MAXELEVATION_INRANGE","Validation dwc:maximumElevationInMeters In Range","bdqcore:c971fe3f-84c1-4636-9f44-b1ec31fd63c7"
 "VALIDATION_MINDEPTH_INRANGE","Validation dwc:minimumDepthInMeters In Range","bdqcore:04b2c8f3-c71b-4e95-8e43-f70374c5fb92"
-"VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH","Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters","bdqcore:8f1e6e58-544b-4365-a569-fb781341644e"
+"VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH","Validation dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters","bdqcore:8f1e6e58-544b-4365-a569-fb781341644e"
 "VALIDATION_MINELEVATION_INRANGE","Validation dwc:minimumElevationInMeters In Range","bdqcore:0bb8297d-8f8a-42d2-80c1-558f29efe798"
 "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION","Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters","bdqcore:d708526b-6561-438e-aa1a-82cd80b06396"
 "VALIDATION_STATEPROVINCE_FOUND","Validation dwc:stateProvince Found","bdqcore:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"

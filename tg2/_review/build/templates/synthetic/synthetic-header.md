@@ -125,5 +125,5 @@ dwc:occurrenceID = urn:uuid: + a random type 4 UUID
 
 BDQ Core includes two datasets for the validation of test implemetations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
-  - File: [Test Validation Data](../guide/implementers/TG2_test_validation_data.csv "Test validation data CSV file")
-  - File: [Test Validation Data for non-printing characters](../guide/implementers/TG2_test_validation_data_nonprintingchars.csv "Test validation data CSV file for testing implementations of EMPTY, containing non-printing characters")
+  - File: [Test Validation Data](../guide/implementers/TG2_test_validation_data.csv "Test Validation Data CSV file")
+  - File: [Test Validation Data for non-printing characters](../guide/implementers/TG2_test_validation_data_nonprintingchars.csv "Test Validation Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")

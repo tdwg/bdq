@@ -233,10 +233,10 @@ Example competency questions that can be asked of the RDF representation of bdqc
          FILTER( ?uc = <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> )
     }
 
-And another that lists the valuable information elements for a use case: 
+And another that lists the valuable Information Elements for a use case: 
 
     # Given a use case find the ActedUpon
-    # information elements 
+    # Information Elements 
     
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
@@ -344,7 +344,7 @@ Given an Assertion, what Test was run with which argument values for which param
     }
     GROUP BY ?test ?label ?description ?mechanism
 
-What Validations share the same ActedUpon information elements with Amendments:
+What Validations share the same ActedUpon Information Elements with Amendments:
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -359,7 +359,7 @@ What Validations share the same ActedUpon information elements with Amendments:
     }
     ORDER BY ?term
 
-What information elements are acted upon by more that one Annotation: 
+What Information Elements are acted upon by more that one Annotation: 
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -677,7 +677,7 @@ Once the vocabulary terms and their definitions had become stable, they were ass
 - bdqdim	https://rs.tdwg.org/bdqdim/terms/ for the Data Quality Dimension of (Measures and all) the Tests
 - bdqcrit	https://rs.tdwh.org/bdqcrit/terms/ for the Criteria of the Validation and Issue Tests
 - bdqenh	https://rs.tdwg.org/bdqenh/terms/ for the Enhancements of the Amendment Tests
-- bdq	https://rs.tdwg.org/bdq/terms/ for terms used to construct Specifications: source authorities, parameters, information elements, and the concepts bdq:Empty and bdq:NotEmpty
+- bdq	https://rs.tdwg.org/bdq/terms/ for terms used to construct Specifications: source authorities, parameters, Information Elements, and the concepts bdq:Empty and bdq:NotEmpty
 
 These vocabularies all fed into a formal description of the Tests as terms in the bdqcore: namespace (bdqcore: https://rs.tdwg.org/bdqcore/terms/) where the Tests with their descriptions were framed using the other vocabularies.
 
@@ -719,7 +719,7 @@ Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the comm
 
 **Proven by implementation, validated with data**.  We repeatedly found that an initial phrasing of the specification of a test did not survive implementation, and subsequent phrasings did not survive exposure to multiple test values.  Test specifications written without implementation and without validation against data from the wild often hide hidden assumptions, missing elements of logic, and incorrect assumptions about how a test implementation might behave.  Actually producing a test implementation, and testing the implementation against input data values and expected response values (with cases provided by more than one person) have proved essential for test specification development.  
 
-**Conflicts between these principles can be expected**.  For example, [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://rc.tdwg.org/bdqcore/7498ca76-c4d4-42e2-8103-acacccbdffa7) and its related validation proved difficult to develop, with conflicts between simplicity and the power of the test, and conflicts between the guidance in the non-normative Darwin Core Notes/Comments for the term and best practices.  Requirements for data quality arising from spatial analysis impose an expectation that dwc:geodeticDatum be explicit about what is being said about the associated dwc:decimalLatitude and dwc:decimalLongitude values, with this best being expressed as EPSG code in the form Authority:Number (e.g., EPSG:4326), while much of the data in the wild is in the form of less explicit text strings (e.g., WGS84), thus these tests are aspirational in seeking to drive the community to best (explicit) practices.  A simple validation could ask if dwc:geodeticDatum matches any EPSG code in the form Authority:Number, but the definition of dwc:geodeticDatum explicitly limits values to those that represent the Coordinate Reference System for the geographic coordinate expressed by dwc:decimalLatitude and dwc:decimalLongitude, or a datum or ellipsoid appropriate for such.  This means only a subset of EPSG codes have quality, adding complexity to the test definition and implementation (with the GBIF vocabulary for Geodetic Datum not helping as it does not assert the authority for the numeric values (with both ESRI and EPSG authorities in use by consumers of spatial data), and it does not provide a means to identify which values are appropriate for dwc:geodeticDatum, given the limitations of the definition to geographic coordinate reference systems).  Furthermore, the georeference best practice guide (Chapman and Wieczorek 2020), specifies the use of "not recorded" for unknown values (under specified conditions), while the Notes/Comments on dwc:geodeticDatum recommend the use of "unknown", here we support the best practice guide, but need to include the explicit value "not recorded" as valid for dwc:geodeticDatum, as well as a specified subset of EPSG codes.  Thus, each test specification must be "as simple as possible", with tradeoffs from other principles likely increasing the minimum complexity.
+**Conflicts between these principles can be expected**.  For example, [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://rc.tdwg.org/bdqcore/7498ca76-c4d4-42e2-8103-acacccbdffa7) and its related validation proved difficult to develop, with conflicts between simplicity and the power of the test, and conflicts between the guidance in the non-normative Darwin Core Notes/Comments for the term and best practices.  Requirements for data quality arising from spatial analysis impose an expectation that dwc:geodeticDatum be explicit about what is being said about the associated dwc:decimalLatitude and dwc:decimalLongitude values, with this best being expressed as EPSG code in the form Authority:Number (e.g., EPSG:4326), while much of the data in the wild is in the form of less explicit text strings (e.g., WGS84), thus these tests are aspirational in seeking to drive the community to best (explicit) practices.  A simple validation could ask if dwc:geodeticDatum matches any EPSG code in the form Authority:Number, but the definition of dwc:geodeticDatum explicitly limits values to those that represent the Coordinate Reference System for the geographic coordinate expressed by dwc:decimalLatitude and dwc:decimalLongitude, or a datum or ellipsoid appropriate for such.  This means only a subset of EPSG codes have quality, adding complexity to the test definition and implementation (with the GBIF vocabulary for Geodetic Datum not helping as it does not assert the authority for the numeric values (with both ESRI and EPSG authorities in use by consumers of spatial data), and it does not provide a means to identify which values are appropriate for dwc:geodeticDatum, given the limitations of the definition to geographic coordinate reference systems).  Furthermore, the [Georeferencing Best Practices](https://docs.gbif.org/georeferencing-best-practices/1.0/en/) guide (Chapman and Wieczorek 2020), specifies the use of "not recorded" for unknown values (under specified conditions), while the Notes/Comments on dwc:geodeticDatum recommend the use of "unknown", here we support the best practice guide, but need to include the explicit value "not recorded" as valid for dwc:geodeticDatum, as well as a specified subset of EPSG codes.  Thus, each test specification must be "as simple as possible", with tradeoffs from other principles likely increasing the minimum complexity.
 
 #### 3.11.3 Consistent behaviors
 
@@ -814,7 +814,7 @@ These tags are retained as the "Github Issue Labels" (a skos:note on each Method
 
 The CORE, DO NOT IMPLEMENT, Immature/Incomplete, and Supplementary tags mark conclusions made about each proposed Test.
 
-Supplementary tests have been exported to a CSV list of tests and have RDF representations generated with the same tools as the BDQ Core tests, these files are in the [tg2/supplementary/](https://github.com/tdwg/bdq/tree/master/tg2/supplementary) directory of the tdwg/bdq project.
+Supplementary Tests have been exported to a CSV list of tests and have RDF representations generated with the same tools as the BDQ Core Tests, these files are in the [supplement/](../../docs/supplement) directory.
 
 The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable support for the evaluation of tests in repeated feedback loops of: Frame the description of a test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the implementation, in the validation data, or a problem in the Test Specification), discuss as a group, make changes as needed, and repeat.
 
@@ -852,7 +852,7 @@ Each test issue in GitHub begins with a table in markdown format describing the 
 
 **Expected Response (Specification)** [normative]: A concise description of the logic of the Test to clarify its implementation. The Expected Response takes the form (for a VALIDATION) of: EXTERNAL_PREREQUISITES_NOT_MET if \<condition\>; INTERNAL_PREREQUESITES_NOT_MET if \<condition\>; COMPLIANT if \<condition\>; otherwise NOT_COMPLIANT. Example: "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED".
 
-**Data Quality Dimension** [normative]: A Test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the information element); "Consistency" (agreement among related information elements in the data); "Likeliness" (probability that values are real); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data). The [data quality dimension](../list/bdqdim/index.md) for this Test. Example: "Conformance"
+**Data Quality Dimension** [normative]: A Test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the Information Element); "Consistency" (agreement among related Information Elements in the data); "Likeliness" (probability that values are real); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data). The [data quality dimension](../list/bdqdim/index.md) for this Test. Example: "Conformance"
 
 **Term_Actions** [non-normative]: The last two components of the Label, useful in filtering Tests in CSV files, for example: "COUNTRYCODE_STANDARD"
 
@@ -888,7 +888,7 @@ BDQ Core `_review` is built with the following three sets of shell scripts:
 - [bdq/tg2/\_make_review/copy_files.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/copy_files.sh)
 - [bdq/tg2/\_make_review/do_build.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/do_build.sh)
 
-For details on the test validation data see: 
+For details on the Test Validation Data see: 
 
 - bdqtestrunner [README](https://github.com/FilteredPush/bdqtestrunner/blob/master/README.md)
 - [bdq/tg2/core/squish_validation_data.py](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/core/squish_validation_data.py)

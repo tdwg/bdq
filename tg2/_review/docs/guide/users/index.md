@@ -108,7 +108,7 @@ Each Test is defined to take a specific set of input terms (InformationElements,
 
 Consider the Test [VALIDATION_EVENTDATE_STANDARD](https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803). It takes as input value of the InformationElement dwc:eventDate from a Single Record, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
 
-Tests can also operate on a dataset (a Multi Record), and examine the values for information elements across the entire dataset. The only Multi Record Tests currently defined in BDQ Core are Measures, which take the outputs of Single Record Tests as their inputs and report on the results of those Single Record Tests aggregated across the dataset. The names of these Tests all begin with `MULTIRECORD_`. 
+Tests can also operate on a dataset (a Multi Record), and examine the values for Information Elements across the entire dataset. The only Multi Record Tests currently defined in BDQ Core are Measures, which take the outputs of Single Record Tests as their inputs and report on the results of those Single Record Tests aggregated across the dataset. The names of these Tests all begin with `MULTIRECORD_`. 
 
 #### 2.2.2 Data Quality Reports (non-normative) 
 
@@ -116,7 +116,7 @@ Software that includes implementations of the Tests may produce data quality rep
 
 #### 2.2.3 Responses From Tests (normative) 
 
-Reports SHOULD identify Tests using at least the Label (rdfs:Label) for the Test class (e.g., [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134)).
+Reports SHOULD identify Tests using at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134)).
 
 Results from each Test MUST be delivered in the form of a Response.status, Response.result, and Response.comment. Each Test MUST produce one Response. A Response.qualifier MAY also be included.
 
@@ -147,7 +147,7 @@ Amendment Tests **propose changes** to data. It is up to the consumers of data q
 
 ### 2.4 Test Parameters (normative) 
 
-Some Tests are parameterized. When a Test is Parameterized, and a value other than the default value is used for some Parameter, reports SHOULD identify the Tests using at least the Label (rdfs:Label) for the Test class, in combination with the Parameter and the value of the argument that replaced the Parameter in this specific case.
+Some Tests are parameterized. When a Test is Parameterized, and a value other than the default value is used for some Parameter, reports SHOULD identify the Tests using at least the Label (rdfs:label) for the Test class, in combination with the Parameter and the value of the argument that replaced the Parameter in this specific case.
 
 Values of Parameters, other than the defaults, SHOULD also be present in the Response.comment.
 
@@ -155,7 +155,7 @@ More normative guidance on Test Parameters can be found in the section [Paramete
 
 ### 2.4.1 Test Parameters Example (non-normative) 
 
-If a Test with a non-default Parameter value is used, this should be represented with at least the Label (rdfs:Label) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92)) in combination with the Parameter (e.g., bdq:maximumValidDepthInMeters) and the value of the argument that replaced the default Parameter value in this specific case (e.g., 1642). For example:
+If a Test with a non-default Parameter value is used, this should be represented with at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92)) in combination with the Parameter (e.g., bdq:maximumValidDepthInMeters) and the value of the argument that replaced the default Parameter value in this specific case (e.g., 1642). For example:
 
 	`VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642`
 
@@ -193,7 +193,7 @@ While the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provide
 
 For each Test, the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) lists ways to identify the Test (**Label:** - the brief human readable means for identifying a Test; **skos:prefLabel:** - the human readable label spelled out in words; **Versioned IRI:** - the means for software to identify the Test). For each Test, the Quick Reference Guide identifies whether the Test operates on SingleRecords or a MultiRecord (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behavior of the Tests, default values for any bdq:sourceAuthority consulted by the Test, or other parameters.
 
-Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Core Implementer's Guide](../implementers/index.md) for information about Test validation data. 
+Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Core Implementer's Guide](../implementers/index.md) for information about Test Validation Data. 
 
 Each Test lists UseCases describing data quality needs to which each Test is applicable. Notes provide additional guidance for understanding Test results and for implementation.
 

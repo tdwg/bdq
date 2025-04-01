@@ -67,16 +67,16 @@ The bdqcore: vocabulary includes:
 - This document, a term-list for the vocabulary, containing the vocabulary terms and their metadata.
 - A [landing page](../bdqcore/index.md) document with normative guidance on the use of the bdqcore vocabulary.
 
-In addition, A users guide to the use of the BDQ Core Tests is provided in the [BDQ Core User's Guide](../guide/users/index.md) and a guide to implementation of the BDQ Core Tests is provided in the [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
+In addition, guides are provided in the form of the [BDQ Core User's Guide](../guide/users/index.md) and the [BDQ Core Implementer's Guide](../guide/implementers/index.md) .
 
 ### 1.4 Term List Distributions
 
 | Description | IRI | Download URL | Note |
 | ----------- | --- | -----------  | ---- |
 | HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqcore/index.md | Complete term list for the bdqcore: vocabulary  | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.xml | An rdf representation of the Tests in an RDF/XML serialization | 
-| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.ttl | An rdf representation of the Tests in a Turtle serialization | 
-| JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.json | An rdf representation of the Tests in a json-ld serialization | 
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.xml | An RDF representation of the Tests in an RDF/XML serialization | 
+| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.ttl | An RDF representation of the Tests in a Turtle serialization | 
+| JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.json | An RDF representation of the Tests in a json-ld serialization | 
 | CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqcore_term_versions.csv | CSV file listing the Tests | 
 | SingleRecord Test CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore_singlerecord_tests_current.csv | CSV file listing just the SingleRecord tests. |
 

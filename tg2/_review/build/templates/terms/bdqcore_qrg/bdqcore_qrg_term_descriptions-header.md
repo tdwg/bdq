@@ -13,7 +13,7 @@ Part of the [BDQ Core Quick Reference Guide](index.md)
 
 <!-- Original separately created list of term definitions TODO: Remove when generated list above is correct -->
 
-**rdfs:Label** [normative]: A human-readable label following the pattern `TESTTYPE_INFORMATIONELEMENT_CRITERION`. This can be thought of as the name of the Test. Example: ```VALIDATION_COUNTRYCODE_STANDARD```
+**rdfs:label** [normative]: A human-readable label following the pattern `TESTTYPE_INFORMATIONELEMENT_CRITERION`. This can be thought of as the name of the Test. Example: ```VALIDATION_COUNTRYCODE_STANDARD```
 
 **skos:prefLabel** [normative]: The preferred human-readable label following the pattern `Test Type Focus Information Element Criterion`. Example: ```Validation dwc:countryCode Standard```
 

@@ -127,9 +127,9 @@ The Fitness for Use Framework upon which BDQ Core is based allows pipelines of T
 
 Tests, even Amendments, do not modify original data. Instead, Amendment Test responses contain the information needed to amend original data by providing reproducible interpretations. These interpretations can be as a substitute for the original data downstream in analytical pipelines, or can be used to vet and amend the original data, as appropriate.
 
-Test specifications for Tests, _sensu latu_, consist of the metadata (e.g., identifier, preferred label, description, information elements acted upon, information elements consulted, expected response, data quality dimension, parameters and default behavior, and notes) required to understand the Test, its context, and its potential uses, and to implement it in a way that is compliant with the standard.
+Test specifications for Tests, _sensu latu_, consist of the metadata (e.g., identifier, preferred label, description, Information Elements acted upon, Information Elements consulted, expected response, data quality dimension, parameters and default behavior, and notes) required to understand the Test, its context, and its potential uses, and to implement it in a way that is compliant with the standard.
 
-The specifications for Tests, _sensu strictu_, include expected responses from Tests that consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (information elements) pertinent to the Test that was run, whether the information elements were those consulted or those acted upon.
+The specifications for Tests, _sensu strictu_, include expected responses from Tests that consist of metadata (status, result, and comment) required for a user to interpret and act upon the data (Information Elements) pertinent to the Test that was run, whether the Information Elements were those consulted or those acted upon.
 
 ### 2.4 Test Lists
 
@@ -218,9 +218,9 @@ Many people have contributed valuable comments through the development of the BD
 
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the core Test Descriptors and the BDQ Core documentation. 
 
-- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of BDQ Core documents; Test validation data.
+- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of BDQ Core documents; Test Validation Data.
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of BDQ Core documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; bdqffdq ontology; Java Test implementations in filteredpush packages; author of BDQ Core documents; Test validation data. 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; bdqffdq ontology; Java Test implementations in filteredpush packages; author of BDQ Core documents; Test Validation Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of BDQ Core documents; Darwin Core liaison.
 
 #### 4.2.2 Contributors
