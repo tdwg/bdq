@@ -488,7 +488,7 @@ Some Validations return Response.status="INTERNAL_PREREQUISITES_NOT_MET" when on
 
 It is possible, but less flexible, to frame Validations to return Result.response="COMPLIANT" for either empty values (bdq:Empty) or non-empty values (bdq:NotEmpty) that satisfy other Validation criteria.  Concerns are better separated, and individual Tests are better composed to fit particular user needs, by having the Validations treat empty data with a Response.status="INTERNAL_PREREQUISITES_NOT_MET", and then framing MultiRecord Quality Assurance Measures as appropriate for a given Use Case.
 
-### 3.3 Data Quality Dimension and 'Warning Types'
+### 3.3 Data Quality Dimension and "Warning Types"
 
 A "Warning Type" for each BDQ Core Test was envisioned to provide insight into the nature of the issues associated the original 'negative-oriented' results of the Tests (see discussion under [3 Developing the tests](#3-developing-the-tests). Initially, we had a concept of 'severity' where a failed Test could be considered either a "Warning" or an "Error". We subsequently elaborated the warnings into "Warning Types" that had a value of "Ambiguous", "Amended", "Incomplete", "Inconsistent", "Invalid", "Issue", "Report" or "Unlikely". In 2023, a cross tabulation of 'Data Quality Dimension' from the Framework (Veiga 2016, Veiga et al. 2017) against 'Warning Type' demonstrated that they were highly correlated (see table below). Subsequently, 'Warning Type' was removed as a Test Descriptor.
 

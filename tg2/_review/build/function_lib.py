@@ -12,7 +12,7 @@ def markdown_heading_to_link(input_heading) :
     retval = ""
     if (input_heading and input_heading.strip().startswith("#")) : 
         headingText = input_heading.strip().replace("#","")
-        headingAnchor = headingText.replace(" ","-").replace("(","").replace(")","").replace(":","").lower().replace(".","")[1:]
+        headingAnchor = headingText.replace(" ","-").replace("(","").replace(")","").replace(":","").lower().replace(".","").replace(",","").replace('"','').replace("'","")[0:]
         retval = "[" + headingText.strip() + "](#" + headingAnchor + ")"
     return retval
 
