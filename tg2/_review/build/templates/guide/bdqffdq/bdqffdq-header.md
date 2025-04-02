@@ -36,11 +36,11 @@ Bibliographic citation
 
 ## 1 Introduction
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality.   Each of the tests in the bdqcore: vocabulary has been designed using this framework and is framed in the terms and concepts from the framework.  
+The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary has been designed using this framework and is framed in the terms and concepts from the framework.
 
-The framework considers data to have quality with respect to some specified use.   It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  
+The framework defines data quality in relation to a specified use. It enables formal description of a use case (bdqffdq:UseCase) and the requirements for a dataset to be fit for that purpose. By explicitly linking data quality to use, the framework supports assurance that data meet the needs of a given application.
 
-This document describes the use of a set of terms used to describe 'data quality' and 'fitness for use' in the context of biodiversity data.  These terms are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
+This document describes a set of terms used to describe 'data quality' and 'fitness for use' in the context of biodiversity data. These terms are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
 ### 1.1 Purpose
 
@@ -52,14 +52,12 @@ This document is for those needing a technical understanding of the Framework On
 
 ### 1.3 Documents about the bdqffdq: ontology
 
-The bdqffdq: vocabulary is an ontology, it includes: 
+This document provides an illustrated guide to the use of the bdqffdq: vocabulary, which includes: 
 
-- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
-- The [term list](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
-- Additional axioms that can be found in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
-
-This document provides an illustrated guide to the use of the bdqffdq ontology.
+- The [Fitness for Use Ontology](../../bdqffdq/index.md) landing page with normative guidance on the use of this ontology.
+- The [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
+- Additional axioms that can be found in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) 
+- The bdqffdq framework ontology is best technically understood from its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
 
 ### 1.4 Status of the content of this document
 
@@ -89,11 +87,7 @@ The following namespace abbreviations are used in this document:
 | bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
 | bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
 | bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dc           | https://purl.org/dc/elements/1.1/                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
 | dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
 | skos         | http://www.w3.org/2004/02/skos/core#             |
 | owl          | http://www.w3.org/2002/07/owl#                   |
 
@@ -101,117 +95,113 @@ The following namespace abbreviations are used in this document:
 
 When not represented as objects, controlled value strings MUST be used as values of bdqffdq:ResponseStatus, and bdqffdq:ResponseResult.
 
-IRIs MUST be use for values for all individual class instances and object properties when using bdqffdq: terms.
+IRIs MUST be used as values for all individual class instances and object properties when using bdqffdq: terms.
 
 ### 3 Framework for describing data quality 
 
 #### 3.1 Introduction and Context
 
-The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality.  This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an owl ontology.  This document describes the organization and use of the owl ontology.
+The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality. This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
-This document provides a background for understanding the bdqcore: test descriptions.  Each of the tests in the bdqcore: namespace have been designed and described within this framework and are framed using the terms and concepts from the framework.  The bdqffdq: framework provides the context for each test, and has shaped decisions made about each test.  
+This document provides a background for understanding the bdqcore: Test descriptions. Each of the Tests in the bdqcore: namespace have been designed and described within this framework and are framed using the terms and concepts from the framework. The bdqffdq: framework provides the context for each Test, and has shaped decisions made about each Test.
 
-See the [bdqffdq: landing page](../bdqffdq/index.md) for a concise description and normative information about the bdqffdq: ontology and a summary  of the mathematical formalization, the [bdqffdq: Term List](../../list/bdqffdq/index.md) for the list of terms in the bdqffdq: vocabulary, the [extension term list](../../extension/bdqffdq/index.md) for documentation additional axioms, and the [owl ontology](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an owl ontology.  The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
+See the [Fitness for Use Ontology](../../bdqffdq/index.md) landing page for a concise description and normative information about the bdqffdq: ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the bdqffdq: vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
 #### 3.2 Description of the bdqffdq ontology
 
-The bdqffdq framework describes data quality with respect to some specified use.  It provides a means to describe a use of data, and what is needed for some dataset to have quality for that use.  That is, bdqffdq lets users describe how to evaluate if some dataset is fit for a specified purpose.  The framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.  Under the framework, data do not have quality in the abstract, but only can be evaluated for quality with respect to a specified purpose.  The term that purposes and uses of data in bdqffdq is UseCase.  
+The bdqffdq framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a use case (UseCase) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the framework enables consistent assessment and assurance of fitness for a given purpose.
 
-The framework can be conceptually divided into three horizontal layers or slices: Data Quality Needs, Data Quality Solutions, and Data Quality Reports.  Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets. 
+The framework can be conceptually divided into three horizontal layers: Data Quality Needs, Data Quality Solutions, and Data Quality Reports. Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets.
 
-The framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers.  These concepts are Measures, Validations, Amendments, and Issues.   
+The framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers. These concepts are Validation, Issue, Measure, and Amendment. 
 
-We use the informal term "Test" to describe these four vertical themes, a test involves terms in both Needs and Solutions, and tests produce particular reporting elements.
+We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.
 
-### 3.2.1 Data Quality Control, Data Quality Assurance
+### 3.2.1 Data Quality Control and Data Quality Assurance
 
-The framework draws a distinction between Quality Control and Quality Assurance.  Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose.
+The framework draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
 ### 3.2.2 Information Elements
 
-The framework has an abstract concept of Information Elements. To frame tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the Information Elements in each test.
+The framework has an abstract concept of Information Elements. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the Information Elements in each Test.
 
-### 3.2.3 Concepts in the framework, Test Types: Measure, Validation, Amendment, Issue.
+### 3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment
 
-Vertical slices by concept.
+The framework defines four central concepts for describing and evaluating data quality Needs: Validation, Issue, Measure, and Amendment.
 
-<!--- Ming: Test types: Validation, Amendment, Measure, Issue, repeated in 1.5 --->
+![Diagram of Validation, Issue, Measure, and Amendment classes with DataQualityNeed as a parent node.](dataqualityneeds.png "The 4 central DataQualityNeed types in the framework - Validation, Issue, Measure, and Amendment.")
 
-The framework defines four central concepts for describing and evaluating data quality needs: Amendments, Measures, Validations, and Issues.  
+A Validation assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A Validation relates Information Elements and ResourceTypes with a specification of exactly how to assess fitness of the data under some narrow criterion, and themselves are assembled into validations policies, which are linked to other policies to cover a description of the data quality needs of a UseCase.
 
-![Diagram of Validation, Amendment, Measure and Issue classes as subtype of Assertion class, with Assertion as a rectangular node, DataQualityNeeds as a parent node above it, and the other 4 classes below the Assertion and linked to it. ](dataqualityneeds.png "The 4 central assertion types in the framework.")
+![Diagram of the classes involved in expressing data quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg "Expressing data quality Needs: Validations.")
 
-Validations assess compliance with a need.  Data have quality if they are compliant with the requirements of the validation test.  Validations relate Information Elements and resource types with a specification of specifically how to assess fitness of the data under some narrow criterion, and themselves are assembled into validations policies, which are linked to other policies to cover a description of the data quality needs of a UseCase.
+Issues are the converse of Validations. Data lack quality if an issue identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.
 
-![Diagram of the classes involved in expressing data quality needs with Validations.](bdqffdq_data_quality_needs_validation.svg "Expressing data quality needs: Validations")
+Measures make an aggregate summary of some specific aspect of data quality.
 
-Issues are the converse of Validations.  Data lack quality if an issue identifies a potential problem in the data that would require further human review to identify if the data have quality for some purpose.  
-
-Measures measure some specific aspect of data quality.
-
-![Diagram of the classes involved in expressing data quality needs with Measures.](bdqffdq_data_quality_needs_measure.svg "Expressing data quality needs: Measures")
+![Diagram of the classes involved in expressing data quality Needs with Measures.](bdqffdq_data_quality_needs_measure.svg "Expressing data quality Needs: Measures")
 
 Amendments propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
 
-![Diagram of the classes involved in expressing data quality improvement needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg "Expressing data quality needs: Amendments")
+![Diagram of the classes involved in expressing data quality improvement Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg "Expressing data quality Needs: Amendments")
 
+Formally, in the Data Quality Needs level, the framework starts with a UseCase, a framing of some use to which data may be put. UseCases are related to the formal description of data quality Needs through Policies and Contexts. Contexts (ContextualizedCriterion, ContextualizedDimension, ContextualizedEnhancement, ContextualizedIssue) relate the specification of a need, such as a Validation, to the Information Elements that need to be examined, and to the ResourceType that is operated on. Each of the Tests described in this standard has a formal Specification that includes each of these elements. A UseCase includes a set of Policies, Policies relate the UseCase to Contexts, Contexts link Information Elements to Needs and to ResourceTypes, a Need specifies what properties data must have to have quality. 
 
-Formally, in the Data Quality Needs level, the framework starts with a Use Case, a framing of some use to which data may be put.  Use cases are related to the formal description of data quality needs through policies and contexts.  Contexts (ContextualizedCriterion, ContextualizedDimension, ContextualizedEnhancement, ContextualizedIssue) relate the specification of a need, such as a Validation, to the Information Elements that need to be examined, and to the resource type that is operated on.  Each of the tests described in this standard has a formal specification that includes each of these elements.   A Use Case includes a set of policies, policies relate the use case to contexts, contexts link Information Elements to needs and to resource types, a need specify what properties data must have to have quality.   
+Data quality Needs can relate to the data quality of single records (bdqffdq:SingleRecord) or of datasets (bdqffdq:MultiRecord).
 
-Data quality needs can relate to the data quality of single records (bdqffdq:SingleRecord) or of datasets (bdqffdq:MultiRecord).
-
-![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource Class.")
-
+![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource class.")
 
 ### 3.4 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
-Needs, mechanisms, and reports can be seen as horizontal slices through the framework (following the illustrations in Veiga et al., 2017).
+The *bdqffdq* framework organizes data quality concepts into three core areas—**Needs**, **Mechanisms**, and **Reports**—which can be viewed as horizontal slices through the framework (Veiga et al., 2017).
 
-The framework organizes data quality concepts into three areas: Needs, Mechanisms, and Reports.  Data Quality Needs identify a use to which data may be put, and frame a set of requirements that data needs to meet to be fit for that use, and means by which data not fit for that use may be improved.  The tests described in this standard are formal descriptions of data quality needs for CORE purposes.  Data Quality Mechanisms in the framework are formal descriptions of software and other mechanisms that implement tests described in the Needs area.  Data Quality Reports are the results produced by Mechanisms on some set of data.  The tests described in this standard include specifications of assertions to be made in Data Quality Reports.
+**Data Quality Needs** begin with a *UseCase*, a formal description of a purpose for which data may be used. Each UseCase includes a set of *Policies*, which in turn relate to *Contexts*. Contexts (e.g., `ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) specify the data quality requirement (*Need*), the relevant *Information Elements* (such as specific Darwin Core terms), and the *ResourceType* the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The *Tests* described in this standard are formal specifications of such Needs for BDQ Core purposes.
 
-The framework has an abstract concept of Information Elements. To frame tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the Information Elements in each test.
+**Data Quality Mechanisms** are formal descriptions of software or other tools that implement these Tests. They execute the specifications defined in the Needs layer.
 
-Formally, in the Data Quality Needs level, the framework starts with a Use Case, a framing of some use to which data may be put.  Use cases are related to the formal description of data quality needs through policies and contexts.  Contexts (ContextualizedCriterion, ContextualizedDimension, ContextualizedEnhancement, ContextualizedIssue) relate the specification of a need, such as a Validation, to the Information Elements that need to be examined, and to the resource type that is operated on.  Each of the tests described in this standard has a formal specification that includes each of these elements.   A Use Case includes a set of policies, policies relate the use case to contexts, contexts link Information Elements to needs and to resource types, a need specifies what properties data must have to have quality.   
+**Data Quality Reports** are the outputs generated when Mechanisms are applied to data. The Tests include formal *Specifications of Assertions* that are expected to appear in these Reports.
 
-The framework expects that Quality Assurance is provided for through specification of a set of Measures defined to operate on a MultiRecord, and which specify a Response.result of COMPLETE or NOT_COMPLETE.  A MultiRecord Measure may specify that it is COMPLETE if all instances of a SingleRecord Validation are COMPLIANT.  
+The framework includes an abstract concept of *Information Elements*, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
 
-For Quality Control, MultiRecord Measures may be defined to return a count of Response.result of COMPLIANT for validations, and thus can provide a measure of how fit a dataset is for some purpose, and what sort of work would be required to make it fit for that purpose.   
+For **Quality Assurance**, the framework defines *Measures* that operate on *MultiRecords* and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A MultiRecord Measure may be `COMPLETE` if all instances of a related *SingleRecord Validation* are `COMPLIANT`.
 
-![Diagram of ValidationAssertion, AmendmentAssertion, MeasureAssertion and IssueAssertion classes as subtype of Assertion class, with Assertion as a rectangular node, ReportConcepts as its parent above it, and the other 4 classes below the Assertion and linked to it. ](assertions.png "Report concept parallels to the 4 central assertion types in the framework.")
+For **Quality Control**, MultiRecord Measures can return a count of `COMPLIANT` results for validations, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
+
+![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png "The 4 central Assertion types in the framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.")
 
 Diagram of the composition of Validation, ValidationMethod, and ValidationAssertion illustrating the Data Quality Needs, Solutions, and Reports layers of bdqffdq, with responsibilities of bdqcore (solid lines), and implementations (dashed lines).
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-A useful way to think of the framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017)  Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical test concepts (Validations, Amendments, Measures, Issues), with validation related concepts expanded to show all related entities in bdqffdq.
+A useful way to think of the framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (Validations, Issues, Measures and Amendments), with validation related concepts expanded to show all related entities in bdqffdq.
 
-![Diagram of Illustrating both the horizontal (needs/solutions/reports) layers and the vertical test concepts (validation, amendment, measurement, issues)](bdqffdq_data_quality_layers.svg "All four tests concepts in the Needs Solutions, and Reports levels.")
+![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg "All four Tests concepts in the Needs Solutions, and Reports levels.")
 
 ### 3.5 Responses
 
-The content of this section is non-normative, related normative guidance is in section 3.1 The Response Object (normative) of the implementer's guide.
+The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../../implementers/index.md#51-the-response-object-normative) of the [BDQ Core Implementer's Guide](../../implementers/index.md).
 
-Assertions are expected to assert Response objects, these will involve, in RDF, a combination of object properties and data properties.
+Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties.
 
 | Concept | bdqffdq Term(s) | Description |
 | ------- | ------- | ----------- |
-| Response | bdqffdq:Assertion | The report from a single execution of a single test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
-| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue) was able to be performed or not.| 
-| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a test (bdqffdq:Validation, bdqffdq:Amendment, bdqffdq:Measure, or bdqffdq:Issue)|
-| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the test.|
+| Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
+| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment) was able to be performed or not. |
+| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment)|
+| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
-See the [Structure of a Response](../../bdqcore/index.md#31-Structure-of-Response-normative) section of the [BDQ Core Tests and Assertions](../../bdqcore/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See the section [Structure of a Response (normative)](../../bdqcore/index.md#31-Structure-of-Response-normative) of the [BDQ Core Tests and Assertions](../../bdqcore/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
 ### 3.6 Organization of the bdqcore classes 
 
-Class diagram 
+Following is a knowledge graph showing the is-a relationships between the classes in bdqffdq:
 
-![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
+![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
 
-### 3.7 Example representation of a bdqcore test
+### 3.7 Example representation of a BDQ Core Test
 
-Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon InformationElement, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification.  Also shown is a ValidationPolicy linking this Validation to a UseCase. 
+Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon Information Element, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification. Also shown is a ValidationPolicy linking this Validation to a UseCase. 
 
      <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
          rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?" ;
@@ -253,26 +243,26 @@ Fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation
 
 ### 3.8 Cardinality of bdqffdq terms
 
-The content of this section is non-normative, see the [bdqffdq: landing page](../../bdqffdq/index.md) for related normative guidance. 
+The content of this section is non-normative, see the [Fitness for Use Ontology](../../bdqffdq/index.md) document for related normative guidance. 
 
-The expected relationships between classes in bdqffdq can be expressed as cardinality statements.  Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in bdqffdq are expected to be related to each other through object properties.  Examples here are given for terms related to Validations.
+The expected relationships between classes in bdqffdq can be expressed as cardinality statements. Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in bdqffdq are expected to be related to each other through object properties. Examples here are given for terms related to Validations.
 
-Policies are associative entities relating UseCases to DataQualityNeeds
+A Policy is an associative entity relating a UseCase to a DataQualityNeed.
 
 Each UseCase has one to many ValidationPolicies.
 Each ValidationPolicy is for one and only one UseCase.
-Each ValidationPolicy has one and only Validation included in the Policy.
+Each ValidationPolicy has one and only one Validation included in the Policy.
 Each Validation has one to many related ValidationPolicies.
 
 Each Validation has one and only one DataQualityDimension.
 Each Validation has one and only one Criterion.
 Each Validation has one and only one ActedUpon InformationElement.
-Each ActedUpon InformationElement is composedOf one to many concrete Information Element terms.
-Each Validation has zero or one Consulted InformationElement
-Each Consulted InformationElement is composedOf one to many concrete Information Element terms.
-Each Validation has one and only one ResourceType.
+Each ActedUpon Information Element is composedOf one to many concrete Information Element terms.
+Each Validation has zero or one Consulted Information Elements.
+Each Consulted Information Element is composedOf one to many concrete Information Element terms.
+Each Validation has one and only one Resource Type.
 
-Methods look like, but are not, associative entities relating DataQualityNeeds to Specifications.
+A Method looks like, but is not, an associative entity relating a DataQualityNeed to a Specification.
 
 Each Validation has one and only one ValidationMethod.
 Each ValidationMethod is for one and only one Validation.
@@ -285,7 +275,7 @@ Each Specification has zero to many Arguments.
 Each Argument has one and only one Parameter.
 Each Argument has one and only one hasArgumentValue.
 
-Implementations look like, but are not, associative entities relating Specifications, Mechanisms, and Assertions.
+An Implementations loosk like, but is not, an associative entitiy relating Specifications, Mechanisms, and Assertions.
 
 Each Specification is used in zero to many Implementations.
 Each Mechanism implements one to many Implementations.
@@ -294,7 +284,7 @@ Each Implementation uses one and only one Specification.
 Each Implementation is implemented by one and only one Mechansism.
 Each Implementation produces one to many Assertions.
 
-It is important that the chain of relationships from an instance of a bdqffdq:Assertion to a DataQualityNeed (e.g., an instance of a bdqffdq:Validation) be a chain of one to one relationships.  To identify what test with what parameters made an assertion, it must be possible to follow the chain of relationships from an assertion to a single implementation to a single specification (with zero to many parameters) to a single method to a single DataQualityNeed (e.g., a validation, with one to many Information Elements).  Multiplicity should only be possible following on through policy to use cases (an assertion may pertain to multiple use cases), or when going from a DataQualityNeed to assertions.  It is expected that an instance of a Validation would produce many instances of ValidationAssertions, each of those ValidationAssertions must be able to be related to the sole Validation that produced it.  
+It is important that the chain of relationships from an instance of an Assertion to a DataQualityNeed (e.g., an instance of a bdqffdq:Validation) be a chain of one to one relationships. To identify what Test with what Parameters made an Assertion, it must be possible to follow the chain of relationships from an Assertion to a single Implementation to a single Specification (with zero to many Parameters) to a single method to a single DataQualityNeed (e.g., a Validation, with one to many Information Elements). Multiplicity should only be possible following on through Policy to UseCases (an Assertion may pertain to multiple UseCases), or when going from a DataQualityNeed to Assertions. It is expected that an instance of a Validation would produce many instances of ValidationAssertions, each of those ValidationAssertions must be able to be related to the sole Validation that produced it.
 
 ## 4 Term index
 
@@ -303,4 +293,3 @@ It is important that the chain of relationships from an instance of a bdqffdq:As
 ## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)
 
 {term_list}
-
