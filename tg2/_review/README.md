@@ -5,6 +5,12 @@ The best place to begin to review the proposal is on the [Biodiversity Data Qual
 Summary of files in this directory: 
 
 <pre>
+# NOTE: CORE tests are no longer maintained from the markdown tables in the github issues.
+# Current master files for the tests are: ../core/TG2_tests.csv and  ../core/TG2_multirecord_measure_tests.csv 
+# TODO: Make ../_review/vocabulary/bdqcore_term_versions.csv the master copy.
+</pre>
+
+<pre>
 ├── README.md  This file. **Editable.**
 ├── index.md  Landing page for the standard. **Editable.**
 ├── build  Build scripts and templates to assemble pages.

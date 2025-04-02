@@ -3,6 +3,10 @@
 #
 # Run from within the bdq/tg2/_make_review/ directory of a git checkout of the tdwg/bdq repository.
 
+# NOTE: CORE tests are no longer maintained from the markdown tables in the github issues.
+# Current master files for the tests are: ../core/TG2_tests.csv and  ../core/TG2_multirecord_measure_tests.csv 
+# TODO: Make ../_review/vocabulary/bdqcore_term_versions.csv the master copy.
+
 # bdqcore files containing test description
 
 # TODO: The following term-versions file will become the master copy.
