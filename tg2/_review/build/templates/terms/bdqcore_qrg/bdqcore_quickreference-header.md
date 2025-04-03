@@ -1,9 +1,7 @@
----
-layout: home
----
+<!--- layout: home --->
 <!--- Template for header, values provided from yaml configuration --->
 # {document_title}
-{:.lead}
+<!--- {:.lead} --->
 
 {comment}
 

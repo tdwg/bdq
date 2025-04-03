@@ -1,10 +1,7 @@
----
-layout: home
----
-
+<!--- layout: home --->
 # Biodiversity Data Quality Core
+<!--- {:.lead} --->
 
-{:.lead}
 IRI of the Biodiversity Data Quality Core standard
 : <a href="https://www.tdwg.org/standards/bdq">https://www.tdwg.org/standards/bdq</a> This is the IRI that should be cited and to which hyperlinks should be made. 
 

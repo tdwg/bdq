@@ -30,15 +30,15 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Associated Documents](#13-associated-documents)
-- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [2 BDQ Core Vocabularies](#2-bdq-core-vocabularies)
-- [2.1 Vocabularies Foundational to BDQ Core](#21-vocabularies-foundational-to-bdq-core)
-- [2.2 Vocabularies Supporting BDQ Core](#22-vocabularies-supporting-bdq-core)
-- [3 Namespace Abbreviations](#3-namespace-abbreviations)
+- [1 Introduction](#-1-introduction)
+- [1.1 Purpose](#-11-purpose)
+- [1.2 Audience](#-12-audience)
+- [1.3 Associated Documents](#-13-associated-documents)
+- [1.4 Status of the content of this document](#-14-status-of-the-content-of-this-document)
+- [2 BDQ Core Vocabularies](#-2-bdq-core-vocabularies)
+- [2.1 Vocabularies Foundational to BDQ Core](#-21-vocabularies-foundational-to-bdq-core)
+- [2.2 Vocabularies Supporting BDQ Core](#-22-vocabularies-supporting-bdq-core)
+- [3 Namespace Abbreviations](#-3-namespace-abbreviations)
 
 
 ## 1 Introduction

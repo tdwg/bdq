@@ -6,7 +6,7 @@
 documentTitle: BDQ Core List of Vocabularies
 
 # Abstract of document written by authors.
-abstract: 'This document is a reference for the BDQ Core Standard, listing the vocabularies included in the BDQ Core Standard.'
+abstract: 'This document is a reference listing the vocabularies included in the BDQ Core Standard.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'
@@ -69,4 +69,4 @@ comment: 'Draft Standard for Submission'
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2025-03-26'
+doc_modified: '2025-04-02'

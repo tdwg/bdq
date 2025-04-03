@@ -1,11 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
----
-layout: home
----
+<!--- layout: home --->
 
 # BDQ Core Quick Reference Guide
-{:.lead}
+<!--- {:.lead} --->
 
 Draft Standard for Submission
 

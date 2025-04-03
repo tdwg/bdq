@@ -33,37 +33,37 @@ Draft Standard for Submission
 
 ### Table of Contents ###
 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Associated Documents](#13-associated-documents)
-- [1.4. Status of the Content of This Document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-- [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
-- [2 Introduction to the BDQ Core Standard](#2-introduction-to-the-bdq-core-standard)
-- [2.1 Parts of the Standard](#21-parts-of-the-standard)
-- [2.2 Vocabularies](#22-vocabularies)
-- [2.3 Test Guidance](#23-test-guidance)
-- [2.4 Test Lists](#24-test-lists)
-- [2.5 Guides and other documents.](#25-guides-and-other-documents)
-- [2.6 Implementation Validation Data](#26-implementation-validation-data)
-- [2.7 Test Execution Environments and Workflows](#27-test-execution-environments-and-workflows)
-- [2.8 Implementations of Tests 'In the Wild'](#28-implementations-of-tests-'in-the-wild')
-- [3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
-- [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control,-data-quality-assurance-normative)
-- [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
-- [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
-- [4 Contributions and Acknowledgments](#4-contributions-and-acknowledgments)
-- [4.1 Acknowledgments](#41-acknowledgments)
-- [4.1.1 Funding and Support for Meetings](#411-funding-and-support-for-meetings)
-- [4.2 Contributions](#42-contributions)
-- [4.2.1 Authors](#421-authors)
-- [4.2.2 Contributors](#422-contributors)
-- [5 Acronyms](#5-acronyms)
-- [6 Glossary](#6-glossary)
-- [6.1 Term-Action](#61-term-action)
-- [6.2 General Glossary](#62-general-glossary)
-- [7 References](#7-references)
+- [1 Introduction](#-1-introduction)
+- [1.1 Purpose](#-11-purpose)
+- [1.2 Audience](#-12-audience)
+- [1.3 Associated Documents](#-13-associated-documents)
+- [1.4. Status of the Content of This Document](#-14-status-of-the-content-of-this-document)
+- [1.5 RFC 2119 key words](#-15-rfc-2119-key-words)
+- [1.6 Namespace Abbreviations](#-16-namespace-abbreviations)
+- [2 Introduction to the BDQ Core Standard](#-2-introduction-to-the-bdq-core-standard)
+- [2.1 Parts of the Standard](#-21-parts-of-the-standard)
+- [2.2 Vocabularies](#-22-vocabularies)
+- [2.3 Test Guidance](#-23-test-guidance)
+- [2.4 Test Lists](#-24-test-lists)
+- [2.5 Guides and other documents.](#-25-guides-and-other-documents)
+- [2.6 Implementation Validation Data](#-26-implementation-validation-data)
+- [2.7 Test Execution Environments and Workflows](#-27-test-execution-environments-and-workflows)
+- [2.8 Implementations of Tests "In the Wild"](#-28-implementations-of-tests-in-the-wild)
+- [3 Design of the Tests (normative)](#-3-design-of-the-tests-normative)
+- [3.1 Data Quality Control, Data Quality Assurance (normative)](#-31-data-quality-control-data-quality-assurance-normative)
+- [3.2 When are Tests Run (normative)](#-32-when-are-tests-run-normative)
+- [3.3 Results of Test Executions (normative)](#-33-results-of-test-executions-normative)
+- [4 Contributions and Acknowledgments](#-4-contributions-and-acknowledgments)
+- [4.1 Acknowledgments](#-41-acknowledgments)
+- [4.1.1 Funding and Support for Meetings](#-411-funding-and-support-for-meetings)
+- [4.2 Contributions](#-42-contributions)
+- [4.2.1 Authors](#-421-authors)
+- [4.2.2 Contributors](#-422-contributors)
+- [5 Acronyms](#-5-acronyms)
+- [6 Glossary](#-6-glossary)
+- [6.1 Term-Action](#-61-term-action)
+- [6.2 General Glossary](#-62-general-glossary)
+- [7 References](#-7-references)
  
 
 ## 1 Introduction
@@ -202,7 +202,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 2.8 Implementations of Tests 'In the Wild'
+### 2.8 Implementations of Tests "In the Wild"
 
 Not part of the BDQ Core standard, but implemented as part of the process of writing the standard, are a set of Java implementations of the BDQ Core Tests that pass when Tested with the validation data. See [9 Existing Test Implementations](../guide/implementers/index.md/#9-Existing-Test-Implementations-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md) for details.
 
