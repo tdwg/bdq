@@ -11,7 +11,7 @@ from rdflib import Graph
 def markdown_heading_to_link(input_heading) :
     retval = ""
     if (input_heading and input_heading.strip().startswith("#")) : 
-        headingText = input_heading.strip().replace("#","")
+        headingText = input_heading.replace("#","").strip()
         headingAnchor = headingText.replace(" ","-").replace("(","").replace(")","").replace(":","").lower().replace(".","").replace(",","").replace('"','').replace("'","")[0:]
         retval = "[" + headingText.strip() + "](#" + headingAnchor + ")"
     return retval

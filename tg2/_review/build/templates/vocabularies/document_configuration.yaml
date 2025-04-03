@@ -51,7 +51,7 @@ current_iri: https://bdq.tdwg/org/vocabularies/
 # Date of first ratification of the document. Will match the doc_modified value for the first
 # version of the document. For lists of terms, this will also match the date that the
 # first version of the vocabulary was issued (date_issued).
-doc_created: '2025-03-26'
+doc_created: '2025-04-02'
 
 # ----------------
 # Do not edit below this line
