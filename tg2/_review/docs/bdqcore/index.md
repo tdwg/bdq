@@ -48,7 +48,7 @@ Draft Standard for Submission
 - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 - [2 A Brief Context for the BDQ Core Tests](#2-a-brief-context-for-the-bdq-core-tests)
 - [2.1 Characteristics of the Tests (non-normative)](#21-characteristics-of-the-tests-non-normative)
-- [2.2 Types of Tests (non-normative)](#22-types-of-tests-non-normative)
+- [2.2 Test Types (non-normative)](#22-test-types-non-normative)
 - [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
 - [2.2.2 Issue Tests (normative)](#222-issue-tests-normative)
 - [2.2.3 Amendment Tests (normative)](#223-amendment-tests-normative)
@@ -102,6 +102,7 @@ In addition there are two BDQ Core guides that pertain to the use and implementa
 | MultiRecord Test CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore_multirecord_tests_current.csv | CSV file listing just the MultiRecord tests. |
 --->
 
+<!--- This same table appears in bdqcore_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | TBD | [BDQ Core Tests and Assertions List of Terms](../docs/list/bdqcore/index.md) | Complete term list for the bdqcore: vocabulary as a web page. | 
@@ -170,7 +171,7 @@ The scope of each BDQ Core Test is largely provided by the bdqffdq:Specification
 
 Each BDQ Core Test is defined to operate on a SingleRecord or a MultiRecord. The Framework allows for MultiRecord Tests able to identify outliers within a dataset, or other Tests that look across data values in a MultiRecord to evaluate data quality. No BDQ Core Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a SingleRecord. The only MultiRecord Tests included in BDQ Core accumulate the outputs of other Tests.
 
-### 2.2 Types of Tests (non-normative)
+### 2.2 Test Types (non-normative)
 
 The concept of 'Tests' in the context of BDQ Core include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure).
 
@@ -319,7 +320,7 @@ The technical definitions of the bdqcore: terms are supported by terms in severa
 | bdq     | [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) |
 | bdqcrit | [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) |
 | bdqdim  | [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) |
-| bdqenh  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqdim/index.md) |
+| bdqenh  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) |
 | bdqffdq | [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md) |
 
 ### 3.1 Structure of Response (normative)

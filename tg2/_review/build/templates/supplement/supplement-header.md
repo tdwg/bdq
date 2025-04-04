@@ -423,7 +423,7 @@ Over the course of the development of the Tests, we encountered significant diff
 
 Early on we recognized that the Data Quality Framework required us to frame MultiRecord measures in order to support the formal requirements in the framework for Quality Control and Quality Assurance (which are defined as only involving Measures).  We recognized that these would be simple, repetitive, formal statements about the results of validations, so we put off defining these until very late in the process.  They proved straightforward to frame and then generated from the set of adopted SingleRecord Tests.
 
-### 3.1 Types of Test
+### 3.1 Test Types
 
 Tests are identified by the bdqffdq: namespace classes of Validation, Issue, Amendment and Measure. Each of these types of Tests can be composed with a ResourceType to apply to a single record (bdqffdq:SingleRecord), or to multiple records comprising a dataset (bdqffdq:MultiRecord).  In BDQ Core, we have described a set of SingleRecord Validations, Issues, Amendments, and Measures, and in addition, a set of MultiRecord Measures.  The formal statement of each of these is complex, being a composition of an instance of a subclass of a bdqffdq:DataQualityNeed with an instance of a subclass of a bdqffdq:Method with an instance of a bdqffdq:Specification, but we subsume this complexity with the phrases Validation Test, Issue Test, Amendment Test, and Measure Test. 
 

@@ -74,9 +74,9 @@ The BDQ Core Tests are each very specific. Some Tests are very simple and self e
 
 There are four types of Tests: Validation, Issue, Amendment, and Measure. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (Policies) that assess the fitness of data for a specific use.
 
-**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a source authority for validity.
+**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
 
-**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) alerts users to a non-empty value that should be examined against their data quality needs. 
+**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) alerts users to a NotEmpty value that should be examined against their data quality needs. 
 
 **Amendment Tests** can be thought of as suggestions for improvement. Amendment Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350), where a valid ISO country code could be inferred.
 
@@ -111,7 +111,7 @@ A Response.status="EXTERNAL_PREREQUISITES_NOT_MET" means the Test couldn't run b
 
 A Response.status="INTERNAL_PREREQUISITES_NOT_MET" means the Test couldn't run because the data were unable meet the prerequisites for running the Test, such as an empty dwc:eventDate for a Test that evaluates whether the dwc:eventDate falls within a particular time span. If the same Test is run again on the same, unmodified data, the same result is expected. It is too easy to interpret a Response.status="INTERNAL_PREREQUISITES_NOT_MET" as pointing to some quality problem in the data, and while this may seem so, it is misleading. Look instead to some Validation Test that specifically makes that evaluation and returns a Response.result="COMPLIANT" or "NOT_COMPLIANT", or some Measure that returns a Response.result="COMPLETE" or "NOT_COMPLETE". 
 
-#### 2.2.4 Responses From Different Types of Tests (normative) 
+#### 2.2.4 Responses From Different Test Types (normative) 
 
 Any type of Test may have a Response.status of EXTERNAL_PREREQUISITES_NOT_MET or INTERNAL_PREREQUISITES_NOT_MET.
 
