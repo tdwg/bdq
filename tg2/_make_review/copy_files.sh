@@ -22,6 +22,7 @@ cp ../core/TG2_tests.json ../_review/dist/bdqcore.json
 # TODO: The above term-versions file will become the master copy, and include the multi-record measures.
 # append multi-record measures to csv list of core tests
 grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqcore_term_versions.csv
+grep -v SingleRecord ../_review/vocabulary/bdqcore_term_versions.csv > ../_review/dist/bdqcore_multirecord_tests_current.csv
 
 # CSV files of test validation data
 
