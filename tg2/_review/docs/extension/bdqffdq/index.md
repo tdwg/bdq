@@ -129,6 +129,8 @@ The following namespace abbreviations are used in this document:
 
 ### 1.7 Key to Vocabulary Terms
 
+The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
 | Name (rdf:value) | normative | Idiomatic property used for structured values. | [https://rs.tdwg.org/ bdqffdq/terms/ COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) |
@@ -138,11 +140,9 @@ The following namespace abbreviations are used in this document:
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE |
 
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
-
 ## 2 Use of Terms (normative)
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values from the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/hasExpectedResponse`) or Term Qualified name (e.g., `bdqffdq:hasExpectedResponse`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `hasExpectedResponse`) SHOULD be used. In a purely human context a Label (e.g., `Expected Response`) MAY be used.
 
 ## 3 Axiom Index (non-normative)
 

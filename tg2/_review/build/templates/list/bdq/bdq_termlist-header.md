@@ -40,7 +40,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-This document includes terms that are part of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/{ratification_date}>). For details and rationale, see Chapman et al. (2020).
+This document provides the full details of the terms of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/{ratification_date}>). For details and rationale, see Chapman et al. (2020).
 
 ### 1.1 Purpose
 
@@ -52,14 +52,18 @@ This document is for those needing a technical understanding of the BDQ Core Tes
 
 ### 1.3 Data Quality Vocabulary terms.
 
-The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; a list of bdqffdq:Parameters used in the bdqcore: tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; a list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:Empty and bdq:NotEmpty.
+The bdq: vocabulary inclues four sets of concepts: 
+* a list of bdqffdq:UseCases for the bdqcore: Tests
+* a list of bdqffdq:Parameters used in the bdqcore: Tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters
+* a list of named bdqffdq:InformationElements used by MultiRecord Measure Tests
+* the concepts bdq:Empty and bdq:NotEmpty.
 
 ### 1.4 Term List Distributions
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
+| Description | IRI | Download URL |
+| ----------- | --- | -----------  |
+| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/{pref_namespace_prefix}/index.md |
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/{pref_namespace_prefix}.xml |
 
 ### 1.5 Status of the content of this document
 
@@ -79,22 +83,29 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The following namespace abbreviations are used in this document:
 
-| Prefix | IRI |
-| --- | --- |
-| bdq:     | https://rs.tdwg.org/bdq/terms/   |
-| bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
-| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
-| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
-
+| **Prefix**   | **Namespace**                               |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dc:          | https://purl.org/dc/elements/1.1/           |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| dwciri:      | http://rs.tdwg.org/dwc/iri/                 |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.8 Key to Vocabulary Terms
 
-{term_key}
+The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
+{term_key}
 
 ## 2 Use of Terms (normative)
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values from the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) SHOULD be used. In a purely human context a Label (e.g., `Information Element`) MAY be used.
 
 ## 3 Term index (non-normative)

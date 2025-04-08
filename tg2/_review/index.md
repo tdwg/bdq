@@ -30,6 +30,7 @@ Preferred Citation
 - [BDQ Core Tests and Assertions](docs/bdqcore/index.md)
   - [BDQ Core Tests and Assertions List of Terms](docs/list/bdqcore/index.md)
     - File: [CSV List of Single Record Tests](dist/bdqcore_singlerecord_tests_current.csv "Convenience CSV list of all SingleRecord test descriptors.")
+    - File: [CSV List of Multi Record Tests](dist/bdqcore_multirecord_tests_current.csv "Convenience CSV list of all SingleRecord test descriptors.")
     - File: [Tests in RDF/XML](dist/bdqcore.xml "RDF/XML serialization of OWL representation of the tests descriptors.")
     - File: [Tests in Turtle](dist/bdqcore.ttl "Turtle serialization of OWL representation of the tests descriptors.")
     - File: [Tests in JSON-LD](dist/bdqcore.json "JSON-LD serialization of OWL representation of the tests descriptors.")

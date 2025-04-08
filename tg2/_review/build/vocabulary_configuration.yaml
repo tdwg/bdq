@@ -11,56 +11,43 @@
 #  append: Local meaning to append to the end of the definition, optional
 #  force: If true, show this entry in the key even if the CSV header is not present in the term-version file, optional
 
-comments:
-  label: Comments
-  normative: 'false'
-  term: rdfs:comment
-controlled_value_string:
-  label: Controlled Value
-  normative: 'true'
-  term: ''
-definition:
-  label: Definition
-  normative: 'true'
-  term: skos:definition
-flags:
-  label: ''
-  normative: ''
-  term: ''
-iri:
-  label: Term Version IRI
-  normative: 'true'
-  term: rdf:about
-issued:
-  label: Modified
-  normative: 'true'
-  term: dcterms:issued
-label:
-  label: Label
-  normative: 'true'
-  term: rdfs:label
-organized_in:
-  label: ''
-  normative: 'false'
-  term: ''
-prefLabel:
-  label: Preferred Label
-  normative: 'true'
-  term: skos:prefLabel
-rdf_type:
-  label: Type
-  normative: 'true'
-  term: rdf:type
-status:
-  label: Status
-  normative: ''
-  term: tdwgutility:status
-term_iri:
-  label: Term IRI
-  normative: 'true'
-  term: dcterms:isVersionOf
 term_localName:
   label: Term Name
   normative: 'true'
   term: rdf:value
-
+term_iri:
+  label: Term IRI
+  normative: 'true'
+  term: dcterms:isVersionOf
+issued:
+  label: Modified
+  normative: 'true'
+  term: dcterms:issued
+iri:
+  label: Term Version IRI
+  normative: 'true'
+  term: rdf:about
+label:
+  label: Label
+  normative: 'true'
+  term: rdfs:label
+definition:
+  label: Definition
+  normative: 'true'
+  term: skos:definition
+comments:
+  label: Comments
+  normative: 'false'
+  term: rdfs:comment
+status:
+  label: Status
+  normative: ''
+  term: tdwgutility:status
+controlled_value_string:
+  label: Controlled Value String
+  normative: 'true'
+  term: ''
+rdf_type:
+  label: Type
+  normative: 'true'
+  term: rdf:type

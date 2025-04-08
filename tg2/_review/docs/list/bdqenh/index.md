@@ -24,7 +24,7 @@ Latest version
 : <http://rs.tdwg.org/bdq/bdqenh/terms/>
 
 Abstract
-: This document describes the vocabulary terms used in the BDQ Core Standard as values of bdqffdq:Enhancement, originally defined in Veiga 2016 and Veiga et al. 2017.
+: This document is a reference for the BDQ Core Standard. It covers the vocabulary terms that are types of bdqffdq:Enhancement (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasEnhancement.
 
 Authors
 : [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -39,7 +39,7 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-This document includes terms that are individuals of type bdqffdq:Enhancement intended to be used as a controlled value for bdqffdq:hasEnhancement in the BDQ Core tests.
+This document provides the full details of the controlled vocabulary values (individuals of the type bdqffdq:Enhancement) for the term bdqffdq:hasEnhancement in the BDQ Core Tests.
 
 ### 1.1 Purpose
 
@@ -93,30 +93,29 @@ The following namespace abbreviations are used in this document:
 
 ### 1.8 Key to Vocabulary Terms
 
+The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness |
-| Controlled Value () | normative | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | AssumedDefault |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault-2024-09-30](https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30) |
-| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
-| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Assumed Default |
-| Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. | Assumed Default |
-| Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:Enhancement |
-| Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault](https://rs.tdwg.org/bdqenh/terms/AssumedDefault) |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | AssumedDefault |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault](https://rs.tdwg.org/bdqenh/terms/AssumedDefault) |
+| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault-2024-09-30](https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30) |
+| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Assumed Default |
+| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness |
+| Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
+| Controlled Value String () | normative |  | AssumedDefault |
+| Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:Enhancement |
 
-
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
 
 ## 2 Use of Terms (normative) 
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of `bdqffdq:Enhancement`.
+A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqenh/terms/AssumedDefault`) or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) SHOULD be used. In a purely human context a Label (e.g., `Assumed Default`) MAY be used.
 
-Each bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasEnhancement property relating it to a term in this bdqenh: vocabulary.
+Each instance of bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasEnhancement property relating it to a term in this bdqenh: vocabulary.
 
-Instances of bdqffdq:Measure, bdqffdq:Validation, and bdqffdq:Issue SHOULD NOT have bdqffdq:hasEnhancement properties relating them to a term in this bdqenh: vocabulary.
+An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT have a bdqffdq:hasEnhancement property relating it to a term in this bdqenh: vocabulary.
 
 ## 3 Term index
 ### 3.1 Index By Term Name

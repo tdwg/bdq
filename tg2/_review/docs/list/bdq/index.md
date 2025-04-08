@@ -24,7 +24,7 @@ Latest version
 : <http://rs.tdwg.org/bdq/terms/>
 
 Abstract
-: This document is a reference for the BDQ Core Standard, documenting vocabulary values largely used as bdqffdq:Parameters, but including a few other terms used in test Specifications.
+: This document is a reference for the BDQ Core Standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
 
 Authors
 : [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -39,7 +39,7 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-This document includes terms that are part of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/2025-03-28>). For details and rationale, see Chapman et al. (2020).
+This document provides the full details of the terms of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/2025-03-28>). For details and rationale, see Chapman et al. (2020).
 
 ### 1.1 Purpose
 
@@ -51,14 +51,18 @@ This document is for those needing a technical understanding of the BDQ Core Tes
 
 ### 1.3 Data Quality Vocabulary terms.
 
-The bdq: vocabulary inclues four sets of concepts: A list of bdqffdq:UseCases for the bdqcore: tests; a list of bdqffdq:Parameters used in the bdqcore: tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters; a list of named bdqffdq:InformationElements used by MultiRecord measure tests; and the concepts bdq:Empty and bdq:NotEmpty.
+The bdq: vocabulary inclues four sets of concepts: 
+* a list of bdqffdq:UseCases for the bdqcore: Tests
+* a list of bdqffdq:Parameters used in the bdqcore: Tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters
+* a list of named bdqffdq:InformationElements used by MultiRecord Measure Tests
+* the concepts bdq:Empty and bdq:NotEmpty.
 
 ### 1.4 Term List Distributions
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdq/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdq.xml | Example for submission, to be generated | 
+| Description | IRI | Download URL |
+| ----------- | --- | -----------  |
+| HTML file   | http://rs.tdwg.org/bdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdq/index.md |
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdq.xml |
 
 ### 1.5 Status of the content of this document
 
@@ -78,36 +82,42 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The following namespace abbreviations are used in this document:
 
-| Prefix | IRI |
-| --- | --- |
-| bdq:     | https://rs.tdwg.org/bdq/terms/   |
-| bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
-| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
-| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
-
+| **Prefix**   | **Namespace**                               |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dc:          | https://purl.org/dc/elements/1.1/           |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| dwciri:      | http://rs.tdwg.org/dwc/iri/                 |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.8 Key to Vocabulary Terms
 
+The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Used in Measure of Single Record Tests |
-| Controlled Value () | normative | A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | Alien-Species |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdq/terms/version/ Alien-Species-2024-09-30](https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30) |
-| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
-| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Alien-Species |
-| Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. | Alien-Species |
-| Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:UseCase |
-| Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdq/terms/ Alien-Species](https://rs.tdwg.org/bdq/terms/Alien-Species) |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | Alien-Species |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdq/terms/ Alien-Species](https://rs.tdwg.org/bdq/terms/Alien-Species) |
+| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdq/terms/version/ Alien-Species-2024-09-30](https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30) |
+| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Alien-Species |
+| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Used in Measure of Single Record Tests |
+| Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
+| Controlled Value String () | normative |  | Alien-Species |
+| Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:UseCase |
 
-
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
 
 ## 2 Use of Terms (normative)
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values from the `bdq:` namespace, except for bdq:empty and bdq:notEmpty, where controlled value strings MUST be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) SHOULD be used. In a purely human context a Label (e.g., `Information Element`) MAY be used.
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name

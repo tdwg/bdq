@@ -6,7 +6,7 @@
 documentTitle: Data Quality Enhancement Controlled Vocabulary List of Terms
 
 # Abstract of document written by authors.
-abstract: 'This document describes the vocabulary terms used in the BDQ Core Standard as values of bdqffdq:Enhancement, originally defined in Veiga 2016 and Veiga et al. 2017.'
+abstract: 'This document is a reference for the BDQ Core Standard. It covers the vocabulary terms that are types of bdqffdq:Enhancement (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasEnhancement.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'

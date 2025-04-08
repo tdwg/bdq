@@ -41,7 +41,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-This document includes terms that are individuals of type bdqffdq:DataQualityDimension intended to be used as a controlled value for bdqffdq:hasDataQualityDimension in the BDQ Core tests.
+This document provides the full details of the controlled vocabulary values (individuals of the type bdqffdq:DataQualityDimension) for the term bdqffdq:hasDataQualityDimension in the BDQ Core Tests.
 
 ### 1.1 Purpose
 
@@ -95,14 +95,14 @@ The following namespace abbreviations are used in this document:
 
 ### 1.8 Key to Vocabulary Terms
 
-{term_key}
+The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG specific meaning from the SDS, and may also include specific definition in this local context.
+{term_key}
 
 ## 2 Use of Terms (normative)
 
-Due to the requirements of [bdqffdq](https://rs.tdwg.org/bdqffdq/terms), resources MUST be used as values of `bdqffdq:dataQualityDimension`.
+A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`) from the bdqdim: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `Completeness`) SHOULD be used. In a purely human context a Label (e.g., `Completeness`) MAY be used.
 
-Each individual instance of subclasses of bdqffdq:DataQualityNeed SHOULD have exactly one bdqffdq:hasDataQualityDimension property relating it to a term in this bdqdim: vocabulary.
+Each instance of a Test, regardless of Test Type, SHOULD have exactly one bdqffdq:hasdataQualityDimension property relating it to a term in this bdqdim: vocabulary.
 
 ## 3 Term index

@@ -47,7 +47,7 @@ This document is for those needing a general or technical contextual overview of
 
 ### 1.3 Associated Documents
 
-- [Biodiversity Data Quality Core](../../../index.md) provides an index to all documents in the standard.
+- [Biodiversity Data Quality Core](../../index.md) provides an index to all documents in the standard.
 - [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) provides an easy-to-read guide to the Tests. It is a descriptive document, not the full vocabulary definition document found in the [BDQ Core Tests and Assertions List of Terms](../list/bdqcore/index.md).
 
 ### 1.4 Status of the content of this document

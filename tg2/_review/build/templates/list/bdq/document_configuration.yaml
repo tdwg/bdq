@@ -6,7 +6,7 @@
 documentTitle: BDQ Controlled Vocabulary List of Terms
 
 # Abstract of document written by authors.
-abstract: 'This document is a reference for the BDQ Core Standard, documenting vocabulary values largely used as bdqffdq:Parameters, but including a few other terms used in test Specifications.'
+abstract: 'This document is a reference for the BDQ Core Standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'

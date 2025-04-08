@@ -163,7 +163,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Criterion (bdqffdq:Criterion) | normative | Rule against which data are evaluated for conformance to quality criteria. | NotEmpty |
 | Description (rdfs:comment) | non-normative | A description of the subject resource. In present context: A brief description of what the Test does. | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. |
 | DataQualityDimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Completeness |
-| Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | FillInFrom |
+| Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | FilledInFrom |
 | ExpectedResponse (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the Test must be implemented. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. |
 | Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"],[dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 0390210 7377243", dwc:verbatimSRS="EPSG:32754", dwc:verbatimCoordinateSystem="decimal degrees", dwc:decimalLatitude="", dwc:decimalLongitude="":: Response.status=NOT_AMENDED, Response.result="", Response.comment="In the wrong coordinate system"] |
 | Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324) |
@@ -536,7 +536,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -1183,7 +1183,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -1921,7 +1921,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2044,7 +2044,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2167,7 +2167,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2290,7 +2290,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2790,7 +2790,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2909,7 +2909,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3532,7 +3532,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3667,7 +3667,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Enhancement</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Examples</td>

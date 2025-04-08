@@ -436,8 +436,6 @@ for r in queryResult :
 	text = text + "[{}](#{})\n".format(term,term)
 
 text = text + "\n## 4 Vocabulary\n"
-# TODO: term-list terms, formatted as table
-text = text + "\n**TODO: term-list terms, formatted as table**\n"
 text = text + "\n### 4.1 Class terms\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
