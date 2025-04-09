@@ -381,7 +381,7 @@
 <https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "Transformations between coordinate reference systems should not be made as a part of this Test. Though coordinate precision of the verbatim coordinates could also be interpreted during the process of amending decimal coordinates from verbatim coordinates, that amendment is recommended to be an independent Test. Note that dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimCoordinates might all be populated, and they may or not be perfectly consistent with each other. An ideal implementation should check for the consistency of these three fields and not amend them if they are inconsistent.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:10a04e3b-9254-49b6-8095-166179cd3707>;
@@ -394,8 +394,8 @@
   dcterms:isVersionOf <https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e>;
   skos:prefLabel "Amendment Coordinates From Verbatim for SingleRecord" .
 
-<bdqenh:FillInFrom> a <http://rs.tdwg.org/bdqffdq/terms/Enhancement>;
-  rdfs:label "FillInFrom" .
+<bdqenh:FilledInFrom> a <http://rs.tdwg.org/bdqffdq/terms/Enhancement>;
+  rdfs:label "FilledInFrom" .
 
 <bdqdim:Completeness> a <https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension>;
   rdfs:label "Completeness" .
@@ -976,7 +976,7 @@
 <https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:d95b6eba-3274-4ad5-bb18-357166a64b12>;
@@ -1064,7 +1064,7 @@
 <https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "If dwc:verbatimDepth has a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform fathoms to meters by multiplying by 1.8288 and retaining added significant digits (verbatim depth of 10 fathoms to minimum and maximum depths in meters of 18.288). Implementations should be capable of interpreting verbatim data in at least meters, fathoms, and feet, in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:06adabf0-e6d4-4f99-819f-7dd38c796617>;
@@ -1147,7 +1147,7 @@
 <https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:92a6c199-f1d7-493e-b643-57d09c5131dd> .
@@ -1495,7 +1495,7 @@
 <https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "If the dwc:verbatimElevation as a single value rather than a range, the minimum and maximum values should be amended with the same value. When transforming units, the transformation should be reversible, not adjusting the number of significant digits or adjusting the rounding. For example, transform yards to meters by multiplying by 0.9144 and retaining added significant digits (verbatim elevation of 10 yards to minimum and maximum depths in meters of 9.144). Implementations should be capable of interpreting verbatim data in at least meters,yards, feet, and kilometers in the form of either a single value or a range. The units must be specified in the verbatim data to be interpretable.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:3d5994c8-29df-4399-965c-c2c596a6767f>;
@@ -1622,7 +1622,7 @@
 <https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\\/\\/api.gbif.org\\/v1\\/species\\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace \"gbif:\" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the \"gbif:\" pseudo-namespace.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:627a0c7f-9c5d-49ba-a3d1-1c8250cf1d0a>;
@@ -1712,7 +1712,7 @@
 <https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
@@ -1800,9 +1800,9 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"present\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:d974925e-3716-4091-b8aa-130311fc5aed> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:9a8baabb-5371-4561-af20-656367eb87cb> .
 
-<urn:uuid:d974925e-3716-4091-b8aa-130311fc5aed> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:9a8baabb-5371-4561-af20-656367eb87cb> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "present";
   rdfs:label "Default value for bdq:defaultOccurrenceStatus:\"present\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:defaultOccurrenceStatus> .
@@ -2128,7 +2128,7 @@
 <https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "If the proposed eventDate is prior to 1918-02-14, the Response.comment will include a note that the \"verbatimDate was assumed to be in the Gregorian calendar\". When running the Test, the original precision, e.g. year=1980, month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-31.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac>;
@@ -2277,7 +2277,7 @@
 <https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this Test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment. This Test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the Test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-3.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac>;
@@ -2841,9 +2841,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:385680b5-598d-441b-898c-31527fb2b607> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:d70b44cb-2274-4dd2-8733-1c0bbe6af0c2> .
 
-<urn:uuid:385680b5-598d-441b-898c-31527fb2b607> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:d70b44cb-2274-4dd2-8733-1c0bbe6af0c2> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Regex present/absent";
   rdfs:label "Default value for bdq:sourceAuthority:\"Regex present/absent\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2880,9 +2880,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:cd661915-21b0-4b34-9c88-99306b5fa47f> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:e9afbe03-bf9c-4361-bad1-b32edd96a7f6> .
 
-<urn:uuid:cd661915-21b0-4b34-9c88-99306b5fa47f> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:e9afbe03-bf9c-4361-bad1-b32edd96a7f6> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Regex present/absent";
   rdfs:label "Default value for bdq:sourceAuthority:\"Regex present/absent\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -3303,7 +3303,7 @@
 <https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FillInFrom>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
   skos:note "An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this Test is run. While year=1999, startDayOfYear=123 could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This Test is only for cases that fall within the one year (as given in dwc:year) and hence \"dwc:startDayOfYear will always be less than dwc:endDayOfYear\". [or do we just leave this as being obvious from the Expected Response.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:e8c9ef54-af43-4c20-98a8-a7865cc169ac>;
