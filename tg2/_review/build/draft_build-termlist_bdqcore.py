@@ -3,6 +3,8 @@
 # updated 2021-02-11
 # Modified Paul J. Morris for generating draft standard documents without rs.tdwg.org files 
 # 2024-09-12
+# Modified John Wieczorek for consistent draft standard term presentation
+# 2025-04-10
 # This script merges static Markdown header and footer documents with generated term information tables loading data from in local csv and yaml files.
 # Unlike the original, this version is intended to run entirely on local files.
 # This script processes the bdqcore vocabulary as phrased with the bdqffdq vocabulary.
@@ -84,8 +86,8 @@ organized_in_categories = True
 # If organized in categories, the display_order list must contain the IRIs that are values of the term given in display_id
 # If not organized into categories, the value is irrelevant. There just needs to be one item in the list.
 
-display_order = ['Validation','Amendment','Issue','Measure'] # categories to split into.
-display_label = ['Index to Validation Tests','Index to Amendment Tests','Index to Issue Tests','Index to Measure Tests'] # these are the section labels for the categories in the page
+display_order = ['Validation','Issue','Amendment','Measure'] # categories to split into.
+display_label = ['Index to Validation Tests','Index to Issue Tests','Index to Amendment Tests','Index to Measure Tests'] # these are the section labels for the categories in the page
 display_comments = ['','','','Including MultiRecord Measures'] # these are the comments about the category to be appended following the section labels
 display_id = ['Type'] # these are the fragment identifiers for the associated sections for the categories
 
@@ -158,11 +160,6 @@ for term in termLists:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
 
     # Note: This doesn't quite include everything in the RDF, need to query RDF for a few values.
-    # JW Note: The column list should reflect the column order in the bdq_core_term_versions_file. Ideally this should be loaded from the header of the local copy of the file.
-    column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status"]
-#    column_list = ["term_localName", "Label", "prefLabel", "term_iri", "issued", "iri", "Description", "ExpectedResponse", "SpecificationGuid", "InformationElement:ActedUpon", "InformationElement:Consulted", "Parameters", "AuthoritiesDefaults", "Notes", "Examples", "Type", "Resource Type", "Dimension", "Criterion", "Enhancement", "Example Implementations (Mechanisms)", "Link to Specification Source Code", "Source", "issueNumber", "IssueLabels", "ArgumentGuids"]
-#    column_list = ["Label","Description","Type","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status"]
-    #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
     #elif vocab_type == 3:
@@ -173,7 +170,7 @@ for term in termLists:
     #column_list.append('version_iri')
    
     # JRW  Note: Ideally, this should come from the local copy of the file, not from GitHub. 
-    print('Retrieving metadata about terms from all namespaces from GitHub')
+#    print('Retrieving metadata about terms from all namespaces from GitHub')
     # Create list of lists metadata table
     table_list = []
     for term_list in term_lists_info:
@@ -188,55 +185,26 @@ for term in termLists:
             # PJM: Using local file
             data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
             
-            # JRW debug
-#            print(f'data_url = {data_url}')
-            
             frame = pd.read_csv(data_url, na_filter=False)
             frame_column_list = frame.columns.tolist()
-            print(f'Frame column list = {frame_column_list}')
+#            print(f'Frame column list = {frame_column_list}')
             for index,row in frame.iterrows():
-                # PJM: TODO: just use column list?
-                # TODO: This doesn't include everything in the RDF, need to get this document from the rdf, or build a csv with all the terms.
-#                row_list = [ row['Label'], row['issueNumber'], row['historyNoteUrl'], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['SpecificationGuid'], row['MethodGuid'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row['ArgumentGuids'], row['status'] ]
-#                print(f'\nindex={index} row={row}')
-
-#                row_list = [ row['term_localName'], row['Label'], row['prefLabel'], row['term_iri'], row['issued'], row['iri'], row['Description'], row['ExpectedResponse'], row['SpecificationGuid'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['AuthoritiesDefaults'], row['Notes'], row['Examples'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Source'], row['issueNumber'], row['IssueLabels'], row['ArgumentGuids'], row['historyNoteUrl'], row['DateLastUpdated'], row['IE Class'], row['MethodGuid'], row['References'], row['IssueState'], row['UseCases'], row['status'] ]
-
-                # JRW debug                
                 row_list = []
                 for term_history_term in frame_column_list:
                     row_list.append(row[term_history_term])
-#    column_list =              ['term_localName',      'Label',      'prefLabel',      'term_iri',      'issued',      'iri',      'Description',      'ExpectedResponse',      'SpecificationGuid',      'InformationElement:ActedUpon',      'InformationElement:Consulted',      'Parameters',      'AuthoritiesDefaults',      'Notes',      'Examples',      'Type',      'Resource Type',      'Dimension',      'Criterion',      'Enhancement',      'Example Implementations (Mechanisms)',      'Link to Specification Source Code',      'Source',      'issueNumber',      'IssueLabels',      'ArgumentGuids',      'historyNoteUrl',      'DateLastUpdated',      'IE Class'       'MethodGuid',      'References',      'IssueState',      'UseCases',      'status']
-
-                # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
-        
-                # JRW debug                
-#                print(f'row_list = {row_list}')
                 table_list.append(row_list)
                 if debug :
                     print(row_list)
         
     print('processing data')
     if debug :
-        print(column_list)
-    # Turn list of lists into dataframe
-#    terms_df = pd.DataFrame(table_list, columns = column_list)
-    
-    # JRW Debug
+        print(frame_column_list)
+
     terms_df = pd.DataFrame(table_list, columns=frame_column_list)
-    terms_df_column_list = terms_df.columns.tolist()
-    print(f'terms_df_column_list = {terms_df_column_list}')
  
-#    terms_df = pd.DataFrame(table_list, columns = column_list)
     # Limit output to just current terms 
     terms_df = terms_df.loc[terms_df['status']=='recommended']
-
     terms_sorted_by_label = terms_df.sort_values(by='Label')
-#    terms_sorted_by_localname = terms_df.sort_values(by='term_localName')
-    
-    # This makes sort case insensitive
-    terms_sorted_by_localname = terms_df.iloc[terms_df.prefLabel.str.lower().argsort()]
-    #terms_sorted_by_localname
     print('done retrieving')
     if debug :
         print()
@@ -244,14 +212,10 @@ for term in termLists:
     # Create column list - custom list for bdqcore terms.
     # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
     # load from local file
-    # JRW Debug
-    termrow = terms_sorted_by_localname.iloc[0]
-    print(f'Before vocab config: termrow_dict = {termrow.to_dict()}')
 
     with open(vocabulary_configuration_yaml_file) as vcfy:
         term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 
-    # JRW addition:
     # Extract column names sorted by 'sort_order'
     ordered_columns = sorted(
         term_concept_dictionary.items(),
@@ -259,34 +223,19 @@ for term in termLists:
     )
     # Just the column names, in order
     column_order = [col_name for col_name, _ in ordered_columns]
-
-    print(f'column_order = {column_order}\n Looks good.')
-    
-    column_order_in_df = [col for col in column_order if col in terms_sorted_by_localname.columns]
-
-    print(f'column_order_in_df = {column_order_in_df}.')
-
-    terms_sorted_by_localname = terms_sorted_by_localname[column_order_in_df]
-
-    # JRW Debug
-    termrow = terms_sorted_by_localname.iloc[0]
-    print(f'After column_order_in_df: termrow_dict = {termrow.to_dict()}')
+    column_order_in_df = [col for col in column_order if col in terms_sorted_by_label.columns]
+    terms_sorted_by_label = terms_sorted_by_label[column_order_in_df]
 
     # Columns not mentioned in the YAML
-    remaining_cols = [col for col in terms_sorted_by_localname.columns if col not in column_order_in_df]
+    remaining_cols = [col for col in terms_sorted_by_label.columns if col not in column_order_in_df]
 
     # Final order: YAML-defined columns first, then the rest
     full_column_ordered_list = column_order_in_df + remaining_cols
 
     # Reorder the DataFrame
-    terms_sorted_by_localname = terms_sorted_by_localname[full_column_ordered_list]
+    terms_sorted_by_label = terms_sorted_by_label[full_column_ordered_list]
 
-    # JW Debug
-#    print(f'term_concept_dictionary={term_concept_dictionary}')
-    termrow = terms_sorted_by_localname.iloc[0]
-    print(f'Before build_term_key: termrow_dict = {termrow.to_dict()}')
-
-    definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
+    definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_label)
 
     # ---------------
     # generate the index of terms grouped by category and sorted alphabetically by lowercase term local name
@@ -363,13 +312,7 @@ for term in termLists:
     # generate the Markdown for the terms table
     text = '## 4 Vocabulary\n'
     if True:
-        filtered_table = terms_sorted_by_localname
-
-        # JRW Debug
-        print(f'row_list: {row_list}')
-        print(f'full_column_ordered_list: {full_column_ordered_list}')
-    
-        # row_list = [ row['#'], row['GUID'], row['DateLastUpdated'], row['Label'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'] ]
+        filtered_table = terms_sorted_by_label
         for row_index,row in filtered_table.iterrows():
             text += '<table>\n'
             curie =  "bdqcore:" + row['term_localName']
@@ -385,7 +328,6 @@ for term in termLists:
             text += '\t\t\t<td>' + row['Label'] + '</td>\n'
             text += '\t\t</tr>\n'
 
-#            for column in column_list : 
             for column in full_column_ordered_list : 
                 if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column!="issueNumber" and column!="IE Class"  : 
                     if row[column] : 
@@ -406,18 +348,10 @@ for term in termLists:
             if debug :
                 print(sparql)
             for r in queryResult : 
-                #text += '\t\t<tr>\n'
-                #text += '\t\t\t<td>bdqffdq:'+testType+'Method</td>\n'
-                #text += '\t\t\t<td>' + str(r['method']) + '</td>\n'
-                #text += '\t\t</tr>\n'
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>'+testType+'Method label</td>\n'
                 text += '\t\t\t<td>' + str(r['label']) + '</td>\n'
                 text += '\t\t</tr>\n'
-                #text += '\t\t<tr>\n'
-                #text += '\t\t\t<td>bdqffdq:Specification</td>\n'
-                #text += '\t\t\t<td>' + str(r['specification']) + '</td>\n'
-                #text += '\t\t</tr>\n'
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>Specification label</td>\n'
                 text += '\t\t\t<td>' + str(r['specificationLabel']) + '</td>\n'

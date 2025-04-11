@@ -51,8 +51,8 @@ Draft Standard for Submission
 - [2 Normative Guidance](#2-normative-guidance)
 - [3 Term Indices](#3-term-indices)
 - [3.1 Index to Validation Tests](#31-index-to-validation-tests)
-- [3.2 Index to Amendment Tests](#32-index-to-amendment-tests)
-- [3.3 Index to Issue Tests](#33-index-to-issue-tests)
+- [3.2 Index to Issue Tests](#32-index-to-issue-tests)
+- [3.3 Index to Amendment Tests](#33-index-to-amendment-tests)
 - [3.4 Index to Measure Tests](#34-index-to-measure-tests)
 - [4 Vocabulary](#4-vocabulary)
 
@@ -149,32 +149,32 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
-| Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e |
-| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_COORDINATES_FROM_VERBATIM |
-| Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment Coordinates From Verbatim |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcore/terms/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e](https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
+| Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | 07c28ace-561a-476e-a9b9-3d5ad6e35933 |
+| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_BASISOFRECORD_STANDARDIZED |
+| Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment dwc:basisOfRecord Standardized |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcore/terms/ 07c28ace-561a-476e-a9b9-3d5ad6e35933](https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933) |
 | Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2025-03-07 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcore/terms/version/ 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20](https://rs.tdwg.org/bdqcore/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2024-08-20) |
-| Description (rdfs:comment) | non-normative | A description of the subject resource. In present context: A brief description of what the Test does. | Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms. |
-| Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the Test must be implemented. | INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. |
-| Specification GUID (bdqffdq:Specification) | normative | A specific statement about how to evaluate a data quality need. | urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04 |
-| InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:decimalLatitude, dwc:decimalLongitude, dwc:geodeticDatum |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcore/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24](https://rs.tdwg.org/bdqcore/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24) |
+| Description (rdfs:comment) | non-normative | A description of the subject resource. In present context: A brief description of what the Test does. | Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority. |
+| Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements. In present context: The formal definition of how the Test must be implemented. | EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED |
+| Specification GUID (bdqffdq:Specification) | normative | A specific statement about how to evaluate a data quality need. | urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27 |
+| InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:basisOfRecord |
 | InformationElements Consulted (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a non-abstract InformationElement. | dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:verbatimCoordinateSystem, dwc:verbatimSRS |
 | Parameters (bdqffdq:Parameter) | normative | A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner. | bdq:sourceAuthority |
-| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]} |
-| Notes (skos:note) | non-normative | A general note, for any purpose. In present context: Additional information to supplement the Specification. | Transformations between coordinate reference systems should not be made as a part of this Test. Though coordinate precision of the verbatim coordinates could also be interpreted during the process of amending decimal coordinates from verbatim coordinates, that amendment is recommended to be an independent Test. Note that dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimCoordinates might all be populated, and they may or not be perfectly consistent with each other. An ideal implementation should check for the consistency of these three fields and not amend them if they are inconsistent. |
-| Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:verbatimLatitude="-23.712", dwc:verbatimLongitude="139.92", dwc:verbatimCoordinates="", dwc:verbatimSRS="EPSG:4326", dwc:verbatimCoordinateSystem="decimal degrees",dwc:decimalLatitude="", dwc:decimalLongitude="": Response.status=FILLED_IN, Response.result=dwc:decimalLatitude="-23.712", dwc:decimalLongitude="139.92", dwc:geodeticDatum="EPSG:4326", Response.comment="Input fields contain interpretable values"],[dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 0390210 7377243", dwc:verbatimSRS="EPSG:32754", dwc:verbatimCoordinateSystem="decimal degrees", dwc:decimalLatitude="", dwc:decimalLongitude="":: Response.status=NOT_AMENDED, Response.result="", Response.comment="In the wrong coordinate system"] |
+| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response. | bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]} |
+| Notes (skos:note) | non-normative | A general note, for any purpose. In present context: Additional information to supplement the Specification. | The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen. For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values. |
+| Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"] |
 | Type (rdf:type) | normative | The subject is an instance of a class. In present context: The type of the Test, one of the subtypes of DataQualityNeed. | Amendment |
 | Resource Type (bdqffdq:ResourceType) | normative | Category of things that are data objects about which data quality assertions may be made. | SingleRecord |
-| Data Quality Dimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Completeness |
+| Data Quality Dimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Conformance |
 | Criterion (bdqffdq:Criterion) | normative | Rule against which data are evaluated for conformance to quality criteria. | NotEmpty |
-| Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | FilledInFrom |
-| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324) |
-| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/ DwCGeoRefDQ.java#L402](https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L402) |
-| Source (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: The origin of the concept of the Test. | ALA |
-| Developed As Github Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 32](https://github.com/tdwg/bdq/issues/32) |
-| Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote. | TG2 Amendment SPACE CODED Test Completeness CORE |
-| Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 95e1332e-eeca-4b41-8698-88ffc33cef3f |
+| Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | Standardized |
+| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501) |
+| Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/ DwCMetadataDQ.java#L834](https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834) |
+| Source (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: The origin of the concept of the Test. | VertNet |
+| Developed As Github Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
+| Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote. | TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE |
+| Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
 
 
 ## 2 Normative Guidance
@@ -260,7 +260,14 @@ See [BDQ Core Tests and Assertions](../../bdqcore/index.md) for normative guidan
 [VALIDATION_YEAR_INRANGE](#bdqcore_ad0c8855-de69-4843-a80c-a5387d20fbc8) |
 [VALIDATION_YEAR_NOTEMPTY](#bdqcore_c09ecbf9-34e3-4f3e-b74a-8796af15e59f) 
 
-### 3.2 Index to Amendment Tests
+### 3.2 Index to Issue Tests
+
+[ISSUE_ANNOTATION_NOTEMPTY](#bdqcore_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) |
+[ISSUE_COORDINATES_CENTEROFCOUNTRY](#bdqcore_256e51b3-1e08-4349-bb7e-5186631c3f8e) |
+[ISSUE_DATAGENERALIZATIONS_NOTEMPTY](#bdqcore_13d5a10e-188e-40fd-a22c-dbaa87b91df2) |
+[ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](#bdqcore_acc8dff2-d8d1-483a-946d-65a02a452700) 
+
+### 3.3 Index to Amendment Tests
 
 [AMENDMENT_BASISOFRECORD_STANDARDIZED](#bdqcore_07c28ace-561a-476e-a9b9-3d5ad6e35933) |
 [AMENDMENT_COORDINATES_FROM_VERBATIM](#bdqcore_3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
@@ -291,13 +298,6 @@ See [BDQ Core Tests and Assertions](../../bdqcore/index.md) for normative guidan
 [AMENDMENT_SEX_STANDARDIZED](#bdqcore_33c45ae1-e2db-462a-a59e-7169bb01c5d6) |
 [AMENDMENT_TAXONRANK_STANDARDIZED](#bdqcore_e39098df-ef46-464c-9aef-bcdeee2a88cb) |
 [AMENDMENT_TYPESTATUS_STANDARDIZED](#bdqcore_b3471c65-b53e-453b-8282-abfa27bf1805) 
-
-### 3.3 Index to Issue Tests
-
-[ISSUE_ANNOTATION_NOTEMPTY](#bdqcore_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) |
-[ISSUE_COORDINATES_CENTEROFCOUNTRY](#bdqcore_256e51b3-1e08-4349-bb7e-5186631c3f8e) |
-[ISSUE_DATAGENERALIZATIONS_NOTEMPTY](#bdqcore_13d5a10e-188e-40fd-a22c-dbaa87b91df2) |
-[ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](#bdqcore_acc8dff2-d8d1-483a-946d-65a02a452700) 
 
 ### 3.4 Index to Measure Tests
 
@@ -454,6 +454,117 @@ Including MultiRecord Measures
 [MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY](#bdqcore_a8fef8a8-e7c7-4a2d-adaf-7da99c896c93) 
 
 ## 4 Vocabulary
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_07c28ace-561a-476e-a9b9-3d5ad6e35933"></a>Term Name  bdqcore:07c28ace-561a-476e-a9b9-3d5ad6e35933</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Amendment dwc:basisOfRecord Standardized</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:basisOfRecord</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen. For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Amendment</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Enhancement</td>
+			<td>Standardized</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>VertNet</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/63</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>1b66a16a-5e76-4eca-a400-d097ac136ac1</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -667,331 +778,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_bd385eeb-44a2-464b-a503-7abe407ef904"></a>Term Name  bdqcore:bd385eeb-44a2-464b-a503-7abe407ef904</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>AMENDMENT_DCTYPE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Amendment dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2024-08-16</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Proposes an amendment to the value of dc:type using the DCMI type vocabulary.</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dc:type</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>dc:type holds literals (e.g. PhysicalObject), while dcterms:type holds an IRI for the resource (e.g. http://purl.org/dc/dcmitype/PhysicalObject), see the Darwin Core RDF guide https://dwc.tdwg.org/rdf/#32-imported-dublin-core-terms-for-which-only-literal-objects-are-appropriate-normative. Implementations of this Amendment are expected be able to amend IRI values to the literals, as well as removing leading/trailing whitespace and correcting case errors in the literal.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dc:type="evnt": Response.status=AMENDED, Response.result=dc:type="Event", Response.comment="dc:type contains an interpretable value"],[dc:type="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="dc:type contains an uninterpretable value"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Amendment</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Enhancement</td>
-			<td>Standardized</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>VertNet</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/41</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8"></a>Term Name  bdqcore:dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>AMENDMENT_LICENSE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Amendment dcterms:license Standardized</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dcterms:license</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dcterms:license="CC0": Response.status=AMENDED, Response.result=dcterms:license="https://creativecommons.org/publicdomain/zero/1.0/legalcode", Response.comment="Input field contains interpretable value"],[dcterms:license="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="dcterms:license contains uninterpretable value "X""]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Amendment</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Enhancement</td>
-			<td>Standardized</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>VertNet</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/133</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>7ecc692d-e65f-4ea5-9d54-04421ec96ab4</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_07c28ace-561a-476e-a9b9-3d5ad6e35933"></a>Term Name  bdqcore:07c28ace-561a-476e-a9b9-3d5ad6e35933</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Amendment dwc:basisOfRecord Standardized</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:basisOfRecord</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen. For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Amendment</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Enhancement</td>
-			<td>Standardized</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>VertNet</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/63</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>1b66a16a-5e76-4eca-a400-d097ac136ac1</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -1412,6 +1198,109 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqcore_bd385eeb-44a2-464b-a503-7abe407ef904"></a>Term Name  bdqcore:bd385eeb-44a2-464b-a503-7abe407ef904</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Amendment dc:type Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2024-08-16</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Proposes an amendment to the value of dc:type using the DCMI type vocabulary.</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dc:type</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>dc:type holds literals (e.g. PhysicalObject), while dcterms:type holds an IRI for the resource (e.g. http://purl.org/dc/dcmitype/PhysicalObject), see the Darwin Core RDF guide https://dwc.tdwg.org/rdf/#32-imported-dublin-core-terms-for-which-only-literal-objects-are-appropriate-normative. Implementations of this Amendment are expected be able to amend IRI values to the literals, as well as removing leading/trailing whitespace and correcting case errors in the literal.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dc:type="evnt": Response.status=AMENDED, Response.result=dc:type="Event", Response.comment="dc:type contains an interpretable value"],[dc:type="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="dc:type contains an uninterpretable value"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Amendment</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Enhancement</td>
+			<td>Standardized</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L724</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>VertNet</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/41</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqcore_74ef1034-e289-4596-b5b0-cde73796697d"></a>Term Name  bdqcore:74ef1034-e289-4596-b5b0-cde73796697d</th>
 		</tr>
 	</thead>
@@ -1622,109 +1511,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_710fe118-17e1-440f-b428-88ba3f547d6d"></a>Term Name  bdqcore:710fe118-17e1-440f-b428-88ba3f547d6d</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>AMENDMENT_EVENT_FROM_EVENTDATE</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Amendment dwc:Event from dwc:eventDate</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear</td>
-		</tr>
-		<tr>
-			<td>InformationElements Consulted</td>
-			<td>dwc:eventDate</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:eventDate="2023-01-26", dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result=dwc:month="1", dwc:day="26", dwc:startDayOfYear="26", dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate"],[dwc:eventDate="2023",dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=NOT_AMENDED, Response.result=, Response.comment="No amendments possible"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Amendment</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Enhancement</td>
-			<td>FilledInFrom</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2073</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>VertNet</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/52</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Amendment TIME CODED Test Completeness ISO/DCMI STANDARD CORE</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
 	</tbody>
 </table>
@@ -2141,6 +1927,109 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqcore_710fe118-17e1-440f-b428-88ba3f547d6d"></a>Term Name  bdqcore:710fe118-17e1-440f-b428-88ba3f547d6d</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Amendment dwc:Event from dwc:eventDate</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2024-09-16</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear</td>
+		</tr>
+		<tr>
+			<td>InformationElements Consulted</td>
+			<td>dwc:eventDate</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:eventDate="2023-01-26", dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result=dwc:month="1", dwc:day="26", dwc:startDayOfYear="26", dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate"],[dwc:eventDate="2023",dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=NOT_AMENDED, Response.result=, Response.comment="No amendments possible"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Amendment</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Enhancement</td>
+			<td>FilledInFrom</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2073</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>VertNet</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/52</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment TIME CODED Test Completeness ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqcore_7498ca76-c4d4-42e2-8103-acacccbdffa7"></a>Term Name  bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7</th>
 		</tr>
 	</thead>
@@ -2351,6 +2240,117 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8"></a>Term Name  bdqcore:dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Amendment dcterms:license Standardized</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dcterms:license</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dcterms:license="CC0": Response.status=AMENDED, Response.result=dcterms:license="https://creativecommons.org/publicdomain/zero/1.0/legalcode", Response.comment="Input field contains interpretable value"],[dcterms:license="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="dcterms:license contains uninterpretable value "X""]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Amendment</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Enhancement</td>
+			<td>Standardized</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1226</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>VertNet</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/133</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>7ecc692d-e65f-4ea5-9d54-04421ec96ab4</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 	</tbody>
 </table>
@@ -2985,121 +2985,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_f01fb3f9-2f7e-418b-9f51-adf50f202aea"></a>Term Name  bdqcore:f01fb3f9-2f7e-418b-9f51-adf50f202aea</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Amendment dwc:scientificName from dwc:scientificNameID</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-08-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:scientificName</td>
-		</tr>
-		<tr>
-			<td>InformationElements Consulted</td>
-			<td>dwc:scientificNameID</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:scientificNameID="gbif:8102122", dwc:scientificName="": Response.status=FILLED_IN, Response.result=dwc:scientificName="Harpullia pendula F.Muell.", Response.comment="dwc:scientificNameID contains an interpretable value"],[dwc:scientificNameID="gbif:8a", dwc:scientificName="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:scientificNameID does not contain an interpretable value"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Amendment</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Enhancement</td>
-			<td>FilledInFrom</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1152</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>iDigBio</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/71</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Amendment NAME CODED Test VOCABULARY Completeness Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>0127389b-a68d-4393-a84c-aa9c690bd0e7</td>
-		</tr>
-		<tr>
-			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_431467d6-9b4b-48fa-a197-cd5379f5e889"></a>Term Name  bdqcore:431467d6-9b4b-48fa-a197-cd5379f5e889</th>
 		</tr>
 	</thead>
@@ -3207,6 +3092,121 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_f01fb3f9-2f7e-418b-9f51-adf50f202aea"></a>Term Name  bdqcore:f01fb3f9-2f7e-418b-9f51-adf50f202aea</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Amendment dwc:scientificName from dwc:scientificNameID</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2024-08-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:scientificName</td>
+		</tr>
+		<tr>
+			<td>InformationElements Consulted</td>
+			<td>dwc:scientificNameID</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:scientificNameID="gbif:8102122", dwc:scientificName="": Response.status=FILLED_IN, Response.result=dwc:scientificName="Harpullia pendula F.Muell.", Response.comment="dwc:scientificNameID contains an interpretable value"],[dwc:scientificNameID="gbif:8a", dwc:scientificName="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:scientificNameID does not contain an interpretable value"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Amendment</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Enhancement</td>
+			<td>FilledInFrom</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1152</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>iDigBio</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/71</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Amendment NAME CODED Test VOCABULARY Completeness Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>0127389b-a68d-4393-a84c-aa9c690bd0e7</td>
+		</tr>
+		<tr>
+			<td>AmendmentMethod label</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 	</tbody>
 </table>
@@ -4347,21 +4347,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63"></a>Term Name  bdqcore:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</th>
+			<th colspan="2"><a id="bdqcore_b60c8c58-0137-4b6a-97e9-57d8ca5cf248"></a>Term Name  bdqcore:b60c8c58-0137-4b6a-97e9-57d8ca5cf248</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4369,27 +4369,23 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-03</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4405,7 +4401,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
+			<td>Completeness</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -4413,11 +4409,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -4426,21 +4422,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_b21256c2-4bb7-4deb-852d-a9eaa05345e7"></a>Term Name  bdqcore:b21256c2-4bb7-4deb-852d-a9eaa05345e7</th>
+			<th colspan="2"><a id="bdqcore_f5dd74bd-6a22-4792-b675-c7ccf2a2c103"></a>Term Name  bdqcore:f5dd74bd-6a22-4792-b675-c7ccf2a2c103</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4448,23 +4444,27 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2024-08-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
+			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4488,11 +4488,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/24</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 	</tbody>
 </table>
@@ -4576,6 +4580,89 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_7270a362-5f2e-41f0-955a-d7a8eaaf0f17"></a>Term Name  bdqcore:7270a362-5f2e-41f0-955a-d7a8eaaf0f17</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:class Found</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 	</tbody>
 </table>
@@ -4750,81 +4837,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_0e239a55-0f19-4c68-bdbf-20580f27a647"></a>Term Name  bdqcore:0e239a55-0f19-4c68-bdbf-20580f27a647</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2023-06-20</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Likeliness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/87</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_b67f41f4-198c-41e9-9419-ba3919c1be8b"></a>Term Name  bdqcore:b67f41f4-198c-41e9-9419-ba3919c1be8b</th>
 		</tr>
 	</thead>
@@ -4908,21 +4920,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_f041ab17-d834-4586-aa6b-090de2e571a8"></a>Term Name  bdqcore:f041ab17-d834-4586-aa6b-090de2e571a8</th>
+			<th colspan="2"><a id="bdqcore_0e239a55-0f19-4c68-bdbf-20580f27a647"></a>Term Name  bdqcore:0e239a55-0f19-4c68-bdbf-20580f27a647</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4930,23 +4942,23 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2023-06-20</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
+			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4962,7 +4974,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
+			<td>Likeliness</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -4970,564 +4982,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_fbe47441-500f-44c7-a1bd-1e872edc5266"></a>Term Name  bdqcore:fbe47441-500f-44c7-a1bd-1e872edc5266</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/91</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_47ee20d9-5087-4f76-a494-6fea05e50b8b"></a>Term Name  bdqcore:47ee20d9-5087-4f76-a494-6fea05e50b8b</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/99</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_9d5be694-f5da-465d-8c7e-27e6dac69f9f"></a>Term Name  bdqcore:9d5be694-f5da-465d-8c7e-27e6dac69f9f</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-03-21</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/38</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_bac852b5-1ba6-427b-aa8e-02018e99279c"></a>Term Name  bdqcore:bac852b5-1ba6-427b-aa8e-02018e99279c</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/40</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_b60c8c58-0137-4b6a-97e9-57d8ca5cf248"></a>Term Name  bdqcore:b60c8c58-0137-4b6a-97e9-57d8ca5cf248</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2023-09-17</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/58</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_f5dd74bd-6a22-4792-b675-c7ccf2a2c103"></a>Term Name  bdqcore:f5dd74bd-6a22-4792-b675-c7ccf2a2c103</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2024-08-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/104</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_7270a362-5f2e-41f0-955a-d7a8eaaf0f17"></a>Term Name  bdqcore:7270a362-5f2e-41f0-955a-d7a8eaaf0f17</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:class Found</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/77</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -5603,6 +5062,160 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_d71be8d4-1a04-4816-90c5-49808c823651"></a>Term Name  bdqcore:d71be8d4-1a04-4816-90c5-49808c823651</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_38966850-3737-4a67-953c-c231469e0489"></a>Term Name  bdqcore:38966850-3737-4a67-953c-c231469e0489</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/38966850-3737-4a67-953c-c231469e0489-2024-09-19</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -5931,160 +5544,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_d71be8d4-1a04-4816-90c5-49808c823651"></a>Term Name  bdqcore:d71be8d4-1a04-4816-90c5-49808c823651</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/98</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_38966850-3737-4a67-953c-c231469e0489"></a>Term Name  bdqcore:38966850-3737-4a67-953c-c231469e0489</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/38966850-3737-4a67-953c-c231469e0489-2024-09-19</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/20</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_c72fda2d-16e1-4ded-91a5-a7094339d603"></a>Term Name  bdqcore:c72fda2d-16e1-4ded-91a5-a7094339d603</th>
 		</tr>
 	</thead>
@@ -6385,6 +5844,160 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_f041ab17-d834-4586-aa6b-090de2e571a8"></a>Term Name  bdqcore:f041ab17-d834-4586-aa6b-090de2e571a8</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_fbe47441-500f-44c7-a1bd-1e872edc5266"></a>Term Name  bdqcore:fbe47441-500f-44c7-a1bd-1e872edc5266</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dc:type Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -6934,156 +6547,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_1919f212-b7db-4b6e-9697-41a715001bd6"></a>Term Name  bdqcore:1919f212-b7db-4b6e-9697-41a715001bd6</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Consistency</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/67</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161"></a>Term Name  bdqcore:d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2023-09-30</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/88</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_c8250600-de61-4047-9d7c-6e06a38c7994"></a>Term Name  bdqcore:c8250600-de61-4047-9d7c-6e06a38c7994</th>
 		</tr>
 	</thead>
@@ -7309,6 +6772,156 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161"></a>Term Name  bdqcore:d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2023-09-30</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_1919f212-b7db-4b6e-9697-41a715001bd6"></a>Term Name  bdqcore:1919f212-b7db-4b6e-9697-41a715001bd6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Consistency</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -7558,6 +7171,85 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqcore_8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63"></a>Term Name  bdqcore:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-03</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqcore_012eade5-fc64-458a-a13a-a614491bf4e0"></a>Term Name  bdqcore:012eade5-fc64-458a-a13a-a614491bf4e0</th>
 		</tr>
 	</thead>
@@ -7708,6 +7400,239 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_47ee20d9-5087-4f76-a494-6fea05e50b8b"></a>Term Name  bdqcore:47ee20d9-5087-4f76-a494-6fea05e50b8b</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_9d5be694-f5da-465d-8c7e-27e6dac69f9f"></a>Term Name  bdqcore:9d5be694-f5da-465d-8c7e-27e6dac69f9f</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-03-21</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_bac852b5-1ba6-427b-aa8e-02018e99279c"></a>Term Name  bdqcore:bac852b5-1ba6-427b-aa8e-02018e99279c</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -7957,6 +7882,81 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_b21256c2-4bb7-4deb-852d-a9eaa05345e7"></a>Term Name  bdqcore:b21256c2-4bb7-4deb-852d-a9eaa05345e7</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/24</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -8751,21 +8751,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_4e70b0e4-3fd2-4899-802c-439671374eeb"></a>Term Name  bdqcore:4e70b0e4-3fd2-4899-802c-439671374eeb</th>
+			<th colspan="2"><a id="bdqcore_7da5428e-87b2-4ec2-be82-05b9398b7577"></a>Term Name  bdqcore:7da5428e-87b2-4ec2-be82-05b9398b7577</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8773,27 +8773,23 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8809,7 +8805,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
+			<td>Consistency</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -8817,90 +8813,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_0f8b30e2-59dc-46ba-8b91-62049cd1a4e2"></a>Term Name  bdqcore:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/82</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -9122,6 +9039,164 @@ Including MultiRecord Measures
 		<tr>
 			<td>Developed As Github Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/120</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_4e70b0e4-3fd2-4899-802c-439671374eeb"></a>Term Name  bdqcore:4e70b0e4-3fd2-4899-802c-439671374eeb</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_0f8b30e2-59dc-46ba-8b91-62049cd1a4e2"></a>Term Name  bdqcore:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -9375,164 +9450,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_54d290e8-ac48-4f31-8af3-676363573217"></a>Term Name  bdqcore:54d290e8-ac48-4f31-8af3-676363573217</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/105</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_782773c9-7b37-483d-8ce2-c6683ba81882"></a>Term Name  bdqcore:782773c9-7b37-483d-8ce2-c6683ba81882</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/70</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_de661615-b338-4557-af5b-d44a89de40fa"></a>Term Name  bdqcore:de661615-b338-4557-af5b-d44a89de40fa</th>
 		</tr>
 	</thead>
@@ -9683,6 +9600,164 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_54d290e8-ac48-4f31-8af3-676363573217"></a>Term Name  bdqcore:54d290e8-ac48-4f31-8af3-676363573217</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/105</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_782773c9-7b37-483d-8ce2-c6683ba81882"></a>Term Name  bdqcore:782773c9-7b37-483d-8ce2-c6683ba81882</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/70</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 	</tbody>
 </table>
@@ -9932,49 +10007,49 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_7da5428e-87b2-4ec2-be82-05b9398b7577"></a>Term Name  bdqcore:7da5428e-87b2-4ec2-be82-05b9398b7577</th>
+			<th colspan="2"><a id="bdqcore_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8"></a>Term Name  bdqcore:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
+			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
+			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
+			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -9986,7 +10061,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Consistency</td>
+			<td>Completeness</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -9994,11 +10069,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -10007,21 +10082,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e"></a>Term Name  bdqcore:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</th>
+			<th colspan="2"><a id="bdqcore_241a279c-76d5-499b-ab49-a47ad7f8df50"></a>Term Name  bdqcore:241a279c-76d5-499b-ab49-a47ad7f8df50</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
+			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10029,27 +10104,27 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-03</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2024-08-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
+			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10073,86 +10148,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_fcabd2c9-392c-4841-a5d7-e2680c9587ab"></a>Term Name  bdqcore:fcabd2c9-392c-4841-a5d7-e2680c9587ab</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/24</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+			<td>Argument GUID</td>
+			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 	</tbody>
 </table>
@@ -10236,6 +10240,89 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_21541436-641d-45a9-938c-537484d94eb7"></a>Term Name  bdqcore:21541436-641d-45a9-938c-537484d94eb7</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/21541436-641d-45a9-938c-537484d94eb7-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 	</tbody>
 </table>
@@ -10410,81 +10497,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_151b2d29-3460-4ba5-a226-86971dc8ad03"></a>Term Name  bdqcore:151b2d29-3460-4ba5-a226-86971dc8ad03</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2023-06-20</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Likeliness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/87</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_478dee00-98d0-4154-b66c-eca64dbbf86d"></a>Term Name  bdqcore:478dee00-98d0-4154-b66c-eca64dbbf86d</th>
 		</tr>
 	</thead>
@@ -10568,21 +10580,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_4d999a65-a431-4a76-b591-e0d86dcf244b"></a>Term Name  bdqcore:4d999a65-a431-4a76-b591-e0d86dcf244b</th>
+			<th colspan="2"><a id="bdqcore_151b2d29-3460-4ba5-a226-86971dc8ad03"></a>Term Name  bdqcore:151b2d29-3460-4ba5-a226-86971dc8ad03</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
+			<td>MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10590,23 +10602,23 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2023-06-20</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
+			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10622,7 +10634,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
+			<td>Likeliness</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -10630,564 +10642,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_d9493fa0-d90e-41db-95f6-d1c1d243540e"></a>Term Name  bdqcore:d9493fa0-d90e-41db-95f6-d1c1d243540e</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/91</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_4fccf163-9336-4f48-996c-57f5f66e72db"></a>Term Name  bdqcore:4fccf163-9336-4f48-996c-57f5f66e72db</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/99</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_acd8d43e-7a2a-4372-b887-fb53a9972dc9"></a>Term Name  bdqcore:acd8d43e-7a2a-4372-b887-fb53a9972dc9</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-03-21</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/38</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_3b2e4791-1a5a-4087-9e8d-09c67cf8c816"></a>Term Name  bdqcore:3b2e4791-1a5a-4087-9e8d-09c67cf8c816</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/40</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8"></a>Term Name  bdqcore:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2023-09-17</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/58</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_241a279c-76d5-499b-ab49-a47ad7f8df50"></a>Term Name  bdqcore:241a279c-76d5-499b-ab49-a47ad7f8df50</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2024-08-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/104</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_21541436-641d-45a9-938c-537484d94eb7"></a>Term Name  bdqcore:21541436-641d-45a9-938c-537484d94eb7</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/21541436-641d-45a9-938c-537484d94eb7-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/77</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -11263,6 +10722,160 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_942f63bd-d19d-4214-bf8e-cec0055b8909"></a>Term Name  bdqcore:942f63bd-d19d-4214-bf8e-cec0055b8909</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_fedf27b2-e01d-459f-98fc-7f0f39e3d4be"></a>Term Name  bdqcore:fedf27b2-e01d-459f-98fc-7f0f39e3d4be</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2024-09-19</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -11591,160 +11204,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_942f63bd-d19d-4214-bf8e-cec0055b8909"></a>Term Name  bdqcore:942f63bd-d19d-4214-bf8e-cec0055b8909</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/98</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_fedf27b2-e01d-459f-98fc-7f0f39e3d4be"></a>Term Name  bdqcore:fedf27b2-e01d-459f-98fc-7f0f39e3d4be</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2024-09-19</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/20</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_6354376c-0cf2-435b-be40-850769c5a18a"></a>Term Name  bdqcore:6354376c-0cf2-435b-be40-850769c5a18a</th>
 		</tr>
 	</thead>
@@ -12045,6 +11504,160 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_4d999a65-a431-4a76-b591-e0d86dcf244b"></a>Term Name  bdqcore:4d999a65-a431-4a76-b591-e0d86dcf244b</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_d9493fa0-d90e-41db-95f6-d1c1d243540e"></a>Term Name  bdqcore:d9493fa0-d90e-41db-95f6-d1c1d243540e</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -12594,156 +12207,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_f375a3fd-4cf5-4ef4-955e-d71762ede2d8"></a>Term Name  bdqcore:f375a3fd-4cf5-4ef4-955e-d71762ede2d8</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Consistency</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/67</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_f22539ef-029b-4edb-ad17-add4363f7395"></a>Term Name  bdqcore:f22539ef-029b-4edb-ad17-add4363f7395</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2023-09-30</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/88</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_d41a731b-2e2b-4442-9217-4c375ae92926"></a>Term Name  bdqcore:d41a731b-2e2b-4442-9217-4c375ae92926</th>
 		</tr>
 	</thead>
@@ -12969,6 +12432,156 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_f22539ef-029b-4edb-ad17-add4363f7395"></a>Term Name  bdqcore:f22539ef-029b-4edb-ad17-add4363f7395</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2023-09-30</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_f375a3fd-4cf5-4ef4-955e-d71762ede2d8"></a>Term Name  bdqcore:f375a3fd-4cf5-4ef4-955e-d71762ede2d8</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Consistency</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -13218,6 +12831,85 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqcore_cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e"></a>Term Name  bdqcore:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-03</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqcore_465d7ac1-d193-46c0-a302-56a9ef99215f"></a>Term Name  bdqcore:465d7ac1-d193-46c0-a302-56a9ef99215f</th>
 		</tr>
 	</thead>
@@ -13368,6 +13060,239 @@ Including MultiRecord Measures
 		<tr>
 			<td>Github Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_4fccf163-9336-4f48-996c-57f5f66e72db"></a>Term Name  bdqcore:4fccf163-9336-4f48-996c-57f5f66e72db</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_acd8d43e-7a2a-4372-b887-fb53a9972dc9"></a>Term Name  bdqcore:acd8d43e-7a2a-4372-b887-fb53a9972dc9</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-03-21</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_3b2e4791-1a5a-4087-9e8d-09c67cf8c816"></a>Term Name  bdqcore:3b2e4791-1a5a-4087-9e8d-09c67cf8c816</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -13617,6 +13542,81 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_fcabd2c9-392c-4841-a5d7-e2680c9587ab"></a>Term Name  bdqcore:fcabd2c9-392c-4841-a5d7-e2680c9587ab</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/24</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -14411,21 +14411,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_a8aee02c-cf7c-4104-a601-d8afc4f9cbe2"></a>Term Name  bdqcore:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</th>
+			<th colspan="2"><a id="bdqcore_ef05b45b-13b8-4877-9e9d-fa44b332d83c"></a>Term Name  bdqcore:ef05b45b-13b8-4877-9e9d-fa44b332d83c</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
+			<td>MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14433,27 +14433,23 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14469,7 +14465,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
+			<td>Consistency</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -14477,90 +14473,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_b4d6a61c-64ff-4da0-974c-63a73fd20836"></a>Term Name  bdqcore:b4d6a61c-64ff-4da0-974c-63a73fd20836</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/82</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
 </table>
@@ -14782,6 +14699,164 @@ Including MultiRecord Measures
 		<tr>
 			<td>Developed As Github Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/120</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_a8aee02c-cf7c-4104-a601-d8afc4f9cbe2"></a>Term Name  bdqcore:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_b4d6a61c-64ff-4da0-974c-63a73fd20836"></a>Term Name  bdqcore:b4d6a61c-64ff-4da0-974c-63a73fd20836</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
@@ -15035,164 +15110,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_2a9d4cfd-815a-46e0-bb51-60724582b762"></a>Term Name  bdqcore:2a9d4cfd-815a-46e0-bb51-60724582b762</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/105</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_0df03601-3768-4805-906a-bbd0a41b0fda"></a>Term Name  bdqcore:0df03601-3768-4805-906a-bbd0a41b0fda</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Measure</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>MultiRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/70</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_e0b8cff1-3322-40d2-b8b2-b99fc9ae130a"></a>Term Name  bdqcore:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a</th>
 		</tr>
 	</thead>
@@ -15343,6 +15260,164 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_2a9d4cfd-815a-46e0-bb51-60724582b762"></a>Term Name  bdqcore:2a9d4cfd-815a-46e0-bb51-60724582b762</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/105</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_0df03601-3768-4805-906a-bbd0a41b0fda"></a>Term Name  bdqcore:0df03601-3768-4805-906a-bbd0a41b0fda</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Measure</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>MultiRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/70</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 	</tbody>
 </table>
@@ -15592,61 +15667,73 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_ef05b45b-13b8-4877-9e9d-fa44b332d83c"></a>Term Name  bdqcore:ef05b45b-13b8-4877-9e9d-fa44b332d83c</th>
+			<th colspan="2"><a id="bdqcore_ac2b7648-d5f9-48ca-9b07-8ad5879a2536"></a>Term Name  bdqcore:ac2b7648-d5f9-48ca-9b07-8ad5879a2536</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
+			<td>VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent</td>
+			<td>Validation dwc:basisOfRecord Not Empty</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2025-03-07</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Is there a value in dwc:basisOfRecord?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
+			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
+			<td>dwc:basisOfRecord</td>
 		</tr>
 		<tr>
-			<td>Notes</td>
-			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
+			<td>Examples</td>
+			<td>[dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:NotEmpty"],[dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
-			<td>Measure</td>
+			<td>Validation</td>
 		</tr>
 		<tr>
 			<td>Resource Type</td>
-			<td>MultiRecord</td>
+			<td>SingleRecord</td>
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Consistency</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -15654,11 +15741,19 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -15667,21 +15762,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_7e0c0418-fe16-4a39-98bd-80e19d95b9d1"></a>Term Name  bdqcore:7e0c0418-fe16-4a39-98bd-80e19d95b9d1</th>
+			<th colspan="2"><a id="bdqcore_42408a00-bf71-4892-a399-4325e2bc1fb8"></a>Term Name  bdqcore:42408a00-bf71-4892-a399-4325e2bc1fb8</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>VALIDATION_GEODETICDATUM_STANDARD</td>
+			<td>VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Vaildation dwc:geodeticDatum Standard</td>
+			<td>Validation dwc:basisOfRecord Standard</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -15689,35 +15784,39 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-08-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>dwc:geodeticDatum</td>
+			<td>dwc:basisOfRecord</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</td>
+			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 7030 is a bare number without an authority.]</td>
+			<td>[dwc:basisOfRecord="Taxon": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord matches a standard label of one of the Darwin Core classes"],[dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord does not exactly match a standard label of one of the Darwin Core classes"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -15737,31 +15836,35 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342</td>
 		</tr>
 		<tr>
 			<td>Source</td>
-			<td>ALA, GBIF</td>
+			<td>VertNet</td>
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
-			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -15873,6 +15976,113 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_2cd6884e-3d14-4476-94f7-1191cfff309b"></a>Term Name  bdqcore:2cd6884e-3d14-4476-94f7-1191cfff309b</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:class Found</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:class</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority"],[dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Found</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1345</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/77</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -16103,105 +16313,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_1bf0e210-6792-4128-b8cc-ab6828aa4871"></a>Term Name  bdqcore:1bf0e210-6792-4128-b8cc-ab6828aa4871</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation Coordinates Not Zero</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2023-06-20</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>A record with 0.0 is interpreted as the string "0"</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:decimalLatitude="21.0534", dwc:decimalLongitude="81.0554": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude and dwc:decimalLongitude are not zero"],[dwc:decimalLatitude="0", dwc:decimalLongitude="0",: Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude and dwc:decimalLongitude are zero"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Likeliness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Likely</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>ALA, GBIF, OBIS</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/87</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_b9c184ce-a859-410c-9d12-71a338200380"></a>Term Name  bdqcore:b9c184ce-a859-410c-9d12-71a338200380</th>
 		</tr>
 	</thead>
@@ -16317,21 +16428,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_374b091a-fc90-4791-91e5-c1557c649169"></a>Term Name  bdqcore:374b091a-fc90-4791-91e5-c1557c649169</th>
+			<th colspan="2"><a id="bdqcore_1bf0e210-6792-4128-b8cc-ab6828aa4871"></a>Term Name  bdqcore:1bf0e210-6792-4128-b8cc-ab6828aa4871</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>VALIDATION_DCTYPE_NOTEMPTY</td>
+			<td>VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Validation dc:type Not Empty</td>
+			<td>Validation Coordinates Not Zero</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -16339,130 +16450,31 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2023-06-20</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is there a value in dc:type?</td>
+			<td>Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>dc:type</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdq:NotEmpty"],[dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/103</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_cdaabb0d-a863-49d0-bc0f-738d771acba5"></a>Term Name  bdqcore:cdaabb0d-a863-49d0-bc0f-738d771acba5</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dc:type Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Does the value in dc:type occur as a value in the DCMI type vocabulary?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dc:type</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+			<td>dwc:decimalLatitude,dwc:decimalLongitude</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a Test implementation without an external call</td>
+			<td>A record with 0.0 is interpreted as the string "0"</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dc:type="Event": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type matches a term in DCMI Vocabulary"],[dc:type="StillerImage": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type does not match terms in DCMI Vocabulary"]</td>
+			<td>[dwc:decimalLatitude="21.0534", dwc:decimalLongitude="81.0554": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude and dwc:decimalLongitude are not zero"],[dwc:decimalLatitude="0", dwc:decimalLongitude="0",: Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude and dwc:decimalLongitude are zero"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -16474,316 +16486,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
+			<td>Likeliness</td>
 		</tr>
 		<tr>
 			<td>Criterion</td>
-			<td>Standard</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>VertNet</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/91</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_15f78619-811a-4c6f-997a-a4c7888ad849"></a>Term Name  bdqcore:15f78619-811a-4c6f-997a-a4c7888ad849</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dcterms:license Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in dcterms:license?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dcterms:license</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"],[dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/99</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_3136236e-04b6-49ea-8b34-a65f25e3aba1"></a>Term Name  bdqcore:3136236e-04b6-49ea-8b34-a65f25e3aba1</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dcterms:license Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-03-21</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Does the value of dcterms:license occur in bdq:sourceAuthority?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dcterms:license</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. The canonical form of the Creative Commons license IRI has nothing after the version (e.g., https://creativecommons.org/licenses/by/4.0/), but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code. However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI. As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dcterms:license="https://creativecommons.org/licenses/by/4.0/": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment="dcterms:license matches a term in the bdq:sourceAuthority"],[dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdq:sourceAuthority"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Standard</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>John Wieczorek</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/38</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_58486cb6-1114-4a8a-ba1e-bd89cfe887e9"></a>Term Name  bdqcore:58486cb6-1114-4a8a-ba1e-bd89cfe887e9</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_LOCATION_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dcterms:Location Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in any of the Darwin Core spatial terms that could specify a location?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryCode,dwc:stateProvince,dwc:county,dwc:municipality,dwc:waterBody,dwc:island,dwc:islandGroup,dwc:locality,dwc:locationID,dwc:verbatimLocality,dwc:decimalLatitude,dwc:decimalLongitude,dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:footprintWKT</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>Only fails if all of the relevant fields of the Darwin Core Location class are EMPTY or do not exist. Relevant Darwin Core fields include dwc:locationID, dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:waterBody, dwc:islandGroup, dwc:island, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:locality, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT. Elevation and/or depth alone are deemed insufficient to meaningfully locate a position on the earth.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdq:NotEmpty"],[dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
+			<td>Likely</td>
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
@@ -16791,340 +16498,27 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2193</td>
 		</tr>
 		<tr>
 			<td>Source</td>
-			<td>Lee Belbin</td>
+			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/40</td>
+			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
-			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_ac2b7648-d5f9-48ca-9b07-8ad5879a2536"></a>Term Name  bdqcore:ac2b7648-d5f9-48ca-9b07-8ad5879a2536</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:basisOfRecord Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in dwc:basisOfRecord?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:basisOfRecord</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:NotEmpty"],[dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L207</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/58</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_42408a00-bf71-4892-a399-4325e2bc1fb8"></a>Term Name  bdqcore:42408a00-bf71-4892-a399-4325e2bc1fb8</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:basisOfRecord Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2024-08-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:basisOfRecord</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:basisOfRecord="Taxon": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord matches a standard label of one of the Darwin Core classes"],[dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord does not exactly match a standard label of one of the Darwin Core classes"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Standard</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>VertNet</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/104</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_2cd6884e-3d14-4476-94f7-1191cfff309b"></a>Term Name  bdqcore:2cd6884e-3d14-4476-94f7-1191cfff309b</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:class Found</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:class</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority"],[dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Found</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1345</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/77</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_CLASS_FOUND</td>
+			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -17224,6 +16618,204 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_853b79a2-b314-44a2-ae46-34a1e7ed85e4"></a>Term Name  bdqcore:853b79a2-b314-44a2-ae46-34a1e7ed85e4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:countryCode Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-10</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in dwc:countryCode?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:countryCode</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>This Test will return 'NOT_COMPLIANT' for records on the "High seas" where dwc:countryCode is bdq:Empty. We recommend that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ" and dwc:country = "High seas" until an agreement has been made.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdq:NotEmpty"],[dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/98</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_0493bcfb-652e-4d17-815b-b0cce0742fbe"></a>Term Name  bdqcore:0493bcfb-652e-4d17-815b-b0cce0742fbe</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:countryCode Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-19</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:countryCode</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:countryCode="GL": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value"],[dwc:countryCode="GRL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Standard</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/20</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -17656,204 +17248,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_853b79a2-b314-44a2-ae46-34a1e7ed85e4"></a>Term Name  bdqcore:853b79a2-b314-44a2-ae46-34a1e7ed85e4</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:countryCode Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2024-11-10</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in dwc:countryCode?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:countryCode</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>This Test will return 'NOT_COMPLIANT' for records on the "High seas" where dwc:countryCode is bdq:Empty. We recommend that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ" and dwc:country = "High seas" until an agreement has been made.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdq:NotEmpty"],[dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/98</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_0493bcfb-652e-4d17-815b-b0cce0742fbe"></a>Term Name  bdqcore:0493bcfb-652e-4d17-815b-b0cce0742fbe</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:countryCode Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-07</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2024-09-19</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:countryCode</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:countryCode="GL": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value"],[dwc:countryCode="GRL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Standard</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TG2</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/20</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_dc8aae4b-134f-4d75-8a71-c4186239178e"></a>Term Name  bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e</th>
 		</tr>
 	</thead>
@@ -18250,6 +17644,204 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DAY_STANDARD</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_374b091a-fc90-4791-91e5-c1557c649169"></a>Term Name  bdqcore:374b091a-fc90-4791-91e5-c1557c649169</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dc:type Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in dc:type?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dc:type</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdq:NotEmpty"],[dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L308</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TG2</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/103</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_cdaabb0d-a863-49d0-bc0f-738d771acba5"></a>Term Name  bdqcore:cdaabb0d-a863-49d0-bc0f-738d771acba5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dc:type Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Does the value in dc:type occur as a value in the DCMI type vocabulary?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dc:type</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a Test implementation without an external call</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dc:type="Event": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type matches a term in DCMI Vocabulary"],[dc:type="StillerImage": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type does not match terms in DCMI Vocabulary"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Standard</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>VertNet</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/91</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -18959,204 +18551,6 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_5618f083-d55a-4ac2-92b5-b9fb227b832f"></a>Term Name  bdqcore:5618f083-d55a-4ac2-92b5-b9fb227b832f</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_EVENT_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:Event Consistent</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:eventDate,dwc:day,dwc:month,dwc:year,dwc:startDayOfYear,dwc:endDayOfYear</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>This Test does not take a position on whether the value in dwc:eventDate, or the values in the atomic terms are correct, it simply points out the presence of inconsistencies. For this Test, dwc:eventTime is explicitly ignored. It may be useful to consider an additional Test that does evaluate dwc:eventTime and dwc:eventDate. In that case, but not in this Test, if the time is present in both dwc:eventDate and dwc:eventTime, and it is inconsistent, it may indicate an error in the dwc:eventDate, thus making it a problem that someone needs to evaluate. This Test will only assert consistency if the data are both internally consistent and are compliant with the term definitions, for example dwc:day, by its definition, can only be the day of an dwc:eventDate that has a precision of a day or better and is not a range that spans more than a single day. A dwc:day that was internally consistent with the first day of the year (that is, 1) of an dwc:eventDate that only had precision to a year would be consistent internally, but not consistent with the Darwin Core term definitions, and would not return COMPLIANT from this Test.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-15T12:34", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:day, dwc:month and dwc:year match dwc:eventDate"],[dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-16T12:34", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:day does not match dwc:eventDate"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Consistency</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Consistent</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1754</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>GBIF</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/67</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENT_CONSISTENT</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_41267642-60ff-4116-90eb-499fee2cd83f"></a>Term Name  bdqcore:41267642-60ff-4116-90eb-499fee2cd83f</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:Event Temporal Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2023-09-30</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:eventDate,dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear,dwc:verbatimEventDate</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to user of the data) and dwc:eventTime (which is rare) are not included.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="1962-11-01T10:00-0600", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdq:NotEmpty"],[dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1968</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>@Tasilee</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/88</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqcore_3cff4dc4-72e9-4abe-9bf3-8a30f1618432"></a>Term Name  bdqcore:3cff4dc4-72e9-4abe-9bf3-8a30f1618432</th>
 		</tr>
 	</thead>
@@ -19454,6 +18848,204 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_EVENTDATE_STANDARD</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_41267642-60ff-4116-90eb-499fee2cd83f"></a>Term Name  bdqcore:41267642-60ff-4116-90eb-499fee2cd83f</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:Event Temporal Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2023-09-30</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:eventDate,dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear,dwc:verbatimEventDate</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to user of the data) and dwc:eventTime (which is rare) are not included.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="1962-11-01T10:00-0600", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdq:NotEmpty"],[dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1968</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>@Tasilee</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/88</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_5618f083-d55a-4ac2-92b5-b9fb227b832f"></a>Term Name  bdqcore:5618f083-d55a-4ac2-92b5-b9fb227b832f</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:Event Consistent</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:eventDate,dwc:day,dwc:month,dwc:year,dwc:startDayOfYear,dwc:endDayOfYear</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>This Test does not take a position on whether the value in dwc:eventDate, or the values in the atomic terms are correct, it simply points out the presence of inconsistencies. For this Test, dwc:eventTime is explicitly ignored. It may be useful to consider an additional Test that does evaluate dwc:eventTime and dwc:eventDate. In that case, but not in this Test, if the time is present in both dwc:eventDate and dwc:eventTime, and it is inconsistent, it may indicate an error in the dwc:eventDate, thus making it a problem that someone needs to evaluate. This Test will only assert consistency if the data are both internally consistent and are compliant with the term definitions, for example dwc:day, by its definition, can only be the day of an dwc:eventDate that has a precision of a day or better and is not a range that spans more than a single day. A dwc:day that was internally consistent with the first day of the year (that is, 1) of an dwc:eventDate that only had precision to a year would be consistent internally, but not consistent with the Darwin Core term definitions, and would not return COMPLIANT from this Test.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-15T12:34", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:day, dwc:month and dwc:year match dwc:eventDate"],[dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-16T12:34", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:day does not match dwc:eventDate"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Consistency</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Consistent</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1754</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>GBIF</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/67</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -19775,6 +19367,109 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqcore_7e0c0418-fe16-4a39-98bd-80e19d95b9d1"></a>Term Name  bdqcore:7e0c0418-fe16-4a39-98bd-80e19d95b9d1</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Vaildation dwc:geodeticDatum Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-03</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:geodeticDatum</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 7030 is a bare number without an authority.]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Standard</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1500</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>ALA, GBIF</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/59</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqcore_125b5493-052d-4a0d-a3e1-ed5bf792689e"></a>Term Name  bdqcore:125b5493-052d-4a0d-a3e1-ed5bf792689e</th>
 		</tr>
 	</thead>
@@ -19973,6 +19668,311 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_15f78619-811a-4c6f-997a-a4c7888ad849"></a>Term Name  bdqcore:15f78619-811a-4c6f-997a-a4c7888ad849</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dcterms:license Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in dcterms:license?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dcterms:license</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"],[dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/99</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_3136236e-04b6-49ea-8b34-a65f25e3aba1"></a>Term Name  bdqcore:3136236e-04b6-49ea-8b34-a65f25e3aba1</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dcterms:license Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2024-03-21</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Does the value of dcterms:license occur in bdq:sourceAuthority?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dcterms:license</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. The canonical form of the Creative Commons license IRI has nothing after the version (e.g., https://creativecommons.org/licenses/by/4.0/), but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code. However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI. As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dcterms:license="https://creativecommons.org/licenses/by/4.0/": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment="dcterms:license matches a term in the bdq:sourceAuthority"],[dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdq:sourceAuthority"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Standard</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>John Wieczorek</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/38</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_58486cb6-1114-4a8a-ba1e-bd89cfe887e9"></a>Term Name  bdqcore:58486cb6-1114-4a8a-ba1e-bd89cfe887e9</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dcterms:Location Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-07</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in any of the Darwin Core spatial terms that could specify a location?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryCode,dwc:stateProvince,dwc:county,dwc:municipality,dwc:waterBody,dwc:island,dwc:islandGroup,dwc:locality,dwc:locationID,dwc:verbatimLocality,dwc:decimalLatitude,dwc:decimalLongitude,dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:footprintWKT</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>Only fails if all of the relevant fields of the Darwin Core Location class are EMPTY or do not exist. Relevant Darwin Core fields include dwc:locationID, dwc:higherGeographyID, dwc:higherGeography, dwc:continent, dwc:waterBody, dwc:islandGroup, dwc:island, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality, dwc:locality, dwc:verbatimLocality, dwc:decimalLatitude, dwc:decimalLongitude, dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:footprintWKT. Elevation and/or depth alone are deemed insufficient to meaningfully locate a position on the earth.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdq:NotEmpty"],[dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>Lee Belbin</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/40</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -21435,21 +21435,21 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqcore_3f335517-f442-4b98-b149-1e87ff16de45"></a>Term Name  bdqcore:3f335517-f442-4b98-b149-1e87ff16de45</th>
+			<th colspan="2"><a id="bdqcore_17f03f1f-f74d-40c0-8071-2927cfc9487b"></a>Term Name  bdqcore:17f03f1f-f74d-40c0-8071-2927cfc9487b</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Label</td>
-			<td>VALIDATION_SCIENTIFICNAME_FOUND</td>
+			<td>VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Validation dwc:scientificName Found</td>
+			<td>Validation Polynomial Consistent</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -21457,39 +21457,31 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?</td>
+			<td>Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>dwc:scientificName</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>dwc:scientificName,dwc:genericName,dwc:specificEpithet,dwc:infraspecificEpithet</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdq:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.</td>
+			<td>If dwc:specificEpithet is populated then this Test expects that the value dwc:specificEpithet is the name of the second or species epithet of the scientificName. If dwc:genericName is populated, this Test expects that the value of dwc:genus is the first word of the value of dwc:scientificName. If dwc:specificEpithet is populated then this Test expects that the value dwc:specificEpithet is the name of the first or species epithet of the scientificName. If dwc:infraspecificEpithet is populated, then this Test expects that the value of dwc:infraspecificEpithet is the name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in the bdq:sourceAuthority"],[dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:scientificName="Hakea decurrens ssp. physocarpa", dwc:genericName="", dwc:specificEpithet="decurrens", dwc:infraspecificEpithet="physocarpa": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Values of all non-empty atomic terms are found in the polynomial"],[dwc:scientificName="Hakea decurrens", dwc:genericName="Hakea", dwc:specificEpithet="decurrens", dwc:infraspecificEpithet="physocarpa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is inconsistent with atomic parts (dwc:genus, dwc:specificEpithet and dwc:infraspecificEpithet)"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21501,11 +21493,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
+			<td>Consistency</td>
 		</tr>
 		<tr>
 			<td>Criterion</td>
-			<td>Found</td>
+			<td>Consistent</td>
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
@@ -21513,126 +21505,27 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L212</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1570</td>
 		</tr>
 		<tr>
 			<td>Source</td>
-			<td>ALA</td>
+			<td>Paula Zermoglio</td>
 		</tr>
 		<tr>
 			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
 			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
+			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_7c4b9498-a8d9-4ebb-85f1-9f200c788595"></a>Term Name  bdqcore:7c4b9498-a8d9-4ebb-85f1-9f200c788595</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:scientificName Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in dwc:scientificName?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:scientificName</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdq:NotEmpty"],[dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1426</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>ALA,GBIF,OBIS</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/82</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -21922,6 +21815,212 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_3f335517-f442-4b98-b149-1e87ff16de45"></a>Term Name  bdqcore:3f335517-f442-4b98-b149-1e87ff16de45</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:scientificName Found</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2023-09-17</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:scientificName</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdq:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in the bdq:sourceAuthority"],[dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in the bdq:sourceAuthority"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Found</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L212</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>ALA</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/46</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_7c4b9498-a8d9-4ebb-85f1-9f200c788595"></a>Term Name  bdqcore:7c4b9498-a8d9-4ebb-85f1-9f200c788595</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:scientificName Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in dwc:scientificName?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:scientificName</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdq:NotEmpty"],[dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1426</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>ALA,GBIF,OBIS</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/82</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -22255,6 +22354,212 @@ Including MultiRecord Measures
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqcore_14da5b87-8304-4b2b-911d-117e3c29e890"></a>Term Name  bdqcore:14da5b87-8304-4b2b-911d-117e3c29e890</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:taxonRank Not Empty</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Is there a value in dwc:taxonRank?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:taxonRank</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdq:NotEmpty"],[dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdq:Empty"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Completeness</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>NotEmpty</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2127</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TDWG2018</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/161</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqcore_7bdb13a4-8a51-4ee5-be7f-20693fdb183e"></a>Term Name  bdqcore:7bdb13a4-8a51-4ee5-be7f-20693fdb183e</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Label</td>
+			<td>VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Preferred Label</td>
+			<td>Validation dwc:taxonRank Standard</td>
+		</tr>
+		<tr>
+			<td>Term IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e</td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2025-03-06</td>
+		</tr>
+		<tr>
+			<td>Term Version IRI</td>
+			<td>https://rs.tdwg.org/bdqcore/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2023-09-18</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?</td>
+		</tr>
+		<tr>
+			<td>Expected Response</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+		</tr>
+		<tr>
+			<td>Specification GUID</td>
+			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+		</tr>
+		<tr>
+			<td>InformationElements ActedUpon</td>
+			<td>dwc:taxonRank</td>
+		</tr>
+		<tr>
+			<td>Parameters</td>
+			<td>bdq:sourceAuthority</td>
+		</tr>
+		<tr>
+			<td>SourceAuthorities/Defaults</td>
+			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
+		</tr>
+		<tr>
+			<td>Notes</td>
+			<td>This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
+		</tr>
+		<tr>
+			<td>Examples</td>
+			<td>[dwc:taxonRank="kingdom": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank has an equivalent in the bdq:sourceAuthority"],[dwc:taxonRank="sp.": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank does not have an equivalent in the bdq:sourceAuthority"]</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>Validation</td>
+		</tr>
+		<tr>
+			<td>Resource Type</td>
+			<td>SingleRecord</td>
+		</tr>
+		<tr>
+			<td>Data Quality Dimension</td>
+			<td>Conformance</td>
+		</tr>
+		<tr>
+			<td>Criterion</td>
+			<td>Standard</td>
+		</tr>
+		<tr>
+			<td>Example Implementations</td>
+			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+		</tr>
+		<tr>
+			<td>Example Implementation Source Code</td>
+			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2161</td>
+		</tr>
+		<tr>
+			<td>Source</td>
+			<td>TDWG2018</td>
+		</tr>
+		<tr>
+			<td>Developed As Github Issue</td>
+			<td>https://github.com/tdwg/bdq/issues/162</td>
+		</tr>
+		<tr>
+			<td>Github Issue Labels</td>
+			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod label</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<a href='#3-Term-Indices'>[🠱]</a>
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqcore_06851339-843f-4a43-8422-4e61b9a00e75"></a>Term Name  bdqcore:06851339-843f-4a43-8422-4e61b9a00e75</th>
 		</tr>
 	</thead>
@@ -22457,212 +22762,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_14da5b87-8304-4b2b-911d-117e3c29e890"></a>Term Name  bdqcore:14da5b87-8304-4b2b-911d-117e3c29e890</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_TAXONRANK_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:taxonRank Not Empty</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is there a value in dwc:taxonRank?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:taxonRank</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdq:NotEmpty"],[dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdq:Empty"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>NotEmpty</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2127</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TDWG2018</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/161</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_7bdb13a4-8a51-4ee5-be7f-20693fdb183e"></a>Term Name  bdqcore:7bdb13a4-8a51-4ee5-be7f-20693fdb183e</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_TAXONRANK_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation dwc:taxonRank Standard</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:taxonRank</td>
-		</tr>
-		<tr>
-			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
-		</tr>
-		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:taxonRank="kingdom": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank has an equivalent in the bdq:sourceAuthority"],[dwc:taxonRank="sp.": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank does not have an equivalent in the bdq:sourceAuthority"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Conformance</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Standard</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2161</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>TDWG2018</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/162</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -22980,105 +23079,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_YEAR_NOTEMPTY</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<a href='#3-Term-Indices'>[🠱]</a>
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqcore_17f03f1f-f74d-40c0-8071-2927cfc9487b"></a>Term Name  bdqcore:17f03f1f-f74d-40c0-8071-2927cfc9487b</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Label</td>
-			<td>VALIDATION_POLYNOMIAL_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Preferred Label</td>
-			<td>Validation Polynomial Consistent</td>
-		</tr>
-		<tr>
-			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b</td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2025-03-06</td>
-		</tr>
-		<tr>
-			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2023-09-18</td>
-		</tr>
-		<tr>
-			<td>Description</td>
-			<td>Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet?</td>
-		</tr>
-		<tr>
-			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
-		</tr>
-		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
-		</tr>
-		<tr>
-			<td>InformationElements ActedUpon</td>
-			<td>dwc:scientificName,dwc:genericName,dwc:specificEpithet,dwc:infraspecificEpithet</td>
-		</tr>
-		<tr>
-			<td>Notes</td>
-			<td>If dwc:specificEpithet is populated then this Test expects that the value dwc:specificEpithet is the name of the second or species epithet of the scientificName. If dwc:genericName is populated, this Test expects that the value of dwc:genus is the first word of the value of dwc:scientificName. If dwc:specificEpithet is populated then this Test expects that the value dwc:specificEpithet is the name of the first or species epithet of the scientificName. If dwc:infraspecificEpithet is populated, then this Test expects that the value of dwc:infraspecificEpithet is the name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.</td>
-		</tr>
-		<tr>
-			<td>Examples</td>
-			<td>[dwc:scientificName="Hakea decurrens ssp. physocarpa", dwc:genericName="", dwc:specificEpithet="decurrens", dwc:infraspecificEpithet="physocarpa": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Values of all non-empty atomic terms are found in the polynomial"],[dwc:scientificName="Hakea decurrens", dwc:genericName="Hakea", dwc:specificEpithet="decurrens", dwc:infraspecificEpithet="physocarpa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is inconsistent with atomic parts (dwc:genus, dwc:specificEpithet and dwc:infraspecificEpithet)"]</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>Validation</td>
-		</tr>
-		<tr>
-			<td>Resource Type</td>
-			<td>SingleRecord</td>
-		</tr>
-		<tr>
-			<td>Data Quality Dimension</td>
-			<td>Consistency</td>
-		</tr>
-		<tr>
-			<td>Criterion</td>
-			<td>Consistent</td>
-		</tr>
-		<tr>
-			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
-		</tr>
-		<tr>
-			<td>Example Implementation Source Code</td>
-			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1570</td>
-		</tr>
-		<tr>
-			<td>Source</td>
-			<td>Paula Zermoglio</td>
-		</tr>
-		<tr>
-			<td>Developed As Github Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/101</td>
-		</tr>
-		<tr>
-			<td>Github Issue Labels</td>
-			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
-		</tr>
-		<tr>
-			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
