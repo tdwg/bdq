@@ -118,12 +118,20 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The following namespace abbreviations are used in this document:
 
-| Prefix | IRI |
-| --- | --- |
-| bdq:     | https://rs.tdwg.org/bdq/terms/   |
-| bdqdim:  | https://rs.tdwg.org/bdqdim/terms |
-| bdqffdq: | http://rs.tdwg.org/bdq/bdqffdq/  |
-| bbdcore: | http://rs.tdwg.org/bdq/bdqcore/  |
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| oa:          | https://www.w3.org/TR/annotation-vocab/     |
+| owl:         | http://www.w3.org/2002/07/owl#              |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Key to Vocabulary Terms
 

@@ -110,23 +110,21 @@ This document is non-normative.
 
 The following namespace abbreviations are used in this document:
 
-| **Prefix**   | **Namespace**                                    |
-|--------------|--------------------------------------------------|
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
-| dc           | https://purl.org/dc/elements/1.1/                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| dwciri       | http://rs.tdwg.org/dwc/iri/                      |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
-| owl          | http://www.w3.org/2002/07/owl#                   |
-| xsd          | http://www.w3.org/2001/XMLSchema#                |
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dc:          | https://purl.org/dc/elements/1.1/           |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| oa:          | https://www.w3.org/TR/annotation-vocab/     |
+| owl:         | http://www.w3.org/2002/07/owl#              |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
+| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ## 2 Historical Context
 

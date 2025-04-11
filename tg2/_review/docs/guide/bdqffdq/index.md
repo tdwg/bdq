@@ -109,15 +109,19 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The following namespace abbreviations are used in this document:
 
-| **Prefix**   | **Namespace**                                    |
-|--------------|--------------------------------------------------|
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms                |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms                 |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| owl          | http://www.w3.org/2002/07/owl#                   |
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| owl:         | http://www.w3.org/2002/07/owl#              |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ## 2 Use of Terms (normative) 
 

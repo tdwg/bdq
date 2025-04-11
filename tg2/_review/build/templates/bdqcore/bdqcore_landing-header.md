@@ -111,19 +111,22 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The following namespace abbreviations are used in this document:
 
-| Prefix |  IRI |
-| ------ |  --- |
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms                |
-| dcterms      | https://purl.org/dc/elements/1.1/                |
-| dwc          | http://rs.tdwg.org/dwc/terms/                    |
-| oa           | https://www.w3.org/TR/annotation-vocab/          |
-| skos         | http://www.w3.org/2004/02/skos/core#             |
-| rdfs         | http://www.w3.org/2000/01/rdf-schema#            |
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms            |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dc:          | https://purl.org/dc/elements/1.1/           |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| oa:          | https://www.w3.org/TR/annotation-vocab/     |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 2 A Brief Context for the BDQ Core Tests
 
@@ -290,14 +293,14 @@ The technical (normative) details of the BDQ Core Test terms (those in the `bdqc
 
 The technical definitions of the bdqcore: terms are supported by terms in several additional namespaces in the BDQ Core Standard, namely `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
 
-| Prefix  | Technical List of Terms |
-| ------- | ----------------------- |
-| bdqcore | [BDQ Core Tests and Assertions List of Terms](../list/bdqcore/index.md) |
-| bdq     | [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) |
-| bdqcrit | [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) |
-| bdqdim  | [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) |
-| bdqenh  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) |
-| bdqffdq | [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md) |
+| **Abbreviation**  | **Technical List of Terms** |
+| -------- | ----------------------- |
+| bdq:     | [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) |
+| bdqcore: | [BDQ Core Tests and Assertions List of Terms](../list/bdqcore/index.md) |
+| bdqcrit: | [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) |
+| bdqdim:  | [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) |
+| bdqenh:  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) |
+| bdqffdq: | [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md) |
 
 ### 3.1 Structure of Response (normative)
 

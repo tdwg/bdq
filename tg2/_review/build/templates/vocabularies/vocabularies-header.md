@@ -71,11 +71,12 @@ This document is non-normative.
 
 The following namespace abbreviations are used in this document: **CHECK THIS set on final draft, include only those used in this document**
 
-| **Prefix**   | **Namespace**                                    |
-|--------------|--------------------------------------------------|
-| bdq          | https://rs.tdwg.org/bdq/terms/                   |
-| bdqcore      | https://rs.tdwg.org/bdqcore/terms/               |
-| bdqcrit      | https://rs.tdwh.org/bdqcrit/terms/               |
-| bdqdim       | https://rs.tdwg.org/bdqdim/terms/                |
-| bdqenh       | https://rs.tdwg.org/bdqenh/terms/                |
-| bdqffdq      | https://rs.tdwg.org/bdqffdq/terms/               |
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms            |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| oa:          | https://www.w3.org/TR/annotation-vocab/     |
