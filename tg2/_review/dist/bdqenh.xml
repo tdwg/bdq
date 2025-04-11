@@ -45,7 +45,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="bdqffdq:Enhancement"/>
      <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqenh/terms/Converted"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/FillInFrom-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -54,10 +54,10 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:prefLabel xml:lang="en">Fill In From</skos:prefLabel>
      <rdfs:comment xml:lang="en">As in filling in from verbatim terms.  Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms.  Corresponding dimension is bdqdim:Completeness.</rdfs:comment>
      <skos:definition xml:lang="en">Data could be improved by using one data value to fill in the empty value in another</skos:definition>
-     <rdf:value>FillInFrom</rdf:value>
+     <rdf:value>FilledInFrom</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Enhancement"/>
-     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqenh/terms/FillInFrom"/>
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/bdqenh/terms/FilledInFrom"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Standardized-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>

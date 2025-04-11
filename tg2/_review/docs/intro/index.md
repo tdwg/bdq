@@ -416,6 +416,7 @@ The following references have been extracted from the "References" descriptor on
 <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li>
 <li>Lowery D, Morris PJ (2024) kurator-org/ffdq-api: Release of ffdq-api version 2.0.2 (v2.0.2). Zenodo. https://doi.org/10.5281/zenodo.14031588</li>
 <li>Lowery D, Morris PJ, Morris RA (2024) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.0.0 (v3.0.0). Zenodo. https://doi.org/10.5281/zenodo.14026643</li>
+<li>Lowery D, Morris PJ, Morris RA (2025) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.1.0 (v3.1.0). Zenodo. https://doi.org/10.5281/zenodo.15182936</li>
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li>
 <li>Morris P, Hanken J, Lowery D, Ludäscher B, Macklin J, McPhillips T, Wieczorek J, Zhang Q (2018) Kurator: Tools for Improving Fitness for Use of Biodiversity Data. Biodiversity Information Science and Standards 2: e26539. https://doi.org/10.3897/biss.2.26539</li>
 <li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Version 1.0.0 release of bdq_issue_to_csv utility for creating bdqcore: term-version file. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14057551</li>

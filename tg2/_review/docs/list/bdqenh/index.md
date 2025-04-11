@@ -111,7 +111,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG S
 
 ## 2 Use of Terms (normative) 
 
-A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqenh/terms/AssumedDefault`) or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) SHOULD be used. In a purely human context a Label (e.g., `Assumed Default`) MAY be used.
+A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqenh/terms/AssumedDefault`) or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) MAY be used. In a purely human context a Label (e.g., `Assumed Default`) MAY be used.
 
 Each instance of bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasEnhancement property relating it to a term in this bdqenh: vocabulary.
 
@@ -128,7 +128,7 @@ An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT 
 
 [bdqenh:AssumedDefault](#bdqenh_AssumedDefault) |
 [bdqenh:Converted](#bdqenh_Converted) |
-[bdqenh:FillInFrom](#bdqenh_FillInFrom) |
+[bdqenh:FilledInFrom](#bdqenh_FilledInFrom) |
 [bdqenh:Standardized](#bdqenh_Standardized) |
 [bdqenh:Transposed](#bdqenh_Transposed) 
 
@@ -140,7 +140,7 @@ An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT 
 
 [Assumed Default](#bdqenh_AssumedDefault) |
 [Converted](#bdqenh_Converted) |
-[Fill In From](#bdqenh_FillInFrom) |
+[Fill In From](#bdqenh_FilledInFrom) |
 [Standardized](#bdqenh_Standardized) |
 [Transposed](#bdqenh_Transposed) 
 
@@ -240,13 +240,13 @@ An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqenh_FillInFrom"></a>Term Name  bdqenh:FillInFrom</th>
+			<th colspan="2"><a id="bdqenh_FilledInFrom"></a>Term Name  bdqenh:FilledInFrom</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/FillInFrom">https://rs.tdwg.org/bdqenh/terms/FillInFrom</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/FilledInFrom">https://rs.tdwg.org/bdqenh/terms/FilledInFrom</a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -254,7 +254,7 @@ An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT 
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/FillInFrom-2024-09-30">https://rs.tdwg.org/bdqenh/terms/FillInFrom-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30">https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -274,7 +274,7 @@ An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT 
 		</tr>
 		<tr>
 			<td>Controlled value</td>
-			<td>FillInFrom</td>
+			<td>FilledInFrom</td>
 		</tr>
 		<tr>
 			<td>Type</td>

@@ -136,6 +136,11 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                    definition = definition + " TDWG SDS: " + definition_dictionary.get(label)
             if 'append' in value and value['append'] :
                 definition = definition + " In present context: " + value['append']
+
+            # JW Debug
+            termrow_dict = termrow.to_dict()
+            print(f'In function_lib: termrow_dict = {termrow.to_dict()}')
+            
             if key in termrow.keys() : 
                 example = termrow[key]
                 if not example : 
@@ -144,6 +149,8 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                         if key in row.keys() and row[key] :
                             example = row[key]
                             break
+                # JW Debug
+#                print(f'key = {key} example={example}')
                 if example and example.find(' ')==-1 and len(example) > 20 : 
                    # long string without spaces
                    if example.startswith('https://') or example.startswith('http://') : 

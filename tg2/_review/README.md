@@ -14,7 +14,7 @@ Summary of files in this directory:
 ├── README.md  This file. **Editable.**
 ├── index.md  Landing page for the standard. **Editable.**
 ├── build  Build scripts and templates to assemble pages.
-│   ├── see build/README.md
+│   ├── build/README.md
 ├── dist  Generated CSV distribution files for building other artifacts.
 │   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py).
 │   ├── bdqcore.json  JSON serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl.

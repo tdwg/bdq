@@ -18,187 +18,232 @@
 # TODO: These terms are in the CSV but not represented in the RDF
 #"IE Class",
 
-iri:
-  # fully qualified IRI including the version
-  label: Term Version IRI
-  normative: 'true'
-  term: rdf:about
-term_iri:
-  # the IRI for the term in general, without the version
-  label: Term IRI
-  normative: 'true'
-  term: dcterms:isVersionOf
 term_localName:
   # the bare UUID for the test 
   label: Term Name
   normative: 'true'
   term: rdf:value
-issued:
-  append: The most recent date for any change to any element of the Test.
-  label: Modified
-  normative: ''
-  term: dcterms:issued
+  sort_order: 1
 Label:
   # This is the all upper case single word identifier
   append: A descriptive label for humans to use to identify the Test.
   label: Label
   normative: 'true'
   term: rdfs:label
+  sort_order: 2
 prefLabel:
   # This is the identifier split into words for readability, expect translations to be added.
   append: An easy to read label for the Test, similar to the Label, but in words.
   label: Preferred Label
   normative: 'true'
   term: skos:prefLabel
-DateLastUpdated:
-  # non-normative, the most recent change of relevance to implementations might be non-normative
-  label: DateLastUpdated
-  normative: 'false'  
-  term: bdqffdq:hasDateLastUpdated
-ArgumentGuids:
-  label: Guids for Arguments
+  sort_order: 3
+term_iri:
+  # the IRI for the term in general, without the version
+  label: Term IRI
   normative: 'true'
-  term: bdqffdq:Argument
-SpecificationGuid:
-  label: Guid for Specification
+  term: dcterms:isVersionOf
+  sort_order: 4
+issued:
+  append: The most recent date for any change to any element of the Test.
+  label: Modified
+  normative: ''
+  term: dcterms:issued
+  sort_order: 5
+iri:
+  # fully qualified IRI including the version
+  label: Term Version IRI
   normative: 'true'
-  term: bdqffdq:Specification
-MethodGuid:
-  label: Guid for DataQualityMethod
-  normative: 'true'
-  term: bdqffdq:DataQualityMethod
-AuthoritiesDefaults:
-  label: SourceAuthorities/Defaults
-  normative: 'true'
-  term: bdqffdq:hasAuthoritiesDefaults
-Criterion:
-  label: Criterion
-  normative: 'true'
-  term: bdqffdq:Criterion
+  term: rdf:about
+  sort_order: 6
 Description:
   append: A brief description of what the Test does.
   label: Description
   normative: 'false'
   term: rdfs:comment
-Dimension:
-  label: DataQualityDimension
-  normative: 'true'
-  term: bdqffdq:DataQualityDimension
-Enhancement:
-  label: Enhancement
-  normative: 'true'
-  term: bdqffdq:Enhancement
+  sort_order: 7
 ExpectedResponse:
   append: The formal definition of how the Test must be implemented.
-  label: ExpectedResponse
+  label: Expected Response
+#  label: has Expected Response
   normative: 'true'
   term: bdqffdq:hasExpectedResponse
-Examples: 
-  append: Examples of input and output data and Test responses for a pass case and a fail case.
-  label: Examples
-  normative: 'false'
-  term: skos:example
-"Example Implementations (Mechanisms)":
-  append: Name or links to one or more entities that have an implementation of the Test.
-  label: Example Implementations
-  normative: 'false'
-  term: skos:note
-"Link to Specification Source Code":
-  append: A link to code that implements the Test.
-  label: Example Implementation Source Code
-  normative: 'false'
-  term: skos:note
-IssueLabels:
-  append: Labels applied to Github Issue noted in the skos:historyNote.
-  label: Github Issue Labels
-  normative: 'false'
-  term: skos:note
+  sort_order: 8
+SpecificationGuid:
+  label: Specification GUID
+  normative: 'true'
+  term: bdqffdq:Specification
+  sort_order: 9
 "InformationElement:ActedUpon":
   label: InformationElements ActedUpon
   normative: 'true'
   term: bdqffdq:composedOf
+  sort_order: 10
 "InformationElement:Consulted":
   label: InformationElements Consulted
   normative: 'true'
   term: bdqffdq:composedOf
-Method:
-  force: 'true'
-  label: Method
+  sort_order: 11
+Parameters:
+  label: Parameters
   normative: 'true'
-  term: bdqffdq:DataQualityMethod
-MethodLabel:
-  append: The label for the instance of the subclass of DataQualityMethod for this Test.
-  force: 'true'
-  label: Method label
-  normative: 'false'
-  term: rdfs:label
+  term: bdqffdq:Parameter
+  sort_order: 12
+#Default Parameter Values
+#  sort_order: 13
+AuthoritiesDefaults:
+  label: SourceAuthorities/Defaults
+#  label: has Authorities and Defaults
+  normative: 'true'
+  term: bdqffdq:hasAuthoritiesDefaults
+  sort_order: 14
 Notes:
   append: Additional information to supplement the Specification.
   label: Notes
   normative: 'false'
   term: skos:note
-Parameters:
-  label: Parameters
-  normative: 'true'
-  term: bdqffdq:Parameter
-References:
-  append: The minimum set of references that are required for an understanding of the nature of the Test.
-  label: References
+  sort_order: 15
+Examples: 
+  append: Examples of input and output data and Test responses for a pass case and a fail case.
+  label: Examples
   normative: 'false'
-  term: dcterms:bibliographicCitation
-Resource Type:
-  label: ResourceType
-  normative: 'true'
-  term: bdqffdq:ResourceType
-Source:
-  append: The origin of the concept of the Test.
-  label: Source
-  normative: 'false'
-  term: skos:historyNote
-Specification:
-  force: 'true'
-  label: Specification
-  normative: 'true'
-  term: bdqffdq:Specification
-SpecificationLabel:
-  append: The label for the instance of the Specification for this Test.
-  force: 'true'
-  label: Specification label
-  normative: 'false'
-  term: rdfs:label
+  term: skos:example
+  sort_order: 16
 Type:
   append: The type of the Test, one of the subtypes of DataQualityNeed.
   label: Type
   normative: 'true'
   term: rdf:type
-UseCases:
-  append: One or more Use Cases where this Test would apply.
-  label: Use Cases
-  normative: 'false'
-  term: bdqffdq:hasUseCase
-controlled_value_string:
-  label: Controlled Value
+  sort_order: 17
+Resource Type:
+  label: Resource Type
   normative: 'true'
-  term: ''
-flags:
-  # not used yet, but expect this to be needed for long term support.
-  label: ''
-  normative: ''
-  term: ''
+  term: bdqffdq:ResourceType
+  sort_order: 18
+Dimension:
+  label: Data Quality Dimension
+  normative: 'true'
+  term: bdqffdq:DataQualityDimension
+  sort_order: 19
+Criterion:
+  label: Criterion
+  normative: 'true'
+  term: bdqffdq:Criterion
+  sort_order: 20
+Enhancement:
+  label: Enhancement
+  normative: 'true'
+  term: bdqffdq:Enhancement
+  sort_order: 21
+"Example Implementations (Mechanisms)":
+  append: Name or links to one or more entities that have an implementation of the Test.
+  label: Example Implementations
+  normative: 'false'
+  term: skos:note
+  sort_order: 22
+"Link to Specification Source Code":
+  append: A link to code that implements the Test.
+  label: Example Implementation Source Code
+  normative: 'false'
+  term: skos:note
+  sort_order: 23
+Source:
+  append: The origin of the concept of the Test.
+  label: Source
+  normative: 'false'
+  term: skos:historyNote
+  sort_order: 24
 historyNoteUrl:
   # Currently all tdwg/bdq issue numbers, but in future could be on a bdqcore repository.
   # Expect multiplicity here for rationale management of changes to tests after acceptance.
-  append: A link to the github issue that provided rationale management recording a history (changes and comments) of the development of the Test.
+  append: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test.
   label: Developed As Github Issue
   normative: 'false'
   term: skos:historyNote
-organized_in:
-  # not used yet
-  label: ''
-  normative: ''
-  term: ''
-status:
-  # For future term-version use if tests are deprecated
-  label: Status
-  normative: ''
-  term: tdwgutility:status
+  sort_order: 25
+IssueLabels:
+  append: Labels applied to Github Issue noted in the skos:historyNote.
+  label: Github Issue Labels
+  normative: 'false'
+  term: skos:note
+  sort_order: 26
+ArgumentGuids:
+  label: Argument GUID
+  normative: 'true'
+  term: bdqffdq:Argument
+  sort_order: 27
+#AmendmentMethod label
+#  sort_order: 28
+#Specification:
+#  force: 'true'
+#  label: Specification
+#  normative: 'true'
+#  term: bdqffdq:Specification
+#  sort_order: 29
+#SpecificationLabel:
+#  append: The label for the instance of the Specification for this Test.
+#  force: 'true'
+#  label: Specification Label
+#  normative: 'false'
+#  term: rdfs:label
+#  sort_order: 30
+#Method:
+#  force: 'true'
+#  label: Data Quality Method
+#  normative: 'true'
+#  term: bdqffdq:DataQualityMethod
+#  sort_order: 31
+#MethodLabel:
+#  append: The label for the instance of the subclass of DataQualityMethod for this Test.
+#  force: 'true'
+#  label: Method Label
+#  normative: 'false'
+#  term: rdfs:label
+#  sort_order: 32
+#MethodGuid:
+#  label: Data Quality Method GUID
+#  normative: 'true'
+#  term: bdqffdq:DataQualityMethod
+#  sort_order: 33
+#status:
+#  # For future term-version use if tests are deprecated
+#  label: Status
+#  normative: ''
+#  term: tdwgutility:status
+#  sort_order: 34
+#DateLastUpdated:
+#  # non-normative, the most recent change of relevance to implementations might be non-normative
+#  label: Date Last Updated
+#  normative: 'false'  
+#  term: bdqffdq:hasDateLastUpdated
+#  sort_order: 35
+#UseCases:
+#  append: One or more Use Cases where this Test would apply.
+##  label: Use Cases
+#  label: has Use Cases
+#  normative: 'false'
+#  term: bdqffdq:hasUseCase
+#  sort_order: 36
+#References:
+#  append: The minimum set of references that are required for an understanding of the nature of the Test.
+#  label: References
+#  normative: 'false'
+#  term: dcterms:bibliographicCitation
+#  sort_order: 37
+#controlled_value_string:
+#  label: Controlled Value
+#  normative: 'true'
+#  term: ''
+#  sort_order: 38
+#flags:
+#  # not used yet, but expect this to be needed for long term support.
+#  label: ''
+#  normative: ''
+#  term: ''
+#  sort_order: 39
+#organized_in:
+#  # not used yet
+#  label: ''
+#  normative: ''
+#  term: ''
+#  sort_order: 40
