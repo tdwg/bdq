@@ -45,11 +45,11 @@
 
 ## 1 Introduction
 
-The Biodiversity Data Quality Fitness for Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. This conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
+The Biodiversity Data Quality Fitness for Use Framework (hereafter referred to as "Framework") ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. This conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about each Test.
+The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about how each Test is defined.
 
-The Framework considers data to have quality with respect to some specified use. It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose. The Framework explicitly links data quality to use, and allows formal description of means to assure that data are fit for some specified purpose.
+The Framework considers data to have quality with respect to some specified use. It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.
 
 This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data. These are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
 
@@ -67,13 +67,13 @@ Technical users who need to understand how to describe data quality with the Bio
 
 The `bdqffdq:` vocabulary is an ontology, documentation for it can be found in: 
 
-- This page, the landing page with normative guidance on the use of this ontology.
-- A [term list](../list/bdqffdq/index.md) the list of vocabulary terms.
-- Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../extension/bdqffdq/index.md) 
-- The bdqffdq Framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl)
+- This page, which provides normative guidance on the use of this ontology.
+- The [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md), which provides the detailed definitions of the terms.
+- The [Fitness For Use Framework Ontology Vocabulary Extension](../extension/bdqffdq/index.md), which provides additional axioms that extend the vocabulary.
+- The [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl) Ontology in OWL.
 - Veiga (2016) and Veiga et al. (2017)
 
-In addition, an illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../guide/bdqffdq/index.md) 
+In addition, the [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md) provides an illustrated guide to the use of the bdqffdq ontology.
 
 ### 1.3.1 Distributions for bdqffdq:
 
@@ -126,7 +126,8 @@ The (non-normative) diagram below is intended to help understand the normative s
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqcore:](../../dist/bdqcore.ttl) also follow the normative guidance in section 2 below.
+The use of classes and properties in [bdqcore:](../../dist/bdqcore.ttl). See also the guidance provided in [Use of Properties (normative)
+](#21-use-of-properties-normative).
 
 ## 2 Use of Terms (normative) 
 
@@ -134,9 +135,9 @@ When not represented as objects, controlled value strings MUST be used as values
 
 ### 2.1 Use of Properties (normative) 
 
-This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology. This guidance builds on the normative definitions of bdqffdq: object properties and and datatype properties to describe how bdqffdq terms can be composed in a useful and consistent way.
+This guidance describes the use of the Framework Ontology, that is the bdqffdq: vocabulary terms, in an RDF context. This guidance MAY be used to develop models of the bdqffdq data quality Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas. 
 
-This guidance describes the use of the Framework Ontology, that is the bdqffdq: vocabulary terms, in an RDF context. This guidance MAY be used to develop models of the bdqffdq data quality Framework in more constrained forms including UML object models, information models, classes in a programming language, or database schemas. 
+This section describes normative expectations for the use of object and datatype properties to related instances of bdqffdq: classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the bdqffdq Framework ontology. This guidance builds on the normative definitions of bdqffdq: object properties and datatype properties to describe how bdqffdq: terms can be composed in a useful and consistent way.
 
 Section [2.2.6](#216-identifying-the-test-that-produced-an-assertion) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an Assertion produced by a Test and the particular Test that produced it.
 
@@ -146,7 +147,7 @@ Each description of a data quality Test SHOULD include the following properties 
 
 The bdqffdq:hasUseCase object property SHOULD have an individual with a type that is a subclass of bdqffdq:Policy as its subject. 
 
-The bdqffdq:hasUseCase object property MAY have an individual from the bdq: vocabulary that represents a UseCase as its object. 
+The bdqffdq:hasUseCase object property MAY have an individual from the bdq: vocabulary that represents a bdqffdq:UseCase as its object. 
 
 An axiom types the range of bdqffdq:hasUseCase as a bdqffdq:UseCase. 
 
@@ -154,11 +155,11 @@ The bdqffdq:includedInPolicy object property SHOULD have an individual that is a
 
 The bdqffdq:includedInPolicy object property SHOULD have an individual that is a subclass of bdqffdq:DataQualityNeed as its object.
 
-The four subclasses of bdqffdq:DataQualityNeed are bdqffdq:Validation, bdqffdq:Measure, bdqffdq:Amendment, and bdqffdq:Issue.
+The four subclasses of bdqffdq:DataQualityNeed are bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure and bdqffdq:Amendment.
 
-Each individual that is a subclass of bdqffdq:DataQualityNeed SHOULD have at least one bdqffdq:includedInPolicy relationship to an instance of a subclass of bdqffdq:Policy which is in turn related to an instance of a bdqffdq:UseCase. 
+Each individual that is a subclass of bdqffdq:DataQualityNeed SHOULD have at least one bdqffdq:includedInPolicy relationship to an instance of a subclass of bdqffdq:Policy, which is in turn related to an instance of a bdqffdq:UseCase. 
 
-User communities MAY provide new use cases, and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways. 
+User communities MAY provide new Use Cases and MAY compose instances that are subtypes of bdqffdq:DataQualityNeed with instances of bdqffdq:Policy subclasses and instances of bdqffdq:UseCase with the object properties bdqffdq:includesInPolicy and bdqffdq:hasUseCase in new ways. 
 
 Each instance of a subclass of a bdqffdq:DataQualityNeed SHOULD have an rdfs:label in all upper case, with underscores separating components. Tests that have a bdqffdq:hasResourceType of bdqffdq:SingleRecord SHOULD follow the convention of the subclass of bdqffdq:DataQualityNeed in all upper case as the first word, and a representation of the bdqffdq:AbstractInformationElement as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. Tests that have a bdqffdq:hasResourceType of bdqffdq:MultiRecord SHOULD have "MULTIRECORD_" as the first element in their rdfs:label, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMANTIONELEMENT_CRITERIA. The rdfs:label of the instance of the subclass of bdqffdq:DataQualityNeed SHOULD be used by humans to identify Tests.
 
@@ -178,7 +179,7 @@ An axiom types the range of bdqffdq:hasEnhancement as a bdqffdq:Enhancement.
 
 The bdqffdq:hasDataQualityDimension object property SHOULD have an individual with a type that is a subclass of bdqffdq:DataQualityNeed as its subject.
 
-The bdqffdq:hasDataQualityDimension object property MAY have individual in the bdqdim: vocabulary is its object. 
+The bdqffdq:hasDataQualityDimension object property MAY have an individual in the bdqdim: vocabulary is its object. 
 
 An axiom types the range of bdqffdq:hasDataQualityDimension as a bdqffdq:DataQualityDimension.
 
@@ -186,9 +187,9 @@ Each individual instance of a bdqffdq:Validation SHOULD have exactly one bdqffdq
 
 Each individual instance of a bdqffdq:Issue SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Criterion property.
 
-Each individual instance of a bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Enhancement property.
-
 Each individual instance of a bdqffdq:Measure SHOULD have exactly one bdqffdq:hasDataQualityDimension property.
+
+Each individual instance of a bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasDataQualityDimension property and exactly one bdqffdq:Enhancement property.
 
 A subproperty of the bdqffdq:hasInformationElement object property SHOULD have an individual that is a subclass of bdqffdq:InformationElement as its object.
 
@@ -204,33 +205,33 @@ Each instance of bdqffdq:Consulted SHOULD have one to many bdqffdq:composedOf ob
 
 Each instance of a subclass of bdqffdq:DataQualityNeed MAY have a bdqffdq:hasInformationElement property linking it to a bdqffdq:AbstractInformationElement.
 
-Each instance of bdqffdq:AbstractInformationElement SHOULD have rdfs:label and rdfs:comment properties describing the scope of the Information Element with the rdfs:label corresponding to the INFORMATIONELEMENT portion of the rdfs:label for an instance of a subclass of bdqffdq:DataQualityNeed following the convention described in this section. 
+Each instance of bdqffdq:AbstractInformationElement SHOULD have rdfs:label and rdfs:comment properties describing the scope of the Information Element with the rdfs:label corresponding to the INFORMATIONELEMENT portion of the rdfs:label for an instance of a subclass of bdqffdq:DataQualityNeed following the convention described above in this section. 
 
 #### 2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions
 
-Each description of a data quality Test SHOULD include the following properties and related instances.
+Each description of a data quality Test SHOULD include the properties and related instances given below.
 
 The bdqffdq:forValidation object property SHOULD have have an individual with a type that is a subclass of bdqffdq:ValidationMethod as its subject.
 
-An axiom places an owl:restriction on the object of the bdqffdq:forValidation object property as a bdqffdq:Validation
+An axiom places an owl:restriction on the object of the bdqffdq:forValidation object property as a bdqffdq:Validation.
 
 Each bdqffdq:Validation method SHOULD have exactly one bdqffdq:forValidation object property.
 
 The bdqffdq:forAmendment object property SHOULD have have an individual with a type that is a subclass of bdqffdq:AmendmentMethod as its subject.
 
-An axiom places an owl:restriction on the object of the bdqffdq:forAmendment object property as a bdqffdq:Amendment
+An axiom places an owl:restriction on the object of the bdqffdq:forAmendment object property as a bdqffdq:Amendment.
 
 Each bdqffdq:Amendment method SHOULD have exactly one bdqffdq:forAmendment object property.
 
 The bdqffdq:forMeasure object property SHOULD have have an individual with a type that is a subclass of bdqffdq:MeasureMethod as its subject.
 
-An axiom places an owl:restriction on the object of the bdqffdq:forMeasure object property as a bdqffdq:Measure
+An axiom places an owl:restriction on the object of the bdqffdq:forMeasure object property as a bdqffdq:Measure.
 
 Each bdqffdq:Measure method SHOULD have exactly one bdqffdq:forMeasure object property.
 
 The bdqffdq:forIssue object property SHOULD have have an individual with a type that is a subclass of bdqffdq:IssueMethod as its subject.
 
-An axiom places an owl:restriction on the object of the bdqffdq:forIssue object property as a bdqffdq:Issue
+An axiom places an owl:restriction on the object of the bdqffdq:forIssue object property as a bdqffdq:Issue.
 
 Each bdqffdq:Issue method SHOULD have exactly one bdqffdq:forIssue object property.
 
@@ -248,11 +249,11 @@ The bdqffdq:hasArgument object property SHOULD have a bdqffdq:Specification as i
 
 An axiom types the object of the bdqffdq:hasArgument object as a bdqffdq:Argument.
 
-An instance of bdqffdq:Argument SHOULD have exactly one bdqffdq:hasArgumentValue data property holding the value of the argument that replaces the bdqffdq:Parameter in the bdqffdq:hasExpectedResponse of the bdqffdq:Specification. An instance of bdqffdq:Argument SHOULD have exactly one bdqffdq:hasParameter object property that denotes the parameter within the bdqffdq:hasExpectedResponse that is to be replace by the value of the bdqffdq:hasArgumentValue. An instance of bdqffdq:Argument SHOULD be related to exactly one instance of a bdqffdq:Specification with the bdqffdq:hasArgument object property.
+An instance of bdqffdq:Argument SHOULD have exactly one bdqffdq:hasArgumentValue data property holding the value of the argument that replaces the bdqffdq:Parameter in the bdqffdq:hasExpectedResponse of the bdqffdq:Specification. An instance of bdqffdq:Argument SHOULD have exactly one bdqffdq:hasParameter object property that denotes the parameter within the bdqffdq:hasExpectedResponse that is to be replaced by the value of the bdqffdq:hasArgumentValue. An instance of bdqffdq:Argument SHOULD be related to exactly one instance of a bdqffdq:Specification with the bdqffdq:hasArgument object property.
 
 Each instance of a bdqffdq:Specification MAY have zero to many bdqffdq:hasArgument object properties relating it to zero to many bdqffdq:Argument instances.
 
-Each instance of a bdqffdq:Specification with a bdqffdq:hasAuthoritiesDefaults value that references at least one parameter MUST have a corresponding bdqffdq:hasArgument object property. The related instances bdqffdq:Argument through these bdqffdq:hasArgument object properties SHOULD have appropriate bdqffdq:hasArgumentValue and bdqffdq:hasParameter triples to express the actual and formal parameters for the bdqffdq:Specification instance.
+Each instance of a bdqffdq:Specification with a bdqffdq:hasAuthoritiesDefaults value that references at least one parameter MUST have a corresponding bdqffdq:hasArgument object property. The instances of bdqffdq:Argument related through these bdqffdq:hasArgument object properties SHOULD have appropriate bdqffdq:hasArgumentValue and bdqffdq:hasParameter triples to express the actual and formal parameters for the bdqffdq:Specification instance.
 
 The bdqffdq:hasParameter object property SHOULD have a bdqffdq:Argument as its subject.
 
@@ -280,7 +281,7 @@ A bdqffdq:Implementation SHOULD have one and only one bdqffdq:implementedBy obje
 
 Each data quality mechanism that produces data quality reports using the bdqffdq vocabulary SHOULD include the following properties and related instances.
 
-Nothing in this section is to be construed as relaxing the normative statements in the users guide and implementers guide concerning the expression of data quality responses in forms other than RDF. Each data quality mechanism MUST produce results corresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specified in those guides. 
+Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../guide/users/index.md) and [Implementer's Guide](../guide/implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality mechanism MUST produce results corresponding to bdqffdq:Assertions with bdqffdq:hasResponseStatus, bdqffdq:hasResponseResult, and bdqffdq:hasResponseComment as specified in those guides. 
 
 The bdqffdq:producesAssertion object property SHOULD have an instance of bdqffdq:Implementation as its subject.
 
@@ -294,15 +295,15 @@ Each instance of a bdqffdq:Asssertion SHOULD be the object of exactly one bdqffd
 
 Following the object properties from an instance of a bdqffdq:Assertion to an instance of a subclass of a bdqffdq:DataQualityNeed SHOULD identify one and only one instance of a subclass of a bdqffdq:DataQualityNeed for a single instance of a bdqffdq:Assertion. If this condition is not met, it is not possible to tell which Test with which parameter argument values produced the Assertion.
 
-Each instance of a bdqffdq:ValidationAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:ValidationMethod which in turn SHOULD be the subject for one and only one bdqffdq:forValidation property linking it to an instance of a bdqffdq:Validation.
+Each instance of a bdqffdq:ValidationAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation, which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification, which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:ValidationMethod, which in turn SHOULD be the subject for one and only one bdqffdq:forValidation property linking it to an instance of a bdqffdq:Validation.
 
-Each instance of a bdqffdq:AmendmentAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:AmendmentMethod which in turn SHOULD be the subject for one and only one bdqffdq:forAmendment property linking it to an instance of a bdqffdq:Amendment.
+Each instance of a bdqffdq:IssueAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation, which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification, which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:IssueMethod, which in turn SHOULD be the subject for one and only one bdqffdq:forIssue property linking it to an instance of a bdqffdq:Issue.
 
-Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:MeasurementMethod which in turn SHOULD be the subject for one and only one bdqffdq:forMeasure property linking it to an instance of a bdqffdq:Measure.
+Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation, which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification, which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:MeasurementMethod, which in turn SHOULD be the subject for one and only one bdqffdq:forMeasure property linking it to an instance of a bdqffdq:Measure.
 
-Each instance of a bdqffdq:IssueAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:IssueMethod which in turn SHOULD be the subject for one and only one bdqffdq:forIssue property linking it to an instance of a bdqffdq:Issue.
+Each instance of a bdqffdq:AmendmentAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property linking it to an instance of a bdqffdq:Implementation, which in turn SHOULD be the subject of one and only one bdqffdq:usesSpecification property linking it to an instance of a bdqffdq:Specification, which in turn SHOULD be the object of one and only one bdqffdq:hasSpecification property linking it to an instance of a bdqffdq:AmendmentMethod, which in turn SHOULD be the subject for one and only one bdqffdq:forAmendment property linking it to an instance of a bdqffdq:Amendment.
 
-Given an Assertion, the following query returns what Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
+Given an Assertion, the following query returns which Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
  
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -323,7 +324,7 @@ Given an Assertion, the following query returns what Test was run with which arg
     }
     GROUP BY ?test ?label ?description ?mechanism
 
-Where, in this query the text {id of assertion to look up} is a place holder to replace with the id of the instance of the bdqffdq:Assertion to look up.
+Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the bdqffdq:Assertion to look up.
 
 ### 2.1.6.1 Properties that should be one to one.
 
@@ -331,41 +332,18 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 
 - Each instance of a bdqffdq:Validation SHOULD be the object of one and only one bdqffdq:forValidation property.
 - Each instance of a bdqffdq:ValidationMethod SHOULD be the subject of one and only one bdqffdq:forValidation property.
-
-- Each instance of a bdqffdq:ValidationMethod SHOULD be the subject of one and only one bdqffdq:forValidation property.
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
-
 - Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:ValidationAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
-
-**Amendment**
-
-- Each instance of a bdqffdq:Amendment SHOULD be the object of one and only one bdqffdq:forAmendment property.
-- Each instance of a bdqffdq:AmendmentMethod SHOULD be the subject of one and only one bdqffdq:forAmendment property.
-
-- Each instance of a bdqffdq:AmendmentMethod SHOULD be the subject of one and only one bdqffdq:forAmendment property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
-
-- Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-
-- Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
-- Each instance of a bdqffdq:AmendmentAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
 **Measure**
 
 - Each instance of a bdqffdq:Measure SHOULD be the object of one and only one bdqffdq:forMeasure property.
 - Each instance of a bdqffdq:MeasurementMethod SHOULD be the subject of one and only one bdqffdq:forMeasure property.
-
-- Each instance of a bdqffdq:MeasurementMethod SHOULD be the subject of one and only one bdqffdq:forMeasure property.
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
-
 - Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
@@ -373,15 +351,21 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 
 - Each instance of a bdqffdq:Issue SHOULD be the object of one and only one bdqffdq:forIssue property.
 - Each instance of a bdqffdq:IssueMethod SHOULD be the subject of one and only one bdqffdq:forIssue property.
-
-- Each instance of a bdqffdq:IssueMethod SHOULD be the subject of one and only one bdqffdq:forIssue property.
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
-
 - Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:IssueAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
+
+**Amendment**
+
+- Each instance of a bdqffdq:Amendment SHOULD be the object of one and only one bdqffdq:forAmendment property.
+- Each instance of a bdqffdq:AmendmentMethod SHOULD be the subject of one and only one bdqffdq:forAmendment property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
+- Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
+- Each instance of a bdqffdq:AmendmentAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
 ## 3 Term Index
 
@@ -390,5 +374,5 @@ Where, in this query the text {id of assertion to look up} is a place holder to 
 {term_key}
 
 ### 3.2 Indexes
-<!--- NOTE: The mathematical forumlation of the Framework is in the bdqffdq_landing-footer.md document --->
+<!--- NOTE: The mathematical formulation of the Framework is in the bdqffdq_landing-footer.md document --->
 
