@@ -47,22 +47,22 @@ This is the term-list document for the bdqenh: vocabulary.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and application of the Framework Ontology. 
+This document is for those needing a technical understanding of the BDQ Core Tests and application of the Framework Ontology, especially with respect to the controlled vocabulary for the term bdqffdq:hasEnhancement. 
 
 ### 1.3 Data Quality Enhancement
 
-Enhancement as used in the context of BDQ Core, was originally defined by Veiga 2016 and Veiga et at. 2017, where it is a fundamental concept. The concept of bdqffdq:Enhancement (AssumedDefault, Converted, From, Standardized, and Transposed)  describes how a bdqffdq:Amendment may act to produce proposals to improve data quality for a given use case.
+Enhancement as used in the context of BDQ Core was originally defined by Veiga 2016 and Veiga et at. 2017, where it is a fundamental concept. The concept of bdqffdq:Enhancement (AssumedDefault, Converted, From, Standardized, and Transposed) describes how a bdqffdq:Amendment may act to produce proposals to improve data quality for a given use case.
 
-The Enhancement describes, in abstract terms, how proposals can modify data to improve fitness.  An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms.   Enhancements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.  
+The Enhancement describes, in abstract terms, how proposals can modify data to improve fitness. An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms. Enhancements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments. These relationships could be formalized, but we have not done so.
 
-Each Amendment in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) and following a particular bdqffdq:Enhancement propose how the quality of data may be improved. For example, the test [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) evaluates the value of dwc:eventDate and may propose an a amendment which would conform the value to the expectations of the ISO 8601 standard, proposing to improve the quality of the record under test for the bdq:Spatial-Temporal_Patterns and bdq:Record-Management use cases.  The appropriate value for bdqenh: to use as the bdqffdq:hasEnhancement property for this test is bdqenh:Standardized, that is, a change is proposed to the value of dwc:eventDate that would conform it to the ISO date format standard, specified in the Comments on dwc:eventDate as the recommended best practice for this term.
+Each Amendment in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) and, following a particular bdqffdq:Enhancement, propose how the quality of data may be improved. For example, the Test [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) assesses the value of dwc:eventDate and may propose an a Amendment which would make the value conform to the expectations of the ISO 8601 standard, proposing to improve the quality of the record for the bdq:Spatial-Temporal_Patterns and bdq:Record-Management Use Cases. The appropriate value for bdqenh: to use as the bdqffdq:hasEnhancement property for this Test is bdqenh:Standardized, i.e., a change is proposed to the value of dwc:eventDate that would make it conform to the ISO date format standard, which is specified in the Comments on dwc:eventDate as the recommended best practice for this term.
 
-Enhancement only applies to tests of type bdqffdq:Amendment.
+Enhancement only applies to Tests of type bdqffdq:Amendment.
 
 ### 1.4 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
+| ----------- | --- | ------------ | ---- | 
 | HTML file   | http://rs.tdwg.org/bdq/bdqenh/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqenh/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqenh.xml | Example for submission, to be generated | 
 

@@ -65,22 +65,21 @@ Draft Standard for Submission
 
 ## 1 Introduction
 
-This document includes terms that form the bdqffdq: vocabulary.  The bdqffdq: vocabulary is used to describe the the BDQ Core tests.
+This document includes terms that form the bdqffdq: vocabulary. The bdqffdq: vocabulary is used to describe the the BDQ Core Tests.
 
-The bdqffdq: terms include classes, object properties, datatype properties, and named individuals.  
-This document only lists the terms, it does not provide additional axioms or normative guidance needed for their use.
+The bdqffdq: terms include classes, object properties, datatype properties, and named individuals. This document only lists the terms, it does not provide additional axioms or normative guidance needed for their use.
 
-The bdqffdq framework is represented as an owl ontology (the Framework Ontology).  The basic terms for that framework are listed in this document.  
+The bdqffdq framework is represented as an owl ontology (the Framework Ontology). The basic terms for that framework are listed in this document.
 The TDWG Standards Documentation Specification requires that the human readable documentation for ontologies be presented 
-as a term list with additional axioms included in a vocabulary extension.  A [vocabulary extension](../../extension/bdqffdq/index.md) 
-documents additional axioms.  
+as a term list with additional axioms included in a vocabulary extension. A [vocabulary extension](../../extension/bdqffdq/index.md) 
+documents additional axioms.
 
 ### 1.1 Purpose
 : This is the term-list document for the bdqffdq: vocabulary.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Biodiversity Data Quality Fitness for Use Framework Ontology.
 
 ### 1.3 Documents about the bdqffdq: ontology
 

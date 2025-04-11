@@ -44,7 +44,7 @@ Bibliographic citation
 
 ## 1 Introduction
 
-The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. The conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
+The Biodiversity Data Quality Fitness for Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. This conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
 
 The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about each Test.
 
@@ -60,7 +60,7 @@ This document gathers normative statements about how to use the Framework in a m
 
 ### 1.2 Audience
 
-Technical users who need to understand how to describe data quality with the Framework.
+Technical users who need to understand how to describe data quality with the Biodiversity Data Quality Fitness for Use Framework.
 
 ### 1.3 Documents About the bdqffdq: Ontology
 
@@ -207,7 +207,7 @@ Each instance of bdqffdq:AbstractInformationElement SHOULD have rdfs:label and r
 
 #### 2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions
 
-Each description of a data quality test SHOULD include the following properties and related instances.
+Each description of a data quality Test SHOULD include the following properties and related instances.
 
 The bdqffdq:forValidation object property SHOULD have have an individual with a type that is a subclass of bdqffdq:ValidationMethod as its subject.
 
@@ -235,7 +235,7 @@ Each bdqffdq:Issue method SHOULD have exactly one bdqffdq:forIssue object proper
 
 #### 2.1.3 Properties Relating to Data Quality Solutions Provided in a Test Description
 
-Each description of a data quality test SHOULD include the following properties and related instances.
+Each description of a data quality Test SHOULD include the following properties and related instances.
 
 The bdqffdq:hasSpecification object property SHOULD have an instance of a subclass of bdqffdq:DataQualityMethod as its subject.
 

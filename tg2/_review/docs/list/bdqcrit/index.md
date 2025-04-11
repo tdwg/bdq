@@ -47,17 +47,17 @@ This is the term-list document for the bdqcrit: vocabulary.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology, especially with respect to the controlled vocabulary for the term bdqffdq:hasCriterion.
 
 ### 1.3 Data Quality Criteria
 
-Criterion as used in the context of BDQ Core, was originally defined by Veiga 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:Criterion (Complete, Consistent, Found, InRange, Likely, NotEmpty, Standard, Unambiguous) describes, in abstract terms how data can be evaluated for quality for a given use case.
+Criterion as used in the context of BDQ Core was originally defined by Veiga 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:Criterion (Complete, Consistent, Found, InRange, Likely, NotEmpty, Standard, Unambiguous) describes, in abstract terms, how data can be evaluated for quality for a given Use Case.
 
-A criterion expresses in general terms what a bdqffdq:Specification expresses in specific terms. Criteria have an informal relationship to bdqffdq:Dimensions, expressed here in the comments, these relationships could be formalized, but we have not done so.
+A Criterion expresses in general terms what a bdqffdq:Specification expresses in specific terms. Criteria have an informal relationship to bdqffdq:Dimensions, expressed here in the comments These relationships could be formalized, but we have not done so.
 
-Each bdqffdq:Validation and bdqffdq:Issue in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) following a single bdqffdq:Criterion. For example, the test VALIDATION_COUNTRY_FOUND tests the value of dwc:country against a source authority for a use case, (e.g., bdq:Record-Management). The appropriate type of bdqffq:Criterion in this case is bdqcrit:Found, i.e., does the value of dwc:contry conform to the values in a specfied authority when you are evaluating the quality of a Darwin Core record (in the context of the use case with which VALIDATION_COUNTRY_FOUND is composed)?
+Each bdqffdq:Validation and bdqffdq:Issue in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) following a single bdqffdq:Criterion. For example, the Test VALIDATION_COUNTRY_FOUND tests the value of dwc:country against a source authority for a Use Case, (e.g., bdq:Record-Management). The appropriate type of bdqffq:Criterion in this case is bdqcrit:Found, i.e., does the value of dwc:contry conform to the values in a specfied authority when you are evaluating the quality of a Darwin Core record in the context of the Use Case in which VALIDATION_COUNTRY_FOUND is found?
 
-Criterion applies only Test Types bdqffdq:Validation and bdqffdq:Issue.
+Criterion applies only to Test types bdqffdq:Validation and bdqffdq:Issue.
 
 ### 1.4 Term List Distributions
 

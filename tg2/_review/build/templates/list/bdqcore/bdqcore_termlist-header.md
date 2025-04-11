@@ -43,11 +43,11 @@ Bibliographic citation
 
 ## 1 Introduction
 
-This document lists the BDQ Core Tests. These are the terms from the namespace `bdqcore:` (the CORE Tests).  The description of these terms relies heavily on the [Fitness For Use Framework Ontology List of Terms](../bdqffdq/index.md) (Veiga 2016, Veiga et al. 2017).  Terms are also used from the [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) (data quality Dimension from Veiga et al. 2017), [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) (Test Enhancements), [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) (Test Criteria), and [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) (additional vocabulary terms).  For background details see Chapman et al. (2017).
+This document lists the BDQ Core Tests. These are the terms from the namespace `bdqcore:` (the CORE Tests). The description of these terms relies heavily on the [Fitness For Use Framework Ontology List of Terms](../bdqffdq/index.md) (Veiga 2016, Veiga et al. 2017). Terms are also used from the [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) (data quality Dimension from Veiga et al. 2017), [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) (Test Enhancements), [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) (Test Criteria), and [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) (additional vocabulary terms). For background details see Chapman et al. (2017).
 
-The focus of this standard is the specification of a suite of Tests that operate on single Darwin Core (Wieczorek et al. 2012) encoded records, for example the Test  [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe). This (SingleRecord) Test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code (which imlementations may access at https://www.iso.org/obp/ui/#search).  This standard also includes specifications for MultiRecord Tests that accumulate results of multiple SingleRecord Tests, allowing, for example, a determination that 70% of records in a dataset had a valid dwc:countryCode.  
+The focus of this standard is the specification of a suite of Tests that operate on single Darwin Core (Wieczorek et al. 2012) encoded records, for example the Test [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe). This (SingleRecord) Test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code (which imlementations may access at https://www.iso.org/obp/ui/#search). This standard also includes specifications for MultiRecord Tests that accumulate results of multiple SingleRecord Tests, allowing, for example, a determination that 70% of records in a dataset had a valid dwc:countryCode.
 
-Each Test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other Tests to meet particular data quality needs, and so as not impose any particular model of Test execution on implementation frameworks. Implementations of Test execution frameworks MAY execute tests in on data records in parallel, on data records in sequence, as queries on datasets, or even on unique values.  While the BDQ Core Tests are described in isolation, they MUST be used in sets that are related to a use of the data, as data does not have quality in the abstract, it only has quality with respect to some use.  Thus each Test is linked to one or more Use Cases, which are formal descriptions of uses to which data may be put. The bdq: vocabulary defines the set of Use Cases referenced here.  BDQ Core Tests can be freely composed in other ways for other uses.  Additional Tests can be defined, including those that expand in scope beyond Darwin Core terms.
+Each Test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other Tests to meet particular data quality needs, and so as not impose any particular model of Test execution on implementation frameworks. Implementations of Test execution frameworks MAY execute Tests in on data records in parallel, on data records in sequence, as queries on datasets, or even on unique values. While the BDQ Core Tests are described in isolation, they MUST be used in sets that are related to a use of the data, as data does not have quality in the abstract, it only has quality with respect to some use. Thus each Test is linked to one or more Use Cases, which are formal descriptions of uses to which data may be put. The bdq: vocabulary defines the set of Use Cases referenced here. BDQ Core Tests can be freely composed in other ways for other uses. Additional Tests can be defined, including those that expand in scope beyond Darwin Core terms.
 
 Tests described here are paired in that all Validation Tests that assesses some aspect of data quality are associated with an Amendment Test that may be able to improve the quality of data with respect to that Validation Test.
 
@@ -57,7 +57,7 @@ This document lists the BDQ Core Tests, provides values for the terms that descr
 
 ### 1.2 Audience
 
-Users who need to understand the BDQ Core Tests, including all technical details required in the standard. 
+Users who need to understand the BDQ Core Tests, including all technical details required by the standard. 
 
 ### 1.3 Associated Documents
 
@@ -79,8 +79,8 @@ In addition, guides are provided in the form of the [BDQ Core User's Guide](../g
 | Turtle file | TBD | [Tests in Turtle](../dist/bdqcore.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
 | JSON-LD file | TBD | [Tests in JSON/LD](../dist/bdqcore.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
 | CSV file | TBD | [Tests in CSV](../vocabulary/bdqcore_term_versions.csv) | CSV file listing all of the Tests. | 
-| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../dist/bdqcore_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord tests. |
-| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../dist/bdqcore_multirecord_tests_current.csv) | CSV file listing just the MultiRecord tests. |
+| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../dist/bdqcore_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord Tests. |
+| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../dist/bdqcore_multirecord_tests_current.csv) | CSV file listing just the MultiRecord Tests. |
 
 ### 1.5 Status of the Content of this Document
 
@@ -119,7 +119,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.8 Test Types (non-normative)
 
-There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (bdqffdq:Policies) that assess the fitness for use of data for a specific use.
+There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (bdqffdq:Policies) that assess the fitness for use of data for a specific use.
 
 **Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
 
@@ -133,7 +133,7 @@ There are four types of BDQ Core Tests: Validations, Issues, Amendments and Meas
 
 These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI (rdf:about)`, `Term IRI (dcterms:isVersionOf)` and `Term Name (rdf:value)` are intended for machine consumption. Some terms such as the `Description (rdfs:comment)` are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the `Specification (bdqffdq:Specification)` ensure that implementers have no ambiguity about how the Test should be coded.
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/).  Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG-specific meaning from the SDS, and may also include a specific definition in this local context.  See section [2.4.1 Listing Identifiers for Tests](../../supplement/index.md#241-Listing-Identifiers-for-Tests) in [BDQ Core Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
+Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG-specific meaning from the SDS, and may also include a specific definition in this local context. See section [2.4.1 Listing Identifiers for Tests](../../supplement/index.md#241-Listing-Identifiers-for-Tests) in [BDQ Core Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
 
 {term_key}
 

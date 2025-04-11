@@ -36,6 +36,7 @@ Draft Standard for Submission
 - [1.3 Associated Documents](#13-associated-documents)
 - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
 - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
 - [2 A Guide to the Tests](#2-a-guide-to-the-tests)
 - [2.1 Test Types (non-normative)](#21-test-types-non-normative)
 - [2.2 Test Inputs and Outputs](#22-test-inputs-and-outputs)
@@ -68,7 +69,7 @@ This document is for consumers of data quality reports.
 - [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) For anyone who wants a concise reference about the Tests.
 - The [Biodiversity Data Quality Core Introduction](../../intro/index.md) provides an introduction to the BDQ Core standard and the Tests.
 - [BDQ Core Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
-- [BDQ Core Supplemental Information](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current tests or generate additional tests for their domain.
+- [BDQ Core Supplemental Information](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
 
 ### 1.4 Status of the content of this document
 
@@ -80,6 +81,18 @@ Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
+### 1.6 Namespace abbreviations
+
+The following namespace abbreviations are used in this document:
+
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+
 ## 2 A Guide to the Tests
 
 BDQ Core defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce data quality reports. The format of such data quality reports may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md), which gives the details of each BDQ Core Test. 
@@ -90,7 +103,7 @@ The BDQ Core Tests are each very specific. Some Tests are very simple and self e
 
 ### 2.1 Test Types (non-normative)
 
-There are four types of Tests: Validation, Issue, Amendment, and Measure. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into test suites (Policies) that assess the fitness of data for a specific use.
+There are four types of Tests: Validation, Issue, Amendment, and Measure. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (Policies) that assess the fitness of data for a specific use.
 
 **Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
 

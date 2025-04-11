@@ -48,17 +48,17 @@ This is the term-list document for the bdqdim: vocabulary.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
+This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology, especially with respect to the controlled vocabulary for the term bdqffdq:hasDataQualityDimension.
 
 ### 1.3 Data Quality Dimensions 
 
-DataQualityDimension as used in the context of BDQ Core, was originally defined by Veiga 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a test examines to assess 'quality' for a given use case.
+Data Quality Dimension as used in the context of BDQ Core was originally defined by Veiga 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a Test examines to assess 'quality' for a given Use Case.
 
-DataQualityDimensions are measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
+Data Quality Dimensions are measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
 
-Each test in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) against a single bdqffdq:DataQualityDimension. For example, the test VALIDATION_COUNTRY_FOUND tests the value of dwc:country against a source authority for a use case, (e.g., bdq:Record-Management). The appropriate type of bdqffq:DataQualityDimension in this case is bdqdim:Conformance: i.e., how well does the country value conform to an appropriate reference standard when you are evaluating the quality of a Darwin Core record (in the context of the use case with which VALIDATION_COUNTRY_FOUND is composed)?
+Each Test in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) against a single bdqffdq:DataQualityDimension. For example, the Test VALIDATION_COUNTRY_FOUND assesses the value of dwc:country against a source authority for a Use Case, (e.g., bdq:Record-Management). The appropriate type of bdqffq:DataQualityDimension in this case is bdqdim:Conformance, i.e., how well does the country value conform to an appropriate reference standard when evaluating the quality of a Darwin Core record in the context of a Use Case in which VALIDATION_COUNTRY_FOUND is found?
 
-DataQualityDimension applies to all Test Types (all subclasses of bsqffdq:DataQualityNeed that is, bdqffdq:VALIDATION, bdqffdq:ISSUE, bdqffdq:MEASURE and bdqffdq:AMENDMENT).
+Data Quality Dimension applies to all Test types (all subclasses of bsqffdq:DataQualityNeed: bdqffdq:VALIDATION, bdqffdq:ISSUE, bdqffdq:AMENDMENT and bdqffdq:MEASURE).
 
 ### 1.4 Term List Distributions
 
@@ -120,7 +120,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG S
 
 A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`) from the bdqdim: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `Completeness`) MAY be used. In a purely human context a Label (e.g., `Completeness`) MAY be used.
 
-Each instance of a Test, regardless of Test Type, SHOULD have exactly one bdqffdq:hasdataQualityDimension property relating it to a term in this bdqdim: vocabulary.
+Each instance of a Test, regardless of Test type, SHOULD have exactly one bdqffdq:hasdataQualityDimension property relating it to a term in this bdqdim: vocabulary.
 
 ## 3 Term index
 ### 3.1 Index By Term Name

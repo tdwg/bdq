@@ -66,18 +66,6 @@ In addition there are two BDQ Core guides that pertain to the use and implementa
 
 ### 1.3.1 Term List Distributions for BDQ Core
 
-<!---
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqcore/index.md | Complete term list for the bdqcore: vocabulary as a web page. | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.xml | An RDF representation of the Tests in an RDF/XML serialization. | 
-| Turtle file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.ttl | An RDF representation of the Tests in a Turtle serialization. | 
-| JSON-LD file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore.json | An RDF representation of the Tests in a JSON-LD serialization. | 
-| CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqcore_term_versions.csv | CSV file listing the Tests. | 
-| SingleRecord Test CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore_singlerecord_tests_current.csv | CSV file listing just the SingleRecord tests. |
-| MultiRecord Test CSV file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcore_multirecord_tests_current.csv | CSV file listing just the MultiRecord tests. |
---->
-
 <!--- This same table appears in bdqcore_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
@@ -86,8 +74,8 @@ In addition there are two BDQ Core guides that pertain to the use and implementa
 | Turtle file | TBD | [Tests in Turtle](../dist/bdqcore.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
 | JSON-LD file | TBD | [Tests in JSON/LD](../dist/bdqcore.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
 | CSV file | TBD | [Tests in CSV](../vocabulary/bdqcore_term_versions.csv) | CSV file listing all of the Tests. | 
-| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../dist/bdqcore_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord tests. |
-| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../dist/bdqcore_multirecord_tests_current.csv) | CSV file listing just the MultiRecord tests. |
+| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../dist/bdqcore_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord Tests. |
+| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../dist/bdqcore_multirecord_tests_current.csv) | CSV file listing just the MultiRecord Tests. |
 
 ### 1.4 Status of the Content of this Document
 
@@ -230,7 +218,7 @@ In each case, a Response.comment MUST be present with text explaining to consume
 
 Tests may operate on a SingleRecord (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a MultiRecord (a dataset).
 
-The bdqffdq Framework allows for tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords. In BDQ Core, the only MultiRecord Tests that have been defined are Measures. We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).
+The bdqffdq Framework allows for Tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords. In BDQ Core, the only MultiRecord Tests that have been defined are Measures. We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).
 
 The focus of the BDQ Core Tests are the SingleRecord Tests. To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures.
 
@@ -361,7 +349,7 @@ The instance of the bdqffdq:Specification SHOULD have a bdqffdq:hasAuthoritiesDe
 These elements MUST be understood in concert.
 
 Values of bdqffdq:hasAuthoritiesDefaults SHOULD be a text string listing parameters in the form of a semicolon-delimited list of one or more of the following: 
-     
+ 
 - parameter default = "default value" 
 - parameter default = "default value" {[resource]}
 - parameter default = "default value" {[resource]} {API endpoint [resource]}
