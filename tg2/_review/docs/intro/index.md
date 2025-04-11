@@ -2,34 +2,41 @@
 
 # Biodiversity Data Quality Core Introduction
 
-Title
-: Biodiversity Data Quality Core Introduction
+**Title**<br>
+Biodiversity Data Quality Core Introduction
 
-Date version issued
-: 2025-03-27
+**Date version issued**<br>
+2025-04-11
 
-Date created
-: 2025-03-27
+**Date created**<br>
+2025-04-11
 
-Part of TDWG Standard
-: <http://example.org/to_be_determined>
+**Part of TDWG Standard**<br>
+<http://example.org/to_be_determined>
 
-Abstract
-: **Biodiversity Data Quality (BDQ) Core** is a standard designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, example data, and expected responses from tests against the example data to support the validation of implemented tests.
+**Preferred namespace abbreviation**<br>
+{pref_namespace_prefix}
 
-Authors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+**This version**<br>
+<https://bdq.tdwg/org/vocabularies/2025-04-11>
 
-Contributors
-: [Yi-Ming Gan](https://orcid.org/0000-0001-7087-2646) ([Royal Belgian Institute of Natural Sciences](http://www.wikidata.org/entity/Q16665660)), [António Mauro Saraiva](https://orcid.org/0000-0003-2283-1123) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Alan Koch Veiga](http://orcid.org/0000-0003-2672-8115) ([Universidade de São Paulo](https://www.wikidata.org/wiki/Q835960)), [Paula F Zermoglio](https://orcid.org/0000-0002-6056-5084) ([Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN): San Carlos de Bariloche](https://www.irnad.com/)), [Alexander Thompson](https://orcid.org/0000-0002-8981-4048) ([Google](https://www.wikidata.org/wiki/Q95)), [David Lowery](https://github.com/lowery) , [Christian Gendreau](https://orcid.org/0000-0003-4898-4291) ([Agriculture and Agri-Food Canada](http://www.wikidata.org/entity/Q1046164)), [Tim Roberston](https://orcid.org/0000-0001-6215-3617) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Dmitry Schigel](https://orcid.org/0000-0002-2919-1168) ([Global Biodiversity Information Facility](https://www.wikidata.org/wiki/Q1531570)), [Robert A. Morris](https://orcid.org/0000-0002-6992-9446) , [Miles Nicholls](https://orcid.org/0000-0002-3302-0070) ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), [Emily Rose Rees](https://orcid.org/0000-0003-0112-6716) ([Atlas of Living Australia](https://www.wikidata.org/wiki/Q16335177)), [Abigail Benson](https://orcid.org/0000-0002-4391-107X) ([U.S. Geological Survey](https://www.wikidata.org/wiki/Q193755))
+**Latest version**<br>
+<https://bdq.tdwg/org/vocabularies/>
 
-Creator
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+**Previous version**<br>
+**Abstract**<br>
+**Biodiversity Data Quality (BDQ) Core** is a standard designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, example data, and expected responses from tests against the example data to support the validation of implemented tests.
 
-Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-03-27>
+**Authors**<br>
+[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
-Draft Standard for Submission
+**Creator**<br>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+
+**Bibliographic citation**<br>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
+
+Draft Standard for Review
 
 ### Table of Contents ###
 
@@ -474,7 +481,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-03-27>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 

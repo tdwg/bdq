@@ -2,31 +2,41 @@
 
 # BDQ Core List of Vocabularies
 
-Title
-: BDQ Core List of Vocabularies
+**Title**<br>
+BDQ Core List of Vocabularies
 
-Date version issued
-: 2025-04-02
+**Date version issued**<br>
+2025-04-11
 
-Date created
-: 2025-04-02
+**Date created**<br>
+2025-04-11
 
-Part of TDWG Standard
-: <http://example.org/to_be_determined>
+**Part of TDWG Standard**<br>
+<http://example.org/to_be_determined>
 
-Abstract
-: This document is a reference listing the vocabularies included in the BDQ Core Standard.
+**Preferred namespace abbreviation**<br>
+{pref_namespace_prefix}
 
-Authors:
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+**This version**<br>
+<https://bdq.tdwg/org/vocabularies/2025-04-11>
 
-Creator
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+**Latest version**<br>
+<https://bdq.tdwg/org/vocabularies/>
 
-Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core List of Vocabularies. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-02>
+**Previous version**<br>
+**Abstract**<br>
+This document is a reference listing the vocabularies included in the BDQ Core Standard.
 
-Draft Standard for Submission
+**Authors**<br>
+[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+
+**Creator**<br>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+
+**Bibliographic citation**<br>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core List of Vocabularies. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
+
+Draft Standard for Review
 
 ### Table of Contents ###
 
@@ -115,7 +125,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core List of Vocabularies. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-02>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core List of Vocabularies. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 

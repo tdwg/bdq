@@ -2,40 +2,41 @@
 
 # Data Quality Criterion Controlled Vocabulary List of Terms
 
-Title
-: Data Quality Criterion Controlled Vocabulary List of Terms
+**Title**<br>
+Data Quality Criterion Controlled Vocabulary List of Terms
 
-Date version issued
-: 2025-03-26
+**Date version issued**<br>
+2025-04-11
 
-Date created
-: 2025-03-26
+**Date created**<br>
+2025-04-11
 
-Part of TDWG Standard
-: <http://example.org/to_be_determined>
+**Part of TDWG Standard**<br>
+<http://example.org/to_be_determined>
 
-Preferred namespace abbreviation
-: bdqcrit
+**Preferred namespace abbreviation**<br>
+bdqcrit
 
-This version
-: <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-03-26>
+**This version**<br>
+<http://rs.tdwg.org/bdq/bdqcrit/terms/2025-04-11>
 
-Latest version
-: <http://rs.tdwg.org/bdq/bdqcrit/terms/>
+**Latest version**<br>
+<http://rs.tdwg.org/bdq/bdqcrit/terms/>
 
-Abstract
-: This document is a reference for the BDQ Core Standard. It covers the vocabulary terms that are types of bdqffdq:Criterion (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasCriterion.
+**Previous version**<br>
+**Abstract**<br>
+This document is a reference for the BDQ Core Standard. It covers the vocabulary terms that are types of bdqffdq:Criterion (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasCriterion.
 
-Authors
-: [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+**Authors**<br>
+[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
 
-Creator
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+**Creator**<br>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
-Bibliographic citation
-: TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-03-26>
+**Bibliographic citation**<br>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-04-11>
 
-Draft Standard for Submission
+Draft Standard for Review
 
 ## 1 Introduction
 
@@ -556,7 +557,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-03-26>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 

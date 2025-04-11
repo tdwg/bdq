@@ -51,7 +51,7 @@ current_iri: https://bdq.tdwg/org/vocabularies/
 # Date of first ratification of the document. Will match the doc_modified value for the first
 # version of the document. For lists of terms, this will also match the date that the
 # first version of the vocabulary was issued (date_issued).
-doc_created: '2025-03-26'
+doc_created: '2025-04-11'
 
 # ----------------
 # Do not edit below this line
@@ -64,9 +64,9 @@ license_uri: http://creativecommons.org/licenses/by/4.0/
 
 # Typically left blank. May be used to provide additional information about the document
 # in the machine-readable metadata.
-comment: 'Draft Standard for Submission'
+comment: 'Draft Standard for Review'
 
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2025-03-26'
+doc_modified: '2025-04-11'

@@ -80,7 +80,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-03-27>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 
