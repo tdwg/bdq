@@ -14,8 +14,10 @@ BDQ Core Supplemental Information
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <https://bdq.tdwg/org/vocabularies/2025-04-11>
@@ -24,6 +26,7 @@ BDQ Core Supplemental Information
 <https://bdq.tdwg/org/vocabularies/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document provides information supplementary to the BDQ Core Standard, describing some of the history of its development, and rationale management for decisions made while describing the tests.
 
@@ -36,6 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
+**Comment**<br>
 Draft Standard for Review
 
 ### Table of Contents ###

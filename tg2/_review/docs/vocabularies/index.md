@@ -14,8 +14,10 @@ BDQ Core List of Vocabularies
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <https://bdq.tdwg/org/vocabularies/2025-04-11>
@@ -24,6 +26,7 @@ BDQ Core List of Vocabularies
 <https://bdq.tdwg/org/vocabularies/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a reference listing the vocabularies included in the BDQ Core Standard.
 
@@ -36,6 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core List of Vocabularies. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
+**Comment**
 Draft Standard for Review
 
 ### Table of Contents ###

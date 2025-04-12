@@ -14,8 +14,10 @@ BDQ Core: Identifying Synthetic and Modified Data
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <https://bdq.tdwg/org/vocabularies/2025-04-11>
@@ -24,6 +26,7 @@ BDQ Core: Identifying Synthetic and Modified Data
 <https://bdq.tdwg/org/vocabularies/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a standard for the marking of synthetic and modified biodiversity data to allow users of biodiversity data to identify and exclude modified and synthetic data from analysies and other uses.
 
@@ -36,6 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core: Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
+**Comment**<br>
 Draft Standard for Review
 
 ### Table of Contents ###

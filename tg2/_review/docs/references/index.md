@@ -14,8 +14,10 @@ BDQ Core Bibliography
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
@@ -24,6 +26,7 @@ BDQ Core Bibliography
 <http://rs.tdwg.org/bdq/bdqenh/terms/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document lists the references cited in BDQ Core.
 
@@ -36,6 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Bibliography. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
 
+**Comment**
 Draft Standard for Review
 
 ## 1 Introduction

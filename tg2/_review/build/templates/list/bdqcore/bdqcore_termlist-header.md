@@ -37,6 +37,7 @@
 **Bibliographic citation**<br>
 {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
+**Comment**
 {comment}
 
 # Table of Contents

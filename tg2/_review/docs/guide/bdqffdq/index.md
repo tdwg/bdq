@@ -24,6 +24,7 @@ Fitness For Use Framework Ontology Guide
 <http://rs.tdwg.org/bdq/terms/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a user's guide for the BDQ Core Standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
 

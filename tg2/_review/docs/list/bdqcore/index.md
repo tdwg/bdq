@@ -36,6 +36,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-04-11>
 
+**Comment**
 Draft Standard for Review
 
 # Table of Contents

@@ -14,8 +14,10 @@ BDQ Core Tests and Assertions
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <http://rs.tdwg.org/bdqcore/terms/2025-04-11>
@@ -24,6 +26,7 @@ BDQ Core Tests and Assertions
 <http://rs.tdwg.org/bdqcore/terms/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a reference for the BDQ Core Standard, documenting the tests in the bdqcore: vocabulary, using terms from the bdqffdq ontology.
 
@@ -36,6 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqcore/terms/2025-04-11>
 
+**Comment**<br>
 Draft Standard for Review
 
 # Table of Contents 

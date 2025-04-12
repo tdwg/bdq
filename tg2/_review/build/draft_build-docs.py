@@ -373,10 +373,8 @@ for templatePath, document in directories.items() :
 		header = header.replace('{previous_version_slot}\n\n', previous_version_metadata_string)
 	else:
 		# If there was no previous version, remove the slot from the header.
-		header = header.replace('{previous_version_slot}\n\n', '')
+		header = header.replace('{previous_version_slot}\n\n', '\n')
 	
-
-
 	footerObject = open(footerFileName, 'rt', encoding='utf-8')
 	footer = footerObject.read()
 	footerObject.close()

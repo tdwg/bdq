@@ -14,8 +14,10 @@ Biodiversity Data Quality Core Introduction
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <https://bdq.tdwg/org/vocabularies/2025-04-11>
@@ -24,6 +26,7 @@ Biodiversity Data Quality Core Introduction
 <https://bdq.tdwg/org/vocabularies/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 **Biodiversity Data Quality (BDQ) Core** is a standard designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, example data, and expected responses from tests against the example data to support the validation of implemented tests.
 
@@ -36,6 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
+**Comment**
 Draft Standard for Review
 
 ### Table of Contents ###

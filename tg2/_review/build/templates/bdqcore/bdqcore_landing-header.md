@@ -13,8 +13,10 @@
 **Part of TDWG Standard**<br>
 <{standard_iri}>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <{current_iri}{ratification_date}>
@@ -37,6 +39,7 @@
 **Bibliographic citation**<br>
 {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
+**Comment**<br>
 {comment}
 
 # Table of Contents 

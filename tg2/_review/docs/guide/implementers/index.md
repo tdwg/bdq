@@ -24,6 +24,7 @@ BDQ Core Implementer's Guide
 <http://rs.tdwg.org/bdq/terms/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a users guide for the BDQ Core Standard, providing guidance for those wishing to create software implementations (bdqffdq:Mechanism) of BDQ Core tests.
 
