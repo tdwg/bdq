@@ -45,32 +45,26 @@
 
 ## 1 Introduction
 
-This document includes terms that form the bdqffdq: vocabulary. The bdqffdq: vocabulary is used to describe the the BDQ Core Tests.
+This document provides a structured list of terms that constitute the bdqffdq: vocabulary. The vocabulary is part of the Biodiversity Data Quality (BDQ) Fitness for Use Framework Ontology and is primarily used to describe the BDQ Core Tests. It includes ontology elements such as classes, object properties, datatype properties, and named individuals.
 
-The bdqffdq: terms include classes, object properties, datatype properties, and named individuals. This document only lists the terms, it does not provide additional axioms or normative guidance needed for their use.
-
-The bdqffdq framework is represented as an owl ontology (the Framework Ontology). The basic terms for that framework are listed in this document.
-The TDWG Standards Documentation Specification requires that the human readable documentation for ontologies be presented 
-as a term list with additional axioms included in a vocabulary extension. A [vocabulary extension](../../extension/bdqffdq/index.md) 
-documents additional axioms.
+Following the TDWG Standards Documentation Specification, this document presents a human-readable term list. It does not include additional axioms or normative usage guidance, which are instead provided through supporting documentation and vocabulary extensions.
 
 ### 1.1 Purpose
-: This is the term-list document for the bdqffdq: vocabulary.
+The purpose of this document is to serve as the official term list for the bdqffdq: vocabulary. It defines the core ontology elements used to express BDQ Core Tests, without incorporating additional axioms or implementation constraints.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Biodiversity Data Quality Fitness for Use Framework Ontology.
+This document is intended for users who require a technical understanding of the BDQ Core Tests, including ontology developers, data quality analysts, and others implementing or interpreting the Biodiversity Data Quality Fitness for Use Framework Ontology in data systems or tools.
 
 ### 1.3 Documents about the bdqffdq: ontology
 
-The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
+Comprehensive information about the bdqffdq: ontology, its usage, and its extensions can be found in the following resources:
 
-- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
-- This page, the list of vocabulary terms in the ontology.
-- Additional axioms that extend the vocabulary terms in the [vocabulary extension list](../../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
-
-An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../../guide/bdqffdq/index.md) 
+- The [Fitness for Use Ontology](../../bdqffdq/index.md), which provides normative guidance on the use of the vocabulary.
+- This term list document, which enumerates and describes the vocabulary terms.
+- The [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md), which defines additional axioms extending the core vocabulary.
+- The [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), a visual and narrative introduction to the concepts and application of the ontology.
+- The ontology itself: [[Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl), which provides the formal RDF/OWL representation of the vocabulary.
 
 ### 1.3.1 Term List Distributions
 
