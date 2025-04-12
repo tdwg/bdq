@@ -60,34 +60,29 @@ Draft Standard for Review
 
 ## 1 Introduction
 
-This document includes terms that extend the basic bdqffdq vocabulary and are integral to bdqffdq as an ontology.
+This document defines a vocabulary extension for the bdqffdq: ontology, specifying additional axioms that extend the basic vocabulary terms. These axioms support more precise semantic expression within the Biodiversity Data Quality (BDQ) Fitness for Use Framework Ontology and are essential for its use as a fully functional ontology.
 
-The bdqffdq framework is represented as an owl ontology. The basic terms for that framework are in the [basic bdqffdq vocabulary](../../list/bdqffdq/index.md). The TDWG Standards Documentation Specification requires that the human readable documentation for ontologies be presented as a term list with additional axioms included in a vocabulary extension. This file documents the additional axioms in isolation.
+The core terms of the ontology—such as classes, object properties, datatype properties, and named individuals—are listed separately in the Fitness For Use Framework Ontology List of Terms. In line with the TDWG Standards Documentation Specification, this extension document presents only the additional axioms, while keeping the core term list distinct and human-readable.
 
-The bdqffdq ontology includes few restrictions, this is by design. Domain and range restrictions do not limit what is in the domain or range of a property, but add assertions about the types of objects that are the subjects or objects of predicates bearing the restrictions. Some types of restrictions limit which owl profiles are available to tools that reason on the ontology and on data stores that include the ontology. See the landing page and the bdqffdq: guide for expected uses of the properties that are not provided by these axioms.
+The BDQ Framework intentionally limits its use of restrictions to preserve compatibility with OWL profiles and reasoning tools. While domain and range axioms appear in this document, they do not constrain data but rather assert expectations about the kinds of resources involved in a given relation. For additional context on usage and intended semantics, refer to the normative and illustrative materials listed below.
 
 ### 1.1 Purpose 
 
-This document provides the required vocabulary extension listing axioms that extend the vocabulary terms in the bdqffdq: term list document.
+This document serves as the official vocabulary extension for the bdqffdq: ontology, listing additional axioms that refine and extend the semantics of the core vocabulary terms. It supports implementers who require these axioms for reasoning, validation, or advanced modeling within the BDQ Framework.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the bdqffdq Framework. 
+This document is intended for ontology engineers, semantic tool developers, and others seeking a deeper, technically precise understanding of how the BDQ Fitness for Use Framework operates as an OWL ontology. It assumes familiarity with OWL constructs, reasoning profiles, and the structure of TDWG vocabularies.
 
 ### 1.3 Documents about the bdqffdq: ontology
 
-The bdqffdq: vocabulary is an ontology, documentation for it can be found in: 
+The bdqffdq: ontology is supported by multiple documents that together describe its structure, intended use, and implementation:
 
-- A [landing page](../../bdqffdq/index.md) with normative guidance on the use of this ontology.
-- The [term list](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
-- This page, additional axioms that extend the vocabulary terms.
-- The bdqffdq framework ontology is best technically understood as its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
-
-An illustrated guide to the use of the bdqffdq ontology is provided in the [Guide to the bdqffdq: framework](../../guide/bdqffdq/index.md) 
-
-The [supplement](../../supplement/index.md) includes competency questions providing rationalle for 
-the use of framework in the form of an ontology with additional axioms as a vocabulary for 
-describing the bdqcore: Tests.
+- The [Fitness for Use Ontology](../../bdqffdq/index.md), which provides normative guidance on the use of the vocabulary.
+- The [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) , which enumerates and describes the vocabulary terms.
+- This document, which defines additional axioms extending the core vocabulary.
+- The [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), a visual and narrative introduction to the concepts and application of the ontology.
+- The ontology itself: [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl), which provides the formal RDF/OWL representation of the vocabulary.
 
 ### 1.3.1 Term List Distributions
 
