@@ -14,8 +14,10 @@ Fitness For Use Framework Ontology Guide
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
 
+<!--
 **Preferred namespace abbreviation**<br>
 {pref_namespace_prefix}
+-->
 
 **This version**<br>
 <http://rs.tdwg.org/bdq/terms/2025-04-11>
@@ -37,8 +39,8 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
 
+**Comment**<br>
 Draft Standard for Review
-
 
 ### Table of Contents ###
 

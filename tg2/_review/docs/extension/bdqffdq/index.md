@@ -38,6 +38,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Vocabulary Extension. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/extension/2025-04-11>
 
+**Comment**<br>
 Draft Standard for Review
 
 ### Table of Contents ###

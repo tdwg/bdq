@@ -39,63 +39,45 @@
 **Bibliographic citation**<br>
 {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
-**Comment**
+**Comment**<br>
 {comment}
 
 ### Table of Contents ###
 
 {toc} 
 
-## 1 Introduction
-
-Biodiversity Data Quality Core, hereafter referred to as 'BDQ Core', consists of 
-* specifications of data quality Tests that can be implemented to provide reproducible results from a given set of input data and Test parameters,
-* a generic fitness for use framework (bdqffdq:) whose terms and semantics are embodied in the Framework Ontology,
-* a set of controlled vocabularies for the terms bdqffdq:DataQualityDimension, bdqffdq:Enhancement, and bdqffdq:Criterion,
-* a supporting vocabulary of terms (bdq:) used in the specification of the previously mentioned Tests,
-* an exemplar dataset to use as input for validation of the behavior of implementations of the previously mentioned Tests,
-* a guide to implementation of the Tests,
-* a guide to the interpretation of the results of the Tests, and
-* a guide to the Framework Ontology for describing data quality.
-
-Not part of BDQ Core, but dependent on it, is an exemplar implementation of the Tests, written in Java&#174;, the behavior of which has been validated against the uses the previously mentioned validation dataset.
-
-BDQ Core covers a specification of Tests for the quality of biodiversity data, not a specification of the quality to which biodiversity data are expected to conform. ‘Fitness for use’ of a biodiversity data record depends on the use to which it is applied: a record that is unsuitable to be used in one application may be suitable for another application (Belbin et al. 2013). Data does not have quality in the abstract, it only has quality with respect to some use, within BDQ Core, bdqffdq:UseCases provide a formal representation of uses to which data may be put. The set of Tests and UseCases defined in BDQ Core are a starting point, not a limitation. The BDQ Core Tests may be composed differently for different uses, and additional Tests are expected. 
-
-The BDQ Tests support the determination of whether data resources will be fit for use for some particular purpose from the perspectives of the data quality dimensions `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. The Tests themselves do not assert data quality, rather, sets of Tests can be defined to support the assessment or assurance of data quality for a particular purpose by analyzing their responses to the input data in question against predefined expectations. This standard also specifies a structure to capture Profiles of Tests for particular cases of fitness for use, and identifies a set of Profiles and uses they apply to for the included Tests. This standard does not specify execution order or other aspects of frameworks within which Tests may be run. Users are free to add new Tests and compose Tests differently for different uses.
-
-The BDQ Tests were initially targeted specifically to [Darwin Core](https://dwc.tdwg.org/terms/) classes and properties against which they operate. This is not a limitation on the scope of the standard, but rather a choice of original scope against which to develop the Tests.
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This document introduces BDQ Core.
+The purpose of this document is to introduce the Biodiversity Data Quality Core (BDQ Core) standard—its components, guiding principles, and intended applications. BDQ Core provides a modular, extensible framework for assessing the quality of biodiversity data relative to specific uses, not according to a universal benchmark. It includes:
+
+- Specifications of data quality Tests that produce reproducible outcomes from standardized inputs;
+- A formal fitness for use framework (`bdqffdq:`), described in an ontology and used to contextualize Tests;
+- Controlled vocabularies that define key concepts such as `DataQualityDimension`, `Enhancement`, and `Criterion`;
+- A supporting vocabulary (`bdq:`) used in expressing the Test specifications;
+- A validation dataset for confirming the expected behavior of Test implementations;
+- Guides for implementing the Tests and interpreting their results;
+- A guide to understanding and applying the Framework Ontology.
+
+While not part of the BDQ Core standard, a validated Java® implementation and exemplar datasets demonstrate practical usage and conformance.
+
+This document also explains BDQ Core’s underlying principle: data quality is not an inherent property but is relative to a specific purpose or use case. The concept of ‘fitness for use’ drives how Tests are applied and interpreted. BDQ Core enables users to define, compose, and apply Tests aligned with different uses, recognizing that data quality must be evaluated within context.
 
 ### 1.2 Audience
 
-This document is a general introduction to BDQ Core standard designed for anyone interested in specifications for the assessment or assurance of fitness for use of biodiversity data, or to improve it. 
+This document is intended for a broad audience, including:
 
-### 1.3 Associated Documents
+- Practitioners interested in improving or assessing the quality of biodiversity data;
+- Developers of tools and pipelines for data validation;
+- Researchers and project leads evaluating the suitability of datasets;
+- Standards developers seeking formal approaches to fitness-for-use assessment.
 
-- [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) Technical documentation of the standards framework under which the BDQ Core is formulated.
+No technical or ontological expertise is required to understand this document. It provides a conceptual foundation for exploring the rest of the BDQ Core suite, whether for casual use or deep integration.
 
-- Guides
-  - [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) For anyone who wants a concise reference about the Tests.
-  - [BDQ Core User's Guide](../guide/users/index.md) For anyone interested in details on the interpretation of data quality Test reports.
-  - [BDQ Core Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
-  - [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md) For anyone interested in the technical aspects of the Framework Ontology (the bdqffdq: vocabulary) for composing new Tests, or seeking to represent Test results as linked open data.
-- Vocabularies
-  - [BDQ Core List of Vocabularies](../vocabularies/index.md) For anyone needing a technical understanding of the underlying vocabularies used in BDQ Core.
-    - [BDQ Core Tests and Assertions](../bdqcore/index.md) For anyone needing a technical understanding of the BDQ Core Tests, including both users and implementers. 
-    - [Fitness for Use Ontology](../bdqffdq/index.md) For anyone who needs a technical understanding of how to describe data quality within the Fitness for Use Framework.
-    - [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md) For anyone needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology (the bdqffdq: vocabulary).
-    - [Fitness For Use Framework Ontology Vocabulary Extension](../extension/bdqffdq/index.md) For anyone needing a technical understanding of the bdqffdq Framework. 
-    - [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) For anyone needing a technical understanding of the BDQ Core Tests and application of the Framework Ontology. 
-    - [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) For anyone needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
-    - [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) For anyone needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology.
-    - [Biodiversity Data Quality Controlled Vocabulary List of Terms](../list/bdq/index.md) For anyone needing a technical understanding of the BDQ Core Tests. 
-- Additional Documents
-  - [BDQ Core: Identifying Synthetic and Modified Data](../synthetic/index.md) For anyone interested in the creation of datasets for the validation of implementations of BDQ Core Tests, to see how to mark their data. Also for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines. 
-  - [BDQ Core Supplemental Information](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
+### Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4. Status of the Content of This Document
 

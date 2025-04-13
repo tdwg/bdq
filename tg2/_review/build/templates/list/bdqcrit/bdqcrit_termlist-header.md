@@ -37,7 +37,7 @@
 **Bibliographic citation**<br>
 {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
-**Comment**
+**Comment**<br>
 {comment}
 
 ## 1 Introduction
